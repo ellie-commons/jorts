@@ -1,6 +1,6 @@
 # Name our project
 project('io.github.teamcons.jort', ['vala', 'c'],
-    version: '2.0.0'
+    version: '1.6.2'
 )
 
 # Import main lib files
@@ -24,6 +24,15 @@ add_global_arguments('-DDATADIR="' + get_option('datadir') + '"', language: 'c')
 configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
+
+gresource = gnome.compile_resources(
+    'as-resources',
+    'data' / 'io.github.teamcons.jort.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
+
+
 # Arguments for C
 c_args = [
   '-include', 'config.h',
@@ -37,7 +46,7 @@ executable(
     meson.project_name(),
     'src/Application.vala',
     'src/MainWindow.vala',
-    'src/EditableLabel.vala',
+    'src/Widgets/EditableLabel.vala',
     'src/Services/NoteManager.vala',
     'src/Services/Storage.vala',
     c_args: c_args,
@@ -62,3 +71,9 @@ meson.add_install_script(meson.source_root() + '/meson/post_install.py')
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)

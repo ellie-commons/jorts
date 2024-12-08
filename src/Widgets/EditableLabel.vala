@@ -20,6 +20,7 @@
 *
 */
 
+// TODO: GTK4: This will all go away because gtk4 has an editablelabel
 public class Jort.EditableLabel : Gtk.EventBox {
     public signal void changed (string new_title);
     public Gtk.Label title;

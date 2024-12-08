@@ -1,6 +1,6 @@
 # Name our project
 project('io.github.teamcons.jort', ['vala', 'c'],
-    version: '1.6.2'
+    version: '2.0.0'
 )
 
 # Import main lib files
@@ -47,7 +47,7 @@ executable(
     gresource,
     'src/Application.vala',
     'src/MainWindow.vala',
-    'src/EditableLabel.vala',
+    'src/Widgets/EditableLabel.vala',
     'src/Services/NoteManager.vala',
     'src/Services/Storage.vala',
     c_args: c_args,

@@ -183,6 +183,10 @@ namespace Jort {
             ((Application)this.application).update_storage();
         }
 
+        // TODO: A theming service or something. Something cleaner than this in all cases
+        // Basically the menu button defines two public variables
+        // And then this reconstructs a whole ass theme out of these two
+        // Either it can be a service, or just all defined in CSS and add/remove css
         private void update_theme() {
             var css_provider = new Gtk.CssProvider();
             this.get_style_context().add_class("mainwindow-%d".printf(uid));
@@ -348,6 +352,9 @@ namespace Jort {
             );
         }
 
+
+
+        // Content of the action bar
         private void create_actionbar () {
             var new_item = new Gtk.Button ();
             new_item.tooltip_text = (_("New note"));
@@ -364,6 +371,10 @@ namespace Jort {
             actionbar.pack_start (delete_item);
         }
 
+
+        // Create the inside of the settings button
+        // This is a label and several colored bubbles
+        // TODO : Shorten this by doing a Widget 
         private void create_app_menu () {
             var color_button_white = new Gtk.Button ();
             color_button_white.has_focus = false;
@@ -465,6 +476,7 @@ namespace Jort {
 
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             // GTK4: append
+            // THE HECK IS THESE
             color_button_box.pack_start (color_button_white, false, true, 0);
             color_button_box.pack_start (color_button_red, false, true, 0);
             color_button_box.pack_start (color_button_orange, false, true, 0);
@@ -495,6 +507,9 @@ namespace Jort {
             app_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             app_button.popover = popover;
 
+
+            // All the "change theme when theme button changed"
+            // TODO: cleaner theme management
             color_button_white.clicked.connect (() => {
                 this.color = "#F5F5F5";
                 this.selected_color_text = "#666666";
@@ -558,13 +573,14 @@ namespace Jort {
                 ((Application)this.application).update_storage();
             });
 
+            // GTK4: Append
             actionbar.pack_end (app_button);
         }
 
+        // When recreating the window from storage
         private void init_from_storage(Storage storage) {
             this.color = storage.color;
             this.selected_color_text = storage.selected_color_text;
-            this.pinned = storage.pinned;
             this.content = storage.content;
             this.move((int)storage.x, (int)storage.y);
             if ((int)storage.w != 0 && (int)storage.h != 0) {
@@ -574,6 +590,8 @@ namespace Jort {
             set_title (this.title_name);
         }
 
+
+        // Some rando actions
         private void action_new () {
             ((Application)this.application).create_note(null);
         }
@@ -591,6 +609,7 @@ namespace Jort {
             buffer.redo ();
         }
 
+        // Prepare for storage
         public Storage get_storage_note() {
             int x, y, w, h;
             string color = this.color;
@@ -607,6 +626,8 @@ namespace Jort {
             return new Storage.from_storage(x, y, w, h, color, selected_color_text, content, title_name);
         }
 
+
+        // TODO: Understand this
 #if VALA_0_42
         protected bool match_keycode (uint keyval, uint code) {
 #else
@@ -624,6 +645,7 @@ namespace Jort {
             return false;
         }
 
+        // Note gets deleted
         public override bool delete_event (Gdk.EventAny event) {
             int x, y;
             this.get_position (out x, out y);
