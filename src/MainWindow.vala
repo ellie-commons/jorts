@@ -63,9 +63,7 @@ namespace Jort {
             } else {
                 this.color = "#fff394";
                 this.selected_color_text = "#ad5f00";
-                this.pinned = false;
                 this.content = "";
-                this.set_position(Gtk.WindowPosition.CENTER);
                 this.title_name = "Jort";
                 set_title (this.title_name);
             }

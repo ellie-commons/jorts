@@ -1,3 +1,71 @@
+@define-color textColorPrimary #323232;
+
+.mainwindow-%d {
+    background-color: %s;
+}
+
+.mainwindow-%d undershoot.top {
+    background:
+        linear-gradient(
+            %s 0%,
+            alpha(%s, 0) 50%
+        );
+}
+
+.mainwindow-%d undershoot.bottom {
+    background:
+        linear-gradient(
+            alpha(%s, 0) 50%,
+            %s 100%
+        );
+}
+
+.notejot-view text selection {
+    color: shade(%s, 1.88);
+    background-color: %s;
+}
+
+entry.flat {
+    background: transparent;
+}
+
+.window-%d .notejot-title image,
+.window-%d .notejot-label {
+    color: %s;
+    box-shadow: none;
+}
+
+.window-%d .notejot-bar {
+    color: %s;
+    background-color: %s;
+    border-top-color: %s;
+    box-shadow: none;
+    background-image: none;
+    padding: 3px;
+}
+
+.window-%d .notejot-bar image {
+    color: %s;
+    padding: 3px;
+    box-shadow: none;
+    background-image: none;
+}
+
+.window-%d .notejot-view,
+.window-%d .notejot-view text,
+.window-%d .notejot-title {
+    background-color: %s;
+    background-image: none;
+    border-bottom-color: %s;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: shade(%s, 0.77);
+    box-shadow: none;
+}
+
+.window-%d .rotated > widget > box > image {
+    -gtk-icon-transform: rotate(90deg);
+}
 
 .color-button {
     border-radius: 50%;

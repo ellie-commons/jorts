@@ -68,8 +68,6 @@ namespace Jort {
                 builder.add_string_value (note.color);
                 builder.set_member_name ("selected_color_text");
                 builder.add_string_value (note.selected_color_text);
-                builder.set_member_name ("pinned");
-                builder.add_boolean_value (note.pinned);
                 builder.set_member_name ("content");
                 builder.add_string_value (note.content);
                 builder.set_member_name ("title");
@@ -109,7 +107,6 @@ namespace Jort {
                         var node = item.get_object();
                         string color = node.get_string_member("color");
                         string selected_color_text = node.get_string_member("selected_color_text");
-                        bool pinned = node.get_boolean_member("pinned");
                         int64 x = node.get_int_member("x");
                         int64 y = node.get_int_member("y");
                         int64 w = node.get_int_member("w");
