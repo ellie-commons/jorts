@@ -22,7 +22,6 @@ namespace Jort {
     public class Storage : Object {
         public string color;
         public string selected_color_text;
-        public bool pinned;
         public int64 x;
         public int64 y;
         public int64 w;
