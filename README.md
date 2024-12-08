@@ -11,9 +11,9 @@
 
 ## Donations
 
-Would you like to support the development of this app to new heights? Then:
+Most of the code was from Lainsce. This is from an old version of Notejot
 
-[Be my backer on Patreon](https://www.patreon.com/lainsce)
+[Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
 
 ## Dependencies
 
@@ -37,6 +37,11 @@ Simply clone this repo, then:
 meson build && cd build
 meson configure -Dprefix=/usr
 sudo ninja install
+```
+
+or
+```bash
+flatpak-builder --force-clean --user --install-deps-from=appcenter --repo=repo --install builddir ./io.github.teamcons.jort.yaml
 ```
 
 ## Notes Storage
