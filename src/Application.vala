@@ -77,6 +77,7 @@ namespace Jort {
                     }
                 }
             }
+                    
 	}
 
 	public void create_note(Storage? storage) {

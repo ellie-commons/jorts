@@ -113,7 +113,7 @@ namespace Jort {
                         int64 h = node.get_int_member("h");
                         string content = node.get_string_member("content");
                         string title = node.get_string_member("title");
-                        Storage stored_note = new Storage.from_storage(x, y, w, h, color, selected_color_text, pinned, content, title);
+                        Storage stored_note = new Storage.from_storage(x, y, w, h, color, selected_color_text, content, title);
                         stored_notes.add(stored_note);
                     }
 

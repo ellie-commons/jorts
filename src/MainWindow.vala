@@ -18,6 +18,8 @@
 */
 
 namespace Jort {
+
+    // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
         private Gtk.Button delete_item;
         private new Gtk.SourceBuffer buffer;
@@ -30,9 +32,11 @@ namespace Jort {
         public string selected_color_text = "#ad5f00";
         public bool pinned = false;
         public string content = "";
-        public string title_name = "Jort!";
+        public string title_name = "Jort";
         public Jort.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
+        
+        public string theme = "yellow";
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -51,6 +55,8 @@ namespace Jort {
             { ACTION_REDO,      action_delete   }
         };
 
+
+        // Init or something
         public MainWindow (Gtk.Application app, Storage? storage) {
             Object (application: app);
 
@@ -58,6 +64,8 @@ namespace Jort {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
 
+            // If storage is not empty, load from it
+            // Else do a new
             if (storage != null) {
                 init_from_storage(storage);
             } else {
@@ -68,13 +76,18 @@ namespace Jort {
                 set_title (this.title_name);
             }
 
+            // add required base classes
             this.get_style_context().add_class("rounded");
             this.get_style_context().add_class("default-decoration");
             this.get_style_context().add_class("notejot-window");
             this.uid = uid_counter++;
 
+            // Rebuild the whole theming
             update_theme();
 
+
+            // HEADER
+            // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             header.get_style_context().add_class("notejot-title");
@@ -82,10 +95,14 @@ namespace Jort {
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
 
+            // Defime the label you can edit. Which is editable.
             label = new Jort.EditableLabel (this.title_name);
             header.set_custom_title(label);
             this.set_titlebar(header);
 
+
+
+            // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
             actionbar.get_style_context().add_class("notejot-bar");
             create_actionbar ();
@@ -94,6 +111,8 @@ namespace Jort {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.set_size_request (330,270);
 
+
+            // Define the text thingy
             buffer = new Gtk.SourceBuffer (null);
             buffer.set_highlight_matching_brackets (false);
             view = new Gtk.SourceView.with_buffer (buffer);
@@ -109,6 +128,7 @@ namespace Jort {
             scrolled.add (view);
             this.show_all();
 
+            // Define the grid 
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.expand = true;
@@ -117,19 +137,25 @@ namespace Jort {
             grid.show_all ();
             this.add (grid);
 
+            // EVENTS
+            
+            // Save when user focuses elsewhere
             focus_out_event.connect (() => {
                 update_storage ();
                 return false;
             });
 
+            // Save when user changes the label
             label.changed.connect (() => {
                 update_storage ();
             });
 
+            // Save when the text thingy has changed
             view.buffer.changed.connect (() => {
                 update_storage ();
             });
 
+            // Undo Redo shit
             key_press_event.connect ((e) => {
                 uint keycode = e.hardware_keycode;
                 if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
@@ -146,10 +172,12 @@ namespace Jort {
             });
         }
 
+        // TITLE IS TITLE
         public new void set_title (string title) {
             this.title = title;
         }
 
+        // Save everything
         private void update_storage () {
             get_storage_note();
             ((Application)this.application).update_storage();
@@ -290,7 +318,7 @@ namespace Jort {
                 .image-button,
                 .titlebutton {
                     background-color: transparent;
-                    background-image: none;  
+                    background-image: none;
                     border: 1px solid transparent;
                     padding: 3px;
                     box-shadow: none;
@@ -344,9 +372,8 @@ namespace Jort {
             color_button_white.width_request = 24;
             color_button_white.tooltip_text = _("White");
 
-            var color_button_white_context = color_button_white.get_style_context ();
-            color_button_white_context.add_class ("color-button");
-            color_button_white_context.add_class ("color-white");
+            color_button_white.get_style_context ().add_class ("color-button");
+            color_button_white.get_style_context ().add_class ("color-white");
 
             var color_button_red = new Gtk.Button ();
             color_button_red.has_focus = false;
@@ -355,9 +382,9 @@ namespace Jort {
             color_button_red.width_request = 24;
             color_button_red.tooltip_text = _("Red");
 
-            var color_button_red_context = color_button_red.get_style_context ();
-            color_button_red_context.add_class ("color-button");
-            color_button_red_context.add_class ("color-red");
+
+            color_button_red.get_style_context ().add_class ("color-button");
+            color_button_red.get_style_context ().add_class ("color-red");
 
             var color_button_orange = new Gtk.Button ();
             color_button_orange.has_focus = false;
@@ -568,7 +595,6 @@ namespace Jort {
             int x, y, w, h;
             string color = this.color;
             string selected_color_text = this.selected_color_text;
-            bool pinned = this.pinned;
             Gtk.TextIter start,end;
             view.buffer.get_bounds (out start, out end);
             this.content = view.buffer.get_text (start, end, true);
@@ -578,7 +604,7 @@ namespace Jort {
             this.get_position (out x, out y);
             this.get_size (out w, out h);
 
-            return new Storage.from_storage(x, y, w, h, color, selected_color_text, pinned, content, title_name);
+            return new Storage.from_storage(x, y, w, h, color, selected_color_text, content, title_name);
         }
 
 #if VALA_0_42

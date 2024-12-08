@@ -24,6 +24,15 @@ add_global_arguments('-DDATADIR="' + get_option('datadir') + '"', language: 'c')
 configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
+
+gresource = gnome.compile_resources(
+    'as-resources',
+    'data' / 'io.github.teamcons.jort.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
+
+
 # Arguments for C
 c_args = [
   '-include', 'config.h',
@@ -35,6 +44,7 @@ cc = meson.get_compiler('c')
 # Let's define our executable
 executable(
     meson.project_name(),
+    gresource,
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/EditableLabel.vala',
@@ -62,3 +72,9 @@ meson.add_install_script(meson.source_root() + '/meson/post_install.py')
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)
