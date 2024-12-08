@@ -20,7 +20,7 @@
 *
 */
 
-public class Notejot.EditableLabel : Gtk.EventBox {
+public class Jort.EditableLabel : Gtk.EventBox {
     public signal void changed (string new_title);
     public Gtk.Label title;
     private Gtk.Entry entry;

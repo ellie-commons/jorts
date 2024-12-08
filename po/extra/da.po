@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/com.github.lainsce.notejot.appdata.xml.in:6
-#: data/com.github.lainsce.notejot.desktop.in:2
-msgid "Notejot"
-msgstr "Notejot"
+#: data/io.github.teamcons.jort.appdata.xml.in:6
+#: data/io.github.teamcons.jort.desktop.in:2
+msgid "Jort"
+msgstr "Jort"
 
-#: data/com.github.lainsce.notejot.appdata.xml.in:7
-#: data/com.github.lainsce.notejot.desktop.in:3
+#: data/io.github.teamcons.jort.appdata.xml.in:7
+#: data/io.github.teamcons.jort.desktop.in:3
 msgid "Jot your ideas"
 msgstr "Notér dine ideer"
 
-#: data/com.github.lainsce.notejot.appdata.xml.in:9
+#: data/io.github.teamcons.jort.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
@@ -33,22 +33,22 @@ msgstr ""
 "En simpel post-it note applikation for enhver type af korttids tanker "
 "eller ideer."
 
-#: data/com.github.lainsce.notejot.appdata.xml.in:11
+#: data/io.github.teamcons.jort.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr "Luk på et ethvert tidspunkt med genvejen Ctrl + Q"
 
-#: data/com.github.lainsce.notejot.appdata.xml.in:17
+#: data/io.github.teamcons.jort.appdata.xml.in:17
 msgid "Lains"
 msgstr "Lains"
 
-#: data/com.github.lainsce.notejot.desktop.in:4
-msgid "com.github.lainsce.notejot"
-msgstr "com.github.lainsce.notejot"
+#: data/io.github.teamcons.jort.desktop.in:4
+msgid "io.github.teamcons.jort"
+msgstr "io.github.teamcons.jort"
 
-#: data/com.github.lainsce.notejot.desktop.in:6
+#: data/io.github.teamcons.jort.desktop.in:6
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr "Tekst;Simpelt;Ren tekst;Note;"
 
-#: data/com.github.lainsce.notejot.desktop.in:15
+#: data/io.github.teamcons.jort.desktop.in:15
 msgid "New note…"
 msgstr "Ny note"

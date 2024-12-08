@@ -17,9 +17,9 @@
 * Boston, MA 02110-1301 USA
 */
 
-namespace Notejot {
+namespace Jort {
     public class NoteManager {
-        private string app_dir = Environment.get_user_data_dir () + "/com.github.lainsce.notejot";
+        private string app_dir = Environment.get_user_data_dir () + "/io.github.teamcons.jort";
         private string file_name;
 
         public NoteManager () {

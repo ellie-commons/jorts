@@ -18,7 +18,7 @@
 *
 */
 
-namespace Notejot {
+namespace Jort {
     public class Storage : Object {
         public string color;
         public string selected_color_text;

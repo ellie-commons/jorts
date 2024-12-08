@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
-namespace Notejot {
+namespace Jort {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
         private NoteManager note_manager = new NoteManager();
@@ -25,11 +25,11 @@ namespace Notejot {
 
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: "com.github.lainsce.notejot");
+                    application_id: "io.github.teamcons.jort");
         }
         
         static construct {
-            gsettings = new GLib.Settings ("com.github.lainsce.notejot");
+            gsettings = new GLib.Settings ("io.github.teamcons.jort");
         }
 
         construct {

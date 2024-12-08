@@ -1,5 +1,5 @@
 # Name our project
-project('com.github.lainsce.notejot', ['vala', 'c'],
+project('io.github.teamcons.jort', ['vala', 'c'],
     version: '1.6.2'
 )
 
@@ -13,7 +13,7 @@ conf = configuration_data()
 # Get the package data directory under Meson
 pkgdatadir = join_paths([ get_option('prefix'),
                           get_option('datadir'),
-                          'com.github.lainsce.notejot' ])
+                          'io.github.teamcons.jort' ])
 
 conf.set_quoted('PKGDATADIR', pkgdatadir)
 

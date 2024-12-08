@@ -1,8 +1,8 @@
-# ![icon](data/icon.png) Notejot
+# ![icon](data/icon.png) Jort
 
 ## Stupidly simple sticky notes applet
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.lainsce.notejot)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/io.github.teamcons.jort)
 
 [![Build Status](https://travis-ci.org/lainsce/notejot.svg?branch=master)](https://travis-ci.org/lainsce/notejot)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
@@ -40,4 +40,4 @@ sudo ninja install
 ```
 
 ## Notes Storage
-Notes are stored in `~/.local/share/com.github.lainsce.notejot/`
+Notes are stored in `~/.local/share/io.github.teamcons.jort/`

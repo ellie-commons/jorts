@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-namespace Notejot {
+namespace Jort {
     public class MainWindow : Gtk.Window {
         private Gtk.Button delete_item;
         private new Gtk.SourceBuffer buffer;
@@ -30,8 +30,9 @@ namespace Notejot {
         public string selected_color_text = "#ad5f00";
         public bool pinned = false;
         public string content = "";
-        public string title_name = "Notejot";
-        public Notejot.EditableLabel label;
+        public string title_name = "Jort!";
+        public Jort.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
+        //public Gtk.EditableLabel label = new Gtk.EditableLabel();
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -65,7 +66,7 @@ namespace Notejot {
                 this.pinned = false;
                 this.content = "";
                 this.set_position(Gtk.WindowPosition.CENTER);
-                this.title_name = "Notejot";
+                this.title_name = "Jort";
                 set_title (this.title_name);
             }
 
@@ -83,38 +84,8 @@ namespace Notejot {
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
 
-            var applet_button = new Gtk.ToggleButton ();
-            applet_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            var applet_button_image = new Gtk.Image.from_icon_name ("view-pin-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            applet_button.set_image (applet_button_image);
-
-            if (pinned) {
-                applet_button.set_active (true);
-                applet_button.get_style_context().add_class("rotated");
-                set_keep_below (pinned);
-                stick ();
-            } else {
-                applet_button.set_active (false);
-                applet_button.get_style_context().remove_class("rotated");
-            }
-
-            applet_button.toggled.connect (() => {
-                if (applet_button.active) {
-                    pinned = true;
-                    applet_button.get_style_context().add_class("rotated");
-                    set_keep_below (pinned);
-                    stick ();
-    			} else {
-    			    pinned = false;
-                    set_keep_below (pinned);
-                    applet_button.get_style_context().remove_class("rotated");
-    			    unstick ();
-                }
-            });
-
-            label = new Notejot.EditableLabel (this.title_name);
+            label = new Jort.EditableLabel (this.title_name);
             header.set_custom_title(label);
-            header.pack_end (applet_button);
             this.set_titlebar(header);
 
             actionbar = new Gtk.ActionBar ();
@@ -321,7 +292,7 @@ namespace Notejot {
                 .image-button,
                 .titlebutton {
                     background-color: transparent;
-                    background-image: none;
+                    background-image: none;  
                     border: 1px solid transparent;
                     padding: 3px;
                     box-shadow: none;
@@ -362,6 +333,7 @@ namespace Notejot {
             delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
 
+            // GTK4: append
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
         }
@@ -467,6 +439,7 @@ namespace Notejot {
             color_button_slate_context.add_class ("color-slate");
 
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+            // GTK4: append
             color_button_box.pack_start (color_button_white, false, true, 0);
             color_button_box.pack_start (color_button_red, false, true, 0);
             color_button_box.pack_start (color_button_orange, false, true, 0);
@@ -630,8 +603,8 @@ namespace Notejot {
         public override bool delete_event (Gdk.EventAny event) {
             int x, y;
             this.get_position (out x, out y);
-            Notejot.Application.gsettings.set_int("window-x", x);
-            Notejot.Application.gsettings.set_int("window-y", y);
+            Jort.Application.gsettings.set_int("window-x", x);
+            Jort.Application.gsettings.set_int("window-y", y);
             return false;
         }
     }
