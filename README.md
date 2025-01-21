@@ -5,12 +5,6 @@
   <h3 align="center">Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
 </div>
 
-<p align="center">
-  <img src="https://github.com/ellie-commons/jort/blob/main/data/icon.png?raw=true" alt="Screenshot">
-</p>
-
-
-
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/io.github.ellie_commons.jort)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
