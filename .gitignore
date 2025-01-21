@@ -3,9 +3,5 @@ build/
 *~
 .flatpak-builder/
 app-dir/
-debian/io.github.ellie_commons.jort.debhelper.log
-debian/io.github.ellie_commons.jort.substvars
-debian/io.github.ellie_commons.jort/
-debian/debhelper-build-stamp
-debian/files
 obj-x86_64-linux-gnu/
+repo/
