@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.ellie_commons.jort.appdata.xml.in:6
-#: data/io.github.ellie_commons.jort.desktop.in:2
-msgid "Jort"
-msgstr "Jort"
+#: data/io.github.ellie_commons.jorts.appdata.xml.in:6
+#: data/io.github.ellie_commons.jorts.desktop.in:2
+msgid "jorts"
+msgstr "jorts"
 
-#: data/io.github.ellie_commons.jort.appdata.xml.in:7
-#: data/io.github.ellie_commons.jort.desktop.in:3
+#: data/io.github.ellie_commons.jorts.appdata.xml.in:7
+#: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jot your ideas"
 msgstr "Notér dine ideer"
 
-#: data/io.github.ellie_commons.jort.appdata.xml.in:9
+#: data/io.github.ellie_commons.jorts.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
@@ -33,22 +33,22 @@ msgstr ""
 "En simpel post-it note applikation for enhver type af korttids tanker "
 "eller ideer."
 
-#: data/io.github.ellie_commons.jort.appdata.xml.in:11
+#: data/io.github.ellie_commons.jorts.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr "Luk på et ethvert tidspunkt med genvejen Ctrl + Q"
 
-#: data/io.github.ellie_commons.jort.appdata.xml.in:17
+#: data/io.github.ellie_commons.jorts.appdata.xml.in:17
 msgid "Lains"
 msgstr "Lains"
 
-#: data/io.github.ellie_commons.jort.desktop.in:4
-msgid "io.github.ellie_commons.jort"
-msgstr "io.github.ellie_commons.jort"
+#: data/io.github.ellie_commons.jorts.desktop.in:4
+msgid "io.github.ellie_commons.jorts"
+msgstr "io.github.ellie_commons.jorts"
 
-#: data/io.github.ellie_commons.jort.desktop.in:6
+#: data/io.github.ellie_commons.jorts.desktop.in:6
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr "Tekst;Simpelt;Ren tekst;Note;"
 
-#: data/io.github.ellie_commons.jort.desktop.in:15
+#: data/io.github.ellie_commons.jorts.desktop.in:15
 msgid "New note…"
 msgstr "Ny note"

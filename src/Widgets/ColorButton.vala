@@ -1,6 +1,6 @@
 
 
-namespace Jort {
+namespace jorts {
 
 
     public class ColorButton : Gtk.Button {

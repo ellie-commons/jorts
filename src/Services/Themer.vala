@@ -1,4 +1,4 @@
-namespace Jort {
+namespace jorts {
     public class Themer : Object {
         public string color;
 
@@ -28,7 +28,7 @@ namespace Jort {
                         );
                 }
 
-                .jort-view text selection {
+                .jorts-view text selection {
                     color: shade(%s, 1.88);
                     background-color: %s;
                 }
@@ -37,13 +37,13 @@ namespace Jort {
                     background: transparent;
                 }
 
-                .window-%d .jort-title image,
-                .window-%d .jort-label {
+                .window-%d .jorts-title image,
+                .window-%d .jorts-label {
                     color: %s;
                     box-shadow: none;
                 }
 
-                .window-%d .jort-bar {
+                .window-%d .jorts-bar {
                     color: %s;
                     background-color: %s;
                     border-top-color: %s;
@@ -52,16 +52,16 @@ namespace Jort {
                     padding: 3px;
                 }
 
-                .window-%d .jort-bar image {
+                .window-%d .jorts-bar image {
                     color: %s;
                     padding: 3px;
                     box-shadow: none;
                     background-image: none;
                 }
 
-                .window-%d .jort-view,
-                .window-%d .jort-view text,
-                .window-%d .jort-title {
+                .window-%d .jorts-view,
+                .window-%d .jorts-view text,
+                .window-%d .jorts-title {
                     background-color: %s;
                     background-image: none;
                     border-bottom-color: %s;
@@ -126,7 +126,7 @@ namespace Jort {
                     background-color: #a3907c;
                 }
 
-                .jort-bar box {
+                .jorts-bar box {
                     border: none;
                 }
 

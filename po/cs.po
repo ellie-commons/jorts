@@ -3,7 +3,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.ellie_commons.jort\n"
+"Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-23 01:00-0200\n"
 "PO-Revision-Date: 2018-07-21 18:20+0200\n"

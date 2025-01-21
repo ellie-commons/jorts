@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-namespace Jort {
+namespace jorts {
 
     // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
@@ -32,8 +32,8 @@ namespace Jort {
         public string selected_color_text = "#002e99";
         public bool pinned = false;
         public string content = "";
-        public string title_name = "Jort";
-        public Jort.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
+        public string title_name = "Jorts";
+        public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
         
         public string theme = "yellow";
@@ -69,17 +69,17 @@ namespace Jort {
             if (storage != null) {
                 init_from_storage(storage);
             } else {
-                this.color = "#fff394";
-                this.selected_color_text = "#ad5f00";
+                this.color = "#8cd5ff";
+                this.selected_color_text = "#002e99";
                 this.content = "";
-                this.title_name = "Jort";
+                this.title_name = "jorts";
                 set_title (this.title_name);
             }
 
             // add required base classes
             this.get_style_context().add_class("rounded");
             this.get_style_context().add_class("default-decoration");
-            this.get_style_context().add_class("jort-window");
+            this.get_style_context().add_class("jorts-window");
             this.uid = uid_counter++;
 
             // Rebuild the whole theming
@@ -90,13 +90,13 @@ namespace Jort {
             // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            header.get_style_context().add_class("jort-title");
+            header.get_style_context().add_class("jorts-title");
             header.has_subtitle = false;
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
 
             // Defime the label you can edit. Which is editable.
-            label = new Jort.EditableLabel (this.title_name);
+            label = new jorts.EditableLabel (this.title_name);
             header.set_custom_title(label);
             this.set_titlebar(header);
 
@@ -104,7 +104,7 @@ namespace Jort {
 
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
-            actionbar.get_style_context().add_class("jort-bar");
+            actionbar.get_style_context().add_class("jorts-bar");
             create_actionbar ();
             create_app_menu ();
 
@@ -118,7 +118,7 @@ namespace Jort {
             view = new Gtk.SourceView.with_buffer (buffer);
             view.bottom_margin = 10;
             view.buffer.text = this.content;
-            view.get_style_context().add_class("jort-view");
+            view.get_style_context().add_class("jorts-view");
             view.expand = true;
             view.left_margin = 10;
             view.margin = 2;
@@ -217,7 +217,7 @@ namespace Jort {
                         );
                 }
 
-                .jort-view text selection {
+                .jorts-view text selection {
                     color: shade(%s, 1.88);
                     background-color: %s;
                 }
@@ -226,13 +226,13 @@ namespace Jort {
                     background: transparent;
                 }
 
-                .window-%d .jort-title image,
-                .window-%d .jort-label {
+                .window-%d .jorts-title image,
+                .window-%d .jorts-label {
                     color: %s;
                     box-shadow: none;
                 }
 
-                .window-%d .jort-bar {
+                .window-%d .jorts-bar {
                     color: %s;
                     background-color: %s;
                     border-top-color: %s;
@@ -241,16 +241,16 @@ namespace Jort {
                     padding: 3px;
                 }
 
-                .window-%d .jort-bar image {
+                .window-%d .jorts-bar image {
                     color: %s;
                     padding: 3px;
                     box-shadow: none;
                     background-image: none;
                 }
 
-                .window-%d .jort-view,
-                .window-%d .jort-view text,
-                .window-%d .jort-title {
+                .window-%d .jorts-view,
+                .window-%d .jorts-view text,
+                .window-%d .jorts-title {
                     background-color: %s;
                     background-image: none;
                     border-bottom-color: %s;
@@ -315,7 +315,7 @@ namespace Jort {
                     background-color: #a3907c;
                 }
 
-                .jort-bar box {
+                .jorts-bar box {
                     border: none;
                 }
 
@@ -649,8 +649,8 @@ namespace Jort {
         public override bool delete_event (Gdk.EventAny event) {
             int x, y;
             this.get_position (out x, out y);
-            Jort.Application.gsettings.set_int("window-x", x);
-            Jort.Application.gsettings.set_int("window-y", y);
+            jorts.Application.gsettings.set_int("window-x", x);
+            jorts.Application.gsettings.set_int("window-y", y);
             return false;
         }
     }

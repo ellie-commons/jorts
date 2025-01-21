@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>io.github.ellie_commons.jort</id>
+    <id>io.github.ellie_commons.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
-    <name>Jort</name>
+    <name>jorts</name>
     <summary>Jot your ideas</summary>
     <description>
         <p>A stupidly-simple sticky notes application for any type of short term notes or ideas.</p>
@@ -12,14 +12,14 @@
         </ul>
     </description>
     <provides>
-        <binary>io.github.ellie_commons.jort</binary>
+        <binary>io.github.ellie_commons.jorts</binary>
     </provides>
     <developer_name>Stella - Teamcons</developer_name>
-    <url type="homepage">https://github.com/teamcons/jort</url>
-    <url type="bugtracker">https://github.com/teamcons/jort/issues</url>
+    <url type="homepage">https://github.com/teamcons/jorts</url>
+    <url type="bugtracker">https://github.com/teamcons/jorts/issues</url>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/teamcons/jort/master/data/shot.png</image>
+            <image>https://raw.githubusercontent.com/teamcons/jorts/master/data/shot.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.1">
@@ -73,7 +73,7 @@
                 <p>Release: Translations &amp; Searches</p>
                 <ul>
                     <li>Lots of translations added.</li>
-                    <li>Now one can search for Jort in the apps menu faster with better keywords.</li>
+                    <li>Now one can search for jorts in the apps menu faster with better keywords.</li>
                 </ul>
             </description>
         </release>
@@ -314,7 +314,7 @@
             <description>
                 <p>Release: Hello, World!</p>
                 <ul>
-                    <li>Code fixes and enable Jort for translations</li>
+                    <li>Code fixes and enable jorts for translations</li>
                 </ul>
             </description>
         </release>
@@ -347,7 +347,7 @@
             <description>
                 <p>Release: About What, Exactly?</p>
                 <ul>
-                    <li>Creation of new Jort applets not permitted, only one applet is able to be shown now</li>
+                    <li>Creation of new jorts applets not permitted, only one applet is able to be shown now</li>
                     <li>Remove the About Dialog</li>
                     <li>Update the text color</li>
                 </ul>

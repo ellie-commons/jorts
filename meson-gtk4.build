@@ -1,5 +1,5 @@
 # Name our project
-project('io.github.ellie_commons.jort', ['vala', 'c'],
+project('io.github.ellie_commons.jorts', ['vala', 'c'],
     version: '1.6.2'
 )
 
@@ -13,7 +13,7 @@ conf = configuration_data()
 # Get the package data directory under Meson
 pkgdatadir = join_paths([ get_option('prefix'),
                           get_option('datadir'),
-                          'io.github.ellie_commons.jort' ])
+                          'io.github.ellie_commons.jorts' ])
 
 conf.set_quoted('PKGDATADIR', pkgdatadir)
 
@@ -27,7 +27,7 @@ config_h_dir = include_directories('.')
 
 gresource = gnome.compile_resources(
     'as-resources',
-    'data' / 'io.github.ellie_commons.jort.gresource.xml',
+    'data' / 'io.github.ellie_commons.jorts.gresource.xml',
     source_dir: 'data',
     c_name: 'as'
 )

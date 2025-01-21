@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
-namespace Jort {
+namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
         private NoteManager note_manager = new NoteManager();
@@ -25,11 +25,11 @@ namespace Jort {
 
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: "io.github.ellie_commons.jort");
+                    application_id: "io.github.ellie_commons.jorts");
         }
         
         static construct {
-            gsettings = new GLib.Settings ("io.github.ellie_commons.jort");
+            gsettings = new GLib.Settings ("io.github.ellie_commons.jorts");
         }
 
         construct {

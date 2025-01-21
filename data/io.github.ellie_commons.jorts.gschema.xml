@@ -1,5 +1,5 @@
 <schemalist>
-	<schema id="io.github.ellie_commons.jort" path="/io/github/ellie_commons/jort/">
+	<schema id="io.github.ellie_commons.jorts" path="/io/github/ellie_commons/jorts/">
 		<key name="window-x" type="i">
 			<default>-1</default>
 			<summary>Window position</summary>

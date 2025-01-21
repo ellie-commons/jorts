@@ -17,9 +17,9 @@
 * Boston, MA 02110-1301 USA
 */
 
-namespace Jort {
+namespace jorts {
     public class NoteManager {
-        private string app_dir = Environment.get_user_data_dir () + "/io.github.ellie_commons.jort";
+        private string app_dir = Environment.get_user_data_dir () + "/io.github.ellie_commons.jorts";
         private string file_name;
 
         public NoteManager () {

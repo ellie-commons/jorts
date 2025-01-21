@@ -21,7 +21,7 @@
 */
 
 // TODO: GTK4: This will all go away because gtk4 has an editablelabel
-public class Jort.EditableLabel : Gtk.EventBox {
+public class jorts.EditableLabel : Gtk.EventBox {
     public signal void changed (string new_title);
     public Gtk.Label title;
     private Gtk.Entry entry;
@@ -61,16 +61,16 @@ public class Jort.EditableLabel : Gtk.EventBox {
         events |= Gdk.EventMask.LEAVE_NOTIFY_MASK;
         events |= Gdk.EventMask.BUTTON_PRESS_MASK;
 
-        this.get_style_context().add_class("jort-label");
+        this.get_style_context().add_class("jorts-label");
 
         string style = null;
         var css_provider = new Gtk.CssProvider();
         style = """
-        .jort-label {
+        .jorts-label {
             font-weight: 700;
             font-size: 0.88em;
         }
-        .jort-label:backdrop {
+        .jorts-label:backdrop {
             color: mix (@textColorPrimary, @colorPrimary, 0.3);
         }""";
 
