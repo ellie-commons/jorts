@@ -3,6 +3,8 @@
   <span align="center"> <img width="128" height="128" class="center" src="https://github.com/ellie-commons/jort/blob/main/data/icons/128/io.github.ellie_commons.jort.svg" alt="Jort icon - a sticky note"></span>
   <h1 align="center">Jort</h1>
   <h3 align="center">Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
+
+  <span align="center"> <img class="center" src="https://github.com/ellie-commons/jort/blob/main/data/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
 </div>
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/io.github.ellie_commons.jort)
