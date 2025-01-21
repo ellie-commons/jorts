@@ -41,7 +41,7 @@ sudo apt install granite gtksourceview-3.0 libjson-glib libgee-0.8 meson vala
 
 ## Building
 
-Simply clone this repo, then:
+Simply clone this repo / download and unzip the zip, then:
 
 ```bash
 meson build && cd build
@@ -50,8 +50,9 @@ sudo ninja install
 ```
 
 or to install it as a flatpak on your system
+
 ```bash
-flatpak-builder --force-clean --user --install-deps-from=appcenter --repo=repo --install builddir ./io.github ellie_commons.jort.yaml
+flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jort.yaml
 ```
 
 ## Notes Storage
