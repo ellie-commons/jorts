@@ -1,6 +1,6 @@
 
 <div align="center">
-  <span align="center"> <img width="128" height="128" class="center" src="data/icons/128.svg" alt="Jort icon - a sticky note"></span>
+  <span align="center"> <img width="128" height="128" class="center" src="https://github.com/ellie-commons/jort/blob/main/data/icons/128/io.github.ellie_commons.jort.svg" alt="Jort icon - a sticky note"></span>
   <h1 align="center">Jort</h1>
   <h3 align="center">Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
 </div>
