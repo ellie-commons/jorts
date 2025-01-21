@@ -79,7 +79,7 @@ namespace Jort {
             // add required base classes
             this.get_style_context().add_class("rounded");
             this.get_style_context().add_class("default-decoration");
-            this.get_style_context().add_class("notejot-window");
+            this.get_style_context().add_class("jort-window");
             this.uid = uid_counter++;
 
             // Rebuild the whole theming
@@ -90,7 +90,7 @@ namespace Jort {
             // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            header.get_style_context().add_class("notejot-title");
+            header.get_style_context().add_class("jort-title");
             header.has_subtitle = false;
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
@@ -104,7 +104,7 @@ namespace Jort {
 
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
-            actionbar.get_style_context().add_class("notejot-bar");
+            actionbar.get_style_context().add_class("jort-bar");
             create_actionbar ();
             create_app_menu ();
 
@@ -118,7 +118,7 @@ namespace Jort {
             view = new Gtk.SourceView.with_buffer (buffer);
             view.bottom_margin = 10;
             view.buffer.text = this.content;
-            view.get_style_context().add_class("notejot-view");
+            view.get_style_context().add_class("jort-view");
             view.expand = true;
             view.left_margin = 10;
             view.margin = 2;
@@ -217,7 +217,7 @@ namespace Jort {
                         );
                 }
 
-                .notejot-view text selection {
+                .jort-view text selection {
                     color: shade(%s, 1.88);
                     background-color: %s;
                 }
@@ -226,13 +226,13 @@ namespace Jort {
                     background: transparent;
                 }
 
-                .window-%d .notejot-title image,
-                .window-%d .notejot-label {
+                .window-%d .jort-title image,
+                .window-%d .jort-label {
                     color: %s;
                     box-shadow: none;
                 }
 
-                .window-%d .notejot-bar {
+                .window-%d .jort-bar {
                     color: %s;
                     background-color: %s;
                     border-top-color: %s;
@@ -241,16 +241,16 @@ namespace Jort {
                     padding: 3px;
                 }
 
-                .window-%d .notejot-bar image {
+                .window-%d .jort-bar image {
                     color: %s;
                     padding: 3px;
                     box-shadow: none;
                     background-image: none;
                 }
 
-                .window-%d .notejot-view,
-                .window-%d .notejot-view text,
-                .window-%d .notejot-title {
+                .window-%d .jort-view,
+                .window-%d .jort-view text,
+                .window-%d .jort-title {
                     background-color: %s;
                     background-image: none;
                     border-bottom-color: %s;
@@ -315,7 +315,7 @@ namespace Jort {
                     background-color: #a3907c;
                 }
 
-                .notejot-bar box {
+                .jort-bar box {
                     border: none;
                 }
 

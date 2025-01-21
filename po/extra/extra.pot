@@ -20,38 +20,38 @@ msgstr ""
 "X-Poedit-Basepath: ../../data\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:6
-#: data/io.github.teamcons.jort.desktop.in:2
+#: data/io.github.ellie_commons.jort.appdata.xml.in:6
+#: data/io.github.ellie_commons.jort.desktop.in:2
 msgid "Jort"
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:7
-#: data/io.github.teamcons.jort.desktop.in:3
+#: data/io.github.ellie_commons.jort.appdata.xml.in:7
+#: data/io.github.ellie_commons.jort.desktop.in:3
 msgid "Jot your ideas"
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:9
+#: data/io.github.ellie_commons.jort.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:11
+#: data/io.github.ellie_commons.jort.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:17
+#: data/io.github.ellie_commons.jort.appdata.xml.in:17
 msgid "Lains"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:4
-msgid "io.github.teamcons.jort"
+#: data/io.github.ellie_commons.jort.desktop.in:4
+msgid "io.github.ellie_commons.jort"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:6
+#: data/io.github.ellie_commons.jort.desktop.in:6
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:15
+#: data/io.github.ellie_commons.jort.desktop.in:15
 msgid "New note…"
 msgstr ""

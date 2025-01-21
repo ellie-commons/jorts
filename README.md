@@ -1,17 +1,22 @@
-# ![icon](data/icon.png) Jort
 
-## Stupidly simple sticky notes applet
+<div align="center">
+  <span align="center"> <img width="128" height="128" class="center" src="data/icons/128.svg" alt="Jort icon - a sticky note"></span>
+  <h1 align="center">Jort</h1>
+  <h3 align="center">Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
+</div>
 
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/io.github.teamcons.jort)
+<p align="center">
+  <img src="https://github.com/ellie-commons/jort/blob/main/data/icon.png?raw=true" alt="Screenshot">
+</p>
 
-[![Build Status](https://travis-ci.org/lainsce/notejot.svg?branch=master)](https://travis-ci.org/lainsce/notejot)
+
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/io.github.ellie_commons.jort)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-
-![Screenshot](data/shot.png)
 
 ## Donations
 
-Most of the code was from Lainsce. This is from an old version of Notejot
+Most of the code was from Lainsce. This is from an old version of jort
 
 [Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
 
@@ -29,6 +34,12 @@ meson
 vala
 ```
 
+You can
+
+```bash
+sudo apt install granite gtksourceview-3.0 libjson-glib libgee-0.8 meson vala
+```
+
 ## Building
 
 Simply clone this repo, then:
@@ -41,8 +52,8 @@ sudo ninja install
 
 or
 ```bash
-flatpak-builder --force-clean --user --install-deps-from=appcenter --repo=repo --install builddir ./io.github.teamcons.jort.yaml
+flatpak-builder --force-clean --user --install-deps-from=appcenter --repo=repo --install builddir ./io.github ellie_commons.jort.yaml
 ```
 
 ## Notes Storage
-Notes are stored in `~/.local/share/io.github.teamcons.jort/`
+Notes are stored in `~/.local/share/io.github.ellie_commons.jort/`

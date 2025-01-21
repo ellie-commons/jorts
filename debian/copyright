@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: com.github.lainsce.notejot
-Source: https://github.com/lainsce/notejot
+Upstream-Name: io.github.ellie_commons.jort
+Source: https://github.com/lainsce/jort
 
 Files: src/* data/* cmake/* debian/*
 Copyright: 2017 Lains <lainsce@airmail.cc>

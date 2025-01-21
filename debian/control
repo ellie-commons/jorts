@@ -1,4 +1,4 @@
-Source: com.github.lainsce.notejot
+Source: io.github.ellie_commons.jort
 Section: x11
 Priority: extra
 Maintainer: Lains <lainsce@airmail.cc>
@@ -12,7 +12,7 @@ Build-Depends: meson,
                valac (>= 0.26)
 
 Standards-Version: 3.9.3
-Package: com.github.lainsce.notejot
+Package: io.github.ellie_commons.jort
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: A stupidly-simple sticky notes app.

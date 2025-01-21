@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>io.github.teamcons.jort</id>
+    <id>io.github.ellie_commons.jort</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Jort</name>
@@ -12,7 +12,7 @@
         </ul>
     </description>
     <provides>
-        <binary>io.github.teamcons.jort</binary>
+        <binary>io.github.ellie_commons.jort</binary>
     </provides>
     <developer_name>Stella - Teamcons</developer_name>
     <url type="homepage">https://github.com/teamcons/jort</url>

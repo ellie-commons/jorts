@@ -17,38 +17,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:6
-#: data/io.github.teamcons.jort.desktop.in:3
+#: data/io.github.ellie_commons.jort.appdata.xml.in:6
+#: data/io.github.ellie_commons.jort.desktop.in:3
 msgid "Jort"
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:7
-#: data/io.github.teamcons.jort.desktop.in:4
+#: data/io.github.ellie_commons.jort.appdata.xml.in:7
+#: data/io.github.ellie_commons.jort.desktop.in:4
 msgid "Jot your ideas"
 msgstr "Anote suas ideias"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:9
+#: data/io.github.ellie_commons.jort.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:11
+#: data/io.github.ellie_commons.jort.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr ""
 
-#: data/io.github.teamcons.jort.appdata.xml.in:17
+#: data/io.github.ellie_commons.jort.appdata.xml.in:17
 msgid "Lains"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:10
-msgid "io.github.teamcons.jort"
+#: data/io.github.ellie_commons.jort.desktop.in:10
+msgid "io.github.ellie_commons.jort"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:11
+#: data/io.github.ellie_commons.jort.desktop.in:11
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr ""
 
-#: data/io.github.teamcons.jort.desktop.in:20
+#: data/io.github.ellie_commons.jort.desktop.in:20
 msgid "New note…"
 msgstr ""

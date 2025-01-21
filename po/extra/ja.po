@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:6
-#: data/io.github.teamcons.jort.desktop.in:3
+#: data/io.github.ellie_commons.jort.appdata.xml.in:6
+#: data/io.github.ellie_commons.jort.desktop.in:3
 msgid "Jort"
 msgstr "Jort"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:7
-#: data/io.github.teamcons.jort.desktop.in:4
+#: data/io.github.ellie_commons.jort.appdata.xml.in:7
+#: data/io.github.ellie_commons.jort.desktop.in:4
 msgid "Jot your ideas"
 msgstr "アイデアをメモします"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:9
+#: data/io.github.ellie_commons.jort.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
@@ -36,23 +36,23 @@ msgstr ""
 "一時的なノートやアイデアをメモするための、非常にシンプルな付箋アプリケーショ"
 "ンです。"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:11
+#: data/io.github.ellie_commons.jort.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr "ショートカット Ctrl + Q で、いつでも終了できます"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:17
+#: data/io.github.ellie_commons.jort.appdata.xml.in:17
 msgid "Lains"
 msgstr "Lains"
 
-#: data/io.github.teamcons.jort.desktop.in:10
-msgid "io.github.teamcons.jort"
-msgstr "io.github.teamcons.jort"
+#: data/io.github.ellie_commons.jort.desktop.in:10
+msgid "io.github.ellie_commons.jort"
+msgstr "io.github.ellie_commons.jort"
 
-#: data/io.github.teamcons.jort.desktop.in:11
+#: data/io.github.ellie_commons.jort.desktop.in:11
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr ""
 "Text;Plain;Plaintext;Notepad;テキスト;プレーン;プレーンテキスト;メモ帳;"
 
-#: data/io.github.teamcons.jort.desktop.in:20
+#: data/io.github.ellie_commons.jort.desktop.in:20
 msgid "New note…"
 msgstr "新しいノート…"

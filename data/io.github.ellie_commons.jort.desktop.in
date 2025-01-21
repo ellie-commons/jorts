@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Jort
 Comment=Jot your ideas
-Exec=io.github.teamcons.jort
-Icon=io.github.teamcons.jort
+Exec=io.github.ellie_commons.jort
+Icon=io.github.ellie_commons.jort
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;
 Terminal=false
 Type=Application
@@ -11,5 +11,5 @@ Categories=GTK;Utility;
 Actions=NewNote;
 
 [Desktop Action NewNote]
-Exec=io.github.teamcons.jort --new-note
+Exec=io.github.ellie_commons.jort --new-note
 Name=New note…

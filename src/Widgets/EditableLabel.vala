@@ -61,16 +61,16 @@ public class Jort.EditableLabel : Gtk.EventBox {
         events |= Gdk.EventMask.LEAVE_NOTIFY_MASK;
         events |= Gdk.EventMask.BUTTON_PRESS_MASK;
 
-        this.get_style_context().add_class("notejot-label");
+        this.get_style_context().add_class("jort-label");
 
         string style = null;
         var css_provider = new Gtk.CssProvider();
         style = """
-        .notejot-label {
+        .jort-label {
             font-weight: 700;
             font-size: 0.88em;
         }
-        .notejot-label:backdrop {
+        .jort-label:backdrop {
             color: mix (@textColorPrimary, @colorPrimary, 0.3);
         }""";
 

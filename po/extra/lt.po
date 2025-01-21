@@ -19,17 +19,17 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:6
-#: data/io.github.teamcons.jort.desktop.in:3
+#: data/io.github.ellie_commons.jort.appdata.xml.in:6
+#: data/io.github.ellie_commons.jort.desktop.in:3
 msgid "Jort"
 msgstr "Jort"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:7
-#: data/io.github.teamcons.jort.desktop.in:4
+#: data/io.github.ellie_commons.jort.appdata.xml.in:7
+#: data/io.github.ellie_commons.jort.desktop.in:4
 msgid "Jot your ideas"
 msgstr "Greitai užsirašykite savo idėjas"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:9
+#: data/io.github.ellie_commons.jort.appdata.xml.in:9
 msgid ""
 "A stupidly-simple sticky notes application for any type of short term notes "
 "or ideas."
@@ -37,22 +37,22 @@ msgstr ""
 "Kvailai paprasti lipnūs užrašai bet kokio tipo trumpoms pastaboms ar "
 "idėjoms."
 
-#: data/io.github.teamcons.jort.appdata.xml.in:11
+#: data/io.github.ellie_commons.jort.appdata.xml.in:11
 msgid "Quit anytime with the shortcut Ctrl + Q"
 msgstr "Išeikite bet kuriuo metu, naudodami susiejimą Ctrl (Vald) + Q"
 
-#: data/io.github.teamcons.jort.appdata.xml.in:17
+#: data/io.github.ellie_commons.jort.appdata.xml.in:17
 msgid "Lains"
 msgstr "Lains"
 
-#: data/io.github.teamcons.jort.desktop.in:10
-msgid "io.github.teamcons.jort"
-msgstr "io.github.teamcons.jort"
+#: data/io.github.ellie_commons.jort.desktop.in:10
+msgid "io.github.ellie_commons.jort"
+msgstr "io.github.ellie_commons.jort"
 
-#: data/io.github.teamcons.jort.desktop.in:11
+#: data/io.github.ellie_commons.jort.desktop.in:11
 msgid "Text;Plain;Plaintext;Notepad;"
 msgstr "Tekstas;Grynas;Grynasis;Užrašinė;Užrašai;"
 
-#: data/io.github.teamcons.jort.desktop.in:20
+#: data/io.github.ellie_commons.jort.desktop.in:20
 msgid "New note…"
 msgstr "Nauji užrašai…"

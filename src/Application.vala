@@ -25,11 +25,11 @@ namespace Jort {
 
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: "io.github.teamcons.jort");
+                    application_id: "io.github.ellie_commons.jort");
         }
         
         static construct {
-            gsettings = new GLib.Settings ("io.github.teamcons.jort");
+            gsettings = new GLib.Settings ("io.github.ellie_commons.jort");
         }
 
         construct {
