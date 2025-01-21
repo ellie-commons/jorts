@@ -10,7 +10,11 @@
 
 ## Donations
 
-Most of the code was from Lainsce. This is from an old version of jort
+Most of the code was from Lainsce because this is a fork of an old version of Notejot.
+
+Now, the real official notejot is something different, much less basic, and not focused on elementary OS.
+
+Some people liked the old one, and thus we diden a fork of it. However i struggle with porting gtk3 to gtk4, so this wont really go anywhere
 
 [Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
 
@@ -44,7 +48,7 @@ meson configure -Dprefix=/usr
 sudo ninja install
 ```
 
-or
+or to install it as a flatpak on your system
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --repo=repo --install builddir ./io.github ellie_commons.jort.yaml
 ```
