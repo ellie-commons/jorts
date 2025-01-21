@@ -28,8 +28,8 @@ namespace Jort {
         private Gtk.ActionBar actionbar;
         private int uid;
         private static int uid_counter = 0;
-        public string color = "#fff394";
-        public string selected_color_text = "#ad5f00";
+        public string color = "#8cd5ff";
+        public string selected_color_text = "#002e99";
         public bool pinned = false;
         public string content = "";
         public string title_name = "Jort";
