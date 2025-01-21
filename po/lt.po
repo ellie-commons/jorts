@@ -14,55 +14,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/MainWindow.vala:308
+#: src/MainWindow.vala:360
 msgid "New note"
 msgstr "Nauji užrašai"
 
-#: src/MainWindow.vala:313
+#: src/MainWindow.vala:365
 msgid "Delete note"
 msgstr "Ištrinti užrašus"
 
-#: src/MainWindow.vala:327
+#: src/MainWindow.vala:384
 msgid "White"
 msgstr "Balta"
 
-#: src/MainWindow.vala:338
+#: src/MainWindow.vala:394
 msgid "Red"
 msgstr "Raudona"
 
-#: src/MainWindow.vala:349
+#: src/MainWindow.vala:405
 msgid "Orange"
 msgstr "Oranžinė"
 
-#: src/MainWindow.vala:360
+#: src/MainWindow.vala:416
 msgid "Yellow"
 msgstr "Geltona"
 
-#: src/MainWindow.vala:371
+#: src/MainWindow.vala:427
 msgid "Green"
 msgstr "Žalia"
 
-#: src/MainWindow.vala:382
+#: src/MainWindow.vala:438
 msgid "Blue"
 msgstr "Mėlyna"
 
-#: src/MainWindow.vala:393
+#: src/MainWindow.vala:449
 msgid "Indigo"
 msgstr "Indigo"
 
-#: src/MainWindow.vala:404
+#: src/MainWindow.vala:460
 msgid "Cocoa"
 msgstr "Ruda"
 
-#: src/MainWindow.vala:415
+#: src/MainWindow.vala:471
 msgid "Slate"
 msgstr "Pilkai melsva"
 
-#: src/MainWindow.vala:432
+#: src/MainWindow.vala:490
 msgid "Note Color"
 msgstr "Užrašų spalva"
 
-#: src/MainWindow.vala:448
+#: src/MainWindow.vala:506
 msgid "Settings"
 msgstr "Nustatymai"
 

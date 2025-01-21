@@ -16,54 +16,54 @@ msgstr ""
 "Language: de_DE\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: src/MainWindow.vala:308
+#: src/MainWindow.vala:360
 msgid "New note"
 msgstr "Neue Notiz"
 
-#: src/MainWindow.vala:313
+#: src/MainWindow.vala:365
 msgid "Delete note"
 msgstr "Notiz löschen"
 
-#: src/MainWindow.vala:327
+#: src/MainWindow.vala:384
 msgid "White"
 msgstr "Weiß"
 
-#: src/MainWindow.vala:338
+#: src/MainWindow.vala:394
 msgid "Red"
 msgstr "Rot"
 
-#: src/MainWindow.vala:349
+#: src/MainWindow.vala:405
 msgid "Orange"
 msgstr "Orange"
 
-#: src/MainWindow.vala:360
+#: src/MainWindow.vala:416
 msgid "Yellow"
 msgstr "Gelb"
 
-#: src/MainWindow.vala:371
+#: src/MainWindow.vala:427
 msgid "Green"
 msgstr "Grün"
 
-#: src/MainWindow.vala:382
+#: src/MainWindow.vala:438
 msgid "Blue"
 msgstr "Blau"
 
-#: src/MainWindow.vala:393
+#: src/MainWindow.vala:449
 msgid "Indigo"
 msgstr "Indigo"
 
-#: src/MainWindow.vala:404
+#: src/MainWindow.vala:460
 msgid "Cocoa"
 msgstr "Kakao"
 
-#: src/MainWindow.vala:415
+#: src/MainWindow.vala:471
 msgid "Slate"
 msgstr "Schiefer"
 
-#: src/MainWindow.vala:432
+#: src/MainWindow.vala:490
 msgid "Note Color"
 msgstr "Notizfarbe"
 
-#: src/MainWindow.vala:448
+#: src/MainWindow.vala:506
 msgid "Settings"
 msgstr "Einstellungen"

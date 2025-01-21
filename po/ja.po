@@ -34,7 +34,7 @@ msgstr "赤"
 msgid "Orange"
 msgstr "オレンジ"
 
-#: src/MainWindow.vala:313
+#: src/MainWindow.vala:365
 msgid "Yellow"
 msgstr "黄"
 

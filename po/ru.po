@@ -15,55 +15,55 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: src/MainWindow.vala:308
+#: src/MainWindow.vala:360
 msgid "New note"
 msgstr "Новый стикер"
 
-#: src/MainWindow.vala:313
+#: src/MainWindow.vala:365
 msgid "Delete note"
 msgstr "Удалить стикер"
 
-#: src/MainWindow.vala:327
+#: src/MainWindow.vala:384
 msgid "White"
 msgstr "Белый"
 
-#: src/MainWindow.vala:338
+#: src/MainWindow.vala:394
 msgid "Red"
 msgstr "Красный"
 
-#: src/MainWindow.vala:349
+#: src/MainWindow.vala:405
 msgid "Orange"
 msgstr "Оранжевый"
 
-#: src/MainWindow.vala:360
+#: src/MainWindow.vala:416
 msgid "Yellow"
 msgstr "Жёлтый"
 
-#: src/MainWindow.vala:371
+#: src/MainWindow.vala:427
 msgid "Green"
 msgstr "Зелёный"
 
-#: src/MainWindow.vala:382
+#: src/MainWindow.vala:438
 msgid "Blue"
 msgstr "Синий"
 
-#: src/MainWindow.vala:393
+#: src/MainWindow.vala:449
 msgid "Indigo"
 msgstr "Индиго"
 
-#: src/MainWindow.vala:404
+#: src/MainWindow.vala:460
 msgid "Cocoa"
 msgstr "Какао"
 
-#: src/MainWindow.vala:415
+#: src/MainWindow.vala:471
 msgid "Slate"
 msgstr "Синевато-серый"
 
-#: src/MainWindow.vala:432
+#: src/MainWindow.vala:490
 msgid "Note Color"
 msgstr "Цвет стикера"
 
-#: src/MainWindow.vala:448
+#: src/MainWindow.vala:506
 msgid "Settings"
 msgstr "Параметры"
 
