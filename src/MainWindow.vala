@@ -237,9 +237,9 @@ namespace jorts {
             color_button_strawberry.halign = Gtk.Align.CENTER;
             color_button_strawberry.height_request = 24;
             color_button_strawberry.width_request = 24;
-            color_button_strawberry.tooltip_text = _("Red");
+            color_button_strawberry.tooltip_text = _("Strawberry");
             color_button_strawberry.get_style_context ().add_class ("color-button");
-            color_button_strawberry.get_style_context ().add_class ("color-red");
+            color_button_strawberry.get_style_context ().add_class ("color-strawberry");
 
             var color_button_orange = new Gtk.Button ();
             color_button_orange.has_focus = false;
@@ -257,22 +257,22 @@ namespace jorts {
             color_button_banana.halign = Gtk.Align.CENTER;
             color_button_banana.height_request = 24;
             color_button_banana.width_request = 24;
-            color_button_banana.tooltip_text = _("Yellow");
+            color_button_banana.tooltip_text = _("Banana");
 
             var color_button_banana_context = color_button_banana.get_style_context ();
             color_button_banana_context.add_class ("color-button");
-            color_button_banana_context.add_class ("color-yellow");
+            color_button_banana_context.add_class ("color-banana");
 
             var color_button_lime = new Gtk.Button ();
             color_button_lime.has_focus = false;
             color_button_lime.halign = Gtk.Align.CENTER;
             color_button_lime.height_request = 24;
             color_button_lime.width_request = 24;
-            color_button_lime.tooltip_text = _("Green");
+            color_button_lime.tooltip_text = _("Lime");
 
             var color_button_lime_context = color_button_lime.get_style_context ();
             color_button_lime_context.add_class ("color-button");
-            color_button_lime_context.add_class ("color-green");
+            color_button_lime_context.add_class ("color-lime");
 
             var color_button_blueberry = new Gtk.Button ();
             color_button_blueberry.has_focus = false;
@@ -283,7 +283,7 @@ namespace jorts {
 
             var color_button_blueberry_context = color_button_blueberry.get_style_context ();
             color_button_blueberry_context.add_class ("color-button");
-            color_button_blueberry_context.add_class ("color-blue");
+            color_button_blueberry_context.add_class ("color-blueberry");
 
 
             var color_button_bubblegum = new Gtk.Button ();
@@ -617,39 +617,39 @@ namespace jorts {
                 }
 
                 .color-slate {
-                    background-color: #a5b3bc;
+                    background-color: @SLATE_100;
                 }
 
-                .color-white {
-                    background-color: #fafafa;
+                .color-silver {
+                    background-color: @SILVER_100;
                 }
 
-                .color-red {
-                    background-color: #ff8c82;
+                .color-strawberry {
+                    background-color: @STRAWBERRY_100;
                 }
 
                 .color-orange {
-                    background-color: #ffc27d;
+                    background-color: @ORANGE_100;
                 }
 
-                .color-yellow {
-                    background-color: #fff394;
+                .color-banana {
+                    background-color: @BANANA_100;
                 }
 
-                .color-green {
-                    background-color: #d1ff82;
+                .color-lime {
+                    background-color: @LIME_100;
                 }
 
-                .color-blue {
-                    background-color: #8cd5ff;
+                .color-blueberry {
+                    background-color: @BLUEBERRY_100;
                 }
 
-                .color-indigo {
-                    background-color: #aca9fd;
+                .color-grape {
+                    background-color: @GRAPE_100;
                 }
 
                 .color-cocoa {
-                    background-color: #a3907c;
+                    background-color: @COCOA_100;
                 }
 
                 .jorts-bar box {
