@@ -3,10 +3,10 @@
     <id>io.github.ellie_commons.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
-    <name>jorts</name>
-    <summary>Jot your ideas</summary>
+    <name>Jorts</name>
+    <summary>Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</summary>
     <description>
-        <p>A stupidly-simple sticky notes application for any type of short term notes or ideas.</p>
+        <p>Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</p>
         <ul>
             <li>Quit anytime with the shortcut Ctrl + Q</li>
         </ul>
@@ -15,11 +15,11 @@
         <binary>io.github.ellie_commons.jorts</binary>
     </provides>
     <developer_name>Stella - Teamcons</developer_name>
-    <url type="homepage">https://github.com/teamcons/jorts</url>
-    <url type="bugtracker">https://github.com/teamcons/jorts/issues</url>
+    <url type="homepage">https://github.com/ellie_commons/jorts</url>
+    <url type="bugtracker">https://github.com/ellie_commons/jorts/issues</url>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/teamcons/jorts/master/data/shot.png</image>
+            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.1">

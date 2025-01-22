@@ -23,12 +23,8 @@ msgstr ""
 msgid "Delete note"
 msgstr ""
 
-#: src/MainWindow.vala:384
-msgid "White"
-msgstr ""
-
 #: src/MainWindow.vala:394
-msgid "Red"
+msgid "Strawberry"
 msgstr ""
 
 #: src/MainWindow.vala:405
@@ -36,24 +32,33 @@ msgid "Orange"
 msgstr ""
 
 #: src/MainWindow.vala:416
-msgid "Yellow"
+msgid "Banana"
 msgstr ""
 
 #: src/MainWindow.vala:427
-msgid "Green"
+msgid "Lime"
 msgstr ""
 
 #: src/MainWindow.vala:438
-msgid "Blue"
+msgid "Blueberry"
+msgstr ""
+
+#: src/MainWindow.vala:438
+msgid "Bubblegum"
 msgstr ""
 
 #: src/MainWindow.vala:449
-msgid "Indigo"
+msgid "Grape"
 msgstr ""
 
 #: src/MainWindow.vala:460
 msgid "Cocoa"
 msgstr ""
+
+#: src/MainWindow.vala:460
+msgid "Silver"
+msgstr ""
+
 
 #: src/MainWindow.vala:471
 msgid "Slate"

@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=jorts
-Comment=Jot your ideas
+Name=Jorts
+Comment=Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS
 Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;

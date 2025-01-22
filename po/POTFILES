@@ -4,4 +4,3 @@ src/Services/NoteManager.vala
 src/Services/Storage.vala
 src/Widgets/ColorButton.vala
 src/Widgets/EditableLabel.vala
-src/Constants/AppSettings.vala
