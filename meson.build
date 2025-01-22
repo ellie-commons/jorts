@@ -24,15 +24,6 @@ add_global_arguments('-DDATADIR="' + get_option('datadir') + '"', language: 'c')
 configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
-
-gresource = gnome.compile_resources(
-    'as-resources',
-    'data' / 'io.github.ellie_commons.jorts.gresource.xml',
-    source_dir: 'data',
-    c_name: 'as'
-)
-
-
 # Arguments for C
 c_args = [
   '-include', 'config.h',
@@ -44,7 +35,6 @@ cc = meson.get_compiler('c')
 # Let's define our executable
 executable(
     meson.project_name(),
-    gresource,
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/Widgets/EditableLabel.vala',
