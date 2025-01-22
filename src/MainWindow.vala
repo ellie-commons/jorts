@@ -36,7 +36,7 @@ namespace jorts {
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
         
-        public string theme = "blue";
+        public string theme = "Blueberry";
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -187,158 +187,13 @@ namespace jorts {
         // Basically the menu button defines two public variables
         // And then this reconstructs a whole ass theme out of these two
         // Either it can be a service, or just all defined in CSS and add/remove css
-        private void update_theme() {
+        private void update_theme(string theme) {
             var css_provider = new Gtk.CssProvider();
             this.get_style_context().add_class("mainwindow-%d".printf(uid));
             this.get_style_context().add_class("window-%d".printf(uid));
 
-            string style = null;
-            string selected_color = this.color;
-            style = (N_("""
-                @define-color textColorPrimary #323232;
-
-                .mainwindow-%d {
-                    background-color: %s;
-                }
-
-                .mainwindow-%d undershoot.top {
-                    background:
-                        linear-gradient(
-                            %s 0%,
-                            alpha(%s, 0) 50%
-                        );
-                }
-                
-                .mainwindow-%d undershoot.bottom {
-                    background:
-                        linear-gradient(
-                            alpha(%s, 0) 50%,
-                            %s 100%
-                        );
-                }
-
-                .jorts-view text selection {
-                    color: shade(%s, 1.88);
-                    background-color: %s;
-                }
-
-                entry.flat {
-                    background: transparent;
-                }
-
-                .window-%d .jorts-title image,
-                .window-%d .jorts-label {
-                    color: %s;
-                    box-shadow: none;
-                }
-
-                .window-%d .jorts-bar {
-                    color: %s;
-                    background-color: %s;
-                    border-top-color: %s;
-                    box-shadow: none;
-                    background-image: none;
-                    padding: 3px;
-                }
-
-                .window-%d .jorts-bar image {
-                    color: %s;
-                    padding: 3px;
-                    box-shadow: none;
-                    background-image: none;
-                }
-
-                .window-%d .jorts-view,
-                .window-%d .jorts-view text,
-                .window-%d .jorts-title {
-                    background-color: %s;
-                    background-image: none;
-                    border-bottom-color: %s;
-                    font-weight: 500;
-                    font-size: 1.2em;
-                    color: shade(%s, 0.77);
-                    box-shadow: none;
-                }
-
-                .window-%d .rotated > widget > box > image {
-                    -gtk-icon-transform: rotate(90deg);
-                }
-
-                .color-button {
-                    border-radius: 50%;
-                    background-image: none;
-                    border: 1px solid alpha(#333, 0.25);
-                    box-shadow:
-                        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-                        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-                }
-
-                .color-button:hover,
-                .color_button:focus {
-                    border: 1px solid @inset_dark_color;
-                }
-
-                .color-slate {
-                    background-color: #a5b3bc;
-                }
-
-                .color-white {
-                    background-color: #fafafa;
-                }
-
-                .color-red {
-                    background-color: #ff8c82;
-                }
-
-                .color-orange {
-                    background-color: #ffc27d;
-                }
-
-                .color-yellow {
-                    background-color: #fff394;
-                }
-
-                .color-green {
-                    background-color: #d1ff82;
-                }
-
-                .color-blue {
-                    background-color: #8cd5ff;
-                }
-
-                .color-indigo {
-                    background-color: #aca9fd;
-                }
-
-                .color-cocoa {
-                    background-color: #a3907c;
-                }
-
-                .jorts-bar box {
-                    border: none;
-                }
-
-                .image-button,
-                .titlebutton {
-                    background-color: transparent;
-                    background-image: none;
-                    border: 1px solid transparent;
-                    padding: 3px;
-                    box-shadow: none;
-                }
-
-                .image-button:hover,
-                .image-button:focus,
-                .titlebutton:hover,
-                .titlebutton:focus {
-                    background-color: alpha(@fg_color, 0.3);
-                    background-image: none;
-                    border: 1px solid transparent;
-                    box-shadow: none;
-                }
-                """)).printf(uid, selected_color, uid, selected_color, selected_color, uid, selected_color, selected_color, selected_color, selected_color_text, uid, uid, selected_color_text, uid, selected_color_text, selected_color, selected_color, uid, selected_color_text, uid, uid, uid, selected_color, selected_color, selected_color_text, uid);
-
+            string style = Themer.generate_css(theme);
+            
             try {
                 css_provider.load_from_data(style, -1);
             } catch (GLib.Error e) {
@@ -376,26 +231,15 @@ namespace jorts {
         // This is a label and several colored bubbles
         // TODO : Shorten this by doing a Widget 
         private void create_app_menu () {
-            var color_button_white = new Gtk.Button ();
-            color_button_white.has_focus = false;
-            color_button_white.halign = Gtk.Align.CENTER;
-            color_button_white.height_request = 24;
-            color_button_white.width_request = 24;
-            color_button_white.tooltip_text = _("White");
 
-            color_button_white.get_style_context ().add_class ("color-button");
-            color_button_white.get_style_context ().add_class ("color-white");
-
-            var color_button_red = new Gtk.Button ();
-            color_button_red.has_focus = false;
-            color_button_red.halign = Gtk.Align.CENTER;
-            color_button_red.height_request = 24;
-            color_button_red.width_request = 24;
-            color_button_red.tooltip_text = _("Red");
-
-
-            color_button_red.get_style_context ().add_class ("color-button");
-            color_button_red.get_style_context ().add_class ("color-red");
+            var color_button_strawberry = new Gtk.Button ();
+            color_button_strawberry.has_focus = false;
+            color_button_strawberry.halign = Gtk.Align.CENTER;
+            color_button_strawberry.height_request = 24;
+            color_button_strawberry.width_request = 24;
+            color_button_strawberry.tooltip_text = _("Red");
+            color_button_strawberry.get_style_context ().add_class ("color-button");
+            color_button_strawberry.get_style_context ().add_class ("color-red");
 
             var color_button_orange = new Gtk.Button ();
             color_button_orange.has_focus = false;
@@ -408,27 +252,27 @@ namespace jorts {
             color_button_orange_context.add_class ("color-button");
             color_button_orange_context.add_class ("color-orange");
 
-            var color_button_yellow = new Gtk.Button ();
-            color_button_yellow.has_focus = false;
-            color_button_yellow.halign = Gtk.Align.CENTER;
-            color_button_yellow.height_request = 24;
-            color_button_yellow.width_request = 24;
-            color_button_yellow.tooltip_text = _("Yellow");
+            var color_button_banana = new Gtk.Button ();
+            color_button_banana.has_focus = false;
+            color_button_banana.halign = Gtk.Align.CENTER;
+            color_button_banana.height_request = 24;
+            color_button_banana.width_request = 24;
+            color_button_banana.tooltip_text = _("Yellow");
 
-            var color_button_yellow_context = color_button_yellow.get_style_context ();
-            color_button_yellow_context.add_class ("color-button");
-            color_button_yellow_context.add_class ("color-yellow");
+            var color_button_banana_context = color_button_banana.get_style_context ();
+            color_button_banana_context.add_class ("color-button");
+            color_button_banana_context.add_class ("color-yellow");
 
-            var color_button_green = new Gtk.Button ();
-            color_button_green.has_focus = false;
-            color_button_green.halign = Gtk.Align.CENTER;
-            color_button_green.height_request = 24;
-            color_button_green.width_request = 24;
-            color_button_green.tooltip_text = _("Green");
+            var color_button_lime = new Gtk.Button ();
+            color_button_lime.has_focus = false;
+            color_button_lime.halign = Gtk.Align.CENTER;
+            color_button_lime.height_request = 24;
+            color_button_lime.width_request = 24;
+            color_button_lime.tooltip_text = _("Green");
 
-            var color_button_green_context = color_button_green.get_style_context ();
-            color_button_green_context.add_class ("color-button");
-            color_button_green_context.add_class ("color-green");
+            var color_button_lime_context = color_button_lime.get_style_context ();
+            color_button_lime_context.add_class ("color-button");
+            color_button_lime_context.add_class ("color-green");
 
             var color_button_blue = new Gtk.Button ();
             color_button_blue.has_focus = false;
@@ -441,16 +285,16 @@ namespace jorts {
             color_button_blue_context.add_class ("color-button");
             color_button_blue_context.add_class ("color-blue");
 
-            var color_button_indigo = new Gtk.Button ();
-            color_button_indigo.has_focus = false;
-            color_button_indigo.halign = Gtk.Align.CENTER;
-            color_button_indigo.height_request = 24;
-            color_button_indigo.width_request = 24;
-            color_button_indigo.tooltip_text = _("Indigo");
+            var color_button_grape = new Gtk.Button ();
+            color_button_grape.has_focus = false;
+            color_button_grape.halign = Gtk.Align.CENTER;
+            color_button_grape.height_request = 24;
+            color_button_grape.width_request = 24;
+            color_button_grape.tooltip_text = _("Indigo");
 
-            var color_button_indigo_context = color_button_indigo.get_style_context ();
-            color_button_indigo_context.add_class ("color-button");
-            color_button_indigo_context.add_class ("color-indigo");
+            var color_button_grape_context = color_button_grape.get_style_context ();
+            color_button_grape_context.add_class ("color-button");
+            color_button_grape_context.add_class ("color-indigo");
 
             var color_button_cocoa = new Gtk.Button ();
             color_button_cocoa.has_focus = false;
@@ -478,12 +322,12 @@ namespace jorts {
             // GTK4: append
             // THE HECK IS THESE
             color_button_box.pack_start (color_button_white, false, true, 0);
-            color_button_box.pack_start (color_button_red, false, true, 0);
+            color_button_box.pack_start (color_button_strawberry, false, true, 0);
             color_button_box.pack_start (color_button_orange, false, true, 0);
-            color_button_box.pack_start (color_button_yellow, false, true, 0);
-            color_button_box.pack_start (color_button_green, false, true, 0);
+            color_button_box.pack_start (color_button_banana, false, true, 0);
+            color_button_box.pack_start (color_button_lime, false, true, 0);
             color_button_box.pack_start (color_button_blue, false, true, 0);
-            color_button_box.pack_start (color_button_indigo, false, true, 0);
+            color_button_box.pack_start (color_button_grape, false, true, 0);
             color_button_box.pack_start (color_button_cocoa, false, true, 0);
             color_button_box.pack_start (color_button_slate, false, true, 0);
 
@@ -510,66 +354,53 @@ namespace jorts {
 
             // All the "change theme when theme button changed"
             // TODO: cleaner theme management
-            color_button_white.clicked.connect (() => {
-                this.color = "#F5F5F5";
-                this.selected_color_text = "#666666";
-                update_theme();
-                ((Application)this.application).update_storage();
-            });
-
-            color_button_red.clicked.connect (() => {
-                this.color = "#ff8c82";
-                this.selected_color_text = "#7a0000";
-                update_theme();
+            color_button_strawberry.clicked.connect (() => {
+                update_theme("STRAWBERRY");
                 ((Application)this.application).update_storage();
             });
 
             color_button_orange.clicked.connect (() => {
-                this.color = "#ffc27d";
-                this.selected_color_text = "#a62100";
-                update_theme();
+                update_theme("ORANGE");
                 ((Application)this.application).update_storage();
             });
 
-            color_button_yellow.clicked.connect (() => {
-                this.color = "#fff394";
-                this.selected_color_text = "#ad5f00";
-                update_theme();
+            color_button_banana.clicked.connect (() => {
+                update_theme("BANANA");
                 ((Application)this.application).update_storage();
             });
 
-            color_button_green.clicked.connect (() => {
-                this.color = "#d1ff82";
-                this.selected_color_text = "#206b00";
-                update_theme();
+            color_button_lime.clicked.connect (() => {
+                update_theme("LIME");
                 ((Application)this.application).update_storage();
             });
 
-            color_button_blue.clicked.connect (() => {
-                this.color = "#8cd5ff";
-                this.selected_color_text = "#002e99";
-                update_theme();
+            color_button_blueberry.clicked.connect (() => {
+                update_theme("BLUEBERRY");
                 ((Application)this.application).update_storage();
             });
 
-            color_button_indigo.clicked.connect (() => {
-                this.color = "#aca9fd";
-                this.selected_color_text = "#452981";
-                update_theme();
+            color_button_bubblegum.clicked.connect (() => {
+                update_theme("BUBBLEGUM");
+                ((Application)this.application).update_storage();
+            });
+
+            color_button_grape.clicked.connect (() => {
+                update_theme("GRAPE");
                 ((Application)this.application).update_storage();
             });
 
             color_button_cocoa.clicked.connect (() => {
-                this.color = "#a3907c";
-                this.selected_color_text = "#3d211b";
-                update_theme();
+                update_theme("COCOA");
+                ((Application)this.application).update_storage();
+            });
+
+            color_button_silver.clicked.connect (() => {
+                update_theme("SILVER");
                 ((Application)this.application).update_storage();
             });
 
             color_button_slate.clicked.connect (() => {
-                this.color = "#a5b3bc";
-                this.selected_color_text = "#0e141f";
-                update_theme();
+                update_theme("SLATE");
                 ((Application)this.application).update_storage();
             });
 
