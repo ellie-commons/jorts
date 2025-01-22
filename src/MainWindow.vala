@@ -36,7 +36,7 @@ namespace jorts {
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
         
-        public string theme = "yellow";
+        public string theme = "blue";
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -72,7 +72,7 @@ namespace jorts {
                 this.color = "#8cd5ff";
                 this.selected_color_text = "#002e99";
                 this.content = "";
-                this.title_name = "jorts";
+                this.title_name = "Jorts";
                 set_title (this.title_name);
             }
 
