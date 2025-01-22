@@ -1,23 +1,45 @@
+/*
+* Copyright (c) 2025 Stella
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+* Boston, MA 02110-1301 USA
+*
+*/
+
 namespace jorts.Themer {
 
     /* Get a name, spit an array with colours from standard granite stylesheet */
     /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
-    private static string generate_palette (string theme) {
+    public static string[] generate_palette (string theme) {
         var string_palette = new string[2];
+
         string_palette = {
             "@" + theme + "_100",
             "@" + theme + "_900"
         };
+
         return string_palette;
     }
 
     /* Get a name, spit a whole CSS */
     /* We kinda need better tbh but it is better than before */
-    private static string generate_css (string theme) {
-            var string_palette = new string[2];
-            var style = new string;
+    public static string generate_css (int uid, string theme) {
+            var palette = generate_palette(theme);
 
-            string_palette = generate_palette(theme);
+            string style = "";
+
             style = (N_("""
                 @define-color textColorPrimary #323232;
 
@@ -161,11 +183,7 @@ namespace jorts.Themer {
                     border: 1px solid transparent;
                     box-shadow: none;
                 }
-                """)).printf(uid, string_palette[0], uid, string_palette[0], string_palette[0], uid, string_palette[0], string_palette[0], string_palette[0], string_palette[1], uid, uid, string_palette[1], uid, string_palette[1], string_palette[0], string_palette[0], uid, string_palette[1], uid, uid, uid, string_palette[0], string_palette[0], string_palette[1], uid);
-
-
-
-
+                """)).printf(uid, palette[0], uid, palette[0], palette[0], uid, palette[0], palette[0], palette[0], palette[1], uid, uid, palette[1], uid, palette[1], palette[0], palette[0], uid, palette[1], uid, uid, uid, palette[0], palette[0], palette[1], uid);
 
         return style;
     }

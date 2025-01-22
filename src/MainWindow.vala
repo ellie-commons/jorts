@@ -83,7 +83,7 @@ namespace jorts {
             this.uid = uid_counter++;
 
             // Rebuild the whole theming
-            update_theme();
+            update_theme("BLUEBERRY");
 
 
             // HEADER
@@ -192,7 +192,7 @@ namespace jorts {
             this.get_style_context().add_class("mainwindow-%d".printf(uid));
             this.get_style_context().add_class("window-%d".printf(uid));
 
-            string style = Themer.generate_css(theme);
+            string style = generate_css(uid, theme);
             
             try {
                 css_provider.load_from_data(style, -1);
@@ -274,27 +274,40 @@ namespace jorts {
             color_button_lime_context.add_class ("color-button");
             color_button_lime_context.add_class ("color-green");
 
-            var color_button_blue = new Gtk.Button ();
-            color_button_blue.has_focus = false;
-            color_button_blue.halign = Gtk.Align.CENTER;
-            color_button_blue.height_request = 24;
-            color_button_blue.width_request = 24;
-            color_button_blue.tooltip_text = _("Blue");
+            var color_button_blueberry = new Gtk.Button ();
+            color_button_blueberry.has_focus = false;
+            color_button_blueberry.halign = Gtk.Align.CENTER;
+            color_button_blueberry.height_request = 24;
+            color_button_blueberry.width_request = 24;
+            color_button_blueberry.tooltip_text = _("Blueberry");
 
-            var color_button_blue_context = color_button_blue.get_style_context ();
-            color_button_blue_context.add_class ("color-button");
-            color_button_blue_context.add_class ("color-blue");
+            var color_button_blueberry_context = color_button_blueberry.get_style_context ();
+            color_button_blueberry_context.add_class ("color-button");
+            color_button_blueberry_context.add_class ("color-blue");
+
+
+            var color_button_bubblegum = new Gtk.Button ();
+            color_button_bubblegum.has_focus = false;
+            color_button_bubblegum.halign = Gtk.Align.CENTER;
+            color_button_bubblegum.height_request = 24;
+            color_button_bubblegum.width_request = 24;
+            color_button_bubblegum.tooltip_text = _("Bubblegum");
+
+            var color_button_bubblegum_context = color_button_blueberry.get_style_context ();
+            color_button_bubblegum_context.add_class ("color-button");
+            color_button_bubblegum_context.add_class ("color-bubblegum");
+
 
             var color_button_grape = new Gtk.Button ();
             color_button_grape.has_focus = false;
             color_button_grape.halign = Gtk.Align.CENTER;
             color_button_grape.height_request = 24;
             color_button_grape.width_request = 24;
-            color_button_grape.tooltip_text = _("Indigo");
+            color_button_grape.tooltip_text = _("Grape");
 
             var color_button_grape_context = color_button_grape.get_style_context ();
             color_button_grape_context.add_class ("color-button");
-            color_button_grape_context.add_class ("color-indigo");
+            color_button_grape_context.add_class ("color-grape");
 
             var color_button_cocoa = new Gtk.Button ();
             color_button_cocoa.has_focus = false;
@@ -306,6 +319,18 @@ namespace jorts {
             var color_button_cocoa_context = color_button_cocoa.get_style_context ();
             color_button_cocoa_context.add_class ("color-button");
             color_button_cocoa_context.add_class ("color-cocoa");
+
+            var color_button_silver = new Gtk.Button ();
+            color_button_silver.has_focus = false;
+            color_button_silver.halign = Gtk.Align.CENTER;
+            color_button_silver.height_request = 24;
+            color_button_silver.width_request = 24;
+            color_button_silver.tooltip_text = _("Silver");
+
+            var color_button_silver_context = color_button_silver.get_style_context ();
+            color_button_silver_context.add_class ("color-button");
+            color_button_silver_context.add_class ("color-silver");
+
 
             var color_button_slate = new Gtk.Button ();
             color_button_slate.has_focus = false;
@@ -321,12 +346,11 @@ namespace jorts {
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             // GTK4: append
             // THE HECK IS THESE
-            color_button_box.pack_start (color_button_white, false, true, 0);
             color_button_box.pack_start (color_button_strawberry, false, true, 0);
             color_button_box.pack_start (color_button_orange, false, true, 0);
             color_button_box.pack_start (color_button_banana, false, true, 0);
             color_button_box.pack_start (color_button_lime, false, true, 0);
-            color_button_box.pack_start (color_button_blue, false, true, 0);
+            color_button_box.pack_start (color_button_blueberry, false, true, 0);
             color_button_box.pack_start (color_button_grape, false, true, 0);
             color_button_box.pack_start (color_button_cocoa, false, true, 0);
             color_button_box.pack_start (color_button_slate, false, true, 0);
@@ -485,4 +509,179 @@ namespace jorts {
             return false;
         }
     }
+
+
+    /* Get a name, spit an array with colours from standard granite stylesheet */
+    /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
+    public static string[] generate_palette (string theme) {
+        var string_palette = new string[2];
+
+        string_palette = {
+            "@" + theme + "_100",
+            "@" + theme + "_900"
+        };
+
+        return string_palette;
+    }
+
+    /* Get a name, spit a whole CSS */
+    /* We kinda need better tbh but it is better than before */
+    public static string generate_css (int uid, string theme) {
+            var palette = generate_palette(theme);
+
+            string style = "";
+
+            style = (N_("""
+                @define-color textColorPrimary #323232;
+
+                .mainwindow-%d {
+                    background-color: %s;
+                }
+
+                .mainwindow-%d undershoot.top {
+                    background:
+                        linear-gradient(
+                            %s 0%,
+                            alpha(%s, 0) 50%
+                        );
+                }
+                
+                .mainwindow-%d undershoot.bottom {
+                    background:
+                        linear-gradient(
+                            alpha(%s, 0) 50%,
+                            %s 100%
+                        );
+                }
+
+                .jorts-view text selection {
+                    color: shade(%s, 1.88);
+                    background-color: %s;
+                }
+
+                entry.flat {
+                    background: transparent;
+                }
+
+                .window-%d .jorts-title image,
+                .window-%d .jorts-label {
+                    color: %s;
+                    box-shadow: none;
+                }
+
+                .window-%d .jorts-bar {
+                    color: %s;
+                    background-color: %s;
+                    border-top-color: %s;
+                    box-shadow: none;
+                    background-image: none;
+                    padding: 3px;
+                }
+
+                .window-%d .jorts-bar image {
+                    color: %s;
+                    padding: 3px;
+                    box-shadow: none;
+                    background-image: none;
+                }
+
+                .window-%d .jorts-view,
+                .window-%d .jorts-view text,
+                .window-%d .jorts-title {
+                    background-color: %s;
+                    background-image: none;
+                    border-bottom-color: %s;
+                    font-weight: 500;
+                    font-size: 1.2em;
+                    color: shade(%s, 0.77);
+                    box-shadow: none;
+                }
+
+                .window-%d .rotated > widget > box > image {
+                    -gtk-icon-transform: rotate(90deg);
+                }
+
+                .color-button {
+                    border-radius: 50%;
+                    background-image: none;
+                    border: 1px solid alpha(#333, 0.25);
+                    box-shadow:
+                        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+                        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+                        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+                }
+
+                .color-button:hover,
+                .color_button:focus {
+                    border: 1px solid @inset_dark_color;
+                }
+
+                .color-slate {
+                    background-color: #a5b3bc;
+                }
+
+                .color-white {
+                    background-color: #fafafa;
+                }
+
+                .color-red {
+                    background-color: #ff8c82;
+                }
+
+                .color-orange {
+                    background-color: #ffc27d;
+                }
+
+                .color-yellow {
+                    background-color: #fff394;
+                }
+
+                .color-green {
+                    background-color: #d1ff82;
+                }
+
+                .color-blue {
+                    background-color: #8cd5ff;
+                }
+
+                .color-indigo {
+                    background-color: #aca9fd;
+                }
+
+                .color-cocoa {
+                    background-color: #a3907c;
+                }
+
+                .jorts-bar box {
+                    border: none;
+                }
+
+                .image-button,
+                .titlebutton {
+                    background-color: transparent;
+                    background-image: none;
+                    border: 1px solid transparent;
+                    padding: 3px;
+                    box-shadow: none;
+                }
+
+                .image-button:hover,
+                .image-button:focus,
+                .titlebutton:hover,
+                .titlebutton:focus {
+                    background-color: alpha(@fg_color, 0.3);
+                    background-image: none;
+                    border: 1px solid transparent;
+                    box-shadow: none;
+                }
+                """)).printf(uid, palette[0], uid, palette[0], palette[0], uid, palette[0], palette[0], palette[0], palette[1], uid, uid, palette[1], uid, palette[1], palette[0], palette[0], uid, palette[1], uid, uid, uid, palette[0], palette[0], palette[1], uid);
+
+        return style;
+    }
+
+
+
+
+
+
 }
