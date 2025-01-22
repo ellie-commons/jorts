@@ -63,7 +63,7 @@ executable(
 
 #Translate and install our .desktop file
 i18n.merge_file(
-    input: 'data' / 'hello-again.desktop.in',
+    input: 'data' / 'io.github.ellie_commons.jorts.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: meson.project_source_root() / 'po',
     type: 'desktop',
@@ -73,11 +73,11 @@ i18n.merge_file(
 
 #Translate and install our .metainfo file
 i18n.merge_file(
-    input: 'data' / 'hello-again.metainfo.xml.in',
-    output: meson.project_name() + '.metainfo.xml',
+    input: 'data' / 'io.github.ellie_commons.jorts.appdata.xml.in',
+    output: meson.project_name() + '.appdata.xml',
     po_dir: meson.project_source_root() / 'po',
     install: true,
-    install_dir: get_option('datadir') / 'metainfo'
+    install_dir: get_option('datadir') / 'sppfsts'
 )
 
 # Add in a post install script
