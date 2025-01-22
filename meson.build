@@ -5,7 +5,12 @@ project('io.github.ellie_commons.jorts', ['vala', 'c'],
 
 # Import main lib files
 gnome = import('gnome')
+
+# Include the translations module
 i18n = import('i18n')
+
+# Set our translation domain
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 # Set this for convenience
 conf = configuration_data()
@@ -56,15 +61,28 @@ executable(
     install : true
 )
 
+#Translate and install our .desktop file
+i18n.merge_file(
+    input: 'data' / 'hello-again.desktop.in',
+    output: meson.project_name() + '.desktop',
+    po_dir: meson.project_source_root() / 'po',
+    type: 'desktop',
+    install: true,
+    install_dir: get_option('datadir') / 'applications'
+)
+
+#Translate and install our .metainfo file
+i18n.merge_file(
+    input: 'data' / 'hello-again.metainfo.xml.in',
+    output: meson.project_name() + '.metainfo.xml',
+    po_dir: meson.project_source_root() / 'po',
+    install: true,
+    install_dir: get_option('datadir') / 'metainfo'
+)
+
 # Add in a post install script
 meson.add_install_script(meson.source_root() + '/meson/post_install.py')
 
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
-
-gnome.post_install(
-  glib_compile_schemas: true,
-  gtk_update_icon_cache: true,
-  update_desktop_database: true,
-)

@@ -1,73 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-17 20:58+0400\n"
+"POT-Creation-Date: 2025-01-22 22:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../src\n"
-"X-Poedit-SearchPath-0: .\n"
 
-#: src/MainWindow.vala:360
+#: src/MainWindow.vala:215
 msgid "New note"
 msgstr ""
 
-#: src/MainWindow.vala:365
+#: src/MainWindow.vala:220
 msgid "Delete note"
 msgstr ""
 
-#: src/MainWindow.vala:394
+#: src/MainWindow.vala:240
 msgid "Strawberry"
 msgstr ""
 
-#: src/MainWindow.vala:405
+#: src/MainWindow.vala:249
 msgid "Orange"
 msgstr ""
 
-#: src/MainWindow.vala:416
+#: src/MainWindow.vala:260
 msgid "Banana"
 msgstr ""
 
-#: src/MainWindow.vala:427
+#: src/MainWindow.vala:271
 msgid "Lime"
 msgstr ""
 
-#: src/MainWindow.vala:438
+#: src/MainWindow.vala:282
 msgid "Blueberry"
 msgstr ""
 
-#: src/MainWindow.vala:438
+#: src/MainWindow.vala:294
 msgid "Bubblegum"
 msgstr ""
 
-#: src/MainWindow.vala:449
+#: src/MainWindow.vala:306
 msgid "Grape"
 msgstr ""
 
-#: src/MainWindow.vala:460
+#: src/MainWindow.vala:317
 msgid "Cocoa"
 msgstr ""
 
-#: src/MainWindow.vala:460
+#: src/MainWindow.vala:328
 msgid "Silver"
 msgstr ""
 
-
-#: src/MainWindow.vala:471
+#: src/MainWindow.vala:340
 msgid "Slate"
 msgstr ""
 
-#: src/MainWindow.vala:490
+#: src/MainWindow.vala:358
 msgid "Note Color"
 msgstr ""
 
-#: src/MainWindow.vala:506
+#: src/MainWindow.vala:374
 msgid "Settings"
+msgstr ""
+
+#: src/MainWindow.vala:534
+msgid ""
+"\n"
+"                @define-color textColorPrimary #323232;\n"
+"\n"
+"                .mainwindow-%d {\n"
+"                    background-color: %s;\n"
+"                }\n"
+"\n"
+"                .mainwindow-%d undershoot.top {\n"
+"                    background:\n"
+"                        linear-gradient(\n"
+"                            %s 0%,\n"
+"                            alpha(%s, 0) 50%\n"
+"                        );\n"
+"                }\n"
+"                \n"
+"                .mainwindow-%d undershoot.bottom {\n"
+"                    background:\n"
+"                        linear-gradient(\n"
+"                            alpha(%s, 0) 50%,\n"
+"                            %s 100%\n"
+"                        );\n"
+"                }\n"
+"\n"
+"                .jorts-view text selection {\n"
+"                    color: shade(%s, 1.88);\n"
+"                    background-color: %s;\n"
+"                }\n"
+"\n"
+"                entry.flat {\n"
+"                    background: transparent;\n"
+"                }\n"
+"\n"
+"                .window-%d .jorts-title image,\n"
+"                .window-%d .jorts-label {\n"
+"                    color: %s;\n"
+"                    box-shadow: none;\n"
+"                }\n"
+"\n"
+"                .window-%d .jorts-bar {\n"
+"                    color: %s;\n"
+"                    background-color: %s;\n"
+"                    border-top-color: %s;\n"
+"                    box-shadow: none;\n"
+"                    background-image: none;\n"
+"                    padding: 3px;\n"
+"                }\n"
+"\n"
+"                .window-%d .jorts-bar image {\n"
+"                    color: %s;\n"
+"                    padding: 3px;\n"
+"                    box-shadow: none;\n"
+"                    background-image: none;\n"
+"                }\n"
+"\n"
+"                .window-%d .jorts-view,\n"
+"                .window-%d .jorts-view text,\n"
+"                .window-%d .jorts-title {\n"
+"                    background-color: %s;\n"
+"                    background-image: none;\n"
+"                    border-bottom-color: %s;\n"
+"                    font-weight: 500;\n"
+"                    font-size: 1.2em;\n"
+"                    color: shade(%s, 0.77);\n"
+"                    box-shadow: none;\n"
+"                }\n"
+"\n"
+"                .window-%d .rotated > widget > box > image {\n"
+"                    -gtk-icon-transform: rotate(90deg);\n"
+"                }\n"
+"\n"
+"                .color-button {\n"
+"                    border-radius: 50%;\n"
+"                    background-image: none;\n"
+"                    border: 1px solid alpha(#333, 0.25);\n"
+"                    box-shadow:\n"
+"                        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),\n"
+"                        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),\n"
+"                        0 1px 0 0 alpha (@bg_highlight_color, 0.3);\n"
+"                }\n"
+"\n"
+"                .color-button:hover,\n"
+"                .color_button:focus {\n"
+"                    border: 1px solid @inset_dark_color;\n"
+"                }\n"
+"\n"
+"                .color-slate {\n"
+"                    background-color: @SLATE_100;\n"
+"                }\n"
+"\n"
+"                .color-silver {\n"
+"                    background-color: @SILVER_100;\n"
+"                }\n"
+"\n"
+"                .color-strawberry {\n"
+"                    background-color: @STRAWBERRY_100;\n"
+"                }\n"
+"\n"
+"                .color-orange {\n"
+"                    background-color: @ORANGE_100;\n"
+"                }\n"
+"\n"
+"                .color-banana {\n"
+"                    background-color: @BANANA_100;\n"
+"                }\n"
+"\n"
+"                .color-lime {\n"
+"                    background-color: @LIME_100;\n"
+"                }\n"
+"\n"
+"                .color-blueberry {\n"
+"                    background-color: @BLUEBERRY_100;\n"
+"                }\n"
+"\n"
+"                .color-grape {\n"
+"                    background-color: @GRAPE_100;\n"
+"                }\n"
+"\n"
+"                .color-cocoa {\n"
+"                    background-color: @COCOA_100;\n"
+"                }\n"
+"\n"
+"                .jorts-bar box {\n"
+"                    border: none;\n"
+"                }\n"
+"\n"
+"                .image-button,\n"
+"                .titlebutton {\n"
+"                    background-color: transparent;\n"
+"                    background-image: none;\n"
+"                    border: 1px solid transparent;\n"
+"                    padding: 3px;\n"
+"                    box-shadow: none;\n"
+"                }\n"
+"\n"
+"                .image-button:hover,\n"
+"                .image-button:focus,\n"
+"                .titlebutton:hover,\n"
+"                .titlebutton:focus {\n"
+"                    background-color: alpha(@fg_color, 0.3);\n"
+"                    background-image: none;\n"
+"                    border: 1px solid transparent;\n"
+"                    box-shadow: none;\n"
+"                }\n"
+"                "
+msgstr ""
+
+#: src/Widgets/ColorButton.vala:12
+msgid "White"
 msgstr ""
