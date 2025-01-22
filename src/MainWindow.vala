@@ -353,6 +353,7 @@ namespace jorts {
             color_button_box.pack_start (color_button_blueberry, false, true, 0);
             color_button_box.pack_start (color_button_grape, false, true, 0);
             color_button_box.pack_start (color_button_cocoa, false, true, 0);
+            color_button_box.pack_start (color_button_silver, false, true, 0);
             color_button_box.pack_start (color_button_slate, false, true, 0);
 
             var color_button_label = new Granite.HeaderLabel (_("Note Color"));

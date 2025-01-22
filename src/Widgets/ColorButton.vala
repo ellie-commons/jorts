@@ -1,16 +1,12 @@
 
 
-namespace jorts {
+public class jorts.ColorButton : Gtk.Button {
 
+        this.has_focus = false;
+       this.halign = Gtk.Align.CENTER;
+       this.height_request = 24;
+       this.width_request = 24;
 
-    public class ColorButton : Gtk.Button {
-
-       has_focus = false;
-      halign = Gtk.Align.CENTER;
-       height_request = 24;
-       width_request = 24;
-       tooltip_text = _("White");
-    }
 
 
 

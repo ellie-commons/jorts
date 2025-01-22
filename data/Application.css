@@ -1,20 +1,44 @@
-
-
 @define-color textColorPrimary #323232;
 
+.color-slate {
+    background-color: @SLATE_100;
+}
 
-@define-color slate #a5b3bc;
-@define-color white #fafafa;
-@define-color red #ff8c82;
-@define-color orange #ffc27d;
-@define-color yellow #fff394;
-@define-color green #d1ff82;
-@define-color blue #8cd5ff;
-@define-color indigo #aca9fd;
-@define-color cocoa #a3907c;
+.color-silver {
+    background-color: @SILVER_100;
+}
 
-@define-color base_color @yellow;
+.color-strawberry {
+    background-color: @STRAWBERRY_100;
+}
 
+.color-orange {
+    background-color: @ORANGE_100;
+}
+
+.color-banana {
+    background-color: @BANANA_100;
+}
+
+.color-lime {
+    background-color: @LIME_100;
+}
+
+.color-blueberry {
+    background-color: @BLUEBERRY_100;
+}
+
+.color-grape {
+    background-color: @GRAPE_100;
+}
+
+.color-cocoa {
+    background-color: @COCOA_100;
+}
+
+entry.flat {
+    background: transparent;
+}
 
 .color-button {
     border-radius: 50%;
@@ -32,42 +56,40 @@
 }
 
 .color-slate {
-    background-color: #a5b3bc;
+    background-color: @SLATE_100;
 }
 
-.color-white {
-    background-color: #fafafa;
+.color-silver {
+    background-color: @SILVER_100;
 }
 
-.color-red {
-    background-color: #ff8c82;
+.color-strawberry {
+    background-color: @STRAWBERRY_100;
 }
 
 .color-orange {
-    background-color: #ffc27d;
+    background-color: @ORANGE_100;
 }
 
-.color-yellow {
-    background-color: #fff394;
+.color-banana {
+    background-color: @BANANA_100;
 }
 
-.color-green {
-    background-color: #d1ff82;
+.color-lime {
+    background-color: @LIME_100;
 }
 
-.color-blue {
-    background-color: #8cd5ff;
+.color-blueberry {
+    background-color: @BLUEBERRY_100;
 }
 
-.color-indigo {
-    background-color: #aca9fd;
+.color-grape {
+    background-color: @GRAPE_100;
 }
 
 .color-cocoa {
-    background-color: #a3907c;
+    background-color: @COCOA_100;
 }
-
-
 
 .jorts-bar box {
     border: none;
@@ -76,7 +98,7 @@
 .image-button,
 .titlebutton {
     background-color: transparent;
-    background-image: none;  
+    background-image: none;
     border: 1px solid transparent;
     padding: 3px;
     box-shadow: none;
@@ -92,7 +114,10 @@
     box-shadow: none;
 }
 
-
-entry.flat {
-    background: transparent;
+.jorts-label {
+    font-weight: 700;
+    font-size: 0.88em;
+}
+.jorts-label:backdrop {
+    color: mix (@textColorPrimary, @colorPrimary, 0.3);
 }
