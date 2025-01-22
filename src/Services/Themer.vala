@@ -1,10 +1,23 @@
-namespace jorts {
-    public class Themer : Object {
-        public string color;
+namespace jorts.Themer {
 
+    /* Get a name, spit an array with colours from standard granite stylesheet */
+    /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
+    private static string generate_palette (string theme) {
+        var string_palette = new string[2];
+        string_palette = {
+            "@" + theme + "_100",
+            "@" + theme + "_900"
+        };
+        return string_palette;
+    }
 
+    /* Get a name, spit a whole CSS */
+    /* We kinda need better tbh but it is better than before */
+    private static string generate_css (string theme) {
+            var string_palette = new string[2];
+            var style = new string;
 
-        public Themer.get_CSS(int uid, string themename) {
+            string_palette = generate_palette(theme);
             style = (N_("""
                 @define-color textColorPrimary #323232;
 
@@ -148,10 +161,13 @@ namespace jorts {
                     border: 1px solid transparent;
                     box-shadow: none;
                 }
-                """)).printf(uid, selected_color, uid, selected_color, selected_color, uid, selected_color, selected_color, selected_color, selected_color_text, uid, uid, selected_color_text, uid, selected_color_text, selected_color, selected_color, uid, selected_color_text, uid, uid, uid, selected_color, selected_color, selected_color_text, uid);
+                """)).printf(uid, string_palette[0], uid, string_palette[0], string_palette[0], uid, string_palette[0], string_palette[0], string_palette[0], string_palette[1], uid, uid, string_palette[1], uid, string_palette[1], string_palette[0], string_palette[0], uid, string_palette[1], uid, uid, uid, string_palette[0], string_palette[0], string_palette[1], uid);
 
 
-            return
 
+
+
+        return style;
     }
+
 }
