@@ -21,7 +21,6 @@ namespace jorts {
 
     // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
-        private Gtk.Button delete_item;
         private new Gtk.SourceBuffer buffer;
         private Gtk.SourceView view;
         private Gtk.HeaderBar header;
@@ -71,7 +70,7 @@ namespace jorts {
                 this.title_name = "Jorts";
                 set_title (this.title_name);
 
-                allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
+                string[] allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
                 this.theme = allthemes[Random.int_range (0,9)];
             }
 
@@ -215,24 +214,26 @@ namespace jorts {
             new_item.set_image (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
 
-            delete_item = new Gtk.Button ();
+            var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete note"));
             delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
 
-            delete_item = new Gtk.Button ();
-            delete_item.tooltip_text = (_("Undo"));
-            delete_item.set_image (new Gtk.Image.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-            delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_UNDO;
+/*              var undo = new Gtk.Button ();
+            undo.tooltip_text = (_("Undo"));
+            undo.set_image (new Gtk.Image.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            undo.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_UNDO;
 
-            delete_item = new Gtk.Button ();
-            delete_item.tooltip_text = (_("Redo"));
-            delete_item.set_image (new Gtk.Image.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
-            delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_REDO;
+            var redo = new Gtk.Button ();
+            redo.tooltip_text = (_("Redo"));
+            redo.set_image (new Gtk.Image.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            redo.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_REDO;  */
 
             // GTK4: append
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
+            //  actionbar.pack_start (undo);
+            //  actionbar.pack_start (redo);
         }
 
 

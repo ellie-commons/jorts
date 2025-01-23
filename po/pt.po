@@ -1,6 +1,6 @@
-# Traducción para el paquete io.github.ellie_commons.jorts.
-# Copyright (C) 2025 EL TITULAR DE LOS DERECHOS DE AUTOR DEL PAQUETE
-# Este archivo se distribuye bajo la misma licencia que el paquete io.github.ellie_commons.jorts.
+# Tradução para o pacote io.github.ellie_commons.jorts.
+# Copyright (C) 2025 O TITULAR DOS DIREITOS DE AUTOR DA EMBALAGEM
+# Este ficheiro é distribuído sob a mesma licença que o pacote io.github.ellie_commons.jorts.
 # NMT , 2025.
 #
 #, fuzzy
@@ -14,28 +14,28 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/MainWindow.vala:215
 msgid "New note"
-msgstr "Nueva nota"
+msgstr "Nova nota"
 
 #: src/MainWindow.vala:220
 msgid "Delete note"
-msgstr "Borrar nota"
+msgstr "Eliminar nota"
 
 #: src/MainWindow.vala:240
 msgid "Strawberry"
-msgstr "Fresa"
+msgstr "Morango"
 
 #: src/MainWindow.vala:249
 msgid "Orange"
-msgstr "Naranja"
+msgstr "Laranja"
 
 #: src/MainWindow.vala:260
 msgid "Banana"
-msgstr "plátanoo"
+msgstr "Banana"
 
 #: src/MainWindow.vala:271
 msgid "Lime"
@@ -43,11 +43,11 @@ msgstr "Cal"
 
 #: src/MainWindow.vala:282
 msgid "Blueberry"
-msgstr "Arándano"
+msgstr "Mirtilo"
 
 #: src/MainWindow.vala:294
 msgid "Bubblegum"
-msgstr "Chicle"
+msgstr "Chiclete"
 
 #: src/MainWindow.vala:306
 msgid "Grape"
@@ -55,20 +55,20 @@ msgstr "Uva"
 
 #: src/MainWindow.vala:317
 msgid "Cocoa"
-msgstr "Cacao"
+msgstr "Cacau"
 
 #: src/MainWindow.vala:328
 msgid "Silver"
-msgstr "Plata"
+msgstr "Prata"
 
 #: src/MainWindow.vala:340
 msgid "Slate"
-msgstr "Pizarra"
+msgstr "Ardósia"
 
 #: src/MainWindow.vala:358
 msgid "Note Color"
-msgstr "Color de la nota"
+msgstr "Cor da nota"
 
 #: src/MainWindow.vala:374
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configurações"

@@ -1,6 +1,6 @@
-# Übersetzung für das Paket io.github.ellie_commons.jorts.
-# Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
-# Diese Datei steht unter der gleichen Lizenz wie das Paket io.github.ellie_commons.jorts.
+# Traduction pour le paquet io.github.ellie_commons.jorts.
+# Copyright (C) 2025 LE TITULAIRE DES DROITS D'AUTEUR DU PAQUET
+# Ce fichier est distribué sous la même licence que le paquet io.github.ellie_commons.jorts.
 # NMT , 2025.
 #
 #, fuzzy
@@ -14,20 +14,20 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/MainWindow.vala:215
 msgid "New note"
-msgstr "Neue Notiz"
+msgstr "Nouvelle note"
 
 #: src/MainWindow.vala:220
 msgid "Delete note"
-msgstr "Notiz löschen"
+msgstr "Supprimer la note"
 
 #: src/MainWindow.vala:240
 msgid "Strawberry"
-msgstr "Erdbeere"
+msgstr "Fraise"
 
 #: src/MainWindow.vala:249
 msgid "Orange"
@@ -39,36 +39,36 @@ msgstr "Banane"
 
 #: src/MainWindow.vala:271
 msgid "Lime"
-msgstr "Limette"
+msgstr "Citron vert"
 
 #: src/MainWindow.vala:282
 msgid "Blueberry"
-msgstr "Blaubeere"
+msgstr "Myrtille"
 
 #: src/MainWindow.vala:294
 msgid "Bubblegum"
-msgstr "Kaugummi"
+msgstr "Chewing-gum"
 
 #: src/MainWindow.vala:306
 msgid "Grape"
-msgstr "Traube"
+msgstr "Raisin"
 
 #: src/MainWindow.vala:317
 msgid "Cocoa"
-msgstr "Kakao"
+msgstr "Cacao"
 
 #: src/MainWindow.vala:328
 msgid "Silver"
-msgstr "Silber"
+msgstr "Argent"
 
 #: src/MainWindow.vala:340
 msgid "Slate"
-msgstr "Schiefer"
+msgstr "Ardoise"
 
 #: src/MainWindow.vala:358
-msgid "Note Color"
-msgstr "Notenfarbe"
+msgid "Couleur de la note"
+msgstr "Couleur de la note"
 
 #: src/MainWindow.vala:374
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Paramètres"

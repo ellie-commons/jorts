@@ -59,7 +59,6 @@ executable(
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/Widgets/EditableLabel.vala',
-    'src/Widgets/ColorButton.vala',
     'src/Services/NoteManager.vala',
     'src/Services/Storage.vala',
     'src/Services/Themer.vala',
