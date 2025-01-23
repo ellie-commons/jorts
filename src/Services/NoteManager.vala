@@ -56,6 +56,12 @@ namespace jorts {
             builder.begin_array ();
             foreach (Storage note in notes) {
                 builder.begin_object ();
+                builder.set_member_name ("title");
+                builder.add_string_value (note.title);
+                builder.set_member_name ("theme");
+                builder.add_string_value (note.theme);
+                builder.set_member_name ("content");
+                builder.add_string_value (note.content);
                 builder.set_member_name ("x");
                 builder.add_int_value (note.x);
                 builder.set_member_name ("y");
@@ -64,14 +70,6 @@ namespace jorts {
                 builder.add_int_value (note.w);
                 builder.set_member_name ("h");
                 builder.add_int_value (note.h);
-                builder.set_member_name ("color");
-                builder.add_string_value (note.color);
-                builder.set_member_name ("selected_color_text");
-                builder.add_string_value (note.selected_color_text);
-                builder.set_member_name ("content");
-                builder.add_string_value (note.content);
-                builder.set_member_name ("title");
-                builder.add_string_value (note.title);
                 builder.end_object ();
             };
             builder.end_array ();
