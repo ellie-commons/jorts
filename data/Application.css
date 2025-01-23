@@ -1,12 +1,14 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0
+ * SPDX-FileCopyrightText: 2025 Stella, whose hairs are shiny and soft. (https://teamcons.carrd.co)
+ */
+
+
 @define-color textColorPrimary #323232;
 
-.color-slate {
-    background-color: @SLATE_100;
-}
 
-.color-silver {
-    background-color: @SILVER_100;
-}
+/* TODO : These only exist to colour the "pills" to select theme. This needs a fixing */
+
 
 .color-strawberry {
     background-color: @STRAWBERRY_100;
@@ -36,65 +38,24 @@
     background-color: @COCOA_100;
 }
 
+.color-slate {
+    background-color: @SLATE_100;
+}
+
+.color-silver {
+    background-color: @SILVER_100;
+}
+
+
+
+/* Idk wth this is */
 entry.flat {
     background: transparent;
 }
 
-.color-button {
-    border-radius: 50%;
-    background-image: none;
-    border: 1px solid alpha(#333, 0.25);
-    box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-}
 
-.color-button:hover,
-.color_button:focus {
-    border: 1px solid @inset_dark_color;
-}
 
-.color-slate {
-    background-color: @SLATE_100;
-}
-
-.color-silver {
-    background-color: @SILVER_100;
-}
-
-.color-strawberry {
-    background-color: @STRAWBERRY_100;
-}
-
-.color-orange {
-    background-color: @ORANGE_100;
-}
-
-.color-banana {
-    background-color: @BANANA_100;
-}
-
-.color-lime {
-    background-color: @LIME_100;
-}
-
-.color-blueberry {
-    background-color: @BLUEBERRY_100;
-}
-
-.color-grape {
-    background-color: @GRAPE_100;
-}
-
-.color-cocoa {
-    background-color: @COCOA_100;
-}
-
-.jorts-bar box {
-    border: none;
-}
-
+/* These are the various buttons in the interface */
 .image-button,
 .titlebutton {
     background-color: transparent;
@@ -114,10 +75,34 @@ entry.flat {
     box-shadow: none;
 }
 
+/* This is the EditableLabel */
 .jorts-label {
     font-weight: 700;
     font-size: 0.88em;
 }
+
 .jorts-label:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
+}
+
+.jorts-bar box {
+    border: none;
+}
+
+
+
+/* These are the colored pills to select theme */
+.color-button {
+    border-radius: 50%;
+    background-image: none;
+    border: 1px solid alpha(#333, 0.25);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.color-button:hover,
+.color_button:focus {
+    border: 1px solid @inset_dark_color;
 }
