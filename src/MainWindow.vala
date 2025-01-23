@@ -537,6 +537,7 @@ namespace jorts {
 
                 .mainwindow-%d {
                     background-color: %s;
+                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                 .mainwindow-%d undershoot.top {
@@ -557,7 +558,9 @@ namespace jorts {
 
                 .jorts-view text selection {
                     color: shade(%s, 1.88);
+                    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                     background-color: %s;
+                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                 entry.flat {
@@ -577,6 +580,7 @@ namespace jorts {
                     box-shadow: none;
                     background-image: none;
                     padding: 3px;
+                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 }
 
                 .window-%d .jorts-bar image {
@@ -590,6 +594,7 @@ namespace jorts {
                 .window-%d .jorts-view text,
                 .window-%d .jorts-title {
                     background-color: %s;
+                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                     background-image: none;
                     border-bottom-color: %s;
                     font-weight: 500;
