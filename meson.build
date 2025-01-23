@@ -3,9 +3,19 @@ project('io.github.ellie_commons.jorts', ['vala', 'c'],
     version: '2.0.0'
 )
 
-# Import main lib files
+
+#================================
+# Import the stylesheet
 gnome = import('gnome')
 
+gresource = gnome.compile_resources(
+    'gresource',
+    'data' / 'io.github.ellie_commons.jorts.gresource.xml',
+    source_dir: 'data'
+)
+
+
+#================================
 # Include the translations module
 i18n = import('i18n')
 
@@ -22,6 +32,9 @@ pkgdatadir = join_paths([ get_option('prefix'),
 
 conf.set_quoted('PKGDATADIR', pkgdatadir)
 
+
+
+#================================
 # Other configs
 conf.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf
@@ -37,9 +50,12 @@ c_args = [
 
 cc = meson.get_compiler('c')
 
+
+#================================
 # Let's define our executable
 executable(
     meson.project_name(),
+    gresource,
     'src/Application.vala',
     'src/MainWindow.vala',
     'src/Widgets/EditableLabel.vala',
@@ -61,6 +77,8 @@ executable(
     install : true
 )
 
+
+#================================
 #Translate and install our .desktop file
 i18n.merge_file(
     input: 'data' / 'io.github.ellie_commons.jorts.desktop.in',
@@ -80,6 +98,8 @@ i18n.merge_file(
     install_dir: get_option('datadir') / 'sppfsts'
 )
 
+
+#================================
 # Add in a post install script
 meson.add_install_script(meson.source_root() + '/meson/post_install.py')
 
