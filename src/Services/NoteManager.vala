@@ -104,7 +104,7 @@ namespace jorts {
                     foreach (var item in array.get_elements()) {
                         var node = item.get_object();
                         string title = node.get_string_member("title");
-                        string color = node.get_string_member("theme");
+                        string theme = node.get_string_member("theme");
                         string content = node.get_string_member("content");
                         int64 x = node.get_int_member("x");
                         int64 y = node.get_int_member("y");
