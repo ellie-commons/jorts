@@ -31,10 +31,10 @@ namespace jorts {
 
         public Storage() {}
 
-        public Storage.from_storage(string title, string color, string message, int64 x, int64 y, int64 w, int64 h) {
+        public Storage.from_storage(string title, string theme, string content, int64 x, int64 y, int64 w, int64 h) {
             this.title = title;
-            this.theme = color;
-            this.content = message;
+            this.theme = theme;
+            this.content = content;
             this.x = x;
             this.y = y;
             this.w = w;

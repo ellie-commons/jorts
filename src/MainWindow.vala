@@ -390,52 +390,62 @@ namespace jorts {
             // All the "change theme when theme button changed"
             // TODO: cleaner theme management
             color_button_strawberry.clicked.connect (() => {
-                update_theme("STRAWBERRY");
+                this.theme = "STRAWBERRY";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_orange.clicked.connect (() => {
-                update_theme("ORANGE");
+                this.theme = "ORANGE";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_banana.clicked.connect (() => {
-                update_theme("BANANA");
+                this.theme = "BANANA";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_lime.clicked.connect (() => {
-                update_theme("LIME");
+                this.theme = "LIME";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_blueberry.clicked.connect (() => {
-                update_theme("BLUEBERRY");
+                this.theme = "BLUEBERRY";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_bubblegum.clicked.connect (() => {
-                update_theme("BUBBLEGUM");
+                this.theme = "BUBBLEGUM";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_grape.clicked.connect (() => {
-                update_theme("GRAPE");
+                this.theme = "GRAPE";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_cocoa.clicked.connect (() => {
-                update_theme("COCOA");
+                this.theme = "COCOA";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_silver.clicked.connect (() => {
-                update_theme("SILVER");
+                this.theme = "SILVER";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
             color_button_slate.clicked.connect (() => {
-                update_theme("SLATE");
+                this.theme = "SLATE";
+                update_theme(this.theme);
                 ((Application)this.application).update_storage();
             });
 
@@ -483,11 +493,12 @@ namespace jorts {
             this.content = view.buffer.get_text (start, end, true);
             this.title_name = label.title.get_label ();
             set_title (this.title_name);
+            string note_theme = this.theme;
 
             this.get_position (out x, out y);
             this.get_size (out w, out h);
 
-            return new Storage.from_storage(title_name,theme,content,x, y, w, h );
+            return new Storage.from_storage(title_name,note_theme,content,x, y, w, h );
         }
 
 
