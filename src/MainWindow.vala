@@ -220,6 +220,16 @@ namespace jorts {
             delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
 
+            delete_item = new Gtk.Button ();
+            delete_item.tooltip_text = (_("Undo"));
+            delete_item.set_image (new Gtk.Image.from_icon_name ("edit-undo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_UNDO;
+
+            delete_item = new Gtk.Button ();
+            delete_item.tooltip_text = (_("Redo"));
+            delete_item.set_image (new Gtk.Image.from_icon_name ("edit-redo-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_REDO;
+
             // GTK4: append
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
