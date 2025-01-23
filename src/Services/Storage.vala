@@ -20,26 +20,26 @@
 
 namespace jorts {
     public class Storage : Object {
-        public string color;
-        public string selected_color_text;
+        public string title;
+        public string theme;
+        public string content;
         public int64 x;
         public int64 y;
         public int64 w;
         public int64 h;
-        public string content;
-        public string title;
+
 
         public Storage() {}
 
-        public Storage.from_storage(int64 x, int64 y, int64 w, int64 h, string color, string selected_color_text, string message, string title) {
-            this.color = color;
-            this.selected_color_text = selected_color_text;
+        public Storage.from_storage(string title, string color, string message, int64 x, int64 y, int64 w, int64 h) {
+            this.title = title;
+            this.theme = color;
             this.content = message;
             this.x = x;
             this.y = y;
             this.w = w;
             this.h = h;
-            this.title = title;
+
         }
     }
 }

@@ -28,15 +28,13 @@ namespace jorts {
         private Gtk.ActionBar actionbar;
         private int uid;
         private static int uid_counter = 0;
-        public string color = "#8cd5ff";
-        public string selected_color_text = "#002e99";
-        public bool pinned = false;
-        public string content = "";
+
         public string title_name = "Jorts";
+        public string theme = "";
+        public string content = "";
+
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
-        
-        public string theme = "Blueberry";
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -65,15 +63,16 @@ namespace jorts {
             insert_action_group ("win", actions);
 
             // If storage is not empty, load from it
-            // Else do a new
+            // Else do a new with theme at random
             if (storage != null) {
                 init_from_storage(storage);
             } else {
-                this.color = "#8cd5ff";
-                this.selected_color_text = "#002e99";
                 this.content = "";
                 this.title_name = "Jorts";
                 set_title (this.title_name);
+
+                allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
+                this.theme = allthemes[Random.int_range (0,9)];
             }
 
             // add required base classes
@@ -83,7 +82,7 @@ namespace jorts {
             this.uid = uid_counter++;
 
             // Rebuild the whole theming
-            update_theme("BLUEBERRY");
+            update_theme(this.theme);
 
 
             // HEADER
@@ -435,14 +434,14 @@ namespace jorts {
 
         // When recreating the window from storage
         private void init_from_storage(Storage storage) {
-            this.color = storage.color;
-            this.selected_color_text = storage.selected_color_text;
+            this.title_name = storage.title;
+            this.theme = storage.theme;
             this.content = storage.content;
             this.move((int)storage.x, (int)storage.y);
             if ((int)storage.w != 0 && (int)storage.h != 0) {
                 this.resize ((int)storage.w, (int)storage.h);
             }
-            this.title_name = storage.title;
+
             set_title (this.title_name);
         }
 
@@ -468,8 +467,6 @@ namespace jorts {
         // Prepare for storage
         public Storage get_storage_note() {
             int x, y, w, h;
-            string color = this.color;
-            string selected_color_text = this.selected_color_text;
             Gtk.TextIter start,end;
             view.buffer.get_bounds (out start, out end);
             this.content = view.buffer.get_text (start, end, true);
@@ -479,7 +476,7 @@ namespace jorts {
             this.get_position (out x, out y);
             this.get_size (out w, out h);
 
-            return new Storage.from_storage(x, y, w, h, color, selected_color_text, content, title_name);
+            return new Storage.from_storage(title_name,theme,content,x, y, w, h );
         }
 
 
@@ -691,3 +688,5 @@ namespace jorts {
 
 
 }
+
+
