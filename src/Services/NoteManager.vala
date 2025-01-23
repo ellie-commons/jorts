@@ -103,15 +103,14 @@ namespace jorts {
                     var array = root.get_array();
                     foreach (var item in array.get_elements()) {
                         var node = item.get_object();
-                        string color = node.get_string_member("color");
-                        string selected_color_text = node.get_string_member("selected_color_text");
+                        string title = node.get_string_member("title");
+                        string color = node.get_string_member("theme");
+                        string content = node.get_string_member("content");
                         int64 x = node.get_int_member("x");
                         int64 y = node.get_int_member("y");
                         int64 w = node.get_int_member("w");
                         int64 h = node.get_int_member("h");
-                        string content = node.get_string_member("content");
-                        string title = node.get_string_member("title");
-                        Storage stored_note = new Storage.from_storage(x, y, w, h, color, selected_color_text, content, title);
+                        Storage stored_note = new Storage.from_storage(title, theme, content, x, y, w, h);
                         stored_notes.add(stored_note);
                     }
 
