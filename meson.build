@@ -92,7 +92,7 @@ i18n.merge_file(
 
 #Translate and install our .metainfo file
 i18n.merge_file(
-    input: 'data' / 'io.github.ellie_commons.jorts.appdata.xml.in',
+    input: 'data' / 'io.github.ellie_commons.jorts.metainfo.xml.in',
     output: meson.project_name() + '.appdata.xml',
     po_dir: meson.project_source_root() / 'po',
     install: true,
