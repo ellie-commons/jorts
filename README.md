@@ -13,6 +13,7 @@
 Available in: <a  href="./po/es.po">🇪🇸 Spanish</a> · <a  href="./po/it.po">🇮🇹 Italiano</a> · <a href="./po/de.po"">🇩🇪 Deutsch</a> · <a href="./po/pt.po"">🇵🇹 Português</a> · <a href="./po/fr.po">🇫🇷 French </a>
 </p>
 
+
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little app, and is planned to stay as a cute simple little app
@@ -37,6 +38,7 @@ Main tasks are the tasks:
 
 New features may sneak themselves. Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
 
+
 ## 💝 Donations
 
 Most of the code was from Lainsce because this is a fork of an old version of Notejot.
@@ -60,7 +62,7 @@ support is always welcome and shows me people want this
 </p>
 
 
-## 🏗️ Dependencies
+## 🏗️ Building
 
 Please make sure you have these dependencies first before building.
 
@@ -80,9 +82,7 @@ You can
 sudo apt install granite gtksourceview-3.0 libjson-glib libgee-0.8 meson vala
 ```
 
-## 🏗️ Building
-
-Simply clone this repo / download and unzip the zip, then:
+Then simply clone this repo / download and unzip the zip, then:
 
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yaml
