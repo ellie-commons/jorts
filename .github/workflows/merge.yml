@@ -1,0 +1,20 @@
+name: Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  gettext:
+    name: Gettext
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v4
+
+    - name: Update Translation Files
+      uses: ellie_commons/actions/gettext-flatpak@main
+      with:
+        manifest-path: 'io.github.ellie_commons.jorts.yml'
