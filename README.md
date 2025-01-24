@@ -17,7 +17,8 @@ So there will be little features added, and said features will be mostly some pr
 
 Main tasks are the tasks:
 
-- [x] Remove the pinned feature - it cant work on wayland
+- [x] Remove the pinned feature - it cant work on wayland anymore
+- [x] Do a Yaml file so we can build it for flatpak
 - [x] Do cute transitions and color name
 - [ ] Repair the theming: Some parts are stuck on the Banana theme
 - [ ] Repair the way window positioning is stored. It isnt wayland-friendly
