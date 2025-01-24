@@ -4,9 +4,9 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name>Jorts</name>
-    <summary>Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</summary>
+    <summary>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</summary>
     <description>
-        <p>Neither pants nor shorts, just like jorts. A sticky notes app for elementary OS</p>
+        <p>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</p>
         <ul>
             <li>Quit anytime with the shortcut Ctrl + Q</li>
         </ul>
@@ -52,6 +52,20 @@
         <content_attribute id="money-gambling">none</content_attribute>
     </content_rating>
     <releases>
+        <release version="2.0.0" date="2025-01-01">
+            <description>
+                <p>Release: Slate And Bubblegum</p>
+                <ul>
+                    <li>Old Notejot version and UI revived in a new project</li>
+                    <li>The app is now named Jorts. It is not a jean, it is not a short</li>
+                    <li>It builds for flatpak now</li>
+                    <li>Closer to current elementary OS Stylesheet and named colours</li>
+                    <li>Removal of pinned due to the way wayland works</li>
+                    <li>Smooth transition when changing theme</li>
+                    <li>New stickies have random colour</li>
+                </ul>
+            </description>
+        </release>
         <release version="1.6.2" date="2020-02-07">
             <description>
                 <p>Release: Aesthetics</p>
