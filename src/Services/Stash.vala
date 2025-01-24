@@ -68,29 +68,84 @@ nuke_from_stash(uid)
 
 namespace jorts {
 
-  	public void create_note(Storage? storage) {
-            debug ("Creating a note…\n");
-	    var note = new MainWindow(this, storage);
-            open_notes.add(note);
-            update_storage();
-	}
 
-        public void remove_note(MainWindow note) {
-            debug ("Removing a note…\n");
-            open_notes.remove (note);
-            update_storage();
-	}
+	*/ Takes an uid, delete its storage*/
+        public void nuke_from_stash(uid) {
+        	string data_path = Environment.get_user_data_dir () + "saved_sticky_" + uid + ".json";
+            	debug ("%s".printf(data_path));
 
-	public void update_storage() {
-            debug ("Updating the storage…\n");
-	    Gee.ArrayList<Storage> storage = new Gee.ArrayList<Storage>();
+		var file = File.new_for_path (data_path);
+            	try {
+                	if (file.query_exists ()) {
+                    		file.delete 
+			}
+            	} catch (Error e) {
+                	warning ("Cannot delete UID " + uid + "!\n", e.message);
+            	}
+        }
 
-	    foreach (MainWindow w in open_notes) {
-                storage.add(w.get_storage_note());
-		note_manager.save_notes(storage);
+
+
+
+        public void save_to_stash(uid, title, theme, content, x, y, height, width) {
+		
+		/* First all infos are grouped in a json */
+        	Json.Builder builder = new Json.Builder ();
+            	builder.begin_array ();
+            	foreach (Storage note in notes) {
+	                builder.begin_object ();
+	                builder.set_member_name ("title");
+	                builder.add_string_value (note.title);
+	                builder.set_member_name ("theme");
+	                builder.add_string_value (note.theme);
+	                builder.set_member_name ("content");
+	                builder.add_string_value (note.content);
+	                builder.set_member_name ("x");
+	                builder.add_int_value (note.x);
+	                builder.set_member_name ("y");
+	                builder.add_int_value (note.y);
+	                builder.set_member_name ("w");
+	                builder.add_int_value (note.w);
+	                builder.set_member_name ("h");
+	                builder.add_int_value (note.h);
+	                builder.end_object ();
+            	};
+            	builder.end_array ();
+
+            	Json.Generator generator = new Json.Generator ();
+           	Json.Node root = builder.get_root ();
+            	generator.set_root (root);
+            	string json_string = generator.to_data (null);
+
+		
+		/* Then we handle slamming it all where it do be do */
+        	
+	        
+		string data_path = Environment.get_user_data_dir () + "saved_sticky_" + uid + ".json";
+            	debug ("%s".printf(data_path));
+
+		var dir = File.new_for_path(Environment.get_user_data_dir ());
+	        var file = File.new_for_path (data_path);
+
+
+
+            try {
+                if (!dir.query_exists()) {
+                    dir.make_directory();
+                }
+
+                if (file.query_exists ()) {
+                    file.delete ();
+                }
+
+                var file_stream = file.create (FileCreateFlags.REPLACE_DESTINATION);
+                var data_stream = new DataOutputStream (file_stream);
+                data_stream.put_string(json_string);
+            } catch (Error e) {
+                warning ("Failed to save notes %s\n", e.message);
             }
-	}
 
+        }
 
 
 }
