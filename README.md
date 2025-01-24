@@ -8,7 +8,30 @@
 
 <span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
 
-## Donations
+## 🛣️ Roadmap🛣
+
+Jorts is a cute simple little app, and is planned to stay as a cute simple little app
+However the internals needs a lot of work, as they are both outdated for the modern era, and errr- Not super simply built
+
+So there will be little features added, and said features will be mostly some prettyfication at the edge, 
+
+Main tasks are the tasks:
+
+- [x] Remove the pinned feature - it cant work on wayland
+- [x] Do cute transitions and color name
+- [ ] Repair the theming: Some parts are stuck on the Banana theme
+- [ ] Repair the way window positioning is stored. It isnt wayland-friendly
+- [ ] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
+- [ ] Do a first appcenter release
+- [ ] Rebuild the way css theming is done
+- [ ] Rebuild the way notes are managed and saved
+- [ ] Prepare for gtk4 port
+- [ ] Port to gtk4
+- [ ] Move widget definitions to blueprint files
+
+New features may sneak themselves. Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
+
+## 💝 Donations
 
 Most of the code was from Lainsce because this is a fork of an old version of Notejot.
 
@@ -16,9 +39,17 @@ Now, the real official notejot is something different, much less basic, and not 
 
 Some people liked the old one, and thus we diden a fork of it. However i struggle with porting gtk3 to gtk4, so this wont really go anywhere
 
+If you want to thank the original creator:
+
 [Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
 
-## Dependencies
+Currently actively trying to revive this is me, Stella
+
+[You can buy me a drink](https://ko-fi.com/teamcons)
+
+
+
+## 🏗️ Dependencies
 
 Please make sure you have these dependencies first before building.
 
@@ -38,21 +69,16 @@ You can
 sudo apt install granite gtksourceview-3.0 libjson-glib libgee-0.8 meson vala
 ```
 
-## Building
+## 🏗️ Building
 
 Simply clone this repo / download and unzip the zip, then:
-
-```bash
-meson build && cd build
-meson configure -Dprefix=/usr
-sudo ninja install
-```
-
-or to install it as a flatpak on your system
 
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yaml
 ```
 
-## Notes Storage
-Notes are stored in `~/.local/share/io.github.ellie_commons.jorts/`
+## 💾 Notes Storage
+
+Notes are stored in `~/.var/app/io.github.ellie_commons.jorts/`
+
+locate the saved_state.json
