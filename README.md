@@ -46,7 +46,9 @@ If you want to thank the original creator:
 
 Currently actively trying to revive this is me, Stella
 
-<p align="center">
+support is always welcome and shows me people want this
+
+<p align="left">
   <a href="https://ko-fi.com/teamcons">
     <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" width="150">
   </a>
