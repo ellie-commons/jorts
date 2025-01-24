@@ -31,8 +31,10 @@ We want:
 Have an uid_counter, starting at 0
 
 
-check if we have a "saved_sticky_" + uid_counter + ".json"
-If yes load it load_from_stash(uid, title, theme, content, x, y, height, width)
+For all the "saved_sticky_" + uid_counter + ".json"
+
+Create an instance of mainwindow and give it to it
+
 count uid_counter +1
 
 If not, stop. We have 
@@ -47,11 +49,17 @@ The app will sort itself out with size, colour, label, whatever
 
 It can count on support functions:
 
+load_from_stash(uid)
+--> You get a title, theme, content, x, y, height, width
+Check at init if uid is 0. If it is, try loading. If it doesnt, itll be blueberry and save to stast
 
 
 save_to_stash(uid, title, theme, content, x, y, height, width)
 --> Dump all it has in a saved_sticky_uid.json
 
+
+nuke_from_stash(uid)
+--> Delete saved_sticky_uid.json
 
 
 */
