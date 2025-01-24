@@ -8,6 +8,11 @@
 
 <span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
 
+<br/>
+<p align="left">
+Available in: <a  href="./po/es.po">🇪🇸 Spanish</a> · <a  href="./po/it.po">🇮🇹 Italiano</a> · <a href="./po/de.po"">🇩🇪 Deutsch</a> · <a href="./po/pt.po"">🇵🇹 Português</a> · <a href="./po/fr.po">🇫🇷 French </a>
+</p>
+
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little app, and is planned to stay as a cute simple little app
