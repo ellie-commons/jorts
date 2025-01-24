@@ -1,6 +1,6 @@
 
 
-public class jorts.ColorButton : Gtk.Button {
+public class jorts.ColorPillButton : Gtk.Button {
 
         Public has_focus = false;
         Public halign = Gtk.Align.CENTER;
