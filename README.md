@@ -46,8 +46,11 @@ If you want to thank the original creator:
 
 Currently actively trying to revive this is me, Stella
 
-[You can buy me a drink](https://ko-fi.com/teamcons)
-
+<p align="center">
+  <a href="https://ko-fi.com/teamcons">
+    <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" width="150">
+  </a>
+</p>
 
 
 ## 🏗️ Dependencies
