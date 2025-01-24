@@ -8,7 +8,7 @@
 
 <span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
 
-## 🛣️ Roadmap🛣
+## 🛣️ Roadmap
 
 Jorts is a cute simple little app, and is planned to stay as a cute simple little app
 However the internals needs a lot of work, as they are both outdated for the modern era, and errr- Not super simply built
