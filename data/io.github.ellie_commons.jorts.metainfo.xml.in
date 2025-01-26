@@ -8,8 +8,8 @@
     <description>
         <p>A colourful little sticky notes utility, for your thoughts</p>
         <ul>
-            <li>🎨 Ten cute themes with soft transitions</li>
-            <li>💻 Striving to keep it pretty, simple, modern, light</li>
+            <li>🎨 Ten good looking themes with soft transitions</li>
+            <li>💻 Striving to keep it cute, pretty, simple, modern, light</li>
             <li>⌨️ Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)</li>
         </ul>
     </description>
@@ -44,6 +44,7 @@
                     <li>Removal of pinned due to the way wayland works</li>
                     <li>Smooth transition when changing theme</li>
                     <li>New stickies have random colour</li>
+                    <li>New stickies have a random fun little title</li>
                 </ul>
             </description>
         </release>
