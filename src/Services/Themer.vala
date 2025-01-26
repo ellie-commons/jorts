@@ -22,14 +22,12 @@ namespace jorts.Themer {
 
     /* Get a name, spit an array with colours from standard granite stylesheet */
     /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
-    public static string[] generate_palette (string theme) {
+    public string[] generate_palette (string theme) {
         var string_palette = new string[2];
-
         string_palette = {
             "@" + theme + "_100",
             "@" + theme + "_900"
         };
-
         return string_palette;
     }
 
@@ -45,6 +43,7 @@ namespace jorts.Themer {
 
             .mainwindow-%d {
                 background-color: %s;
+                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .mainwindow-%d undershoot.top {
@@ -65,7 +64,9 @@ namespace jorts.Themer {
 
             .jorts-view text selection {
                 color: shade(%s, 1.88);
+                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 background-color: %s;
+                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             entry.flat {
@@ -85,6 +86,7 @@ namespace jorts.Themer {
                 box-shadow: none;
                 background-image: none;
                 padding: 3px;
+                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .window-%d .jorts-bar image {
@@ -98,6 +100,7 @@ namespace jorts.Themer {
             .window-%d .jorts-view text,
             .window-%d .jorts-title {
                 background-color: %s;
+                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 background-image: none;
                 border-bottom-color: %s;
                 font-weight: 500;
@@ -186,6 +189,9 @@ namespace jorts.Themer {
             """)).printf(uid, palette[0], uid, palette[0], palette[0], uid, palette[0], palette[0], palette[0], palette[1], uid, uid, palette[1], uid, palette[1], palette[0], palette[0], uid, palette[1], uid, uid, uid, palette[0], palette[0], palette[1], uid);
 
     return style;
-    }
+}
+
+
+
 
 }

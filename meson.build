@@ -56,12 +56,13 @@ cc = meson.get_compiler('c')
 executable(
     meson.project_name(),
     gresource,
-    'src/Application.vala',
-    'src/MainWindow.vala',
     'src/Widgets/EditableLabel.vala',
     'src/Services/NoteManager.vala',
     'src/Services/Storage.vala',
     'src/Services/Themer.vala',
+    'src/Services/Utils.vala',
+    'src/Application.vala',
+    'src/MainWindow.vala',
     c_args: c_args,
     dependencies: [
         dependency('granite'),

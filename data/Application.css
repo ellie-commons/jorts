@@ -3,13 +3,12 @@
  * SPDX-FileCopyrightText: 2025 Stella, whose hairs are shiny and soft. (https://teamcons.carrd.co)
  */
 
-
 @define-color textColorPrimary #323232;
 
+@define-color MainColor @BLUEBERRY_100;
+@define-color SecondaryColor @BLUEBERRY_900;
 
 /* TODO : These only exist to colour the "pills" to select theme. This needs a fixing */
-
-
 .color-strawberry {
     background-color: @STRAWBERRY_100;
 }
@@ -48,14 +47,96 @@
 
 
 
-/* Idk wth this is */
+
+
+/* These are the colored pills to select theme */
+.color-button {
+    border-radius: 50%;
+    background-image: none;
+    border: 1px solid alpha(#333, 0.25);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.color-button:hover,
+.color_button:focus {
+    border: 1px solid @inset_dark_color;
+}
+
+
+.window {
+    background-color: @MainColor;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.window undershoot.top {
+    background:
+        linear-gradient(
+            @MainColor 0%,
+            alpha(@MainColor, 0) 50%
+        );
+}
+
+.window undershoot.bottom {
+    background:
+        linear-gradient(
+            alpha(@MainColor, 0) 50%,
+            @MainColor 100%
+        );
+}
+
+.jorts-view text selection {
+    color: shade(@MainColor, 1.88);
+    background-color: @SecondaryColor;
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 entry.flat {
     background: transparent;
 }
 
+.window .jorts-title image,
+.window .jorts-label {
+    color: @SecondaryColor;
+    box-shadow: none;
+}
+
+.window .jorts-bar {
+    color: @SecondaryColor;
+    background-color: @MainColor;
+    border-top-color: @SecondaryColor;
+    box-shadow: none;
+    background-image: none;
+    padding: 3px;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.window .jorts-bar image {
+    color: @SecondaryColor;
+    padding: 3px;
+    box-shadow: none;
+    background-image: none;
+}
+
+.window .jorts-view,
+.window .jorts-view text,
+.window .jorts-title {
+    background-color: @MainColor;
+    background-image: none;
+    border-bottom-color: @SecondaryColor;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: shade(@SecondaryColor, 0.77);
+    box-shadow: none;
+}
 
 
-/* These are the various buttons in the interface */
+
+
 .image-button,
 .titlebutton {
     background-color: transparent;
@@ -75,6 +156,7 @@ entry.flat {
     box-shadow: none;
 }
 
+
 /* This is the EditableLabel */
 .jorts-label {
     font-weight: 700;
@@ -82,27 +164,10 @@ entry.flat {
 }
 
 .jorts-label:backdrop {
-    color: mix (@textColorPrimary, @colorPrimary, 0.3);
+    color: mix (@textColorPrimary, @SecondaryColor, 0.3);
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .jorts-bar box {
     border: none;
-}
-
-
-
-/* These are the colored pills to select theme */
-.color-button {
-    border-radius: 50%;
-    background-image: none;
-    border: 1px solid alpha(#333, 0.25);
-    box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-}
-
-.color-button:hover,
-.color_button:focus {
-    border: 1px solid @inset_dark_color;
 }

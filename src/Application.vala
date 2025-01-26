@@ -60,9 +60,6 @@ namespace jorts {
         }
 
         protected override void activate () {
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
-            
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
                     if (window.visible) {
@@ -85,7 +82,7 @@ namespace jorts {
 
 	public void create_note(Storage? storage) {
             debug ("Creating a note…\n");
-	    var note = new MainWindow(this,storage);
+	    var note = new MainWindow(this, storage);
             open_notes.add(note);
             update_storage();
 	}

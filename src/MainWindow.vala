@@ -57,6 +57,8 @@ namespace jorts {
         public MainWindow (Gtk.Application app, Storage? storage) {
             Object (application: app);
 
+            print(this.uid.to_string());
+
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
@@ -65,27 +67,17 @@ namespace jorts {
             // Else do a new with theme at random
             if (storage != null) {
                 init_from_storage(storage);
+
+
             } else {
 
-                string[] alltitles = {
-                    _("All my very best friends"),
-                    _("My super good secret recipe"),
-                    _("My todo list"),
-                    _("Super secret to not tell anyone"),
-                    _("My grocery list"),
-                    _("Random shower thoughts"),
-                    _("My fav fanfics"),
-                    _("My fav dinosaurs"),
-                    _("My evil mastermind plan")};
-
-                this.title_name = alltitles[Random.int_range (0,9)];
+                this.title_name = jorts.Utils.random_title();
                 set_title (this.title_name);
 
                 // First sticky is always blue - signature look!
                 // After that, it is random
                 //if (uid_counter == 0) {
-                    string[] allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
-                    this.theme = allthemes[Random.int_range (0,9)];
+                    this.theme = jorts.Utils.random_theme();
                 //} else {
                 //    this.theme = "BLUEBERRY";
                 //}
@@ -95,6 +87,7 @@ namespace jorts {
             }
 
             // add required base classes
+            //this.get_style_context().add_class(this.uid.to_string ());
             this.get_style_context().add_class("rounded");
             this.get_style_context().add_class("default-decoration");
             this.get_style_context().add_class("jorts-window");
@@ -201,29 +194,6 @@ namespace jorts {
             ((Application)this.application).update_storage();
         }
 
-        // TODO: A theming service or something. Something cleaner than this in all cases
-        // Basically the menu button defines two public variables
-        // And then this reconstructs a whole ass theme out of these two
-        // Either it can be a service, or just all defined in CSS and add/remove css
-        private void update_theme(string theme) {
-            var css_provider = new Gtk.CssProvider();
-            this.get_style_context().add_class("mainwindow-%d".printf(uid));
-            this.get_style_context().add_class("window-%d".printf(uid));
-
-            string style = generate_css(uid, theme);
-            
-            try {
-                css_provider.load_from_data(style, -1);
-            } catch (GLib.Error e) {
-                warning ("Failed to parse css style : %s", e.message);
-            }
-
-            Gtk.StyleContext.add_provider_for_screen (
-                Gdk.Screen.get_default (),
-                css_provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
-        }
 
 
 
@@ -548,185 +518,37 @@ namespace jorts {
             jorts.Application.gsettings.set_int("window-y", y);
             return false;
         }
-    }
 
 
-    /* Get a name, spit an array with colours from standard granite stylesheet */
-    /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
-    public static string[] generate_palette (string theme) {
-        var string_palette = new string[2];
 
-        string_palette = {
-            "@" + theme + "_100",
-            "@" + theme + "_900"
-        };
 
-        return string_palette;
-    }
 
-    /* Get a name, spit a whole CSS */
-    /* We kinda need better tbh but it is better than before */
-    public static string generate_css (int uid, string theme) {
-            var palette = generate_palette(theme);
+        // TODO: A theming service or something. Something cleaner than this in all cases
+        // Basically the menu button defines two public variables
+        // And then this reconstructs a whole ass theme out of these two
+        // Either it can be a service, or just all defined in CSS and add/remove css
+        private void update_theme(string theme) {
+                this.get_style_context().add_class("mainwindow-%d".printf(uid));
+                this.get_style_context().add_class("window-%d".printf(uid));
 
-            string style = "";
+              // Palette color
+                var css_provider = new Gtk.CssProvider();
+                var style = jorts.Themer.generate_css(uid,theme);
 
-            style = (N_("""
-                @define-color textColorPrimary #323232;
-
-                .mainwindow-%d {
-                    background-color: %s;
-                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                }
-
-                .mainwindow-%d undershoot.top {
-                    background:
-                        linear-gradient(
-                            %s 0%,
-                            alpha(%s, 0) 50%
-                        );
-                }
+                try {
+                    css_provider.load_from_data(style, -1);
                 
-                .mainwindow-%d undershoot.bottom {
-                    background:
-                        linear-gradient(
-                            alpha(%s, 0) 50%,
-                            %s 100%
-                        );
-                }
+                } catch (GLib.Error e) {
+                        warning ("Failed to parse css style : %s", e.message);
+                    }
 
-                .jorts-view text selection {
-                    color: shade(%s, 1.88);
-                    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                    background-color: %s;
-                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                }
-
-                entry.flat {
-                    background: transparent;
-                }
-
-                .window-%d .jorts-title image,
-                .window-%d .jorts-label {
-                    color: %s;
-                    box-shadow: none;
-                }
-
-                .window-%d .jorts-bar {
-                    color: %s;
-                    background-color: %s;
-                    border-top-color: %s;
-                    box-shadow: none;
-                    background-image: none;
-                    padding: 3px;
-                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                }
-
-                .window-%d .jorts-bar image {
-                    color: %s;
-                    padding: 3px;
-                    box-shadow: none;
-                    background-image: none;
-                }
-
-                .window-%d .jorts-view,
-                .window-%d .jorts-view text,
-                .window-%d .jorts-title {
-                    background-color: %s;
-                    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                    background-image: none;
-                    border-bottom-color: %s;
-                    font-weight: 500;
-                    font-size: 1.2em;
-                    color: shade(%s, 0.77);
-                    box-shadow: none;
-                }
-
-                .window-%d .rotated > widget > box > image {
-                    -gtk-icon-transform: rotate(90deg);
-                }
-
-                .color-button {
-                    border-radius: 50%;
-                    background-image: none;
-                    border: 1px solid alpha(#333, 0.25);
-                    box-shadow:
-                        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-                        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-                }
-
-                .color-button:hover,
-                .color_button:focus {
-                    border: 1px solid @inset_dark_color;
-                }
-
-                .color-slate {
-                    background-color: @SLATE_100;
-                }
-
-                .color-silver {
-                    background-color: @SILVER_100;
-                }
-
-                .color-strawberry {
-                    background-color: @STRAWBERRY_100;
-                }
-
-                .color-orange {
-                    background-color: @ORANGE_100;
-                }
-
-                .color-banana {
-                    background-color: @BANANA_100;
-                }
-
-                .color-lime {
-                    background-color: @LIME_100;
-                }
-
-                .color-blueberry {
-                    background-color: @BLUEBERRY_100;
-                }
-
-                .color-grape {
-                    background-color: @GRAPE_100;
-                }
-
-                .color-cocoa {
-                    background-color: @COCOA_100;
-                }
-
-                .jorts-bar box {
-                    border: none;
-                }
-
-                .image-button,
-                .titlebutton {
-                    background-color: transparent;
-                    background-image: none;
-                    border: 1px solid transparent;
-                    padding: 3px;
-                    box-shadow: none;
-                }
-
-                .image-button:hover,
-                .image-button:focus,
-                .titlebutton:hover,
-                .titlebutton:focus {
-                    background-color: alpha(@fg_color, 0.3);
-                    background-image: none;
-                    border: 1px solid transparent;
-                    box-shadow: none;
-                }
-                """)).printf(uid, palette[0], uid, palette[0], palette[0], uid, palette[0], palette[0], palette[0], palette[1], uid, uid, palette[1], uid, palette[1], palette[0], palette[0], uid, palette[1], uid, uid, uid, palette[0], palette[0], palette[1], uid);
-
-        return style;
+                Gtk.StyleContext.add_provider_for_screen (
+                        Gdk.Screen.get_default (),
+                        css_provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                );
+        }
     }
-
-
-
-
 
 
 }
