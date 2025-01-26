@@ -69,9 +69,9 @@ nuke_from_stash(uid)
 namespace jorts {
 
 
-	*/ Takes an uid, delete its storage*/
-        public void nuke_from_stash(uid) {
-        	string data_path = Environment.get_user_data_dir () + "saved_sticky_" + uid + ".json";
+	/* Takes an uid, delete its storage*/
+        public void nuke_from_stash(int uid) {
+        	string data_path =  "saved_sticky_" + uid + ".json";
             	debug ("%s".printf(data_path));
 
 		var file = File.new_for_path (data_path);
@@ -87,7 +87,7 @@ namespace jorts {
 
 
 
-        public void save_to_stash(uid, title, theme, content, x, y, height, width) {
+        public void save_to_stash(int uid, string title, string theme, string content, int x, int y, int height, int width) {
 		
 		/* First all infos are grouped in a json */
         	Json.Builder builder = new Json.Builder ();
@@ -113,7 +113,7 @@ namespace jorts {
             	builder.end_array ();
 
             	Json.Generator generator = new Json.Generator ();
-           	Json.Node root = builder.get_root ();
+           		Json.Node root = builder.get_root ();
             	generator.set_root (root);
             	string json_string = generator.to_data (null);
 

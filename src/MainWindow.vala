@@ -28,12 +28,12 @@ namespace jorts {
         private int uid;
         private static int uid_counter = 0;
 
-        public string title_name = "Jorts";
-        public string theme = "";
-        public string content = "";
+        public string title_name = _("My little notes");
+        public string theme = "BLUEBERRY";
+        public string content = _("All my little thoughts!");
 
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
-        //public Gtk.EditableLabel label = new Gtk.EditableLabel();
+        //public Gtk.)EditableLabel label = new Gtk.EditableLabel();
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -66,12 +66,32 @@ namespace jorts {
             if (storage != null) {
                 init_from_storage(storage);
             } else {
-                this.content = "";
-                this.title_name = "Jorts";
+
+                string[] alltitles = {
+                    _("All my very best friends"),
+                    _("My super good secret recipe"),
+                    _("My todo list"),
+                    _("Super secret to not tell anyone"),
+                    _("My grocery list"),
+                    _("Random shower thoughts"),
+                    _("My fav fanfics"),
+                    _("My fav dinosaurs"),
+                    _("My evil mastermind plan")};
+
+                this.title_name = alltitles[Random.int_range (0,9)];
                 set_title (this.title_name);
 
-                string[] allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
-                this.theme = allthemes[Random.int_range (0,9)];
+                // First sticky is always blue - signature look!
+                // After that, it is random
+                //if (uid_counter == 0) {
+                    string[] allthemes = {"STRAWBERRY", "ORANGE", "BANANA", "LIME", "BLUEBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SILVER", "SLATE"};
+                    this.theme = allthemes[Random.int_range (0,9)];
+                //} else {
+                //    this.theme = "BLUEBERRY";
+                //}
+                // Wrong alert uid is rotten
+                
+                this.content = "";
             }
 
             // add required base classes
