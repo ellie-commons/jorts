@@ -63,8 +63,8 @@ public class jorts.EditableLabel : Gtk.EventBox {
 
         this.get_style_context().add_class("jorts-label");
 
-        string style = null;
-        var css_provider = new Gtk.CssProvider();
+        //string style = null;
+/*          var css_provider = new Gtk.CssProvider();
         style = """
         .jorts-label {
             font-weight: 700;
@@ -78,13 +78,13 @@ public class jorts.EditableLabel : Gtk.EventBox {
             css_provider.load_from_data(style, -1);
         } catch (GLib.Error e) {
             warning ("Failed to parse css style : %s", e.message);
-        }
+        }  */
 
-        Gtk.StyleContext.add_provider_for_screen(
+/*          Gtk.StyleContext.add_provider_for_screen(
             Gdk.Screen.get_default(),
             css_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        );
+        );  */
 
         title = new Gtk.Label (title_name);
         title.ellipsize = Pango.EllipsizeMode.END;

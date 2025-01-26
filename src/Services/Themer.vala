@@ -62,7 +62,9 @@ namespace jorts.Themer {
                     );
             }
 
-            .jorts-view text selection {
+
+
+            .mainwindow-%d .jorts-view text selection {
                 color: shade(%s, 1.88);
                 transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 background-color: %s;
@@ -109,9 +111,6 @@ namespace jorts.Themer {
                 box-shadow: none;
             }
 
-            .window-%d .rotated > widget > box > image {
-                -gtk-icon-transform: rotate(90deg);
-            }
 
             .color-button {
                 border-radius: 50%;
@@ -186,7 +185,35 @@ namespace jorts.Themer {
                 border: 1px solid transparent;
                 box-shadow: none;
             }
-            """)).printf(uid, palette[0], uid, palette[0], palette[0], uid, palette[0], palette[0], palette[0], palette[1], uid, uid, palette[1], uid, palette[1], palette[0], palette[0], uid, palette[1], uid, uid, uid, palette[0], palette[0], palette[1], uid);
+
+
+        .jorts-label {
+            font-weight: 700;
+            font-size: 0.88em;
+        }
+        .jorts-label:backdrop {
+            color: mix (@textColorPrimary, %s, 0.3);
+        }
+
+            .window-%d overshoot.top {
+                background: linear-gradient(to top, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); }
+
+            .window-%d overshoot.bottom {
+              background: linear-gradient(to bottom, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); }
+
+            """)).printf(uid, palette[0], 
+                uid, palette[0], palette[0],
+                uid, palette[0], palette[0],
+                uid, palette[0], palette[1], 
+                uid, uid, 
+                palette[1], 
+                uid, palette[1], palette[0], palette[0], 
+                uid, palette[1], 
+                uid, uid, uid, 
+                palette[0], palette[0], palette[1], 
+                palette[1],
+                uid,palette[0],palette[0],
+                uid,palette[0],palette[0]);
 
     return style;
 }

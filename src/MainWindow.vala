@@ -57,8 +57,6 @@ namespace jorts {
         public MainWindow (Gtk.Application app, Storage? storage) {
             Object (application: app);
 
-            print(this.uid.to_string());
-
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
@@ -528,6 +526,8 @@ namespace jorts {
         // And then this reconstructs a whole ass theme out of these two
         // Either it can be a service, or just all defined in CSS and add/remove css
         private void update_theme(string theme) {
+            print(uid.to_string ());
+
                 this.get_style_context().add_class("mainwindow-%d".printf(uid));
                 this.get_style_context().add_class("window-%d".printf(uid));
 

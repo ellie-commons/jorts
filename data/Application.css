@@ -1,14 +1,103 @@
-/*
- * SPDX-License-Identifier: GPL-3.0
- * SPDX-FileCopyrightText: 2025 Stella, whose hairs are shiny and soft. (https://teamcons.carrd.co)
- */
 
 @define-color textColorPrimary #323232;
+@define-color accent_color %s;
+@define-color accent_color_strong %s;
 
-@define-color MainColor @BLUEBERRY_100;
-@define-color SecondaryColor @BLUEBERRY_900;
 
-/* TODO : These only exist to colour the "pills" to select theme. This needs a fixing */
+.mainwindow-%d {
+    background-color: @accent_color;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainwindow-%d undershoot.top {
+    background:
+        linear-gradient(
+            @accent_color 0%,
+            alpha(@accent_color, 0) 50%;
+        );
+}
+
+.mainwindow-%d undershoot.bottom {
+    background:
+        linear-gradient(
+            alpha(@accent_color, 0) 50%,
+            @accent_color 100%;
+        );
+}
+
+
+
+.jorts-view text selection {
+    color: shade(@accent_color, 1.88);
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: @accent_color_strong;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+entry.flat {
+    background: transparent;
+}
+
+.window-%d .jorts-title image,
+.window-%d .jorts-label {
+    color: @accent_color_strong;
+    box-shadow: none;
+}
+
+.window-%d .jorts-bar {
+    color: @accent_color_strong;
+    background-color: @accent_color;
+    border-top-color: @accent_color;
+    box-shadow: none;
+    background-image: none;
+    padding: 3px;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.window-%d .jorts-bar image {
+    color: @accent_color_strong;
+    padding: 3px;
+    box-shadow: none;
+    background-image: none;
+}
+
+.window-%d .jorts-view,
+.window-%d .jorts-view text,
+.window-%d .jorts-title {
+    background-color: @accent_color;
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-image: none;
+    border-bottom-color: @accent_color;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: shade(@accent_color_strong, 0.77);
+    box-shadow: none;
+}
+
+
+.color-button {
+    border-radius: 50%;
+    background-image: none;
+    border: 1px solid alpha(#333, 0.25);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.color-button:hover,
+.color_button:focus {
+    border: 1px solid @inset_dark_color;
+}
+
+.color-slate {
+    background-color: @SLATE_100;
+}
+
+.color-silver {
+    background-color: @SILVER_100;
+}
+
 .color-strawberry {
     background-color: @STRAWBERRY_100;
 }
@@ -37,105 +126,9 @@
     background-color: @COCOA_100;
 }
 
-.color-slate {
-    background-color: @SLATE_100;
+.jorts-bar box {
+    border: none;
 }
-
-.color-silver {
-    background-color: @SILVER_100;
-}
-
-
-
-
-
-/* These are the colored pills to select theme */
-.color-button {
-    border-radius: 50%;
-    background-image: none;
-    border: 1px solid alpha(#333, 0.25);
-    box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-}
-
-.color-button:hover,
-.color_button:focus {
-    border: 1px solid @inset_dark_color;
-}
-
-
-.window {
-    background-color: @MainColor;
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.window undershoot.top {
-    background:
-        linear-gradient(
-            @MainColor 0%,
-            alpha(@MainColor, 0) 50%
-        );
-}
-
-.window undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(@MainColor, 0) 50%,
-            @MainColor 100%
-        );
-}
-
-.jorts-view text selection {
-    color: shade(@MainColor, 1.88);
-    background-color: @SecondaryColor;
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-entry.flat {
-    background: transparent;
-}
-
-.window .jorts-title image,
-.window .jorts-label {
-    color: @SecondaryColor;
-    box-shadow: none;
-}
-
-.window .jorts-bar {
-    color: @SecondaryColor;
-    background-color: @MainColor;
-    border-top-color: @SecondaryColor;
-    box-shadow: none;
-    background-image: none;
-    padding: 3px;
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.window .jorts-bar image {
-    color: @SecondaryColor;
-    padding: 3px;
-    box-shadow: none;
-    background-image: none;
-}
-
-.window .jorts-view,
-.window .jorts-view text,
-.window .jorts-title {
-    background-color: @MainColor;
-    background-image: none;
-    border-bottom-color: @SecondaryColor;
-    font-weight: 500;
-    font-size: 1.2em;
-    color: shade(@SecondaryColor, 0.77);
-    box-shadow: none;
-}
-
-
-
 
 .image-button,
 .titlebutton {
@@ -157,17 +150,27 @@ entry.flat {
 }
 
 
-/* This is the EditableLabel */
 .jorts-label {
-    font-weight: 700;
-    font-size: 0.88em;
+font-weight: 700;
+font-size: 0.88em;
 }
-
 .jorts-label:backdrop {
-    color: mix (@textColorPrimary, @SecondaryColor, 0.3);
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+color: mix (@textColorPrimary, @accent_color_strong, 0.3);
 }
 
-.jorts-bar box {
-    border: none;
-}
+.mainwindow-%d overshoot.bottom {
+background: linear-gradient(to bottom, alpha(@accent_color, 0) 80%, alpha(@accent_color, 0.25) 100%); }
+
+.mainwindow-%d overshoot.top {
+background: linear-gradient(to top, alpha(@accent_color, 0) 80%, alpha(@accent_color, 0.25) 100%); }
+
+.mainwindow-%d  overshoot.right {
+background: linear-gradient(to right, alpha(@accent_color, 0) 80%, alpha(@accent_color, 0.25) 100%); }
+
+.mainwindow-%d overshoot.bottom {
+background: linear-gradient(to bottom, alpha(@accent_color, 0) 80%, alpha(@accent_color, 0.25) 100%); }
+
+.mainwindow-%d overshoot.left {
+background: linear-gradient(to left, alpha(@accent_color, 0) 80%, alpha(@accent_color, 0.25) 100%); }
+
+

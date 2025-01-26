@@ -74,7 +74,7 @@ namespace jorts {
         	string data_path =  "saved_sticky_" + uid + ".json";
             	debug ("%s".printf(data_path));
 
-		var file = File.new_for_path (data_path);
+			var file = File.new_for_path (data_path);
             	try {
                 	if (file.query_exists ()) {
                     		file.delete 
