@@ -52,6 +52,7 @@ namespace jorts.Themer {
                         %s 0%,
                         alpha(%s, 0) 50%
                     );
+                transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
             
             .mainwindow-%d undershoot.bottom {
@@ -60,6 +61,7 @@ namespace jorts.Themer {
                         alpha(%s, 0) 50%,
                         %s 100%
                     );
+                transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
 
@@ -196,10 +198,12 @@ namespace jorts.Themer {
         }
 
             .window-%d overshoot.top {
-                background: linear-gradient(to top, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); }
+                background: linear-gradient(to top, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); 
+                                transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);}
 
             .window-%d overshoot.bottom {
-              background: linear-gradient(to bottom, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); }
+              background: linear-gradient(to bottom, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%);
+                              transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);}
 
             """)).printf(uid, palette[0], 
                 uid, palette[0], palette[0],

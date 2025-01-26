@@ -38,7 +38,12 @@ namespace jorts.Utils {
             _("New sticky, new me"),
             _("Hidden pirate treasure"),
             _("To not forget"),
-            _("Deep deep thoughts")};
+            _("Deep deep thoughts"),
+            _("Dear Diary,"),
+            _("Hi im a square"),
+            _("Have a nice day! :)"),
+            _("My meds schedule"),
+            _("Household chores"),};
 
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
