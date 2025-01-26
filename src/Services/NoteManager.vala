@@ -19,7 +19,7 @@
 
 namespace jorts {
     public class NoteManager {
-        private string app_dir = Environment.get_user_data_dir () + "/io.github.ellie_commons.jorts";
+        private string app_dir = Environment.get_user_data_dir ();
         private string file_name;
 
         public NoteManager () {
