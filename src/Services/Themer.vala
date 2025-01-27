@@ -81,6 +81,7 @@ namespace jorts.Themer {
             .window-%d .jorts-label {
                 color: %s;
                 box-shadow: none;
+                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .window-%d .jorts-bar {
@@ -91,6 +92,7 @@ namespace jorts.Themer {
                 background-image: none;
                 padding: 3px;
                 transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .window-%d .jorts-bar image {
@@ -104,13 +106,14 @@ namespace jorts.Themer {
             .window-%d .jorts-view text,
             .window-%d .jorts-title {
                 background-color: %s;
-                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
                 background-image: none;
                 border-bottom-color: %s;
                 font-weight: 500;
                 font-size: 1.2em;
                 color: shade(%s, 0.77);
                 box-shadow: none;
+                transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
 
@@ -193,9 +196,9 @@ namespace jorts.Themer {
             font-weight: 700;
             font-size: 0.88em;
         }
-        .jorts-label:backdrop {
+        /*.jorts-label:backdrop {
             color: mix (@textColorPrimary, %s, 0.3);
-        }
+        }*/
 
             .window-%d overshoot.top {
                 background: linear-gradient(to top, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); 
