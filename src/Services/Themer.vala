@@ -195,17 +195,13 @@ namespace jorts.Themer {
 
 
 
-            """)).printf(uid, theme, 
-                uid, theme, theme,
-                uid, theme, theme,
-                uid, theme, theme, 
-                uid, uid, 
-                theme, 
-                uid, theme, theme, theme, 
-                uid, theme, 
-                uid, uid, uid, 
-                theme, theme, theme, 
-                theme);
+            """));
+
+        style = style.replace("%d",uid.to_string());
+
+        style = style.replace("%s",theme);
+
+
 
     return style;
 }

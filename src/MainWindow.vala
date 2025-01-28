@@ -447,7 +447,6 @@ namespace jorts {
             this.title_name = storage.title;
             this.theme = storage.theme;
             this.content = storage.content;
-            this.move((int)storage.x, (int)storage.y);
             if ((int)storage.w != 0 && (int)storage.h != 0) {
                 this.resize ((int)storage.w, (int)storage.h);
             }
