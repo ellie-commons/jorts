@@ -206,6 +206,7 @@ namespace jorts {
             delete_item.tooltip_text = (_("Delete note"));
             delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
+            delete_item.get_style_context ().add_class ("trashcan");
 
 /*              var undo = new Gtk.Button ();
             undo.tooltip_text = (_("Undo"));

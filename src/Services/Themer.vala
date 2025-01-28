@@ -20,21 +20,10 @@
 
 namespace jorts.Themer {
 
-    /* Get a name, spit an array with colours from standard granite stylesheet */
-    /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
-    public string[] generate_palette (string theme) {
-        var string_palette = new string[2];
-        string_palette = {
-            "@" + theme + "_100",
-            "@" + theme + "_900"
-        };
-        return string_palette;
-    }
-
     /* Get a name, spit a whole CSS */
     /* We kinda need better tbh but it is better than before */
     public static string generate_css (int uid, string theme) {
-        var palette = generate_palette(theme);
+        /*  var palette = generate_palette(theme);  */
 
         string style = "";
 
@@ -42,15 +31,15 @@ namespace jorts.Themer {
             @define-color textColorPrimary #323232;
 
             .mainwindow-%d {
-                background-color: %s;
+                background-color: @%s_100;
                 transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .mainwindow-%d undershoot.top {
                 background:
                     linear-gradient(
-                        %s 0%,
-                        alpha(%s, 0) 50%
+                        @%s_100 0%,
+                        alpha(@%s_100, 0) 50%
                     );
                 transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
@@ -58,8 +47,8 @@ namespace jorts.Themer {
             .mainwindow-%d undershoot.bottom {
                 background:
                     linear-gradient(
-                        alpha(%s, 0) 50%,
-                        %s 100%
+                        alpha(@%s_100, 0) 50%,
+                        @%s_100 100%
                     );
                 transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
@@ -67,9 +56,9 @@ namespace jorts.Themer {
 
 
             .mainwindow-%d .jorts-view text selection {
-                color: shade(%s, 1.88);
+                color: shade(@%s_100, 1.88);
                 transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                background-color: %s;
+                background-color: @%s_900;
                 transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
@@ -79,24 +68,24 @@ namespace jorts.Themer {
 
             .window-%d .jorts-title image,
             .window-%d .jorts-label {
-                color: %s;
+                color: @%s_900;
                 box-shadow: none;
                 transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .window-%d .jorts-bar {
-                color: %s;
-                background-color: %s;
-                border-top-color: %s;
+                color: @%s_900;
+                background-color: @%s_100;
+                border-top-color: @%s_100;
                 box-shadow: none;
                 background-image: none;
                 padding: 3px;
                 transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+                /*transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);*/
             }
 
             .window-%d .jorts-bar image {
-                color: %s;
+                color: @%s_900;
                 padding: 3px;
                 box-shadow: none;
                 background-image: none;
@@ -105,15 +94,15 @@ namespace jorts.Themer {
             .window-%d .jorts-view,
             .window-%d .jorts-view text,
             .window-%d .jorts-title {
-                background-color: %s;
+                background-color: @%s_100;
                 background-image: none;
-                border-bottom-color: %s;
+                border-bottom-color: @%s_100;
                 font-weight: 500;
                 font-size: 1.2em;
-                color: shade(%s, 0.77);
+                color: shade(@%s_900, 0.77);
                 box-shadow: none;
                 transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-                transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+                /*transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);*/
             }
 
 
@@ -196,31 +185,27 @@ namespace jorts.Themer {
             font-weight: 700;
             font-size: 0.88em;
         }
-        /*.jorts-label:backdrop {
-            color: mix (@textColorPrimary, %s, 0.3);
-        }*/
 
-            .window-%d overshoot.top {
-                background: linear-gradient(to top, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%); 
-                                transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);}
+        
+        .trashcan:hover {
+            transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+            color: @warning;
+        }
 
-            .window-%d overshoot.bottom {
-              background: linear-gradient(to bottom, alpha(%s, 0) 80%, alpha(%s, 0.25) 100%);
-                              transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);}
 
-            """)).printf(uid, palette[0], 
-                uid, palette[0], palette[0],
-                uid, palette[0], palette[0],
-                uid, palette[0], palette[1], 
+
+
+            """)).printf(uid, theme, 
+                uid, theme, theme,
+                uid, theme, theme,
+                uid, theme, theme, 
                 uid, uid, 
-                palette[1], 
-                uid, palette[1], palette[0], palette[0], 
-                uid, palette[1], 
+                theme, 
+                uid, theme, theme, theme, 
+                uid, theme, 
                 uid, uid, uid, 
-                palette[0], palette[0], palette[1], 
-                palette[1],
-                uid,palette[0],palette[0],
-                uid,palette[0],palette[0]);
+                theme, theme, theme, 
+                theme);
 
     return style;
 }
