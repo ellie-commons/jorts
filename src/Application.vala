@@ -27,7 +27,51 @@ namespace jorts {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                     application_id: "io.github.ellie_commons.jorts");
         }
-        
+
+        public override void startup () {
+            base.startup ();
+
+            // This is automatic in GTK4, so can be removed after porting
+            var app_provider = new Gtk.CssProvider ();
+            app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
+            Gtk.StyleContext.add_provider_for_screen (
+                Gdk.Screen.get_default (),
+                app_provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+
+            string[] themes = {
+                "BANANA",
+                "BLUEBERRY",
+                "BUBBLEGUM",
+                "COCOA",
+                "GRAPE",
+                "LIME",
+                "ORANGE",
+                "SILVER",
+                "SLATE",
+                "STRAWBERRY"
+            };
+
+            foreach (unowned var theme in themes) {
+              // Palette color
+                var theme_provider = new Gtk.CssProvider ();
+                var style = jorts.Themer.generate_css (theme);
+
+                try {
+                    theme_provider.load_from_data (style, -1);
+                } catch (GLib.Error e) {
+                    warning ("Failed to parse css style : %s", e.message);
+                }
+
+                Gtk.StyleContext.add_provider_for_screen (
+                    Gdk.Screen.get_default (),
+                    theme_provider,
+                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                );
+            }
+        }
+
         static construct {
             gsettings = new GLib.Settings ("io.github.ellie_commons.jorts");
         }

@@ -39,7 +39,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
             color_button_strawberry.width_request = 24;
             color_button_strawberry.tooltip_text = _("Strawberry");
             color_button_strawberry.get_style_context ().add_class ("color-button");
-            color_button_strawberry.get_style_context ().add_class ("color-strawberry");
+            color_button_strawberry.get_style_context ().add_class ("strawberry");
 
             var color_button_orange = new Gtk.Button ();
             color_button_orange.has_focus = false;
@@ -50,7 +50,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_orange_context = color_button_orange.get_style_context ();
             color_button_orange_context.add_class ("color-button");
-            color_button_orange_context.add_class ("color-orange");
+            color_button_orange_context.add_class ("orange");
 
             var color_button_banana = new Gtk.Button ();
             color_button_banana.has_focus = false;
@@ -61,7 +61,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_banana_context = color_button_banana.get_style_context ();
             color_button_banana_context.add_class ("color-button");
-            color_button_banana_context.add_class ("color-banana");
+            color_button_banana_context.add_class ("banana");
 
             var color_button_lime = new Gtk.Button ();
             color_button_lime.has_focus = false;
@@ -72,7 +72,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_lime_context = color_button_lime.get_style_context ();
             color_button_lime_context.add_class ("color-button");
-            color_button_lime_context.add_class ("color-lime");
+            color_button_lime_context.add_class ("lime");
 
             var color_button_blueberry = new Gtk.Button ();
             color_button_blueberry.has_focus = false;
@@ -83,7 +83,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_blueberry_context = color_button_blueberry.get_style_context ();
             color_button_blueberry_context.add_class ("color-button");
-            color_button_blueberry_context.add_class ("color-blueberry");
+            color_button_blueberry_context.add_class ("blueberry");
 
 
             var color_button_bubblegum = new Gtk.Button ();
@@ -95,7 +95,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_bubblegum_context = color_button_blueberry.get_style_context ();
             color_button_bubblegum_context.add_class ("color-button");
-            color_button_bubblegum_context.add_class ("color-bubblegum");
+            color_button_bubblegum_context.add_class ("bubblegum");
 
 
             var color_button_grape = new Gtk.Button ();
@@ -107,7 +107,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_grape_context = color_button_grape.get_style_context ();
             color_button_grape_context.add_class ("color-button");
-            color_button_grape_context.add_class ("color-grape");
+            color_button_grape_context.add_class ("grape");
 
             var color_button_cocoa = new Gtk.Button ();
             color_button_cocoa.has_focus = false;
@@ -118,7 +118,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_cocoa_context = color_button_cocoa.get_style_context ();
             color_button_cocoa_context.add_class ("color-button");
-            color_button_cocoa_context.add_class ("color-cocoa");
+            color_button_cocoa_context.add_class ("cocoa");
 
             var color_button_silver = new Gtk.Button ();
             color_button_silver.has_focus = false;
@@ -129,7 +129,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_silver_context = color_button_silver.get_style_context ();
             color_button_silver_context.add_class ("color-button");
-            color_button_silver_context.add_class ("color-silver");
+            color_button_silver_context.add_class ("silver");
 
 
             var color_button_slate = new Gtk.Button ();
@@ -141,7 +141,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
             var color_button_slate_context = color_button_slate.get_style_context ();
             color_button_slate_context.add_class ("color-button");
-            color_button_slate_context.add_class ("color-slate");
+            color_button_slate_context.add_class ("slate");
 
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             // GTK4: append
