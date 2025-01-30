@@ -1,5 +1,6 @@
 /*
-* Copyright (c) 2025 Stella and the Ellie_Commons community
+* Copyright (c) 2017-2024 Lains
+* Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -15,8 +16,14 @@
 * License along with this program; if not, write to the
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
-*
 */
+
+/*
+There is only the generate_css() command, but it is a beefy one
+At startup it is used several times to generate each theme.
+Then notes are themed by removing CSS theme classes and then slapping a new one
+*/
+
 
 namespace jorts.Themer {
 
@@ -29,8 +36,6 @@ namespace jorts.Themer {
             window.%s {
                 background-color: @%s_100;
             }
-
-
 
             window.%s undershoot.top {
                 background:
@@ -48,13 +53,14 @@ namespace jorts.Themer {
                     );
             }
 
-            window.%s .sourceview text selection {
+            window.%s .sourceview text selection,
+            window.%s .entry text selection {
                 color: shade(@%s_100, 1.88);
                 background-color: @%s_900;
             }
 
             window.%s .titlebar image,
-            window.%s .editablelabel,
+            window.%s .editablelabel *,
             window.%s .actionbar,
             window.%s .actionbar image {
                 color: @%s_900;
@@ -68,12 +74,12 @@ namespace jorts.Themer {
                 color: shade(@%s_900, 0.77);
             }
 
-
             window.%s:backdrop .sourceview text,
-            window.%s:backdrop .editablelabel,
-            window.%s:backdrop .actionbar,
+            window.%s:backdrop .editablelabel *
+            window.%s:backdrop .titlebar *,
+            window.%s:backdrop .actionbar *,
             window.%s:backdrop .actionbar image {
-                color: @%s_700;
+                color: shade(@%s_500, 0.77);
             }
 
 

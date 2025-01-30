@@ -1,5 +1,6 @@
 /*
-* Copyright (c) 2417 Lains
+* Copyright (c) 2017-2024 Lains
+* Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -17,6 +18,11 @@
 * Boston, MA 02110-1301 USA
 */
 
+/*
+
+
+
+*/
 namespace jorts {
 
     // Every notice is an instance of MainWindow
@@ -196,7 +202,7 @@ namespace jorts {
 
             var everythingnote = new noteData(this.uid, this.title, this.theme, this.content, 0, width, height);
 
-            save_to_stash(everythingnote);
+            Stash.save_to_stash(everythingnote);
         }
 
 
@@ -387,62 +393,52 @@ namespace jorts {
             // All the "change theme when theme button changed"
             // TODO: cleaner theme management
             color_button_strawberry.clicked.connect (() => {
-                this.theme = "STRAWBERRY";
-                update_theme(this.theme);
+                update_theme("STRAWBERRY");
                 ((Application)this.application).update_storage();
             });
 
             color_button_orange.clicked.connect (() => {
-                this.theme = "ORANGE";
-                update_theme(this.theme);
+                update_theme("ORANGE");
                 ((Application)this.application).update_storage();
             });
 
             color_button_banana.clicked.connect (() => {
-                this.theme = "BANANA";
-                update_theme(this.theme);
+                update_theme("BANANA");
                 ((Application)this.application).update_storage();
             });
 
             color_button_lime.clicked.connect (() => {
-                this.theme = "LIME";
-                update_theme(this.theme);
+                update_theme("LIME");
                 ((Application)this.application).update_storage();
             });
 
             color_button_blueberry.clicked.connect (() => {
-                this.theme = "BLUEBERRY";
-                update_theme(this.theme);
+                update_theme("BLUEBERRY");
                 ((Application)this.application).update_storage();
             });
 
             color_button_bubblegum.clicked.connect (() => {
-                this.theme = "BUBBLEGUM";
-                update_theme(this.theme);
+                update_theme("BUBBLEGUM");
                 ((Application)this.application).update_storage();
             });
 
             color_button_grape.clicked.connect (() => {
-                this.theme = "GRAPE";
-                update_theme(this.theme);
+                update_theme("GRAPE");
                 ((Application)this.application).update_storage();
             });
 
             color_button_cocoa.clicked.connect (() => {
-                this.theme = "COCOA";
-                update_theme(this.theme);
+                update_theme("COCOA");
                 ((Application)this.application).update_storage();
             });
 
             color_button_silver.clicked.connect (() => {
-                this.theme = "SILVER";
-                update_theme(this.theme);
+                update_theme("SILVER");
                 ((Application)this.application).update_storage();
             });
 
             color_button_slate.clicked.connect (() => {
-                this.theme = "SLATE";
-                update_theme(this.theme);
+                update_theme("SLATE");
                 ((Application)this.application).update_storage();
             });
 
@@ -525,27 +521,13 @@ namespace jorts {
             return false;
         }
 
-
+        // Replace stylesheet
         private void update_theme(string theme) {
 
             // in GTK4 we can replace this with setting css_classes
-            string[] themes = {
-                "BANANA",
-                "BLUEBERRY",
-                "BUBBLEGUM",
-                "COCOA",
-                "GRAPE",
-                "LIME",
-                "ORANGE",
-                "SILVER",
-                "SLATE",
-                "STRAWBERRY"
-            };
-
-            foreach (unowned var old_theme in themes) {
-                get_style_context().remove_class (old_theme);
-            }
-
+            string old_theme = this.theme;
+            this.theme = theme;
+            get_style_context().remove_class (old_theme);
             get_style_context().add_class (theme);
         }
     }

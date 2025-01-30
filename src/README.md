@@ -1,6 +1,7 @@
 # Code Structure
 
 Each Note is an instance of MainWindow initiated by Application.
+Each Note is responsible for its own storage and theming
 Components should be as stupidly simple as possible.
 
 ### MainWindow
@@ -12,7 +13,7 @@ Said MainWindow/Note has:
 ### Services
 Each Note relies on the following supporting services:
  - Stash, which provides the storage utilities. Each Note is responsible for saving itself
- - Themer, which provides a custom stylesheet. Each Note has a class buit specifically for its ID, because i havent found how to reliably theme each MainWindow separately
+ - Themer, to build the themes
  - Utils, which provides small functions that are better in a clean separate place instead of drown in the code.
 
 TODO:
@@ -29,4 +30,4 @@ TODO: ColorPill and SettingsPopover
 
 
 ### Resources
-The Application.css is not ready but should have the nonspecific CSS
+Application.css includes all nonspecific css
