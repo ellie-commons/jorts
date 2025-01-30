@@ -59,12 +59,12 @@ namespace jorts.Stash {
 
 
 	// lol just count how many files in the data dir
-	public int count_saved_notes() {
+/*  	public int count_saved_notes() {
 		string user_data_dir = Environment.get_user_data_dir ();
 		var data_directory  = File.new_for_path(user_data_dir);	
 
 		return 4;
-	}
+	}  */
 
 
 
