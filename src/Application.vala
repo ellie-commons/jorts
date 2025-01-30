@@ -51,18 +51,7 @@ namespace jorts {
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
 
-            string[] themes = {
-                "STRAWBERRY",
-                "ORANGE",
-                "BANANA",
-                "LIME",
-                "BLUEBERRY",
-                "BUBBLEGUM",
-                "GRAPE",
-                "COCOA",
-                "SILVER",
-                "SLATE"
-            };
+            string[] themes = jorts.Utils.themearray ();
 
             foreach (unowned var theme in themes) {
               // Palette color

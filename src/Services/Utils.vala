@@ -20,8 +20,7 @@
 
 namespace jorts.Utils {
 
-    /* Get a name, spit an array with colours from standard granite stylesheet */
-    /* EX: STRAWBERRY --> { "@STRAWBERRY_100" "@STRAWBERRY_900" }*/
+    // Spits out a cute or funny random title for a new sticky note
     public string random_title () {
         string[] alltitles = {
             _("All my very best friends"),
@@ -37,19 +36,27 @@ namespace jorts.Utils {
             _("Hello world!"),
             _("New sticky, new me"),
             _("Hidden pirate treasure"),
-            _("To not forget"),
+            _("To not forget, ever"),
             _("Deep deep thoughts"),
             _("Dear Diary,"),
             _("Hi im a square"),
             _("Have a nice day! :)"),
             _("My meds schedule"),
-            _("Household chores"),};
+            _("Household chores"),
+            _("Ode to my cat"),
+            _("My dogs favourite toys"),
+            _("How cool my birds are"),
+            _("Suspects in the Last Cookie affair"),
+            _("Words my parrots know"),
+            _("Cool and funny compliments to give out"),
+            _("Ok, listen here,"),
+            _("My dream Pokemon team")};
 
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
 
-
-    public string random_theme () {
+    // Spits out a random theme for a new note
+    public string[] themearray () {
         string[] allthemes = {
             "STRAWBERRY",
             "ORANGE",
@@ -61,7 +68,7 @@ namespace jorts.Utils {
             "COCOA",
             "SILVER",
             "SLATE"};
-        return allthemes[Random.int_range (0,(allthemes.length - 1))];
+        return allthemes;
     }
 
 }

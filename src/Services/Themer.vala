@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2025 Stella
+* Copyright (c) 2025 Stella and the Ellie_Commons community
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -54,16 +54,7 @@ namespace jorts.Themer {
             }
 
             window.%s .titlebar image,
-            window.%s .editablelabel {
-                color: @%s_900;
-            }
-
-            window.%s:backdrop .editablelabel,
-            window.%s:backdrop .actionbar,
-            window.%s:backdrop .actionbar image {
-                color: @%s_500;
-            }
-
+            window.%s .editablelabel,
             window.%s .actionbar,
             window.%s .actionbar image {
                 color: @%s_900;
@@ -76,6 +67,16 @@ namespace jorts.Themer {
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
             }
+
+
+            window.%s:backdrop .sourceview text,
+            window.%s:backdrop .editablelabel,
+            window.%s:backdrop .actionbar,
+            window.%s:backdrop .actionbar image {
+                color: @%s_700;
+            }
+
+
         """));
 
         style = style.replace ("%s",theme);

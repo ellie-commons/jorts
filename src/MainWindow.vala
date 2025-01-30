@@ -75,7 +75,8 @@ namespace jorts {
                 // First sticky is always blue - signature look!
                 // After that, it is random
                 //if (uid_counter == 0) {
-                    this.theme = jorts.Utils.random_theme();
+                    var allthemes = jorts.Utils.themearray();
+                    this.theme = allthemes[Random.int_range (0,(allthemes.length - 1))];
                 //} else {
                 //    this.theme = "BLUEBERRY";
                 //}
