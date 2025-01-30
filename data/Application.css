@@ -4,6 +4,11 @@ window {
     transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+window decoration {
+    transition: border-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 undershoot.top {
     transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -12,32 +17,34 @@ undershoot.bottom {
     transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.jorts-view text selection {
+.sourceview text selection {
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.jorts-title image,
-.jorts-label {
+.titlebar image,
+.editablelabel {
     box-shadow: none;
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.jorts-bar {
+.actionbar {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: none;
     background: transparent;
     padding: 3px;
 }
 
-.jorts-bar image {
-    padding: 3px;
+.actionbar image {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: none;
     background-image: none;
+    padding: 3px;
 }
 
-.jorts-view,
-.jorts-view text,
-.jorts-title {
+.sourceview,
+.sourceview text,
+.titlebar {
     background-image: none;
     font-weight: 500;
     font-size: 1.2em;
@@ -60,48 +67,38 @@ entry.flat {
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-.color-button:hover,
-.color-button:focus {
-    border: 1px solid @inset_dark_color;
-}
+.color-button.strawberry {background-color: @STRAWBERRY_100;}
+.color-button.strawberry:hover {border: 1px solid @STRAWBERRY_500;}
+.color-button.orange {background-color: @ORANGE_100;}
+.color-button.orange:hover {border: 1px solid @ORANGE_500;}
 
-.color-button.slate {
-    background-color: @SLATE_100;
-}
+.color-button.banana {background-color: @BANANA_100;}
+.color-button.banana:hover {border: 1px solid @BANANA_500;}
 
-.color-button.silver {
-    background-color: @SILVER_100;
-}
+.color-button.lime {background-color: @LIME_100;}
+.color-button.lime:hover {border: 1px solid @LIME_500;}
 
-.color-button.strawberry {
-    background-color: @STRAWBERRY_100;
-}
+.color-button.blueberry {background-color: @BLUEBERRY_100;}
+.color-button.blueberry:hover {border: 1px solid @BLUEBERRY_500;}
 
-.color-button.orange {
-    background-color: @ORANGE_100;
-}
+.color-button.bubblegum {background-color: @BUBBLEGUM_100;}
+.color-button.bubblegum:hover {border: 1px solid @BUBBLEGUM_500;}
 
-.color-button.banana {
-    background-color: @BANANA_100;
-}
+.color-button.grape {background-color: @GRAPE_100;}
+.color-button.grape:hover {border: 1px solid @GRAPE_500;}
 
-.color-button.lime {
-    background-color: @LIME_100;
-}
+.color-button.cocoa {background-color: @COCOA_100;}
+.color-button.cocoa {border: 1px solid @COCOA_500;}
 
-.color-button.blueberry {
-    background-color: @BLUEBERRY_100;
-}
+.color-button.slate {background-color: @SLATE_100;}
+.color-button.slate:hover {border: 1px solid @SLATE_500;}
 
-.color-button.grape {
-    background-color: @GRAPE_100;
-}
+.color-button.silver {background-color: @SILVER_100;}
+.color-button.silver:hover {border: 1px solid @SILVER_500;}
 
-.color-button.cocoa {
-    background-color: @COCOA_100;
-}
 
-.jorts-bar box {
+
+.actionbar box {
     border: none;
 }
 
@@ -124,7 +121,7 @@ entry.flat {
     box-shadow: none;
 }
 
-.jorts-label {
+.editablelabel {
     font-weight: 700;
     font-size: 0.88em;
 }

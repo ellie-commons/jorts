@@ -61,7 +61,7 @@ public class jorts.EditableLabel : Gtk.EventBox {
         events |= Gdk.EventMask.LEAVE_NOTIFY_MASK;
         events |= Gdk.EventMask.BUTTON_PRESS_MASK;
 
-        this.get_style_context().add_class("jorts-label");
+        this.get_style_context().add_class("editablelabel");
 
         //string style = null;
 /*          var css_provider = new Gtk.CssProvider();

@@ -85,10 +85,8 @@ namespace jorts {
             }
 
             // add required base classes
-            //this.get_style_context().add_class(this.uid.to_string ());
             this.get_style_context().add_class("rounded");
-            this.get_style_context().add_class("default-decoration");
-            this.get_style_context().add_class("jorts-window");
+
             this.uid = uid_counter++;
 
             // Rebuild the whole theming
@@ -99,7 +97,7 @@ namespace jorts {
             // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            header.get_style_context().add_class("jorts-title");
+            //header.get_style_context().add_class("jorts-title");
             header.has_subtitle = false;
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
@@ -113,7 +111,7 @@ namespace jorts {
 
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
-            actionbar.get_style_context().add_class("jorts-bar");
+            actionbar.get_style_context().add_class("actionbar");
             create_actionbar ();
             create_app_menu ();
 
@@ -188,8 +186,16 @@ namespace jorts {
 
         // Save everything
         private void update_storage () {
+            int width, height;
+
             get_storage_note();
             ((Application)this.application).update_storage();
+
+            this.get_size (out width, out height);
+
+            var everythingnote = new noteData(this.uid, this.title, this.theme, this.content, 0, width, height);
+
+            save_to_stash(everythingnote);
         }
 
 
@@ -292,7 +298,7 @@ namespace jorts {
             color_button_bubblegum.width_request = 24;
             color_button_bubblegum.tooltip_text = _("Bubblegum");
 
-            var color_button_bubblegum_context = color_button_blueberry.get_style_context ();
+            var color_button_bubblegum_context = color_button_bubblegum.get_style_context ();
             color_button_bubblegum_context.add_class ("color-button");
             color_button_bubblegum_context.add_class ("bubblegum");
 
@@ -350,6 +356,7 @@ namespace jorts {
             color_button_box.pack_start (color_button_banana, false, true, 0);
             color_button_box.pack_start (color_button_lime, false, true, 0);
             color_button_box.pack_start (color_button_blueberry, false, true, 0);
+            color_button_box.pack_start (color_button_bubblegum, false, true, 0);
             color_button_box.pack_start (color_button_grape, false, true, 0);
             color_button_box.pack_start (color_button_cocoa, false, true, 0);
             color_button_box.pack_start (color_button_silver, false, true, 0);
@@ -518,13 +525,6 @@ namespace jorts {
         }
 
 
-
-
-
-        // TODO: A theming service or something. Something cleaner than this in all cases
-        // Basically the menu button defines two public variables
-        // And then this reconstructs a whole ass theme out of these two
-        // Either it can be a service, or just all defined in CSS and add/remove css
         private void update_theme(string theme) {
 
             // in GTK4 we can replace this with setting css_classes

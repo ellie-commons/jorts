@@ -31,6 +31,17 @@ namespace jorts {
         public override void startup () {
             base.startup ();
 
+            // Ok first check if we have a directory to store data
+            var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
+            try {
+                if (!data_directory.query_exists()) {
+                    data_directory.make_directory();
+                    print("Prepared target data directory");
+                }
+            } catch (Error e) {
+                warning ("Failed to prepare target data directory %s\n", e.message);
+            }
+        
             // This is automatic in GTK4, so can be removed after porting
             var app_provider = new Gtk.CssProvider ();
             app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
@@ -41,16 +52,16 @@ namespace jorts {
             );
 
             string[] themes = {
+                "STRAWBERRY",
+                "ORANGE",
                 "BANANA",
+                "LIME",
                 "BLUEBERRY",
                 "BUBBLEGUM",
-                "COCOA",
                 "GRAPE",
-                "LIME",
-                "ORANGE",
+                "COCOA",
                 "SILVER",
-                "SLATE",
-                "STRAWBERRY"
+                "SLATE"
             };
 
             foreach (unowned var theme in themes) {

@@ -91,6 +91,10 @@ flatpak-builder --force-clean --user --install-deps-from=appcenter --install bui
 
 ## 💾 Notes Storage
 
-Notes are stored in `~/.var/app/io.github.ellie_commons.jorts/`
+Notes are stored in `~/.var/app/io.github.ellie_commons.jorts/data`
 
-locate the saved_state.json
+You can get it all by
+
+```bash
+cp ~/.var/app/io.github.ellie_commons.jorts/data .
+```

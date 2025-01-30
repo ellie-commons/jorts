@@ -49,13 +49,29 @@ The app will sort itself out with size, colour, label, whatever
 
 It can count on support functions:
 
-load_from_stash(uid)
---> You get a title, theme, content, x, y, height, width
+
+Object Note:
+-int uid
+-string Title
+-string Theme
+-string Content
+-int Zoom
+-double int (Width, height)
+
+
+count_saved_stash(Note)
+--> return a number
+----> counts the number of files in the data dir (theyre all saved_state_id.json)
+
+
+
+load_from_stash(Note
+--> return a Note object
 Check at init if uid is 0. If it is, try loading. If it doesnt, itll be blueberry and save to stast
 
 
-save_to_stash(uid, title, theme, content, x, y, height, width)
---> Dump all it has in a saved_sticky_uid.json
+save_to_stash(Note)
+--> Dump all it has in a saved_state_uid.json
 
 
 nuke_from_stash(uid)
@@ -69,76 +85,84 @@ nuke_from_stash(uid)
 namespace jorts {
 
 
-	/* Takes an uid, delete its storage*/
-        public void nuke_from_stash(int uid) {
-        	string data_path =  "saved_sticky_" + uid + ".json";
-            	debug ("%s".printf(data_path));
+public int count_notes() {
+	string user_data_dir = Environment.get_user_data_dir ();
+	var data_directory  = File.new_for_path(user_data_dir);	
 
-			var file = File.new_for_path (data_path);
-            	try {
-                	if (file.query_exists ()) {
-                    		file.delete 
-			}
-            	} catch (Error e) {
-                	warning ("Cannot delete UID " + uid + "!\n", e.message);
-            	}
-        }
+	try {
+		if (!data_directory.query_exists()) {
+			data_directory.make_directory();
+			print("Had to prepare target data directory");
+		}
+	} catch (Error e) {
+		warning ("Failed to prepare target data directory %s\n", e.message);
+	}
 
-
+	return 4;
 
 
-        public void save_to_stash(int uid, string title, string theme, string content, int x, int y, int height, int width) {
-		
-		/* First all infos are grouped in a json */
+}
+
+
+
+//  /*  	
+//  		/* Takes an uid, delete its storage*/
+//          public void nuke_from_stash(int uid) {
+//          	string data_path =  "saved_sticky_" + uid + ".json";
+//              	debug ("%s".printf(data_path));
+
+//  			var file = File.new_for_path (data_path);
+//              	try {
+//                  	if (file.query_exists ()) {
+//                      		file.delete 
+//  			}
+//              	} catch (Error e) {
+//                  	warning ("Cannot delete UID " + uid + "!\n", e.message);
+//              	}
+//          }
+//    */
+
+
+		/* Takes a NoteData, slams it in a json file with its uid */
+        public void save_to_stash(noteData note) {
+
+			print("Saving " + note.uid.to_string() + " to stash\n");
+
+			/* First all infos are grouped in a json */
         	Json.Builder builder = new Json.Builder ();
-            	builder.begin_array ();
-            	foreach (Storage note in notes) {
-	                builder.begin_object ();
-	                builder.set_member_name ("title");
-	                builder.add_string_value (note.title);
-	                builder.set_member_name ("theme");
-	                builder.add_string_value (note.theme);
-	                builder.set_member_name ("content");
-	                builder.add_string_value (note.content);
-	                builder.set_member_name ("x");
-	                builder.add_int_value (note.x);
-	                builder.set_member_name ("y");
-	                builder.add_int_value (note.y);
-	                builder.set_member_name ("w");
-	                builder.add_int_value (note.w);
-	                builder.set_member_name ("h");
-	                builder.add_int_value (note.h);
-	                builder.end_object ();
-            	};
-            	builder.end_array ();
 
-            	Json.Generator generator = new Json.Generator ();
-           		Json.Node root = builder.get_root ();
-            	generator.set_root (root);
-            	string json_string = generator.to_data (null);
+				// Lets fkin gooo
+	            builder.begin_object ();
+	            builder.set_member_name ("title");
+	            builder.add_string_value (note.title);
+	            builder.set_member_name ("theme");
+	            builder.add_string_value (note.theme);
+	            builder.set_member_name ("content");
+	            builder.add_string_value (note.content);
+				builder.set_member_name ("zoom");
+	            builder.add_int_value (note.zoom);
+	            builder.set_member_name ("width");
+	            builder.add_int_value (note.width);
+	            builder.set_member_name ("height");
+	            builder.add_int_value (note.height);
+	            builder.end_object ();
 
-		
-		/* Then we handle slamming it all where it do be do */
-        	
-	        
-		string data_path = Environment.get_user_data_dir () + "saved_sticky_" + uid + ".json";
-            	debug ("%s".printf(data_path));
+            Json.Generator generator = new Json.Generator ();
+           	Json.Node root = builder.get_root ();
+            generator.set_root (root);
+            string json_string = generator.to_data (null);
 
-		var dir = File.new_for_path(Environment.get_user_data_dir ());
-	        var file = File.new_for_path (data_path);
+	
+			/* Then we handle slamming it all where it do be do */
+			string file_path = Environment.get_user_data_dir () + "/saved_state_" + note.uid.to_string() + ".json";
+            var fileObject = File.new_for_path (file_path);
 
-
-
+			/* remove previous saved state if there is one already */
             try {
-                if (!dir.query_exists()) {
-                    dir.make_directory();
+                if (fileObject.query_exists ()) {
+                    fileObject.delete ();
                 }
-
-                if (file.query_exists ()) {
-                    file.delete ();
-                }
-
-                var file_stream = file.create (FileCreateFlags.REPLACE_DESTINATION);
+                var file_stream = fileObject.create (FileCreateFlags.REPLACE_DESTINATION);
                 var data_stream = new DataOutputStream (file_stream);
                 data_stream.put_string(json_string);
             } catch (Error e) {

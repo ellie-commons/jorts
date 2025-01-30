@@ -30,6 +30,8 @@ namespace jorts.Themer {
                 background-color: @%s_100;
             }
 
+
+
             window.%s undershoot.top {
                 background:
                     linear-gradient(
@@ -46,27 +48,30 @@ namespace jorts.Themer {
                     );
             }
 
-            window.%s .jorts-view text selection {
+            window.%s .sourceview text selection {
                 color: shade(@%s_100, 1.88);
                 background-color: @%s_900;
             }
 
-            window.%s .jorts-title image,
-            window.%s .jorts-label {
+            window.%s .titlebar image,
+            window.%s .editablelabel {
                 color: @%s_900;
             }
 
-            window.%s .jorts-bar {
+            window.%s:backdrop .editablelabel,
+            window.%s:backdrop .actionbar,
+            window.%s:backdrop .actionbar image {
+                color: @%s_500;
+            }
+
+            window.%s .actionbar,
+            window.%s .actionbar image {
                 color: @%s_900;
             }
 
-            window.%s .jorts-bar image {
-                color: @%s_900;
-            }
-
-            window.%s .jorts-view,
-            window.%s .jorts-view text,
-            window.%s .jorts-title {
+            window.%s .sourceview,
+            window.%s .sourceview text,
+            window.%s .titlebar {
                 background-color: @%s_100;
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
