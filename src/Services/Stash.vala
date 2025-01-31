@@ -42,7 +42,7 @@ namespace jorts.Stash {
 
 	// Ok first check if we have a directory to store data
 	public void check_if_stash() {
-
+        print("Checking if data directory present");
 		var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
 
 		try {
@@ -59,12 +59,27 @@ namespace jorts.Stash {
 
 
 	// lol just count how many files in the data dir
-/*  	public int count_saved_notes() {
+  	public int count_saved_notes() {
 		string user_data_dir = Environment.get_user_data_dir ();
-		var data_directory  = File.new_for_path(user_data_dir);	
+        int filecount = 0;
 
-		return 4;
-	}  */
+        check_if_stash();
+        try {
+            var dir = Dir.open (user_data_dir);
+            unowned string? file_name;
+
+            while ((file_name = dir.read_name ()) != null) {
+                print (file_name);
+                filecount = filecount + 1;
+            }
+
+        } catch (Error e) {
+            warning ("Failed to read data dir %s\n", e.message);
+        }
+
+
+		return filecount;
+	}  
 
 
 
@@ -114,26 +129,55 @@ namespace jorts.Stash {
 
     }
 
-/*  
+ 
 	// read and spit back
-	public noteData load_from_stash() {
-		string user_data_dir = Environment.get_user_data_dir ();
-		var data_directory  = File.new_for_path(user_data_dir);	
+  	public noteData load_from_stash(int uid) {
 
-		try {
-			if (!data_directory.query_exists()) {
-				data_directory.make_directory();
-				print("Had to prepare target data directory");
-			}
-		} catch (Error e) {
-			warning ("Failed to prepare target data directory %s\n", e.message);
-		}
+		var data = new noteData(uid,"","","",100,0,0);
+		var file_name = Environment.get_user_data_dir () + "/saved_state_" + uid.to_string() + ".json" ;
 
-		return data;
+        var file = File.new_for_path(file_name);
+        var json_string = "";
+
+
+        /*  	
+            try {
+
+                if (file.query_exists()) {
+                    string line;
+                    var dis = new DataInputStream (file.read ());
+
+                    while ((line = dis.read_line (null)) != null) {
+                        json_string += line;
+                    }
+
+                    var parser = new Json.Parser();
+                    parser.load_from_data(json_string);
+
+                    var root = parser.get_root();
+
+                    string data.title = root.get_string_member("title");
+                    string data.theme = root.get_string_member("theme");
+                    string data.content = root.get_string_member("content");
+					int data.zoom = root.get_int_member("zoom");
+                    int64 data.width = root.get_int_member("width");
+                    int64 data.height = root.get_int_member("height");
+
+
+                }
+
+            } catch (Error e) {
+                warning ("Failed to load file: %s\n", e.message);
+            }
+
+            return data;
+        }  */
+
+
+
+        return data;
+
 	}
-  */
-
-
   	
 	// Takes an uid, just delete relevant json file
     public void nuke_from_stash(int uid) {

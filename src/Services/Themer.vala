@@ -27,8 +27,7 @@ Then notes are themed by removing CSS theme classes and then slapping a new one
 
 namespace jorts.Themer {
 
-    /* Get a name, spit a whole CSS */
-    /* We kinda need better tbh but it is better than before */
+    // Here we go
     public static string generate_css (string theme) {
         string style = "";
 
@@ -53,31 +52,36 @@ namespace jorts.Themer {
                     );
             }
 
-            window.%s .sourceview text selection,
-            window.%s .entry text selection {
+            window.%s .sourceview text selection {
                 color: shade(@%s_100, 1.88);
                 background-color: @%s_900;
             }
 
+            window.%s .titlebar,
             window.%s .titlebar image,
-            window.%s .editablelabel *,
+            window.%s .headertitle,
             window.%s .actionbar,
             window.%s .actionbar image {
                 color: @%s_900;
             }
 
+            window.%s .titlebar,
             window.%s .sourceview,
-            window.%s .sourceview text,
-            window.%s .titlebar {
+            window.%s .sourceview text {
                 background-color: @%s_100;
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
             }
 
+            window.%s .editablelabel {
+                color: @%s_900;
+            }
+
             window.%s:backdrop .sourceview text,
-            window.%s:backdrop .editablelabel *
-            window.%s:backdrop .titlebar *,
-            window.%s:backdrop .actionbar *,
+            window.%s:backdrop .headertitle,
+            window.%s:backdrop .titlebar,
+            window.%s:backdrop .editablelabel,
+            window.%s:backdrop .actionbar,
             window.%s:backdrop .actionbar image {
                 color: shade(@%s_500, 0.77);
             }

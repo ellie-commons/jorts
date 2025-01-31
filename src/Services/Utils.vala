@@ -20,6 +20,24 @@
 
 namespace jorts.Utils {
 
+
+    // Spits out a random theme for a new note
+    const string[] themearray = {
+            "BLUEBERRY",
+            "MINT",
+            "LIME",
+            "BANANA",
+            "ORANGE",
+            "STRAWBERRY",
+            "BUBBLEGUM",
+            "GRAPE",
+            "COCOA",
+            "SLATE",
+            "SILVER"
+        };
+
+
+
     // Spits out a cute or funny random title for a new sticky note
     public string random_title () {
         string[] alltitles = {
@@ -50,25 +68,11 @@ namespace jorts.Utils {
             _("Words my parrots know"),
             _("Cool and funny compliments to give out"),
             _("Ok, listen here,"),
-            _("My dream Pokemon team")};
+            _("My dream Pokemon team"),
+            _("My little notes")};
 
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
 
-    // Spits out a random theme for a new note
-    public string[] themearray () {
-        string[] allthemes = {
-            "STRAWBERRY",
-            "ORANGE",
-            "BANANA",
-            "LIME",
-            "BLUEBERRY",
-            "BUBBLEGUM",
-            "GRAPE",
-            "COCOA",
-            "SILVER",
-            "SLATE"};
-        return allthemes;
-    }
 
 }

@@ -105,6 +105,8 @@ namespace jorts {
                         var node = item.get_object();
                         string title = node.get_string_member("title");
                         string theme = node.get_string_member("theme");
+
+                        print("LOADED:" + theme + "\n");
                         string content = node.get_string_member("content");
                         int64 x = node.get_int_member("x");
                         int64 y = node.get_int_member("y");

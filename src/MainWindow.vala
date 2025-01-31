@@ -34,9 +34,9 @@ namespace jorts {
         private int uid;
         private static int uid_counter = 0;
 
-        public string title_name = _("My little notes");
-        public string theme = "BLUEBERRY";
-        public string content = _("All my little thoughts!");
+        public string title_name;
+        public string theme = "BUBBLEGUM";
+        public string content;
 
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.)EditableLabel label = new Gtk.EditableLabel();
@@ -62,6 +62,7 @@ namespace jorts {
         // Init or something
         public MainWindow (Gtk.Application app, Storage? storage) {
             Object (application: app);
+            Intl.setlocale ();
 
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
@@ -81,8 +82,7 @@ namespace jorts {
                 // First sticky is always blue - signature look!
                 // After that, it is random
                 //if (uid_counter == 0) {
-                    var allthemes = jorts.Utils.themearray();
-                    this.theme = allthemes[Random.int_range (0,(allthemes.length - 1))];
+                    this.theme = jorts.Utils.themearray[Random.int_range (0,(jorts.Utils.themearray.length - 1))];
                 //} else {
                 //    this.theme = "BLUEBERRY";
                 //}
@@ -104,7 +104,7 @@ namespace jorts {
             // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            //header.get_style_context().add_class("jorts-title");
+            header.get_style_context().add_class("headertitle");
             header.has_subtitle = false;
             header.set_show_close_button (true);
             header.decoration_layout = "close:";
@@ -286,6 +286,20 @@ namespace jorts {
             color_button_lime_context.add_class ("color-button");
             color_button_lime_context.add_class ("lime");
 
+
+            var color_button_mint = new Gtk.Button ();
+            color_button_mint.has_focus = false;
+            color_button_mint.halign = Gtk.Align.CENTER;
+            color_button_mint.height_request = 24;
+            color_button_mint.width_request = 24;
+            color_button_mint.tooltip_text = _("Mint");
+
+            var color_button_mint_context = color_button_mint.get_style_context ();
+            color_button_mint_context.add_class ("color-button");
+            color_button_mint_context.add_class ("mint");
+
+
+
             var color_button_blueberry = new Gtk.Button ();
             color_button_blueberry.has_focus = false;
             color_button_blueberry.halign = Gtk.Align.CENTER;
@@ -358,16 +372,22 @@ namespace jorts {
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             // GTK4: append
             // THE HECK IS THESE
-            color_button_box.pack_start (color_button_strawberry, false, true, 0);
-            color_button_box.pack_start (color_button_orange, false, true, 0);
-            color_button_box.pack_start (color_button_banana, false, true, 0);
-            color_button_box.pack_start (color_button_lime, false, true, 0);
+
             color_button_box.pack_start (color_button_blueberry, false, true, 0);
+            color_button_box.pack_start (color_button_mint, false, true, 0);
+            color_button_box.pack_start (color_button_lime, false, true, 0);
+            color_button_box.pack_start (color_button_banana, false, true, 0);
+            color_button_box.pack_start (color_button_orange, false, true, 0);
+            color_button_box.pack_start (color_button_strawberry, false, true, 0);
             color_button_box.pack_start (color_button_bubblegum, false, true, 0);
             color_button_box.pack_start (color_button_grape, false, true, 0);
             color_button_box.pack_start (color_button_cocoa, false, true, 0);
-            color_button_box.pack_start (color_button_silver, false, true, 0);
             color_button_box.pack_start (color_button_slate, false, true, 0);
+
+
+            color_button_box.pack_start (color_button_silver, false, true, 0);
+
+
 
             var color_button_label = new Granite.HeaderLabel (_("Note Color"));
 
@@ -399,6 +419,11 @@ namespace jorts {
 
             color_button_orange.clicked.connect (() => {
                 update_theme("ORANGE");
+                ((Application)this.application).update_storage();
+            });
+
+            color_button_mint.clicked.connect (() => {
+                update_theme("MINT");
                 ((Application)this.application).update_storage();
             });
 
@@ -524,11 +549,31 @@ namespace jorts {
         // Replace stylesheet
         private void update_theme(string theme) {
 
-            // in GTK4 we can replace this with setting css_classes
-            string old_theme = this.theme;
-            this.theme = theme;
+/*             // in GTK4 we can replace this with setting css_classes
+           string[] themes = {
+            "BANANA",
+            "BLUEBERRY",
+            "MINT",
+            "BUBBLEGUM",
+            "COCOA",
+            "GRAPE",
+            "LIME",
+            "ORANGE",
+            "SILVER",
+            "SLATE",
+            "STRAWBERRY"
+        };
+
+        foreach (unowned var old_theme in themes) {
             get_style_context().remove_class (old_theme);
-            get_style_context().add_class (theme);
+        }  */
+
+            // in GTK4 we can replace this with setting css_classes
+            get_style_context().remove_class (this.theme);
+            this.theme = theme;
+            get_style_context().add_class (this.theme);
+            print(theme + "\n");
+
         }
     }
 

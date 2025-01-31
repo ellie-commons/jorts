@@ -42,12 +42,14 @@ namespace jorts {
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
 
-            string[] themes = jorts.Utils.themearray ();
+            string[] themes = jorts.Utils.themearray;
 
             foreach (unowned var theme in themes) {
               // Palette color
                 var theme_provider = new Gtk.CssProvider ();
                 var style = jorts.Themer.generate_css (theme);
+
+                print ("Generated: " + theme + "\n");
 
                 try {
                     theme_provider.load_from_data (style, -1);

@@ -56,7 +56,7 @@ cc = meson.get_compiler('c')
 executable(
     meson.project_name(),
     gresource,
-    'src/noteData.vala',    
+    'src/Objects/noteData.vala',    
     'src/Services/Stash.vala',
     'src/Services/NoteManager.vala',
     'src/Services/Storage.vala',
