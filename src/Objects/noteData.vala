@@ -26,11 +26,11 @@ namespace jorts {
         public string title;
         public string theme;
         public string content;
-        public int zoom;
+        public int64 zoom;
         public int64 width;
         public int64 height;
 
-        public noteData(int uid, string title, string theme, string content, int zoom, int64 width, int64 height )
+        public noteData(int uid, string title, string theme, string content, int64 zoom, int64 width, int64 height )
         {
             this.uid = uid;
             this.title = title;
@@ -39,6 +39,10 @@ namespace jorts {
             this.zoom = zoom;
             this.width = width;
             this.height = height;
+
+            print(uid.to_string() + "\n");
+            print(title + "\n");
+            print(content + "\n");
         }
     }
 }

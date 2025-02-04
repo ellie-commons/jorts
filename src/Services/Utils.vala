@@ -31,11 +31,13 @@ namespace jorts.Utils {
             "STRAWBERRY",
             "BUBBLEGUM",
             "GRAPE",
+            "LATTE",
             "COCOA",
-            "SLATE",
-            "SILVER"
+            "SLATE"
         };
-
+        //"SILVER",
+        //"System",
+        //"accent_color"
 
 
     // Spits out a cute or funny random title for a new sticky note
@@ -69,7 +71,12 @@ namespace jorts.Utils {
             _("Cool and funny compliments to give out"),
             _("Ok, listen here,"),
             _("My dream Pokemon team"),
-            _("My little notes")};
+            _("My little notes"),
+            _("My little notes"),
+            _("Surprise gift list"),
+            _("Brainstorming notes"),
+            _("To bring to the party")
+        };
 
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }

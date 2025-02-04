@@ -1,7 +1,4 @@
-src/Application.vala
 src/MainWindow.vala
-src/Services/NoteManager.vala
-src/Services/Storage.vala
-src/Widgets/ColorButton.vala
-src/Widgets/EditableLabel.vala
 src/Services/Utils.vala
+data/io.github.ellie_commons.jorts.desktop.in
+data/io.github.ellie_commons.jorts.metainfo.xml.in

@@ -18,13 +18,17 @@
 * Boston, MA 02110-1301 USA
 */
 
-/*
-There is only the generate_css() command, but it is a beefy one
-At startup it is used several times to generate each theme.
-Then notes are themed by removing CSS theme classes and then slapping a new one
-*/
-
 @define-color textColorPrimary #323232;
+
+
+/* The variant exists in granite, but not built */
+@define-color LATTE_100 #efdfc4;
+@define-color LATTE_300 #e7c591;
+@define-color LATTE_500 #cfa25e;
+@define-color LATTE_700 #b6802e;
+@define-color LATTE_900 #804b00;
+
+
 
 window {
     transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -152,11 +156,17 @@ entry.flat {
 .color-button.grape {background-color: @GRAPE_300;}
 .color-button.grape:hover {border: 1px solid @GRAPE_900;}
 
+.color-button.latte {background-color: @LATTE_300;}
+.color-button.latte:hover {border: 1px solid @LATTE_900;}
+
 .color-button.cocoa {background-color: @COCOA_300;}
-.color-button.cocoa {border: 1px solid @COCOA_900;}
+.color-button.cocoa:hover {border: 1px solid @COCOA_900;}
 
 .color-button.slate {background-color: @SLATE_300;}
 .color-button.slate:hover {border: 1px solid @SLATE_900;}
 
 .color-button.silver {background-color: @SILVER_300;}
 .color-button.silver:hover {border: 1px solid @SILVER_900;}
+
+.color-button.auto {background-color: @accent_color_300;}
+.color-button.auto:hover {border: 1px solid @accent_color_900;}

@@ -8,9 +8,9 @@
     <description>
         <p>A colourful little sticky notes utility, for your thoughts</p>
         <ul>
-            <li>🎨 Ten good looking themes with soft transitions</li>
-            <li>💻 Striving to keep it cute, pretty, simple, modern, light</li>
-            <li>⌨️ Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)</li>
+            <li>Ten good looking themes with soft transitions</li>
+            <li>Striving to keep it cute, pretty, simple, modern, light</li>
+            <li>Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)</li>
         </ul>
     </description>
     <provides>
@@ -33,18 +33,20 @@
       <control>touch</control>
     </recommends>
     <releases>
-        <release version="2.0.0" date="2025-01-01">
+        <release version="2.0.0" date="2025-02-01">
             <description>
                 <p>Release: Slate And Bubblegum</p>
                 <ul>
                     <li>Old Notejot version and UI revived in a new project</li>
-                    <li>The app is now named Jorts. It is not a jean, it is not a short</li>
+                    <li>The app is now named Jorts. You however cannot wear it</li>
                     <li>It builds for flatpak now</li>
                     <li>Closer to current elementary OS Stylesheet and named colours</li>
-                    <li>Removal of pinned due to the way wayland works</li>
+                    <li>Also more colors, including Latte and Hatsune Miku</li>
+                    <li>Better adapted to the way Wayland works</li>
                     <li>Smooth transition when changing theme</li>
                     <li>New stickies have random colour</li>
                     <li>New stickies have a random fun little title</li>
+                    <li>Some initial translations :3</li>
                 </ul>
             </description>
         </release>
@@ -284,7 +286,7 @@
         </release>
         <release version="1.2.3" date="2017-10-01">
             <description>
-                <p>Release: Olá, Brasil!</p>
+                <p>Release: Ola, Brasil!</p>
                 <ul>
                     <li>Brazilian Portuguese translation</li>
                 </ul>

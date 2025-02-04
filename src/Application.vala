@@ -31,7 +31,7 @@ namespace jorts {
         public override void startup () {
             base.startup ();
 
-            Stash.check_if_stash();
+            //Stash.check_if_stash();
         
             // This is automatic in GTK4, so can be removed after porting
             var app_provider = new Gtk.CssProvider ();
@@ -42,14 +42,13 @@ namespace jorts {
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
 
-            string[] themes = jorts.Utils.themearray;
 
-            foreach (unowned var theme in themes) {
+            foreach (unowned var theme in jorts.Utils.themearray) {
               // Palette color
                 var theme_provider = new Gtk.CssProvider ();
                 var style = jorts.Themer.generate_css (theme);
 
-                print ("Generated: " + theme + "\n");
+                //print ("Generated: " + theme + "\n");
 
                 try {
                     theme_provider.load_from_data (style, -1);
@@ -63,6 +62,10 @@ namespace jorts {
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
             }
+
+            jorts.Stash.count_saved_notes();
+
+
         }
 
         static construct {
@@ -76,7 +79,8 @@ namespace jorts {
             quit_action.activate.connect (() => {
     	        foreach (MainWindow windows in open_notes) {
                     debug ("Quitting all notes…\n");
-    	            update_storage();
+    	            //update_storage();
+                    //jorts.Stash.save_to_stash (noteData note)
     	            windows.close();
     	        }
             });
@@ -92,6 +96,7 @@ namespace jorts {
             delete_action.activate.connect (() => {
                 MainWindow note = (MainWindow)get_active_window ();
                 remove_note(note);
+                jorts.Stash.nuke_from_stash (note.uid);
                 note.destroy();
             });
         }
@@ -121,24 +126,24 @@ namespace jorts {
             debug ("Creating a note…\n");
 	    var note = new MainWindow(this, storage);
             open_notes.add(note);
-            update_storage();
+            //update_storage();
 	}
 
         public void remove_note(MainWindow note) {
             debug ("Removing a note…\n");
             open_notes.remove (note);
-            update_storage();
+            //update_storage();
 	}
 
-	public void update_storage() {
-            debug ("Updating the storage…\n");
-	    Gee.ArrayList<Storage> storage = new Gee.ArrayList<Storage>();
+	//  public void update_storage() {
+    //          debug ("Updating the storage…\n");
+	//      Gee.ArrayList<Storage> storage = new Gee.ArrayList<Storage>();
 
-	    foreach (MainWindow w in open_notes) {
-                storage.add(w.get_storage_note());
-		note_manager.save_notes(storage);
-            }
-	}
+	//      foreach (MainWindow w in open_notes) {
+    //              storage.add(w.get_storage_note());
+	//  	note_manager.save_notes(storage);
+    //          }
+	//  }
 
         protected override int command_line (ApplicationCommandLine command_line) {
             var context = new OptionContext ("File");

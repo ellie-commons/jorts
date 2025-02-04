@@ -42,7 +42,7 @@ namespace jorts.Stash {
 
 	// Ok first check if we have a directory to store data
 	public void check_if_stash() {
-        print("Checking if data directory present");
+        print("Checking if data directory present\n");
 		var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
 
 		try {
@@ -77,7 +77,7 @@ namespace jorts.Stash {
             warning ("Failed to read data dir %s\n", e.message);
         }
 
-
+        print ("There are " + filecount.to_string() + " Rs in Strawberry") ;
 		return filecount;
 	}  
 
@@ -129,21 +129,28 @@ namespace jorts.Stash {
 
     }
 
+
+    public bool is_in_stash(int uid) {
+		var file_name = Environment.get_user_data_dir () + "/saved_state_" + uid.to_string() + ".json" ;
+        var file = File.new_for_path(file_name);
+
+        return file.query_exists();
+    }
+
  
 	// read and spit back
   	public noteData load_from_stash(int uid) {
+        print("Loading UID" + uid.to_string());
 
-		var data = new noteData(uid,"","","",100,0,0);
+        noteData data = new noteData(uid, "","BLUEBERRY","",100,330,270);
 		var file_name = Environment.get_user_data_dir () + "/saved_state_" + uid.to_string() + ".json" ;
-
         var file = File.new_for_path(file_name);
         var json_string = "";
 
-
-        /*  	
             try {
-
                 if (file.query_exists()) {
+
+                    print("Ok, " + file_name + " exists");
                     string line;
                     var dis = new DataInputStream (file.read ());
 
@@ -153,31 +160,35 @@ namespace jorts.Stash {
 
                     var parser = new Json.Parser();
                     parser.load_from_data(json_string);
+                    var node = parser.get_root().get_object();
 
-                    var root = parser.get_root();
+                    string title = node.get_string_member("title");
+                    string theme = node.get_string_member("theme");
+                    string content = node.get_string_member("content");
+				    int64 zoom = node.get_int_member("zoom");
+                    int64 width = node.get_int_member("width");
+                    int64 height = node.get_int_member("height");
 
-                    string data.title = root.get_string_member("title");
-                    string data.theme = root.get_string_member("theme");
-                    string data.content = root.get_string_member("content");
-					int data.zoom = root.get_int_member("zoom");
-                    int64 data.width = root.get_int_member("width");
-                    int64 data.height = root.get_int_member("height");
-
-
+                    // somehow cant do it directly
+                    data.title = title;
+                    data.theme = theme;
+                    data.content = content;
+                    data.zoom = zoom;
+                    data.width = width;
+                    data.height = height;
+                } else {
+                    print(file_name + " does not exist");
                 }
-
             } catch (Error e) {
                 warning ("Failed to load file: %s\n", e.message);
             }
-
-            return data;
-        }  */
-
-
-
         return data;
+    }
 
-	}
+
+
+
+
   	
 	// Takes an uid, just delete relevant json file
     public void nuke_from_stash(int uid) {

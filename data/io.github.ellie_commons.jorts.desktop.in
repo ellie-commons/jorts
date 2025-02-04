@@ -12,4 +12,7 @@ Actions=NewNote;
 
 [Desktop Action NewNote]
 Exec=io.github.ellie_commons.jorts --new-note
-Name=New note…
+Name=New sticky note
+
+
+
