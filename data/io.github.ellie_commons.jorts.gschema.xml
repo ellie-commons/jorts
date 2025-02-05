@@ -1,14 +1,9 @@
 <schemalist>
 	<schema id="io.github.ellie_commons.jorts" path="/io/github/ellie_commons/jorts/">
-		<key name="window-x" type="i">
-			<default>-1</default>
-			<summary>Window position</summary>
-			<description>The x axis of window position</description>
-		</key>
-		<key name="window-y" type="i">
-			<default>-1</default>
-			<summary>Window position</summary>
-			<description>The y axis of window position</description>
+		<key name="zoom" type="i">
+			<default>100</default>
+			<summary>Default zoom</summary>
+			<description>Default text zoom for new notes</description>
 		</key>
 	</schema>
 </schemalist>
