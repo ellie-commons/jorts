@@ -3,17 +3,20 @@ project('io.github.ellie_commons.jorts', ['vala', 'c'],
     version: '2.0.0'
 )
 
+gnome = import('gnome')
+gnome.post_install(glib_compile_schemas: true)
+
+
 
 #================================
 # Import the stylesheet
-gnome = import('gnome')
 
+# Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
     'data' / 'io.github.ellie_commons.jorts.gresource.xml',
     source_dir: 'data'
 )
-
 
 #================================
 # Include the translations module
@@ -21,10 +24,6 @@ i18n = import('i18n')
 
 # Set our translation domain
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
-
-
-
-
 
 
 # Set this for convenience
@@ -88,28 +87,7 @@ executable(
 
 
 #================================
-# Add in a post install script
-meson.add_install_script(meson.source_root() + '/meson/post_install.py')
-
-#Translate and install our .desktop file
-i18n.merge_file(
-    input: 'data' / 'io.github.ellie_commons.jorts.desktop.in',
-    output: meson.project_name() + '.desktop',
-    po_dir: meson.project_source_root() / 'po',
-    type: 'desktop',
-    install: true,
-    install_dir: get_option('datadir') / 'applications'
-)
-
-#Translate and install our .appdata file
-i18n.merge_file(
-    input: 'data' / 'io.github.ellie_commons.jorts.metainfo.xml.in',
-    output: meson.project_name() + '.metainfo.xml',
-    po_dir: meson.project_source_root() / 'po',
-    install: true,
-    install_dir: get_option('datadir') / 'metainfo'
-)
-
+# 
 
 
 
