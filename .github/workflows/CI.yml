@@ -24,12 +24,12 @@ jobs:
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
         # This is the name of the Bundle file we're building and can be anything you like
-        bundle: Jorts.flatpak
+        bundle: jorts.flatpak
         # This uses your app's RDNN ID
         manifest-path: io.github.ellie_commons.jorts.yaml
 
         # You can automatically run any of the tests you've created as part of this workflow
-        run-tests: false
+        run-tests: true
 
         # These lines specify the location of the elementary Runtime and Sdk
         repository-name: appcenter
