@@ -25,10 +25,12 @@ public class jorts.ColorPill : Gtk.Button {
         public int height_request = 24;
         public int width_request = 24;
 
+        public string tooltip_text;
 
-        public ColorPill () {
-                Object();
+        public ColorPill (string tooltip, string colorclass) {
+                this.tooltip_text = tooltip;
+                this.get_style_context().add_class("color-button");
+                this.get_style_context().add_class(colorclass);
         }
-
 
 }

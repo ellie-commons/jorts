@@ -66,6 +66,7 @@ executable(
     'src/Services/Storage.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
+    'src/Widgets/ColorPill.vala',
     'src/Widgets/EditableLabel.vala',
     'src/Application.vala',
     'src/MainWindow.vala',

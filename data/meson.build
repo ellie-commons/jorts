@@ -1,5 +1,5 @@
 
-
+#======== Internationalization ========
 #Translate and install our .desktop file
 i18n.merge_file(
     input: 'io.github.ellie_commons.jorts.desktop.in',
@@ -19,6 +19,9 @@ i18n.merge_file(
     install_dir: get_option('datadir') / 'metainfo'
 )
 
+
+#======== ICONS ========
+
 # Install our icons in all the required sizes
 icon_sizes = ['16', '24', '32', '48', '64', '128']
 
@@ -36,6 +39,7 @@ foreach i : icon_sizes
 endforeach
 
 
+#======== SETTINGS ========
 install_data (
     'io.github.ellie_commons.jorts.gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
