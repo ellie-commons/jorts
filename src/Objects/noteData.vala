@@ -22,7 +22,6 @@
 namespace jorts {
 
     public class noteData : Object {
-        public int uid;
         public string title;
         public string theme;
         public string content;
@@ -30,9 +29,8 @@ namespace jorts {
         public int64 width;
         public int64 height;
 
-        public noteData(int uid, string title, string theme, string content, int64 zoom, int64 width, int64 height )
+        public noteData(string? title, string theme, string? content, int64 zoom, int64 width, int64 height )
         {
-            this.uid = uid;
             this.title = title;
             this.theme = theme;
             this.content = content;
@@ -40,9 +38,6 @@ namespace jorts {
             this.width = width;
             this.height = height;
 
-            print(uid.to_string() + "\n");
-            print(title + "\n");
-            print(content + "\n");
         }
     }
 }

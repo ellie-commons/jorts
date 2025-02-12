@@ -19,7 +19,6 @@
 namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
-        private NoteManager note_manager = new NoteManager();
         private static bool create_new_window = false;
         public static GLib.Settings gsettings;
 
@@ -31,8 +30,6 @@ namespace jorts {
         public override void startup () {
             base.startup ();
 
-            //Stash.check_if_stash();
-        
             // This is automatic in GTK4, so can be removed after porting
             var app_provider = new Gtk.CssProvider ();
             app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
@@ -42,29 +39,7 @@ namespace jorts {
                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
             );
 
-
-            foreach (unowned var theme in jorts.Utils.themearray) {
-              // Palette color
-                var theme_provider = new Gtk.CssProvider ();
-                var style = jorts.Themer.generate_css (theme);
-
-                //print ("Generated: " + theme + "\n");
-
-                try {
-                    theme_provider.load_from_data (style, -1);
-                } catch (GLib.Error e) {
-                    warning ("Failed to parse css style : %s", e.message);
-                }
-
-                Gtk.StyleContext.add_provider_for_screen (
-                    Gdk.Screen.get_default (),
-                    theme_provider,
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                );
-            }
-
-            jorts.Stash.count_saved_notes();
-
+            jorts.Themer.init_all_themes();
 
         }
 
@@ -79,8 +54,6 @@ namespace jorts {
             quit_action.activate.connect (() => {
     	        foreach (MainWindow windows in open_notes) {
                     debug ("Quitting all notes…\n");
-    	            //update_storage();
-                    //jorts.Stash.save_to_stash (noteData note)
     	            windows.close();
     	        }
             });
@@ -96,11 +69,12 @@ namespace jorts {
             delete_action.activate.connect (() => {
                 MainWindow note = (MainWindow)get_active_window ();
                 remove_note(note);
-                jorts.Stash.nuke_from_stash (note.uid);
+
                 note.destroy();
             });
         }
 
+        // Either show all windows, or rebuild from storage
         protected override void activate () {
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
@@ -109,41 +83,52 @@ namespace jorts {
                     }
                 }
             } else {
-                var list = note_manager.load_from_file();
 
-                if (list.size == 0) {
-                    create_note(null);
-                } else {
-                    foreach (Storage storage in list) {
-                        create_note(storage);
-                    }
+                Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
+
+                if (loaded_data.size == 0 ) {
+                    noteData stored_note    = jorts.Utils.random_note();
+                    stored_note.theme       = "BLUEBERRY" ;
+                    loaded_data.add(stored_note);
                 }
+
+                foreach (noteData data in loaded_data) {
+                    print("Loaded: " + data.title + "\n");
+                    this.create_note(data);
+                }
+                
+
             }
                     
 	}
 
-	public void create_note(Storage? storage) {
-            debug ("Creating a note…\n");
-	    var note = new MainWindow(this, storage);
-            open_notes.add(note);
-            //update_storage();
+
+    // create new instances of MainWindow
+	public void create_note(noteData? data) {
+        MainWindow note;
+        if (data != null) {
+            note = new MainWindow(this, data);
+        }
+        else {
+            var random_data = jorts.Utils.random_note();
+            note = new MainWindow(this, random_data);
+        }
+        this.open_notes.add(note);
 	}
 
-        public void remove_note(MainWindow note) {
+    // Simply remove from the list of things to save, and close
+    public void remove_note(MainWindow note) {
             debug ("Removing a note…\n");
-            open_notes.remove (note);
-            //update_storage();
+            this.open_notes.remove (note);
 	}
 
-	//  public void update_storage() {
-    //          debug ("Updating the storage…\n");
-	//      Gee.ArrayList<Storage> storage = new Gee.ArrayList<Storage>();
+    public void save_to_stash() {
+        jorts.Stash.check_if_stash ();
+        string json_data = jorts.Stash.jsonify (open_notes);
+        jorts.Stash.overwrite_stash (json_data);
+}
 
-	//      foreach (MainWindow w in open_notes) {
-    //              storage.add(w.get_storage_note());
-	//  	note_manager.save_notes(storage);
-    //          }
-	//  }
+
 
         protected override int command_line (ApplicationCommandLine command_line) {
             var context = new OptionContext ("File");
@@ -167,7 +152,7 @@ namespace jorts {
             // Create a next window if requested and it's not the app launch
             if (create_new_window) {
                 create_new_window = false;
-                create_note (null);
+                create_note(null);
             }
             return 0;
         }

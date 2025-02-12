@@ -18,10 +18,19 @@
 *
 */
 
+/* CONTENT
+
+Global array of all the themes
+random_theme()
+random_title()
+random_note(uid)
+
+
+*/
+
 namespace jorts.Utils {
 
-
-    // Spits out a random theme for a new note
+    // As seen on TV!
     const string[] themearray = {
             "BLUEBERRY",
             "MINT",
@@ -34,11 +43,13 @@ namespace jorts.Utils {
             "LATTE",
             "COCOA",
             "SLATE"
-        };
-        //"SILVER",
-        //"System",
-        //"accent_color"
+    };
 
+    // Spits out a random theme for a new note
+    public string random_theme () {        
+        return jorts.Utils.themearray[Random.int_range (0,(jorts.Utils.themearray.length - 1))];
+
+    }
 
     // Spits out a cute or funny random title for a new sticky note
     public string random_title () {
@@ -75,10 +86,31 @@ namespace jorts.Utils {
             _("My little notes"),
             _("Surprise gift list"),
             _("Brainstorming notes"),
-            _("To bring to the party")
+            _("To bring to the party"),
+            _("My amazing mixtape"),
+            _("Napkin scribbles")
         };
-
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
+    }
+
+
+
+    // GTK4 port - no placeholder on gtk3 buffers
+    // Spits out a cute or funny random placeholder
+    public string random_placeholder () {
+        string[] placeholders = {
+            _("Note your thoughts")
+        };
+        return placeholders[Random.int_range (0,(placeholders.length - 1))];
+    }
+
+
+    // Spits out a fresh new note
+    public noteData random_note () {
+        var randtitle = jorts.Utils.random_title();
+        string randtheme = jorts.Utils.random_theme ();
+        noteData randnote = new noteData( randtitle, randtheme, "", 100, 330, 270);
+        return randnote; 
     }
 
 

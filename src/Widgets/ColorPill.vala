@@ -20,17 +20,16 @@
 
 public class jorts.ColorPill : Gtk.Button {
 
-        public bool has_focus = false;
-        public Gtk.Align halign = Gtk.Align.CENTER;
-        public int height_request = 24;
-        public int width_request = 24;
-
-        public string tooltip_text;
+        public new bool has_focus = false;
+        public new Gtk.Align halign = Gtk.Align.CENTER;
+        public new string tooltip_text;
 
         public ColorPill (string tooltip, string colorclass) {
                 this.tooltip_text = tooltip;
                 this.get_style_context().add_class("color-button");
                 this.get_style_context().add_class(colorclass);
+
+                this.set_size_request (24, 24);
         }
 
 }

@@ -93,4 +93,30 @@ namespace jorts.Themer {
 
         return style;
     }
+
+
+
+    public static void init_all_themes() {
+        foreach (unowned var theme in jorts.Utils.themearray) {
+            // Palette color
+              var theme_provider = new Gtk.CssProvider ();
+              var style = jorts.Themer.generate_css (theme);
+
+              //print ("Generated: " + theme + "\n");
+
+              try {
+                  theme_provider.load_from_data (style, -1);
+              } catch (GLib.Error e) {
+                  warning ("Failed to parse css style : %s", e.message);
+              }
+
+              Gtk.StyleContext.add_provider_for_screen (
+                  Gdk.Screen.get_default (),
+                  theme_provider,
+                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+              );
+          }
+    }
+
+
 }

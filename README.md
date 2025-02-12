@@ -27,14 +27,14 @@ Main tasks are the tasks:
 - [x] Remove the pinned feature - it cant work on wayland anymore
 - [x] Do a Yaml file so we can build it for flatpak
 - [x] Do cute transitions and color name
-- [ ] Repair the theming: Some parts are stuck on the Banana theme
-- [ ] Repair the way window positioning is stored. It isnt wayland-friendly
+- [x] Rebuild the way css theming is done
+- [x] Rebuild the way notes are managed and saved
+- [ ] Do a separate for popover
 - [ ] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
+- [ ] Do all the testing
 - [ ] Do a first appcenter release
-- [ ] Rebuild the way css theming is done
-- [ ] Rebuild the way notes are managed and saved
-- [ ] Prepare for gtk4 port
 - [ ] Port to gtk4
+- [ ] Repair the theming: Some parts are stuck on the system accent
 - [ ] Move widget definitions to blueprint files
 
 New features may sneak themselves. Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)

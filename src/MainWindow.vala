@@ -18,8 +18,23 @@
 * Boston, MA 02110-1301 USA
 */
 
-/*
+/* CONTENT
 
+MainWindow --> Each MainWindow instance is its own sticky note.
+Initialization:
+unpack notedata
+
+
+Window
+> Header
+-> EditableLabel
+
+> Grid
+->ScrolledWindow
+--> Sourceview
+
+->Actionbar
+--> new, delete, settings (settingspopover)
 
 
 */
@@ -31,11 +46,9 @@ namespace jorts {
         private Gtk.SourceView view;
         private Gtk.HeaderBar header;
         private Gtk.ActionBar actionbar;
-        public int uid;
-        private static int uid_counter = 0;
 
         public string title_name;
-        public string theme = "BLUEBERRY";
+        public string theme;
         public string content;
         public int64 zoom;
 
@@ -61,7 +74,7 @@ namespace jorts {
 
 
         // Init or something
-        public MainWindow (Gtk.Application app, Storage? storage) {
+        public MainWindow (Gtk.Application app, noteData data) {
             Object (application: app);
             Intl.setlocale ();
 
@@ -69,44 +82,14 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
 
+            // First get the thing
+            this.unpackage (data);
 
-            this.uid = uid_counter++;
-            print("CURRENT UID:" + this.uid.to_string () + "\n");
-            print("CURRENT UIDCOUNTER:" + this.uid_counter.to_string () + "\n");
-            //print("next one?");
-
-            // If storage is not empty, load from it
-            // Else do a new with theme at random
-            if (jorts.Stash.is_in_stash (this.uid)) {
-                print("LOADING UID" + this.uid.to_string());
-                init_from_storage();
-
-
-            } else {
-
-                this.title_name = jorts.Utils.random_title();
-                set_title (this.title_name);
-
-                // First sticky is always blue - signature look!
-                // After that, it is random
-                //if (uid_counter == 0) {
-                    this.theme = jorts.Utils.themearray[Random.int_range (0,(jorts.Utils.themearray.length - 1))];
-                //} else {
-                //    this.theme = "BLUEBERRY";
-                //}
-                // Wrong alert uid is rotten
-                
-                this.content = "";
-            }
+            // Rebuild the whole theming
+            this.update_theme(this.theme);
 
             // add required base classes
             this.get_style_context().add_class("rounded");
-
-
-
-            // Rebuild the whole theming
-            update_theme(this.theme);
-
 
             // HEADER
             // Define the header
@@ -122,107 +105,11 @@ namespace jorts {
             header.set_custom_title(label);
             this.set_titlebar(header);
 
-
-
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
             actionbar.get_style_context().add_class("actionbar");
-            create_actionbar ();
-            create_app_menu ();
 
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.set_size_request (330,270);
-
-
-            // Define the text thingy
-            buffer = new Gtk.SourceBuffer (null);
-            buffer.set_highlight_matching_brackets (false);
-            view = new Gtk.SourceView.with_buffer (buffer);
-            view.bottom_margin = 10;
-            view.buffer.text = this.content;
-            print(this.content);
-            view.expand = true;
-            view.left_margin = 10;
-            view.margin = 2;
-            view.right_margin = 10;
-            view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
-            view.top_margin = 10;
-            scrolled.add (view);
-            this.show_all();
-
-            // Define the grid 
-            var grid = new Gtk.Grid ();
-            grid.orientation = Gtk.Orientation.VERTICAL;
-            grid.expand = true;
-            grid.add (scrolled);
-            grid.add (actionbar);
-            grid.show_all ();
-            this.add (grid);
-
-            // EVENTS
             
-            // Save when user focuses elsewhere
-            focus_out_event.connect (() => {
-                update_storage ();
-                return false;
-            });
-
-            // Save when user changes the label
-            label.changed.connect (() => {
-                update_storage ();
-            });
-
-            // Save when the text thingy has changed
-            this.destroy.connect (() => {
-                update_storage ();
-            });            
-
-            // Save when the text thingy has changed
-            view.buffer.changed.connect (() => {
-                update_storage ();
-            });
-
-            // Undo Redo shit
-            key_press_event.connect ((e) => {
-                uint keycode = e.hardware_keycode;
-                if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
-                    if (match_keycode (Gdk.Key.z, keycode)) {
-                        action_undo ();
-                    }
-                }
-                if ((e.state & Gdk.ModifierType.CONTROL_MASK + Gdk.ModifierType.SHIFT_MASK) != 0) {
-                    if (match_keycode (Gdk.Key.z, keycode)) {
-                        action_redo ();
-                    }
-                }
-                return false;
-            });
-        }
-
-        // TITLE IS TITLE
-        public new void set_title (string title) {
-            this.title = title;
-        }
-
-        // Save everything
-        private void update_storage () {
-            int width, height;
-
-            //get_storage_note();
-            //((Application)this.application).update_storage();
-
-            this.get_size (out width, out height);
-
-            var everythingnote = new noteData(this.uid, this.title, this.theme, this.content, 0, width, height);
-
-            jorts.Stash.save_to_stash(everythingnote);
-        }
-
-
-
-
-        // Content of the action bar
-        private void create_actionbar () {
             var new_item = new Gtk.Button ();
             new_item.tooltip_text = (_("New note"));
             new_item.set_image (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
@@ -239,28 +126,21 @@ namespace jorts {
             actionbar.pack_start (delete_item);
             //  actionbar.pack_start (undo);
             //  actionbar.pack_start (redo);
-        }
-
-
-        // Create the inside of the settings button
-        // This is a label and several colored bubbles
-        // TODO : Shorten this by doing a Widget 
-        private void create_app_menu () {
 
 
             var color_button_label = new Granite.HeaderLabel (_("Note Color"));
 
-            var color_button_blueberry = new Jorts.ColorPill (_("Blueberry"), "blueberry");
-            var color_button_lime = new Jorts.ColorPill (_("Lime"), "lime");
-            var color_button_mint = new Jorts.ColorPill (_("Mint"), "mint");
-            var color_button_banana = new Jorts.ColorPill (_("Banana"), "banana");
-            var color_button_strawberry = new Jorts.ColorPill (_("Strawberry"), "strawberry");
-            var color_button_orange = new Jorts.ColorPill (_("Orange"), "orange");
-            var color_button_bubblegum = new Jorts.ColorPill (_("Bubblegum"), "bubblegum");
-            var color_button_grape = new new Jorts.ColorPill (_("Grape"),"grape");
-            var color_button_latte = new new Jorts.ColorPill (_("Latte"),"latte");
-            var color_button_cocoa = new new Jorts.ColorPill (_("Cocoa"), "cocoa");
-            var color_button_slate = new new Jorts.ColorPill (_("Slate"),"slate");
+            var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
+            var color_button_lime = new ColorPill (_("Lime"), "lime");
+            var color_button_mint = new ColorPill (_("Mint"), "mint");
+            var color_button_banana = new ColorPill (_("Banana"), "banana");
+            var color_button_strawberry = new ColorPill (_("Strawberry"), "strawberry");
+            var color_button_orange = new ColorPill (_("Orange"), "orange");
+            var color_button_bubblegum = new ColorPill (_("Bubblegum"), "bubblegum");
+            var color_button_grape = new ColorPill (_("Grape"),"grape");
+            var color_button_latte = new ColorPill (_("Latte"),"latte");
+            var color_button_cocoa = new ColorPill (_("Cocoa"), "cocoa");
+            var color_button_slate = new ColorPill (_("Slate"),"slate");
 
             //TODO: Multiline
             var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
@@ -301,84 +181,147 @@ namespace jorts {
             // All the "change theme when theme button changed"
             // TODO: cleaner theme management
             color_button_strawberry.clicked.connect (() => {
-                update_theme("STRAWBERRY");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("STRAWBERRY");
             });
 
             color_button_orange.clicked.connect (() => {
-                update_theme("ORANGE");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("ORANGE");
             });
 
             color_button_mint.clicked.connect (() => {
-                update_theme("MINT");
-                update_stash();
+                this.update_theme("MINT");
             });
 
             color_button_banana.clicked.connect (() => {
-                update_theme("BANANA");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("BANANA");
             });
 
             color_button_lime.clicked.connect (() => {
-                update_theme("LIME");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("LIME");
             });
 
             color_button_blueberry.clicked.connect (() => {
-                update_theme("BLUEBERRY");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("BLUEBERRY");
             });
 
             color_button_bubblegum.clicked.connect (() => {
-                update_theme("BUBBLEGUM");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("BUBBLEGUM");
             });
 
             color_button_grape.clicked.connect (() => {
-                update_theme("GRAPE");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("GRAPE");
             });
 
 
             color_button_latte.clicked.connect (() => {
-                update_theme("LATTE");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("LATTE");
             });
 
             color_button_cocoa.clicked.connect (() => {
-                update_theme("COCOA");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("COCOA");
             });
 
-
             color_button_slate.clicked.connect (() => {
-                update_theme("SLATE");
-                //((Application)this.application).update_storage();
-                update_stash();
+                this.update_theme("SLATE");
             });
 
             // GTK4: Append
             actionbar.pack_end (app_button);
+
+            var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.set_size_request (330,270);
+
+
+            // Define the text thingy
+            buffer = new Gtk.SourceBuffer (null);
+            buffer.set_highlight_matching_brackets (false);
+
+            
+            view = new Gtk.SourceView.with_buffer (buffer);
+            view.bottom_margin = 10;
+            view.buffer.text = this.content;
+            view.expand = true;
+            view.left_margin = 10;
+            view.margin = 2;
+            view.right_margin = 10;
+            view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+            view.top_margin = 10;
+
+
+            scrolled.add (view);
+            this.show_all();
+
+            // Define the grid 
+            var grid = new Gtk.Grid ();
+            grid.orientation = Gtk.Orientation.VERTICAL;
+            grid.expand = true;
+            grid.add (scrolled);
+            grid.add (actionbar);
+            grid.show_all ();
+            this.add (grid);
+
+            // EVENTS
+            
+            // Save when user focuses elsewhere
+            focus_out_event.connect (() => {
+                ((Application)this.application).save_to_stash ();
+                return false;
+            });
+
+            // Save when user changes the label
+            label.changed.connect (() => {
+                ((Application)this.application).save_to_stash ();
+            });
+
+            // Save when the window thingy closed
+            this.destroy.connect (() => {
+                ((Application)this.application).save_to_stash ();
+            });            
+
+            // Save when the text thingy has changed
+            view.buffer.changed.connect (() => {
+                Gtk.TextIter start,end;
+                view.buffer.get_bounds (out start, out end);
+                this.content = view.buffer.get_text (start, end, true);
+            });
+
+            // Undo Redo shit
+            key_press_event.connect ((e) => {
+                uint keycode = e.hardware_keycode;
+                if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
+                    if (match_keycode (Gdk.Key.z, keycode)) {
+                        action_undo ();
+                    }
+                }
+                if ((e.state & Gdk.ModifierType.CONTROL_MASK + Gdk.ModifierType.SHIFT_MASK) != 0) {
+                    if (match_keycode (Gdk.Key.z, keycode)) {
+                        action_redo ();
+                    }
+                }
+                return false;
+            });
+        }
+
+        // TITLE IS TITLE
+        public new void set_title (string title) {
+            this.title = title;
         }
 
 
+        // Package the note into a noteData and pass it back
+        // NOTE: We cannot access the buffer if the window is closed, leading to content loss
+        // Hence why we need to constantly save the buffer into this.content when changed
+        public noteData packaged() {
+            int width, height;
+            var current_title = label.title.get_label ();
+            this.get_size (out width, out height);
+            var data = new noteData(current_title, this.theme, this.content , 100, width, height );
+            return data;
+        }
 
 
-
-        // When recreating the window from storage
-        private void init_from_storage() {
-
-            noteData data = jorts.Stash.load_from_stash (this.uid);
+        // Take a notedata and unpack it
+        private void unpackage(noteData data) {
             this.title_name = data.title;
             this.theme = data.theme;
             this.content = data.content;
@@ -387,7 +330,6 @@ namespace jorts {
             if ((int)data.width != 0 && (int)data.height != 0) {
                 this.resize ((int)data.width, (int)data.height);
             }
-
             set_title (this.title_name);
         }
 
@@ -411,46 +353,6 @@ namespace jorts {
         }
 
 
-    public void update_stash() {
-        int width, height;
-        Gtk.TextIter start,end;
-        view.buffer.get_bounds (out start, out end);
-        this.content = view.buffer.get_text (start, end, true);
-        this.title_name = label.title.get_label ();
-
-        this.get_size (out width, out height);
-
-        print("#================================");
-        print("STASH UPDATED");
-        print(this.uid.to_string + "\n");
-        print(this.title_name + "\n"),
-        print(this.content + "\n"),
-        print(this.theme + "\n"),
-        print("#================================");
-
-
-        var data = new noteData(this.uid, this.title_name, this.content, this.theme, 100, width, height );
-        jorts.Stash.save_to_stash (data);
-    }
-
-
-
-        // Prepare for storage
-        public Storage get_storage_note() {
-            int x, y, w, h;
-            Gtk.TextIter start,end;
-            view.buffer.get_bounds (out start, out end);
-            this.content = view.buffer.get_text (start, end, true);
-            this.title_name = label.title.get_label ();
-            set_title (this.title_name);
-            string note_theme = this.theme;
-
-            this.get_position (out x, out y);
-            this.get_size (out w, out h);
-
-            return new Storage.from_storage(title_name,note_theme,content,x, y, w, h );
-        }
-
 
         // TODO: Understand this
 #if VALA_0_42
@@ -472,21 +374,19 @@ namespace jorts {
 
         // Note gets deleted
         public override bool delete_event (Gdk.EventAny event) {
-            print("DELETE EVENT");
-            update_stash();
+            ((Application)this.application).save_to_stash ();
             return false;
         }
 
-        // Replace stylesheet
+        // Strip old stylesheet, apply the new
         private void update_theme(string theme) {
             // in GTK4 we can replace this with setting css_classes
             get_style_context().remove_class (this.theme);
             this.theme = theme;
             get_style_context().add_class (this.theme);
+            ((Application)this.application).save_to_stash ();
         }
     }
 
 
 }
-
-

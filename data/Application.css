@@ -114,11 +114,6 @@ entry.flat {
     font-size: 0.88em;
 }
 
-.trashcan:hover {
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: @warning;
-}
-
 /* COLORPILLS */
 
 .color-button {
