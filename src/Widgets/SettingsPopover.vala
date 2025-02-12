@@ -65,6 +65,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         //TODO: Multiline
         var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
+        
         // GTK4: append
         color_button_box.pack_start (color_button_blueberry, false, true, 0);
         color_button_box.pack_start (color_button_mint, false, true, 0);
