@@ -29,7 +29,7 @@ Main tasks are the tasks:
 - [x] Do cute transitions and color name
 - [x] Rebuild the way css theming is done
 - [x] Rebuild the way notes are managed and saved
-- [ ] Do a separate for popover
+- [x] Do a separate for popover
 - [ ] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
 - [ ] Do all the testing
 - [ ] Do a first appcenter release

@@ -91,8 +91,10 @@ namespace jorts {
             // add required base classes
             this.get_style_context().add_class("rounded");
 
-            // HEADER
-            // Define the header
+
+
+            // ================================================================ //
+            // HEADER            // Define the header
             header = new Gtk.HeaderBar();
             header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             header.get_style_context().add_class("headertitle");
@@ -105,10 +107,27 @@ namespace jorts {
             header.set_custom_title(label);
             this.set_titlebar(header);
 
+            // Define the text thingy
+            var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.set_size_request (330,270);
+
+            buffer = new Gtk.SourceBuffer (null);
+            buffer.set_highlight_matching_brackets (false);
+            view = new Gtk.SourceView.with_buffer (buffer);
+            view.bottom_margin = 10;
+            view.buffer.text = this.content;
+            view.expand = true;
+            view.left_margin = 10;
+            view.margin = 2;
+            view.right_margin = 10;
+            view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+            view.top_margin = 10;
+            scrolled.add (view);
+            this.show_all();
+
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
             actionbar.get_style_context().add_class("actionbar");
-
             
             var new_item = new Gtk.Button ();
             new_item.tooltip_text = (_("New note"));
@@ -121,55 +140,10 @@ namespace jorts {
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
             delete_item.get_style_context ().add_class ("trashcan");
 
-            // GTK4: append
-            actionbar.pack_start (new_item);
-            actionbar.pack_start (delete_item);
-            //  actionbar.pack_start (undo);
-            //  actionbar.pack_start (redo);
-
-
-            var color_button_label = new Granite.HeaderLabel (_("Note Color"));
-
-            var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
-            var color_button_lime = new ColorPill (_("Lime"), "lime");
-            var color_button_mint = new ColorPill (_("Mint"), "mint");
-            var color_button_banana = new ColorPill (_("Banana"), "banana");
-            var color_button_strawberry = new ColorPill (_("Strawberry"), "strawberry");
-            var color_button_orange = new ColorPill (_("Orange"), "orange");
-            var color_button_bubblegum = new ColorPill (_("Bubblegum"), "bubblegum");
-            var color_button_grape = new ColorPill (_("Grape"),"grape");
-            var color_button_latte = new ColorPill (_("Latte"),"latte");
-            var color_button_cocoa = new ColorPill (_("Cocoa"), "cocoa");
-            var color_button_slate = new ColorPill (_("Slate"),"slate");
-
-            //TODO: Multiline
-            var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            // GTK4: append
-            color_button_box.pack_start (color_button_blueberry, false, true, 0);
-            color_button_box.pack_start (color_button_mint, false, true, 0);
-            color_button_box.pack_start (color_button_lime, false, true, 0);
-            color_button_box.pack_start (color_button_banana, false, true, 0);
-            color_button_box.pack_start (color_button_orange, false, true, 0);
-            color_button_box.pack_start (color_button_strawberry, false, true, 0);
-            color_button_box.pack_start (color_button_bubblegum, false, true, 0);
-            color_button_box.pack_start (color_button_grape, false, true, 0);
-            color_button_box.pack_start (color_button_latte, false, true, 0);
-            color_button_box.pack_start (color_button_cocoa, false, true, 0);
-            color_button_box.pack_start (color_button_slate, false, true, 0);
-
-
-
-            var setting_grid = new Gtk.Grid ();
-            setting_grid.margin = 12;
-            setting_grid.column_spacing = 6;
-            setting_grid.row_spacing = 6;
-            setting_grid.orientation = Gtk.Orientation.VERTICAL;
-            setting_grid.attach (color_button_label, 0, 0, 1, 1);
-            setting_grid.attach (color_button_box, 0, 1, 1, 1);
-            setting_grid.show_all ();
-
-            var popover = new Gtk.Popover (null);
-            popover.add (setting_grid);
+            var popover = new SettingsPopover ();
+            popover.theme_changed.connect ((selected) => {
+                this.update_theme(selected);
+            });
 
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
@@ -177,79 +151,16 @@ namespace jorts {
             app_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             app_button.popover = popover;
 
-
-            // All the "change theme when theme button changed"
-            // TODO: cleaner theme management
-            color_button_strawberry.clicked.connect (() => {
-                this.update_theme("STRAWBERRY");
-            });
-
-            color_button_orange.clicked.connect (() => {
-                this.update_theme("ORANGE");
-            });
-
-            color_button_mint.clicked.connect (() => {
-                this.update_theme("MINT");
-            });
-
-            color_button_banana.clicked.connect (() => {
-                this.update_theme("BANANA");
-            });
-
-            color_button_lime.clicked.connect (() => {
-                this.update_theme("LIME");
-            });
-
-            color_button_blueberry.clicked.connect (() => {
-                this.update_theme("BLUEBERRY");
-            });
-
-            color_button_bubblegum.clicked.connect (() => {
-                this.update_theme("BUBBLEGUM");
-            });
-
-            color_button_grape.clicked.connect (() => {
-                this.update_theme("GRAPE");
-            });
-
-
-            color_button_latte.clicked.connect (() => {
-                this.update_theme("LATTE");
-            });
-
-            color_button_cocoa.clicked.connect (() => {
-                this.update_theme("COCOA");
-            });
-
-            color_button_slate.clicked.connect (() => {
-                this.update_theme("SLATE");
-            });
+            // GTK4: append
+            actionbar.pack_start (new_item);
+            actionbar.pack_start (delete_item);
+            //  actionbar.pack_start (undo);
+            //  actionbar.pack_start (redo);
 
             // GTK4: Append
             actionbar.pack_end (app_button);
 
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.set_size_request (330,270);
 
-
-            // Define the text thingy
-            buffer = new Gtk.SourceBuffer (null);
-            buffer.set_highlight_matching_brackets (false);
-
-            
-            view = new Gtk.SourceView.with_buffer (buffer);
-            view.bottom_margin = 10;
-            view.buffer.text = this.content;
-            view.expand = true;
-            view.left_margin = 10;
-            view.margin = 2;
-            view.right_margin = 10;
-            view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
-            view.top_margin = 10;
-
-
-            scrolled.add (view);
-            this.show_all();
 
             // Define the grid 
             var grid = new Gtk.Grid ();
@@ -259,9 +170,10 @@ namespace jorts {
             grid.add (actionbar);
             grid.show_all ();
             this.add (grid);
-
-            // EVENTS
             
+
+            // ================================================================ //
+            // EVENTS            
             // Save when user focuses elsewhere
             focus_out_event.connect (() => {
                 ((Application)this.application).save_to_stash ();
@@ -374,7 +286,7 @@ namespace jorts {
 
         // Note gets deleted
         public override bool delete_event (Gdk.EventAny event) {
-            ((Application)this.application).save_to_stash ();
+            //((Application)this.application).save_to_stash ();
             return false;
         }
 

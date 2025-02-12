@@ -30,10 +30,14 @@ So the whole settings popover is here, deal with it.
 */
 
 public class jorts.SettingsPopover : Gtk.Popover {
-
-    public signal void theme_changed (string? selected);
+    public string selected;
+    public signal void theme_changed (string selected);
 
     public SettingsPopover () {
+        Object ();
+    }
+
+    construct {
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
@@ -41,9 +45,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.column_spacing = 6;
         setting_grid.row_spacing = 6;
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
-        setting_grid.show_all ();
-
-
+  
         // Choose theme section
         var color_button_label = new Granite.HeaderLabel (_("Note Color"));
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
@@ -78,12 +80,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         setting_grid.attach (color_button_box, 0, 1, 1, 1);
 
+        setting_grid.show_all ();
         this.add (setting_grid);
 
 
-
-
-        
         color_button_strawberry.clicked.connect (() => {
             this.theme_changed("STRAWBERRY");
         });
