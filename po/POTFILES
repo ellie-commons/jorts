@@ -1,3 +1,4 @@
+src/Widgets/SettingsPopover.vala
 src/MainWindow.vala
 src/Services/Utils.vala
 data/io.github.ellie_commons.jorts.desktop.in

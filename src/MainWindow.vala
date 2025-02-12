@@ -197,6 +197,9 @@ namespace jorts {
                 this.content = view.buffer.get_text (start, end, true);
             });
 
+
+
+            
             // Undo Redo shit
             key_press_event.connect ((e) => {
                 uint keycode = e.hardware_keycode;

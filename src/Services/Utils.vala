@@ -68,7 +68,6 @@ namespace jorts.Utils {
             _("New sticky, new me"),
             _("Hidden pirate treasure"),
             _("To not forget, ever"),
-            _("Deep deep thoughts"),
             _("Dear Diary,"),
             _("Hi im a square"),
             _("Have a nice day! :)"),
@@ -83,7 +82,6 @@ namespace jorts.Utils {
             _("Ok, listen here,"),
             _("My dream Pokemon team"),
             _("My little notes"),
-            _("My little notes"),
             _("Surprise gift list"),
             _("Brainstorming notes"),
             _("To bring to the party"),
@@ -92,18 +90,6 @@ namespace jorts.Utils {
         };
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
-
-
-
-    // GTK4 port - no placeholder on gtk3 buffers
-    // Spits out a cute or funny random placeholder
-    public string random_placeholder () {
-        string[] placeholders = {
-            _("Note your thoughts")
-        };
-        return placeholders[Random.int_range (0,(placeholders.length - 1))];
-    }
-
 
     // Spits out a fresh new note
     public noteData random_note () {

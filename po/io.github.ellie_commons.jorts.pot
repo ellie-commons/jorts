@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 00:03+0100\n"
+"POT-Creation-Date: 2025-02-12 23:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,200 +17,197 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:226
-msgid "New note"
-msgstr ""
-
-#: src/MainWindow.vala:231
-msgid "Delete note"
-msgstr ""
-
-#: src/MainWindow.vala:268
-msgid "Blueberry"
-msgstr ""
-
-#: src/MainWindow.vala:280
-msgid "Lime"
-msgstr ""
-
-#: src/MainWindow.vala:292
-msgid "Mint"
-msgstr ""
-
-#: src/MainWindow.vala:305
-msgid "Banana"
-msgstr ""
-
-#: src/MainWindow.vala:316
-msgid "Strawberry"
-msgstr ""
-
-#: src/MainWindow.vala:325
-msgid "Orange"
-msgstr ""
-
-#: src/MainWindow.vala:336
-msgid "Bubblegum"
-msgstr ""
-
-#: src/MainWindow.vala:348
-msgid "Grape"
-msgstr ""
-
-#: src/MainWindow.vala:360
-msgid "Latte"
-msgstr ""
-
-#: src/MainWindow.vala:371
-msgid "Cocoa"
-msgstr ""
-
-#: src/MainWindow.vala:384
-msgid "Slate"
-msgstr ""
-
-#: src/MainWindow.vala:396
-msgid "Silver"
-msgstr ""
-
-#: src/MainWindow.vala:408
-msgid "Automatic based on accent color"
-msgstr ""
-
-#: src/MainWindow.vala:433
+#. Choose theme section
+#: src/Widgets/SettingsPopover.vala:50
 msgid "Note Color"
 msgstr ""
 
-#: src/MainWindow.vala:449
+#: src/Widgets/SettingsPopover.vala:53
+msgid "Blueberry"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:54
+msgid "Lime"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:55
+msgid "Mint"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:56
+msgid "Banana"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:57
+msgid "Strawberry"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:58
+msgid "Orange"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:59
+msgid "Bubblegum"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:60
+msgid "Grape"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:61
+msgid "Latte"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:62
+msgid "Cocoa"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:63
+msgid "Slate"
+msgstr ""
+
+#: src/MainWindow.vala:133
+msgid "New note"
+msgstr ""
+
+#: src/MainWindow.vala:138
+msgid "Delete note"
+msgstr ""
+
+#: src/MainWindow.vala:150
 msgid "Settings"
 msgstr ""
 
-#: src/Services/Utils.vala:46
+#: src/Services/Utils.vala:57
 msgid "All my very best friends"
 msgstr ""
 
-#: src/Services/Utils.vala:47
+#: src/Services/Utils.vala:58
 msgid "My super good secret recipe"
 msgstr ""
 
-#: src/Services/Utils.vala:48
+#: src/Services/Utils.vala:59
 msgid "My todo list"
 msgstr ""
 
-#: src/Services/Utils.vala:49
+#: src/Services/Utils.vala:60
 msgid "Super secret to not tell anyone"
 msgstr ""
 
-#: src/Services/Utils.vala:50
+#: src/Services/Utils.vala:61
 msgid "My grocery list"
 msgstr ""
 
-#: src/Services/Utils.vala:51
+#: src/Services/Utils.vala:62
 msgid "Random shower thoughts"
 msgstr ""
 
-#: src/Services/Utils.vala:52
+#: src/Services/Utils.vala:63
 msgid "My fav fanfics"
 msgstr ""
 
-#: src/Services/Utils.vala:53
+#: src/Services/Utils.vala:64
 msgid "My fav dinosaurs"
 msgstr ""
 
-#: src/Services/Utils.vala:54
+#: src/Services/Utils.vala:65
 msgid "My evil mastermind plan"
 msgstr ""
 
-#: src/Services/Utils.vala:55
+#: src/Services/Utils.vala:66
 msgid "What made me smile today"
 msgstr ""
 
-#: src/Services/Utils.vala:56
+#: src/Services/Utils.vala:67
 msgid "Hello world!"
 msgstr ""
 
-#: src/Services/Utils.vala:57
+#: src/Services/Utils.vala:68
 msgid "New sticky, new me"
 msgstr ""
 
-#: src/Services/Utils.vala:58
+#: src/Services/Utils.vala:69
 msgid "Hidden pirate treasure"
 msgstr ""
 
-#: src/Services/Utils.vala:59
+#: src/Services/Utils.vala:70
 msgid "To not forget, ever"
 msgstr ""
 
-#: src/Services/Utils.vala:60
-msgid "Deep deep thoughts"
-msgstr ""
-
-#: src/Services/Utils.vala:61
+#: src/Services/Utils.vala:71
 msgid "Dear Diary,"
 msgstr ""
 
-#: src/Services/Utils.vala:62
+#: src/Services/Utils.vala:72
 msgid "Hi im a square"
 msgstr ""
 
-#: src/Services/Utils.vala:63
+#: src/Services/Utils.vala:73
 msgid "Have a nice day! :)"
 msgstr ""
 
-#: src/Services/Utils.vala:64
+#: src/Services/Utils.vala:74
 msgid "My meds schedule"
 msgstr ""
 
-#: src/Services/Utils.vala:65
+#: src/Services/Utils.vala:75
 msgid "Household chores"
 msgstr ""
 
-#: src/Services/Utils.vala:66
+#: src/Services/Utils.vala:76
 msgid "Ode to my cat"
 msgstr ""
 
-#: src/Services/Utils.vala:67
+#: src/Services/Utils.vala:77
 msgid "My dogs favourite toys"
 msgstr ""
 
-#: src/Services/Utils.vala:68
+#: src/Services/Utils.vala:78
 msgid "How cool my birds are"
 msgstr ""
 
-#: src/Services/Utils.vala:69
+#: src/Services/Utils.vala:79
 msgid "Suspects in the Last Cookie affair"
 msgstr ""
 
-#: src/Services/Utils.vala:70
+#: src/Services/Utils.vala:80
 msgid "Words my parrots know"
 msgstr ""
 
-#: src/Services/Utils.vala:71
+#: src/Services/Utils.vala:81
 msgid "Cool and funny compliments to give out"
 msgstr ""
 
-#: src/Services/Utils.vala:72
+#: src/Services/Utils.vala:82
 msgid "Ok, listen here,"
 msgstr ""
 
-#: src/Services/Utils.vala:73
+#: src/Services/Utils.vala:83
 msgid "My dream Pokemon team"
 msgstr ""
 
-#: src/Services/Utils.vala:74 src/Services/Utils.vala:75
+#: src/Services/Utils.vala:84
 msgid "My little notes"
 msgstr ""
 
-#: src/Services/Utils.vala:76
+#: src/Services/Utils.vala:85
 msgid "Surprise gift list"
 msgstr ""
 
-#: src/Services/Utils.vala:77
+#: src/Services/Utils.vala:86
 msgid "Brainstorming notes"
 msgstr ""
 
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:87
 msgid "To bring to the party"
+msgstr ""
+
+#: src/Services/Utils.vala:88
+msgid "My amazing mixtape"
+msgstr ""
+
+#: src/Services/Utils.vala:89
+msgid "Napkin scribbles"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
@@ -238,7 +235,7 @@ msgid "A colourful little sticky notes utility, for your thoughts"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
-msgid "Ten good looking themes with soft transitions"
+msgid "Eleven good looking themes with soft transitions"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:12

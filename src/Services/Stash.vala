@@ -41,16 +41,10 @@ nuke_from_stash(uid)
 
 namespace jorts.Stash {
 
-
-
-
-
-
 	// Ok first check if we have a directory to store data
 	public void check_if_stash() {
-        //print("Checking if data directory present\n");
-		var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
 
+		var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
 		try {
 			if (!data_directory.query_exists()) {
 				data_directory.make_directory();
@@ -92,7 +86,6 @@ namespace jorts.Stash {
         Json.Node root = builder.get_root ();
         generator.set_root (root);
         string str = generator.to_data (null);
-        print("\n" + str + "\n");
         return str;
     }
 
@@ -128,8 +121,6 @@ namespace jorts.Stash {
 
     public Gee.ArrayList<noteData> load_from_stash() {
         Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
-
-
         string data_directory = Environment.get_user_data_dir ();
         string storage_path = data_directory + "/saved_state.json";
     
