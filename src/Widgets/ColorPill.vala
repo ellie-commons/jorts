@@ -31,6 +31,7 @@ public class jorts.ColorPill : Gtk.Button {
                 this.get_style_context().add_class(colorclass);
 
                 this.set_size_request (24, 24);
+                this.set_tooltip_text (tooltip);
         }
 
 
