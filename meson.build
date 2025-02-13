@@ -11,6 +11,16 @@ gnome.post_install(glib_compile_schemas: true)
 #================================
 # Import the stylesheet
 
+## Set de config data
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
+config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 # Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
@@ -32,6 +42,7 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), la
 executable(
     meson.project_name(),
     gresource,
+    config_file,
     'src/Objects/noteData.vala',    
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
