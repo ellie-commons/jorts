@@ -132,7 +132,7 @@ namespace jorts {
 
         protected override int command_line (ApplicationCommandLine command_line) {
             var context = new OptionContext ("File");
-            context.add_main_entries (entries, Build.GETTEXT_PACKAGE);
+            //context.add_main_entries (entries, Build.GETTEXT_PACKAGE);
             context.add_group (Gtk.get_option_group (true));
 
             string[] args = command_line.get_arguments ();
@@ -163,9 +163,6 @@ namespace jorts {
         };
 
         public static int main (string[] args) {
-            Intl.setlocale (LocaleCategory.ALL, "");
-            Intl.textdomain (Build.GETTEXT_PACKAGE);
-
             var app = new Application();
             return app.run(args);
         }
