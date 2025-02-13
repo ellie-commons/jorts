@@ -30,6 +30,11 @@ namespace jorts {
         public override void startup () {
             base.startup ();
 
+            Intl.setlocale (LocaleCategory.ALL, "");
+            Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+            Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+            Intl.textdomain (GETTEXT_PACKAGE);
+
             // This is automatic in GTK4, so can be removed after porting
             var app_provider = new Gtk.CssProvider ();
             app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
@@ -40,7 +45,6 @@ namespace jorts {
             );
 
             jorts.Themer.init_all_themes();
-
         }
 
         static construct {
@@ -76,6 +80,9 @@ namespace jorts {
 
         // Either show all windows, or rebuild from storage
         protected override void activate () {
+            // Test Lang
+            GLib.Environment.set_variable ("LANGUAGE", "fr", true);
+
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
                     if (window.visible) {
