@@ -26,17 +26,6 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 
-# Set this for convenience
-conf = configuration_data()
-
-# Get the package data directory under Meson
-pkgdatadir = join_paths([ get_option('prefix'),
-                          get_option('datadir'),
-                          'io.github.ellie_commons.jorts' ])
-
-conf.set_quoted('PKGDATADIR', pkgdatadir)
-
-
 
 #================================
 # Let's define our executable
