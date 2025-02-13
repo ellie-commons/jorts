@@ -63,6 +63,7 @@ namespace jorts.Stash {
         builder.begin_array ();
         foreach (MainWindow note in notes) {
             noteData data = note.packaged ();
+            print("saving " + note.title + "\n");
 
 			// Lets fkin gooo
             builder.begin_object ();

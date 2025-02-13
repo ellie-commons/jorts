@@ -29,7 +29,7 @@ namespace jorts {
         public int64 width;
         public int64 height;
 
-        public noteData(string? title, string theme, string? content, int64 zoom, int64 width, int64 height )
+        public noteData(string title, string theme, string content, int64 zoom, int64 width, int64 height )
         {
             this.title = title;
             this.theme = theme;
@@ -37,7 +37,6 @@ namespace jorts {
             this.zoom = zoom;
             this.width = width;
             this.height = height;
-
         }
     }
 }
