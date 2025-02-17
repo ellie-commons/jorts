@@ -17,7 +17,11 @@ Available in: <a  href="./po/es.po">🇪🇸 Spanish</a> · <a  href="./po/it.po
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little notes app, and is planned to stay as a cute simple little notes app.
+<<<<<<< HEAD
 However the internals needs a lot of work, as they are both outdated for the modern era, and errr- not really that super simple to build.
+=======
+However the internals needs a lot of work, as they are both outdated for the modern era, and errr- not really that super simply to build.
+>>>>>>> dbf3c69dcea3b447c774876e86c154ea412134ae
 
 So there will be some little features added, and said features will be mostly some prettyfication at the edges.
 
@@ -67,11 +71,17 @@ Please make sure you have these dependencies first before building Jorts.
 
 ```bash
 flatpak-builder
+<<<<<<< HEAD
 libgranite-dev
 gtk+-3.0
 libgtksourceview-3.0-dev
 libjson-glib-dev
 libgee-0.8-dev
+=======
+libgranite
+gtk+-3.0
+libgtksourceview-3.0
+>>>>>>> dbf3c69dcea3b447c774876e86c154ea412134ae
 libjson-glib
 meson
 libvala
@@ -80,7 +90,11 @@ libvala
 As of the current date (18Feb2025), here are the package names to install:
 
 ```bash
+<<<<<<< HEAD
 sudo apt install libgranite-dev libgtksourceview-3.0-dev libjson-glib-dev libgee-0.8-dev meson libvala flatpak-builder
+=======
+sudo apt install libgranite-common libgtksourceview-3.0-1 libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 flatpak-builder
+>>>>>>> dbf3c69dcea3b447c774876e86c154ea412134ae
 ```
 
 Installation is as simple as cloning this repo (or download and extract the zip archive), change to the new repo's directory, and run the following command:
