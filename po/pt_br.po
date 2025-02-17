@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 18:54+0100\n"
+"POT-Creation-Date: 2025-02-17 19:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,68 +19,68 @@ msgstr ""
 
 #: src/Widgets/EditableLabel.vala:94
 msgid "Edit title"
-msgstr ""
+msgstr "Editar título"
 
 #. Choose theme section
 #: src/Widgets/SettingsPopover.vala:50
 msgid "Sticky Note Colour"
-msgstr ""
+msgstr "Cor da nota adesiva"
 
 #: src/Widgets/SettingsPopover.vala:53
 msgid "Blueberry"
-msgstr ""
+msgstr "Mirtilo"
 
 #: src/Widgets/SettingsPopover.vala:54
 msgid "Lime"
-msgstr ""
+msgstr "Lima"
 
 #: src/Widgets/SettingsPopover.vala:55
 msgid "Mint"
-msgstr ""
+msgstr "Hortelã"
 
 #: src/Widgets/SettingsPopover.vala:56
 msgid "Banana"
-msgstr ""
+msgstr "Banana"
 
 #: src/Widgets/SettingsPopover.vala:57
 msgid "Strawberry"
-msgstr ""
+msgstr "Morango"
 
 #: src/Widgets/SettingsPopover.vala:58
 msgid "Orange"
-msgstr ""
+msgstr "Laranja"
 
 #: src/Widgets/SettingsPopover.vala:59
 msgid "Bubblegum"
-msgstr ""
+msgstr "Chiclete"
 
 #: src/Widgets/SettingsPopover.vala:60
 msgid "Grape"
-msgstr ""
+msgstr "Uva"
 
 #: src/Widgets/SettingsPopover.vala:61
 msgid "Latte"
-msgstr ""
+msgstr "Leite"
 
 #: src/Widgets/SettingsPopover.vala:62
 msgid "Cocoa"
-msgstr ""
+msgstr "Cacau"
 
 #: src/Widgets/SettingsPopover.vala:63
 msgid "Slate"
-msgstr ""
+msgstr "Ardósia"
 
 #: src/MainWindow.vala:133
 msgid "New sticky note (Ctrl+N)"
-msgstr ""
+msgstr "Nova nota adesiva (Ctrl+N)"
 
 #: src/MainWindow.vala:138
 msgid "Delete sticky note (Ctrl+W)"
-msgstr ""
+msgstr "Excluir nota adesiva (Ctrl+W)"
 
 #: src/MainWindow.vala:150
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: src/Services/Utils.vala:57
 msgid "All my very best friends"
@@ -225,6 +225,8 @@ msgid ""
 "Neither jeans nor shorts, just like jorts. A sticky notes app for elementary "
 "OS"
 msgstr ""
+"Nem jeans nem bermuda, assim como jorts. Um aplicativo de notas adesivas "
+"para o ensino elementary OS"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:7
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -232,11 +234,11 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:16
 msgid "New sticky note"
-msgstr ""
+msgstr "Nova nota adesiva"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
 msgid "A colourful little sticky notes utility, for your thoughts"
-msgstr ""
+msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Ten good looking themes with soft transitions"

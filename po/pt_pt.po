@@ -1,197 +1,217 @@
-#: src/MainWindow.vala:226
-msgid "New note"
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
 msgstr ""
+"Project-Id-Version: io.github.ellie_commons.jorts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-17 19:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt_br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:231
-msgid "Delete note"
-msgstr ""
+#: src/Widgets/EditableLabel.vala:94
+msgid "Edit title"
+msgstr "Editar título"
 
-#: src/MainWindow.vala:268
+#. Choose theme section
+#: src/Widgets/SettingsPopover.vala:50
+msgid "Sticky Note Colour"
+msgstr "Cor da nota adesiva"
+
+#: src/Widgets/SettingsPopover.vala:53
 msgid "Blueberry"
-msgstr ""
+msgstr "Mirtilo"
 
-#: src/MainWindow.vala:280
+#: src/Widgets/SettingsPopover.vala:54
 msgid "Lime"
-msgstr ""
+msgstr "Lima"
 
-#: src/MainWindow.vala:292
+#: src/Widgets/SettingsPopover.vala:55
 msgid "Mint"
-msgstr ""
+msgstr "Hortelã"
 
-#: src/MainWindow.vala:305
+#: src/Widgets/SettingsPopover.vala:56
 msgid "Banana"
-msgstr ""
+msgstr "Banana"
 
-#: src/MainWindow.vala:316
+#: src/Widgets/SettingsPopover.vala:57
 msgid "Strawberry"
-msgstr ""
+msgstr "Morango"
 
-#: src/MainWindow.vala:325
+#: src/Widgets/SettingsPopover.vala:58
 msgid "Orange"
-msgstr ""
+msgstr "Laranja"
 
-#: src/MainWindow.vala:336
+#: src/Widgets/SettingsPopover.vala:59
 msgid "Bubblegum"
-msgstr ""
+msgstr "Chiclete"
 
-#: src/MainWindow.vala:348
+#: src/Widgets/SettingsPopover.vala:60
 msgid "Grape"
-msgstr ""
+msgstr "Uva"
 
-#: src/MainWindow.vala:360
+#: src/Widgets/SettingsPopover.vala:61
 msgid "Latte"
-msgstr ""
+msgstr "Leite"
 
-#: src/MainWindow.vala:371
+#: src/Widgets/SettingsPopover.vala:62
 msgid "Cocoa"
-msgstr ""
+msgstr "Cacau"
 
-#: src/MainWindow.vala:384
+#: src/Widgets/SettingsPopover.vala:63
 msgid "Slate"
-msgstr ""
+msgstr "Ardósia"
 
-#: src/MainWindow.vala:396
-msgid "Silver"
-msgstr ""
+#: src/MainWindow.vala:133
+msgid "New sticky note (Ctrl+N)"
+msgstr "Nova nota adesiva (Ctrl+N)"
 
-#: src/MainWindow.vala:408
-msgid "Automatic based on accent color"
-msgstr ""
+#: src/MainWindow.vala:138
+msgid "Delete sticky note (Ctrl+W)"
+msgstr "Excluir nota adesiva (Ctrl+W)"
 
-#: src/MainWindow.vala:433
-msgid "Note Color"
-msgstr ""
-
-#: src/MainWindow.vala:449
+#: src/MainWindow.vala:150
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
-#: src/Services/Utils.vala:46
+#: src/Services/Utils.vala:57
 msgid "All my very best friends"
 msgstr ""
 
-#: src/Services/Utils.vala:47
+#: src/Services/Utils.vala:58
 msgid "My super good secret recipe"
 msgstr ""
 
-#: src/Services/Utils.vala:48
+#: src/Services/Utils.vala:59
 msgid "My todo list"
 msgstr ""
 
-#: src/Services/Utils.vala:49
+#: src/Services/Utils.vala:60
 msgid "Super secret to not tell anyone"
 msgstr ""
 
-#: src/Services/Utils.vala:50
+#: src/Services/Utils.vala:61
 msgid "My grocery list"
 msgstr ""
 
-#: src/Services/Utils.vala:51
+#: src/Services/Utils.vala:62
 msgid "Random shower thoughts"
 msgstr ""
 
-#: src/Services/Utils.vala:52
+#: src/Services/Utils.vala:63
 msgid "My fav fanfics"
 msgstr ""
 
-#: src/Services/Utils.vala:53
+#: src/Services/Utils.vala:64
 msgid "My fav dinosaurs"
 msgstr ""
 
-#: src/Services/Utils.vala:54
+#: src/Services/Utils.vala:65
 msgid "My evil mastermind plan"
 msgstr ""
 
-#: src/Services/Utils.vala:55
+#: src/Services/Utils.vala:66
 msgid "What made me smile today"
 msgstr ""
 
-#: src/Services/Utils.vala:56
+#: src/Services/Utils.vala:67
 msgid "Hello world!"
 msgstr ""
 
-#: src/Services/Utils.vala:57
+#: src/Services/Utils.vala:68
 msgid "New sticky, new me"
 msgstr ""
 
-#: src/Services/Utils.vala:58
+#: src/Services/Utils.vala:69
 msgid "Hidden pirate treasure"
 msgstr ""
 
-#: src/Services/Utils.vala:59
+#: src/Services/Utils.vala:70
 msgid "To not forget, ever"
 msgstr ""
 
-#: src/Services/Utils.vala:60
-msgid "Deep deep thoughts"
-msgstr ""
-
-#: src/Services/Utils.vala:61
+#: src/Services/Utils.vala:71
 msgid "Dear Diary,"
 msgstr ""
 
-#: src/Services/Utils.vala:62
+#: src/Services/Utils.vala:72
 msgid "Hi im a square"
 msgstr ""
 
-#: src/Services/Utils.vala:63
+#: src/Services/Utils.vala:73
 msgid "Have a nice day! :)"
 msgstr ""
 
-#: src/Services/Utils.vala:64
+#: src/Services/Utils.vala:74
 msgid "My meds schedule"
 msgstr ""
 
-#: src/Services/Utils.vala:65
+#: src/Services/Utils.vala:75
 msgid "Household chores"
 msgstr ""
 
-#: src/Services/Utils.vala:66
+#: src/Services/Utils.vala:76
 msgid "Ode to my cat"
 msgstr ""
 
-#: src/Services/Utils.vala:67
+#: src/Services/Utils.vala:77
 msgid "My dogs favourite toys"
 msgstr ""
 
-#: src/Services/Utils.vala:68
+#: src/Services/Utils.vala:78
 msgid "How cool my birds are"
 msgstr ""
 
-#: src/Services/Utils.vala:69
+#: src/Services/Utils.vala:79
 msgid "Suspects in the Last Cookie affair"
 msgstr ""
 
-#: src/Services/Utils.vala:70
+#: src/Services/Utils.vala:80
 msgid "Words my parrots know"
 msgstr ""
 
-#: src/Services/Utils.vala:71
+#: src/Services/Utils.vala:81
 msgid "Cool and funny compliments to give out"
 msgstr ""
 
-#: src/Services/Utils.vala:72
+#: src/Services/Utils.vala:82
 msgid "Ok, listen here,"
 msgstr ""
 
-#: src/Services/Utils.vala:73
+#: src/Services/Utils.vala:83
 msgid "My dream Pokemon team"
 msgstr ""
 
-#: src/Services/Utils.vala:74 src/Services/Utils.vala:75
+#: src/Services/Utils.vala:84
 msgid "My little notes"
 msgstr ""
 
-#: src/Services/Utils.vala:76
+#: src/Services/Utils.vala:85
 msgid "Surprise gift list"
 msgstr ""
 
-#: src/Services/Utils.vala:77
+#: src/Services/Utils.vala:86
 msgid "Brainstorming notes"
 msgstr ""
 
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:87
 msgid "To bring to the party"
+msgstr ""
+
+#: src/Services/Utils.vala:88
+msgid "My amazing mixtape"
+msgstr ""
+
+#: src/Services/Utils.vala:89
+msgid "Napkin scribbles"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
@@ -205,6 +225,8 @@ msgid ""
 "Neither jeans nor shorts, just like jorts. A sticky notes app for elementary "
 "OS"
 msgstr ""
+"Nem jeans nem bermuda, assim como jorts. Um aplicativo de notas adesivas "
+"para o ensino elementary OS"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:7
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -212,11 +234,11 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:16
 msgid "New sticky note"
-msgstr ""
+msgstr "Nova nota adesiva"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
 msgid "A colourful little sticky notes utility, for your thoughts"
-msgstr ""
+msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Ten good looking themes with soft transitions"
@@ -255,7 +277,7 @@ msgid "Closer to current elementary OS Stylesheet and named colours"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
-msgid "Also more colors, including Latte and Hatsune Miku"
+msgid "Also more colors than Notejot had"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
@@ -275,354 +297,358 @@ msgid "New stickies have a random fun little title"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
+msgid "Storage system rebuilt from the ground up"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
 msgid "Some initial translations :3"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:55
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:56
 msgid "Release: Aesthetics"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:57
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "Some UI minor fixes."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:63
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:64
 msgid "Release: Minor Bump"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:65
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Some backend fixes."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
 msgid "Release: Translations &amp; Searches"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
 msgid "Lots of translations added."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid ""
 "Now one can search for jorts in the apps menu faster with better keywords."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:80
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
 msgid "Release: Pin with Gusto"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
 msgid "Notes's pin icon rotates when active."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:84
 msgid "Under/overshoot style when there more text."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "Release: A Small Change of Pace"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid "Notes are now saved in a better location not prone to autodeletion."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "Updated Lithuanian translations."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:99
 msgid "Release: Resized Notes? No problem!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 msgid "Notes' resized sizes are now saved."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid "Release: Undo/Redo Your Notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Now you can undo/redo stuff inside your notes!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:114
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:115
 msgid "Release: Desktop Notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:116
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
 msgid ""
 "New button to stick the note to show on all workspaces and below all windows."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
 msgid "Release: Font Foraging"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:125
 msgid "Revert font decision."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:125
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:126
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
 msgid "Some small UI fixes."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:140
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:141
 msgid "Release: New Note Tech"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "New font, as requested by users."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
 msgid "New User Interface."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "New font."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid "Same ol' notes app."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "Note:"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "Release: Hello Juno!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
 msgid "Fixed deleting notes and not losing content of other notes."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:159
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:160
 msgid "Release: Open Notes From Anywhere"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:162
 msgid "New option to open notes from the icon in the Dock or App Menu."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "Release: A New Colorific Menu"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
 msgid "New main menu with better &amp; fancier color buttons"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:175
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:176
 msgid "Release: Build A Flatpak"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:177
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:178
 msgid "Update the Lithuanian translation"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:178
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:179
 msgid "Make the app become Flatpak-friendly"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:185
 msgid "Release: Notes Showing Tonight"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:186
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:187
 msgid "Fix: Intelligently show windows even if opening from the Apps Menu."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:192
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:193
 msgid "Release: Ey Manager, Please Work!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:194
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:195
 msgid "Fixed notes not being saved properly in every case."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
 msgid "Release: Way Past Cool Title"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:202
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:203
 msgid "Fix: the UI/UX of the editable title."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:208
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:209
 msgid "Release: Actually Save Notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:210
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:211
 msgid "Actually save the notes contents."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:216
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:217
 msgid "Release: Save Those Notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:218
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:219
 msgid "Make every change in the notes' text save the contents"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:224
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:225
 msgid "Release: Just A Lil' UI Fix"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:226
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:227
 msgid "Minor fixes in the UI again"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:232
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:233
 msgid "Release: The Notes Strike Back"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:234
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:235
 msgid ""
 "A new editable title, for when you want to make your notes extra independent"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:240
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:241
 msgid "Release: A New Simple UI"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:242
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:243
 msgid "Made all items fit into the app menu, making the UI more simplified"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:248
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:249
 msgid "Release: Minor Visual Fixes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:250
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:251
 msgid "Some minor fixes in the UI"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:256
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:273
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:257
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:274
 msgid "Release: Appcenter Bump"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:258
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:275
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:259
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:276
 msgid "Just a bump for AppCenter to not error out"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:264
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:265
 msgid "Release: Icons With Gusto"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:266
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:267
 msgid "NEW! You can now open as many notes as you want!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:267
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:268
 msgid "Make the icons less generic"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:281
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:282
 msgid "Release: High Definition Notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:283
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:284
 msgid "Add high definition icon support"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:289
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:290
 msgid "Release: Ola, Brasil!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:291
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:292
 msgid "Brazilian Portuguese translation"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:297
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:298
 msgid "Release: Notes Should Look Nice"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:299
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:300
 msgid "Minor styling changes internally for a better experience"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:305
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:306
 msgid "Release: Great Resource, My Friend!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:307
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:308
 msgid "Make the app use GResource for loading the styling"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:313
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:314
 msgid "Release: Hello, World!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:315
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:316
 msgid "Code fixes and enable jorts for translations"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:321
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:322
 msgid "Release: Sveiki, Lietuviu!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:323
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:324
 msgid "Lithuanian translation"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:329
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:330
 msgid "Release: RDNN All the things"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:331
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:332
 msgid "Made the cache be RDNN-compatible"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:337
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:338
 msgid "Release: Warn me, don't Error me"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:339
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:340
 msgid "\"warning ()\" instead of \"error ()\" for stability"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:340
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:341
 msgid "Organized code properly now"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:346
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:347
 msgid "Release: About What, Exactly?"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:348
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:349
 msgid ""
 "Creation of new jorts applets not permitted, only one applet is able to be "
 "shown now"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:349
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:350
 msgid "Remove the About Dialog"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:350
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:351
 msgid "Update the text color"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:356
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:357
 msgid "Release: New Coat of Paint"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:358
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:359
 msgid "Fix the in-app colors in respect to color contrast rules"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:364
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:365
 msgid "Release: Rebounded Icon Noted"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:366
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:367
 msgid "The icon now follows the elementary OS icon guidelines."
 msgstr ""

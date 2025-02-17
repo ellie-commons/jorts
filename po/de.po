@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 18:54+0100\n"
+"POT-Creation-Date: 2025-02-17 19:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -242,6 +242,7 @@ msgstr "Neue Haftnotiz"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
 msgid "A colourful little sticky notes utility, for your thoughts"
 msgstr ""
+"Ein farbenfrohes kleines Dienstprogramm für Haftnotizen, für Ihre Gedanken"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Ten good looking themes with soft transitions"
