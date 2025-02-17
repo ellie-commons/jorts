@@ -71,12 +71,10 @@ msgid "Slate"
 msgstr "Schiefer"
 
 #: src/MainWindow.vala:133
-#, fuzzy
 msgid "New sticky note (Ctrl+N)"
 msgstr "Neue Haftnotiz (Strg+N)"
 
 #: src/MainWindow.vala:138
-#, fuzzy
 msgid "Delete sticky note (Ctrl+W)"
 msgstr "Haftnotiz Löschen (Strg+W)"
 
