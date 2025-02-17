@@ -7,7 +7,7 @@ Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GTK;Utility;
+Categories=GTK;Office;
 Actions=NewNote;
 
 [Desktop Action NewNote]

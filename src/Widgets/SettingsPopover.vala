@@ -47,7 +47,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
   
         // Choose theme section
-        var color_button_label = new Granite.HeaderLabel (_("Note Color"));
+        var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");

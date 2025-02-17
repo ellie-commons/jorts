@@ -8,7 +8,7 @@
     <description>
         <p>A colourful little sticky notes utility, for your thoughts</p>
         <ul>
-            <li>Eleven good looking themes with soft transitions</li>
+            <li>Ten good looking themes with soft transitions</li>
             <li>Striving to keep it cute, pretty, simple, modern, light</li>
             <li>Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)</li>
         </ul>
@@ -41,11 +41,12 @@
                     <li>The app is now named Jorts. You however cannot wear it</li>
                     <li>It builds for flatpak now</li>
                     <li>Closer to current elementary OS Stylesheet and named colours</li>
-                    <li>Also more colors, including Latte and Hatsune Miku</li>
+                    <li>Also more colors than Notejot had</li>
                     <li>Better adapted to the way Wayland works</li>
                     <li>Smooth transition when changing theme</li>
                     <li>New stickies have random colour</li>
                     <li>New stickies have a random fun little title</li>
+                    <li>Storage system rebuilt from the ground up</li>
                     <li>Some initial translations :3</li>
                 </ul>
             </description>

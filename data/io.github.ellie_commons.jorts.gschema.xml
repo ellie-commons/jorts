@@ -3,7 +3,7 @@
 		<key name="zoom" type="i">
 			<default>100</default>
 			<summary>Default zoom</summary>
-			<description>Default text zoom for new notes</description>
+			<description>Default text zoom for new notes (NOT IMPLEMENTED YET)</description>
 		</key>
 	</schema>
 </schemalist>

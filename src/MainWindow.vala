@@ -130,12 +130,12 @@ namespace jorts {
             actionbar.get_style_context().add_class("actionbar");
             
             var new_item = new Gtk.Button ();
-            new_item.tooltip_text = (_("New note"));
+            new_item.tooltip_text = (_("New sticky note (Ctrl+N)"));
             new_item.set_image (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
 
             var delete_item = new Gtk.Button ();
-            delete_item.tooltip_text = (_("Delete note"));
+            delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
             delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
             delete_item.get_style_context ().add_class ("trashcan");

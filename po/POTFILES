@@ -1,3 +1,4 @@
+src/Widgets/EditableLabel.vala
 src/Widgets/SettingsPopover.vala
 src/MainWindow.vala
 src/Services/Utils.vala

@@ -30,8 +30,9 @@ Main tasks are the tasks:
 - [x] Rebuild the way css theming is done
 - [x] Rebuild the way notes are managed and saved
 - [x] Do a separate for popover
-- [ ] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
+- [x] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
 - [ ] Do all the testing
+- [ ] Do a first release
 - [ ] Do a first appcenter release
 - [ ] Port to gtk4
 - [ ] Repair the theming: Some parts are stuck on the system accent

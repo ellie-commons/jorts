@@ -81,7 +81,7 @@ namespace jorts {
         // Either show all windows, or rebuild from storage
         protected override void activate () {
             // Test Lang
-            GLib.Environment.set_variable ("LANGUAGE", "fr", true);
+            //GLib.Environment.set_variable ("LANGUAGE", "fr", true);
 
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
