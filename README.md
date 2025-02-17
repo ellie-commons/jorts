@@ -69,22 +69,25 @@ support is always welcome and shows me people want this
 Please make sure you have these dependencies first before building.
 
 ```bash
-granite
+libgranite-dev
 gtk+-3.0
-gtksourceview-3.0
-libjson-glib
-libgee-0.8
+libgtksourceview-3.0-dev
+libjson-glib-dev
+libgee-0.8-dev
 meson
 vala
+flatpak-builder
 ```
 
 You can
 
 ```bash
-sudo apt install granite gtksourceview-3.0 libjson-glib libgee-0.8 meson vala
+sudo apt install libgranite-dev libgtksourceview-3.0-dev libjson-glib-dev libgee-0.8-dev meson vala flatpak-builder
 ```
 
-Then simply clone this repo / download and unzip the zip, then:
+Then simply clone this repo / download+unzip the archive
+
+Then open a terminal in the new folder containing this README and run
 
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yaml
