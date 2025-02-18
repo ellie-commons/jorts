@@ -243,67 +243,67 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Ten good looking themes with soft transitions"
-msgstr ""
+msgstr "Zehn gut aussehende Themen mit weichen Übergängen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:12
 msgid "Striving to keep it cute, pretty, simple, modern, light"
-msgstr ""
+msgstr "Niedlich, hübsch, einfach, modern, leicht"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
-msgstr ""
+msgstr "Unterstützt Rückgängig, Wiederherstellen (Strg+Z, Strg+Umschalt+Z)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 msgid "Stella - Teamcons"
-msgstr ""
+msgstr "Stella - Teamcons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
 msgid "Release: Slate And Bubblegum"
-msgstr ""
+msgstr "Version: Schiefer und Bubblegum"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:40
 msgid "Old Notejot version and UI revived in a new project"
-msgstr ""
+msgstr "Alte Notejot-Version und UI in einem neuen Projekt wiederbelebt"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:41
 msgid "The app is now named Jorts. You however cannot wear it"
-msgstr ""
+msgstr "Die App heißt jetzt Jorts. Man kann sie aber nicht tragen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 msgid "It builds for flatpak now"
-msgstr ""
+msgstr "Es wird jetzt für Flatpak gebaut“"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Closer to current elementary OS Stylesheet and named colours"
-msgstr ""
+msgstr "Näher am aktuellen elementaren OS Stylesheet und benannten Farben"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Also more colors than Notejot had"
-msgstr ""
+msgstr "Auch mehr Farben als Notejot hatte"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Better adapted to the way Wayland works"
-msgstr ""
+msgstr "Besser angepasst an die Arbeitsweise von Wayland"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "Smooth transition when changing theme"
-msgstr ""
+msgstr "Fließender Übergang beim Wechsel des Themes"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
 msgid "New stickies have random colour"
-msgstr ""
+msgstr "Neue Haftnotizen haben eine zufällige Farbe"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
 msgid "New stickies have a random fun little title"
-msgstr ""
+msgstr "Neue Haftnotizen haben einen zufälligen, lustigen kleinen Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
 msgid "Storage system rebuilt from the ground up"
-msgstr ""
+msgstr "Speichersystem von Grund auf neu aufgebaut"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
 msgid "Some initial translations :3"
-msgstr ""
+msgstr "Einige erste Übersetzungen :3"
 
 #~ msgid "New note"
 #~ msgstr "Neue Notiz"

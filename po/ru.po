@@ -1,305 +1,302 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Russian translations for package io.github.ellie_commons.jorts.
+# Copyright (C) 2025 THE io.github.ellie_commons.jorts'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the io.github.ellie_commons.jorts package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Leo <lenemter@gmail.com>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 20:33+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt_br\n"
+"POT-Creation-Date: 2025-02-17 19:25+0100\n"
+"PO-Revision-Date: 2025-02-17 22:17+0300\n"
+"Last-Translator: Leo <lenemter@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/Widgets/EditableLabel.vala:94
 msgid "Edit title"
-msgstr "Editar título"
+msgstr "Редактировать название"
 
 #. Choose theme section
 #: src/Widgets/SettingsPopover.vala:50
 msgid "Sticky Note Colour"
-msgstr "Cor da nota adesiva"
+msgstr "Цвет заметки"
 
 #: src/Widgets/SettingsPopover.vala:53
 msgid "Blueberry"
-msgstr "Mirtilo"
+msgstr "Черничный"
 
 #: src/Widgets/SettingsPopover.vala:54
 msgid "Lime"
-msgstr "Lima"
+msgstr "Лаймовый"
 
 #: src/Widgets/SettingsPopover.vala:55
 msgid "Mint"
-msgstr "Hortelã"
+msgstr "Мятный"
 
 #: src/Widgets/SettingsPopover.vala:56
 msgid "Banana"
-msgstr "Banana"
+msgstr "Банановый"
 
 #: src/Widgets/SettingsPopover.vala:57
 msgid "Strawberry"
-msgstr "Morango"
+msgstr "Клубничный"
 
 #: src/Widgets/SettingsPopover.vala:58
 msgid "Orange"
-msgstr "Laranja"
+msgstr "Апельсиновый"
 
 #: src/Widgets/SettingsPopover.vala:59
 msgid "Bubblegum"
-msgstr "Chiclete"
+msgstr "Бубльгумовый"
 
 #: src/Widgets/SettingsPopover.vala:60
 msgid "Grape"
-msgstr "Uva"
+msgstr "Виноградный"
 
 #: src/Widgets/SettingsPopover.vala:61
 msgid "Latte"
-msgstr "Leite"
+msgstr "Латте"
 
 #: src/Widgets/SettingsPopover.vala:62
 msgid "Cocoa"
-msgstr "Cacau"
+msgstr "Какао"
 
 #: src/Widgets/SettingsPopover.vala:63
 msgid "Slate"
-msgstr "Ardósia"
+msgstr "Каменно-серый"
 
 #: src/MainWindow.vala:133
 msgid "New sticky note (Ctrl+N)"
-msgstr "Nova nota adesiva (Ctrl+N)"
+msgstr "Новая заметка (Ctrl+N)"
 
 #: src/MainWindow.vala:138
 msgid "Delete sticky note (Ctrl+W)"
-msgstr "Excluir nota adesiva (Ctrl+W)"
+msgstr "Удалить заметку (Ctrl+W)"
 
 #: src/MainWindow.vala:150
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Настройки"
 
 #: src/Services/Utils.vala:57
 msgid "All my very best friends"
-msgstr ""
+msgstr "Мои лучшие друзья"
 
 #: src/Services/Utils.vala:58
 msgid "My super good secret recipe"
-msgstr ""
+msgstr "Мой супер секретный рецепт"
 
 #: src/Services/Utils.vala:59
 msgid "My todo list"
-msgstr ""
+msgstr "Список дел"
 
 #: src/Services/Utils.vala:60
 msgid "Super secret to not tell anyone"
-msgstr ""
+msgstr "Секрет, никому не показывать"
 
 #: src/Services/Utils.vala:61
 msgid "My grocery list"
-msgstr ""
+msgstr "Список покупок"
 
 #: src/Services/Utils.vala:62
 msgid "Random shower thoughts"
-msgstr ""
+msgstr "Мои мысли в душе"
 
 #: src/Services/Utils.vala:63
 msgid "My fav fanfics"
-msgstr ""
+msgstr "Мой любимый фанфик"
 
 #: src/Services/Utils.vala:64
 msgid "My fav dinosaurs"
-msgstr ""
+msgstr "Мои любимые динозавры"
 
 #: src/Services/Utils.vala:65
 msgid "My evil mastermind plan"
-msgstr ""
+msgstr "Мой гениальный план"
 
 #: src/Services/Utils.vala:66
 msgid "What made me smile today"
-msgstr ""
+msgstr "Что меня сегодня порадовало"
 
 #: src/Services/Utils.vala:67
 msgid "Hello world!"
-msgstr ""
+msgstr "Привет, мир!"
 
 #: src/Services/Utils.vala:68
 msgid "New sticky, new me"
-msgstr ""
+msgstr "Новая заметка"
 
 #: src/Services/Utils.vala:69
 msgid "Hidden pirate treasure"
-msgstr ""
+msgstr "Спрятанное сокровище"
 
 #: src/Services/Utils.vala:70
 msgid "To not forget, ever"
-msgstr ""
+msgstr "Чтобы никогда не забыть"
 
 #: src/Services/Utils.vala:71
 msgid "Dear Diary,"
-msgstr ""
+msgstr "Дорогой дневник,"
 
 #: src/Services/Utils.vala:72
 msgid "Hi im a square"
-msgstr ""
+msgstr "Привет, я квадратик"
 
 #: src/Services/Utils.vala:73
 msgid "Have a nice day! :)"
-msgstr ""
+msgstr "Хорошего дня! :)"
 
 #: src/Services/Utils.vala:74
 msgid "My meds schedule"
-msgstr ""
+msgstr "Расписание приёма лекарств"
 
 #: src/Services/Utils.vala:75
 msgid "Household chores"
-msgstr ""
+msgstr "Домашние обязанности"
 
 #: src/Services/Utils.vala:76
 msgid "Ode to my cat"
-msgstr ""
+msgstr "Ода моему коту"
 
 #: src/Services/Utils.vala:77
 msgid "My dogs favourite toys"
-msgstr ""
+msgstr "Любимые игрушки моей собаки"
 
 #: src/Services/Utils.vala:78
 msgid "How cool my birds are"
-msgstr ""
+msgstr "Какие классные у меня птички"
 
 #: src/Services/Utils.vala:79
 msgid "Suspects in the Last Cookie affair"
-msgstr ""
+msgstr "Кто взял последнюю печеньку"
 
 #: src/Services/Utils.vala:80
 msgid "Words my parrots know"
-msgstr ""
+msgstr "Слова, которые знают мои попугаи"
 
 #: src/Services/Utils.vala:81
 msgid "Cool and funny compliments to give out"
-msgstr ""
+msgstr "Список комплиментов"
 
 #: src/Services/Utils.vala:82
 msgid "Ok, listen here,"
-msgstr ""
+msgstr "Слушай сюда,"
 
 #: src/Services/Utils.vala:83
 msgid "My dream Pokemon team"
-msgstr ""
+msgstr "Моя команда Покемонов"
 
 #: src/Services/Utils.vala:84
 msgid "My little notes"
-msgstr ""
+msgstr "Моя маленькая заметка"
 
 #: src/Services/Utils.vala:85
 msgid "Surprise gift list"
-msgstr ""
+msgstr "Список подарков"
 
 #: src/Services/Utils.vala:86
 msgid "Brainstorming notes"
-msgstr ""
+msgstr "Брейншторминг"
 
 #: src/Services/Utils.vala:87
 msgid "To bring to the party"
-msgstr ""
+msgstr "Что я надену"
 
 #: src/Services/Utils.vala:88
 msgid "My amazing mixtape"
-msgstr ""
+msgstr "Мой микстейп"
 
 #: src/Services/Utils.vala:89
 msgid "Napkin scribbles"
-msgstr ""
+msgstr "Каракули на салфетке"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:6
 msgid "Jorts"
-msgstr ""
+msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:7
 msgid ""
 "Neither jeans nor shorts, just like jorts. A sticky notes app for elementary "
 "OS"
-msgstr ""
-"Nem jeans nem bermuda, assim como jorts. Um aplicativo de notas adesivas "
-"para o ensino elementary OS"
+msgstr "Приложение для заметок, созданное для elementary OS"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:7
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr ""
+msgstr "text;plain;plaintext;notepad;notes;sticky;post-it;текст;блокнот;заметка;заметки;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:16
 msgid "New sticky note"
-msgstr "Nova nota adesiva"
+msgstr "Новая заметка"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
 msgid "A colourful little sticky notes utility, for your thoughts"
-msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
+msgstr "Маленькая красочная программа для заметок"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Ten good looking themes with soft transitions"
-msgstr ""
+msgstr "Десять изящных тем с плавными переходами"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:12
 msgid "Striving to keep it cute, pretty, simple, modern, light"
-msgstr ""
+msgstr "Милое, красивое, простое, современное и лёгкое"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
-msgstr ""
+msgstr "Поддержка отмены, повтора (Ctrl+Z, Ctrl+Shift+Z)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 msgid "Stella - Teamcons"
-msgstr ""
+msgstr "Stella - Teamcons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
 msgid "Release: Slate And Bubblegum"
-msgstr ""
+msgstr "Появление новых цветов: бубльгумового и каменно-серого"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:40
 msgid "Old Notejot version and UI revived in a new project"
-msgstr ""
+msgstr "Перезапуск приложения Notejot с новым интерфейсом"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:41
 msgid "The app is now named Jorts. You however cannot wear it"
-msgstr ""
+msgstr "Переименовано в Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 msgid "It builds for flatpak now"
-msgstr ""
+msgstr "Поддержка Flatpak"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Closer to current elementary OS Stylesheet and named colours"
-msgstr ""
+msgstr "Приближен к современному внешнему виду elementary OS"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Also more colors than Notejot had"
-msgstr ""
+msgstr "Больше цветов"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Better adapted to the way Wayland works"
-msgstr ""
+msgstr "Улучшена поддержка Wayland"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "Smooth transition when changing theme"
-msgstr ""
+msgstr "Плавный переход при смене темы"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
 msgid "New stickies have random colour"
-msgstr ""
+msgstr "У новых заметок выбирается случайный цвет"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
 msgid "New stickies have a random fun little title"
-msgstr ""
+msgstr "У новых заметок выбирается случайные, весёлые названия"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
 msgid "Storage system rebuilt from the ground up"
-msgstr ""
+msgstr "Сохранения были переписаны с нуля"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
 msgid "Some initial translations :3"
-msgstr ""
+msgstr "Новые переводы :3"
