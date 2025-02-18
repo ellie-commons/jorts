@@ -65,7 +65,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         //TODO: Multiline
         var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
-        
         // GTK4: append
         color_button_box.pack_start (color_button_blueberry, false, true, 0);
         color_button_box.pack_start (color_button_mint, false, true, 0);
@@ -128,8 +127,5 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_slate.clicked.connect (() => {
             this.theme_changed("SLATE");
         });
-
-
     }
-
 }

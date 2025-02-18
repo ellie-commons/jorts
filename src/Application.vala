@@ -81,7 +81,7 @@ namespace jorts {
         // Either show all windows, or rebuild from storage
         protected override void activate () {
             // Test Lang
-            //GLib.Environment.set_variable ("LANGUAGE", "fr", true);
+            //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
 
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
@@ -103,8 +103,6 @@ namespace jorts {
                     print("Loaded: " + data.title + "\n");
                     this.create_note(data);
                 }
-                
-
             }
                     
 	}
@@ -133,9 +131,7 @@ namespace jorts {
         jorts.Stash.check_if_stash ();
         string json_data = jorts.Stash.jsonify (open_notes);
         jorts.Stash.overwrite_stash (json_data);
-}
-
-
+    }
 
         protected override int command_line (ApplicationCommandLine command_line) {
             var context = new OptionContext ("File");

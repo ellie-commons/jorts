@@ -19,13 +19,35 @@
 */
 
 /*
-There is only the generate_css() command, but it is a beefy one
-At startup it is used several times to generate each theme.
-Then notes are themed by removing CSS theme classes and then slapping a new one
+
+themearray
+--> Global array of all the themes
+
+generate_css(theme)
+TODO: this would need to be static
+
+init_all_themes()
+--> generate_css for everything in themearray
+
 */
 
 
 namespace jorts.Themer {
+
+    // As seen on TV!
+    const string[] themearray = {
+        "BLUEBERRY",
+        "MINT",
+        "LIME",
+        "BANANA",
+        "ORANGE",
+        "STRAWBERRY",
+        "BUBBLEGUM",
+        "GRAPE",
+        "LATTE",
+        "COCOA",
+        "SLATE"
+    };
 
     // Here we go
     public static string generate_css (string theme) {
@@ -94,10 +116,8 @@ namespace jorts.Themer {
         return style;
     }
 
-
-
     public static void init_all_themes() {
-        foreach (unowned var theme in jorts.Utils.themearray) {
+        foreach (unowned var theme in jorts.Themer.themearray) {
             // Palette color
               var theme_provider = new Gtk.CssProvider ();
               var style = jorts.Themer.generate_css (theme);
@@ -117,6 +137,4 @@ namespace jorts.Themer {
               );
           }
     }
-
-
 }

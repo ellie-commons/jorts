@@ -20,34 +20,21 @@
 
 /* CONTENT
 
-Global array of all the themes
 random_theme()
-random_title()
-random_note(uid)
+TODO: take a theme as argument to skip
 
+random_title()
+
+random_note(uid)
+TODO: will need to know the theme to skip
 
 */
 
 namespace jorts.Utils {
 
-    // As seen on TV!
-    const string[] themearray = {
-            "BLUEBERRY",
-            "MINT",
-            "LIME",
-            "BANANA",
-            "ORANGE",
-            "STRAWBERRY",
-            "BUBBLEGUM",
-            "GRAPE",
-            "LATTE",
-            "COCOA",
-            "SLATE"
-    };
-
     // Spits out a random theme for a new note
     public string random_theme () {        
-        return jorts.Utils.themearray[Random.int_range (0,(jorts.Utils.themearray.length - 1))];
+        return jorts.Themer.themearray[Random.int_range (0,(jorts.Themer.themearray.length - 1))];
 
     }
 
@@ -98,6 +85,4 @@ namespace jorts.Utils {
         noteData randnote = new noteData( randtitle, randtheme, "", 100, 330, 270);
         return randnote; 
     }
-
-
 }

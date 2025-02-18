@@ -18,6 +18,11 @@
 * Boston, MA 02110-1301 USA
 */
 
+/*
+I just dont wanna rewrite the same button over and over
+
+*/
+
 public class jorts.ColorPill : Gtk.Button {
 
         public new bool has_focus = false;
@@ -30,6 +35,4 @@ public class jorts.ColorPill : Gtk.Button {
                 this.set_size_request (24, 24);
                 this.set_tooltip_text (tooltip);
         }
-
-
 }

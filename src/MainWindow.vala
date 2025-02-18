@@ -72,7 +72,6 @@ namespace jorts {
             { ACTION_REDO,      action_delete   }
         };
 
-
         // Init or something
         public MainWindow (Gtk.Application app, noteData data) {
             Object (application: app);
@@ -90,7 +89,6 @@ namespace jorts {
 
             // add required base classes
             this.get_style_context().add_class("rounded");
-
 
 
             // ================================================================ //
@@ -160,8 +158,6 @@ namespace jorts {
             // GTK4: Append
             actionbar.pack_end (app_button);
 
-
-
             // Define the grid 
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
@@ -197,9 +193,6 @@ namespace jorts {
                 this.content = view.buffer.get_text (start, end, true);
             });
 
-
-
-            
             // Undo Redo shit
             key_press_event.connect ((e) => {
                 uint keycode = e.hardware_keycode;
@@ -221,7 +214,6 @@ namespace jorts {
         public new void set_title (string title) {
             this.title = title;
         }
-
 
         // Package the note into a noteData and pass it back
         // NOTE: We cannot access the buffer if the window is closed, leading to content loss
@@ -267,8 +259,6 @@ namespace jorts {
             buffer.redo ();
         }
 
-
-
         // TODO: Understand this
 #if VALA_0_42
         protected bool match_keycode (uint keyval, uint code) {
@@ -302,6 +292,4 @@ namespace jorts {
             ((Application)this.application).save_to_stash ();
         }
     }
-
-
 }

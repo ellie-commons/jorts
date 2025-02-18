@@ -22,22 +22,19 @@
 check_if_stash()
 --> Check if we have a data directory. If not create one.
 
-count_saved_notes(Note)
---> return a number
-----> counts the number of files in the data dir (theyre all saved_state_id.json)
-----> it also reorders the storage from 0 to x to make keeping track of uid easier
+jsonify(Gee.ArrayList<MainWindow>)
+--> take all note instances, and gulps back a giant json string
+
+overwrite_stash(json_string)
+--> Dump all it has in a saved_state.json
 
 save_to_stash(Note)
---> Dump all it has in a saved_state_uid.json
+--> Dump all it has in a saved_state.json
 
-load_from_stash(uid)
---> loads saved note "uid" as note
+load_from_stash()
+--> loads the json file and parse it into a list of noteData
 
-nuke_from_stash(uid)
---> Delete saved_state_uid.json
 */
-
-
 
 namespace jorts.Stash {
 
@@ -56,14 +53,13 @@ namespace jorts.Stash {
 
 	}
 
-
     // Loop through the list of windows and convert it into a giant json string
     public string jsonify (Gee.ArrayList<MainWindow> notes) {
         Json.Builder builder = new Json.Builder ();
         builder.begin_array ();
         foreach (MainWindow note in notes) {
             noteData data = note.packaged ();
-            print("saving " + note.title + "\n");
+            //print("saving " + note.title_name + "\n");
 
 			// Lets fkin gooo
             builder.begin_object ();
