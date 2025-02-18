@@ -1,0 +1,22 @@
+id: io.github.ellie_commons.jorts
+runtime: io.elementary.Platform
+runtime-version: '8'
+sdk: io.elementary.Sdk
+command: io.github.ellie_commons.jorts
+finish-args:
+  - '--share=ipc'
+  - '--device=dri'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+modules:
+  - name: gtksourceview3
+    config-opts: ["--enable-gtk-doc=no"]
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz
+        sha256: 691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+  - name: jorts
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
