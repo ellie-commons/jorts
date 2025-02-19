@@ -74,37 +74,37 @@ namespace jorts.Themer {
                     );
             }
 
-            window.%s .sourceview text selection {
+            window.%s textview text selection {
                 color: shade(@%s_100, 1.88);
                 background-color: @%s_900;
             }
 
-            window.%s .titlebar,
-            window.%s .titlebar image,
-            window.%s .headertitle,
-            window.%s .actionbar,
-            window.%s .actionbar image {
+            window.%s titlebar,
+            window.%s titlebar image,
+            window.%s headertitle,
+            window.%s actionbar,
+            window.%s actionbar image {
                 color: @%s_900;
             }
 
-            window.%s .titlebar,
-            window.%s .sourceview,
-            window.%s .sourceview text {
+            window.%s titlebar,
+            window.%s textview,
+            window.%s textview text {
                 background-color: @%s_100;
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
             }
 
-            window.%s .editablelabel {
+            window.%s editablelabel {
                 color: @%s_900;
             }
 
-            window.%s:backdrop .sourceview text,
-            window.%s:backdrop .headertitle,
-            window.%s:backdrop .titlebar,
-            window.%s:backdrop .editablelabel,
-            window.%s:backdrop .actionbar,
-            window.%s:backdrop .actionbar image {
+            window.%s:backdrop textview text,
+            window.%s:backdrop headertitle,
+            window.%s:backdrop titlebar,
+            window.%s:backdrop editablelabel,
+            window.%s:backdrop actionbar,
+            window.%s:backdrop actionbar image {
                 color: shade(@%s_500, 0.77);
             }
 
@@ -124,14 +124,11 @@ namespace jorts.Themer {
 
               //print ("Generated: " + theme + "\n");
 
-              try {
-                  theme_provider.load_from_data (style, -1);
-              } catch (GLib.Error e) {
-                  warning ("Failed to parse css style : %s", e.message);
-              }
+            theme_provider.load_from_string (style);
 
-              Gtk.StyleContext.add_provider_for_screen (
-                  Gdk.Screen.get_default (),
+
+              Gtk.StyleContext.add_provider_for_display (
+                  Gdk.Display.get_default (),
                   theme_provider,
                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
               );

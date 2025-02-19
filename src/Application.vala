@@ -37,12 +37,12 @@ namespace jorts {
 
             // This is automatic in GTK4, so can be removed after porting
             var app_provider = new Gtk.CssProvider ();
-            app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
-            Gtk.StyleContext.add_provider_for_screen (
-                Gdk.Screen.get_default (),
-                app_provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
+              app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
+              Gtk.StyleContext.add_provider_for_display (
+                  Gdk.Display.get_default (),
+                  app_provider,
+                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+              );
 
             jorts.Themer.init_all_themes();
         }
@@ -145,7 +145,7 @@ namespace jorts {
         protected override int command_line (ApplicationCommandLine command_line) {
             var context = new OptionContext ("File");
             //context.add_main_entries (entries, Build.GETTEXT_PACKAGE);
-            context.add_group (Gtk.get_option_group (true));
+            //context.add_group (Gtk.get_option_group (true));
 
             string[] args = command_line.get_arguments ();
             int unclaimed_args;

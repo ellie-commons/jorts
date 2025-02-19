@@ -23,16 +23,25 @@ I just dont wanna rewrite the same button over and over
 
 */
 
-public class jorts.ColorPill : Gtk.Button {
+public class jorts.ColorPill : Gtk.CheckButton {
 
         public new bool has_focus = false;
         public new Gtk.Align halign = Gtk.Align.CENTER;
         public new string tooltip_text;
 
         public ColorPill (string tooltip, string colorclass) {
-                this.get_style_context().add_class("color-button");
-                this.get_style_context().add_class(colorclass);
+                this.add_css_class("color-button");
+                //this.add_css_class(colorclass);
+
+                this.add_css_class(colorclass);
+
                 this.set_size_request (24, 24);
                 this.set_tooltip_text (tooltip);
+                this.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
+                //this.add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
+                //this.add_css_class ("flat");
+
+                this.set_hexpand (false);
+                this.set_vexpand (false);
         }
 }
