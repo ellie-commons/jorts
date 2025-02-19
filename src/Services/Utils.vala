@@ -33,9 +33,18 @@ TODO: will need to know the theme to skip
 namespace jorts.Utils {
 
     // Spits out a random theme for a new note
-    public string random_theme () {        
-        return jorts.Themer.themearray[Random.int_range (0,(jorts.Themer.themearray.length - 1))];
+    // If there is the name of a string to skip, just skip it.
+    // Having an gee.arraylist defined from the start only causes issues
+    public string random_theme (string? skip_theme) {
+        Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
+        themes.add_all_array (jorts.Themer.themearray);
 
+        if (skip_theme != null) {
+            themes.remove(skip_theme);
+        }
+
+        var random_in_range = Random.int_range (0,(themes.size - 1));
+        return themes[random_in_range];
     }
 
     // Spits out a cute or funny random title for a new sticky note
@@ -79,9 +88,9 @@ namespace jorts.Utils {
     }
 
     // Spits out a fresh new note
-    public noteData random_note () {
+    public noteData random_note (string? skip_theme) {
         var randtitle = jorts.Utils.random_title();
-        string randtheme = jorts.Utils.random_theme ();
+        string randtheme = jorts.Utils.random_theme (skip_theme);
         noteData randnote = new noteData( randtitle, randtheme, "", 100, 330, 270);
         return randnote; 
     }

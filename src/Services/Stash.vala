@@ -153,7 +153,7 @@ namespace jorts.Stash {
                 }
 
             } else {
-                noteData stored_note    = jorts.Utils.random_note();
+                noteData stored_note    = jorts.Utils.random_note(null);
                 stored_note.theme       = "BLUEBERRY" ;
                 loaded_data.add(stored_note);
             }

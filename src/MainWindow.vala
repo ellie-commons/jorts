@@ -53,7 +53,7 @@ namespace jorts {
         public int64 zoom;
 
         public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
-        //public Gtk.)EditableLabel label = new Gtk.EditableLabel();
+        //public Gtk.EditableLabel label = new Gtk.EditableLabel();
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -104,6 +104,7 @@ namespace jorts {
             label = new jorts.EditableLabel (this.title_name);
             header.set_custom_title(label);
             this.set_titlebar(header);
+            header.set_title (this.title_name);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow (null, null);
@@ -178,6 +179,11 @@ namespace jorts {
 
             // Save when user changes the label
             label.changed.connect (() => {
+
+                this.title_name = label.title.get_label ();
+                header.set_title (this.title_name);
+                this.set_title(this.title_name);
+
                 ((Application)this.application).save_to_stash ();
             });
 
@@ -192,6 +198,10 @@ namespace jorts {
                 view.buffer.get_bounds (out start, out end);
                 this.content = view.buffer.get_text (start, end, true);
             });
+
+
+
+
 
             // Undo Redo shit
             key_press_event.connect ((e) => {
@@ -237,7 +247,7 @@ namespace jorts {
             if ((int)data.width != 0 && (int)data.height != 0) {
                 this.resize ((int)data.width, (int)data.height);
             }
-            set_title (this.title_name);
+            this.set_title (this.title_name);
         }
 
 

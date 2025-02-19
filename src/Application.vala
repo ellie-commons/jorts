@@ -93,12 +93,14 @@ namespace jorts {
 
                 Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
 
+                // If we load nothing: Fallback to a random with blue theme as first
                 if (loaded_data.size == 0 ) {
-                    noteData stored_note    = jorts.Utils.random_note();
+                    noteData stored_note    = jorts.Utils.random_note(null);
                     stored_note.theme       = "BLUEBERRY" ;
                     loaded_data.add(stored_note);
                 }
 
+                // Load everything we have
                 foreach (noteData data in loaded_data) {
                     print("Loaded: " + data.title + "\n");
                     this.create_note(data);
@@ -109,13 +111,20 @@ namespace jorts {
 
 
     // create new instances of MainWindow
+    // Either it is called with data, and we load it in the instance
+    // Or there is no data, but Activate guaranteed there is at least one note
+    // So we create a new one and skip the last theme
+    // Else we could get by randomness the same theme thrice in a row
 	public void create_note(noteData? data) {
         MainWindow note;
         if (data != null) {
             note = new MainWindow(this, data);
         }
         else {
-            var random_data = jorts.Utils.random_note();
+            MainWindow last_note = this.open_notes.last ();
+            string skip_theme = last_note.theme;
+
+            var random_data = jorts.Utils.random_note(skip_theme);
             note = new MainWindow(this, random_data);
         }
         this.open_notes.add(note);
