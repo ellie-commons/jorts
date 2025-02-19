@@ -112,7 +112,6 @@ namespace jorts {
 
             buffer = new Gtk.TextBuffer (null);
             view = new Gtk.TextView.with_buffer (buffer);
-            view.add_css_class ("sourceview");
 
             view.bottom_margin = 10;
             view.buffer.text = this.content;
@@ -128,18 +127,24 @@ namespace jorts {
 
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
-
             actionbar.set_hexpand (true);
             
             var new_item = new Gtk.Button ();
             new_item.tooltip_text = (_("New sticky note (Ctrl+N)"));
             new_item.set_icon_name ("list-add-symbolic");
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
+            new_item.width_request = 24;
+            new_item.height_request = 24;
+
+
 
             var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
             delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
+
+            delete_item.width_request = 24;
+            delete_item.height_request = 24;
 
             var popover = new SettingsPopover ();
             popover.theme_changed.connect ((selected) => {
@@ -151,6 +156,9 @@ namespace jorts {
             app_button.tooltip_text = (_("Settings"));
             app_button.set_icon_name("open-menu-symbolic");
             app_button.popover = popover;
+
+            app_button.width_request = 24;
+            app_button.height_request = 24;
 
             // GTK4: append
             actionbar.pack_start (new_item);

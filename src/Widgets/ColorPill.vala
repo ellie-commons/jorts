@@ -30,16 +30,15 @@ public class jorts.ColorPill : Gtk.CheckButton {
         public new string tooltip_text;
 
         public ColorPill (string tooltip, string colorclass) {
-                this.add_css_class("color-button");
-                //this.add_css_class(colorclass);
-
+                this.add_css_class("colorpill");
                 this.add_css_class(colorclass);
 
+                // 24 originally
                 this.set_size_request (24, 24);
                 this.set_tooltip_text (tooltip);
-                this.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
-                //this.add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-                //this.add_css_class ("flat");
+                
+                //this.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
+                this.add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
 
                 this.set_hexpand (false);
                 this.set_vexpand (false);

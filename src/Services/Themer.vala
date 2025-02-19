@@ -44,7 +44,7 @@ namespace jorts.Themer {
         "STRAWBERRY",
         "BUBBLEGUM",
         "GRAPE",
-        "LATTE",
+        //"LATTE",
         "COCOA",
         "SLATE"
     };

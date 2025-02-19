@@ -52,45 +52,30 @@ public class jorts.SettingsPopover : Gtk.Popover {
   
         // Choose theme section
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
-        color_button_label.add_css_class(Granite.STYLE_CLASS_H4_LABEL);
 
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
         var color_button_lime = new ColorPill (_("Lime"), "lime");
-        color_button_lime.set_group (color_button_blueberry);
-
         var color_button_mint = new ColorPill (_("Mint"), "mint");
-        color_button_mint.set_group (color_button_blueberry);
-
         var color_button_banana = new ColorPill (_("Banana"), "banana");
-        color_button_banana.set_group (color_button_blueberry);
-
         var color_button_strawberry = new ColorPill (_("Strawberry"), "strawberry");
-        color_button_strawberry.set_group (color_button_blueberry);
-
-
         var color_button_orange = new ColorPill (_("Orange"), "orange");
-        color_button_orange.set_group (color_button_blueberry);
-
-
         var color_button_bubblegum = new ColorPill (_("Bubblegum"), "bubblegum");
-        color_button_bubblegum.set_group (color_button_blueberry);
-
-
         var color_button_grape = new ColorPill (_("Grape"),"grape");
-        color_button_grape.set_group (color_button_blueberry);
-
-
-        var color_button_latte = new ColorPill (_("Latte"),"latte");
-        color_button_latte.set_group (color_button_blueberry);
-
-
+        //var color_button_latte = new ColorPill (_("Latte"),"latte");
         var color_button_cocoa = new ColorPill (_("Cocoa"), "cocoa");
-        color_button_cocoa.set_group (color_button_blueberry);
-
-
         var color_button_slate = new ColorPill (_("Slate"),"slate");
+
+        color_button_lime.set_group (color_button_blueberry);
+        color_button_mint.set_group (color_button_blueberry);
+        color_button_banana.set_group (color_button_blueberry);
+        color_button_strawberry.set_group (color_button_blueberry);
+        color_button_orange.set_group (color_button_blueberry);
+        color_button_bubblegum.set_group (color_button_blueberry);
+        color_button_grape.set_group (color_button_blueberry);
+        //color_button_latte.set_group (color_button_blueberry);
+        color_button_cocoa.set_group (color_button_blueberry);
         color_button_slate.set_group (color_button_blueberry);
 
 
@@ -98,8 +83,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             accessible_role = Gtk.AccessibleRole.LIST
         };
-
-
 
         // GTK4: append
         color_button_box.append (color_button_blueberry);
@@ -110,7 +93,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_box.append (color_button_strawberry);
         color_button_box.append (color_button_bubblegum);
         color_button_box.append (color_button_grape);
-        color_button_box.append (color_button_latte);
+        //color_button_box.append (color_button_latte);
         color_button_box.append (color_button_cocoa);
         color_button_box.append (color_button_slate);
 
@@ -152,9 +135,9 @@ public class jorts.SettingsPopover : Gtk.Popover {
             this.theme_changed("GRAPE");
         });
 
-        color_button_latte.toggled.connect (() => {
-            this.theme_changed("LATTE");
-        });
+        //  color_button_latte.toggled.connect (() => {
+        //      this.theme_changed("LATTE");
+        //  });
 
         color_button_cocoa.toggled.connect (() => {
             this.theme_changed("COCOA");
