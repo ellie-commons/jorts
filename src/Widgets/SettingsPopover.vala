@@ -34,6 +34,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
     public signal void theme_changed (string selected);
 
     public SettingsPopover (string theme) {
+        this.set_position (Gtk.PositionType.TOP);
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
