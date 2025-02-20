@@ -47,18 +47,16 @@ executable(
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
-    'src/Widgets/EditableLabel.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
-        dependency('granite'),
+        dependency('granite-7'),
         dependency('gobject-2.0'),
-        dependency('gtksourceview-3.0'),
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
-        dependency('gtk+-3.0')
+        dependency('gtk4')
     ],
     install : true
 )

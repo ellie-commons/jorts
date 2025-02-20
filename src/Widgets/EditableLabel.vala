@@ -19,7 +19,7 @@
 */
 
 // TODO: GTK4: This will all go away because gtk4 has an editablelabel
-public class jorts.EditableLabel : Gtk.EventBox {
+public class jorts.EditableLabel : Gtk.Box {
     public signal void changed (string new_title);
     public Gtk.Label title;
     private Gtk.Entry entry;
@@ -55,48 +55,25 @@ public class jorts.EditableLabel : Gtk.EventBox {
 
     public EditableLabel (string? title_name) {
         valign = Gtk.Align.CENTER;
-        events |= Gdk.EventMask.ENTER_NOTIFY_MASK;
-        events |= Gdk.EventMask.LEAVE_NOTIFY_MASK;
-        events |= Gdk.EventMask.BUTTON_PRESS_MASK;
+        //  events |= Gdk.EventMask.ENTER_NOTIFY_MASK;
+        //  events |= Gdk.EventMask.LEAVE_NOTIFY_MASK;
+        //  events |= Gdk.EventMask.BUTTON_PRESS_MASK;
 
         this.get_style_context().add_class("editablelabel");
-
-        //string style = null;
-/*          var css_provider = new Gtk.CssProvider();
-        style = """
-        .jorts-label {
-            font-weight: 700;
-            font-size: 0.88em;
-        }
-        .jorts-label:backdrop {
-            color: mix (@textColorPrimary, @colorPrimary, 0.3);
-        }""";
-
-        try {
-            css_provider.load_from_data(style, -1);
-        } catch (GLib.Error e) {
-            warning ("Failed to parse css style : %s", e.message);
-        }  */
-
-/*          Gtk.StyleContext.add_provider_for_screen(
-            Gdk.Screen.get_default(),
-            css_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        );  */
 
         title = new Gtk.Label (title_name);
         title.ellipsize = Pango.EllipsizeMode.END;
         title.hexpand = true;
 
         var edit_button = new Gtk.Button ();
-        edit_button.image = new Gtk.Image.from_icon_name ("edit-symbolic", Gtk.IconSize.MENU);
-        edit_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        edit_button.set_icon_name ("edit-symbolic");
+        edit_button.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
         edit_button.set_tooltip_text (_("Edit title"));
 
         var button_revealer = new Gtk.Revealer ();
         button_revealer.valign = Gtk.Align.CENTER;
         button_revealer.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
-        button_revealer.add (edit_button);
+        button_revealer.set_child (edit_button);
 
         var dummy_spacer = new Gtk.Grid ();
 
@@ -108,22 +85,22 @@ public class jorts.EditableLabel : Gtk.EventBox {
         grid.valign = Gtk.Align.CENTER;
         grid.column_spacing = 6;
         grid.hexpand = false;
-        grid.add (dummy_spacer);
-        grid.add (title);
-        grid.add (button_revealer);
+        grid.attach (dummy_spacer, 0, 0, 0, 0);
+        grid.attach (title, 0, 0, 0, 0);
+        grid.attach (button_revealer, 0, 0, 0, 0);
 
         entry = new Gtk.Entry ();
         entry.xalign = 0.5f;
 
         var entry_style_context = entry.get_style_context ();
-        entry_style_context.add_class (Gtk.STYLE_CLASS_FLAT);
-        entry_style_context.add_class (Gtk.STYLE_CLASS_TITLE);
+        entry_style_context.add_class (Granite.STYLE_CLASS_FLAT);
+        entry_style_context.add_class (Granite.STYLE_CLASS_TITLE);
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
-        stack.add (grid);
-        stack.add (entry);
-        add (stack);
+        stack.add_child(grid);
+        stack.add_child(entry);
+        this.append(stack);
 
         enter_notify_event.connect ((event) => {
             if (event.detail != Gdk.NotifyType.INFERIOR) {

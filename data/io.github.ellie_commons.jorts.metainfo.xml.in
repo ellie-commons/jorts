@@ -39,9 +39,10 @@
                 <ul>
                     <li>Old Notejot version and UI revived in a new project</li>
                     <li>The app is now named Jorts. You however cannot wear it</li>
-                    <li>It builds for flatpak now</li>
                     <li>Closer to current elementary OS Stylesheet and named colours</li>
                     <li>Also more colors than Notejot had</li>
+                    <li>It builds for flatpak now</li>
+                    <li>Also on GTK4</li>
                     <li>Better adapted to the way Wayland works</li>
                     <li>Smooth transition when changing theme</li>
                     <li>New stickies have random colour</li>

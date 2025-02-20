@@ -42,8 +42,8 @@ namespace jorts {
 
     // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
-        private new Gtk.SourceBuffer buffer;
-        private Gtk.SourceView view;
+        private new Gtk.TextBuffer buffer;
+        private Gtk.TextView view;
         private Gtk.HeaderBar header;
         private Gtk.ActionBar actionbar;
 
@@ -52,7 +52,7 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        public jorts.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
+        public Gtk.EditableLabel notetitle; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
 
         public SimpleActionGroup actions { get; construct; }
@@ -88,58 +88,72 @@ namespace jorts {
             this.update_theme(this.theme);
 
             // add required base classes
-            this.get_style_context().add_class("rounded");
+            this.add_css_class("rounded");
 
 
             // ================================================================ //
             // HEADER            // Define the header
             header = new Gtk.HeaderBar();
-            header.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            header.get_style_context().add_class("headertitle");
-            header.has_subtitle = false;
-            header.set_show_close_button (true);
+            header.add_css_class ("flat");
+            header.add_css_class("headertitle");
+            //header.has_subtitle = false;
+            header.set_show_title_buttons (true);
             header.decoration_layout = "close:";
 
+
+
             // Defime the label you can edit. Which is editable.
-            label = new jorts.EditableLabel (this.title_name);
-            header.set_custom_title(label);
+            notetitle = new Gtk.EditableLabel (this.title_name);
+            notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+            notetitle.halign = Gtk.Align.CENTER;
+
+
+            
+            header.set_title_widget(notetitle);
             this.set_titlebar(header);
-            header.set_title (this.title_name);
+            //header.title (this.title_name);
 
             // Define the text thingy
-            var scrolled = new Gtk.ScrolledWindow (null, null);
+            var scrolled = new Gtk.ScrolledWindow ();
             scrolled.set_size_request (330,270);
 
-            buffer = new Gtk.SourceBuffer (null);
-            buffer.set_highlight_matching_brackets (false);
-            view = new Gtk.SourceView.with_buffer (buffer);
+            buffer = new Gtk.TextBuffer (null);
+            view = new Gtk.TextView.with_buffer (buffer);
+
             view.bottom_margin = 10;
             view.buffer.text = this.content;
-            view.expand = true;
             view.left_margin = 10;
-            view.margin = 2;
+            //view.margin .margin = 2;
             view.right_margin = 10;
             view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
             view.top_margin = 10;
-            scrolled.add (view);
-            this.show_all();
+            view.set_hexpand (true);
+            view.set_vexpand (true);
+            scrolled.set_child (view);
+            this.show();
 
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
-            actionbar.get_style_context().add_class("actionbar");
+            actionbar.set_hexpand (true);
             
             var new_item = new Gtk.Button ();
             new_item.tooltip_text = (_("New sticky note (Ctrl+N)"));
-            new_item.set_image (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            new_item.set_icon_name ("list-add-symbolic");
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
+            new_item.width_request = 32;
+            new_item.height_request = 32;
+
+
 
             var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
-            delete_item.set_image (new Gtk.Image.from_icon_name ("edit-delete-symbolic", Gtk.IconSize.SMALL_TOOLBAR));
+            delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
-            delete_item.get_style_context ().add_class ("trashcan");
 
-            var popover = new SettingsPopover ();
+            delete_item.width_request = 32;
+            delete_item.height_request = 32;
+
+            var popover = new SettingsPopover (this.theme);
             popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
@@ -147,8 +161,11 @@ namespace jorts {
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
             app_button.tooltip_text = (_("Settings"));
-            app_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            app_button.set_icon_name("open-menu-symbolic");
             app_button.popover = popover;
+
+            app_button.width_request = 32;
+            app_button.height_request = 32;
 
             // GTK4: append
             actionbar.pack_start (new_item);
@@ -162,62 +179,44 @@ namespace jorts {
             // Define the grid 
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
-            grid.expand = true;
-            grid.add (scrolled);
-            grid.add (actionbar);
-            grid.show_all ();
-            this.add (grid);
+            //grid.expand = true;
+
+
+            grid.attach(scrolled, 0, 0, 1, 1);
+            grid.attach(actionbar, 0, 1, 1, 1);
+            grid.show ();
+            this.set_child (grid);
             
 
             // ================================================================ //
             // EVENTS            
             // Save when user focuses elsewhere
-            focus_out_event.connect (() => {
+            this.activate_focus.connect (() => {
                 ((Application)this.application).save_to_stash ();
-                return false;
             });
 
             // Save when user changes the label
-            label.changed.connect (() => {
+            notetitle.changed.connect (() => {
 
-                this.title_name = label.title.get_label ();
-                header.set_title (this.title_name);
+                this.title_name = notetitle.get_text ();
+                //header.set_title (this.title_name);
                 this.set_title(this.title_name);
 
                 ((Application)this.application).save_to_stash ();
             });
 
             // Save when the window thingy closed
-            this.destroy.connect (() => {
+            this.close_request.connect (() => {
                 ((Application)this.application).save_to_stash ();
+                return false;
             });            
 
             // Save when the text thingy has changed
-            view.buffer.changed.connect (() => {
-                Gtk.TextIter start,end;
-                view.buffer.get_bounds (out start, out end);
-                this.content = view.buffer.get_text (start, end, true);
-            });
-
-
-
-
-
-            // Undo Redo shit
-            key_press_event.connect ((e) => {
-                uint keycode = e.hardware_keycode;
-                if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
-                    if (match_keycode (Gdk.Key.z, keycode)) {
-                        action_undo ();
-                    }
-                }
-                if ((e.state & Gdk.ModifierType.CONTROL_MASK + Gdk.ModifierType.SHIFT_MASK) != 0) {
-                    if (match_keycode (Gdk.Key.z, keycode)) {
-                        action_redo ();
-                    }
-                }
-                return false;
-            });
+            //  view.buffer.changed.connect (() => {
+            //      Gtk.TextIter start,end;
+            //      view.buffer.get_bounds (out start, out end);
+            //      this.content = view.buffer.get_text (start, end, true);
+            //  });
         }
 
         // TITLE IS TITLE
@@ -230,8 +229,8 @@ namespace jorts {
         // Hence why we need to constantly save the buffer into this.content when changed
         public noteData packaged() {
             int width, height;
-            var current_title = label.title.get_label ();
-            this.get_size (out width, out height);
+            var current_title = notetitle.get_text ();
+            this.get_default_size(out width, out height);
             var data = new noteData(current_title, this.theme, this.content , 100, width, height );
             return data;
         }
@@ -243,10 +242,7 @@ namespace jorts {
             this.theme = data.theme;
             this.content = data.content;
             this.zoom = data.zoom;
-
-            if ((int)data.width != 0 && (int)data.height != 0) {
-                this.resize ((int)data.width, (int)data.height);
-            }
+            this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
         }
 
@@ -259,6 +255,7 @@ namespace jorts {
         private void action_delete () {
             ((Application)this.application).remove_note(this);
             this.close ();
+            this.destroy ();
         }
 
         private void action_undo () {
@@ -275,30 +272,30 @@ namespace jorts {
 #else
         protected bool match_keycode (int keyval, uint code) {
 #endif
-            Gdk.KeymapKey [] keys;
-            Gdk.Keymap keymap = Gdk.Keymap.get_for_display (Gdk.Display.get_default ());
-            if (keymap.get_entries_for_keyval (keyval, out keys)) {
-                foreach (var key in keys) {
-                    if (code == key.keycode)
-                        return true;
-                    }
-                }
+            //  Gdk.KeymapKey [] keys;
+            //  Gdk.Keymap keymap = Gdk.Keymap.get_for_display (Gdk.Display.get_default ());
+            //  if (keymap.get_entries_for_keyval (keyval, out keys)) {
+            //      foreach (var key in keys) {
+            //          if (code == key.keycode)
+            //              return true;
+            //          }
+            //      }
 
             return false;
         }
 
         // Note gets deleted
-        public override bool delete_event (Gdk.EventAny event) {
-            //((Application)this.application).save_to_stash ();
-            return false;
-        }
+        //  public override bool delete_event (Gdk.EventAny event) {
+        //      //((Application)this.application).save_to_stash ();
+        //      return false;
+        //  }
 
         // Strip old stylesheet, apply the new
         private void update_theme(string theme) {
             // in GTK4 we can replace this with setting css_classes
-            get_style_context().remove_class (this.theme);
+            remove_css_class (this.theme);
             this.theme = theme;
-            get_style_context().add_class (this.theme);
+            add_css_class (this.theme);
             ((Application)this.application).save_to_stash ();
         }
     }
