@@ -37,9 +37,9 @@ Main tasks are the tasks:
 - [ ] Do a first appcenter release
 - [ ] Static theming
 - [ ] Zoom: scroll to zoom, keep for next note
-- [ ] Detect hyperlinks and open in web browser
+- [x] Detect hyperlinks and open in web browser
 - [ ] Detect local links and open in files
-- [ ] Detect emails and open in Mail
+- [x] Detect emails and open in Mail
 - [ ] Improve a11y (contrast, zoom)
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
