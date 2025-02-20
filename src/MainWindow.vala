@@ -101,6 +101,7 @@ namespace jorts {
             notetitle.halign = Gtk.Align.CENTER;
             notetitle.set_hexpand (false);
             notetitle.set_vexpand (true);
+            notetitle.set_tooltip_text (_("Edit title"));
 
             header.set_title_widget(notetitle);
             this.set_titlebar(header);
@@ -201,7 +202,6 @@ namespace jorts {
             int width, height;
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
-            print(this.content);
             this.get_default_size(out width, out height);
             var data = new noteData(current_title, this.theme, this.content , 100, width, height );
             return data;

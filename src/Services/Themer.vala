@@ -83,7 +83,9 @@ namespace jorts.Themer {
             window.%s titlebar image,
             window.%s headertitle,
             window.%s actionbar,
-            window.%s actionbar image {
+            window.%s actionbar image,
+            window.%s windowcontrols,
+            window.%s windowcontrols image {
                 color: @%s_900;
             }
 
@@ -109,7 +111,9 @@ namespace jorts.Themer {
             window.%s:backdrop titlebar,
             window.%s:backdrop editablelabel,
             window.%s:backdrop actionbar,
-            window.%s:backdrop actionbar image {
+            window.%s:backdrop actionbar image,
+            window.%s:backdrop windowcontrols,
+            window.%s:backdrop windowcontrols image {
                 color: shade(@%s_500, 0.77);
             }
 

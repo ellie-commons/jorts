@@ -91,7 +91,9 @@ titlebutton {
 
 
 actionbar button:hover,
-actionbar button:focus {
+actionbar button:focus,
+windowcontrols button:hover,
+windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
     background-image: none;
     border: 1px solid transparent;
@@ -113,18 +115,6 @@ editablelabel.editing {
         inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
         0 1px 0 0 alpha(@bg_highlight_color, 0.3);
 }
-
-
-/* COLORPILLS
-
-colorpill {
-    border-radius: 50%;
-    background-image: none;
-    border: 1px solid alpha(#333, 0.25);
-
-    margin: 0px;
-}
- */
 
 colorpill.blueberry {background-color: @BLUEBERRY_300;}
 colorpill.blueberry:hover {border: 1px solid @BLUEBERRY_900;}
