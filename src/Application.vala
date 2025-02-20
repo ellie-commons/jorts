@@ -73,8 +73,13 @@ namespace jorts {
             delete_action.activate.connect (() => {
                 MainWindow note = (MainWindow)get_active_window ();
                 remove_note(note);
-
                 note.destroy();
+            });
+            var save_action = new SimpleAction ("save", null);
+            set_accels_for_action ("app.save", {"<Control>s"});
+            add_action (save_action);
+            save_action.activate.connect (() => {
+                this.save_to_stash ();
             });
         }
 
@@ -130,12 +135,14 @@ namespace jorts {
             note = new MainWindow(this, random_data);
         }
         this.open_notes.add(note);
+        this.save_to_stash ();
 	}
 
     // Simply remove from the list of things to save, and close
     public void remove_note(MainWindow note) {
             debug ("Removing a note…\n");
             this.open_notes.remove (note);
+            this.save_to_stash ();
 	}
 
     public void save_to_stash() {

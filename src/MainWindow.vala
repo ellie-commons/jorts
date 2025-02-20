@@ -222,33 +222,11 @@ namespace jorts {
         // Some rando actions
         private void action_new () {
             ((Application)this.application).create_note(null);
-            ((Application)this.application).save_to_stash ();
         }
 
         private void action_delete () {
             ((Application)this.application).remove_note(this);
-            ((Application)this.application).save_to_stash ();
             this.close ();
-            this.destroy ();
-        }
-
-
-        // TODO: Understand this
-#if VALA_0_42
-        protected bool match_keycode (uint keyval, uint code) {
-#else
-        protected bool match_keycode (int keyval, uint code) {
-#endif
-            //  Gdk.KeymapKey [] keys;
-            //  Gdk.Keymap keymap = Gdk.Keymap.get_for_display (Gdk.Display.get_default ());
-            //  if (keymap.get_entries_for_keyval (keyval, out keys)) {
-            //      foreach (var key in keys) {
-            //          if (code == key.keycode)
-            //              return true;
-            //          }
-            //      }
-
-            return false;
         }
 
         // Note gets deleted
