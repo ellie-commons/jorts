@@ -47,6 +47,7 @@ executable(
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
+    'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
     'src/Application.vala',
@@ -63,9 +64,6 @@ executable(
 
 
 #================================
-# 
-
-
 
 # Add subfolders for Meson to look
 subdir('data')

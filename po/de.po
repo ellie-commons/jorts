@@ -226,7 +226,7 @@ msgid ""
 "OS"
 msgstr ""
 "Weder Jeans noch Shorts, genau wie Jorts. Eine Anwendung für Haftnotizen für "
-"elementare OS"
+"elementary OS"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:7
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"

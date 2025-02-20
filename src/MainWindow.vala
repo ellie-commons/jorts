@@ -42,9 +42,9 @@ namespace jorts {
 
     // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
-        private new Gtk.TextBuffer buffer;
-        private Gtk.TextView view;
+
         private Gtk.HeaderBar header;
+        private new jorts.StickyView view;
         private Gtk.ActionBar actionbar;
 
         public string title_name;
@@ -52,24 +52,19 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        public Gtk.EditableLabel notetitle; // GTK4: HAS GTK:EDITABLELABEL
-        //public Gtk.EditableLabel label = new Gtk.EditableLabel();
+        public Gtk.EditableLabel notetitle;
 
         public SimpleActionGroup actions { get; construct; }
 
         public const string ACTION_PREFIX   = "win.";
         public const string ACTION_NEW      = "action_new";
         public const string ACTION_DELETE   = "action_delete";
-        public const string ACTION_UNDO     = "action_undo";
-        public const string ACTION_REDO     = "action_redo";
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const GLib.ActionEntry[] action_entries = {
             { ACTION_NEW,       action_new      },
-            { ACTION_DELETE,    action_delete   },
-            { ACTION_UNDO,      action_new      },
-            { ACTION_REDO,      action_delete   }
+            { ACTION_DELETE,    action_delete   }
         };
 
         // Init or something
@@ -104,6 +99,8 @@ namespace jorts {
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             notetitle.halign = Gtk.Align.CENTER;
+            notetitle.set_hexpand (false);
+            notetitle.set_vexpand (true);
 
             header.set_title_widget(notetitle);
             this.set_titlebar(header);
@@ -112,18 +109,8 @@ namespace jorts {
             var scrolled = new Gtk.ScrolledWindow ();
             scrolled.set_size_request (330,270);
 
-            buffer = new Gtk.TextBuffer (null);
-            view = new Gtk.TextView.with_buffer (buffer);
+            view = new jorts.StickyView (this.content);
 
-            view.bottom_margin = 10;
-            view.buffer.text = this.content;
-            view.left_margin = 10;
-            //view.margin .margin = 2;
-            view.right_margin = 10;
-            view.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
-            view.top_margin = 10;
-            view.set_hexpand (true);
-            view.set_vexpand (true);
             scrolled.set_child (view);
             this.show();
 
@@ -137,8 +124,6 @@ namespace jorts {
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
             new_item.width_request = 32;
             new_item.height_request = 32;
-
-
 
             var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
@@ -162,21 +147,13 @@ namespace jorts {
             app_button.width_request = 32;
             app_button.height_request = 32;
 
-            // GTK4: append
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
-            //  actionbar.pack_start (undo);
-            //  actionbar.pack_start (redo);
-
-            // GTK4: Append
             actionbar.pack_end (app_button);
 
             // Define the grid 
             var grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
-            //grid.expand = true;
-
-
             grid.attach(scrolled, 0, 0, 1, 1);
             grid.attach(actionbar, 0, 1, 1, 1);
             grid.show ();
@@ -206,11 +183,9 @@ namespace jorts {
                 return false;
             });            
 
-            // Save when the text thingy has changed
+            //  //Save when the text thingy has changed
             //  view.buffer.changed.connect (() => {
-            //      Gtk.TextIter start,end;
-            //      view.buffer.get_bounds (out start, out end);
-            //      this.content = view.buffer.get_text (start, end, true);
+            //      this.content = view.get_content ();
             //  });
         }
 
@@ -225,6 +200,8 @@ namespace jorts {
         public noteData packaged() {
             int width, height;
             var current_title = notetitle.get_text ();
+            this.content = this.view.get_content ();
+            print(this.content);
             this.get_default_size(out width, out height);
             var data = new noteData(current_title, this.theme, this.content , 100, width, height );
             return data;
@@ -245,21 +222,16 @@ namespace jorts {
         // Some rando actions
         private void action_new () {
             ((Application)this.application).create_note(null);
+            ((Application)this.application).save_to_stash ();
         }
 
         private void action_delete () {
             ((Application)this.application).remove_note(this);
+            ((Application)this.application).save_to_stash ();
             this.close ();
             this.destroy ();
         }
 
-        private void action_undo () {
-            buffer.undo ();
-        }
-
-        private void action_redo () {
-            buffer.redo ();
-        }
 
         // TODO: Understand this
 #if VALA_0_42

@@ -30,12 +30,15 @@ Main tasks are the tasks:
 - [x] Rebuild the way notes are managed and saved
 - [x] Do a separate for popover
 - [x] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
+- [x] Port to gtk4
+- [ ] Finish port: editablelabel and the popover
 - [ ] Do all the testing
 - [ ] Do a first release
 - [ ] Do a first appcenter release
-- [ ] Port to gtk4
-- [ ] Repair the theming: Some parts are stuck on the system accent
 - [ ] Static theming
+- [ ] Zoom: scroll to zoom, keep for next note
+- [ ] Detect hyperlinks and open in web browser
+- [ ] Detect local links and open in files
 - [ ] Improve a11y (contrast, zoom)
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
@@ -70,9 +73,8 @@ Please make sure you have these dependencies first before building Jorts.
 
 ```bash
 flatpak-builder
-libgranite-dev
-gtk+-3.0
-libgtksourceview-3.0-dev
+libgranite-7-dev
+gtk+-4.0
 libjson-glib-dev
 libgee-0.8-dev
 libjson-glib
@@ -83,7 +85,7 @@ libvala
 As of the current date (18Feb2025), here are the package names to install:
 
 ```bash
-sudo apt install libgranite-common libgtksourceview-3.0-1 libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 flatpak-builder
+sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 flatpak-builder
 ```
 
 Installation is as simple as cloning this repo (or download and extract the zip archive), change to the new repo's directory, and run the following command:
