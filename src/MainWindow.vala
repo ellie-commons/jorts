@@ -100,18 +100,13 @@ namespace jorts {
             header.set_show_title_buttons (true);
             header.decoration_layout = "close:";
 
-
-
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             notetitle.halign = Gtk.Align.CENTER;
 
-
-            
             header.set_title_widget(notetitle);
             this.set_titlebar(header);
-            //header.title (this.title_name);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();

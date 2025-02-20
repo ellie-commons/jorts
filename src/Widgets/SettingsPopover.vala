@@ -114,7 +114,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
         color_button_blueberry.toggled.connect (() => {
-            this.theme_changed("STRAWBERRY");
+            this.theme_changed("BLUEBERRY");
         });
 
         color_button_orange.toggled.connect (() => {
@@ -133,8 +133,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
             this.theme_changed("LIME");
         });
 
-        color_button_blueberry.toggled.connect (() => {
-            this.theme_changed("BLUEBERRY");
+        color_button_strawberry.toggled.connect (() => {
+            this.theme_changed("STRAWBERRY");
         });
 
         color_button_bubblegum.toggled.connect (() => {
