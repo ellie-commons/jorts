@@ -76,6 +76,9 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
 
+            this.set_hexpand (false);
+            this.set_vexpand (false);
+
             // First get the thing
             this.unpackage (data);
 
@@ -98,22 +101,25 @@ namespace jorts {
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             notetitle.halign = Gtk.Align.CENTER;
-            notetitle.set_hexpand (false);
-            notetitle.set_vexpand (true);
-            notetitle.set_tooltip_text (_("Edit title"));
+            notetitle.set_hexpand (true);
+            notetitle.set_vexpand (false);
+            notetitle.set_tooltip_text (_("Click to edit the title"));
             notetitle.xalign = 0.5f;
 
             header.set_title_widget(notetitle);
             this.set_titlebar(header);
 
-            var edit_title = new Gtk.Button ();
-            edit_title.tooltip_text = notetitle.tooltip_text;
-            edit_title.set_icon_name ("edit-symbolic");
-            edit_title.width_request = 24;
-            edit_title.height_request = 24;
-            edit_title.hide ();
-            
-            header.pack_end (edit_title);
+            //  var edit_title = new Gtk.Button ();
+            //  edit_title.tooltip_text = (("Edit title"));;
+            //  edit_title.set_icon_name ("edit-symbolic");
+            //  edit_title.width_request = 24;
+            //  edit_title.height_request = 24;
+            //edit_title.hide ();
+
+            //  edit_title.clicked.connect (() => {
+            //      notetitle.start_editing ();
+            //  });
+            //header.pack_end (edit_title);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();

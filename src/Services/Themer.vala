@@ -74,7 +74,8 @@ namespace jorts.Themer {
                     );
             }
 
-            window.%s textview text selection {
+            window.%s textview text selection,
+            window.%s editablelabel text selection {
                 color: shade(@%s_100, 1.88);
                 background-color: @%s_900;
             }
@@ -84,7 +85,8 @@ namespace jorts.Themer {
             window.%s actionbar,
             window.%s actionbar image,
             window.%s windowcontrols,
-            window.%s windowcontrols image {
+            window.%s windowcontrols image,
+            window.%s {
                 color: @%s_900;
             }
 
@@ -95,15 +97,23 @@ namespace jorts.Themer {
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
             }
+            window.%s textview entry {
+                background-color: white;
+                color: black;
+            }
 
             window.%s editablelabel {
                 color: @%s_900;
             }
 
-            window.%s editablelabel.editing text {
-                border: 1px solid @s_900;
+            window.%s editablelabel:hover,
+            window.%s editablelabel:focus {
+                border: 1px solid alpha(@s_100,0.5);
             }
 
+            window.%s editablelabel.editing {
+                border: 1px solid alpha(@s_500,0.5);
+            }
 
             window.%s:backdrop textview text,
             window.%s:backdrop titlebar,
