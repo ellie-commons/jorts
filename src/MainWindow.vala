@@ -40,13 +40,13 @@ Window
 */
 namespace jorts {
 
-    // Every notice is an instance of MainWindow
     public class MainWindow : Gtk.Window {
 
         private Gtk.HeaderBar header;
         private new jorts.StickyView view;
         private Gtk.ActionBar actionbar;
 
+        //public noteData data;
         public string title_name;
         public string theme;
         public string content;
@@ -85,7 +85,6 @@ namespace jorts {
             // add required base classes
             this.add_css_class("rounded");
 
-
             // ================================================================ //
             // HEADER            // Define the header
             header = new Gtk.HeaderBar();
@@ -102,16 +101,24 @@ namespace jorts {
             notetitle.set_hexpand (false);
             notetitle.set_vexpand (true);
             notetitle.set_tooltip_text (_("Edit title"));
+            notetitle.xalign = 0.5f;
 
             header.set_title_widget(notetitle);
             this.set_titlebar(header);
 
+            var edit_title = new Gtk.Button ();
+            edit_title.tooltip_text = notetitle.tooltip_text;
+            edit_title.set_icon_name ("edit-symbolic");
+            edit_title.width_request = 24;
+            edit_title.height_request = 24;
+            edit_title.hide ();
+            
+            header.pack_end (edit_title);
+
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
             scrolled.set_size_request (330,270);
-
             view = new jorts.StickyView (this.content);
-
             scrolled.set_child (view);
             this.show();
 
@@ -130,7 +137,6 @@ namespace jorts {
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
             delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
-
             delete_item.width_request = 32;
             delete_item.height_request = 32;
 
@@ -207,7 +213,6 @@ namespace jorts {
             return data;
         }
 
-
         // Take a notedata and unpack it
         private void unpackage(noteData data) {
             this.title_name = data.title;
@@ -218,7 +223,6 @@ namespace jorts {
             this.set_title (this.title_name);
         }
 
-
         // Some rando actions
         private void action_new () {
             ((Application)this.application).create_note(null);
@@ -228,12 +232,6 @@ namespace jorts {
             ((Application)this.application).remove_note(this);
             this.close ();
         }
-
-        // Note gets deleted
-        //  public override bool delete_event (Gdk.EventAny event) {
-        //      //((Application)this.application).save_to_stash ();
-        //      return false;
-        //  }
 
         // Strip old stylesheet, apply the new
         private void update_theme(string theme) {

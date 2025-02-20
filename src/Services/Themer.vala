@@ -81,7 +81,6 @@ namespace jorts.Themer {
 
             window.%s titlebar,
             window.%s titlebar image,
-            window.%s headertitle,
             window.%s actionbar,
             window.%s actionbar image,
             window.%s windowcontrols,
@@ -107,7 +106,6 @@ namespace jorts.Themer {
 
 
             window.%s:backdrop textview text,
-            window.%s:backdrop headertitle,
             window.%s:backdrop titlebar,
             window.%s:backdrop editablelabel,
             window.%s:backdrop actionbar,

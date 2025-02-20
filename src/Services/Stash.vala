@@ -164,6 +164,4 @@ namespace jorts.Stash {
         
         return loaded_data;
     }
-
-
 }
