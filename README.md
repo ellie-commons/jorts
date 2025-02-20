@@ -39,6 +39,7 @@ Main tasks are the tasks:
 - [ ] Zoom: scroll to zoom, keep for next note
 - [ ] Detect hyperlinks and open in web browser
 - [ ] Detect local links and open in files
+- [ ] Detect emails and open in Mail
 - [ ] Improve a11y (contrast, zoom)
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
