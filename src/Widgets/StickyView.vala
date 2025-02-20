@@ -28,7 +28,7 @@ Notably:
 
 */
 
-public class jorts.StickyView : Gtk.TextView {
+public class jorts.StickyView : Granite.HyperTextView {
 
 
         public StickyView (string? content) {
