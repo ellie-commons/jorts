@@ -99,6 +99,11 @@ namespace jorts.Themer {
                 color: @%s_900;
             }
 
+            window.%s editablelabel.editing text {
+                border: 1px solid @s_900;
+            }
+
+
             window.%s:backdrop textview text,
             window.%s:backdrop headertitle,
             window.%s:backdrop titlebar,

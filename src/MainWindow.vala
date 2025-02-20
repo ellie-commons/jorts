@@ -97,12 +97,16 @@ namespace jorts {
             header.add_css_class ("flat");
             header.add_css_class("headertitle");
             //header.has_subtitle = false;
-            //header.set_show_close_button (true);
+            header.set_show_title_buttons (true);
             header.decoration_layout = "close:";
+
+
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+            notetitle.halign = Gtk.Align.CENTER;
+
 
             
             header.set_title_widget(notetitle);
@@ -204,34 +208,14 @@ namespace jorts {
             // Save when the window thingy closed
             this.close_request.connect (() => {
                 ((Application)this.application).save_to_stash ();
-                return true;
+                return false;
             });            
 
             // Save when the text thingy has changed
-            view.buffer.changed.connect (() => {
-                Gtk.TextIter start,end;
-                view.buffer.get_bounds (out start, out end);
-                this.content = view.buffer.get_text (start, end, true);
-            });
-
-
-
-
-
-            //  // Undo Redo shit
-            //  key_press_event.connect ((e) => {
-            //      uint keycode = e.hardware_keycode;
-            //      if ((e.state & Gdk.ModifierType.CONTROL_MASK) != 0) {
-            //          if (match_keycode (Gdk.Key.z, keycode)) {
-            //              action_undo ();
-            //          }
-            //      }
-            //      if ((e.state & Gdk.ModifierType.CONTROL_MASK + Gdk.ModifierType.SHIFT_MASK) != 0) {
-            //          if (match_keycode (Gdk.Key.z, keycode)) {
-            //              action_redo ();
-            //          }
-            //      }
-            //      return false;
+            //  view.buffer.changed.connect (() => {
+            //      Gtk.TextIter start,end;
+            //      view.buffer.get_bounds (out start, out end);
+            //      this.content = view.buffer.get_text (start, end, true);
             //  });
         }
 

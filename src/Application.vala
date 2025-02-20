@@ -121,10 +121,12 @@ namespace jorts {
             note = new MainWindow(this, data);
         }
         else {
+
+            // Skip theme from previous window, but use same text zoom
             MainWindow last_note = this.open_notes.last ();
             string skip_theme = last_note.theme;
-
             var random_data = jorts.Utils.random_note(skip_theme);
+            random_data.zoom = last_note.zoom;
             note = new MainWindow(this, random_data);
         }
         this.open_notes.add(note);
