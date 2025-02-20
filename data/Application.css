@@ -82,8 +82,10 @@ windowcontrols button:focus {
 }
 
 editablelabel {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.05em;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 editablelabel.editing {

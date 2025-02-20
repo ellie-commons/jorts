@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-17 20:33+0100\n"
+"POT-Creation-Date: 2025-02-20 22:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,200 +17,197 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/EditableLabel.vala:94
-msgid "Edit title"
-msgstr "Editar título"
-
 #. Choose theme section
 #: src/Widgets/SettingsPopover.vala:50
 msgid "Sticky Note Colour"
 msgstr "Nota adhesiva Color"
 
-#: src/Widgets/SettingsPopover.vala:53
+#: src/Widgets/SettingsPopover.vala:55
 msgid "Blueberry"
 msgstr "Arándanos"
 
-#: src/Widgets/SettingsPopover.vala:54
+#: src/Widgets/SettingsPopover.vala:56
 msgid "Lime"
 msgstr "Lima"
 
-#: src/Widgets/SettingsPopover.vala:55
+#: src/Widgets/SettingsPopover.vala:57
 msgid "Mint"
 msgstr "Menta"
 
-#: src/Widgets/SettingsPopover.vala:56
+#: src/Widgets/SettingsPopover.vala:58
 msgid "Banana"
 msgstr "Plátano"
 
-#: src/Widgets/SettingsPopover.vala:57
+#: src/Widgets/SettingsPopover.vala:59
 msgid "Strawberry"
 msgstr "Fresa"
 
-#: src/Widgets/SettingsPopover.vala:58
+#: src/Widgets/SettingsPopover.vala:60
 msgid "Orange"
 msgstr "Naranja"
 
-#: src/Widgets/SettingsPopover.vala:59
+#: src/Widgets/SettingsPopover.vala:61
 msgid "Bubblegum"
 msgstr "Chicle"
 
-#: src/Widgets/SettingsPopover.vala:60
+#: src/Widgets/SettingsPopover.vala:62
 msgid "Grape"
 msgstr "Uva"
 
-#: src/Widgets/SettingsPopover.vala:61
-msgid "Latte"
-msgstr "Latte"
-
-#: src/Widgets/SettingsPopover.vala:62
+#. var color_button_latte = new ColorPill (_("Latte"),"latte");
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Cocoa"
 msgstr "Cacao"
 
-#: src/Widgets/SettingsPopover.vala:63
+#: src/Widgets/SettingsPopover.vala:65
 msgid "Slate"
 msgstr "Pizarra"
 
-#: src/MainWindow.vala:133
+#: src/MainWindow.vala:106
+msgid "Edit title"
+msgstr "Editar título"
+
+#: src/MainWindow.vala:136
 msgid "New sticky note (Ctrl+N)"
 msgstr "Nueva nota adhesiva (Ctrl+N)"
 
-#: src/MainWindow.vala:138
+#: src/MainWindow.vala:143
 msgid "Delete sticky note (Ctrl+W)"
 msgstr "Eliminar nota adhesiva (Ctrl+W)"
 
-#: src/MainWindow.vala:150
+#: src/MainWindow.vala:156
 msgid "Settings"
 msgstr "Configuración"
 
-#: src/Services/Utils.vala:57
+#: src/Services/Utils.vala:53
 msgid "All my very best friends"
 msgstr "Todos mis mejores amigos"
 
-#: src/Services/Utils.vala:58
+#: src/Services/Utils.vala:54
 msgid "My super good secret recipe"
 msgstr "Mi receta secreta súper buena"
 
-#: src/Services/Utils.vala:59
+#: src/Services/Utils.vala:55
 msgid "My todo list"
 msgstr "Mi lista de tareas"
 
-#: src/Services/Utils.vala:60
+#: src/Services/Utils.vala:56
 msgid "Super secret to not tell anyone"
 msgstr "Súper secreto para no contárselo a nadie"
 
-#: src/Services/Utils.vala:61
+#: src/Services/Utils.vala:57
 msgid "My grocery list"
 msgstr "Mi lista de la compra"
 
-#: src/Services/Utils.vala:62
+#: src/Services/Utils.vala:58
 msgid "Random shower thoughts"
 msgstr "Pensamientos aleatorios sobre la ducha"
 
-#: src/Services/Utils.vala:63
+#: src/Services/Utils.vala:59
 msgid "My fav fanfics"
 msgstr "Mis fanfics favoritos"
 
-#: src/Services/Utils.vala:64
+#: src/Services/Utils.vala:60
 msgid "My fav dinosaurs"
 msgstr "Mis dinosaurios favoritos"
 
-#: src/Services/Utils.vala:65
+#: src/Services/Utils.vala:61
 msgid "My evil mastermind plan"
 msgstr "Mi malvado plan maestro"
 
-#: src/Services/Utils.vala:66
+#: src/Services/Utils.vala:62
 msgid "What made me smile today"
 msgstr "Lo que me ha hecho sonreír hoy"
 
-#: src/Services/Utils.vala:67
+#: src/Services/Utils.vala:63
 msgid "Hello world!"
 msgstr "¡Hola, mundo!"
 
-#: src/Services/Utils.vala:68
+#: src/Services/Utils.vala:64
 msgid "New sticky, new me"
 msgstr "Nueva pegatina, nuevo yo"
 
-#: src/Services/Utils.vala:69
+#: src/Services/Utils.vala:65
 msgid "Hidden pirate treasure"
 msgstr "Localización del tesoro pirata escondido"
 
-#: src/Services/Utils.vala:70
+#: src/Services/Utils.vala:66
 msgid "To not forget, ever"
 msgstr "No lo olvide"
 
-#: src/Services/Utils.vala:71
+#: src/Services/Utils.vala:67
 msgid "Dear Diary,"
 msgstr "Querido diario,"
 
-#: src/Services/Utils.vala:72
+#: src/Services/Utils.vala:68
 msgid "Hi im a square"
 msgstr "Hola soy un cuadrado"
 
-#: src/Services/Utils.vala:73
+#: src/Services/Utils.vala:69
 msgid "Have a nice day! :)"
 msgstr "Que tenga un buen día. :)"
 
-#: src/Services/Utils.vala:74
+#: src/Services/Utils.vala:70
 msgid "My meds schedule"
 msgstr "Mi horario de medicación"
 
-#: src/Services/Utils.vala:75
+#: src/Services/Utils.vala:71
 msgid "Household chores"
 msgstr "Tareas domésticas para hacer hoy"
 
-#: src/Services/Utils.vala:76
+#: src/Services/Utils.vala:72
 msgid "Ode to my cat"
 msgstr "Oda a mi gato"
 
-#: src/Services/Utils.vala:77
+#: src/Services/Utils.vala:73
 msgid "My dogs favourite toys"
 msgstr "Los juguetes favoritos de mis perros"
 
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:74
 msgid "How cool my birds are"
 msgstr "Qué guays son mis pájaros"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:75
 msgid "Suspects in the Last Cookie affair"
 msgstr "Sospechosos en el asunto de la última galleta"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:76
 msgid "Words my parrots know"
 msgstr "Palabras que mis loros conocen"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:77
 msgid "Cool and funny compliments to give out"
 msgstr "Elogios chulos y divertidos"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:78
 msgid "Ok, listen here,"
 msgstr "Ok, escucha aquí,"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:79
 msgid "My dream Pokemon team"
 msgstr "El equipo Pokemon de mis sueños"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:80
 msgid "My little notes"
 msgstr "Mis pequeñas notas"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:81
 msgid "Surprise gift list"
 msgstr "Lista de regalos sorpresa"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:82
 msgid "Brainstorming notes"
 msgstr "Notas de lluvia de ideas"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:83
 msgid "To bring to the party"
 msgstr "Para llevar a la fiesta"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:84
 msgid "My amazing mixtape"
 msgstr "Mi increíble mixtape"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:85
 msgid "Napkin scribbles"
 msgstr "Garabatos en servilleta"
 
@@ -270,37 +267,45 @@ msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "La aplicación se llama ahora Jorts. Sin embargo, no puedes usarla"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
-msgid "It builds for flatpak now"
-msgstr "Ahora se construye para flatpak"
+msgid "Closer to current elementary OS Stylesheet and named colours"
+msgstr ""
+"Más cercano a la actual hoja de estilo elemental del SO y colores con nombre"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
-msgid "Closer to current elementary OS Stylesheet and named colours"
-msgstr "Más cercano a la actual hoja de estilo elemental del SO y colores con nombre"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Also more colors than Notejot had"
 msgstr "También más colores que los que tenía Notejot"
 
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
+msgid "It builds for flatpak now"
+msgstr "Ahora se construye para flatpak"
+
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
+msgid "Also on GTK4"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "Better adapted to the way Wayland works"
 msgstr "Mejor adaptado al funcionamiento de Wayland"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
 msgid "Smooth transition when changing theme"
 msgstr "Transición suave al cambiar de tema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
 msgid "New stickies have random colour"
 msgstr "Los nuevos stickies tienen un color aleatorio"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
 msgid "New stickies have a random fun little title"
 msgstr "Los nuevos stickies tienen un título aleatorio y divertido"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
 msgid "Storage system rebuilt from the ground up"
 msgstr "Sistema de almacenamiento reconstruido desde cero"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:51
 msgid "Some initial translations :3"
 msgstr "Algunas traducciones iniciales :3"
+
+#~ msgid "Latte"
+#~ msgstr "Latte"

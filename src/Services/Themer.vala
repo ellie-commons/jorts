@@ -92,12 +92,13 @@ namespace jorts.Themer {
 
             window.%s titlebar,
             window.%s textview,
-            window.%s textview text {
-                background-color: @%s_100;
+            window.%s textview text,
+            window.%s editablelabel.editing text {
+                background-color: transparent;
                 border-bottom-color: @%s_100;
                 color: shade(@%s_900, 0.77);
             }
-            window.%s textview entry {
+            window.%s entry {
                 background-color: white;
                 color: black;
             }
@@ -109,6 +110,7 @@ namespace jorts.Themer {
             window.%s editablelabel:hover,
             window.%s editablelabel:focus {
                 border: 1px solid alpha(@s_100,0.5);
+
             }
 
             window.%s editablelabel.editing {

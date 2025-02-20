@@ -103,7 +103,7 @@ namespace jorts {
             notetitle.halign = Gtk.Align.CENTER;
             notetitle.set_hexpand (true);
             notetitle.set_vexpand (false);
-            notetitle.set_tooltip_text (_("Click to edit the title"));
+            notetitle.set_tooltip_text (_("Edit title"));
             notetitle.xalign = 0.5f;
 
             header.set_title_widget(notetitle);

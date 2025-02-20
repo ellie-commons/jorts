@@ -30,28 +30,23 @@ Notably:
 
 public class jorts.StickyView : Granite.HyperTextView {
 
-
         public StickyView (string? content) {
 
                 this.buffer = new Gtk.TextBuffer (null);
                 this.buffer.text = content;
-    
+                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);    
                 this.bottom_margin = 10;
                 this.left_margin = 10;
                 this.right_margin = 10;
-                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
                 this.top_margin = 10;
                 this.set_hexpand (true);
                 this.set_vexpand (true);
-
         }
-
 
         public string get_content() {
                 Gtk.TextIter start,end;
                 this.buffer.get_bounds (out start, out end);
                 return this.buffer.get_text (start, end, true);
         }
-
 
 }
