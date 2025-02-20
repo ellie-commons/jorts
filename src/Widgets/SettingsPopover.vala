@@ -33,11 +33,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
     public string selected;
     public signal void theme_changed (string selected);
 
-    public SettingsPopover () {
-        Object ();
-    }
-
-    construct {
+    public SettingsPopover (string theme) {
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
@@ -78,12 +74,26 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_cocoa.set_group (color_button_blueberry);
         color_button_slate.set_group (color_button_blueberry);
 
+        color_button_blueberry.set_active ((theme == "BLUEBERRY"));
+        color_button_lime.set_active ((theme == "LIME"));
+        color_button_mint.set_active ((theme == "MINT"));
+        color_button_banana.set_active ((theme == "BANANA"));
+        color_button_strawberry.set_active ((theme == "STRAWBERRY"));
+        color_button_orange.set_active ((theme == "ORANGE"));
+        color_button_bubblegum.set_active ((theme == "BUBBLEGUM"));
+        color_button_grape.set_active ((theme == "GRAPE"));
+        //color_button_latte.set_group (color_button_blueberry);
+        color_button_cocoa.set_active ((theme == "COCOA"));
+        color_button_slate.set_active ((theme == "SLATE"));
+
+
 
         //TODO: Multiline
-        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
             accessible_role = Gtk.AccessibleRole.LIST
         };
-
+        color_button_box.set_halign (Gtk.Align.CENTER);
+        color_button_box.set_valign (Gtk.Align.CENTER);
         // GTK4: append
         color_button_box.append (color_button_blueberry);
         color_button_box.append (color_button_mint);

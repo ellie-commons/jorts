@@ -52,7 +52,7 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        public Gtk.EditableLabel label; // GTK4: HAS GTK:EDITABLELABEL
+        public Gtk.EditableLabel notetitle; // GTK4: HAS GTK:EDITABLELABEL
         //public Gtk.EditableLabel label = new Gtk.EditableLabel();
 
         public SimpleActionGroup actions { get; construct; }
@@ -101,8 +101,11 @@ namespace jorts {
             header.decoration_layout = "close:";
 
             // Defime the label you can edit. Which is editable.
-            label = new Gtk.EditableLabel (this.title_name);
-            header.set_title_widget(label);
+            notetitle = new Gtk.EditableLabel (this.title_name);
+            notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+
+            
+            header.set_title_widget(notetitle);
             this.set_titlebar(header);
             //header.title (this.title_name);
 
@@ -133,8 +136,8 @@ namespace jorts {
             new_item.tooltip_text = (_("New sticky note (Ctrl+N)"));
             new_item.set_icon_name ("list-add-symbolic");
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
-            new_item.width_request = 24;
-            new_item.height_request = 24;
+            new_item.width_request = 32;
+            new_item.height_request = 32;
 
 
 
@@ -143,10 +146,10 @@ namespace jorts {
             delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
 
-            delete_item.width_request = 24;
-            delete_item.height_request = 24;
+            delete_item.width_request = 32;
+            delete_item.height_request = 32;
 
-            var popover = new SettingsPopover ();
+            var popover = new SettingsPopover (this.theme);
             popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
@@ -157,8 +160,8 @@ namespace jorts {
             app_button.set_icon_name("open-menu-symbolic");
             app_button.popover = popover;
 
-            app_button.width_request = 24;
-            app_button.height_request = 24;
+            app_button.width_request = 32;
+            app_button.height_request = 32;
 
             // GTK4: append
             actionbar.pack_start (new_item);
@@ -189,9 +192,9 @@ namespace jorts {
             });
 
             // Save when user changes the label
-            label.changed.connect (() => {
+            notetitle.changed.connect (() => {
 
-                this.title_name = label.get_text ();
+                this.title_name = notetitle.get_text ();
                 //header.set_title (this.title_name);
                 this.set_title(this.title_name);
 
@@ -242,7 +245,7 @@ namespace jorts {
         // Hence why we need to constantly save the buffer into this.content when changed
         public noteData packaged() {
             int width, height;
-            var current_title = label.get_text ();
+            var current_title = notetitle.get_text ();
             this.get_default_size(out width, out height);
             var data = new noteData(current_title, this.theme, this.content , 100, width, height );
             return data;

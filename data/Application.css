@@ -52,11 +52,6 @@ headertitle image {
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-editablelabel {
-    box-shadow: none;
-    
-}
-
 
 actionbar {
     box-shadow: none; /* Pondering. It looks good with, too */
@@ -76,10 +71,6 @@ headertitle {
     box-shadow: none;
     transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
     /*transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);*/
-}
-
-entry.flat {
-    background: transparent;
 }
 
 
@@ -111,10 +102,16 @@ titlebutton:focus {
 
 editablelabel {
     font-weight: 700;
-    font-size: 0.88em;
+    font-size: 1.2em;
 }
 
-/* COLORPILLS
+editablelabel.editing {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+/* COLORPILLS */
 
 colorpill {
     border-radius: 50%;
@@ -124,9 +121,9 @@ colorpill {
         inset 0 1px 0 0 alpha(@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
         0 1px 0 0 alpha(@bg_highlight_color, 0.3);
-    margin: 6px;
+    margin: 0px;
 }
- */
+
 
 colorpill.blueberry {background-color: @BLUEBERRY_300;}
 colorpill.blueberry:hover {border: 1px solid @BLUEBERRY_900;}
