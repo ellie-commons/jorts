@@ -44,7 +44,19 @@ namespace jorts {
                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
               );
 
+            // build all the stylesheets
             jorts.Themer.init_all_themes();
+
+            // Register, so we can inhibit logout long enough to save
+            this.register_session = true;
+
+            // User logs out: Inhibit session long enough to save notes
+            // TODO: implement a timeout. But it may be overkill, there is little data to save.
+            this.query_end.connect (() => {
+                var cookie = this.inhibit (null, Gtk.ApplicationInhibitFlags.LOGOUT, "Saving sticky notes...");
+                this.save_to_stash ();
+                this.uninhibit (cookie);
+            });
         }
 
         static construct {
@@ -110,9 +122,14 @@ namespace jorts {
                     print("Loaded: " + data.title + "\n");
                     this.create_note(data);
                 }
+
+
             }
+
+
+
                     
-	}
+	    }
 
 
     // create new instances of MainWindow
@@ -151,35 +168,24 @@ namespace jorts {
         jorts.Stash.overwrite_stash (json_data);
     }
 
+
         protected override int command_line (ApplicationCommandLine command_line) {
-            var context = new OptionContext ("File");
-            //context.add_main_entries (entries, Build.GETTEXT_PACKAGE);
-            //context.add_group (Gtk.get_option_group (true));
 
             string[] args = command_line.get_arguments ();
-            int unclaimed_args;
 
             activate ();
 
-            try {
-                context.parse_strv (ref args);
-                unclaimed_args = args.length - 1;
-            } catch(Error e) {
-                print (e.message + "\n");
-
-                return 1;
-            }
-
             // Create a next window if requested and it's not the app launch
-            if (create_new_window) {
-                create_new_window = false;
+            if (args[1] == "--new-note") {                
                 create_note(null);
             }
+
             return 0;
+
         }
 
         const OptionEntry[] entries = {
-            { "new-note", 'n', 0, OptionArg.NONE, out create_new_window, "New Note", null },
+            { "--new-note", 'n', 0, OptionArg.NONE, out create_new_window, "New Note", null },
             { null }
         };
 

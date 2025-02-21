@@ -52,6 +52,9 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
+        //  public static string ENABLE_ANIMATIONS_SCHEMA = "io.elementary.desktop.wm.animations";
+        //  public static Settings animation_settings;
+
         public Gtk.EditableLabel notetitle;
 
         public SimpleActionGroup actions { get; construct; }
@@ -76,6 +79,10 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
 
+            //animation_settings = new Settings (ENABLE_ANIMATIONS_SCHEMA);
+            //animation_schema = SettingsSchemaSource.get_default().lookup ("io.elementary.desktop.wm.animations", true);
+
+
             this.set_hexpand (false);
             this.set_vexpand (false);
 
@@ -87,6 +94,13 @@ namespace jorts {
 
             // add required base classes
             this.add_css_class("rounded");
+            this.add_css_class ("animations");
+
+            // Respect pantheon settings
+            // Currently not working. Lookup returns null
+            //this.follow_pantheon_settings();
+
+
 
             // ================================================================ //
             // HEADER            // Define the header
@@ -123,7 +137,7 @@ namespace jorts {
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
-            scrolled.set_size_request (330,270);
+            scrolled.set_size_request (66,54);
             view = new jorts.StickyView (this.content);
             scrolled.set_child (view);
             this.show();
@@ -180,15 +194,14 @@ namespace jorts {
                 ((Application)this.application).save_to_stash ();
             });
 
-            // Save when user changes the label
-            notetitle.changed.connect (() => {
+            //  // Save when user changes the label
+            //  notetitle.changed.connect (() => {
+            //      this.title_name = notetitle.get_text ();
+            //      //header.set_title (this.title_name);
+            //      this.set_title(this.title_name);
 
-                this.title_name = notetitle.get_text ();
-                //header.set_title (this.title_name);
-                this.set_title(this.title_name);
-
-                ((Application)this.application).save_to_stash ();
-            });
+            //      ((Application)this.application).save_to_stash ();
+            //  });
 
             // Save when the window thingy closed
             this.close_request.connect (() => {
@@ -247,5 +260,30 @@ namespace jorts {
             add_css_class (this.theme);
             ((Application)this.application).save_to_stash ();
         }
+
+
+        // If the user is running pantheon, we follor their settings
+        // disable animations if user disabled them
+        //  private void follow_pantheon_settings() {
+
+        //      if (animation_settings != null ) {
+        //          print("Pantheon detected!");
+
+        //          animation_settings.changed["enable-animations"].connect (() => {
+        //              if (animation_settings.get_boolean ("enable-animations")) {
+        //                  this.add_css_class ("animations"); 
+        //              } else {
+        //                  this.remove_css_class ("animations");
+        //              }
+        //          });
+        //      } else {
+        //          // default for all non pantheon users
+        //          print("No Pants!");
+        //          this.add_css_class ("animations");
+        //      }
+        //  }
+
+
+
     }
 }

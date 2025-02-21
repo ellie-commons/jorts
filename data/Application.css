@@ -30,26 +30,25 @@
  */
 
 
-window {
+window.animations,
+window.animations undershoot.top,
+window.animations undershoot.bottom,
+window.animations headertitle,
+window.animations textview,
+window.animations textview text,
+window.animations textview text selection {
     transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+window.transition textview text selection {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 
 windowcontrols,
 windowcontrols:backdrop {
     background-color: transparent;
-}
-
-undershoot.top {
-    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-undershoot.bottom {
-    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-textview text selection {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textview,
@@ -59,7 +58,6 @@ headertitle {
     font-weight: 500;
     font-size: 1.2em;
     box-shadow: none;
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
     /*transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
