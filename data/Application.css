@@ -49,11 +49,11 @@ window.animations overshoot {
     transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-window.animations undershoot,
-window.animations overshoot {
+undershoot,
+overshoot {
     transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: linear-gradient 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window.transition textview text selection  {

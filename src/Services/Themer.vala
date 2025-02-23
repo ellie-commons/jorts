@@ -61,11 +61,13 @@ namespace jorts.Themer {
             }
 
             window.%s undershoot.top {
+                transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
                 background:
                     linear-gradient(
                         @%s_100 0%,
                         alpha(@%s_100, 0) 50%
                     );
+                    transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             window.%s undershoot.bottom {
@@ -74,19 +76,20 @@ namespace jorts.Themer {
                         alpha(@%s_100, 0) 50%,
                         @%s_100 100%
                     );
+
             }
 
             window.%s overshoot.top {
-            background: linear-gradient(to top, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+            background: linear-gradient(to top, alpha(@%s_900, 0) 80%, alpha(@%s_900, 0.25) 100%); }
 
             window.%s overshoot.right {
-            background: linear-gradient(to right, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+            background: linear-gradient(to right, alpha(@%s_900, 0) 80%, alpha(@%s_900, 0.25) 100%); }
 
             window.%s overshoot.bottom {
-            background: linear-gradient(to bottom, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+            background: linear-gradient(to bottom, alpha(@%s_900, 0) 80%, alpha(@%s_900, 0.25) 100%); }
 
             window.%s overshoot.left {
-            background: linear-gradient(to left, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+            background: linear-gradient(to left, alpha(@%s_900, 0) 80%, alpha(@%s_900, 0.25) 100%); }
 
 
 
