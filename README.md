@@ -17,10 +17,6 @@ Available in: <a href="./po/de.po"">🇩🇪 Deutsch</a> · <a  href="./po/es.po
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little notes app, and is planned to stay as a cute simple little notes app.
-However the internals needs a lot of work, as they are both outdated for the modern era, and errr- not really that super simple to build.
-
-So there will be some little features added, and said features will be mostly some prettyfication at the edges.
-
 Main tasks are the tasks:
 
 - [x] Remove the pinned feature - it cant work on wayland anymore
@@ -49,10 +45,8 @@ New features may sneak themselves. Feel free to check [the project board](https:
 ## 💝 Donations
 
 Lot of the code (and the aesthetic) was from original work by Lainsce because this is a fork of an older version of Notejot from a time before new additions broke NoteJot for elementary OS 8.
-
 Currently the real, official NoteJot is something different, more fully-featured and no longer focused on elementary OS.
-
-Some people liked the simplicity of the old version, and thus we created this fork of it. However, we do struggle with porting gtk3 to gtk4, so this may take longer than expected.
+Some people liked the simplicity of the old version, and thus we created this fork of it.
 
 If you want to thank the original creator:
 
@@ -62,6 +56,7 @@ Currently actively trying to revive this project is me - Stella
 
 Support is always welcome and shows us that people want this work to continue.
 
+Stella, current main dev:
 <p align="left">
   <a href="https://ko-fi.com/teamcons">
     <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" width="150">
