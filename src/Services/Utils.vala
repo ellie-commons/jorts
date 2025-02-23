@@ -89,6 +89,7 @@ namespace jorts.Utils {
 
     // Spits out a fresh new note
     public noteData random_note (string? skip_theme) {
+        debug("Generating random note... Skip:" + skip_theme);
         var randtitle = jorts.Utils.random_title();
         string randtheme = jorts.Utils.random_theme (skip_theme);
         noteData randnote = new noteData( randtitle, randtheme, "", 100, 330, 270);

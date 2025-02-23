@@ -48,5 +48,4 @@ public class jorts.StickyView : Granite.HyperTextView {
                 this.buffer.get_bounds (out start, out end);
                 return this.buffer.get_text (start, end, true);
         }
-
 }

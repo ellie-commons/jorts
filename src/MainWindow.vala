@@ -71,6 +71,7 @@ namespace jorts {
         public MainWindow (Gtk.Application app, noteData data) {
             Object (application: app);
             Intl.setlocale ();
+            debug("New MainWindow instance: " + data.title);
 
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
@@ -100,8 +101,6 @@ namespace jorts {
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             notetitle.halign = Gtk.Align.CENTER;
-            notetitle.set_hexpand (true);
-            notetitle.set_vexpand (false);
             notetitle.set_tooltip_text (_("Edit title"));
             notetitle.xalign = 0.5f;
 
@@ -164,7 +163,6 @@ namespace jorts {
 
             // ================================================================ //
             // EVENTS            
-
             //  //  //Save when the text thingy has changed
             view.buffer.changed.connect (() => {
                 ((Application)this.application).save_to_stash ();            

@@ -34,6 +34,7 @@ init_all_themes()
 
 namespace jorts.Themer {
 
+
     // As seen on TV!
     const string[] themearray = {
         "BLUEBERRY",
@@ -51,6 +52,7 @@ namespace jorts.Themer {
 
     // Here we go
     public static string generate_css (string theme) {
+        debug("Generating css");
         string style = "";
 
         style = (N_("""
@@ -73,6 +75,20 @@ namespace jorts.Themer {
                         @%s_100 100%
                     );
             }
+
+            window.%s overshoot.top {
+            background: linear-gradient(to top, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+
+            window.%s overshoot.right {
+            background: linear-gradient(to right, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+
+            window.%s overshoot.bottom {
+            background: linear-gradient(to bottom, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+
+            window.%s overshoot.left {
+            background: linear-gradient(to left, alpha(@%s_100, 0) 80%, alpha(@%s_100, 0.25) 100%); }
+
+
 
             window.%s textview text selection,
             window.%s editablelabel text selection {
@@ -137,6 +153,7 @@ namespace jorts.Themer {
 
     public static void init_all_themes() {
 
+        debug("Init all themes");
         foreach (unowned var theme in jorts.Themer.themearray) {
             // Palette color
               var theme_provider = new Gtk.CssProvider ();

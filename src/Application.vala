@@ -47,6 +47,15 @@ namespace jorts {
               );
 
 
+            //  var themes_provider = new Gtk.CssProvider ();
+            //      themes_provider.load_from_resource ("/io/github/ellie_commons/jorts/Themes.css");
+            //      Gtk.StyleContext.add_provider_for_display (
+            //        Gdk.Display.get_default (),
+            //        themes_provider,
+            //        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+            //    );
+
+
             // build all the stylesheets
             jorts.Themer.init_all_themes();
 
@@ -161,7 +170,6 @@ namespace jorts {
             this.create_note(data);
         }
     }
-
 
 
         protected override int command_line (ApplicationCommandLine command_line) {

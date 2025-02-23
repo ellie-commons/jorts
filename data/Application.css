@@ -29,20 +29,34 @@
 @define-color LATTE_900 #804b00;
  */
 
+ /* workaround to headerlabel */
+.heading {
+    font-weight: 700;
+    opacity: 0.8;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+
 
 window.animations,
-window.animations undershoot.top,
-window.animations undershoot.bottom,
 window.animations headertitle,
 window.animations textview,
 window.animations textview text,
-window.animations textview text selection {
+window.animations textview text selection,
+window.animations undershoot,
+window.animations overshoot {
     transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-window.transition textview text selection,
-window.animations undershoot.top,
-window.animations undershoot.bottom {
+window.animations undershoot,
+window.animations overshoot {
+    transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+window.transition textview text selection  {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -94,6 +108,8 @@ editablelabel.editing {
         inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
         0 1px 0 0 alpha(@bg_highlight_color, 0.3);
 }
+
+
 
 
 /* ALL the colorpills */
