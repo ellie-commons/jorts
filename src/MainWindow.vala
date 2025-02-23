@@ -171,6 +171,11 @@ namespace jorts {
             notetitle.changed.connect (() => {
                 ((Application)this.application).save_to_stash ();            
             });
+
+            this.close_request.connect (() => {
+                ((Application)this.application).save_to_stash (); 
+                return false;           
+            });
         }
 
         // TITLE IS TITLE
