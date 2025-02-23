@@ -51,6 +51,7 @@ namespace jorts {
             jorts.Themer.init_all_themes();
 
 
+            Granite.Services.Application.set_badge_visible.begin ( true);
         }
 
         static construct {
@@ -123,6 +124,10 @@ namespace jorts {
         }
         this.open_notes.add(note);
         this.save_to_stash ();
+
+
+
+        Granite.Services.Application.set_badge.begin ((open_notes.size));
 	}
 
     // Simply remove from the list of things to save, and close

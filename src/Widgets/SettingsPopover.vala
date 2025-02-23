@@ -40,7 +40,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
         setting_grid.set_margin_start (12);
-        setting_grid.set_margin_end (12);
+        setting_grid.set_margin_end (6);
         setting_grid.set_margin_top (12);
         setting_grid.set_margin_bottom (12);
 
@@ -50,8 +50,9 @@ public class jorts.SettingsPopover : Gtk.Popover {
   
         // Choose theme section
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
-        color_button_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-    
+        
+
+        
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
@@ -92,11 +93,11 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
         //TODO: Multiline
-        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0) {
+        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3) {
             accessible_role = Gtk.AccessibleRole.LIST
         };
-        color_button_box.set_halign (Gtk.Align.CENTER);
-        color_button_box.set_valign (Gtk.Align.CENTER);
+          color_button_box.set_halign (Gtk.Align.FILL);
+
         // GTK4: append
         color_button_box.append (color_button_blueberry);
         color_button_box.append (color_button_mint);
