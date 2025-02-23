@@ -61,13 +61,11 @@ namespace jorts.Themer {
             }
 
             window.%s undershoot.top {
-                transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
                 background:
                     linear-gradient(
                         @%s_100 0%,
                         alpha(@%s_100, 0) 50%
                     );
-                    transition: 750ms cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             window.%s undershoot.bottom {
@@ -76,7 +74,6 @@ namespace jorts.Themer {
                         alpha(@%s_100, 0) 50%,
                         @%s_100 100%
                     );
-
             }
 
             window.%s overshoot.top {
@@ -90,8 +87,6 @@ namespace jorts.Themer {
 
             window.%s overshoot.left {
             background: linear-gradient(to left, alpha(@%s_900, 0) 80%, alpha(@%s_900, 0.25) 100%); }
-
-
 
             window.%s textview text selection,
             window.%s editablelabel text selection {
@@ -128,8 +123,7 @@ namespace jorts.Themer {
 
             window.%s editablelabel:hover,
             window.%s editablelabel:focus {
-                border: 1px solid alpha(@s_100,0.5);
-
+                border: 1px solid alpha(@s_300,0.5);
             }
 
             window.%s editablelabel.editing {
@@ -145,7 +139,6 @@ namespace jorts.Themer {
             window.%s:backdrop windowcontrols image {
                 color: shade(@%s_500, 0.77);
             }
-
 
         """));
 
