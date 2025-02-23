@@ -20,8 +20,9 @@ namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
         private static bool create_new_window = false;
+        //  private static bool show_all = false;
         public static GLib.Settings gsettings;
-
+        public static Settings animation_settings;
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                     application_id: "io.github.ellie_commons.jorts");
@@ -35,7 +36,8 @@ namespace jorts {
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
 
-            // This is automatic in GTK4, so can be removed after porting
+            // Somehow without this the CSS isnt applied
+            // Shouldnt it be automatic :(
             var app_provider = new Gtk.CssProvider ();
               app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
               Gtk.StyleContext.add_provider_for_display (
@@ -44,19 +46,11 @@ namespace jorts {
                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
               );
 
+
             // build all the stylesheets
             jorts.Themer.init_all_themes();
 
-            // Register, so we can inhibit logout long enough to save
-            this.register_session = true;
 
-            // User logs out: Inhibit session long enough to save notes
-            // TODO: implement a timeout. But it may be overkill, there is little data to save.
-            this.query_end.connect (() => {
-                var cookie = this.inhibit (null, Gtk.ApplicationInhibitFlags.LOGOUT, "Saving sticky notes...");
-                this.save_to_stash ();
-                this.uninhibit (cookie);
-            });
         }
 
         static construct {
@@ -85,7 +79,6 @@ namespace jorts {
             delete_action.activate.connect (() => {
                 MainWindow note = (MainWindow)get_active_window ();
                 remove_note(note);
-                note.destroy();
             });
             var save_action = new SimpleAction ("save", null);
             set_accels_for_action ("app.save", {"<Control>s"});
@@ -107,36 +100,13 @@ namespace jorts {
                     }
                 }
             } else {
-
-                Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
-
-                // If we load nothing: Fallback to a random with blue theme as first
-                if (loaded_data.size == 0 ) {
-                    noteData stored_note    = jorts.Utils.random_note(null);
-                    stored_note.theme       = "BLUEBERRY" ;
-                    loaded_data.add(stored_note);
-                }
-
-                // Load everything we have
-                foreach (noteData data in loaded_data) {
-                    print("Loaded: " + data.title + "\n");
-                    this.create_note(data);
-                }
-
-
-            }
-
-
-
-                    
+                this.init_all_notes ();
+                //this.follow_animations_settings();
+            }     
 	    }
 
 
     // create new instances of MainWindow
-    // Either it is called with data, and we load it in the instance
-    // Or there is no data, but Activate guaranteed there is at least one note
-    // So we create a new one and skip the last theme
-    // Else we could get by randomness the same theme thrice in a row
 	public void create_note(noteData? data) {
         MainWindow note;
         if (data != null) {
@@ -169,23 +139,40 @@ namespace jorts {
     }
 
 
+    // the thing that 
+    public void init_all_notes() {
+        Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
+
+        // If we load nothing: Fallback to a random with blue theme as first
+        if (loaded_data.size == 0 ) {
+            noteData stored_note    = jorts.Utils.random_note(null);
+            stored_note.theme       = "BLUEBERRY" ;
+            loaded_data.add(stored_note);
+        }
+
+        // Load everything we have
+        foreach (noteData data in loaded_data) {
+            print("Loaded: " + data.title + "\n");
+            this.create_note(data);
+        }
+    }
+
+
+
         protected override int command_line (ApplicationCommandLine command_line) {
-
             string[] args = command_line.get_arguments ();
-
             activate ();
 
             // Create a next window if requested and it's not the app launch
             if (args[1] == "--new-note") {                
                 create_note(null);
-            }
-
+            } 
             return 0;
-
         }
 
         const OptionEntry[] entries = {
             { "--new-note", 'n', 0, OptionArg.NONE, out create_new_window, "New Note", null },
+            //  { "--show-all", 'n', 0, OptionArg.NONE, out show_all, "Show All", null },
             { null }
         };
 

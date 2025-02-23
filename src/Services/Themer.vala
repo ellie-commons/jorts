@@ -136,12 +136,14 @@ namespace jorts.Themer {
     }
 
     public static void init_all_themes() {
+
         foreach (unowned var theme in jorts.Themer.themearray) {
             // Palette color
               var theme_provider = new Gtk.CssProvider ();
               var style = jorts.Themer.generate_css (theme);
 
-              //print ("Generated: " + theme + "\n");
+            // for the move away from stylecontext
+            // print(style);
 
             theme_provider.load_from_string (style);
 

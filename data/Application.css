@@ -37,14 +37,14 @@ window.animations headertitle,
 window.animations textview,
 window.animations textview text,
 window.animations textview text selection {
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-window.transition textview text selection {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-
+window.transition textview text selection,
+window.animations undershoot.top,
+window.animations undershoot.bottom {
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 windowcontrols,
 windowcontrols:backdrop {
@@ -96,6 +96,8 @@ editablelabel.editing {
         0 1px 0 0 alpha(@bg_highlight_color, 0.3);
 }
 
+
+/* ALL the colorpills */
 colorpill.blueberry {background-color: @BLUEBERRY_300;}
 colorpill.blueberry:hover {border: 1px solid @BLUEBERRY_900;}
 

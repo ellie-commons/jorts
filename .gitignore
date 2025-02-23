@@ -6,3 +6,5 @@ builddir/
 app-dir/
 obj-x86_64-linux-gnu/
 repo/
+src/dump.vala
+src/dump.txt

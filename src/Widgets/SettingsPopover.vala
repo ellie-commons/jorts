@@ -35,6 +35,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
     public SettingsPopover (string theme) {
         this.set_position (Gtk.PositionType.TOP);
+        this.set_halign (Gtk.Align.END);
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
@@ -43,7 +44,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.set_margin_top (12);
         setting_grid.set_margin_bottom (12);
 
-        setting_grid.column_spacing = 6;
+        setting_grid.column_spacing = 1;
         setting_grid.row_spacing = 6;
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
   
