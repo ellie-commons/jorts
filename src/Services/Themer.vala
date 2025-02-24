@@ -56,6 +56,7 @@ namespace jorts.Themer {
         string style = "";
 
         style = (N_("""
+
             window.${accent_color} {
                 background-color: @${accent_color}_100;
             }
@@ -123,7 +124,7 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
-                border: 1px solid @${accent_color}_300;
+                border: 1px solid mix(@${accent_color}_500, @${accent_color}_700, 0.3);
             }
 
             window.${accent_color} editablelabel.editing {

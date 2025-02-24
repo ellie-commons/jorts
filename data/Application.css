@@ -30,39 +30,23 @@
  */
 
  /* workaround to headerlabel */
-.heading {
+ .heading {
     font-weight: 700;
     opacity: 0.8;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
 }
 
-
-
-window.animations,
-window.animations headertitle,
-window.animations textview,
-window.animations textview text,
-window.animations textview text selection,
-window.animations undershoot,
-window.animations overshoot {
-    transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-undershoot,
-overshoot {
-    transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: linear-gradient 750ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-window.transition textview text selection  {
-    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 windowcontrols,
 windowcontrols:backdrop {
     background-color: transparent;
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window,
+overshoot,
+undershoot {
+    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textview,
@@ -72,7 +56,7 @@ headertitle {
     font-weight: 500;
     font-size: 1.2em;
     box-shadow: none;
-    /*transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 actionbar {
@@ -81,6 +65,7 @@ actionbar {
     background-image: none;
     padding: 3px;
     border: none;
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 actionbar button:hover,
@@ -89,6 +74,7 @@ windowcontrols button:hover,
 windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
     border-radius: 6px;
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 editablelabel {
@@ -108,7 +94,12 @@ editablelabel.editing {
         0 1px 0 0 alpha(@bg_highlight_color, 0.3);
 }
 
-
+editablelabel,
+windowcontrols image,
+windowcontrols:backdrop image,
+actionbar image {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 /* ALL the colorpills */

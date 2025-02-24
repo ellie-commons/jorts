@@ -8,3 +8,4 @@ obj-x86_64-linux-gnu/
 repo/
 src/dump.vala
 src/dump.txt
+.vscode/settings.json
