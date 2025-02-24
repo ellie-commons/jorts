@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Jorts
+GenericName=Sticky notes
 Comment=Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS
 Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts

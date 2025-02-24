@@ -88,7 +88,6 @@ actionbar button:focus,
 windowcontrols button:hover,
 windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
-    box-shadow: none;
     border-radius: 6px;
 }
 
