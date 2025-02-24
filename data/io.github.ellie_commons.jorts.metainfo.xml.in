@@ -4,9 +4,9 @@
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     <name translatable="no">Jorts</name>
-    <summary>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</summary>
+    <summary>Neither jeans nor shorts, just like jorts</summary>
     <description>
-        <p>A colourful little sticky notes utility, for your thoughts</p>
+        <p>A colourful little sticky notes utility for your thoughts</p>
         <ul>
             <li>Ten good looking themes with soft transitions</li>
             <li>Striving to keep it cute, pretty, simple, modern, light</li>
@@ -16,7 +16,7 @@
     <provides>
         <binary>io.github.ellie_commons.jorts</binary>
     </provides>
-    <developer_name translatable="no">Stella - Teamcons</developer_name>
+    <developer translatable="no">Stella - Teamcons</developer>
     <url type="homepage">https://github.com/ellie_commons/jorts</url>
     <url type="bugtracker">https://github.com/ellie_commons/jorts/issues</url>
     <url type="translate">https://github.com/ellie_commons/jorts/blob/main/po/README.md</url>
@@ -25,7 +25,14 @@
         <screenshot type="default">
             <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot.png</image>
         </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot2.png</image>
+        </screenshot>
     </screenshots>
+    <branding>
+      <color type="primary" scheme_preference="light">#64baff</color>
+      <color type="primary" scheme_preference="dark">#002e99</color>
+    </branding>
     <content_rating type="oars-1.1"/>
     <recommends>
       <control>keyboard</control>
@@ -39,7 +46,6 @@
                 <ul>
                     <li>Old Notejot version and UI revived in a new project</li>
                     <li>The app is now named Jorts. You however cannot wear it</li>
-                    <li>Closer to current elementary OS Stylesheet and named colours</li>
                     <li>Also more colors than Notejot had</li>
                     <li>It builds for flatpak now</li>
                     <li>Also on GTK4</li>
@@ -55,8 +61,6 @@
         </release>
     </releases>
     <custom>
-        <value key="x-appcenter-color-primary">#fff3ae</value>
-        <value key="x-appcenter-color-primary-text">#555864</value>
         <value key="x-appcenter-suggested-price">3</value>
     </custom>
 </component>
