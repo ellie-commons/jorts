@@ -27,16 +27,17 @@ Main tasks are the tasks:
 - [x] Do a separate for popover
 - [x] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
 - [x] Port to gtk4
-- [ ] Finish port: editablelabel and the popover
-- [ ] Do all the testing
-- [ ] Do a first release
+- [x] Finish port: editablelabel and the popover
+- [x] Do all the testing
+- [x] Do a first release
 - [ ] Do a first appcenter release
+- [ ] Add zoom support
 - [ ] Static theming
 - [ ] Zoom: scroll to zoom, keep for next note
 - [x] Detect hyperlinks and open in 
 - [x] Detect emails and open in Mail
 - [ ] Detect local links and open in files
-- [ ] Improve a11y (contrast, zoom)
+- [ ] Improve a11y (contrast)
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
 
