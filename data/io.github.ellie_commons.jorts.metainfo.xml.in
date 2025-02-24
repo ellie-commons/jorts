@@ -49,6 +49,7 @@
                     <li>New stickies have a random fun little title</li>
                     <li>Storage system rebuilt from the ground up</li>
                     <li>Some initial translations :3</li>
+                    <li>Links and email addresses detection. Ctrl+click to open</li>
                 </ul>
             </description>
         </release>
