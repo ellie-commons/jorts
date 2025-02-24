@@ -88,7 +88,7 @@ sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libva
 Installation is as simple as cloning this repo (or download and extract the zip archive), change to the new repo's directory, and run the following command:
 
 ```bash
-flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yaml
+flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yml
 ```
 
 ## 💾 Notes Storage
