@@ -123,11 +123,11 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
-                border: 1px solid shade(@${accent_color}_300, 0.77);
+                border: 1px solid @${accent_color}_300;
             }
 
             window.${accent_color} editablelabel.editing {
-                border: 1px solid shade(@${accent_color}_900, 0.77);
+                border: 1px solid @${accent_color}_900;
             }
 
             window.${accent_color}:backdrop textview text,
