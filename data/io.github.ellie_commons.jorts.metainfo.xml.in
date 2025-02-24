@@ -42,20 +42,17 @@
     <releases>
         <release version="2.0.0" date="2025-02-24">
             <description>
-                <p>Release: Slate And Bubblegum</p>
+                <p>2.0.0 Release: Slate And Bubblegum</p>
                 <ul>
-                    <li>Old Notejot version and UI revived in a new project</li>
+                    <li>Revival of an ancient but well loved version of Notejot</li>
                     <li>The app is now named Jorts. You however cannot wear it</li>
-                    <li>Also more colors than Notejot had</li>
-                    <li>It builds for flatpak now</li>
-                    <li>Also on GTK4</li>
-                    <li>Better adapted to the way Wayland works</li>
+                    <li>10 lovely little colours</li>
+                    <li>Built atop of modern Linux technologies and packaging formats</li>
                     <li>Smooth transition when changing theme</li>
-                    <li>New stickies have random colour</li>
-                    <li>New stickies have a random fun little title</li>
-                    <li>Storage system rebuilt from the ground up</li>
-                    <li>Some initial translations :3</li>
-                    <li>Links and email addresses detection. Ctrl+click to open</li>
+                    <li>New stickies have a random fun little title and colour</li>
+                    <li>A few initial translations included, and more to come</li>
+                    <li>Email and links are clickable! Ctrl+Click to open in mail or browser</li>
+                    <li>Text supports undo, redo, and you can use emojis :)</li>
                 </ul>
             </description>
         </release>

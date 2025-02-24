@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 22:32+0100\n"
+"POT-Creation-Date: 2025-02-24 23:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Choose theme section
-#: src/Widgets/SettingsPopover.vala:50
+#: src/Widgets/SettingsPopover.vala:52
 msgid "Sticky Note Colour"
 msgstr "Nota adhesiva Color"
 
@@ -63,19 +63,19 @@ msgstr "Cacao"
 msgid "Slate"
 msgstr "Pizarra"
 
-#: src/MainWindow.vala:106
+#: src/MainWindow.vala:104
 msgid "Edit title"
 msgstr "Editar título"
 
-#: src/MainWindow.vala:136
+#: src/MainWindow.vala:122
 msgid "New sticky note (Ctrl+N)"
 msgstr "Nueva nota adhesiva (Ctrl+N)"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:129
 msgid "Delete sticky note (Ctrl+W)"
 msgstr "Eliminar nota adhesiva (Ctrl+W)"
 
-#: src/MainWindow.vala:156
+#: src/MainWindow.vala:143
 msgid "Settings"
 msgstr "Configuración"
 
@@ -217,7 +217,11 @@ msgid "Jorts"
 msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:7
+#, fuzzy
+msgid "Sticky notes"
+msgstr "Nueva nota adhesiva"
+
+#: data/io.github.ellie_commons.jorts.desktop.in:5
 msgid ""
 "Neither jeans nor shorts, just like jorts. A sticky notes app for elementary "
 "OS"
@@ -225,16 +229,24 @@ msgstr ""
 "Ni vaqueros ni pantalones cortos, como los jorts. Una aplicación de notas "
 "adhesivas para elementary OS"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:7
+#: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.desktop.in:16
+#: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
 msgstr "Nueva nota adhesiva"
 
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:7
+#, fuzzy
+msgid "Neither jeans nor shorts, just like jorts"
+msgstr ""
+"Ni vaqueros ni pantalones cortos, como los jorts. Una aplicación de notas "
+"adhesivas para elementary OS"
+
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
-msgid "A colourful little sticky notes utility, for your thoughts"
+#, fuzzy
+msgid "A colourful little sticky notes utility for your thoughts"
 msgstr ""
 "Una pequeña y colorida utilidad de notas adhesivas para tus pensamientos"
 
@@ -250,62 +262,76 @@ msgstr "Esforzándose por mantenerlo lindo, bonito, simple, moderno, ligero"
 msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
 msgstr "Soporta Deshacer, Rehacer (Ctrl+Z, Ctrl+Shift+Z)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
-msgid "Stella - Teamcons"
-msgstr "Stella - Teamcons"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
-msgid "Release: Slate And Bubblegum"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
+#, fuzzy
+msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "Lanzamiento: Pizarra y Chicle"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:40
-msgid "Old Notejot version and UI revived in a new project"
-msgstr "Antigua versión y UI de Notejot revividas en un nuevo proyecto"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
+msgid "Revival of an ancient but well loved version of Notejot"
+msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:41
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "La aplicación se llama ahora Jorts. Sin embargo, no puedes usarla"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
-msgid "Closer to current elementary OS Stylesheet and named colours"
-msgstr ""
-"Más cercano a la actual hoja de estilo elemental del SO y colores con nombre"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
-msgid "Also more colors than Notejot had"
-msgstr "También más colores que los que tenía Notejot"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
-msgid "It builds for flatpak now"
-msgstr "Ahora se construye para flatpak"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
-msgid "Also on GTK4"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
+msgid "10 lovely little colours"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
-msgid "Better adapted to the way Wayland works"
-msgstr "Mejor adaptado al funcionamiento de Wayland"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
+msgid "Built atop of modern Linux technologies and packaging formats"
+msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:51
 msgid "Smooth transition when changing theme"
 msgstr "Transición suave al cambiar de tema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
-msgid "New stickies have random colour"
-msgstr "Los nuevos stickies tienen un color aleatorio"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
-msgid "New stickies have a random fun little title"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:52
+#, fuzzy
+msgid "New stickies have a random fun little title and colour"
 msgstr "Los nuevos stickies tienen un título aleatorio y divertido"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
-msgid "Storage system rebuilt from the ground up"
-msgstr "Sistema de almacenamiento reconstruido desde cero"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:53
+msgid "A few initial translations included, and more to come"
+msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:51
-msgid "Some initial translations :3"
-msgstr "Algunas traducciones iniciales :3"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:54
+msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:55
+msgid "Text supports undo, redo, and you can use emojis :)"
+msgstr ""
+
+#~ msgid "Stella - Teamcons"
+#~ msgstr "Stella - Teamcons"
+
+#~ msgid "Old Notejot version and UI revived in a new project"
+#~ msgstr "Antigua versión y UI de Notejot revividas en un nuevo proyecto"
+
+#~ msgid "Closer to current elementary OS Stylesheet and named colours"
+#~ msgstr ""
+#~ "Más cercano a la actual hoja de estilo elemental del SO y colores con "
+#~ "nombre"
+
+#~ msgid "Also more colors than Notejot had"
+#~ msgstr "También más colores que los que tenía Notejot"
+
+#~ msgid "It builds for flatpak now"
+#~ msgstr "Ahora se construye para flatpak"
+
+#~ msgid "Better adapted to the way Wayland works"
+#~ msgstr "Mejor adaptado al funcionamiento de Wayland"
+
+#~ msgid "New stickies have random colour"
+#~ msgstr "Los nuevos stickies tienen un color aleatorio"
+
+#~ msgid "Storage system rebuilt from the ground up"
+#~ msgstr "Sistema de almacenamiento reconstruido desde cero"
+
+#~ msgid "Some initial translations :3"
+#~ msgstr "Algunas traducciones iniciales :3"
 
 #~ msgid "Latte"
 #~ msgstr "Latte"
