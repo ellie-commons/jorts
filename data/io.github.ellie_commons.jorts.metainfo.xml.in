@@ -58,7 +58,7 @@
     </custom>
     
     <releases>
-        <release version="2.0.0" date="2025-02-24">
+        <release version="2.0.0" date="2025-02-25">
             <description>
                 <p>2.0.0 Release: Slate And Bubblegum</p>
                 <ul>
@@ -74,6 +74,5 @@
                 </ul>
             </description>
         </release>
-    </releases>
-    
+    </releases>   
 </component>
