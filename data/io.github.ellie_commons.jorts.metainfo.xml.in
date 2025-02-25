@@ -60,10 +60,11 @@
     <releases>
         <release version="2.0.1" date="2025-02-25">
             <description>
-                <p>2.0.1 Minor tweaking</p>
+                <p>2.0.1 Tweaks and Refinements</p>
                 <ul>
                     <li>New screenshot</li>
-                    <li>Refinements</li>
+                    <li>Theme refinements</li>
+                    <li>Now it should be ready for the appcenter ;)</li>
                 </ul>
             </description>
         </release>
