@@ -113,6 +113,8 @@ namespace jorts.Themer {
                 border-bottom-color: @${accent_color}_100;
                 color: shade(@${accent_color}_900, 0.77);
             }
+
+            /* Fix the emoticon entry having note color background */
             window.${accent_color} entry {
                 background-color: white;
                 color: black;
@@ -124,11 +126,12 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
-                border: 1px solid mix(@${accent_color}_500, @${accent_color}_700, 0.3);
+                border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.7);
             }
 
             window.${accent_color} editablelabel.editing {
-                border: 1px solid @${accent_color}_900;
+                border: 1px solid mix(@${accent_color}_500, @${accent_color}_700, 0.3);
+                box-shadow: inset 0 0 2px 2px mix(@${accent_color}_100, @${accent_color}_500, 0.3);
             }
 
             window.${accent_color}:backdrop textview text,

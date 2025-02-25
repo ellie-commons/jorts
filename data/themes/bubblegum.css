@@ -72,6 +72,8 @@ Alas.
                 border-bottom-color: @BUBBLEGUM_100;
                 color: shade(@BUBBLEGUM_900, 0.77);
             }
+
+            /* Fix the emoticon entry having note color background */
             window.BUBBLEGUM entry {
                 background-color: white;
                 color: black;
@@ -83,11 +85,12 @@ Alas.
 
             window.BUBBLEGUM editablelabel:hover,
             window.BUBBLEGUM editablelabel:focus {
-                border: 1px solid mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3);
+                border: 1px solid alpha(mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3),0.7);
             }
 
             window.BUBBLEGUM editablelabel.editing {
-                border: 1px solid @BUBBLEGUM_900;
+                border: 1px solid mix(@BUBBLEGUM_500, @BUBBLEGUM_700, 0.3);
+                box-shadow: inset 0 0 2px 2px mix(@BUBBLEGUM_100, @BUBBLEGUM_500, 0.3);
             }
 
             window.BUBBLEGUM:backdrop textview text,

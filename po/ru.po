@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-24 23:54+0100\n"
+"POT-Creation-Date: 2025-02-25 20:38+0100\n"
 "PO-Revision-Date: 2025-02-17 22:17+0300\n"
 "Last-Translator: Leo <lenemter@gmail.com>\n"
 "Language-Team: none\n"
@@ -211,11 +211,11 @@ msgid "Napkin scribbles"
 msgstr "Каракули на салфетке"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:6
 msgid "Jorts"
 msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:34
 #, fuzzy
 msgid "Sticky notes"
 msgstr "Новая заметка"
@@ -236,72 +236,118 @@ msgstr ""
 msgid "New sticky note"
 msgstr "Новая заметка"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:7
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 #, fuzzy
-msgid "Neither jeans nor shorts, just like jorts"
-msgstr "Приложение для заметок, созданное для elementary OS"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:9
-#, fuzzy
-msgid "A colourful little sticky notes utility for your thoughts"
+msgid "Colourful little sticky notes for your thoughts :)"
 msgstr "Маленькая красочная программа для заметок"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
-msgid "Ten good looking themes with soft transitions"
-msgstr "Десять изящных тем с плавными переходами"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
+#, fuzzy
+msgid ""
+"Neither jeans nor shorts, just like jorts. Colourful little sticky notes for "
+"your thoughts"
+msgstr "Приложение для заметок, созданное для elementary OS"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:12
-msgid "Striving to keep it cute, pretty, simple, modern, light"
-msgstr "Милое, красивое, простое, современное и лёгкое"
+#, fuzzy
+msgid "Ten pretty themes with soft transitions"
+msgstr "Десять изящных тем с плавными переходами"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
+#, fuzzy
+msgid "Striving to keep it simple, cute, modern, light"
+msgstr "Милое, красивое, простое, современное и лёгкое"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
 msgstr "Поддержка отмены, повтора (Ctrl+Z, Ctrl+Shift+Z)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
+msgid "You can open links and emails with Ctrl+Click"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:23
+msgid "Stella - Teamcons"
+msgstr "Stella - Teamcons"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:35
+msgid "Notes"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:36
+msgid "Cute"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:37
+msgid "Desktop"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
+msgid "Reminder"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
+msgid "A sticky note with the \"Blueberry\" theme"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:63
+msgid "2.0.1 Minor tweaking"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:65
+#, fuzzy
+msgid "New screenshot"
+msgstr "Новая заметка"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
+msgid "Refinements"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
 #, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "Появление новых цветов: бубльгумового и каменно-серого"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:48
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Переименовано в Jorts"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:49
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
 msgid "10 lovely little colours"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:50
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:77
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:51
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:78
 msgid "Smooth transition when changing theme"
 msgstr "Плавный переход при смене темы"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:52
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:79
 #, fuzzy
 msgid "New stickies have a random fun little title and colour"
 msgstr "У новых заметок выбирается случайные, весёлые названия"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:53
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:80
 msgid "A few initial translations included, and more to come"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:54
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:55
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Teamcons"
+#, fuzzy
+#~ msgid "Neither jeans nor shorts, just like jorts"
+#~ msgstr "Приложение для заметок, созданное для elementary OS"
 
 #~ msgid "Old Notejot version and UI revived in a new project"
 #~ msgstr "Перезапуск приложения Notejot с новым интерфейсом"

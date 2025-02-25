@@ -72,6 +72,8 @@ Alas.
                 border-bottom-color: @ORANGE_100;
                 color: shade(@ORANGE_900, 0.77);
             }
+
+            /* Fix the emoticon entry having note color background */
             window.ORANGE entry {
                 background-color: white;
                 color: black;
@@ -83,11 +85,12 @@ Alas.
 
             window.ORANGE editablelabel:hover,
             window.ORANGE editablelabel:focus {
-                border: 1px solid mix(@ORANGE_500, @ORANGE_700, 0.3);
+                border: 1px solid alpha(mix(@ORANGE_500, @ORANGE_700, 0.3),0.7);
             }
 
             window.ORANGE editablelabel.editing {
-                border: 1px solid @ORANGE_900;
+                border: 1px solid mix(@ORANGE_500, @ORANGE_700, 0.3);
+                box-shadow: inset 0 0 2px 2px mix(@ORANGE_100, @ORANGE_500, 0.3);
             }
 
             window.ORANGE:backdrop textview text,
