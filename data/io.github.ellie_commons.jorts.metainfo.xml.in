@@ -56,7 +56,12 @@
     <custom>
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
-    
+    <releases>    
+        <release version="2.0.1" date="2025-02-25">
+            <description>
+                <p>2.0.1 Appcenter release</p>
+            </description>
+        </release>
         <release version="2.0.0" date="2025-02-25">
             <description>
                 <p>2.0.0 Release: Slate And Bubblegum</p>

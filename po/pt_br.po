@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-25 20:38+0100\n"
+"POT-Creation-Date: 2025-02-25 20:57+0100\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,12 +222,10 @@ msgid "Sticky notes"
 msgstr "Nova nota adesiva"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid ""
-"Neither jeans nor shorts, just like jorts. A sticky notes app for elementary "
-"OS"
-msgstr ""
-"Nem jeans nem bermuda, assim como jorts. Um aplicativo de notas adesivas "
-"para elementary OS"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
+#, fuzzy
+msgid "Colourful little sticky notes for your thoughts :)"
+msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -236,11 +234,6 @@ msgstr ""
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
 msgstr "Nova nota adesiva"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-#, fuzzy
-msgid "Colourful little sticky notes for your thoughts :)"
-msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 #, fuzzy
@@ -293,60 +286,62 @@ msgstr ""
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:63
-msgid "2.0.1 Minor tweaking"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+msgid "2.0.1 Appcenter release"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:65
-#, fuzzy
-msgid "New screenshot"
-msgstr "Nova nota adesiva"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
-msgid "Refinements"
-msgstr ""
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:67
 #, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "Lançamento: Slate e Bubblegum"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "O aplicativo agora se chama Jorts. No entanto, você não pode usá-lo"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
 msgid "10 lovely little colours"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:77
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:78
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
 msgid "Smooth transition when changing theme"
 msgstr "Transição suave ao mudar de tema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:79
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
 #, fuzzy
 msgid "New stickies have a random fun little title and colour"
 msgstr "Os novos stickies têm um pequeno título aleatório e divertido"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:80
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid "A few initial translations included, and more to come"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:77
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
+
+#~ msgid ""
+#~ "Neither jeans nor shorts, just like jorts. A sticky notes app for "
+#~ "elementary OS"
+#~ msgstr ""
+#~ "Nem jeans nem bermuda, assim como jorts. Um aplicativo de notas adesivas "
+#~ "para elementary OS"
+
+#, fuzzy
+#~ msgid "New screenshot"
+#~ msgstr "Nova nota adesiva"
 
 #, fuzzy
 #~ msgid "Neither jeans nor shorts, just like jorts"
