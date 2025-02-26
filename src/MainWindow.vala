@@ -110,7 +110,7 @@ namespace jorts {
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
             scrolled.set_size_request (66,54);
-            view = new jorts.StickyView (this.content);
+            view = new jorts.StickyView (100, this.content);
             scrolled.set_child (view);
 
 

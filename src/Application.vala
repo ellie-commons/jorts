@@ -46,7 +46,6 @@ namespace jorts {
                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
               );
 
-
             //  var themes_provider = new Gtk.CssProvider ();
             //      themes_provider.load_from_resource ("/io/github/ellie_commons/jorts/Themes.css");
             //      Gtk.StyleContext.add_provider_for_display (
