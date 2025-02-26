@@ -228,9 +228,7 @@ msgstr "Маленькая красочная программа для заме
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr ""
-"text;plain;plaintext;notepad;notes;sticky;post-it;текст;блокнот;заметка;"
-"заметки;"
+msgstr "text;plain;plaintext;notepad;notes;sticky;post-it;текст;блокнот;заметка;заметки;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
