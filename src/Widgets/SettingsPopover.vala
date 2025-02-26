@@ -47,7 +47,57 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.column_spacing = 1;
         setting_grid.row_spacing = 6;
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
-  
+
+
+        /*
+        var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
+                tooltip_markup = Granite.markup_accel_tooltip (
+                        TerminalWidget.ACCELS_ZOOM_OUT,
+                        _("Zoom out")
+                    )
+                };
+                zoom_out_button.clicked.connect (() => terminal.decrease_font_size ());
+        
+                var zoom_default_button = new Gtk.Button () {
+                    tooltip_markup = Granite.markup_accel_tooltip (
+                        TerminalWidget.ACCELS_ZOOM_DEFAULT,
+                        _("Default zoom level")
+                    )
+                };
+                zoom_default_button.clicked.connect (() => terminal.default_font_size ());
+        
+                var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
+                    tooltip_markup = Granite.markup_accel_tooltip (
+                        TerminalWidget.ACCELS_ZOOM_IN,
+                        _("Zoom in")
+                    )
+                };
+                zoom_in_button.clicked.connect (() => terminal.increase_font_size ());
+        
+                var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
+                    homogeneous = true,
+                    hexpand = true,
+                    margin_start = 12,
+                    margin_end = 12,
+                    margin_bottom = 6
+                };
+                font_size_box.add (zoom_out_button);
+                font_size_box.add (zoom_default_button);
+                font_size_box.add (zoom_in_button);
+        
+                font_size_box.get_style_context ().add_class (Gtk.STYLE_CLASS_LINKED);
+        
+        setting_grid.attach (font_size_box, 0, 0, 1, 1);
+        setting_grid.attach (new Gtk.Separator (HORIZONTAL), 0, 1, 1, 1);
+
+
+        terminal_binding = new BindingGroup ();
+        terminal_binding.bind_property ("font-scale", zoom_default_button, "label", SYNC_CREATE, font_scale_to_zoom);
+
+
+        */
+
+
         // Choose theme section
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
@@ -155,4 +205,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
             this.theme_changed("SLATE");
         });
     }
+
+    private static bool font_scale_to_zoom (Binding binding, Value font_scale, ref Value label) {
+        label.set_string ("%.0f%%".printf (font_scale.get_double () * 100));
+        return true;
+    }
+
 }
