@@ -273,32 +273,32 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:36
 msgid "Cute"
-msgstr ""
+msgstr "Niedlich"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:37
 msgid "Desktop"
-msgstr ""
+msgstr "Schreibtisch"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
 msgid "Reminder"
-msgstr ""
+msgstr "Erinnerung"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr ""
+msgstr "Eine Haftnotiz mit dem Blaubeer-Thema"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "2.0.1 Appcenter release"
-msgstr ""
+msgstr "2.0.1 Appcenter-Veröffentlichung"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:67
 #, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "Version: Schiefer und Bubblegum"
+msgstr "2.0.0-Version: Schiefer und Bubblegum"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
 msgid "Revival of an ancient but well loved version of Notejot"
-msgstr ""
+msgstr "Wiederbelebung einer alten, aber beliebten Version von Notejot"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "The app is now named Jorts. You however cannot wear it"
@@ -306,11 +306,11 @@ msgstr "Die App heißt jetzt Jorts. Man kann sie aber nicht tragen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
 msgid "10 lovely little colours"
-msgstr ""
+msgstr "10 liebliche kleine Farben"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr ""
+msgstr "Erstellt auf Basis moderner Linux-Technologien und Paketformate"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
 msgid "Smooth transition when changing theme"
@@ -323,15 +323,16 @@ msgstr "Neue Haftnotizen haben einen zufälligen, lustigen kleinen Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid "A few initial translations included, and more to come"
-msgstr ""
+msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind
+ geplant."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr ""
+msgstr "E-Mail und Links sind anklickbar! Strg+Klick, um in E-Mail oder Browser zu öffnen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:77
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr ""
+msgstr "Text unterstützt Rückgängig und Wiederherstellen und Sie können Emojis verwenden :)"
 
 #~ msgid ""
 #~ "Neither jeans nor shorts, just like jorts. A sticky notes app for "
