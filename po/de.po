@@ -323,8 +323,7 @@ msgstr "Neue Haftnotizen haben einen zufälligen, lustigen kleinen Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid "A few initial translations included, and more to come"
-msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind
- geplant."
+msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind geplant."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
