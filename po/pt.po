@@ -284,7 +284,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "Uma nota adesiva com o tema \"Blueberry\”"
+msgstr "Uma nota adesiva com o tema \"Mirtilo\""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "2.0.1 Appcenter release"
