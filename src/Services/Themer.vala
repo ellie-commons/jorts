@@ -111,7 +111,7 @@ namespace jorts.Themer {
             window.${accent_color} editablelabel.editing text {
                 background-color: transparent;
                 border-bottom-color: @${accent_color}_100;
-                color: shade(@${accent_color}_900, 0.65);
+                color: shade(@${accent_color}_900, 0.75);
             }
 
             /* Fix the emoticon entry having note color background */
@@ -126,22 +126,24 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
-                border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.7);
+                border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.8);
             }
 
             window.${accent_color} editablelabel.editing {
-                border: 1px solid shade(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.65);
+                border: 1px solid shade(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.7);
                 box-shadow: inset 0 0 2px 2px mix(@${accent_color}_100, @${accent_color}_500, 0.3);
             }
 
-            window.${accent_color}:backdrop textview text,
-            window.${accent_color}:backdrop titlebar,
+            window.${accent_color}:backdrop editablelabel {
+                color: alpha(@${accent_color}_900, 0.9);
+            }
+
             window.${accent_color}:backdrop editablelabel,
             window.${accent_color}:backdrop actionbar,
             window.${accent_color}:backdrop actionbar image,
             window.${accent_color}:backdrop windowcontrols,
             window.${accent_color}:backdrop windowcontrols image {
-                color: shade(@${accent_color}_700, 0.65);
+                color: alpha(@${accent_color}_900, 0.8);
             }
 
         """));

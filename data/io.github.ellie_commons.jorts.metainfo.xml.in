@@ -56,7 +56,16 @@
     <custom>
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
-    <releases>    
+    <releases>
+        <release version="2.0.2" date="2025-02-25">
+            <description>
+                <p>2.0.1 Appcenter release</p>
+                <ul>
+                    <li>Better readability (WCAG AA or AAA depending on theme)</li>
+                    <li>Also slightly better looking. Yes even more.</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.0.1" date="2025-02-25">
             <description>
                 <p>2.0.1 Appcenter release</p>

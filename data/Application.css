@@ -49,9 +49,7 @@ undershoot {
     transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textview,
-textview text,
-headertitle {
+textview {
     background-image: none;
     font-weight: 500;
     font-size: 1.2em;
