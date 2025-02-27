@@ -52,6 +52,9 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
+        private int max_zoom;
+        private int min_zoom;
+
         public Gtk.EditableLabel notetitle;
 
         public SimpleActionGroup actions { get; construct; }
@@ -85,6 +88,14 @@ namespace jorts {
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
+
+
+            this.zoom = zoom;
+            this.max_zoom = 200;
+            this.min_zoom = 50;
+
+
+
 
             // add required base classes
             this.add_css_class("rounded");
@@ -222,5 +233,34 @@ namespace jorts {
             this.theme = theme;
             add_css_class (this.theme);
         }
+
+
+
+
+        public void reset_zoom() {
+            if (this.zoom != 100) {
+                remove_css_class (this.zoom.to_string());
+                this.zoom = 100;
+                add_css_class (this.zoom.to_string());
+            }
+        }
+
+        public void zoom_in() {
+            if ((this.zoom + 25) <= this.max_zoom) {
+                remove_css_class (this.zoom.to_string());
+                this.zoom = this.zoom + 25;
+                add_css_class (this.zoom.to_string());
+            }
+        }
+
+        public void zoom_out() {
+            if ((this.zoom - 25) >= this.min_zoom) {
+                remove_css_class (this.zoom.to_string());
+                this.zoom = this.zoom - 25;
+                add_css_class (this.zoom.to_string());
+            }
+        }
+
+
     }
 }
