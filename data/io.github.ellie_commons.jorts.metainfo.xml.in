@@ -65,12 +65,14 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="2.0.2" date="2025-02-25">
+        <release version="2.1.0" date="2025-02-25">
             <description>
                 <p>2.0.1 Appcenter release</p>
                 <ul>
+                    <li>Includes a per-note zoom! So you can get bigger or smaller text</li>
+                    <li>Latest set zoom, aka what is most comfortable to you, stays as default for new notes</li>
                     <li>Better readability (WCAG AA or AAA depending on theme)</li>
-                    <li>Also slightly better looking. Yes even more.</li>
+                    <li>Also slightly better looking theme. Yes even more :)</li>
                 </ul>
             </description>
         </release>

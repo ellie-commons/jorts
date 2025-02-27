@@ -133,7 +133,7 @@ namespace jorts {
             MainWindow last_note = this.open_notes.last ();
             string skip_theme = last_note.theme;
             var random_data = jorts.Utils.random_note(skip_theme);
-            random_data.zoom = last_note.zoom;
+            random_data.zoom = this.latest_zoom;
             note = new MainWindow(this, random_data);
         }
         this.open_notes.add(note);
