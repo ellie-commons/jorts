@@ -124,7 +124,7 @@ namespace jorts {
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
             new_item.width_request = 32;
             new_item.height_request = 32;
-            new_item.add_css_class("stickytoolbar");
+            new_item.add_css_class("stickybar_button");
 
             var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
@@ -132,7 +132,7 @@ namespace jorts {
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
             delete_item.width_request = 32;
             delete_item.height_request = 32;
-            delete_item.add_css_class("stickytoolbar");
+            delete_item.add_css_class("stickybar_button");
 
             var popover = new SettingsPopover (this.theme);
             
@@ -156,7 +156,7 @@ namespace jorts {
             app_button.set_icon_name("open-menu-symbolic");
             app_button.direction = Gtk.ArrowType.UP;
             app_button.popover = popover;
-            app_button.add_css_class("stickytoolbar");
+            app_button.add_css_class("stickybar_button");
 
             app_button.width_request = 32;
             app_button.height_request = 32;
