@@ -46,6 +46,8 @@ namespace jorts {
         private new jorts.StickyView view;
         private Gtk.ActionBar actionbar;
 
+        private jorts.SettingsPopover popover;
+
         //public noteData data;
         public string title_name;
         public string theme;
@@ -134,13 +136,13 @@ namespace jorts {
             delete_item.height_request = 32;
             delete_item.add_css_class("stickybar_button");
 
-            var popover = new SettingsPopover (this.theme);
+            var this.popover = new SettingsPopover (this.theme);
             
-            popover.theme_changed.connect ((selected) => {
+            this.popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
 
-            popover.zoom_changed.connect ((zoomkind) => {
+            this.popover.zoom_changed.connect ((zoomkind) => {
                 if (zoomkind == "zoom_in") {
                     this.zoom_in();
                 } else if (zoomkind == "zoom_out") {
@@ -253,6 +255,7 @@ namespace jorts {
             this.remove_css_class (this.zoom.to_string());
             this.zoom = zoom;
             this.add_css_class (this.zoom.to_string());
+            this.popover.set_zoomlevel(zoom);
         }
 
 
