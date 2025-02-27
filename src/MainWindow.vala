@@ -138,6 +138,16 @@ namespace jorts {
                 this.update_theme(selected);
             });
 
+            popover.zoom_changed.connect ((zoomkind) => {
+                if (zoomkind == "zoom_in") {
+                    this.zoom_in();
+                } else if (zoomkind == "zoom_out") {
+                    this.zoom_out();
+                } else if (zoomkind == "reset") {
+                    this.set_zoom(100);
+                }
+            });
+
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
             app_button.tooltip_text = (_("Settings"));
