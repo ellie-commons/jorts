@@ -61,9 +61,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Zoom out")
                     )  */
                 };
-                zoom_out_button.clicked.connect (() => {
-this.zoom_changed("zoom_out");
-});
+                zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
         
                 var zoom_default_button = new Gtk.Button () {
 /*                      tooltip_markup = Granite.markup_accel_tooltip (
@@ -71,9 +69,8 @@ this.zoom_changed("zoom_out");
                         _("Default zoom level")
                     )  */
                 };
-                zoom_default_button.clicked.connect (() => {
-this.zoom_changed("reset");
-});
+                zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
+                zoom_default_button.set_label ();
         
                 var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
 /*                      tooltip_markup = Granite.markup_accel_tooltip (
@@ -81,9 +78,7 @@ this.zoom_changed("reset");
                         _("Zoom in")
                     )  */
                 };
-                zoom_in_button.clicked.connect (() => {
-this.zoom_changed("zoom_in");
-});
+                zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
         
                 var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
                     homogeneous = true,
@@ -220,8 +215,6 @@ this.zoom_changed("zoom_in");
     public void set_zoomlevel (int64 zoom) {
         zoom_default_button.set_label(zoom.to_string());
     }
-
-
 
 
 /*      private static bool font_scale_to_zoom (Binding binding, Value font_scale, ref Value label) {

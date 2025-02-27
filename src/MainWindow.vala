@@ -198,6 +198,11 @@ namespace jorts {
                 ((Application)this.application).save_to_stash (); 
                 return false;           
             });
+
+            popover.show.connect(() => {
+                popover.set_zoomlevel(this.zoom);
+            });
+
         }
 
         // TITLE IS TITLE
@@ -280,6 +285,9 @@ namespace jorts {
             this.zoom = zoom;
             this.add_css_class (zoom_to_class( this.zoom));
             ((Application)this.application).latest_zoom = zoom;
+
+            
+
         }
     }
 }

@@ -36,7 +36,6 @@
       <id>io.github.xchan14.larawan</id>
     </suggests>
 
-
     <keywords>
       <keyword>Sticky notes</keyword>
       <keyword>Notes</keyword>
@@ -73,6 +72,7 @@
                     <li>Latest set zoom, aka what is most comfortable to you, stays as default for new notes</li>
                     <li>Better readability (WCAG AA or AAA depending on theme)</li>
                     <li>Also slightly better looking theme. Yes even more :)</li>
+                    <li>Improved translations</li>
                 </ul>
             </description>
         </release>
