@@ -136,13 +136,13 @@ namespace jorts {
             delete_item.height_request = 32;
             delete_item.add_css_class("stickybar_button");
 
-            var this.popover = new SettingsPopover (this.theme);
+            var popover = new SettingsPopover (this.theme);
             
-            this.popover.theme_changed.connect ((selected) => {
+            popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
 
-            this.popover.zoom_changed.connect ((zoomkind) => {
+            popover.zoom_changed.connect ((zoomkind) => {
                 if (zoomkind == "zoom_in") {
                     this.zoom_in();
                 } else if (zoomkind == "zoom_out") {
@@ -255,7 +255,7 @@ namespace jorts {
             this.remove_css_class (this.zoom.to_string());
             this.zoom = zoom;
             this.add_css_class (this.zoom.to_string());
-            this.popover.set_zoomlevel(zoom);
+            popover.set_zoomlevel(zoom);
         }
 
 
