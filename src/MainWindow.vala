@@ -224,27 +224,15 @@ namespace jorts {
         }
 
 
-        public void reset_zoom() {
-            if (this.zoom != 100) {
-                this.remove_css_class (this.zoom.to_string());
-                this.zoom = 100;
-                this.add_css_class (this.zoom.to_string());
-            }
-        }
-
         public void zoom_in() {
             if ((this.zoom + 25) <= max_zoom) {
-                this.remove_css_class (this.zoom.to_string());
-                this.zoom = this.zoom + 25;
-                this.add_css_class (this.zoom.to_string());
+                this.set_zoom((this.zoom + 25));
             }
         }
 
         public void zoom_out() {
             if ((this.zoom - 25) >= min_zoom) {
-                this.remove_css_class (this.zoom.to_string());
-                this.zoom = this.zoom - 25;
-                this.add_css_class (this.zoom.to_string());
+                this.set_zoom((this.zoom - 25));
             }
         }
 
