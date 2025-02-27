@@ -212,6 +212,11 @@ this.zoom_changed("zoom_in");
         });
     }
 
+    public void set_zoomlevel (int64 zoom) {
+        zoom_default_button.set_label(zoom.to_string());
+    }
+
+
 /*      private static bool font_scale_to_zoom (Binding binding, Value font_scale, ref Value label) {
         label.set_string ("%.0f%%".printf (font_scale.get_double () * 100));
         return true;
