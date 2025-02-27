@@ -55,7 +55,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Zoom out")
                     )  */
                 };
-                //  zoom_out_button.clicked.connect (() => terminal.decrease_font_size ());
+                zoom_out_button.clicked.connect (() => this.get_window().zoom_out ());
         
                 var zoom_default_button = new Gtk.Button () {
 /*                      tooltip_markup = Granite.markup_accel_tooltip (
@@ -63,7 +63,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Default zoom level")
                     )  */
                 };
-                // zoom_default_button.clicked.connect (() => terminal.default_font_size ());
+                zoom_default_button.clicked.connect (() => this.get_window().set_zoom (100));
         
                 var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
 /*                      tooltip_markup = Granite.markup_accel_tooltip (
@@ -71,7 +71,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Zoom in")
                     )  */
                 };
-                //zoom_in_button.clicked.connect (() => terminal.increase_font_size ());
+                zoom_in_button.clicked.connect (() => this.get_window().zoom_in ());
         
                 var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
                     homogeneous = true,
