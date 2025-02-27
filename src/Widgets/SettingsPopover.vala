@@ -70,7 +70,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                     )  */
                 };
                 zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
-                zoom_default_button.set_label ();
+                zoom_default_button.set_label ("");
         
                 var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
 /*                      tooltip_markup = Granite.markup_accel_tooltip (
