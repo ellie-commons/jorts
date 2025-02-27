@@ -45,25 +45,8 @@ public class jorts.StickyView : Granite.HyperTextView {
                 this.top_margin = 10;
                 this.set_hexpand (true);
                 this.set_vexpand (true);
-
-                this.zoom = zoom;
-                this.max_zoom = 300;
-                this.min_zoom = 50;
-        }  
-
-
-        public void zoom_in() {
-                if ((this.zoom + 50) <= this.max_zoom) {
-                        this.zoom = this.zoom + 50;
-                }
-
         }
 
-        public void zoom_out() {
-                if ((this.zoom - 50) >= this.min_zoom) {
-                        this.zoom = this.zoom - 50;
-                }
-        }
 
         public string get_content() {
                 Gtk.TextIter start,end;
