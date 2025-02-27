@@ -235,31 +235,36 @@ namespace jorts {
         }
 
 
-
-
         public void reset_zoom() {
             if (this.zoom != 100) {
-                remove_css_class (this.zoom.to_string());
+                this.remove_css_class (this.zoom.to_string());
                 this.zoom = 100;
-                add_css_class (this.zoom.to_string());
+                this.add_css_class (this.zoom.to_string());
             }
         }
 
         public void zoom_in() {
             if ((this.zoom + 25) <= this.max_zoom) {
-                remove_css_class (this.zoom.to_string());
+                this.remove_css_class (this.zoom.to_string());
                 this.zoom = this.zoom + 25;
-                add_css_class (this.zoom.to_string());
+                this.add_css_class (this.zoom.to_string());
             }
         }
 
         public void zoom_out() {
             if ((this.zoom - 25) >= this.min_zoom) {
-                remove_css_class (this.zoom.to_string());
+                this.remove_css_class (this.zoom.to_string());
                 this.zoom = this.zoom - 25;
-                add_css_class (this.zoom.to_string());
+                this.add_css_class (this.zoom.to_string());
             }
         }
+
+        public void set_zoom(int zoom) {
+            this.remove_css_class (this.zoom.to_string());
+            this.zoom = zoom;
+            this.add_css_class (this.zoom.to_string());
+        }
+
 
 
     }
