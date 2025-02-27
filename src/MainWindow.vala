@@ -52,8 +52,8 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        private int max_zoom;
-        private int min_zoom;
+        private static int max_zoom = 200;
+        private static int min_zoom = 50;
 
         public Gtk.EditableLabel notetitle;
 
@@ -88,13 +88,6 @@ namespace jorts {
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
-
-
-            this.zoom = zoom;
-            this.max_zoom = 200;
-            this.min_zoom = 50;
-
-
 
 
             // add required base classes
@@ -212,6 +205,7 @@ namespace jorts {
             this.theme = data.theme;
             this.content = data.content;
             this.zoom = data.zoom;
+            this.set_zoom(this.zoom)
             this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
         }
