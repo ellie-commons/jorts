@@ -71,12 +71,12 @@ actionbar {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-stickybar_button {
+.stickybar_button {
     -gtk-icon-shadow: 0 1px alpha(white, 0.5);
 }
 
-stickybar_button:hover,
-stickybar_button:focus,
+.stickybar_button:hover,
+.stickybar_button:focus,
 windowcontrols button:hover,
 windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
