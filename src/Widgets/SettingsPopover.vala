@@ -45,7 +45,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
-        setting_grid.set_margin_start (18);
+        setting_grid.set_margin_start (12);
         setting_grid.set_margin_end (12);
         setting_grid.set_margin_top (6);
         setting_grid.set_margin_bottom (12);

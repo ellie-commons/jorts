@@ -52,8 +52,8 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        public static int max_zoom = 150;
-        public static int min_zoom = 50;
+        public static int max_zoom = 200;
+        public static int min_zoom = 60;
                 
 
         public Gtk.EditableLabel notetitle;
@@ -249,30 +249,29 @@ namespace jorts {
 
         public string zoom_to_class(int64 zoom) {
             switch (zoom) {
-                case 50: return "ants";
-                case 60: return "somuchsmaller";
-                case 70: return "muchsmaller";
-                case 80: return "smaller";
-                case 90: return "small";
+
+                case 40: return "muchsmaller";
+                case 60: return "smaller";
+                case 80: return "small";
                 case 100: return "normal_zoom";
-                case 110: return "big";
-                case 120: return "bigger";
-                case 130: return "muchbigger";
-                case 140: return "somuchbigger";
-                case 150: return "urparent";
+                case 120: return "big";
+                case 140: return "bigger";
+                case 160: return "muchbigger";
+                case 180: return "muchmuchbigger";
+                case 200: return "huge";
                 default: return "default";
             }
         }
 
         public void zoom_in() {
-            if ((this.zoom + 10) <= max_zoom) {
-                this.set_zoom((this.zoom + 10));
+            if ((this.zoom + 20) <= max_zoom) {
+                this.set_zoom((this.zoom + 20));
             }
         }
 
         public void zoom_out() {
-            if ((this.zoom - 10) >= min_zoom) {
-                this.set_zoom((this.zoom - 10));
+            if ((this.zoom - 20) >= min_zoom) {
+                this.set_zoom((this.zoom - 20));
             }
         }
 
