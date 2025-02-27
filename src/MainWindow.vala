@@ -248,7 +248,7 @@ namespace jorts {
             }
         }
 
-        public void set_zoom(int zoom) {
+        public void set_zoom(int64 zoom) {
             this.remove_css_class (this.zoom.to_string());
             this.zoom = zoom;
             this.add_css_class (this.zoom.to_string());
