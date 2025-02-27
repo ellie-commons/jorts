@@ -9,3 +9,6 @@ repo/
 src/dump.vala
 src/dump.txt
 .vscode/settings.json
+data/Application copy.css
+src/Widgets/SettingsPopover copy.vala
+src/MainWindow copy.vala

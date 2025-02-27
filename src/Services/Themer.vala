@@ -97,8 +97,8 @@ namespace jorts.Themer {
 
             window.${accent_color} titlebar,
             window.${accent_color} titlebar image,
-            window.${accent_color} .stickybar_button,
-            window.${accent_color} .stickybar_button image,
+            window.${accent_color} .themedbutton,
+            window.${accent_color} .themedbutton image,
             window.${accent_color} windowcontrols,
             window.${accent_color} windowcontrols image,
             window.${accent_color} {

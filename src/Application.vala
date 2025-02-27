@@ -28,7 +28,7 @@ namespace jorts {
                     application_id: "io.github.ellie_commons.jorts");
         }
 
-	public static int best_zoom;
+	    public int64 latest_zoom;
 
         public override void startup () {
             base.startup ();
@@ -38,11 +38,11 @@ namespace jorts {
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
 
-            // Follow whether dark or light
+/*              // Follow whether dark or light
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
-	
-            gtk_settings.gtk_application_prefer_dark_theme = (
+	  */
+/*              gtk_settings.gtk_application_prefer_dark_theme = (
 	            granite_settings.prefers_color_scheme == DARK
             );
 	
@@ -50,7 +50,7 @@ namespace jorts {
             gtk_settings.gtk_application_prefer_dark_theme = (
 	                granite_settings.prefers_color_scheme == DARK
 	            );
-            });
+            });  */
 
             // Somehow without this the CSS isnt applied
             // Shouldnt it be automatic :(

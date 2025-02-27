@@ -29,19 +29,24 @@ So the whole settings popover is here, deal with it.
 
 */
 
+
 public class jorts.SettingsPopover : Gtk.Popover {
     public string selected;
     public signal void theme_changed (string selected);
     public signal void zoom_changed (string zoomkind);
 
-    public SettingsPopover (string theme) {
+    public Gtk.Button zoom_out_button;
+    public Gtk.Button zoom_in_button;
+    public Gtk.Button zoom_default_button;
+
+    public SettingsPopover (int64 zoom, string theme) {
         this.set_position (Gtk.PositionType.TOP);
         this.set_halign (Gtk.Align.END);
 
         // Everything is in this
         var setting_grid = new Gtk.Grid ();
-        setting_grid.set_margin_start (12);
-        setting_grid.set_margin_end (6);
+        setting_grid.set_margin_start (18);
+        setting_grid.set_margin_end (12);
         setting_grid.set_margin_top (6);
         setting_grid.set_margin_bottom (12);
 
@@ -215,6 +220,8 @@ this.zoom_changed("zoom_in");
     public void set_zoomlevel (int64 zoom) {
         zoom_default_button.set_label(zoom.to_string());
     }
+
+
 
 
 /*      private static bool font_scale_to_zoom (Binding binding, Value font_scale, ref Value label) {

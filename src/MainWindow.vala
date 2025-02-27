@@ -46,16 +46,15 @@ namespace jorts {
         private new jorts.StickyView view;
         private Gtk.ActionBar actionbar;
 
-        private jorts.SettingsPopover popover;
-
         //public noteData data;
         public string title_name;
         public string theme;
         public string content;
         public int64 zoom;
 
-        private static int max_zoom = 200;
-        private static int min_zoom = 50;
+        public static int max_zoom = 150;
+        public static int min_zoom = 50;
+                
 
         public Gtk.EditableLabel notetitle;
 
@@ -85,8 +84,13 @@ namespace jorts {
             this.set_hexpand (false);
             this.set_vexpand (false);
 
+
+
             // First get the thing
             this.unpackage (data);
+
+            // Rebuild the whole theming
+            this.update_theme(this.theme);
 
             // add required base classes
             this.add_css_class("rounded");
@@ -126,7 +130,8 @@ namespace jorts {
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
             new_item.width_request = 32;
             new_item.height_request = 32;
-            new_item.add_css_class("stickybar_button");
+
+            new_item.add_css_class("themedbutton");
 
             var delete_item = new Gtk.Button ();
             delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
@@ -134,9 +139,10 @@ namespace jorts {
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
             delete_item.width_request = 32;
             delete_item.height_request = 32;
-            delete_item.add_css_class("stickybar_button");
+            delete_item.add_css_class("themedbutton");
 
-            var popover = new SettingsPopover (this.theme);
+
+            var popover = new SettingsPopover (this.zoom, this.theme);
             
             popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
@@ -157,8 +163,9 @@ namespace jorts {
             app_button.tooltip_text = (_("Settings"));
             app_button.set_icon_name("open-menu-symbolic");
             app_button.direction = Gtk.ArrowType.UP;
+            app_button.add_css_class("themedbutton");
             app_button.popover = popover;
-            app_button.add_css_class("stickybar_button");
+
 
             app_button.width_request = 32;
             app_button.height_request = 32;
@@ -206,14 +213,14 @@ namespace jorts {
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
             this.get_default_size(out width, out height);
-            var data = new noteData(current_title, this.theme, this.content , 100, width, height );
+            var data = new noteData(current_title, this.theme, this.content , this.zoom, width, height );
             return data;
         }
 
         // Take a notedata and unpack it
         private void unpackage(noteData data) {
             this.title_name = data.title;
-            this.update_theme(data.theme);
+            this.theme = data.theme;
             this.content = data.content;
             this.set_zoom(data.zoom);
             this.set_default_size ((int)data.width, (int)data.height);
@@ -239,26 +246,41 @@ namespace jorts {
         }
 
 
+
+        public string zoom_to_class(int64 zoom) {
+            switch (zoom) {
+                case 50: return "ants";
+                case 60: return "somuchsmaller";
+                case 70: return "muchsmaller";
+                case 80: return "smaller";
+                case 90: return "small";
+                case 100: return "normal_zoom";
+                case 110: return "big";
+                case 120: return "bigger";
+                case 130: return "muchbigger";
+                case 140: return "somuchbigger";
+                case 150: return "urparent";
+                default: return "default";
+            }
+        }
+
         public void zoom_in() {
-            if ((this.zoom + 25) <= max_zoom) {
-                this.set_zoom((this.zoom + 25));
+            if ((this.zoom + 10) <= max_zoom) {
+                this.set_zoom((this.zoom + 10));
             }
         }
 
         public void zoom_out() {
-            if ((this.zoom - 25) >= min_zoom) {
-                this.set_zoom((this.zoom - 25));
+            if ((this.zoom - 10) >= min_zoom) {
+                this.set_zoom((this.zoom - 10));
             }
         }
 
         public void set_zoom(int64 zoom) {
-            this.remove_css_class (this.zoom.to_string());
+            this.remove_css_class (zoom_to_class( this.zoom));
             this.zoom = zoom;
-            this.add_css_class (this.zoom.to_string());
-            popover.set_zoomlevel(zoom);
+            this.add_css_class (zoom_to_class( this.zoom));
+            ((Application)this.application).latest_zoom = zoom;
         }
-
-
-
     }
 }
