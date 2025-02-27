@@ -28,6 +28,8 @@ namespace jorts {
                     application_id: "io.github.ellie_commons.jorts");
         }
 
+	public static int best_zoom;
+
         public override void startup () {
             base.startup ();
 
@@ -35,6 +37,20 @@ namespace jorts {
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
+
+            // Follow whether dark or light
+            var granite_settings = Granite.Settings.get_default ();
+            var gtk_settings = Gtk.Settings.get_default ();
+	
+            gtk_settings.gtk_application_prefer_dark_theme = (
+	            granite_settings.prefers_color_scheme == DARK
+            );
+	
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = (
+	                granite_settings.prefers_color_scheme == DARK
+	            );
+            });
 
             // Somehow without this the CSS isnt applied
             // Shouldnt it be automatic :(
@@ -46,20 +62,10 @@ namespace jorts {
                   Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
               );
 
-            //  var themes_provider = new Gtk.CssProvider ();
-            //      themes_provider.load_from_resource ("/io/github/ellie_commons/jorts/Themes.css");
-            //      Gtk.StyleContext.add_provider_for_display (
-            //        Gdk.Display.get_default (),
-            //        themes_provider,
-            //        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
-            //    );
-
-
             // build all the stylesheets
             jorts.Themer.init_all_themes();
 
 
-            Granite.Services.Application.set_badge_visible.begin ( true);
         }
 
         static construct {
