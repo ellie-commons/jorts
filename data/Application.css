@@ -20,14 +20,13 @@
 
 @define-color textColorPrimary #323232;
 
-
 /* The variant exists in granite, but not built
 @define-color LATTE_100 #efdfc4;
 @define-color LATTE_300 #e7c591;
 @define-color LATTE_500 #cfa25e;
 @define-color LATTE_700 #b6802e;
-@define-color LATTE_900 #804b00;
- */
+@define-color LATTE_900 #804b00; */
+
 
  /* workaround to headerlabel */
  .heading {
@@ -37,17 +36,23 @@
     padding-top: 0.5em;
 }
 
-windowcontrols,
-windowcontrols:backdrop {
-    background-color: transparent;
+/* Animations */
+windowcontrols, windowcontrols:backdrop {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-window,
-overshoot,
-undershoot {
+window, overshoot, undershoot {
     transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+textview text selection,
+editablelabel text selection {
+    transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+/* Styling */
 
 textview {
     background-image: none;
@@ -55,11 +60,6 @@ textview {
     font-size: 1.2em;
     box-shadow: none;
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-textview text selection,
-editablelabel text selection {
-    transition: background-color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 actionbar {
@@ -103,6 +103,40 @@ windowcontrols:backdrop image,
 actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+
+
+/* Font zooms */
+
+window.50 textview {font-size: 1.0em;}
+window.50 editablelabel {font-size: 0.85em;}
+window.50 editablelabel.editing {font-size: 0.80em;}
+
+window.75 textview {font-size: 1.1em;}
+window.75 editablelabel {font-size: 0.95em;}
+window.75 editablelabel.editing {font-size: 0.90em;}
+
+window.100 textview {font-size: 1.2em;}
+window.100 editablelabel {font-size: 1.05em;}
+window.100 editablelabel.editing {font-size: 1em;}
+
+window.125 textview {font-size: 1.3em;}
+window.125 editablelabel {font-size: 1.15em;}
+window.125 editablelabel.editing {font-size: 1.10em;}
+
+window.150 textview {font-size: 1.4em;}
+window.150 editablelabel {font-size: 1.25em;}
+window.150 editablelabel.editing {font-size: 1.20em;}
+
+window.175 textview {font-size: 1.5em;}
+window.175 editablelabel {font-size: 1.35em;}
+window.175 editablelabel.editing {font-size: 1.30em;}
+
+window.200 textview {font-size: 1.6em;}
+window.200 editablelabel {font-size: 1.45em;}
+window.200 editablelabel.editing {font-size: 1.40em;}
+
 
 
 /* ALL the colorpills */
