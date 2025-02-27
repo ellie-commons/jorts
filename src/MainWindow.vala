@@ -86,10 +86,6 @@ namespace jorts {
             // First get the thing
             this.unpackage (data);
 
-            // Rebuild the whole theming
-            this.update_theme(this.theme);
-
-
             // add required base classes
             this.add_css_class("rounded");
             this.add_css_class ("animations");
@@ -202,10 +198,9 @@ namespace jorts {
         // Take a notedata and unpack it
         private void unpackage(noteData data) {
             this.title_name = data.title;
-            this.theme = data.theme;
+            this.update_theme(data.theme);
             this.content = data.content;
-            this.zoom = data.zoom;
-            this.set_zoom(this.zoom)
+            this.set_zoom(data.zoom);
             this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
         }
