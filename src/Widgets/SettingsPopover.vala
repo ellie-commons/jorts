@@ -85,8 +85,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                 font_size_box.append (zoom_in_button);       
                 font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
         
-        setting_grid.attach (font_size_box, 0, 0, 1, 1);
-        setting_grid.attach (new Gtk.Separator (HORIZONTAL), 0, 1, 1, 1);
+
 
 
         //  terminal_binding = new BindingGroup ();
@@ -96,7 +95,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         // Choose theme section
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
-        setting_grid.attach (color_button_label, 0, 2, 1, 1);
+        setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
         var color_button_lime = new ColorPill (_("Lime"), "lime");
@@ -151,7 +150,11 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_box.append (color_button_cocoa);
         color_button_box.append (color_button_slate);
 
-        setting_grid.attach (color_button_box, 0, 3, 1, 1);
+        setting_grid.attach (color_button_box, 0, 1, 1, 1);
+
+
+        setting_grid.attach (new Gtk.Separator (HORIZONTAL), 0, 2, 1, 1);
+        setting_grid.attach (font_size_box, 0, 3, 1, 1);
 
         setting_grid.show ();
         this.set_child(setting_grid);
