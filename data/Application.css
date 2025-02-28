@@ -103,7 +103,7 @@ actionbar image {
 }
 
 popover button image {
-    color: black;
+    color: @fg_color;
 }
 
 
