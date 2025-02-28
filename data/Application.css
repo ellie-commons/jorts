@@ -102,10 +102,13 @@ actionbar image {
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+popover button image {
+    color: black;
+}
+
+
+
 /* Font zooms */
-
-
-
 window.muchsmaller textview {font-size: 0.6em;}
 window.muchsmaller editablelabel {font-size: 0.45em;}
 window.muchsmaller editablelabel.editing {font-size: 0.40em;}
@@ -119,7 +122,7 @@ window.small editablelabel {font-size: 0.85em;}
 window.small editablelabel.editing {font-size: 0.80em;}
 
 window.normal_zoom textview {font-size: 1.2em;}
-window.normal_zoom editablelabel {font-size: 1.05em;}
+window.normal_zoom editablelabel {font-size: 1.10em;}
 window.normal_zoom editablelabel.editing {font-size: 1em;}
 
 window.big textview {font-size: 1.4em;}

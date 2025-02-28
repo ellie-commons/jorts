@@ -101,6 +101,28 @@ namespace jorts {
             save_action.activate.connect (() => {
                 this.save_to_stash ();
             });
+            var zoom_out = new SimpleAction ("zoom_out", null);
+            set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
+            add_action (zoom_out);
+            zoom_out.activate.connect (() => {
+                MainWindow note = (MainWindow)get_active_window ();
+                note.zoom_out ();
+            });
+            var zoom_default = new SimpleAction ("zoom_default", null);
+            set_accels_for_action ("app.zoom_default", { "<control>0", "<Control>KP_0", null });
+            add_action (zoom_default);
+            zoom_default.activate.connect (() => {
+                MainWindow note = (MainWindow)get_active_window ();
+                note.set_zoom (100);
+            });
+            var zoom_in = new SimpleAction ("zoom_in", null);
+            set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>equal", "<Control>KP_Add", null });
+            add_action (zoom_in);
+            zoom_in.activate.connect (() => {
+                MainWindow note = (MainWindow)get_active_window ();
+                note.zoom_in ();
+            });
+
         }
 
         // Either show all windows, or rebuild from storage

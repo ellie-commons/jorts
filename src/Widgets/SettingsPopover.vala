@@ -31,19 +31,21 @@ So the whole settings popover is here, deal with it.
 
 
 public class jorts.SettingsPopover : Gtk.Popover {
+
+    public const string[] ACCELS_ZOOM_DEFAULT = { "<control>0", "<Control>KP_0", null };
+    public const string[] ACCELS_ZOOM_IN = { "<Control>plus", "<Control>equal", "<Control>KP_Add", null };
+    public const string[] ACCELS_ZOOM_OUT = { "<Control>minus", "<Control>KP_Subtract", null };
+
     public string selected;
     public signal void theme_changed (string selected);
     public signal void zoom_changed (string zoomkind);
-
-    public int64 zoom;
 
     public Gtk.Button zoom_out_button;
     public Gtk.Button zoom_in_button;
     public Gtk.Button zoom_default_button;
 
-    public SettingsPopover (string theme, int64 zoom) {
+    public SettingsPopover (string theme) {
 
-        this.zoom = zoom;
         this.set_position (Gtk.PositionType.TOP);
         this.set_halign (Gtk.Align.END);
 
@@ -59,66 +61,12 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
 
 
-        var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
-/*                  tooltip_markup = Granite.markup_accel_tooltip (
-                        TerminalWidget.ACCELS_ZOOM_OUT,
-                        _("Zoom out")
-                    )  */
-                };
-
-        
-                var zoom_default_button = new Gtk.Button () {
-/*                      tooltip_markup = Granite.markup_accel_tooltip (
-                        TerminalWidget.ACCELS_ZOOM_DEFAULT,
-                        _("Default zoom level")
-                    )  */
-                };
-
-                zoom_default_button.set_label (this.zoom.to_string);
-        
-                var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
-/*                      tooltip_markup = Granite.markup_accel_tooltip (
-                        TerminalWidget.ACCELS_ZOOM_IN,
-                        _("Zoom in")
-                    )  */
-                };
-
-
-
-                zoom_out_button.clicked.connect (() => {
-                    this.zoom_changed("zoom_out");
-                });
-                zoom_default_button.clicked.connect (() => {
-                    this.zoom_changed("reset");
-                });
-                zoom_in_button.clicked.connect (() => {
-                    this.zoom_changed("zoom_in");
-                });
-        
-                var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
-                    homogeneous = true,
-                    hexpand = true,
-                    margin_start = 12,
-                    margin_end = 12,
-                    margin_bottom = 6
-                };
-                font_size_box.append (zoom_out_button);
-                font_size_box.append (zoom_default_button);
-                font_size_box.append (zoom_in_button);       
-                font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
-        
-
-
-
-        //  terminal_binding = new BindingGroup ();
-        //  terminal_binding.bind_property ("font-scale", zoom_default_button, "label", SYNC_CREATE, font_scale_to_zoom);
-
-
-
-        // Choose theme section
+        ///TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
+
+        ///TRANSLATORS: Name of a color theme
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
         var color_button_lime = new ColorPill (_("Lime"), "lime");
         var color_button_mint = new ColorPill (_("Mint"), "mint");
@@ -127,7 +75,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         var color_button_orange = new ColorPill (_("Orange"), "orange");
         var color_button_bubblegum = new ColorPill (_("Bubblegum"), "bubblegum");
         var color_button_grape = new ColorPill (_("Grape"),"grape");
-        //var color_button_latte = new ColorPill (_("Latte"),"latte");
         var color_button_cocoa = new ColorPill (_("Cocoa"), "cocoa");
         var color_button_slate = new ColorPill (_("Slate"),"slate");
 
@@ -138,7 +85,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_orange.set_group (color_button_blueberry);
         color_button_bubblegum.set_group (color_button_blueberry);
         color_button_grape.set_group (color_button_blueberry);
-        //color_button_latte.set_group (color_button_blueberry);
         color_button_cocoa.set_group (color_button_blueberry);
         color_button_slate.set_group (color_button_blueberry);
 
@@ -150,7 +96,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_orange.set_active ((theme == "ORANGE"));
         color_button_bubblegum.set_active ((theme == "BUBBLEGUM"));
         color_button_grape.set_active ((theme == "GRAPE"));
-        //color_button_latte.set_group (color_button_blueberry);
         color_button_cocoa.set_active ((theme == "COCOA"));
         color_button_slate.set_active ((theme == "SLATE"));
 
@@ -159,7 +104,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
             accessible_role = Gtk.AccessibleRole.LIST
         };
 
-        
         color_button_box.append (color_button_blueberry);
         color_button_box.append (color_button_mint);
         color_button_box.append (color_button_lime);
@@ -168,70 +112,79 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_box.append (color_button_strawberry);
         color_button_box.append (color_button_bubblegum);
         color_button_box.append (color_button_grape);
-        //color_button_box.append (color_button_latte);
         color_button_box.append (color_button_cocoa);
         color_button_box.append (color_button_slate);
 
         setting_grid.attach (color_button_box, 0, 1, 1, 1);
-
-
         setting_grid.attach (new Gtk.Separator (HORIZONTAL), 0, 2, 1, 1);
+
+
+        this.zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
+            tooltip_markup = Granite.markup_accel_tooltip (
+                ACCELS_ZOOM_OUT,
+                _("Zoom out")
+                )
+            };
+        this.zoom_default_button = new Gtk.Button () {
+            tooltip_markup = Granite.markup_accel_tooltip (
+                        ACCELS_ZOOM_DEFAULT,
+                        _("Default zoom level")
+                    )
+            };
+        this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
+            tooltip_markup = Granite.markup_accel_tooltip (
+                        ACCELS_ZOOM_IN,
+                        _("Zoom in")
+                    )
+            };
+
+        this.zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
+        this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
+        this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
+        
+        var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
+            homogeneous = true,
+            hexpand = true,
+            margin_start = 6,
+            margin_end = 6,
+            margin_bottom = 6
+        };
+        font_size_box.append (this.zoom_out_button);
+        font_size_box.append (this.zoom_default_button);
+        font_size_box.append (this.zoom_in_button);       
+        font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
+
+
+
         setting_grid.attach (font_size_box, 0, 3, 1, 1);
 
         setting_grid.show ();
         this.set_child(setting_grid);
 
 
-        color_button_blueberry.toggled.connect (() => {
-            this.theme_changed("BLUEBERRY");
-        });
-
-        color_button_orange.toggled.connect (() => {
-            this.theme_changed("ORANGE");
-        });
-
-        color_button_mint.toggled.connect (() => {
-            this.theme_changed("MINT");
-        });
-
-        color_button_banana.toggled.connect (() => {
-            this.theme_changed("BANANA");
-        });
-
-        color_button_lime.toggled.connect (() => {
-            this.theme_changed("LIME");
-        });
-
-        color_button_strawberry.toggled.connect (() => {
-            this.theme_changed("STRAWBERRY");
-        });
-
-        color_button_bubblegum.toggled.connect (() => {
-            this.theme_changed("BUBBLEGUM");
-        });
-
-        color_button_grape.toggled.connect (() => {
-            this.theme_changed("GRAPE");
-        });
-
-        //  color_button_latte.toggled.connect (() => {
-        //      this.theme_changed("LATTE");
-        //  });
-
-        color_button_cocoa.toggled.connect (() => {
-            this.theme_changed("COCOA");
-        });
-
-        color_button_slate.toggled.connect (() => {
-            this.theme_changed("SLATE");
-        });
+        color_button_blueberry.toggled.connect (() => {this.theme_changed("BLUEBERRY");});
+        color_button_orange.toggled.connect (() => {this.theme_changed("ORANGE");});
+        color_button_mint.toggled.connect (() => {this.theme_changed("MINT");});
+        color_button_banana.toggled.connect (() => {this.theme_changed("BANANA");});
+        color_button_lime.toggled.connect (() => {this.theme_changed("LIME");});
+        color_button_strawberry.toggled.connect (() => {this.theme_changed("STRAWBERRY");});
+        color_button_bubblegum.toggled.connect (() => {this.theme_changed("BUBBLEGUM");});
+        color_button_grape.toggled.connect (() => {this.theme_changed("GRAPE");});
+        color_button_cocoa.toggled.connect (() => {this.theme_changed("COCOA");});
+        color_button_slate.toggled.connect (() => {this.theme_changed("SLATE");});
     }
 
 
 
     public void set_zoomlevel (int64 zoom) {
-        this.zoom_default_button.set_label(this.zoom);
+        var zoomtostring = zoom.to_string();
+
+        ///TRANSLATORS: %s is replaced by a percent. Ex: 100, to display 100%
+        var label = "%s%".printf(zoomtostring);
+        this.zoom_default_button.set_label (label);
     }
+
+
 
 
 }

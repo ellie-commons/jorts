@@ -24,19 +24,11 @@ I just dont wanna rewrite the same button over and over
 */
 
 public class jorts.ColorPill : Gtk.CheckButton {
-
         public ColorPill (string tooltip, string colorclass) {
                 this.add_css_class("colorpill");
                 this.add_css_class(colorclass);
-
-                // 24 originally
                 this.set_size_request (24, 24);
                 this.set_tooltip_text (tooltip);
-                
-                //this.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
                 this.add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-
-                //this.set_hexpand (false);
-                //this.set_vexpand (false);
         }
 }

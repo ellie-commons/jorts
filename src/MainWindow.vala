@@ -42,11 +42,18 @@ namespace jorts {
 
     public class MainWindow : Gtk.Window {
 
+
+    
         private Gtk.HeaderBar header;
-        private new jorts.StickyView view;
+        public Gtk.EditableLabel notetitle;
+        private jorts.StickyView view;
         private Gtk.ActionBar actionbar;
 
-        //public noteData data;
+        private SettingsPopover popover;
+
+        public jorts.noteData data;
+
+
         public string title_name;
         public string theme;
         public string content;
@@ -54,33 +61,30 @@ namespace jorts {
 
         public static int max_zoom = 200;
         public static int min_zoom = 60;
-                
 
-        public Gtk.EditableLabel notetitle;
+
 
         public SimpleActionGroup actions { get; construct; }
 
-        public const string ACTION_PREFIX   = "win.";
+        public const string ACTION_PREFIX   = "app.";
         public const string ACTION_NEW      = "action_new";
         public const string ACTION_DELETE   = "action_delete";
 
-        public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-        public const string ACTION_ZOOM_IN = "zoom_in";
         public const string ACTION_ZOOM_OUT = "zoom_out";
+        public const string ACTION_ZOOM_DEFAULT = "zoom_default";
+        public const string ACTION_ZOOM_IN = "zoom_in";
 
-        public const string[] ACCELS_ZOOM_DEFAULT = { "<control>0", "<Control>KP_0", null };
-        public const string[] ACCELS_ZOOM_IN = { "<Control>plus", "<Control>equal", "<Control>KP_Add", null };
-        public const string[] ACCELS_ZOOM_OUT = { "<Control>minus", "<Control>KP_Subtract", null };
-
+        public const string[] ACCELS_NEW =     {"<Control>n"};
+        public const string[] ACCELS_DELETE =     {"<Control>w"};
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const GLib.ActionEntry[] action_entries = {
             { ACTION_NEW,               action_new      },
             { ACTION_DELETE,            action_delete   },
-            { ACTION_ZOOM_DEFAULT,      action_zoom_default   },
-            { ACTION_ZOOM_IN,           zoom_in   },
-            { ACTION_ZOOM_OUT,          zoom_out   },
+            { ACTION_ZOOM_OUT,          zoom_out        },
+            { ACTION_ZOOM_DEFAULT,      zoom_default    },
+            { ACTION_ZOOM_IN,           zoom_in         }
         };
 
         // Init or something
@@ -91,22 +95,20 @@ namespace jorts {
 
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
-            insert_action_group ("win", actions);
-
-
-            set_accels_for_action (ACTION_ZOOM_DEFAULT, ACCELS_ZOOM_DEFAULT);
-            set_accels_for_action (ACTION_ZOOM_IN, ACCELS_ZOOM_IN);
-            set_accels_for_action (ACTION_ZOOM_OUT, ACCELS_ZOOM_OUT);
-    
+            insert_action_group ("app", actions);
 
 
             this.set_hexpand (false);
             this.set_vexpand (false);
 
+            this.data = data;
 
+            this.title_name = data.title;
+            this.theme = data.theme;
+            this.content = data.content;
 
-            // First get the thing
-            this.unpackage (data);
+            this.set_default_size ((int)data.width, (int)data.height);
+            this.set_title (this.title_name);
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
@@ -143,8 +145,13 @@ namespace jorts {
             actionbar = new Gtk.ActionBar ();
             actionbar.set_hexpand (true);
             
-            var new_item = new Gtk.Button ();
-            new_item.tooltip_text = (_("New sticky note (Ctrl+N)"));
+            var new_item = new Gtk.Button () {
+                tooltip_markup = Granite.markup_accel_tooltip (
+                    ACCELS_NEW,
+                    _("New sticky note")
+                )
+            };
+
             new_item.set_icon_name ("list-add-symbolic");
             new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
             new_item.width_request = 32;
@@ -152,8 +159,12 @@ namespace jorts {
 
             new_item.add_css_class("themedbutton");
 
-            var delete_item = new Gtk.Button ();
-            delete_item.tooltip_text = (_("Delete sticky note (Ctrl+W)"));
+            var delete_item = new Gtk.Button () {
+                tooltip_markup = Granite.markup_accel_tooltip (
+                    ACCELS_DELETE,
+                    _("Delete sticky note ")
+                )
+            };
             delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
             delete_item.width_request = 32;
@@ -161,7 +172,8 @@ namespace jorts {
             delete_item.add_css_class("themedbutton");
 
 
-            var popover = new SettingsPopover (this.theme, this.zoom);
+            this.popover = new SettingsPopover (this.theme);
+            this.set_zoom(data.zoom);
 
 
             var app_button = new Gtk.MenuButton();
@@ -205,16 +217,16 @@ namespace jorts {
                 return false;           
             });
 
-            popover.show.connect(() => {
+            this.popover.show.connect(() => {
                 popover.set_zoomlevel(this.zoom);
             });
 
             
-            popover.theme_changed.connect ((selected) => {
+            this.popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
 
-            popover.zoom_changed.connect ((zoomkind) => {
+            this.popover.zoom_changed.connect ((zoomkind) => {
                 if (zoomkind == "zoom_in") {
                     this.zoom_in();
                 } else if (zoomkind == "zoom_out") {
@@ -245,16 +257,6 @@ namespace jorts {
             return data;
         }
 
-        // Take a notedata and unpack it
-        private void unpackage(noteData data) {
-            this.title_name = data.title;
-            this.theme = data.theme;
-            this.content = data.content;
-            this.set_zoom(data.zoom);
-            this.set_default_size ((int)data.width, (int)data.height);
-            this.set_title (this.title_name);
-        }
-
         // Some rando actions
         private void action_new () {
             ((Application)this.application).create_note(null);
@@ -265,7 +267,7 @@ namespace jorts {
             this.close ();
         }
 
-        private void action_zoom_default () {
+        private void zoom_default () {
             this.set_zoom(100);
         }
 
@@ -310,12 +312,14 @@ namespace jorts {
             this.remove_css_class (zoom_to_class( this.zoom));
             this.zoom = zoom;
             this.add_css_class (zoom_to_class( this.zoom));
+
+            // Doesnt work :(
+            this.popover.set_zoomlevel(zoom);
+
+            var zoomtostring = zoom.to_string();
+            var label = "%s%".printf(zoomtostring);
+            this.popover.zoom_default_button.set_label(label);
             ((Application)this.application).latest_zoom = zoom;
-
-            var label = "%.0f%%".printf(zoom.to_string);
-            popovover.zoom_default_button.set_label(this.zoom);
-            
-
         }
     }
 }

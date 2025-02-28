@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-25 20:57+0100\n"
+"POT-Creation-Date: 2025-02-28 21:13+0100\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,197 +17,210 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. Choose theme section
-#: src/Widgets/SettingsPopover.vala:52
+#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:65
 msgid "Sticky Note Colour"
 msgstr "Cor da nota adesiva"
 
-#: src/Widgets/SettingsPopover.vala:55
+#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Mirtilo"
 
-#: src/Widgets/SettingsPopover.vala:56
+#: src/Widgets/SettingsPopover.vala:71
 msgid "Lime"
 msgstr "Lima"
 
-#: src/Widgets/SettingsPopover.vala:57
+#: src/Widgets/SettingsPopover.vala:72
 msgid "Mint"
 msgstr "Hortelã"
 
-#: src/Widgets/SettingsPopover.vala:58
+#: src/Widgets/SettingsPopover.vala:73
 msgid "Banana"
 msgstr "Banana"
 
-#: src/Widgets/SettingsPopover.vala:59
+#: src/Widgets/SettingsPopover.vala:74
 msgid "Strawberry"
 msgstr "Morango"
 
-#: src/Widgets/SettingsPopover.vala:60
+#: src/Widgets/SettingsPopover.vala:75
 msgid "Orange"
 msgstr "Laranja"
 
-#: src/Widgets/SettingsPopover.vala:61
+#: src/Widgets/SettingsPopover.vala:76
 msgid "Bubblegum"
 msgstr "Chiclete"
 
-#: src/Widgets/SettingsPopover.vala:62
+#: src/Widgets/SettingsPopover.vala:77
 msgid "Grape"
 msgstr "Uva"
 
-#. var color_button_latte = new ColorPill (_("Latte"),"latte");
-#: src/Widgets/SettingsPopover.vala:64
+#: src/Widgets/SettingsPopover.vala:78
 msgid "Cocoa"
 msgstr "Cacau"
 
-#: src/Widgets/SettingsPopover.vala:65
+#: src/Widgets/SettingsPopover.vala:79
 msgid "Slate"
 msgstr "Ardósia"
 
-#: src/MainWindow.vala:104
+#: src/Widgets/SettingsPopover.vala:129
+msgid "Zoom out"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:135
+msgid "Default zoom level"
+msgstr ""
+
+#: src/Widgets/SettingsPopover.vala:141
+msgid "Zoom in"
+msgstr ""
+
+#: src/MainWindow.vala:131
 msgid "Edit title"
 msgstr "Editar título"
 
-#: src/MainWindow.vala:122
-msgid "New sticky note (Ctrl+N)"
-msgstr "Nova nota adesiva (Ctrl+N)"
+#: src/MainWindow.vala:151 data/io.github.ellie_commons.jorts.desktop.in:17
+msgid "New sticky note"
+msgstr "Nova nota adesiva"
 
-#: src/MainWindow.vala:129
-msgid "Delete sticky note (Ctrl+W)"
-msgstr "Excluir nota adesiva (Ctrl+W)"
+#: src/MainWindow.vala:165
+#, fuzzy
+msgid "Delete sticky note "
+msgstr "Excluir nota adesiva"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:181
 msgid "Settings"
 msgstr "Configurações"
 
-#: src/Services/Utils.vala:53
+#: src/Services/Utils.vala:70
 msgid "All my very best friends"
 msgstr "Todos os meus melhores amigos"
 
-#: src/Services/Utils.vala:54
+#: src/Services/Utils.vala:71
 msgid "My super good secret recipe"
 msgstr "Minha receita secreta super boa"
 
-#: src/Services/Utils.vala:55
+#: src/Services/Utils.vala:72
 msgid "My todo list"
 msgstr "Minha lista de tarefas"
 
-#: src/Services/Utils.vala:56
+#: src/Services/Utils.vala:73
 msgid "Super secret to not tell anyone"
 msgstr "Super segredo para não contar a ninguém"
 
-#: src/Services/Utils.vala:57
+#: src/Services/Utils.vala:74
 msgid "My grocery list"
 msgstr "Minha lista de compras"
 
-#: src/Services/Utils.vala:58
+#: src/Services/Utils.vala:75
 msgid "Random shower thoughts"
 msgstr "Pensamentos aleatórios de chuveiro"
 
-#: src/Services/Utils.vala:59
+#: src/Services/Utils.vala:76
 msgid "My fav fanfics"
 msgstr "Minhas fanfics favoritas"
 
-#: src/Services/Utils.vala:60
+#: src/Services/Utils.vala:77
 msgid "My fav dinosaurs"
 msgstr "Meus dinossauros favoritos"
 
-#: src/Services/Utils.vala:61
+#: src/Services/Utils.vala:78
 msgid "My evil mastermind plan"
 msgstr "Meu plano maligno"
 
-#: src/Services/Utils.vala:62
+#: src/Services/Utils.vala:79
 msgid "What made me smile today"
 msgstr "O que me fez sorrir hoje"
 
-#: src/Services/Utils.vala:63
+#: src/Services/Utils.vala:80
 msgid "Hello world!"
 msgstr "Olá, mundo!"
 
-#: src/Services/Utils.vala:64
+#: src/Services/Utils.vala:81
 msgid "New sticky, new me"
 msgstr "Novo adesivo, novo eu"
 
-#: src/Services/Utils.vala:65
+#: src/Services/Utils.vala:82
 msgid "Hidden pirate treasure"
 msgstr "Localização do tesouro pirata oculto"
 
-#: src/Services/Utils.vala:66
+#: src/Services/Utils.vala:83
 msgid "To not forget, ever"
 msgstr "Não se esqueça!"
 
-#: src/Services/Utils.vala:67
+#: src/Services/Utils.vala:84
 msgid "Dear Diary,"
 msgstr "Caro diário,"
 
-#: src/Services/Utils.vala:68
+#: src/Services/Utils.vala:85
 msgid "Hi im a square"
 msgstr "Oi, eu sou um quadrado"
 
-#: src/Services/Utils.vala:69
+#: src/Services/Utils.vala:86
 msgid "Have a nice day! :)"
 msgstr "Tenha um bom dia! :)"
 
-#: src/Services/Utils.vala:70
+#: src/Services/Utils.vala:87
 msgid "My meds schedule"
 msgstr "Minha programação de medicamentos"
 
-#: src/Services/Utils.vala:71
+#: src/Services/Utils.vala:88
 msgid "Household chores"
 msgstr "Tarefas domésticas a serem realizadas hoje"
 
-#: src/Services/Utils.vala:72
+#: src/Services/Utils.vala:89
 msgid "Ode to my cat"
 msgstr "Ode ao meu gato"
 
-#: src/Services/Utils.vala:73
+#: src/Services/Utils.vala:90
 msgid "My dogs favourite toys"
 msgstr "Os brinquedos favoritos dos meus cães"
 
-#: src/Services/Utils.vala:74
+#: src/Services/Utils.vala:91
 msgid "How cool my birds are"
 msgstr "Como meus pássaros são legais"
 
-#: src/Services/Utils.vala:75
+#: src/Services/Utils.vala:92
 msgid "Suspects in the Last Cookie affair"
 msgstr "Suspeitos no caso do Last Cookie"
 
-#: src/Services/Utils.vala:76
+#: src/Services/Utils.vala:93
 msgid "Words my parrots know"
 msgstr "Palavras que meus papagaios conhecem"
 
-#: src/Services/Utils.vala:77
+#: src/Services/Utils.vala:94
 msgid "Cool and funny compliments to give out"
 msgstr "Elogios legais e engraçados para dar"
 
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:95
 msgid "Ok, listen here,"
 msgstr "Ok, ouça aqui,"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:96
 msgid "My dream Pokemon team"
 msgstr "Minha equipe Pokémon dos sonhos"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:97
 msgid "My little notes"
 msgstr "Minhas pequenas anotações"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:98
 msgid "Surprise gift list"
 msgstr "Lista de presentes surpresa"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:99
 msgid "Brainstorming notes"
 msgstr "Notas de brainstorming"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:100
 msgid "To bring to the party"
 msgstr "Para levar para a festa"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:101
 msgid "My amazing mixtape"
 msgstr "Minha incrível mixtape"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:102
 msgid "Napkin scribbles"
 msgstr "Rabiscos de guardanapo"
 
@@ -216,7 +229,7 @@ msgid "Jorts"
 msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:34
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:40
 #, fuzzy
 msgid "Sticky notes"
 msgstr "Nova nota adesiva"
@@ -230,10 +243,6 @@ msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos"
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
-
-#: data/io.github.ellie_commons.jorts.desktop.in:17
-msgid "New sticky note"
-msgstr "Nova nota adesiva"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 #, fuzzy
@@ -262,75 +271,108 @@ msgstr "Suporta desfazer e refazer (Ctrl+Z, Ctrl+Shift+Z)”"
 msgid "You can open links and emails with Ctrl+Click"
 msgstr "Você pode abrir links e e-mails com Ctrl+Click"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:23
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:24
 msgid "Stella - Teamcons"
 msgstr "Stella - Teamcons"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:35
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:41
 msgid "Notes"
 msgstr "Anotações"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:36
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 msgid "Cute"
 msgstr "Bonito"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:37
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Desktop"
 msgstr "Desktop"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:38
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Reminder"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:52
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "Uma nota adesiva com o tema \"Mirtilo\""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
+msgid "2.1.0 Fresh out of the laundry!"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
+msgid "Includes a per-note zoom! So you can get bigger or smaller text"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
+msgid ""
+"Latest set zoom, aka what is most comfortable to you, stays as default for "
+"new notes"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
+msgid "Better readability (WCAG AA or AAA depending on theme)"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
+msgid "Also slightly better looking theme. Yes even more :)"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
+#, fuzzy
+msgid "Improved translations"
+msgstr "Algumas traduções iniciais :3"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
 msgid "2.0.1 Appcenter release"
 msgstr "Versão 2.0.1 do Appcenter"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:67
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:86
 #, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 Lançamento: Slate e Bubblegum"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Renascimento de uma versão antiga, mas muito apreciada, do Notejot"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "O aplicativo agora se chama Jorts. No entanto, você não pode usá-lo"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "10 lovely little colours"
 msgstr "10 pequenas cores encantadoras"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:72
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Criado com base em tecnologias Linux modernas e formatos de empacotamento"
+msgstr ""
+"Criado com base em tecnologias Linux modernas e formatos de empacotamento"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid "Smooth transition when changing theme"
 msgstr "Transição suave ao mudar de tema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:74
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 #, fuzzy
 msgid "New stickies have a random fun little title and colour"
 msgstr "Os novos stickies têm um pequeno título aleatório e divertido"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid "A few initial translations included, and more to come"
 msgstr "Algumas traduções iniciais incluídas, e outras estão por vir"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:76
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "E-mails e links são clicáveis! Ctrl+Clique para abrir no correio eletrônico ou no navegador"
+msgstr ""
+"E-mails e links são clicáveis! Ctrl+Clique para abrir no correio eletrônico "
+"ou no navegador"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:77
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "O texto suporta desfazer, refazer e você pode usar emojis :)"
+
+#~ msgid "New sticky note (Ctrl+N)"
+#~ msgstr "Nova nota adesiva (Ctrl+N)"
 
 #~ msgid ""
 #~ "Neither jeans nor shorts, just like jorts. A sticky notes app for "
@@ -371,9 +413,6 @@ msgstr "O texto suporta desfazer, refazer e você pode usar emojis :)"
 
 #~ msgid "Storage system rebuilt from the ground up"
 #~ msgstr "Sistema de armazenamento reconstruído do zero"
-
-#~ msgid "Some initial translations :3"
-#~ msgstr "Algumas traduções iniciais :3"
 
 #~ msgid "Latte"
 #~ msgstr "Leite"
