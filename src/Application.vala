@@ -72,13 +72,13 @@ namespace jorts {
     	        }
             });
             var new_action = new SimpleAction ("new", null);
-            set_accels_for_action ("app.new", {"<Control>n"});
+            set_accels_for_action ("app.action_new", {"<Control>n"});
             add_action (new_action);
             new_action.activate.connect (() => {
                 create_note(null);
             });
             var delete_action = new SimpleAction ("delete", null);
-            set_accels_for_action ("app.delete", {"<Control>w"});
+            set_accels_for_action ("app.action_delete", {"<Control>w"});
             add_action (delete_action);
             delete_action.activate.connect (() => {
                 MainWindow note = (MainWindow)get_active_window ();

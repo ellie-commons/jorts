@@ -320,6 +320,10 @@ namespace jorts {
             var label = "%s%".printf(zoomtostring);
             this.popover.zoom_default_button.set_label(label);
             ((Application)this.application).latest_zoom = zoom;
+
+            print(label);
+
+
         }
     }
 }
