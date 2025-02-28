@@ -156,7 +156,7 @@ namespace jorts.Themer {
     public static void init_all_themes() {
 
         debug("Init all themes");
-        foreach (unowned var theme in jorts.Themer.themearray) {
+        foreach (unowned var theme in jorts.Utils.themearray) {
             // Palette color
               var theme_provider = new Gtk.CssProvider ();
               var style = jorts.Themer.generate_css (theme);

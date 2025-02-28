@@ -64,11 +64,23 @@ namespace jorts {
         public const string ACTION_NEW      = "action_new";
         public const string ACTION_DELETE   = "action_delete";
 
+        public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+        public const string ACTION_ZOOM_IN = "zoom_in";
+        public const string ACTION_ZOOM_OUT = "zoom_out";
+
+        public const string[] ACCELS_ZOOM_DEFAULT = { "<control>0", "<Control>KP_0", null };
+        public const string[] ACCELS_ZOOM_IN = { "<Control>plus", "<Control>equal", "<Control>KP_Add", null };
+        public const string[] ACCELS_ZOOM_OUT = { "<Control>minus", "<Control>KP_Subtract", null };
+
+
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const GLib.ActionEntry[] action_entries = {
-            { ACTION_NEW,       action_new      },
-            { ACTION_DELETE,    action_delete   }
+            { ACTION_NEW,               action_new      },
+            { ACTION_DELETE,            action_delete   },
+            { ACTION_ZOOM_DEFAULT,      action_zoom_default   }
+            { ACTION_ZOOM_IN,           zoom_in   }
+            { ACTION_ZOOM_OUT,          zoom_out   }
         };
 
         // Init or something
@@ -80,6 +92,14 @@ namespace jorts {
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
             insert_action_group ("win", actions);
+
+
+            set_accels_for_action (ACTION_ZOOM_DEFAULT, ACCELS_ZOOM_DEFAULT);
+            set_accels_for_action (ACTION_ZOOM_IN, ACCELS_ZOOM_IN);
+            set_accels_for_action (ACTION_ZOOM_OUT, ACCELS_ZOOM_OUT);
+        }
+    
+
 
             this.set_hexpand (false);
             this.set_vexpand (false);
@@ -142,21 +162,8 @@ namespace jorts {
             delete_item.add_css_class("themedbutton");
 
 
-            var popover = new SettingsPopover (this.zoom, this.theme);
-            
-            popover.theme_changed.connect ((selected) => {
-                this.update_theme(selected);
-            });
+            var popover = new SettingsPopover (this.theme, this.zoom);
 
-            popover.zoom_changed.connect ((zoomkind) => {
-                if (zoomkind == "zoom_in") {
-                    this.zoom_in();
-                } else if (zoomkind == "zoom_out") {
-                    this.zoom_out();
-                } else if (zoomkind == "reset") {
-                    this.set_zoom(100);
-                }
-            });
 
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
@@ -203,6 +210,23 @@ namespace jorts {
                 popover.set_zoomlevel(this.zoom);
             });
 
+            
+            popover.theme_changed.connect ((selected) => {
+                this.update_theme(selected);
+            });
+
+            popover.zoom_changed.connect ((zoomkind) => {
+                if (zoomkind == "zoom_in") {
+                    this.zoom_in();
+                } else if (zoomkind == "zoom_out") {
+                    this.zoom_out();
+                } else if (zoomkind == "reset") {
+                    this.set_zoom(100);
+                }
+            });
+
+
+
         }
 
         // TITLE IS TITLE
@@ -242,6 +266,10 @@ namespace jorts {
             this.close ();
         }
 
+        private void action_zoom_default () {
+            this.set_zoom(100);
+        }
+
         // Strip old stylesheet, apply the new
         private void update_theme(string theme) {
             // in GTK4 we can replace this with setting css_classes
@@ -254,7 +282,6 @@ namespace jorts {
 
         public string zoom_to_class(int64 zoom) {
             switch (zoom) {
-
                 case 40: return "muchsmaller";
                 case 60: return "smaller";
                 case 80: return "small";
@@ -269,13 +296,13 @@ namespace jorts {
         }
 
         public void zoom_in() {
-            if ((this.zoom + 20) <= max_zoom) {
+            if ((this.zoom + 20) <= jorts.Utils.max_zoom) {
                 this.set_zoom((this.zoom + 20));
             }
         }
 
         public void zoom_out() {
-            if ((this.zoom - 20) >= min_zoom) {
+            if ((this.zoom - 20) >= jorts.Utils.min_zoom) {
                 this.set_zoom((this.zoom - 20));
             }
         }
@@ -286,6 +313,8 @@ namespace jorts {
             this.add_css_class (zoom_to_class( this.zoom));
             ((Application)this.application).latest_zoom = zoom;
 
+            var label = "%.0f%%".printf(zoom.to_string);
+            popovover.zoom_default_button.set_label(this.zoom);
             
 
         }

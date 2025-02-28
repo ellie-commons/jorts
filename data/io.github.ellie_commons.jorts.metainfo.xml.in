@@ -66,7 +66,7 @@
     <releases>
         <release version="2.1.0" date="2025-02-25">
             <description>
-                <p>2.0.1 Appcenter release</p>
+                <p>2.1.0 Fresh out of the laundry!<br></p>
                 <ul>
                     <li>Includes a per-note zoom! So you can get bigger or smaller text</li>
                     <li>Latest set zoom, aka what is most comfortable to you, stays as default for new notes</li>
@@ -78,12 +78,12 @@
         </release>
         <release version="2.0.1" date="2025-02-25">
             <description>
-                <p>2.0.1 Appcenter release</p>
+                <p>2.0.1 Appcenter release<br></p>
             </description>
         </release>
         <release version="2.0.0" date="2025-02-25">
             <description>
-                <p>2.0.0 Release: Slate And Bubblegum</p>
+                <p>2.0.0 Release: Slate And Bubblegum<br></p>
                 <ul>
                     <li>Revival of an ancient but well loved version of Notejot</li>
                     <li>The app is now named Jorts. You however cannot wear it</li>

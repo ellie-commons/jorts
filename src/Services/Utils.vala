@@ -32,12 +32,29 @@ TODO: will need to know the theme to skip
 
 namespace jorts.Utils {
 
+    const int max_zoom = 200;
+    const int min_zoom = 60;
+
+    // As seen on TV!
+    const string[] themearray = {
+        "BLUEBERRY",
+        "MINT",
+        "LIME",
+        "BANANA",
+        "ORANGE",
+        "STRAWBERRY",
+        "BUBBLEGUM",
+        "GRAPE",
+        "COCOA",
+        "SLATE"
+    };
+
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
     // Having an gee.arraylist defined from the start only causes issues
     public string random_theme (string? skip_theme) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (jorts.Themer.themearray);
+        themes.add_all_array (jorts.Utils.themearray);
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
