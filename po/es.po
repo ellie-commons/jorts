@@ -84,7 +84,6 @@ msgid "New sticky note"
 msgstr "Nueva nota adhesiva"
 
 #: src/MainWindow.vala:165
-#, fuzzy
 msgid "Delete sticky note "
 msgstr "Eliminar nota adhesiva"
 

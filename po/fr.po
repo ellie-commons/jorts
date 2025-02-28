@@ -85,7 +85,6 @@ msgid "New sticky note"
 msgstr "Nouveau post-it"
 
 #: src/MainWindow.vala:165
-#, fuzzy
 msgid "Delete sticky note "
 msgstr "Supprimer le post-it"
 

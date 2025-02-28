@@ -84,7 +84,6 @@ msgid "New sticky note"
 msgstr "Neue Haftnotiz"
 
 #: src/MainWindow.vala:165
-#, fuzzy
 msgid "Delete sticky note "
 msgstr "Haftnotiz Löschen"
 
@@ -230,7 +229,6 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:40
-#, fuzzy
 msgid "Sticky notes"
 msgstr "Neue Haftnotiz"
 
