@@ -78,9 +78,9 @@ namespace jorts {
         private const GLib.ActionEntry[] action_entries = {
             { ACTION_NEW,               action_new      },
             { ACTION_DELETE,            action_delete   },
-            { ACTION_ZOOM_DEFAULT,      action_zoom_default   }
-            { ACTION_ZOOM_IN,           zoom_in   }
-            { ACTION_ZOOM_OUT,          zoom_out   }
+            { ACTION_ZOOM_DEFAULT,      action_zoom_default   },
+            { ACTION_ZOOM_IN,           zoom_in   },
+            { ACTION_ZOOM_OUT,          zoom_out   },
         };
 
         // Init or something
