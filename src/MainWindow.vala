@@ -97,7 +97,6 @@ namespace jorts {
             set_accels_for_action (ACTION_ZOOM_DEFAULT, ACCELS_ZOOM_DEFAULT);
             set_accels_for_action (ACTION_ZOOM_IN, ACCELS_ZOOM_IN);
             set_accels_for_action (ACTION_ZOOM_OUT, ACCELS_ZOOM_OUT);
-        }
     
 
 
