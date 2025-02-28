@@ -122,7 +122,7 @@ window.small editablelabel {font-size: 0.85em;}
 window.small editablelabel.editing {font-size: 0.80em;}
 
 window.normal_zoom textview {font-size: 1.2em;}
-window.normal_zoom editablelabel {font-size: 1.10em;}
+window.normal_zoom editablelabel {font-size: 1.05em;}
 window.normal_zoom editablelabel.editing {font-size: 1em;}
 
 window.big textview {font-size: 1.4em;}
