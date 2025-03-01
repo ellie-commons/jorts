@@ -32,6 +32,23 @@ TODO: will need to know the theme to skip
 
 namespace jorts.Utils {
 
+
+        // We cannot use numbers in CSS, so we have to translate a number into a string
+    public string zoom_to_class(int64 zoom) {
+        switch (zoom) {
+            case 40: return "muchsmaller";
+            case 60: return "smaller";
+            case 80: return "small";
+            case 100: return "normal_zoom";
+            case 120: return "big";
+            case 140: return "bigger";
+            case 160: return "muchbigger";
+            case 180: return "muchmuchbigger";
+            case 200: return "huge";
+            default: return "normal_zoom";
+        }
+    }
+
     const int max_zoom = 200;
     const int min_zoom = 60;
 

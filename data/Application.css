@@ -83,6 +83,7 @@ editablelabel {
     font-size: 1.05em;
     padding-left: 24px;
     padding-right: 24px;
+    text-shadow: 0px 1px rgba(255,255,255,0.5);
 }
 
 editablelabel.editing {
@@ -102,6 +103,7 @@ actionbar image {
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Fix buttons in popover inheriting the color */
 popover button image {
     color: @fg_color;
 }

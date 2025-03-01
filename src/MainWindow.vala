@@ -62,8 +62,6 @@ namespace jorts {
         public static int max_zoom = 200;
         public static int min_zoom = 60;
 
-
-
         public SimpleActionGroup actions { get; construct; }
 
         public const string ACTION_PREFIX   = "app.";
@@ -271,7 +269,7 @@ namespace jorts {
             this.set_zoom(100);
         }
 
-        // Strip old stylesheet, apply the new
+        // Switches stylesheet
         private void update_theme(string theme) {
             // in GTK4 we can replace this with setting css_classes
             remove_css_class (this.theme);
@@ -279,22 +277,6 @@ namespace jorts {
             add_css_class (this.theme);
         }
 
-
-
-        public string zoom_to_class(int64 zoom) {
-            switch (zoom) {
-                case 40: return "muchsmaller";
-                case 60: return "smaller";
-                case 80: return "small";
-                case 100: return "normal_zoom";
-                case 120: return "big";
-                case 140: return "bigger";
-                case 160: return "muchbigger";
-                case 180: return "muchmuchbigger";
-                case 200: return "huge";
-                default: return "default";
-            }
-        }
 
         public void zoom_in() {
             if ((this.zoom + 20) <= jorts.Utils.max_zoom) {
@@ -308,21 +290,23 @@ namespace jorts {
             }
         }
 
+        // Switches the classes that control font size
         public void set_zoom(int64 zoom) {
-            this.remove_css_class (zoom_to_class( this.zoom));
+            print("setting zoom");
+            this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
             this.zoom = zoom;
-            this.add_css_class (zoom_to_class( this.zoom));
+            this.add_css_class (jorts.Utils.zoom_to_class( this.zoom));
 
             // Doesnt work :(
             this.popover.set_zoomlevel(zoom);
 
+            // doesnt either
             var zoomtostring = zoom.to_string();
             var label = "%s%".printf(zoomtostring);
             this.popover.zoom_default_button.set_label(label);
-            ((Application)this.application).latest_zoom = zoom;
+            print(this.popover.zoom_default_button.get_label());
 
-            print(label);
-
+            //((Application)this.application).latest_zoom = zoom;
 
         }
     }

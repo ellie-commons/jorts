@@ -177,6 +177,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
     public void set_zoomlevel (int64 zoom) {
+
+        //print("Popover set-zoomlevel");
         var zoomtostring = zoom.to_string();
 
         ///TRANSLATORS: %s is replaced by a percent. Ex: 100, to display 100%
