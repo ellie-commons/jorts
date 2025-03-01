@@ -57,7 +57,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.set_margin_bottom (12);
 
         setting_grid.column_spacing = 1;
-        setting_grid.row_spacing = 6;
+        setting_grid.row_spacing = 3;
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
 
 
@@ -100,7 +100,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_slate.set_active ((theme == "SLATE"));
 
         //TODO: Multiline
-        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 3) {
+        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 1) {
             accessible_role = Gtk.AccessibleRole.LIST
         };
 
@@ -131,6 +131,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Default zoom level")
                     )
             };
+        this.zoom_default_button.set_label ("100%");
+
         this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
                         ACCELS_ZOOM_IN,
@@ -142,9 +144,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
         
-        var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
+        var font_size_box = new Gtk.Box (HORIZONTAL, 3) {
             homogeneous = true,
             hexpand = true,
+            margin_top = 6,
             margin_start = 6,
             margin_end = 6,
             margin_bottom = 6
@@ -178,12 +181,13 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
     public void set_zoomlevel (int64 zoom) {
 
-        //print("Popover set-zoomlevel");
-        var zoomtostring = zoom.to_string();
+        var label = _("ZOOM%");
+        label = label.replace ("ZOOM", zoom.to_string ());
 
-        ///TRANSLATORS: %s is replaced by a percent. Ex: 100, to display 100%
-        var label = "%s%".printf(zoomtostring);
-        this.zoom_default_button.set_label (label);
+        //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+        this.zoom_default_button.set_label (label);  
+
+
     }
 
 

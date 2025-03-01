@@ -290,24 +290,17 @@ namespace jorts {
             }
         }
 
-        // Switches the classes that control font size
         public void set_zoom(int64 zoom) {
-            print("setting zoom");
+            // Switches the classes that control font size
             this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
             this.zoom = zoom;
             this.add_css_class (jorts.Utils.zoom_to_class( this.zoom));
 
-            // Doesnt work :(
+            // Reflect the number in the popover
             this.popover.set_zoomlevel(zoom);
 
-            // doesnt either
-            var zoomtostring = zoom.to_string();
-            var label = "%s%".printf(zoomtostring);
-            this.popover.zoom_default_button.set_label(label);
-            print(this.popover.zoom_default_button.get_label());
-
-            //((Application)this.application).latest_zoom = zoom;
-
+            // Keep it for next new notes
+            ((Application)this.application).latest_zoom = zoom;
         }
     }
 }

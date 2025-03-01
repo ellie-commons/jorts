@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Jorts
 GenericName=Sticky notes
-Comment=Colourful little sticky notes for your thoughts :)
+Comment=Neither jeans nor shorts, just like jorts! Colourful little sticky notes for your thoughts :)
 Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;

@@ -5,15 +5,17 @@
     <project_license>GPL-3.0+</project_license>
     
     <name translate="no">Jorts</name>
-    <summary>Colourful little sticky notes for your thoughts :)</summary>
+    <summary>Neither jeans nor shorts, just like jorts</summary>
     <description>
-        <p>Neither jeans nor shorts, just like jorts. Colourful little sticky notes for your thoughts</p>
+        <p>Colourful little sticky notes for all of your thoughts :)</p>
+        <p>Features include:</p>
         <ul>
-            <li>Ten pretty themes with soft transitions</li>
-            <li>Striving to keep it simple, cute, modern, light</li>
-            <li>Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)</li>
-            <li>You can open links and emails with Ctrl+Click</li>
+            <li>Colours: Ten pretty themes. Any new note gets a random one</li>
+            <li>Adaptive: New notes get the zoom you last chose</li>
+            <li>Cute: Each new note has a funny or cute random (editable) title</li>
+            <li>Handy: You can open links and emails with Ctrl+Click</li>
         </ul>
+        <p>This is a fork of an old version of "Notejot" by lainsce and wouldn't exist without her work. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
     <provides>
         <binary>io.github.ellie_commons.jorts</binary>
@@ -33,7 +35,7 @@
     <suggests>
         <id>com.github.matfantinel.reminduck</id>
         <id>com.github.elfenware.badger</id>
-      <id>io.github.xchan14.larawan</id>
+        <id>io.github.xchan14.larawan</id>
     </suggests>
 
     <keywords>
@@ -52,6 +54,14 @@
             <caption>A sticky note with the "Blueberry" theme</caption>
             <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot.png</image>
         </screenshot>
+        <screenshot type="default">
+            <caption>You can change individual colour and text size!</caption>
+            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot2.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>You can unzoom so hard you could do ascii art</caption>
+            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot3.png</image>
+        </screenshot>
     </screenshots>
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB"></translation>
@@ -64,7 +74,7 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="2.1.0" date="2025-02-25">
+        <release version="2.1.0" date="2025-03-01">
             <description>
                 <p>2.1.0 Fresh out of the laundry!</p>
                 <ul>
@@ -73,6 +83,9 @@
                     <li>Better readability (WCAG AA or AAA depending on theme)</li>
                     <li>Also slightly better looking theme. Yes even more :)</li>
                     <li>Improved translations</li>
+                    <li>Better shortcut and tooltips</li>
+                    <li>Fixed a bug where Jorts stayed on light system theme</li>
+                    <li>Fixed a bug where Jorts stayed on light system theme</li>
                 </ul>
             </description>
         </release>
