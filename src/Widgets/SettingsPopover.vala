@@ -44,6 +44,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
     public Gtk.Button zoom_in_button;
     public Gtk.Button zoom_default_button;
 
+
     public SettingsPopover (string theme) {
 
         this.set_position (Gtk.PositionType.TOP);
@@ -61,12 +62,12 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
 
 
-        ///TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+        //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
 
-        ///TRANSLATORS: Name of a color theme
+        //TRANSLATORS: Name of a color theme
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
         var color_button_lime = new ColorPill (_("Lime"), "lime");
         var color_button_mint = new ColorPill (_("Mint"), "mint");
@@ -102,6 +103,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
         //TODO: Multiline
         var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 1) {
             accessible_role = Gtk.AccessibleRole.LIST
+            margin_top = 12;
+            margin_bottom = 12;
         };
 
         color_button_box.append (color_button_blueberry);
@@ -131,7 +134,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Default zoom level")
                     )
             };
-        this.zoom_default_button.set_label ("100%");
+        //this.zoom_default_button.set_label ("100%");
 
         this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
@@ -140,6 +143,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                     )
             };
 
+        // Emit a signal that will be picked by MainWindow
         this.zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
@@ -147,10 +151,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
         var font_size_box = new Gtk.Box (HORIZONTAL, 3) {
             homogeneous = true,
             hexpand = true,
-            margin_top = 6,
+            margin_top = 12,
             margin_start = 6,
             margin_end = 6,
-            margin_bottom = 6
+            margin_bottom = 12
         };
         font_size_box.append (this.zoom_out_button);
         font_size_box.append (this.zoom_default_button);
@@ -158,13 +162,11 @@ public class jorts.SettingsPopover : Gtk.Popover {
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
 
-
         setting_grid.attach (font_size_box, 0, 3, 1, 1);
-
         setting_grid.show ();
         this.set_child(setting_grid);
 
-
+        // Emit a signal when a button is toggled
         color_button_blueberry.toggled.connect (() => {this.theme_changed("BLUEBERRY");});
         color_button_orange.toggled.connect (() => {this.theme_changed("ORANGE");});
         color_button_mint.toggled.connect (() => {this.theme_changed("MINT");});
@@ -179,6 +181,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
 
+    // Called by the Mainwindow when adjusting to new zoomlevel
+    // Mainwindow reacts to a signal by the popover
     public void set_zoomlevel (int64 zoom) {
 
         var label = _("ZOOM%");
@@ -186,8 +190,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
         this.zoom_default_button.set_label (label);  
-
-
     }
 
 

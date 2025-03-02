@@ -97,18 +97,15 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("app", actions);
 
-
-            this.set_hexpand (false);
-            this.set_vexpand (false);
-
-            this.data = data;
-
-            this.title_name = data.title;
-            this.theme = data.theme;
-            this.content = data.content;
+            //this.set_hexpand (false);
+            //this.set_vexpand (false);
 
             this.gtk_settings = Gtk.Settings.get_default ();
 
+            this.data = data;
+            this.title_name = data.title;
+            this.theme = data.theme;
+            this.content = data.content;
 
 
 
@@ -214,6 +211,7 @@ namespace jorts {
             });
 
             notetitle.changed.connect (() => {
+                this.set_title(notetitle.text);
                 ((Application)this.application).save_to_stash ();            
             });
 

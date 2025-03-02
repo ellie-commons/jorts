@@ -74,6 +74,17 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="2.1.2" date="2025-03-02">
+            <description>
+                <p>2.1.2 The unrippable jorts</p>
+                <ul>
+                    <li>More translations!</li>
+                    <li>Ctrl+Scroll to change zoom</li>
+                    <li>Lighter and yet more resilient theming system</li>
+                    <li>Bugfix: Title in multitasking not set correctly</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.1.1" date="2025-03-02">
             <description>
                 <p>2.1.1 Fresh out of the laundry! (2: electric boogaloo)</p>
