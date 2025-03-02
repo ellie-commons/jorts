@@ -53,6 +53,8 @@ namespace jorts {
 
         public jorts.noteData data;
 
+        public Gtk.Settings gtk_settings;
+
 
         public string title_name;
         public string theme;
@@ -104,6 +106,11 @@ namespace jorts {
             this.title_name = data.title;
             this.theme = data.theme;
             this.content = data.content;
+
+            this.gtk_settings = Gtk.Settings.get_default ();
+
+
+
 
             this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
@@ -202,6 +209,14 @@ namespace jorts {
             // ================================================================ //
             // EVENTS            
             //  //  //Save when the text thingy has changed
+
+            this.focus_on_click.connect(() => {
+                // Use appropriate sheet
+                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
+                this.gtk_settings.gtk_theme_name = stylesheet;
+            });
+
+
             view.buffer.changed.connect (() => {
                 ((Application)this.application).save_to_stash ();            
             });
@@ -271,6 +286,11 @@ namespace jorts {
 
         // Switches stylesheet
         private void update_theme(string theme) {
+
+            // Use appropriate sheet
+            var stylesheet = "io.elementary.stylesheet." + theme.ascii_down();
+            this.gtk_settings.gtk_theme_name = stylesheet;
+
             // in GTK4 we can replace this with setting css_classes
             remove_css_class (this.theme);
             this.theme = theme;
