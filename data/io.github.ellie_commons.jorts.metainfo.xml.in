@@ -52,15 +52,15 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot.png</image>
         </screenshot>
         <screenshot type="default">
             <caption>You can change individual colour and text size!</caption>
-            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot2.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot2.png</image>
         </screenshot>
         <screenshot type="default">
             <caption>You can unzoom so hard you could do ascii art</caption>
-            <image>https://raw.githubusercontent.com/ellie_commons/jorts/master/data/shot3.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot3.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.1"/>
