@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Jorts
 GenericName=Sticky notes utility
-Comment=Write down reminders, 
+Comment=Write down notes, reminders, random thoughts and other short-term informations
 Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;

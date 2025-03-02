@@ -208,15 +208,7 @@ namespace jorts {
 
             // ================================================================ //
             // EVENTS            
-            //  //  //Save when the text thingy has changed
-
-            this.focus_on_click.connect(() => {
-                // Use appropriate sheet
-                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
-                this.gtk_settings.gtk_theme_name = stylesheet;
-            });
-
-
+            // Save when the text thingy has changed
             view.buffer.changed.connect (() => {
                 ((Application)this.application).save_to_stash ();            
             });
@@ -231,7 +223,11 @@ namespace jorts {
             });
 
             this.popover.show.connect(() => {
-                popover.set_zoomlevel(this.zoom);
+                //popover.set_zoomlevel(this.zoom);
+
+                // Use appropriate sheet
+                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
+                this.gtk_settings.gtk_theme_name = stylesheet;
             });
 
             

@@ -74,6 +74,16 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="2.1.1" date="2025-03-02">
+            <description>
+                <p>2.1.1 Fresh out of the laundry! (2: electric boogaloo)</p>
+                <ul>
+                    <li>Clearer appmenu description</li>
+                    <li>More consistent theming</li>
+                    <li>Bugfix: screenshot not showing</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.1.0" date="2025-03-01">
             <description>
                 <p>2.1.0 Fresh out of the laundry!</p>
