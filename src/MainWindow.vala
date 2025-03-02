@@ -289,6 +289,8 @@ namespace jorts {
             remove_css_class (this.theme);
             this.theme = theme;
             add_css_class (this.theme);
+
+            ((Application)this.application).save_to_stash (); 
         }
 
 
@@ -315,6 +317,7 @@ namespace jorts {
 
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
+            ((Application)this.application).save_to_stash (); 
         }
     }
 }
