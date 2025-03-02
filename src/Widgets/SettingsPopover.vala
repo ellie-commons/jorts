@@ -101,11 +101,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_slate.set_active ((theme == "SLATE"));
 
         //TODO: Multiline
-        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 1) {
-            accessible_role = Gtk.AccessibleRole.LIST
-            margin_top = 12;
-            margin_bottom = 12;
-        };
+        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 1);
+        color_button_box.accessible_role = Gtk.AccessibleRole.LIST;
+        color_button_box.margin_top = 12;
+        color_button_box.margin_bottom = 12;
 
         color_button_box.append (color_button_blueberry);
         color_button_box.append (color_button_mint);
