@@ -19,7 +19,6 @@ msgstr ""
 
 #. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:65
-#, fuzzy
 msgid "Sticky Note Colour"
 msgstr "Couleur du post-it"
 
@@ -233,9 +232,8 @@ msgid "Jorts"
 msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
-#, fuzzy
 msgid "Sticky notes utility"
-msgstr "Nouveau post-it"
+msgstr "Utilitaire de post-it"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
 msgid ""
@@ -331,7 +329,6 @@ msgid "2.1.2 The unrippable jorts"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
-#, fuzzy
 msgid "More translations!"
 msgstr "Quelques traductions initiales :3"
 
