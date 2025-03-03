@@ -73,8 +73,7 @@ msgstr "Standard-Zoomstufe"
 
 #: src/Widgets/SettingsPopover.vala:139
 msgid "Zoom in"
-msgstr "Vergrößern
-"
+msgstr "Vergrößern"
 
 #: src/Widgets/SettingsPopover.vala:184
 msgid "ZOOM%"
