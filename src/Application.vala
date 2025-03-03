@@ -20,7 +20,7 @@ namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
         private static bool create_new_window = false;
-        //  private static bool show_all = false;
+
         public static GLib.Settings gsettings;
         public static Settings animation_settings;
         public Application () {
@@ -33,24 +33,29 @@ namespace jorts {
         public override void startup () {
             base.startup ();
 
+            // The localization thingamabob
             Intl.setlocale (LocaleCategory.ALL, "");
             Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
             Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
             Intl.textdomain (GETTEXT_PACKAGE);
 
-            // FIXME: Dark breaks a few things: border, font of editablelabel, buttons in popover
+
+            // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
+            gtk_settings.gtk_icon_theme_name = "elementary";
+            gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
+
+            // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
 	                granite_settings.prefers_color_scheme == DARK
                 );
 	
             granite_settings.notify["prefers-color-scheme"].connect (() => {
-            gtk_settings.gtk_application_prefer_dark_theme = (
-	                granite_settings.prefers_color_scheme == DARK
-	            );
+                gtk_settings.gtk_application_prefer_dark_theme = (
+                        granite_settings.prefers_color_scheme == DARK
+                    );
             }); 
-
 
 
             // build all the stylesheets
@@ -114,8 +119,9 @@ namespace jorts {
 
         }
 
-        // Either show all windows, or rebuild from storage
+        // Clicked: Either show all windows, or rebuild from storage
         protected override void activate () {
+            
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
 
@@ -127,12 +133,11 @@ namespace jorts {
                 }
             } else {
                 this.init_all_notes ();
-                //this.follow_animations_settings();
             }     
 	    }
 
 
-    // create new instances of MainWindow
+    // Create new instances of MainWindow
 	public void create_note(noteData? data) {
         MainWindow note;
         if (data != null) {
@@ -149,10 +154,6 @@ namespace jorts {
         }
         this.open_notes.add(note);
         this.save_to_stash ();
-
-
-
-        Granite.Services.Application.set_badge.begin ((open_notes.size));
 	}
 
     // Simply remove from the list of things to save, and close
