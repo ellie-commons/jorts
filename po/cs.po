@@ -12,16 +12,15 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:65
 msgid "Sticky Note Colour"
-msgstr "Barva samolepicího bločku
-"
+msgstr "Barva samolepicího bločku"
 
 #. /TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
