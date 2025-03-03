@@ -66,19 +66,19 @@ msgstr "Ardoise"
 
 #: src/Widgets/SettingsPopover.vala:125
 msgid "Zoom out"
-msgstr ""
+msgstr "Dézoomer"
 
 #: src/Widgets/SettingsPopover.vala:131
 msgid "Default zoom level"
-msgstr ""
+msgstr "Zoom par défaut"
 
 #: src/Widgets/SettingsPopover.vala:139
 msgid "Zoom in"
-msgstr ""
+msgstr "Zoomer"
 
 #: src/Widgets/SettingsPopover.vala:184
 msgid "ZOOM%"
-msgstr ""
+msgstr "ZOOM%"
 
 #: src/MainWindow.vala:133
 msgid "Edit title"
@@ -102,7 +102,7 @@ msgstr "Tous mes meilleurs amis"
 
 #: src/Services/Utils.vala:88
 msgid "My super good secret recipe"
-msgstr "Ma super bonne recette secrète"
+msgstr "Ma super recette secrète"
 
 #: src/Services/Utils.vala:89
 msgid "My todo list"
@@ -242,43 +242,42 @@ msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
+"Écrire des notes, des rappels, des pensées aléatoires et d'autres "
+"informations de court terme"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-#, fuzzy
 msgid "Neither jeans nor shorts, just like jorts"
 msgstr ""
-"Ni jeans, ni shorts, tout comme les jorts. Une application de post-it pour "
-"elementary OS"
+"Ni jeans, ni shorts, tout comme les jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-#, fuzzy
 msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "Un petit utilitaire de notes autocollantes colorées, pour vos pensées"
+msgstr "Un petit utilitaire de notes autocollantes colorées, pour vos pensées :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
-msgstr ""
+msgstr "Les fonctionnalités comprennent :"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr ""
+msgstr "Couleurs : dix jolis thèmes. Chaque nouvelle note reçoit un thème aléatoire"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr ""
+msgstr "Adaptatif: Les nouvelles notes ont le zoom que vous avez choisi en dernier"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
+msgstr "Mignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle ou mignon"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "Vous pouvez ouvrir les liens et les e-mails avec Ctrl+Clic"
+msgstr "Pratique: Vous pouvez ouvrir les liens et les e-mails avec Ctrl+Clic"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:18
 msgid ""
@@ -286,6 +285,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
+"Il s'agit d'une version dérivée d'une ancienne version de Notejot par lainsce et "
+"n'existerait pas sans son travail. La communauté l'a tellement aimé que"
+" nous avons pensé que ce serait génial de la revivre !"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -294,7 +296,7 @@ msgstr "Stella - Teamcons"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 #, fuzzy
 msgid "Sticky notes"
-msgstr "Nouveau post-it"
+msgstr "Post-it"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Notes"
@@ -302,7 +304,7 @@ msgstr "Notes"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Cute"
-msgstr ""
+msgstr "Mignon"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Desktop"
@@ -318,11 +320,11 @@ msgstr "Un post-it avec le thème « Myrtille »."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr ""
+msgstr "Vous pouvez modifier la couleur et la taille du texte de chaque post-it!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "You can unzoom so hard you could do ascii art"
-msgstr ""
+msgstr "Vous pouvez dézoomer si fort que vous pourriez faire de l'art ascii"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:79
 msgid "2.1.2 The unrippable jorts"

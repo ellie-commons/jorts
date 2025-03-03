@@ -65,19 +65,20 @@ msgstr "Schiefer"
 
 #: src/Widgets/SettingsPopover.vala:125
 msgid "Zoom out"
-msgstr ""
+msgstr "Verkleinern"
 
 #: src/Widgets/SettingsPopover.vala:131
 msgid "Default zoom level"
-msgstr ""
+msgstr "Standard-Zoomstufe"
 
 #: src/Widgets/SettingsPopover.vala:139
 msgid "Zoom in"
-msgstr ""
+msgstr "Vergrößern
+"
 
 #: src/Widgets/SettingsPopover.vala:184
 msgid "ZOOM%"
-msgstr ""
+msgstr "ZOOM%"
 
 #: src/MainWindow.vala:133
 msgid "Edit title"
@@ -232,52 +233,48 @@ msgid "Jorts"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
-#, fuzzy
 msgid "Sticky notes utility"
-msgstr "Neue Haftnotiz"
+msgstr "Dienstprogramm für Haftnotizen"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
+"Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige "
+"Informationen"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-#, fuzzy
 msgid "Neither jeans nor shorts, just like jorts"
-msgstr ""
-"Weder Jeans noch Shorts, genau wie Jorts. Eine Anwendung für Haftnotizen für "
-"elementary OS"
+msgstr "Weder Jeans noch Shorts, genau wie Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-#, fuzzy
 msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr ""
-"Ein farbenfrohes kleines Dienstprogramm für Haftnotizen, für Ihre Gedanken"
+msgstr "Bunte kleine Haftnotizen für all Ihre Gedanken :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
-msgstr ""
+msgstr "Zu den Funktionen gehören:"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr ""
+msgstr "Farben: Zehn hübsche Themen. Jede neue Note erhält eine zufällige"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr ""
+msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
+msgstr "Niedlich: Jede neue Notiz hat einen lustigen oder niedlichen zufälligen (editierbaren) Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr ""
+msgstr "Praktisch: Sie können Links und E-Mails mit Strg+Klick öffnen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:18
 msgid ""
@@ -285,6 +282,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
+"Dies ist eine Abspaltung einer alten Version von Notejot von lainsce und würde"
+"ohne ihre Arbeit nicht existieren. Der Community gefiel es so gut, dass wir dachten,"
+" es wäre großartig, es wiederzubeleben!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -292,11 +292,11 @@ msgstr "Stella - Teamcons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 msgid "Sticky notes"
-msgstr "Neue Haftnotiz"
+msgstr "Haftnotizen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Notes"
-msgstr ""
+msgstr "Notizen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Cute"
@@ -316,40 +316,39 @@ msgstr "Eine Haftnotiz mit dem Blaubeer-Thema"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr ""
+msgstr "Sie können die Farbe und Textgröße individuell ändern!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "You can unzoom so hard you could do ascii art"
-msgstr ""
+msgstr "Sie können so stark herauszoomen, dass Sie ASCII-Kunst machen könnten"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:79
 msgid "2.1.2 The unrippable jorts"
-msgstr ""
+msgstr "2.1.2 Die unzerreißbare Latzhose"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
-#, fuzzy
 msgid "More translations!"
 msgstr "Einige erste Übersetzungen :3"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
 msgid "Ctrl+Scroll to change zoom"
-msgstr ""
+msgstr "Strg+Scrollen, um den Zoom zu ändern"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
 msgid "Lighter and yet more resilient theming system"
-msgstr ""
+msgstr "Leichteres und dennoch widerstandsfähigeres Themensystem"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:84
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr ""
+msgstr "Fehlerbehebung: Titel im Multitasking nicht korrekt eingestellt"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr ""
+msgstr "2.1.1 Frisch aus der Wäscherei! (2: Electric Boogaloo)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid "Clearer appmenu description"
-msgstr ""
+msgstr "Klarere Beschreibung des App-Menüs"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "More consistent theming"

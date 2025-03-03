@@ -65,19 +65,19 @@ msgstr "Pizarra"
 
 #: src/Widgets/SettingsPopover.vala:125
 msgid "Zoom out"
-msgstr ""
+msgstr "Alejar"
 
 #: src/Widgets/SettingsPopover.vala:131
 msgid "Default zoom level"
-msgstr ""
+msgstr "Nivel de zoom predeterminado"
 
 #: src/Widgets/SettingsPopover.vala:139
 msgid "Zoom in"
-msgstr ""
+msgstr "Acercar"
 
 #: src/Widgets/SettingsPopover.vala:184
 msgid "ZOOM%"
-msgstr ""
+msgstr "ZOOM%"
 
 #: src/MainWindow.vala:133
 msgid "Edit title"
@@ -240,7 +240,8 @@ msgstr "Notas adhesivas"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr ""
+msgstr "Escribir notas, recordatorios, pensamientos aleatorios "
+"y otra información a corto plazo"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -258,19 +259,19 @@ msgstr "Pequeñas y coloridas notas adhesivas para tus pensamientos"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
-msgstr ""
+msgstr "Las características incluyen:"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr ""
+msgstr "Colores: Diez bonitos temas. Cada nueva nota recibe una al azar."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr ""
+msgstr "Adaptable: Las notas nuevas obtienen el zoom que eligió por última vez."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
+msgstr "Lindo: Cada nota nueva tiene un título aleatorio (editable) divertido o lindo."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -283,6 +284,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
+"Esta es una bifurcación de una versión antigua de Notejot de lainsce,"
+"y no existiría sin su trabajo.¡ A la comunidad le gustó tanto que pensamos que"
+"sería genial revivirla!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -315,15 +319,15 @@ msgstr "Una nota adhesiva con el tema «Arándano»."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr ""
+msgstr "¡Puede cambiar el color y el tamaño del texto individualmente!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "You can unzoom so hard you could do ascii art"
-msgstr ""
+msgstr "Puedes alejarte tanto que podrías hacer arte ASCII."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:79
 msgid "2.1.2 The unrippable jorts"
-msgstr ""
+msgstr "2.1.2 Los jorts no rasgados"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
 #, fuzzy
@@ -332,31 +336,31 @@ msgstr "Algunas traducciones iniciales :3"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
 msgid "Ctrl+Scroll to change zoom"
-msgstr ""
+msgstr "Ctrl+Desplazamiento para cambiar el zoom"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
 msgid "Lighter and yet more resilient theming system"
-msgstr ""
+msgstr "Sistema de tematización más ligero y resistente"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:84
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr ""
+msgstr "Corrección de errores: El título en multitarea no se ha configurado correctamente."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr ""
+msgstr "2.1.1 ¡Recién salido de la lavandería! (2: boogaloo eléctrico)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid "Clearer appmenu description"
-msgstr ""
+msgstr "Descripción más clara del menú de la aplicación"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "More consistent theming"
-msgstr ""
+msgstr "Temas más coherentes"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid "Bugfix: screenshot not showing"
-msgstr ""
+msgstr "Corrección de errores: captura de pantalla no mostrada"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
 msgid "2.1.0 Fresh out of the laundry!"
@@ -364,7 +368,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:102
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr ""
+msgstr "¡Incluye un zoom por nota! Para que pueda agrandar o reducir el texto."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
 msgid ""
