@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 18:44+0100\n"
+"POT-Creation-Date: 2025-03-05 17:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:65
+#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Sticky Note Colour"
 msgstr "Barva samolepicího bločku"
 
-#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:65
+msgid "Choose a colour for this sticky note"
+msgstr ""
+
+#. TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Borůvka"
@@ -63,19 +67,22 @@ msgstr "Kakao"
 msgid "Slate"
 msgstr "Břidlice"
 
-#: src/Widgets/SettingsPopover.vala:125
+#: src/Widgets/SettingsPopover.vala:127
 msgid "Zoom out"
 msgstr "Zvětšit"
 
-#: src/Widgets/SettingsPopover.vala:131
+#: src/Widgets/SettingsPopover.vala:133
 msgid "Default zoom level"
 msgstr "Výchozí úroveň přiblížení"
 
-#: src/Widgets/SettingsPopover.vala:139
+#: src/Widgets/SettingsPopover.vala:141
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: src/Widgets/SettingsPopover.vala:184
+#. Called by the Mainwindow when adjusting to new zoomlevel
+#. Mainwindow reacts to a signal by the popover
+#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+#: src/Widgets/SettingsPopover.vala:188
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -99,16 +106,13 @@ msgstr "Nastavení"
 msgid "All my very best friends"
 msgstr "Všichni moji nejlepší přátelé"
 
-
 #: src/Services/Utils.vala:88
 msgid "My super good secret recipe"
 msgstr "Můj super dobrý tajný recept"
 
-
 #: src/Services/Utils.vala:89
 msgid "My todo list"
 msgstr "Můj seznam úkolů"
-
 
 #: src/Services/Utils.vala:90
 msgid "Super secret to not tell anyone"
@@ -117,7 +121,6 @@ msgstr "Super tajemství, které nikomu neprozradím"
 #: src/Services/Utils.vala:91
 msgid "My grocery list"
 msgstr "Můj seznam potravin"
-
 
 #: src/Services/Utils.vala:92
 msgid "Random shower thoughts"
@@ -130,7 +133,6 @@ msgstr "Moje oblíbené fanouškovské texty"
 #: src/Services/Utils.vala:94
 msgid "My fav dinosaurs"
 msgstr "Moji oblíbení dinosauři"
-
 
 #: src/Services/Utils.vala:95
 msgid "My evil mastermind plan"
@@ -152,16 +154,13 @@ msgstr "Nové lepidlo, nové já"
 msgid "Hidden pirate treasure"
 msgstr "Skrytý pirátský poklad"
 
-
 #: src/Services/Utils.vala:100
 msgid "To not forget, ever"
 msgstr "Abyste nezapomněli, nikdy"
 
-
 #: src/Services/Utils.vala:101
 msgid "Dear Diary,"
 msgstr "Milý deníčku,"
-
 
 #: src/Services/Utils.vala:102
 msgid "Hi im a square"
@@ -171,26 +170,21 @@ msgstr "Ahoj, jsem čtverec"
 msgid "Have a nice day! :)"
 msgstr "Hezký den! :)"
 
-
 #: src/Services/Utils.vala:104
 msgid "My meds schedule"
 msgstr "Můj rozpis léků"
-
 
 #: src/Services/Utils.vala:105
 msgid "Household chores"
 msgstr "Domácí práce"
 
-
 #: src/Services/Utils.vala:106
 msgid "Ode to my cat"
 msgstr "Óda na mou kočku"
 
-
 #: src/Services/Utils.vala:107
 msgid "My dogs favourite toys"
 msgstr "Oblíbené hračky mých psů"
-
 
 #: src/Services/Utils.vala:108
 msgid "How cool my birds are"
@@ -212,16 +206,13 @@ msgstr "Skvělé a vtipné komplimenty, které můžete rozdávat"
 msgid "Ok, listen here,"
 msgstr "Ok, poslouchej tady,"
 
-
 #: src/Services/Utils.vala:113
 msgid "My dream Pokemon team"
 msgstr "Můj vysněný tým Pokémonů"
 
-
 #: src/Services/Utils.vala:114
 msgid "My little notes"
 msgstr "Moje malé poznámky"
-
 
 #: src/Services/Utils.vala:115
 msgid "Surprise gift list"
@@ -235,16 +226,13 @@ msgstr "Poznámky k brainstormingu"
 msgid "To bring to the party"
 msgstr "Přinést na večírek"
 
-
 #: src/Services/Utils.vala:118
 msgid "My amazing mixtape"
 msgstr "Můj úžasný mixtape"
 
-
 #: src/Services/Utils.vala:119
 msgid "Napkin scribbles"
 msgstr "Ubrouskové čmáranice"
-
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -260,7 +248,6 @@ msgid ""
 "informations"
 msgstr ""
 "Zapisujte si poznámky, připomínky, náhodné myšlenky a další krátkodobé "
-
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -332,7 +319,6 @@ msgstr "Samolepka s motivem \"Blueberry\""
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
 msgstr "Můžete měnit jednotlivé barvy a velikost textu!"
-
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "You can unzoom so hard you could do ascii art"

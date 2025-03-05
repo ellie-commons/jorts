@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 18:44+0100\n"
+"POT-Creation-Date: 2025-03-05 17:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:65
+#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Sticky Note Colour"
 msgstr "Haftnotizfarbe"
 
-#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:65
+msgid "Choose a colour for this sticky note"
+msgstr ""
+
+#. TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Blaubeere"
@@ -63,19 +67,22 @@ msgstr "Kakao"
 msgid "Slate"
 msgstr "Schiefer"
 
-#: src/Widgets/SettingsPopover.vala:125
+#: src/Widgets/SettingsPopover.vala:127
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: src/Widgets/SettingsPopover.vala:131
+#: src/Widgets/SettingsPopover.vala:133
 msgid "Default zoom level"
 msgstr "Standard-Zoomstufe"
 
-#: src/Widgets/SettingsPopover.vala:139
+#: src/Widgets/SettingsPopover.vala:141
 msgid "Zoom in"
 msgstr "Vergrößern"
 
-#: src/Widgets/SettingsPopover.vala:184
+#. Called by the Mainwindow when adjusting to new zoomlevel
+#. Mainwindow reacts to a signal by the popover
+#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+#: src/Widgets/SettingsPopover.vala:188
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -269,7 +276,9 @@ msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Niedlich: Jede neue Notiz hat einen lustigen oder niedlichen zufälligen (editierbaren) Titel"
+msgstr ""
+"Niedlich: Jede neue Notiz hat einen lustigen oder niedlichen zufälligen "
+"(editierbaren) Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -281,9 +290,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"Dies ist eine Abspaltung einer alten Version von Notejot von lainsce und würde"
-"ohne ihre Arbeit nicht existieren. Der Community gefiel es so gut, dass wir dachten,"
-" es wäre großartig, es wiederzubeleben!"
+"Dies ist eine Abspaltung einer alten Version von Notejot von lainsce und "
+"würdeohne ihre Arbeit nicht existieren. Der Community gefiel es so gut, dass "
+"wir dachten, es wäre großartig, es wiederzubeleben!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 18:44+0100\n"
+"POT-Creation-Date: 2025-03-05 17:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:65
+#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Sticky Note Colour"
 msgstr "Couleur du post-it"
 
-#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:65
+msgid "Choose a colour for this sticky note"
+msgstr ""
+
+#. TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Myrtille"
@@ -63,19 +67,22 @@ msgstr "Cacao"
 msgid "Slate"
 msgstr "Ardoise"
 
-#: src/Widgets/SettingsPopover.vala:125
+#: src/Widgets/SettingsPopover.vala:127
 msgid "Zoom out"
 msgstr "Dézoomer"
 
-#: src/Widgets/SettingsPopover.vala:131
+#: src/Widgets/SettingsPopover.vala:133
 msgid "Default zoom level"
 msgstr "Zoom par défaut"
 
-#: src/Widgets/SettingsPopover.vala:139
+#: src/Widgets/SettingsPopover.vala:141
 msgid "Zoom in"
 msgstr "Zoomer"
 
-#: src/Widgets/SettingsPopover.vala:184
+#. Called by the Mainwindow when adjusting to new zoomlevel
+#. Mainwindow reacts to a signal by the popover
+#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+#: src/Widgets/SettingsPopover.vala:188
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -249,12 +256,12 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
-msgstr ""
-"Ni jeans, ni shorts, tout comme les jorts"
+msgstr "Ni jeans, ni shorts, tout comme les jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "Un petit utilitaire de notes autocollantes colorées, pour vos pensées :)"
+msgstr ""
+"Un petit utilitaire de notes autocollantes colorées, pour vos pensées :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -262,15 +269,19 @@ msgstr "Les fonctionnalités comprennent :"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr "Couleurs : dix jolis thèmes. Chaque nouvelle note reçoit un thème aléatoire"
+msgstr ""
+"Couleurs : dix jolis thèmes. Chaque nouvelle note reçoit un thème aléatoire"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Adaptatif: Les nouvelles notes ont le zoom que vous avez choisi en dernier"
+msgstr ""
+"Adaptatif: Les nouvelles notes ont le zoom que vous avez choisi en dernier"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Mignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle ou mignon"
+msgstr ""
+"Mignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle ou "
+"mignon"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -283,9 +294,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"Il s'agit d'une version dérivée d'une ancienne version de Notejot par lainsce et "
-"n'existerait pas sans son travail. La communauté l'a tellement aimé que"
-" nous avons pensé que ce serait génial de la revivre !"
+"Il s'agit d'une version dérivée d'une ancienne version de Notejot par "
+"lainsce et n'existerait pas sans son travail. La communauté l'a tellement "
+"aimé que nous avons pensé que ce serait génial de la revivre !"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -318,7 +329,8 @@ msgstr "Un post-it avec le thème « Myrtille »."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr "Vous pouvez modifier la couleur et la taille du texte de chaque post-it!"
+msgstr ""
+"Vous pouvez modifier la couleur et la taille du texte de chaque post-it!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid "You can unzoom so hard you could do ascii art"

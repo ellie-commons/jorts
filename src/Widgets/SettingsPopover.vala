@@ -54,16 +54,15 @@ public class jorts.SettingsPopover : Gtk.Popover {
         var setting_grid = new Gtk.Grid ();
         setting_grid.set_margin_start (12);
         setting_grid.set_margin_end (12);
-        setting_grid.set_margin_top (6);
+        setting_grid.set_margin_top (12);
         setting_grid.set_margin_bottom (12);
 
-        setting_grid.column_spacing = 1;
-        setting_grid.row_spacing = 3;
         setting_grid.orientation = Gtk.Orientation.VERTICAL;
 
 
         //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
+        color_button_label.tooltip_text = _("Choose a colour for this sticky note");
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
 
@@ -101,10 +100,11 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_slate.set_active ((theme == "SLATE"));
 
         //TODO: Multiline
-        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 1);
+        var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         color_button_box.accessible_role = Gtk.AccessibleRole.LIST;
-        color_button_box.margin_top = 12;
-        color_button_box.margin_bottom = 12;
+        color_button_box.margin_top = 3;
+        color_button_box.margin_bottom = 9;
+        color_button_box.halign = Gtk.Align.CENTER;
 
         color_button_box.append (color_button_blueberry);
         color_button_box.append (color_button_mint);
@@ -147,13 +147,13 @@ public class jorts.SettingsPopover : Gtk.Popover {
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
         
-        var font_size_box = new Gtk.Box (HORIZONTAL, 3) {
+        var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
             homogeneous = true,
             hexpand = true,
             margin_top = 12,
-            margin_start = 6,
-            margin_end = 6,
-            margin_bottom = 12
+            //margin_start = 6,
+            //margin_end = 6,
+            margin_bottom = 6
         };
         font_size_box.append (this.zoom_out_button);
         font_size_box.append (this.zoom_default_button);
@@ -184,10 +184,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
     // Mainwindow reacts to a signal by the popover
     public void set_zoomlevel (int64 zoom) {
 
+        //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
         var label = _("ZOOM%");
         label = label.replace ("ZOOM", zoom.to_string ());
 
-        //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
         this.zoom_default_button.set_label (label);  
     }
 

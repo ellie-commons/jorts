@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 18:44+0100\n"
+"POT-Creation-Date: 2025-03-05 17:18+0100\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:65
+#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Sticky Note Colour"
 msgstr "Cor da nota adesiva"
 
-#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:65
+msgid "Choose a colour for this sticky note"
+msgstr ""
+
+#. TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Mirtilo"
@@ -63,19 +67,22 @@ msgstr "Cacau"
 msgid "Slate"
 msgstr "Ardósia"
 
-#: src/Widgets/SettingsPopover.vala:125
+#: src/Widgets/SettingsPopover.vala:127
 msgid "Zoom out"
 msgstr "Reduzir o zoom"
 
-#: src/Widgets/SettingsPopover.vala:131
+#: src/Widgets/SettingsPopover.vala:133
 msgid "Default zoom level"
 msgstr "Nível de zoom padrão"
 
-#: src/Widgets/SettingsPopover.vala:139
+#: src/Widgets/SettingsPopover.vala:141
 msgid "Zoom in"
 msgstr "Aumentar o zoom"
 
-#: src/Widgets/SettingsPopover.vala:184
+#. Called by the Mainwindow when adjusting to new zoomlevel
+#. Mainwindow reacts to a signal by the popover
+#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+#: src/Widgets/SettingsPopover.vala:188
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -240,8 +247,8 @@ msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
-"Anote anotações, lembretes, pensamentos aleatórios e "
-"outras informações de curto prazo informações"
+"Anote anotações, lembretes, pensamentos aleatórios e outras informações de "
+"curto prazo informações"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -253,7 +260,8 @@ msgstr "Nem jeans nem bermuda, assim como jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "Um pequeno utilitário colorido de notas adesivas para seus pensamentos :)"
+msgstr ""
+"Um pequeno utilitário colorido de notas adesivas para seus pensamentos :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -269,7 +277,9 @@ msgstr "Adaptativo: As novas notas recebem o zoom que você escolheu por último
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Engraçado: Cada nova nota tem um título aleatório (editável) engraçado ou fofo"
+msgstr ""
+"Engraçado: Cada nova nota tem um título aleatório (editável) engraçado ou "
+"fofo"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -281,10 +291,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"Esta é uma bifurcação de uma versão antiga do \"Notejot\" de lainsce e não existiria "
-"existiria sem o trabalho dela. A comunidade gostou tanto dele que achamos que seria "
-"seria ótimo revivê-la!"
-
+"Esta é uma bifurcação de uma versão antiga do \"Notejot\" de lainsce e não "
+"existiria existiria sem o trabalho dela. A comunidade gostou tanto dele que "
+"achamos que seria seria ótimo revivê-la!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -366,15 +375,16 @@ msgstr "2.1.0 Recém-saído da lavanderia!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:102
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Inclui um zoom por nota! Assim, você pode obter um texto maior ou menor"
+msgstr ""
+"Inclui um zoom por nota! Assim, você pode obter um texto maior ou menor"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
 msgstr ""
-"O zoom definido mais recentemente, ou seja, o que for mais confortável para você, permanece como padrão para "
-"novas notas"
+"O zoom definido mais recentemente, ou seja, o que for mais confortável para "
+"você, permanece como padrão para novas notas"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -394,7 +404,9 @@ msgstr "Melhores atalhos e dicas de ferramentas"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Correção de um erro que fazia com que o Jorts permanecesse no tema do sistema claro"
+msgstr ""
+"Correção de um erro que fazia com que o Jorts permanecesse no tema do "
+"sistema claro"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:114
 msgid "2.0.1 Appcenter release"

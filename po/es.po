@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-02 18:44+0100\n"
+"POT-Creation-Date: 2025-03-05 17:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. /TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:65
+#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+#: src/Widgets/SettingsPopover.vala:64
 msgid "Sticky Note Colour"
 msgstr "Nota adhesiva color"
 
-#. /TRANSLATORS: Name of a color theme
+#: src/Widgets/SettingsPopover.vala:65
+msgid "Choose a colour for this sticky note"
+msgstr ""
+
+#. TRANSLATORS: Name of a color theme
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Blueberry"
 msgstr "Arándano"
@@ -63,19 +67,22 @@ msgstr "Cacao"
 msgid "Slate"
 msgstr "Pizarra"
 
-#: src/Widgets/SettingsPopover.vala:125
+#: src/Widgets/SettingsPopover.vala:127
 msgid "Zoom out"
 msgstr "Alejar"
 
-#: src/Widgets/SettingsPopover.vala:131
+#: src/Widgets/SettingsPopover.vala:133
 msgid "Default zoom level"
 msgstr "Nivel de zoom predeterminado"
 
-#: src/Widgets/SettingsPopover.vala:139
+#: src/Widgets/SettingsPopover.vala:141
 msgid "Zoom in"
 msgstr "Acercar"
 
-#: src/Widgets/SettingsPopover.vala:184
+#. Called by the Mainwindow when adjusting to new zoomlevel
+#. Mainwindow reacts to a signal by the popover
+#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+#: src/Widgets/SettingsPopover.vala:188
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -240,8 +247,9 @@ msgstr "Notas adhesivas"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Escribir notas, recordatorios, pensamientos aleatorios "
-"y otra información a corto plazo"
+msgstr ""
+"Escribir notas, recordatorios, pensamientos aleatorios y otra información a "
+"corto plazo"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -267,11 +275,14 @@ msgstr "Colores: Diez bonitos temas. Cada nueva nota recibe una al azar."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Adaptable: Las notas nuevas obtienen el zoom que eligió por última vez."
+msgstr ""
+"Adaptable: Las notas nuevas obtienen el zoom que eligió por última vez."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Lindo: Cada nota nueva tiene un título aleatorio (editable) divertido o lindo."
+msgstr ""
+"Lindo: Cada nota nueva tiene un título aleatorio (editable) divertido o "
+"lindo."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -284,9 +295,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"Esta es una bifurcación de una versión antigua de Notejot de lainsce,"
-"y no existiría sin su trabajo.¡ A la comunidad le gustó tanto que pensamos que"
-"sería genial revivirla!"
+"Esta es una bifurcación de una versión antigua de Notejot de lainsce,y no "
+"existiría sin su trabajo.¡ A la comunidad le gustó tanto que pensamos "
+"quesería genial revivirla!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -344,7 +355,9 @@ msgstr "Sistema de tematización más ligero y resistente"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:84
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Corrección de errores: El título en multitarea no se ha configurado correctamente."
+msgstr ""
+"Corrección de errores: El título en multitarea no se ha configurado "
+"correctamente."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
