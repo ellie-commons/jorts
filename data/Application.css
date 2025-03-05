@@ -88,7 +88,7 @@ editablelabel {
 }
 
 editablelabel.editing {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1em;
     text-shadow: none;
     letter-spacing: .0em;

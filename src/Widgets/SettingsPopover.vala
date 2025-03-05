@@ -151,8 +151,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
             homogeneous = true,
             hexpand = true,
             margin_top = 12,
-            //margin_start = 6,
-            //margin_end = 6,
+            margin_start = 6,
+            margin_end = 6,
             margin_bottom = 6
         };
         font_size_box.append (this.zoom_out_button);

@@ -47,6 +47,7 @@ executable(
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
+    'src/Services/FormatRequest.vala',
     'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
