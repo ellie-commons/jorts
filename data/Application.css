@@ -80,16 +80,18 @@ windowcontrols button:focus {
 
 editablelabel {
     font-weight: 800;
-    font-size: 1.05em;
+    font-size: 1.10em;
     padding-left: 24px;
     padding-right: 24px;
     text-shadow: 0px 1px rgba(255,255,255,0.5);
+    letter-spacing: .02em;
 }
 
 editablelabel.editing {
     font-weight: 600;
     font-size: 1em;
     text-shadow: none;
+    letter-spacing: .0em;
     box-shadow:
         inset 0 1px 0 0 alpha(@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
@@ -112,39 +114,39 @@ popover button image {
 
 /* Font zooms */
 window.muchsmaller textview {font-size: 0.6em;}
-window.muchsmaller editablelabel {font-size: 0.45em;}
+window.muchsmaller editablelabel {font-size: 0.48em;}
 window.muchsmaller editablelabel.editing {font-size: 0.40em;}
 
 window.smaller textview {font-size: 0.8em;}
-window.smaller editablelabel {font-size: 0.65em;}
+window.smaller editablelabel {font-size: 0.68em;}
 window.smaller editablelabel.editing {font-size: 0.60em;}
 
 window.small textview {font-size: 1.0em;}
-window.small editablelabel {font-size: 0.85em;}
+window.small editablelabel {font-size: 0.88em;}
 window.small editablelabel.editing {font-size: 0.80em;}
 
 window.normal_zoom textview {font-size: 1.2em;}
-window.normal_zoom editablelabel {font-size: 1.05em;}
+window.normal_zoom editablelabel {font-size: 1.08em;}
 window.normal_zoom editablelabel.editing {font-size: 1em;}
 
 window.big textview {font-size: 1.4em;}
-window.big editablelabel {font-size: 1.25em;}
+window.big editablelabel {font-size: 1.28em;}
 window.big editablelabel.editing {font-size: 1.20em;}
 
 window.bigger textview {font-size: 1.6em;}
-window.bigger editablelabel {font-size: 1.45em;}
+window.bigger editablelabel {font-size: 1.48em;}
 window.bigger editablelabel.editing {font-size: 1.40em;}
 
 window.muchbigger textview {font-size: 1.8em;}
-window.muchbigger editablelabel {font-size: 1.65em;}
+window.muchbigger editablelabel {font-size: 1.68em;}
 window.muchbigger editablelabel.editing {font-size: 1.60em;}
 
 window.muchmuchbigger textview {font-size: 2em;}
-window.muchmuchbigger editablelabel {font-size: 1.85em;}
+window.muchmuchbigger editablelabel {font-size: 1.88em;}
 window.muchmuchbigger editablelabel.editing {font-size: 1.80em;}
 
 window.huge textview {font-size: 2.2em;}
-window.huge editablelabel {font-size: 2.05em;}
+window.huge editablelabel {font-size: 2.08em;}
 window.huge editablelabel.editing {font-size: 2.00em;}
 
 

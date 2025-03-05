@@ -135,7 +135,7 @@ namespace jorts.Themer {
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.9);
+                color: alpha(@${accent_color}_900, 0.8);
             }
 
             window.${accent_color}:backdrop editablelabel,
