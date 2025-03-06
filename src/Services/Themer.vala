@@ -58,7 +58,7 @@ namespace jorts.Themer {
         style = (N_("""
 
             window.${accent_color} {
-                background-color: @${accent_color}_100;
+                background-color: alpha(@${accent_color}_100, 0.5);
             }
 
             window.${accent_color} undershoot.top {

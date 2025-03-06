@@ -142,6 +142,7 @@ namespace jorts {
         MainWindow note;
         if (data != null) {
             note = new MainWindow(this, data);
+            note.present ();
         }
         else {
 
@@ -151,6 +152,7 @@ namespace jorts {
             var random_data = jorts.Utils.random_note(skip_theme);
             random_data.zoom = this.latest_zoom;
             note = new MainWindow(this, random_data);
+            note.present ();
         }
         this.open_notes.add(note);
         this.save_to_stash ();

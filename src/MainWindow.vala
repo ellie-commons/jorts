@@ -40,7 +40,7 @@ Window
 */
 namespace jorts {
 
-    public class MainWindow : Gtk.Window {
+    public class MainWindow : Granite.BlurSurface, Gtk.Window {
 
 
     
@@ -63,6 +63,9 @@ namespace jorts {
 
         public static int max_zoom = 200;
         public static int min_zoom = 60;
+
+        private int width = 0;
+        private int height = 0;
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -201,7 +204,6 @@ namespace jorts {
             grid.attach(actionbar, 0, 1, 1, 1);
             grid.show ();
             this.set_child (grid);
-            this.show();
 
             // ================================================================ //
             // EVENTS            
@@ -245,6 +247,7 @@ namespace jorts {
 
 
 
+            show.connect (init_blur);
         }
 
         // TITLE IS TITLE
@@ -318,6 +321,28 @@ namespace jorts {
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
             ((Application)this.application).save_to_stash (); 
+        }
+
+        private void init_blur () {
+            simple_blur_init ();
+
+            get_surface ().layout.connect_after (() => {
+                var new_width = get_width ();
+                var new_height = get_height ();
+
+                if (new_width != width || new_height != height) {
+                    width = new_width;
+                    height = new_height;
+
+                    simple_request_blur (
+                        0,
+                        0,
+                        width,
+                        height,
+                        6
+                    );
+                }
+            });
         }
     }
 }
