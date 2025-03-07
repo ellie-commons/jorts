@@ -149,6 +149,17 @@ window.huge textview {font-size: 2.2em;}
 window.huge editablelabel {font-size: 2.08em;}
 window.huge editablelabel.editing {font-size: 2.00em;}
 
+window.superhuge textview {font-size: 2.4em;}
+window.superhuge editablelabel {font-size: 2.28em;}
+window.superhuge editablelabel.editing {font-size: 2.20em;}
+
+window.megahuge textview {font-size: 2.6em;}
+window.megahuge editablelabel {font-size: 2.48em;}
+window.megahuge editablelabel.editing {font-size: 2.40em;}
+
+window.ultrahuge textview {font-size: 2.8em;}
+window.ultrahuge editablelabel {font-size: 2.68em;}
+window.ultrahuge editablelabel.editing {font-size: 2.60em;}
 
 
 /* ALL the colorpills */

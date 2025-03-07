@@ -83,8 +83,9 @@ public class jorts.StickyView : Granite.HyperTextView {
 
                 this.actions = this.create_formatting_actions ();
                 this.register_action_accelerators ();
-                this.add_formatting_options_to_text_view_context_menu (this);
-        
+
+                //Menu menu = this.create_formatting_menu ();
+                //this.set_extra_menu (menu);
         }
 
 
@@ -107,7 +108,7 @@ public class jorts.StickyView : Granite.HyperTextView {
                     );
                 }
             }
-        
+
         private SimpleActionGroup create_formatting_actions () {
                 var actions_to_return = new SimpleActionGroup ();
         
@@ -134,11 +135,6 @@ public class jorts.StickyView : Granite.HyperTextView {
             }
 
 
-    // Adapted from GTK 4 Widget Factory Demo: https://gitlab.gnome.org/GNOME/gtk/-/tree/main/demos/widget-factory  
-    private void add_formatting_options_to_text_view_context_menu (Gtk.TextView text_view) {
-        Menu menu = this.create_formatting_menu ();
-        this.set_extra_menu (menu);
-    }
 
     private void handle_text_buffer_inserted_text (ref Gtk.TextIter iter, string new_text, int new_text_length) {
         Gtk.TextTagTable text_buffer_tags = this.buffer.get_tag_table ();
@@ -322,17 +318,17 @@ public class jorts.StickyView : Granite.HyperTextView {
             }
         
             private void toggle_format (SimpleAction action, Variant value) {
-                Gtk.TextIter start_iterator, end_itrator;
+                Gtk.TextIter start_iterator, end_iterator;
                 string name = action.get_name ();
         
                 action.set_state (value);
         
-                this.buffer.get_selection_bounds (out start_iterator, out end_itrator);
+                this.buffer.get_selection_bounds (out start_iterator, out end_iterator);
         
                 if (value.get_boolean ()) {
-                    this.buffer.apply_tag_by_name (name, start_iterator, end_itrator);
+                    this.buffer.apply_tag_by_name (name, start_iterator, end_iterator);
                 } else {
-                    this.buffer.remove_tag_by_name (name, start_iterator, end_itrator);
+                    this.buffer.remove_tag_by_name (name, start_iterator, end_iterator);
                 }
             }
         
