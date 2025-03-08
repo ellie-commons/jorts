@@ -82,6 +82,8 @@
                     <li>Add relief to actionbar buttons</li>
                     <li>Bugfix: Edge case where the theme or zoom werent properly saved</li>
                     <li>Bugfix: Title in multitasking not set correctly</li>
+                    <li>Bugfix: Icon inconsistency accross icon themes</li>
+                    <li>Bugfix: Theming inconsistencies accross stickies</li>
                 </ul>
             </description>
         </release>

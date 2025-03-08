@@ -220,13 +220,11 @@ namespace jorts {
                 return false;           
             });
 
-            this.activate_focus.connect(() => {
-                print("Focused! " + this.title );
-
-                //popover.set_zoomlevel(this.zoom);
-                // Use appropriate sheet
+            this.notify["is-active"].connect(() => {
+                if (this.is_active == true ) {
                     var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
                     this.gtk_settings.gtk_theme_name = stylesheet;
+                }
             });
 
             

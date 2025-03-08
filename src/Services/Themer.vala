@@ -41,7 +41,9 @@ namespace jorts.Themer {
         string style = "";
 
         style = (N_("""
-
+            /* Accent color 
+            mix(@${accent_color}_500, @${accent_color}_700, 0.3) */
+            
             window.${accent_color} {
                 background-color: @${accent_color}_100;
             }
@@ -62,17 +64,19 @@ namespace jorts.Themer {
                     );
             }
 
+
+            /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
             window.${accent_color} overshoot.top {
-            background: linear-gradient(to top, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to top, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.right {
-            background: linear-gradient(to right, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to right, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.bottom {
-            background: linear-gradient(to bottom, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to bottom, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.left {
-            background: linear-gradient(to left, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to left, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} textview text selection,
             window.${accent_color} editablelabel text selection {
