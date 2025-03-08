@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 17:18+0100\n"
+"POT-Creation-Date: 2025-03-08 15:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,71 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:64
+#: src/Widgets/SettingsPopover.vala:65
 msgid "Sticky Note Colour"
 msgstr "Barva samolepicího bločku"
 
-#: src/Widgets/SettingsPopover.vala:65
+#: src/Widgets/SettingsPopover.vala:66
 msgid "Choose a colour for this sticky note"
 msgstr ""
 
-#. TRANSLATORS: Name of a color theme
-#: src/Widgets/SettingsPopover.vala:70
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/SettingsPopover.vala:71
 msgid "Blueberry"
 msgstr "Borůvka"
 
-#: src/Widgets/SettingsPopover.vala:71
+#: src/Widgets/SettingsPopover.vala:72
 msgid "Lime"
 msgstr "Limetka"
 
-#: src/Widgets/SettingsPopover.vala:72
+#: src/Widgets/SettingsPopover.vala:73
 msgid "Mint"
 msgstr "Mátový"
 
-#: src/Widgets/SettingsPopover.vala:73
+#: src/Widgets/SettingsPopover.vala:74
 msgid "Banana"
 msgstr "Banán"
 
-#: src/Widgets/SettingsPopover.vala:74
+#: src/Widgets/SettingsPopover.vala:75
 msgid "Strawberry"
 msgstr "Jahoda"
 
-#: src/Widgets/SettingsPopover.vala:75
+#: src/Widgets/SettingsPopover.vala:76
 msgid "Orange"
 msgstr "Pomeranč"
 
-#: src/Widgets/SettingsPopover.vala:76
+#: src/Widgets/SettingsPopover.vala:77
 msgid "Bubblegum"
 msgstr "Žvýkačka"
 
-#: src/Widgets/SettingsPopover.vala:77
+#: src/Widgets/SettingsPopover.vala:78
 msgid "Grape"
 msgstr "Hroznové víno"
 
-#: src/Widgets/SettingsPopover.vala:78
+#: src/Widgets/SettingsPopover.vala:79
 msgid "Cocoa"
 msgstr "Kakao"
 
-#: src/Widgets/SettingsPopover.vala:79
+#: src/Widgets/SettingsPopover.vala:80
 msgid "Slate"
 msgstr "Břidlice"
 
-#: src/Widgets/SettingsPopover.vala:127
+#: src/Widgets/SettingsPopover.vala:140
 msgid "Zoom out"
 msgstr "Zvětšit"
 
-#: src/Widgets/SettingsPopover.vala:133
+#: src/Widgets/SettingsPopover.vala:146
 msgid "Default zoom level"
 msgstr "Výchozí úroveň přiblížení"
 
-#: src/Widgets/SettingsPopover.vala:141
+#: src/Widgets/SettingsPopover.vala:153
 msgid "Zoom in"
 msgstr "Přiblížit"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:188
+#: src/Widgets/SettingsPopover.vala:190
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -102,137 +102,141 @@ msgstr "Smazat samolepící poznámku"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:79
 msgid "All my very best friends"
 msgstr "Všichni moji nejlepší přátelé"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:80
 msgid "My super good secret recipe"
 msgstr "Můj super dobrý tajný recept"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:81
 msgid "My todo list"
 msgstr "Můj seznam úkolů"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:82
 msgid "Super secret to not tell anyone"
 msgstr "Super tajemství, které nikomu neprozradím"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:83
 msgid "My grocery list"
 msgstr "Můj seznam potravin"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:84
 msgid "Random shower thoughts"
 msgstr "Náhodné myšlenky ve sprše"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:85
 msgid "My fav fanfics"
 msgstr "Moje oblíbené fanouškovské texty"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:86
 msgid "My fav dinosaurs"
 msgstr "Moji oblíbení dinosauři"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:87
 msgid "My evil mastermind plan"
 msgstr "Můj ďábelský plá"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:88
 msgid "What made me smile today"
 msgstr "Co mě dnes rozesmálo"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:89
 msgid "Hello world!"
 msgstr "Ahoj světe!"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:90
 msgid "New sticky, new me"
 msgstr "Nové lepidlo, nové já"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:91
 msgid "Hidden pirate treasure"
 msgstr "Skrytý pirátský poklad"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:92
 msgid "To not forget, ever"
 msgstr "Abyste nezapomněli, nikdy"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:93
 msgid "Dear Diary,"
 msgstr "Milý deníčku,"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:94
 msgid "Hi im a square"
 msgstr "Ahoj, jsem čtverec"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:95
 msgid "Have a nice day! :)"
 msgstr "Hezký den! :)"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:96
 msgid "My meds schedule"
 msgstr "Můj rozpis léků"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:97
 msgid "Household chores"
 msgstr "Domácí práce"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:98
 msgid "Ode to my cat"
 msgstr "Óda na mou kočku"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:99
 msgid "My dogs favourite toys"
 msgstr "Oblíbené hračky mých psů"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:100
 msgid "How cool my birds are"
 msgstr "Jak skvělí jsou moji ptáci"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:101
 msgid "Suspects in the Last Cookie affair"
 msgstr "Podezřelí v aféře s posledním cookie"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:102
 msgid "Words my parrots know"
 msgstr "Slova, která znají moji papoušci"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:103
 msgid "Cool and funny compliments to give out"
 msgstr "Skvělé a vtipné komplimenty, které můžete rozdávat"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:104
 msgid "Ok, listen here,"
 msgstr "Ok, poslouchej tady,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:105
 msgid "My dream Pokemon team"
 msgstr "Můj vysněný tým Pokémonů"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:106
 msgid "My little notes"
 msgstr "Moje malé poznámky"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:107
 msgid "Surprise gift list"
 msgstr "Seznam dárků s překvapením"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:108
 msgid "Brainstorming notes"
 msgstr "Poznámky k brainstormingu"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:109
 msgid "To bring to the party"
 msgstr "Přinést na večírek"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:110
 msgid "My amazing mixtape"
 msgstr "Můj úžasný mixtape"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:111
 msgid "Napkin scribbles"
 msgstr "Ubrouskové čmáranice"
+
+#: src/Services/Utils.vala:112
+msgid "My fav songs to sing along"
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -329,31 +333,31 @@ msgid "2.1.2 The unrippable jorts"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:81
-msgid "More translations!"
+msgid "Better translation coverage"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:82
-msgid "Ctrl+Scroll to change zoom"
+msgid "Bugfix: Edge case where the theme wasnt properly saved"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
-msgid "Lighter and yet more resilient theming system"
-msgstr ""
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:84
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
 msgid "Clearer appmenu description"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid "More consistent theming"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
+msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94

@@ -170,29 +170,21 @@ public class jorts.StickyView : Granite.HyperTextView {
 
 
 
-
-
-
-
-
-
-
-
         private Menu create_formatting_menu () {
                 Menu menu = new Menu ();
                 MenuItem item;
         
                 this.insert_action_group (FORMAT_ACTION_GROUP_PREFIX, this.actions);
         
-                item = new MenuItem ("Bold", FORMAT_ACTION_PREFIX + FORMAT_ACTION_BOLD);
+                item = new MenuItem (_("Bold"), FORMAT_ACTION_PREFIX + FORMAT_ACTION_BOLD);
                 item.set_attribute ("touch-icon", "s", ICON_NAME_BOLD);
                 menu.append_item (item);
         
-                item = new MenuItem ("Italic", FORMAT_ACTION_PREFIX + FORMAT_ACTION_ITALIC);
+                item = new MenuItem (_("Italic"), FORMAT_ACTION_PREFIX + FORMAT_ACTION_ITALIC);
                 item.set_attribute ("touch-icon", "s", ICON_NAME_ITALIC);
                 menu.append_item (item);
         
-                item = new MenuItem ("Underline", FORMAT_ACTION_PREFIX + FORMAT_ACTION_UNDERLINE);
+                item = new MenuItem (_("Underline"), FORMAT_ACTION_PREFIX + FORMAT_ACTION_UNDERLINE);
                 item.set_attribute ("touch-icon", "s", ICON_NAME_UNDERLINE);
                 menu.append_item (item);
         

@@ -43,6 +43,7 @@ executable(
     meson.project_name(),
     gresource,
     config_file,
+    'src/Services/Constants.vala',
     'src/Objects/noteData.vala',    
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',

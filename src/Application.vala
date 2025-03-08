@@ -25,7 +25,7 @@ namespace jorts {
         public static Settings animation_settings;
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: "io.github.ellie_commons.jorts");
+                    application_id: jorts.Constants.app_rdnn);
         }
 
 	    public int64 latest_zoom;
@@ -44,7 +44,7 @@ namespace jorts {
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
-            gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
+            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.default_theme.ascii_down();
 
             // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
@@ -63,7 +63,7 @@ namespace jorts {
         }
 
         static construct {
-            gsettings = new GLib.Settings ("io.github.ellie_commons.jorts");
+            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
         }
 
         construct {
@@ -177,7 +177,7 @@ namespace jorts {
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
             noteData stored_note    = jorts.Utils.random_note(null);
-            stored_note.theme       = "BLUEBERRY" ;
+            stored_note.theme       = jorts.Constants.default_theme ;
             loaded_data.add(stored_note);
         }
 

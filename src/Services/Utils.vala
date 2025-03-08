@@ -36,6 +36,7 @@ namespace jorts.Utils {
         // We cannot use numbers in CSS, so we have to translate a number into a string
     public string zoom_to_class(int64 zoom) {
         switch (zoom) {
+            case 20: return "antsized";
             case 40: return "muchsmaller";
             case 60: return "smaller";
             case 80: return "small";
@@ -52,29 +53,17 @@ namespace jorts.Utils {
         }
     }
 
+    // We need to say stop at some point
     const int max_zoom = 200;
     const int min_zoom = 60;
 
-    // As seen on TV!
-    const string[] themearray = {
-        "BLUEBERRY",
-        "MINT",
-        "LIME",
-        "BANANA",
-        "ORANGE",
-        "STRAWBERRY",
-        "BUBBLEGUM",
-        "GRAPE",
-        "COCOA",
-        "SLATE"
-    };
 
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
     // Having an gee.arraylist defined from the start only causes issues
     public string random_theme (string? skip_theme) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (jorts.Utils.themearray);
+        themes.add_all_array (jorts.Constants.themearray);
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
@@ -119,7 +108,8 @@ namespace jorts.Utils {
             _("Brainstorming notes"),
             _("To bring to the party"),
             _("My amazing mixtape"),
-            _("Napkin scribbles")
+            _("Napkin scribbles"),
+            _("My fav songs to sing along")
         };
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }

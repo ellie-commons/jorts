@@ -32,9 +32,7 @@ So the whole settings popover is here, deal with it.
 
 public class jorts.SettingsPopover : Gtk.Popover {
 
-    public const string[] ACCELS_ZOOM_DEFAULT = { "<control>0", "<Control>KP_0", null };
-    public const string[] ACCELS_ZOOM_IN = { "<Control>plus", "<Control>equal", "<Control>KP_Add", null };
-    public const string[] ACCELS_ZOOM_OUT = { "<Control>minus", "<Control>KP_Subtract", null };
+
 
     public string selected;
     public signal void theme_changed (string selected);
@@ -44,7 +42,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
     public Gtk.Button zoom_in_button;
     public Gtk.Button zoom_default_button;
 
-
+    public const string[] ACCELS_ZOOM_DEFAULT = { "<control>0", "<Control>KP_0", null };
+    public const string[] ACCELS_ZOOM_IN = { "<Control>plus", "<Control>equal", "<Control>KP_Add", null };
+    public const string[] ACCELS_ZOOM_OUT = { "<Control>minus", "<Control>KP_Subtract", null };
+    
     public SettingsPopover (string theme) {
 
         this.set_position (Gtk.PositionType.TOP);
@@ -66,7 +67,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 
 
-        //TRANSLATORS: Name of a color theme
+        //TRANSLATORS: Shown as a tooltip when people hover a color theme
         var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
         var color_button_lime = new ColorPill (_("Lime"), "lime");
         var color_button_mint = new ColorPill (_("Mint"), "mint");
@@ -98,6 +99,18 @@ public class jorts.SettingsPopover : Gtk.Popover {
         color_button_grape.set_active ((theme == "GRAPE"));
         color_button_cocoa.set_active ((theme == "COCOA"));
         color_button_slate.set_active ((theme == "SLATE"));
+
+        // Emit a signal when a button is toggled
+        color_button_blueberry.toggled.connect (() => {this.theme_changed("BLUEBERRY");});
+        color_button_orange.toggled.connect (() => {this.theme_changed("ORANGE");});
+        color_button_mint.toggled.connect (() => {this.theme_changed("MINT");});
+        color_button_banana.toggled.connect (() => {this.theme_changed("BANANA");});
+        color_button_lime.toggled.connect (() => {this.theme_changed("LIME");});
+        color_button_strawberry.toggled.connect (() => {this.theme_changed("STRAWBERRY");});
+        color_button_bubblegum.toggled.connect (() => {this.theme_changed("BUBBLEGUM");});
+        color_button_grape.toggled.connect (() => {this.theme_changed("GRAPE");});
+        color_button_cocoa.toggled.connect (() => {this.theme_changed("COCOA");});
+            color_button_slate.toggled.connect (() => {this.theme_changed("SLATE");});
 
         //TODO: Multiline
         var color_button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -133,7 +146,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
                         _("Default zoom level")
                     )
             };
-        //this.zoom_default_button.set_label ("100%");
 
         this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
@@ -142,7 +154,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                     )
             };
 
-        // Emit a signal that will be picked by MainWindow
+        // Emit a signal when a button is toggled that will be picked by MainWindow
         this.zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
@@ -165,17 +177,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
         setting_grid.show ();
         this.set_child(setting_grid);
 
-        // Emit a signal when a button is toggled
-        color_button_blueberry.toggled.connect (() => {this.theme_changed("BLUEBERRY");});
-        color_button_orange.toggled.connect (() => {this.theme_changed("ORANGE");});
-        color_button_mint.toggled.connect (() => {this.theme_changed("MINT");});
-        color_button_banana.toggled.connect (() => {this.theme_changed("BANANA");});
-        color_button_lime.toggled.connect (() => {this.theme_changed("LIME");});
-        color_button_strawberry.toggled.connect (() => {this.theme_changed("STRAWBERRY");});
-        color_button_bubblegum.toggled.connect (() => {this.theme_changed("BUBBLEGUM");});
-        color_button_grape.toggled.connect (() => {this.theme_changed("GRAPE");});
-        color_button_cocoa.toggled.connect (() => {this.theme_changed("COCOA");});
-        color_button_slate.toggled.connect (() => {this.theme_changed("SLATE");});
+
     }
 
 
@@ -187,7 +189,6 @@ public class jorts.SettingsPopover : Gtk.Popover {
         //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
         var label = _("ZOOM%");
         label = label.replace ("ZOOM", zoom.to_string ());
-
         this.zoom_default_button.set_label (label);  
     }
 

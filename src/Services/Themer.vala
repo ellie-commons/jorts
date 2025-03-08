@@ -34,22 +34,6 @@ init_all_themes()
 
 namespace jorts.Themer {
 
-
-    // As seen on TV!
-    const string[] themearray = {
-        "BLUEBERRY",
-        "MINT",
-        "LIME",
-        "BANANA",
-        "ORANGE",
-        "STRAWBERRY",
-        "BUBBLEGUM",
-        "GRAPE",
-        //"LATTE",
-        "COCOA",
-        "SLATE"
-    };
-
     // Here we go
     public static string generate_css (string theme) {
         debug("Generating css");
@@ -135,7 +119,7 @@ namespace jorts.Themer {
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.8);
+                color: alpha(@${accent_color}_900, 0.88);
             }
 
             window.${accent_color}:backdrop editablelabel,
@@ -165,7 +149,7 @@ namespace jorts.Themer {
         );
 
         debug("Init all themes");
-        foreach (unowned var theme in jorts.Utils.themearray) {
+        foreach (unowned var theme in jorts.Constants.themearray) {
             // Palette color
               var theme_provider = new Gtk.CssProvider ();
               var style = jorts.Themer.generate_css (theme);

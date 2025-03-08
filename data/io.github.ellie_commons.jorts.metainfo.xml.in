@@ -74,13 +74,12 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="2.1.2" date="2025-03-02">
+        <release version="2.1.2" date="2025-03-08">
             <description>
                 <p>2.1.2 The unrippable jorts</p>
                 <ul>
-                    <li>More translations!</li>
-                    <li>Ctrl+Scroll to change zoom</li>
-                    <li>Lighter and yet more resilient theming system</li>
+                    <li>Better translation coverage</li>
+                    <li>Bugfix: Edge case where the theme wasnt properly saved</li>
                     <li>Bugfix: Title in multitasking not set correctly</li>
                 </ul>
             </description>
@@ -91,6 +90,7 @@
                 <ul>
                     <li>Clearer appmenu description</li>
                     <li>More consistent theming</li>
+                    <li>Bugfix: the delete shortcut was unresponsible</li>
                     <li>Bugfix: screenshot not showing</li>
                 </ul>
             </description>
