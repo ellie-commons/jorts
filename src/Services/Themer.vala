@@ -35,6 +35,7 @@ init_all_themes()
 namespace jorts.Themer {
 
     // Here we go
+    // Take up a elementary OS color name and gurgle back a CSS string
     public static string generate_css (string theme) {
         debug("Generating css");
         string style = "";
@@ -119,7 +120,7 @@ namespace jorts.Themer {
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.88);
+                color: alpha(@${accent_color}_900, 0.75);
             }
 
             window.${accent_color}:backdrop editablelabel,
@@ -127,7 +128,7 @@ namespace jorts.Themer {
             window.${accent_color}:backdrop actionbar image,
             window.${accent_color}:backdrop windowcontrols,
             window.${accent_color}:backdrop windowcontrols image {
-                color: alpha(@${accent_color}_900, 0.88);
+                color: alpha(@${accent_color}_900, 0.75);
             }
 
         """));
@@ -137,9 +138,12 @@ namespace jorts.Themer {
         return style;
     }
 
+    // Called once, at the start of the app
+    // Loads the standard sheet, then do all the different themes
     public static void init_all_themes() {
+        debug("Init all themes");
 
-        // Also the standard sheet
+        // Use standard sheet
         var app_provider = new Gtk.CssProvider ();
         app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
         Gtk.StyleContext.add_provider_for_display (
@@ -148,23 +152,18 @@ namespace jorts.Themer {
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
         );
 
-        debug("Init all themes");
+        // Then generate all theme classes
         foreach (unowned var theme in jorts.Constants.themearray) {
-            // Palette color
-              var theme_provider = new Gtk.CssProvider ();
-              var style = jorts.Themer.generate_css (theme);
-
-            // for the move away from stylecontext
-            // print(style);
+            var theme_provider = new Gtk.CssProvider ();
+            var style = jorts.Themer.generate_css (theme);
 
             theme_provider.load_from_string (style);
 
-
-              Gtk.StyleContext.add_provider_for_display (
-                  Gdk.Display.get_default (),
-                  theme_provider,
-                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-              );
-          }
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                theme_provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+        }
     }
 }

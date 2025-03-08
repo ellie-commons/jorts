@@ -79,6 +79,14 @@ windowcontrols button:focus {
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Have windowcontrol act like the other buttons */
+windowcontrols:backdrop button:hover {
+    background: alpha(@fg_color, 0.3);
+}
+windowcontrols:backdrop button:not(:hover) {
+	background: none;
+}
+
 editablelabel {
     font-weight: 800;
     font-size: 1.10em;
@@ -88,6 +96,7 @@ editablelabel {
     letter-spacing: .02em;
 }
 
+/* Smaller text when editing */
 editablelabel.editing {
     font-weight: 500;
     font-size: 1em;
@@ -165,6 +174,10 @@ window.megahuge editablelabel.editing {font-size: 2.40em;}
 window.ultrahuge textview {font-size: 2.8em;}
 window.ultrahuge editablelabel {font-size: 2.65em;}
 window.ultrahuge editablelabel.editing {font-size: 2.60em;}
+
+window.urmom textview {font-size: 3em;}
+window.urmom editablelabel {font-size: 2.85em;}
+window.urmom editablelabel.editing {font-size: 2.80em;}
 
 
 /* ALL the colorpills */

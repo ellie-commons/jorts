@@ -27,6 +27,9 @@ Just Dump constants here
 
 namespace jorts.Constants {
 
+    const string app_rdnn               = "io.github.ellie_commons.jorts";
+
+
     // As seen on TV!
     // Later adds: LATTE, BLACK, SILVER, AUTO
     const string[] themearray = {
@@ -42,11 +45,10 @@ namespace jorts.Constants {
         "SLATE"
     };
 
-    const string app_rdnn               = "io.github.ellie_commons.jorts";
 
     // We need to say stop at some point
     const int max_zoom                  = 200;
-    const int min_zoom                  = 60;
+    const int min_zoom                  = 40;
 
     // For new stickies
     const int defaut_height             = 330;
