@@ -79,7 +79,8 @@
                 <p>2.1.2 The unrippable jorts</p>
                 <ul>
                     <li>Better translation coverage</li>
-                    <li>Bugfix: Edge case where the theme wasnt properly saved</li>
+                    <li>Add relief to actionbar buttons</li>
+                    <li>Bugfix: Edge case where the theme or zoom werent properly saved</li>
                     <li>Bugfix: Title in multitasking not set correctly</li>
                 </ul>
             </description>

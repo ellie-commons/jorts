@@ -70,8 +70,8 @@ actionbar image {
     -gtk-icon-shadow: 0px 1px rgba(255,255,255,0.5);
 }
 
-actionbar .themedbutton:hover,
-actionbar .themedbutton:focus,
+actionbar button:hover,
+actionbar button:focus,
 windowcontrols button:hover,
 windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
