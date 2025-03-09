@@ -68,14 +68,13 @@ executable(
 
 
 #================================
-
-
-# Add subfolders for Meson to look
-subdir('data')
-subdir('po')
-
 gnome.post_install(
   glib_compile_schemas: true,
   gtk_update_icon_cache: true,
   update_desktop_database: true,
 )
+
+# Add subfolders for Meson to look
+subdir('data')
+subdir('po')
+
