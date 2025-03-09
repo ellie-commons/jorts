@@ -63,6 +63,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
         var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
+        color_button_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
         color_button_label.tooltip_text = _("Choose a colour for this sticky note");
         setting_grid.attach (color_button_label, 0, 0, 1, 1);
 

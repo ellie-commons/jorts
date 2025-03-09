@@ -58,17 +58,17 @@ namespace jorts {
                     );
             }); 
 
+            //this.squiggly_mode_active = gsettings.get_boolean ("squiggly_mode_active");
 
             // build all the stylesheets
             jorts.Themer.init_all_themes();
         }
 
         static construct {
-            //gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
         }
 
         construct {
-            //this.squiggly_mode_active = gsettings.get_boolean ("squiggly_mode_active");
 
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
