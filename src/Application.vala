@@ -65,7 +65,7 @@ namespace jorts {
         }
 
         static construct {
-            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+            //gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
         }
 
         construct {
