@@ -23,7 +23,7 @@ config_file = configure_file(
 # Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
-    'data' / 'gresource.xml',
+    'data' / 'io.github.ellie_commons.jorts.gresource.xml',
     source_dir: 'data'
 )
 
