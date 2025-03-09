@@ -53,10 +53,9 @@ executable(
     'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
-
+    
     'src/Application.vala',
     'src/MainWindow.vala',
-    
     dependencies: [
         dependency('granite-7'),
         dependency('gobject-2.0'),
