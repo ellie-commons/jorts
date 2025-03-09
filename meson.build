@@ -4,7 +4,6 @@ project('io.github.ellie_commons.jorts', ['vala', 'c'],
 )
 
 gnome = import('gnome')
-gnome.post_install(glib_compile_schemas: true)
 
 
 
@@ -24,7 +23,7 @@ config_file = configure_file(
 # Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
-    'data' / 'io.github.ellie_commons.jorts.gresource.xml',
+    'data' / 'jorts.gresource.xml',
     source_dir: 'data'
 )
 
@@ -67,6 +66,13 @@ executable(
 
 #================================
 
+
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)

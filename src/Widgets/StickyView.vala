@@ -39,8 +39,8 @@ public class jorts.StickyView : Granite.HyperTextView {
         public int max_zoom;
         public int min_zoom;
 
-        private SimpleActionGroup actions;
-        private Gee.ArrayQueue<FormattingRequest?> formatting_queue = new Gee.ArrayQueue<FormattingRequest?> ();
+        //private SimpleActionGroup actions;
+        //private Gee.ArrayQueue<FormattingRequest?> formatting_queue = new Gee.ArrayQueue<FormattingRequest?> ();
     
         public const string FORMAT_ACTION_GROUP_PREFIX = "format";
         public const string FORMAT_ACTION_PREFIX = FORMAT_ACTION_GROUP_PREFIX + ".";
@@ -73,16 +73,16 @@ public class jorts.StickyView : Granite.HyperTextView {
                 this.set_hexpand (true);
                 this.set_vexpand (true);
 
-                this.buffer.create_tag (FORMAT_ACTION_BOLD, "weight", 700);
+/*                  this.buffer.create_tag (FORMAT_ACTION_BOLD, "weight", 700);
                 this.buffer.create_tag (FORMAT_ACTION_ITALIC, "style", 2);
                 this.buffer.create_tag (FORMAT_ACTION_UNDERLINE, "underline", Pango.Underline.SINGLE);
                 this.buffer.changed.connect (this.handle_text_buffer_change);
                 this.buffer.insert_text.connect (this.handle_text_buffer_inserted_text);
-                this.buffer.mark_set.connect (this.handle_text_buffer_mark_set);
+                this.buffer.mark_set.connect (this.handle_text_buffer_mark_set);  */
 
 
-                this.actions = this.create_formatting_actions ();
-                this.register_action_accelerators ();
+                //this.actions = this.create_formatting_actions ();
+                //this.register_action_accelerators ();
 
                 //Menu menu = this.create_formatting_menu ();
                 //this.set_extra_menu (menu);
@@ -95,7 +95,7 @@ public class jorts.StickyView : Granite.HyperTextView {
                 return this.buffer.get_text (start, end, true);
         }
 
-
+/*  
 
 
         private void register_action_accelerators () {
@@ -344,7 +344,7 @@ public class jorts.StickyView : Granite.HyperTextView {
                 return enum_value.value_nick;
             }
 
-
+  */
 
 
 }
