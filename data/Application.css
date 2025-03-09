@@ -120,7 +120,11 @@ popover button image {
     color: @fg_color;
 }
 
-
+/* Obfuscate note */
+window.squiggly textview,
+window.squiggly editablelabel {
+    font-family: "Redacted Script";
+}
 
 /* Font zooms */
 window.antsized textview {font-size: 0.4em;}

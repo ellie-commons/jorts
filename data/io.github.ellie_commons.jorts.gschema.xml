@@ -5,5 +5,10 @@
 			<summary>Default zoom</summary>
 			<description>Default text zoom for new notes (NOT IMPLEMENTED YET)</description>
 		</key>
+		<key name="squiggly_mode_active" type="b">
+			<default>false</default>
+			<summary>Change font to an illegible one</summary>
+			<description>Whether to hide text (NOT IMPLEMENTED YET)</description>
+		</key>
 	</schema>
 </schemalist>

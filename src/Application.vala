@@ -29,6 +29,7 @@ namespace jorts {
         }
 
 	    public int64 latest_zoom;
+        private bool squiggly_mode_active = false;
 
         public override void startup () {
             base.startup ();
@@ -63,10 +64,12 @@ namespace jorts {
         }
 
         static construct {
-            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+            //gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
         }
 
         construct {
+            //this.squiggly_mode_active = gsettings.get_boolean ("squiggly_mode_active");
+
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
@@ -116,6 +119,25 @@ namespace jorts {
                 MainWindow note = (MainWindow)get_active_window ();
                 note.zoom_in ();
             });
+            var toggle_squiggly = new SimpleAction ("toggle_squiggly", null);
+            set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
+            add_action (toggle_squiggly);
+            toggle_squiggly.activate.connect (() => {
+                if (this.squiggly_mode_active) {
+                    foreach (var window in open_notes) {
+                        window.remove_css_class ("squiggly");
+                    }
+                    this.squiggly_mode_active = false;
+                }
+                else {
+                    foreach (var window in open_notes) {
+                        window.add_css_class ("squiggly");
+                    }
+                    this.squiggly_mode_active = true;
+                }
+                //this.squiggly_mode_active = gsettings.set_boolean ("squiggly_mode_active", this.squiggly_mode_active);
+            });
+
 
         }
 
@@ -168,6 +190,9 @@ namespace jorts {
         string json_data = jorts.Stash.jsonify (open_notes);
         jorts.Stash.overwrite_stash (json_data);
     }
+
+
+
 
 
     // the thing that 
