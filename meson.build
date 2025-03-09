@@ -23,7 +23,7 @@ config_file = configure_file(
 # Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
-    'data' / 'jorts.gresource.xml',
+    'data' / 'gresource.xml',
     source_dir: 'data'
 )
 
@@ -42,17 +42,21 @@ executable(
     meson.project_name(),
     gresource,
     config_file,
+    'src/Objects/noteData.vala', 
+
     'src/Services/Constants.vala',
-    'src/Objects/noteData.vala',    
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
     'src/Services/FormatRequest.vala',
+
     'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
+
     'src/Application.vala',
     'src/MainWindow.vala',
+    
     dependencies: [
         dependency('granite-7'),
         dependency('gobject-2.0'),

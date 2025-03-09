@@ -2,7 +2,7 @@
 #======== Internationalization ========
 #Translate and install our .desktop file
 i18n.merge_file(
-    input: 'jorts.desktop.in',
+    input: 'desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: meson.project_source_root() / 'po',
     type: 'desktop',
@@ -12,7 +12,7 @@ i18n.merge_file(
 
 #Translate and install our .appdata file
 i18n.merge_file(
-    input: 'jorts.metainfo.xml.in',
+    input: 'metainfo.xml.in',
     output: meson.project_name() + '.metainfo.xml',
     po_dir: meson.project_source_root() / 'po',
     install: true,
@@ -41,7 +41,7 @@ endforeach
 
 #======== SETTINGS ========
 install_data (
-    'jorts.gschema.xml',
+    'gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
     rename: meson.project_name() + '.gschema.xml'
 )
