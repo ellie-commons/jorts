@@ -29,7 +29,9 @@ namespace jorts {
         }
 
 	    public int64 latest_zoom;
-        private bool squiggly_mode_active = false;
+        public bool squiggly_mode_active = false;
+        public signal void squiggly_changed (bool squiggly);
+
 
         public override void startup () {
             base.startup ();
@@ -123,18 +125,7 @@ namespace jorts {
             set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
             add_action (toggle_squiggly);
             toggle_squiggly.activate.connect (() => {
-                if (this.squiggly_mode_active) {
-                    foreach (var window in open_notes) {
-                        window.remove_css_class ("squiggly");
-                    }
-                    this.squiggly_mode_active = false;
-                }
-                else {
-                    foreach (var window in open_notes) {
-                        window.add_css_class ("squiggly");
-                    }
-                    this.squiggly_mode_active = true;
-                }
+                this.toggle_squiggly();
                 //this.squiggly_mode_active = gsettings.set_boolean ("squiggly_mode_active", this.squiggly_mode_active);
             });
 
@@ -192,7 +183,14 @@ namespace jorts {
     }
 
 
-
+    public void toggle_squiggly() {
+        if (this.squiggly_mode_active) {
+            this.squiggly_mode_active = false;
+        } else {
+            this.squiggly_mode_active = true;
+        }
+        this.squiggly_changed(this.squiggly_mode_active);
+    }
 
 
     // the thing that 
