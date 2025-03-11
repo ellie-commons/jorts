@@ -74,6 +74,8 @@ namespace jorts.Utils {
         return themes[random_in_range];
     }
 
+
+
     // Spits out a cute or funny random title for a new sticky note
     public string random_title () {
         string[] alltitles = {
@@ -113,6 +115,44 @@ namespace jorts.Utils {
             _("My fav songs to sing along")
         };
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
+    }
+
+
+        // Spits out a cute or funny random title for a new sticky note
+        public string random_emote (string? skip_emote) {
+            string[] emotes = {
+                _("face-angel-symbolic"),
+                _("face-angry-symbolic"),
+                _("face-cool-symbolic"),
+                _("face-crying-symbolic"),
+                _("face-devilish-symbolic"),
+                _("face-embarrassed-symbolic"),
+                _("face-kiss-symbolic"),
+                _("face-laugh-symbolic"),
+                _("face-monkey-symbolic"),
+                _("face-plain-symbolic"),
+                _("face-raspberry-symbolic"),
+                _("face-sad-symbolic"),
+                _("face-sick-symbolic"),                
+                _("face-smile-symbolic"),
+                _("face-smile-big-symbolic"),
+                _("face-smirk-symbolic"),
+                _("face-surprise-symbolic"),
+                _("face-tired-symbolic"),
+                _("face-uncertain-symbolic"),
+                _("face-wink-symbolic"),
+                _("face-worried-symbolic")
+            };
+
+            Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
+            allemotes.add_all_array (emotes);
+
+            if (skip_emote != null) {
+                allemotes.remove(skip_emote);
+            }
+    
+            var random_in_range = Random.int_range (0,(allemotes.size - 1));
+            return allemotes[random_in_range];
     }
 
     // Spits out a fresh new note

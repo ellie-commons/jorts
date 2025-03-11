@@ -77,6 +77,7 @@ namespace jorts {
         public const string[] ACCELS_NEW =     {"<Control>n"};
         public const string[] ACCELS_DELETE =     {"<Control>w"};
         public const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
+        public const string[] ACCELS_EMOTE =     {"<Control>."};
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
@@ -189,6 +190,29 @@ namespace jorts {
             hide_item.width_request = 32;
             hide_item.height_request = 32;
             hide_item.add_css_class("themedbutton");
+
+
+            var emojichooser_popover = new Gtk.EmojiChooser ();
+            emojichooser_popover.autohide = false;
+
+            var emoji_button = new Gtk.MenuButton();
+            emoji_button.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_EMOTE,_("Insert emoji"));
+            emoji_button.has_tooltip = true;
+            emoji_button.set_icon_name(jorts.Utils.random_emote (null));
+            emoji_button.add_css_class("themedbutton");
+            emoji_button.popover = emojichooser_popover;
+            emoji_button.width_request = 32;
+            emoji_button.height_request = 32;
+
+            emojichooser_popover.show.connect (() => {
+                emoji_button.set_icon_name(jorts.Utils.random_emote (emoji_button.get_icon_name ()));
+            });
+
+            emojichooser_popover.emoji_picked.connect ((emoji) => {
+                view.buffer.insert_at_cursor (emoji,-1);
+            });
+
+
             this.popover = new SettingsPopover (this.theme);
             this.set_zoom(data.zoom);
             var app_button = new Gtk.MenuButton();
@@ -202,8 +226,9 @@ namespace jorts {
             app_button.height_request = 32;
 
             actionbar.pack_start (new_item);
-            actionbar.pack_end (app_button);
             actionbar.pack_start (delete_item);
+            actionbar.pack_end (app_button);
+            actionbar.pack_end (emoji_button);
             actionbar.pack_end (hide_item);
 
             // Define the grid 

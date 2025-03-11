@@ -62,6 +62,10 @@
             <caption>You can unzoom so hard you could do ascii art</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot3.png</image>
         </screenshot>
+        <screenshot>
+            <caption>Like emojis? Well there's an emoji picker!</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot4.png</image>
+        </screenshot>
     </screenshots>
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
@@ -80,6 +84,8 @@
                 <ul>
                     <li>Better translation coverage</li>
                     <li>New feature: Squiggly mode! Hide sticky notes content all at once!</li>
+                    <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
+                    <li>The button in the toolbar displays a random emote everytime you click!</li>
                 </ul>
             </description>
         </release>
