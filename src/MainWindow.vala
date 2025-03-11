@@ -193,7 +193,6 @@ namespace jorts {
 
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
-            emojichooser_popover.autohide = false;
 
             var emoji_button = new Gtk.MenuButton();
             emoji_button.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_EMOTE,_("Insert emoji"));
@@ -247,27 +246,44 @@ namespace jorts {
                 ((Application)this.application).save_to_stash ();            
             });
 
+            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
             notetitle.changed.connect (() => {
                 this.set_title(notetitle.text);
                 ((Application)this.application).save_to_stash ();            
             });
 
+            // Save when the window is closed
             this.close_request.connect (() => {
                 ((Application)this.application).save_to_stash (); 
                 return false;           
             });
 
+            // Use the color theme of this sticky note when focused
             this.notify["is-active"].connect(() => {
-                if (this.is_active == true ) {
+                if (this.is_active) {
                     var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
                     this.gtk_settings.gtk_theme_name = stylesheet;
                 }
+
+                if (((Application)this.application).squiggly_mode_active) {
+
+                    if (this.is_active) {
+                        remove_css_class ("squiggly");
+                    } else {
+                        add_css_class ("squiggly");
+                    }
+
+                } else {
+                    remove_css_class ("squiggly");
+                }
             });
 
+            // The settings popover tells us a new theme has been chosen!
             this.popover.theme_changed.connect ((selected) => {
                 this.update_theme(selected);
             });
 
+            // The settings popover tells us a new zoom has been chosen!
             this.popover.zoom_changed.connect ((zoomkind) => {
                 if (zoomkind == "zoom_in") {
                     this.zoom_in();
@@ -278,15 +294,25 @@ namespace jorts {
                 }
             });
 
+            //The application tells us the squiffly state has changed!
             ((Application)this.application).squiggly_changed.connect ((squiggly) => {
                     if (squiggly) {
-                        this.add_css_class ("squiggly");
+                        //this.add_css_class ("squiggly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Show text"));
+
+                        if (this.is_active == false) {
+                            this.add_css_class ("squiggly");
+                        }
+
                     } else {
-                        this.remove_css_class ("squiggly");
                         hide_item.set_icon_name ("eye-not-looking-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Hide text"));
+
+                        if (this.is_active == false) {
+                            this.remove_css_class ("squiggly");
+                        }
+
                     }
                 }
             );
@@ -314,7 +340,7 @@ namespace jorts {
             return data;
         }
 
-        // Some rando actions
+
         private void action_new () {
             ((Application)this.application).create_note(null);
         }
@@ -324,6 +350,8 @@ namespace jorts {
             this.close ();
         }
 
+        // Called when shortcut for squiggly
+        // Tells the application "hey, toggle the squiggly"
         private void toggle_squiggly () {
             ((Application)this.application).toggle_squiggly ();
 
@@ -334,14 +362,16 @@ namespace jorts {
             this.set_zoom(100);
         }
 
+
+
         // Switches stylesheet
+        // First use appropriate stylesheet
+        // Then switch the theme classes
         private void update_theme(string theme) {
 
-            // Use appropriate sheet
             var stylesheet = "io.elementary.stylesheet." + theme.ascii_down();
             this.gtk_settings.gtk_theme_name = stylesheet;
 
-            // in GTK4 we can replace this with setting css_classes
             remove_css_class (this.theme);
             this.theme = theme;
             add_css_class (this.theme);
@@ -350,18 +380,21 @@ namespace jorts {
         }
 
 
+        // First check an increase doesnt go above limit
         public void zoom_in() {
             if ((this.zoom + 20) <= jorts.Utils.max_zoom) {
                 this.set_zoom((this.zoom + 20));
             }
         }
 
+        // First check an increase doesnt go below limit
         public void zoom_out() {
             if ((this.zoom - 20) >= jorts.Utils.min_zoom) {
                 this.set_zoom((this.zoom - 20));
             }
         }
 
+        // Switch zoom classes, then reflect in the UI and tell the application
         public void set_zoom(int64 zoom) {
             // Switches the classes that control font size
             this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
