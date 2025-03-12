@@ -30,14 +30,15 @@ Main tasks are the tasks:
 - [x] Finish port: editablelabel and the popover
 - [x] Do all the testing
 - [x] Do a first release
-- [ ] Do a first appcenter release
-- [ ] Add zoom support
-- [ ] Static theming
+- [x] Do a first appcenter release
+- [x] Add zoom support
 - [ ] Zoom: scroll to zoom, keep for next note
 - [x] Detect hyperlinks and open in 
 - [x] Detect emails and open in Mail
 - [ ] Detect local links and open in files
-- [ ] Improve a11y (contrast)
+- [ ] Squiggly mode
+- [x] Emoji button
+- [ ] Highlight text
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
 
