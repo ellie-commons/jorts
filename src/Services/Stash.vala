@@ -125,50 +125,50 @@ namespace jorts.Stash {
         int64 height;
 
         try {
-            var title = node.get_string_member("title");
+            title = node.get_string_member("title");
         }
         catch (Error e) {
-            var title = (_("Forgot the title")) ;
+            title = (_("Forgot the title")) ;
             warning ("Failed to load title: %s\n", e.message);   
         }
 
         try {
-            var theme = node.get_string_member("theme");
+            theme = node.get_string_member("theme");
         }
         catch (Error e) {
-            var theme = jorts.Utils.random_theme(null) ;
+            theme = jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
         }
 
         try {
-            var content = node.get_string_member("content");
+            content = node.get_string_member("content");
         }
         catch (Error e) {
-            var content = "" ;
+            content = "" ;
             warning ("Failed to load content: %s\n", e.message);   
         }
 
         try {
-            var zoom = node.get_int_member("zoom");
+            zoom = node.get_int_member("zoom");
         }
         catch (Error e) {
-            var zoom = jorts.Constants.default_zoom;
+            zoom = jorts.Constants.default_zoom;
             warning ("Failed to load zoom: %s\n", e.message);   
         }
 
         try {
-            var width = node.get_int_member("width");
+            width = node.get_int_member("width");
         }
         catch (Error e) {
-            var width = jorts.Constants.default_width;
+            width = jorts.Constants.default_width;
             warning ("Failed to load width: %s\n", e.message);   
         }
 
         try {
-            var height = node.get_int_member("height");
+            height = node.get_int_member("height");
         }
         catch (Error e) {
-            var height = jorts.Constants.default_height;
+            height = jorts.Constants.default_height;
             warning ("Failed to load height: %s\n", e.message);   
         }
 
