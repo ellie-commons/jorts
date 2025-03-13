@@ -226,9 +226,11 @@ namespace jorts {
 
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
+            actionbar.pack_start (hide_item);
+
             actionbar.pack_end (app_button);
             actionbar.pack_end (emoji_button);
-            actionbar.pack_end (hide_item);
+
 
             // Define the grid 
             var grid = new Gtk.Grid ();
