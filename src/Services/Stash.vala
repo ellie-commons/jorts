@@ -201,14 +201,16 @@ namespace jorts.Stash {
                     var root = parser.get_root();
                     var array = root.get_array();
 
+                    foreach (var item in array.get_elements()) {
+                        var stored_note = Jorts.Stash.load_node(item.get_object());
+                        loaded_data.add(stored_note);
+                    }
+                    
                 } catch (Error e) {
                     warning ("Failed to load file: %s\n", e.message);
                 }
 
-                foreach (var item in array.get_elements()) {
-                    var stored_note = Jorts.Stash.load_node(item.get_object());
-                    loaded_data.add(stored_note);
-                }
+
 
         } else {
                 noteData stored_note    = jorts.Utils.random_note(null);
