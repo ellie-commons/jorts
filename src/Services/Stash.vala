@@ -117,52 +117,58 @@ namespace jorts.Stash {
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
     public jorts.noteData load_node(Json.Object node) {
-    
+        string title;
+        string theme;
+        string content;
+        int64 zoom;
+        int64 width;
+        int64 height;
+
         try {
-            string title = node.get_string_member("title");
+            title = node.get_string_member("title");
         }
         catch (Error e) {
-            string title = (_("Forgot the title")) ;
+            title = (_("Forgot the title")) ;
             warning ("Failed to load title: %s\n", e.message);   
         }
 
         try {
-            string theme = node.get_string_member("theme");
+            theme = node.get_string_member("theme");
         }
         catch (Error e) {
-            string theme = jorts.Utils.random_theme(null) ;
+            theme = jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
         }
 
         try {
-            string content = node.get_string_member("content");
+            content = node.get_string_member("content");
         }
         catch (Error e) {
-            string content = "" ;
+            content = "" ;
             warning ("Failed to load content: %s\n", e.message);   
         }
 
         try {
-            int64 zoom = node.get_int_member("zoom");
+            zoom = node.get_int_member("zoom");
         }
         catch (Error e) {
-            int64 zoom = 100;
+            zoom = jorts.Constants.default_zoom;
             warning ("Failed to load zoom: %s\n", e.message);   
         }
 
         try {
-            int64 width = node.get_int_member("width");
+            width = node.get_int_member("width");
         }
         catch (Error e) {
-            int64 width = 330;
+            width = jorts.Constants.default_width;
             warning ("Failed to load width: %s\n", e.message);   
         }
 
         try {
-            int64 height = node.get_int_member("height");
+            height = node.get_int_member("height");
         }
         catch (Error e) {
-            int64 height = 270;
+            height = jorts.Constants.default_height;
             warning ("Failed to load height: %s\n", e.message);   
         }
 

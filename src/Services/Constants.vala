@@ -51,12 +51,12 @@ namespace jorts.Constants {
     const int min_zoom                  = 40;
 
     // For new stickies
-    const int defaut_height             = 330;
-    const int defaut_width              = 270;
+    const int default_height             = 330;
+    const int default_width              = 270;
 
     // signature theme
     const string default_theme          = "BLUEBERRY";
-    const int defaut_zoom               = 100;
+    const int default_zoom               = 100;
 
     // Shortcuts
     const string[] ACCELS_NEW           = {"<Control>n"};
