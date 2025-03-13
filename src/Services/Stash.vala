@@ -101,14 +101,10 @@ namespace jorts.Stash {
             if (!dir.query_exists()) {
                 dir.make_directory();
             }
-
-            if (file.query_exists ()) {
-                file.delete ();
-            }
-
             var file_stream = file.create (FileCreateFlags.REPLACE_DESTINATION);
             var data_stream = new DataOutputStream (file_stream);
             data_stream.put_string(json_data);
+            
         } catch (Error e) {
             warning ("Failed to save notes %s\n", e.message);
         }
