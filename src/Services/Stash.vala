@@ -128,7 +128,7 @@ namespace jorts.Stash {
 
         try {
             string theme = node.get_string_member("theme");
-#        }
+        }
         catch (Error e) {
             string theme = Jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
