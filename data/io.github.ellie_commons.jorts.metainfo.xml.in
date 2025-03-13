@@ -26,10 +26,10 @@
         <name>Stella - Teamcons</name>
     </developer>
     <project_group>ellie-commons</project_group>
-    <url type="homepage">https://github.com/ellie_commons/jorts</url>
-    <url type="bugtracker">https://github.com/ellie_commons/jorts/issues</url>
-    <url type="help">https://github.com/ellie_commons/jorts/issues</url>
-    <url type="translate">https://github.com/ellie_commons/jorts/blob/main/po/README.md</url>
+    <url type="homepage">https://github.com/ellie-commons/jorts</url>
+    <url type="bugtracker">https://github.com/ellie-commons/jorts/issues</url>
+    <url type="help">https://github.com/ellie-commons/jorts/issues</url>
+    <url type="translate">https://github.com/ellie-commons/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
     <suggests>
@@ -50,21 +50,25 @@
       <color type="primary" scheme_preference="dark">#002e99</color>
     </branding>
     <screenshots>
-        <screenshot type="default">
+        <screenshot>
             <caption>A sticky note with the "Blueberry" theme</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot.png</image>
         </screenshot>
-        <screenshot type="default">
+        <screenshot>
             <caption>You can change individual colour and text size!</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot2.png</image>
         </screenshot>
-        <screenshot type="default">
+        <screenshot>
             <caption>You can unzoom so hard you could do ascii art</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot3.png</image>
         </screenshot>
+        <screenshot>
+            <caption>Like emojis? Well there's an emoji picker!</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot4.png</image>
+        </screenshot>
     </screenshots>
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB"></translation>
+    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
     <recommends>
       <control>keyboard</control>
       <control>pointing</control>
@@ -74,14 +78,27 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="2.1.2" date="2025-03-02">
+        <release version="2.2.0" date="2025-03-16">
+            <description>
+                <p>2.2.0 The Jorts of light</p>
+                <ul>
+                    <li>Better translation coverage</li>
+                    <li>New feature: Squiggly mode! Hide sticky notes content all at once!</li>
+                    <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
+                    <li>The button in the toolbar displays a random emote everytime you click!</li>
+                </ul>
+            </description>
+        </release>
+        <release version="2.1.2" date="2025-03-08">
             <description>
                 <p>2.1.2 The unrippable jorts</p>
                 <ul>
-                    <li>More translations!</li>
-                    <li>Ctrl+Scroll to change zoom</li>
-                    <li>Lighter and yet more resilient theming system</li>
+                    <li>Better translation coverage</li>
+                    <li>Add relief to actionbar buttons</li>
+                    <li>Bugfix: Edge case where the theme or zoom werent properly saved</li>
                     <li>Bugfix: Title in multitasking not set correctly</li>
+                    <li>Bugfix: Icon inconsistency accross icon themes</li>
+                    <li>Bugfix: Theming inconsistencies accross stickies</li>
                 </ul>
             </description>
         </release>
@@ -91,6 +108,7 @@
                 <ul>
                     <li>Clearer appmenu description</li>
                     <li>More consistent theming</li>
+                    <li>Bugfix: the delete shortcut was unresponsible</li>
                     <li>Bugfix: screenshot not showing</li>
                 </ul>
             </description>

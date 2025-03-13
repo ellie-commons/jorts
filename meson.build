@@ -1,10 +1,9 @@
 # Name our project
 project('io.github.ellie_commons.jorts', ['vala', 'c'],
-    version: '2.1.2'
+    version: '2.2.0'
 )
 
 gnome = import('gnome')
-gnome.post_install(glib_compile_schemas: true)
 
 
 
@@ -43,13 +42,18 @@ executable(
     meson.project_name(),
     gresource,
     config_file,
-    'src/Objects/noteData.vala',    
+    'src/Objects/noteData.vala', 
+
+    'src/Services/Constants.vala',
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',
+    'src/Services/FormatRequest.vala',
+
     'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
     'src/Widgets/SettingsPopover.vala',
+    
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [
@@ -64,7 +68,13 @@ executable(
 
 
 #================================
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)
 
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
+

@@ -34,29 +34,16 @@ init_all_themes()
 
 namespace jorts.Themer {
 
-
-    // As seen on TV!
-    const string[] themearray = {
-        "BLUEBERRY",
-        "MINT",
-        "LIME",
-        "BANANA",
-        "ORANGE",
-        "STRAWBERRY",
-        "BUBBLEGUM",
-        "GRAPE",
-        //"LATTE",
-        "COCOA",
-        "SLATE"
-    };
-
     // Here we go
+    // Take up a elementary OS color name and gurgle back a CSS string
     public static string generate_css (string theme) {
         debug("Generating css");
         string style = "";
 
         style = (N_("""
-
+            /* Accent color 
+            mix(@${accent_color}_500, @${accent_color}_700, 0.3) */
+            
             window.${accent_color} {
                 background-color: @${accent_color}_100;
             }
@@ -77,17 +64,19 @@ namespace jorts.Themer {
                     );
             }
 
+
+            /* WEIRD: if we dont personally just redefine overshoot effect, the grey theme doesnt have any*/
             window.${accent_color} overshoot.top {
-            background: linear-gradient(to top, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to top, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.right {
-            background: linear-gradient(to right, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to right, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.bottom {
-            background: linear-gradient(to bottom, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to bottom, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} overshoot.left {
-            background: linear-gradient(to left, alpha(@${accent_color}_900, 0) 80%, alpha(@${accent_color}_900, 0.25) 100%); }
+            background: linear-gradient(to left, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
             window.${accent_color} textview text selection,
             window.${accent_color} editablelabel text selection {
@@ -111,7 +100,7 @@ namespace jorts.Themer {
             window.${accent_color} editablelabel.editing text {
                 background-color: transparent;
                 border-bottom-color: @${accent_color}_100;
-                color: shade(@${accent_color}_900, 0.75);
+                color: shade(@${accent_color}_900, 0.77);
             }
 
             /* Fix the emoticon entry having note color background */
@@ -126,7 +115,7 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
-                border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.8);
+                border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.88);
             }
 
             window.${accent_color} editablelabel.editing {
@@ -135,7 +124,7 @@ namespace jorts.Themer {
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.9);
+                color: alpha(@${accent_color}_900, 0.75);
             }
 
             window.${accent_color}:backdrop editablelabel,
@@ -143,7 +132,7 @@ namespace jorts.Themer {
             window.${accent_color}:backdrop actionbar image,
             window.${accent_color}:backdrop windowcontrols,
             window.${accent_color}:backdrop windowcontrols image {
-                color: alpha(@${accent_color}_900, 0.8);
+                color: alpha(@${accent_color}_900, 0.75);
             }
 
         """));
@@ -153,9 +142,12 @@ namespace jorts.Themer {
         return style;
     }
 
+    // Called once, at the start of the app
+    // Loads the standard sheet, then do all the different themes
     public static void init_all_themes() {
+        debug("Init all themes");
 
-        // Also the standard sheet
+        // Use standard sheet
         var app_provider = new Gtk.CssProvider ();
         app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
         Gtk.StyleContext.add_provider_for_display (
@@ -164,23 +156,18 @@ namespace jorts.Themer {
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
         );
 
-        debug("Init all themes");
-        foreach (unowned var theme in jorts.Utils.themearray) {
-            // Palette color
-              var theme_provider = new Gtk.CssProvider ();
-              var style = jorts.Themer.generate_css (theme);
-
-            // for the move away from stylecontext
-            // print(style);
+        // Then generate all theme classes
+        foreach (unowned var theme in jorts.Constants.themearray) {
+            var theme_provider = new Gtk.CssProvider ();
+            var style = jorts.Themer.generate_css (theme);
 
             theme_provider.load_from_string (style);
 
-
-              Gtk.StyleContext.add_provider_for_display (
-                  Gdk.Display.get_default (),
-                  theme_provider,
-                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-              );
-          }
+            Gtk.StyleContext.add_provider_for_display (
+                Gdk.Display.get_default (),
+                theme_provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+        }
     }
 }

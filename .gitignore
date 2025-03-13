@@ -12,3 +12,4 @@ src/dump.txt
 data/Application copy.css
 src/Widgets/SettingsPopover copy.vala
 src/MainWindow copy.vala
+generate_stylesheets.sh
