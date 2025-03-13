@@ -128,7 +128,7 @@ namespace jorts.Stash {
 
         try {
             string theme = node.get_string_member("theme");
-        }
+#        }
         catch (Error e) {
             string theme = Jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
@@ -202,10 +202,10 @@ namespace jorts.Stash {
                     var array = root.get_array();
 
                     foreach (var item in array.get_elements()) {
-                        var stored_note = Jorts.Stash.load_node(item.get_object());
+                        var stored_note = jorts.Stash.load_node(item.get_object());
                         loaded_data.add(stored_note);
                     }
-                    
+
                 } catch (Error e) {
                     warning ("Failed to load file: %s\n", e.message);
                 }
