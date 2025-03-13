@@ -87,7 +87,7 @@ namespace jorts.Stash {
     }
 
 
-
+    // Just slams a json in the storage file
     public void overwrite_stash(string json_data) {
 
         string data_directory = Environment.get_user_data_dir ();
@@ -114,8 +114,65 @@ namespace jorts.Stash {
 
     }
 
+    // Takes a single node, tries its best to get its content.
+    // Does not fail if something is missing or unreadable, go to fallback for the element instead
+    public Jorts.noteData load_node(Json.Node node) {
+    
+        try {
+            string title = node.get_string_member("title");
+        }
+        catch (Error e) {
+            string title = (_("Forgot the title")) ;
+            warning ("Failed to load title: %s\n", e.message);   
+        }
+
+        try {
+            string theme = node.get_string_member("theme");
+        }
+        catch (Error e) {
+            string theme = Jorts.Utils.random_theme(null) ;
+            warning ("Failed to load theme: %s\n", e.message);   
+        }
+
+        try {
+            string content = node.get_string_member("content");
+        }
+        catch (Error e) {
+            string content = "" ;
+            warning ("Failed to load content: %s\n", e.message);   
+        }
+
+        try {
+            int64 zoom = node.get_int_member("zoom");
+        }
+        catch (Error e) {
+            int64 zoom = 100;
+            warning ("Failed to load zoom: %s\n", e.message);   
+        }
+
+        try {
+            int64 width = node.get_int_member("width");
+        }
+        catch (Error e) {
+            int64 width = 330;
+            warning ("Failed to load width: %s\n", e.message);   
+        }
+
+        try {
+            int64 height = node.get_int_member("height");
+        }
+        catch (Error e) {
+            int64 height = 270;
+            warning ("Failed to load height: %s\n", e.message);   
+        }
 
 
+        return new noteData(title, theme, content, zoom, width, height);
+    }
+
+
+
+    // Handles the whole loading. If there is nothing, just start with a blue one
     public Gee.ArrayList<noteData> load_from_stash() {
         Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
         string data_directory = Environment.get_user_data_dir ();
@@ -124,43 +181,42 @@ namespace jorts.Stash {
         var file = File.new_for_path (storage_path);
         var json_string = "";
 
-        try {
-            if (file.query_exists()) {
-                string line;
-                var dis = new DataInputStream (file.read ());
+        try
+        {
+            has_saved_state = file.query_exists();
+        }
+        catch (Error e)
+        {
+            warning ("Failed to load file: %s\n", e.message);
+            has_saved_state = false;
+        }
+        if (file.query_exists()) {
 
-                while ((line = dis.read_line (null)) != null) {
-                    json_string += line;
+                // TODO: If the Json is mangled, there is a risk Jorts starts from a blank slate and overwrites it
+                // We need to either check if blank slate, or 
+                string line;
+                try {
+
+                    parser.load_from_mapped_file (file);
+                    var root = parser.get_root();
+                    var array = root.get_array();
+
+                } catch (Error e) {
+                    warning ("Failed to load file: %s\n", e.message);
                 }
 
-                var parser = new Json.Parser();
-                parser.load_from_data(json_string);
-
-                var root = parser.get_root();
-                var array = root.get_array();
                 foreach (var item in array.get_elements()) {
-                    var node = item.get_object();
-
-                    string title = node.get_string_member("title");
-                    string theme = node.get_string_member("theme");
-                    string content = node.get_string_member("content");
-				    int64 zoom = node.get_int_member("zoom");
-                    int64 width = node.get_int_member("width");
-                    int64 height = node.get_int_member("height");
-
-                    noteData stored_note = new noteData(title, theme, content, zoom, width, height);
+                    var stored_note = Jorts.Stash.load_node(item.get_object());
                     loaded_data.add(stored_note);
                 }
 
-            } else {
+        } else {
                 noteData stored_note    = jorts.Utils.random_note(null);
                 stored_note.theme       = jorts.Constants.default_theme ;
                 loaded_data.add(stored_note);
-            }
-
-        } catch (Error e) {
-            warning ("Failed to load file: %s\n", e.message);
         }
+
+
         
         return loaded_data;
     }
