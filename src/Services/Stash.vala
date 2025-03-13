@@ -179,7 +179,6 @@ namespace jorts.Stash {
         string storage_path = data_directory + "/saved_state.json";
     
         var file = File.new_for_path (storage_path);
-        var json_string = "";
 
         try
         {
@@ -195,8 +194,9 @@ namespace jorts.Stash {
                 // TODO: If the Json is mangled, there is a risk Jorts starts from a blank slate and overwrites it
                 // We need to either check if blank slate, or 
                 string line;
-                try {
+                var parser = new Json.Parser();
 
+                try {
                     parser.load_from_mapped_file (file);
                     var root = parser.get_root();
                     var array = root.get_array();
