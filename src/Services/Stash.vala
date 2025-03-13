@@ -130,7 +130,7 @@ namespace jorts.Stash {
             string theme = node.get_string_member("theme");
         }
         catch (Error e) {
-            string theme = Jorts.Utils.random_theme(null) ;
+            string theme = jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
         }
 
@@ -166,8 +166,8 @@ namespace jorts.Stash {
             warning ("Failed to load height: %s\n", e.message);   
         }
 
-
-        return new noteData(title, theme, content, zoom, width, height);
+        noteData loaded_note = new noteData(title, theme, content, zoom, width, height);
+        return loaded_note;
     }
 
 
