@@ -124,13 +124,8 @@ namespace jorts.Stash {
         int64 width;
         int64 height;
 
-        try {
-            title = node.get_string_member("title");
-        }
-        catch (Error e) {
-            title = (_("Forgot the title")) ;
-            warning ("Failed to load title: %s\n", e.message);   
-        }
+        title = node.get_string_member_with_default("title",(_("Forgot title!")));
+
 
         try {
             theme = node.get_string_member("theme");
