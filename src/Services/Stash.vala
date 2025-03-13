@@ -116,7 +116,7 @@ namespace jorts.Stash {
 
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
-    public Jorts.noteData load_node(Json.Node node) {
+    public jorts.noteData load_node(Json.Node node) {
     
         try {
             string title = node.get_string_member("title");
