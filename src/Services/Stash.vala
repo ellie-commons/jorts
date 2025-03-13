@@ -88,6 +88,7 @@ namespace jorts.Stash {
 
 
     // Just slams a json in the storage file
+    // TODO: Simplify this
     public void overwrite_stash(string json_data) {
 
         string data_directory = Environment.get_user_data_dir ();
@@ -117,55 +118,13 @@ namespace jorts.Stash {
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
     public jorts.noteData load_node(Json.Object node) {
-        string title;
-        string theme;
-        string content;
-        int64 zoom;
-        int64 width;
-        int64 height;
 
-        title = node.get_string_member_with_default("title",(_("Forgot title!")));
-
-
-        try {
-            theme = node.get_string_member("theme");
-        }
-        catch (Error e) {
-            theme = jorts.Utils.random_theme(null) ;
-            warning ("Failed to load theme: %s\n", e.message);   
-        }
-
-        try {
-            content = node.get_string_member("content");
-        }
-        catch (Error e) {
-            content = "" ;
-            warning ("Failed to load content: %s\n", e.message);   
-        }
-
-        try {
-            zoom = node.get_int_member("zoom");
-        }
-        catch (Error e) {
-            zoom = jorts.Constants.default_zoom;
-            warning ("Failed to load zoom: %s\n", e.message);   
-        }
-
-        try {
-            width = node.get_int_member("width");
-        }
-        catch (Error e) {
-            width = jorts.Constants.default_width;
-            warning ("Failed to load width: %s\n", e.message);   
-        }
-
-        try {
-            height = node.get_int_member("height");
-        }
-        catch (Error e) {
-            height = jorts.Constants.default_height;
-            warning ("Failed to load height: %s\n", e.message);   
-        }
+        string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
+        string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
+        string content  = node.get_string_member_with_default("content","");
+        int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.default_zoom);
+        int64 width     = node.get_int_member_with_default("width",jorts.Constants.default_width);
+        int64 height    = node.get_int_member_with_default("height",jorts.Constants.default_height);
 
         noteData loaded_note = new noteData(title, theme, content, zoom, width, height);
         return loaded_note;
@@ -180,20 +139,10 @@ namespace jorts.Stash {
         string storage_path = data_directory + "/saved_state.json";
     
         var file = File.new_for_path (storage_path);
-
-        try
-        {
-            bool has_saved_state = file.query_exists();
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load file: %s\n", e.message);
-            bool has_saved_state = false;
-        }
         if (file.query_exists()) {
 
                 // TODO: If the Json is mangled, there is a risk Jorts starts from a blank slate and overwrites it
-                // We need to either check if blank slate, or 
+                // We should do a backup of the mangled json before overwriting
                 var parser = new Json.Parser();
 
                 try {
@@ -210,16 +159,12 @@ namespace jorts.Stash {
                     warning ("Failed to load file: %s\n", e.message);
                 }
 
-
-
         } else {
                 noteData stored_note    = jorts.Utils.random_note(null);
                 stored_note.theme       = jorts.Constants.default_theme ;
                 loaded_data.add(stored_note);
         }
 
-
-        
         return loaded_data;
     }
 }
