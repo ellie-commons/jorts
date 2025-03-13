@@ -125,50 +125,50 @@ namespace jorts.Stash {
         int64 height;
 
         try {
-            title = node.get_string_member("title");
+            var title = node.get_string_member("title");
         }
         catch (Error e) {
-            title = (_("Forgot the title")) ;
+            var title = (_("Forgot the title")) ;
             warning ("Failed to load title: %s\n", e.message);   
         }
 
         try {
-            theme = node.get_string_member("theme");
+            var theme = node.get_string_member("theme");
         }
         catch (Error e) {
-            theme = jorts.Utils.random_theme(null) ;
+            var theme = jorts.Utils.random_theme(null) ;
             warning ("Failed to load theme: %s\n", e.message);   
         }
 
         try {
-            content = node.get_string_member("content");
+            var content = node.get_string_member("content");
         }
         catch (Error e) {
-            content = "" ;
+            var content = "" ;
             warning ("Failed to load content: %s\n", e.message);   
         }
 
         try {
-            zoom = node.get_int_member("zoom");
+            var zoom = node.get_int_member("zoom");
         }
         catch (Error e) {
-            zoom = jorts.Constants.default_zoom;
+            var zoom = jorts.Constants.default_zoom;
             warning ("Failed to load zoom: %s\n", e.message);   
         }
 
         try {
-            width = node.get_int_member("width");
+            var width = node.get_int_member("width");
         }
         catch (Error e) {
-            width = jorts.Constants.default_width;
+            var width = jorts.Constants.default_width;
             warning ("Failed to load width: %s\n", e.message);   
         }
 
         try {
-            height = node.get_int_member("height");
+            var height = node.get_int_member("height");
         }
         catch (Error e) {
-            height = jorts.Constants.default_height;
+            var height = jorts.Constants.default_height;
             warning ("Failed to load height: %s\n", e.message);   
         }
 
@@ -199,7 +199,6 @@ namespace jorts.Stash {
 
                 // TODO: If the Json is mangled, there is a risk Jorts starts from a blank slate and overwrites it
                 // We need to either check if blank slate, or 
-                string line;
                 var parser = new Json.Parser();
 
                 try {
