@@ -197,7 +197,7 @@ namespace jorts.Stash {
                 var parser = new Json.Parser();
 
                 try {
-                    parser.load_from_mapped_file (file);
+                    parser.load_from_mapped_file (storage_path);
                     var root = parser.get_root();
                     var array = root.get_array();
 
