@@ -183,12 +183,12 @@ namespace jorts.Stash {
 
         try
         {
-            has_saved_state = file.query_exists();
+            bool has_saved_state = file.query_exists();
         }
         catch (Error e)
         {
             warning ("Failed to load file: %s\n", e.message);
-            has_saved_state = false;
+            bool has_saved_state = false;
         }
         if (file.query_exists()) {
 
