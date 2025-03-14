@@ -42,8 +42,6 @@ namespace jorts {
 
     public class MainWindow : Gtk.Window {
 
-
-    
         private Gtk.HeaderBar header;
         public Gtk.EditableLabel notetitle;
         private jorts.StickyView view;
@@ -73,11 +71,6 @@ namespace jorts {
         public const string ACTION_ZOOM_DEFAULT = "zoom_default";
         public const string ACTION_ZOOM_IN = "zoom_in";
         public const string ACTION_TOGGLE_SQUIGGLY = "toggle_squiggly";
-
-        public const string[] ACCELS_NEW =     {"<Control>n"};
-        public const string[] ACCELS_DELETE =     {"<Control>w"};
-        public const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
-        public const string[] ACCELS_EMOTE =     {"<Control>."};
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
@@ -152,7 +145,7 @@ namespace jorts {
             
             var new_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
-                    ACCELS_NEW,
+                    jorts.Constants.ACCELS_NEW,
                     _("New sticky note")
                 )
             };
@@ -165,7 +158,7 @@ namespace jorts {
 
             var delete_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
-                    ACCELS_DELETE,
+                    jorts.Constants.ACCELS_DELETE,
                     _("Delete sticky note ")
                 )
             };
@@ -180,10 +173,10 @@ namespace jorts {
             if (((Application)this.application).squiggly_mode_active) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 hide_item.set_tooltip_text (_("Show text"));
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Show text"));
+                hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Show text"));
             } else {
                 hide_item.set_icon_name ("eye-not-looking-symbolic");
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Hide text"));
+                hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Hide text"));
             }
 
             hide_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_TOGGLE_SQUIGGLY;
@@ -195,7 +188,7 @@ namespace jorts {
             var emojichooser_popover = new Gtk.EmojiChooser ();
 
             var emoji_button = new Gtk.MenuButton();
-            emoji_button.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_EMOTE,_("Insert emoji"));
+            emoji_button.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_EMOTE,_("Insert emoji"));
             emoji_button.has_tooltip = true;
             emoji_button.set_icon_name(jorts.Utils.random_emote (null));
             emoji_button.add_css_class("themedbutton");
@@ -210,7 +203,6 @@ namespace jorts {
             emojichooser_popover.emoji_picked.connect ((emoji) => {
                 view.buffer.insert_at_cursor (emoji,-1);
             });
-
 
             this.popover = new SettingsPopover (this.theme);
             this.set_zoom(data.zoom);
@@ -301,7 +293,7 @@ namespace jorts {
                     if (squiggly) {
                         //this.add_css_class ("squiggly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Show text"));
+                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Show text"));
 
                         if (this.is_active == false) {
                             this.add_css_class ("squiggly");
@@ -309,7 +301,7 @@ namespace jorts {
 
                     } else {
                         hide_item.set_icon_name ("eye-not-looking-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (ACCELS_SQUIGGLY,_("Hide text"));
+                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Hide text"));
 
                         if (this.is_active == false) {
                             this.remove_css_class ("squiggly");

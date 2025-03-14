@@ -137,7 +137,6 @@ namespace jorts {
             
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
-
             if (get_windows ().length () > 0) {
                 foreach (var window in open_notes) {
                     if (window.visible) {
@@ -197,12 +196,12 @@ namespace jorts {
     public void init_all_notes() {
         Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
 
-        // If we load nothing: Fallback to a random with blue theme as first
-        if (loaded_data.size == 0 ) {
-            noteData stored_note    = jorts.Utils.random_note(null);
-            stored_note.theme       = jorts.Constants.default_theme ;
-            loaded_data.add(stored_note);
-        }
+        //  // If we load nothing: Fallback to a random with blue theme as first
+        //  if (loaded_data.size == 0 ) {
+        //      noteData stored_note    = jorts.Utils.random_note(null);
+        //      stored_note.theme       = jorts.Constants.default_theme ;
+        //      loaded_data.add(stored_note);
+        //  }
 
         // Load everything we have
         foreach (noteData data in loaded_data) {

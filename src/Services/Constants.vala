@@ -59,14 +59,22 @@ namespace jorts.Constants {
     const int default_zoom               = 100;
 
     // Shortcuts
-    const string[] ACCELS_NEW           = {"<Control>n"};
-    const string[] ACCELS_DELETE        = {"<Control>w"};
     const string[] ACCELS_ZOOM_DEFAULT  = { "<control>0", "<Control>KP_0" };
     const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>equal", "<Control>KP_Add" };
     const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
 
-    const string[] FORMAT_ACTION_BOLD   = {"<Control>B"};
-    const string[] FORMAT_ACTION_ITALIC = {"<Control>I"};
-    const string[] FORMAT_ACTION_UNDERLINE = {"<Control>U"};
+    public const string ACTION_PREFIX   = "app.";
+    public const string ACTION_NEW      = "action_new";
+    public const string ACTION_DELETE   = "action_delete";
+
+    public const string ACTION_ZOOM_OUT = "zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "zoom_default";
+    public const string ACTION_ZOOM_IN = "zoom_in";
+    public const string ACTION_TOGGLE_SQUIGGLY = "toggle_squiggly";
+
+    public const string[] ACCELS_NEW =     {"<Control>n"};
+    public const string[] ACCELS_DELETE =     {"<Control>w"};
+    public const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
+    public const string[] ACCELS_EMOTE =     {"<Control>."};
 
 }

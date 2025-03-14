@@ -13,3 +13,6 @@ data/Application copy.css
 src/Widgets/SettingsPopover copy.vala
 src/MainWindow copy.vala
 generate_stylesheets.sh
+src/Widgets/help/ActionBar.vala
+.gitignore
+src/Widgets/help/MainWindow.vala

@@ -1,4 +1,11 @@
 
+#======== SETTINGS ========
+install_data (
+    'io.github.ellie_commons.jorts.gschema.xml',
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
+    rename: meson.project_name() + '.gschema.xml'
+)
+
 #======== Internationalization ========
 #Translate and install our .desktop file
 i18n.merge_file(
@@ -39,9 +46,3 @@ foreach i : icon_sizes
 endforeach
 
 
-#======== SETTINGS ========
-install_data (
-    'io.github.ellie_commons.jorts.gschema.xml',
-    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas'),
-    rename: meson.project_name() + '.gschema.xml'
-)
