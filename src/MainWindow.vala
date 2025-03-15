@@ -376,14 +376,14 @@ namespace jorts {
 
         // First check an increase doesnt go above limit
         public void zoom_in() {
-            if ((this.zoom + 20) <= jorts.Utils.max_zoom) {
+            if ((this.zoom + 20) <= jorts.Constants.ZOOM_MAX) {
                 this.set_zoom((this.zoom + 20));
             }
         }
 
         // First check an increase doesnt go below limit
         public void zoom_out() {
-            if ((this.zoom - 20) >= jorts.Utils.min_zoom) {
+            if ((this.zoom - 20) >= jorts.Constants.ZOOM_MIN) {
                 this.set_zoom((this.zoom - 20));
             }
         }

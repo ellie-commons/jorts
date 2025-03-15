@@ -67,11 +67,13 @@ namespace jorts {
         }
 
         static construct {
-            //gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+
         }
 
         construct {
-
+            this.squiggly_mode_active = gsettings.get_boolean ("squiggly-mode-active");
+            
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
@@ -126,7 +128,6 @@ namespace jorts {
             add_action (toggle_squiggly);
             toggle_squiggly.activate.connect (() => {
                 this.toggle_squiggly();
-                //this.squiggly_mode_active = gsettings.set_boolean ("squiggly_mode_active", this.squiggly_mode_active);
             });
 
 
@@ -183,12 +184,16 @@ namespace jorts {
 
 
     public void toggle_squiggly() {
+        
         if (this.squiggly_mode_active) {
             this.squiggly_mode_active = false;
         } else {
             this.squiggly_mode_active = true;
         }
+
+        gsettings.set_boolean ("squiggly-mode-active",this.squiggly_mode_active);
         this.squiggly_changed(this.squiggly_mode_active);
+
     }
 
 

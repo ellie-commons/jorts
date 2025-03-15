@@ -49,7 +49,9 @@ namespace jorts.Utils {
             case 220: return "superhuge";
             case 240: return "megahuge";
             case 260: return "ultrahuge";
-            case 280: return "urmom";
+            case 280: return "massive";
+            case 300: return "urmom";
+
             default: return "normal_zoom";
         }
     }
