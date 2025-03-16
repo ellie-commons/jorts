@@ -103,10 +103,8 @@ namespace jorts {
             this.theme = data.theme;
             this.content = data.content;
 
-
-
-            //this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
+            this.set_default_size (jorts.Constants.DEFAULT_WIDTH, jorts.Constants.DEFAULT_HEIGHT);
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
