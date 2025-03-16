@@ -296,7 +296,10 @@ namespace jorts {
                     if (squiggly) {
                         //this.add_css_class ("squiggly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Show text"));
+                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                            jorts.Constants.ACCELS_SQUIGGLY,
+                            _("Always show content of sticky notes")
+                        );
 
                         if (this.is_active == false) {
                             this.add_css_class ("squiggly");
@@ -304,7 +307,10 @@ namespace jorts {
 
                     } else {
                         hide_item.set_icon_name ("eye-not-looking-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Hide text"));
+                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                            jorts.Constants.ACCELS_SQUIGGLY,
+                            _("Hide content of unfocused sticky notes")
+                        );
 
                         if (this.is_active == false) {
                             this.remove_css_class ("squiggly");

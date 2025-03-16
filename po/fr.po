@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:38+0000\n"
+"POT-Creation-Date: 2025-03-16 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -434,11 +434,11 @@ msgstr "Nouveau post-it"
 msgid "Delete sticky note"
 msgstr "Supprimer le post-it"
 
-#: src/MainWindow.vala:175
+#: src/MainWindow.vala:175 src/MainWindow.vala:301
 msgid "Always show content of sticky notes"
 msgstr ""
 
-#: src/MainWindow.vala:181
+#: src/MainWindow.vala:181 src/MainWindow.vala:312
 msgid "Hide content of unfocused sticky notes"
 msgstr ""
 
@@ -448,15 +448,6 @@ msgstr ""
 
 #: src/MainWindow.vala:214
 msgid "Preferences for this sticky note"
-msgstr ""
-
-#. this.add_css_class ("squiggly");
-#: src/MainWindow.vala:299
-msgid "Show text"
-msgstr ""
-
-#: src/MainWindow.vala:307
-msgid "Hide text"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
