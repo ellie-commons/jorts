@@ -16,3 +16,4 @@ generate_stylesheets.sh
 src/Widgets/help/ActionBar.vala
 .gitignore
 src/Widgets/help/MainWindow.vala
+.flatpak/meson.sh

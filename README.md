@@ -7,7 +7,7 @@
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 [![CI](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml/badge.svg)](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml)
 
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
 
 <br/>
 <p align="left">
@@ -17,27 +17,14 @@ Available in: <a href="./po/de.po"">🇩🇪 Deutsch</a> · <a  href="./po/es.po
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little notes app, and is planned to stay as a cute simple little notes app.
-Main tasks are the tasks:
+In the works for next version:
 
-- [x] Remove the pinned feature - it cant work on wayland anymore
-- [x] Do a Yaml file so we can build it for flatpak
-- [x] Do cute transitions and color name
-- [x] Rebuild the way css theming is done
-- [x] Rebuild the way notes are managed and saved
-- [x] Do a separate for popover
-- [x] Repair the translations. Right now they dont pull in correctly because i constantly change stuff
-- [x] Port to gtk4
-- [x] Finish port: editablelabel and the popover
-- [x] Do all the testing
-- [x] Do a first release
-- [x] Do a first appcenter release
-- [x] Add zoom support
-- [ ] Zoom: scroll to zoom, keep for next note
-- [x] Detect hyperlinks and open in 
-- [x] Detect emails and open in Mail
-- [ ] Detect local links and open in files
-- [ ] Squiggly mode
+- [x] Squiggly mode
 - [x] Emoji button
+- [ ] Zoom: scroll to zoom
+- [ ] Detect local path to files and folders and open in file explorer
+- [ ] Do sometimes a backup of the stash
+- [ ] More commandline options
 - [ ] Highlight text
 - [ ] Add bold, italic, strikethrough...
 - [ ] Move widget definitions to blueprint files
@@ -46,7 +33,7 @@ New features may sneak themselves. Feel free to check [the project board](https:
 
 ## 💝 Donations
 
-Lot of the code (and the aesthetic) was from original work by Lainsce because this is a fork of an older version of Notejot from a time before new additions broke NoteJot for elementary OS 8.
+Some of the code (and the aesthetic) was from original work by Lainsce because this is a fork of an older version of Notejot from a time before new additions broke NoteJot for elementary OS 8.
 Currently the real, official NoteJot is something different, more fully-featured and no longer focused on elementary OS.
 Some people liked the simplicity of the old version, and thus we created this fork of it.
 
@@ -55,7 +42,6 @@ If you want to thank the original creator:
 [Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
 
 Currently actively trying to revive this project is me - Stella
-
 Support is always welcome and shows us that people want this work to continue.
 
 Stella, current main dev:
@@ -77,13 +63,14 @@ libjson-glib-dev
 libgee-0.8-dev
 libjson-glib
 meson
-libvala
+valac
+gettext
 ```
 
-As of the current date (18Feb2025), here are the package names to install:
+As of the current date (16March2025), here are the package names to install:
 
 ```bash
-sudo apt install libgranite-7-common libjson-glib-1.0-0 libgee-0.8-2 meson libvala-0.56-0 flatpak-builder
+sudo apt install libgranite-7-common libjson-glib-dev libgee-0.8-2 meson valac libvala-0.56-0 flatpak-builder gettext
 ```
 
 Installation is as simple as cloning this repo (or download and extract the zip archive), change to the new repo's directory, and run the following command:
@@ -101,3 +88,5 @@ You can get it all by entering in a terminal:
 ```bash
 cp ~/.var/app/io.github.ellie_commons.jorts/data ~/
 ```
+
+"saved_state.json" contains all notes in JSON format. "backup_state.json" is a monthly backup of it.

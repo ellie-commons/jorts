@@ -50,7 +50,6 @@ namespace jorts.Stash {
 		} catch (Error e) {
 			warning ("Failed to prepare target data directory %s\n", e.message);
 		}
-
 	}
 
     // Loop through the list of windows and convert it into a giant json string
@@ -89,10 +88,10 @@ namespace jorts.Stash {
 
     // Just slams a json in the storage file
     // TODO: Simplify this
-    public void overwrite_stash(string json_data) {
+    public void overwrite_stash(string json_data, string file_overwrite) {
 
         string data_directory = Environment.get_user_data_dir ();
-        string storage_path = data_directory + "/saved_state.json";
+        string storage_path = data_directory + "/" + file_overwrite;
     
         var dir = File.new_for_path(data_directory);
         var file = File.new_for_path (storage_path);
@@ -121,49 +120,102 @@ namespace jorts.Stash {
         string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
         string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
         string content  = node.get_string_member_with_default("content","");
-        int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.default_zoom);
-        int64 width     = node.get_int_member_with_default("width",jorts.Constants.default_width);
-        int64 height    = node.get_int_member_with_default("height",jorts.Constants.default_height);
+        int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_ZOOM);
+        int64 width     = node.get_int_member_with_default("width",jorts.Constants.DEFAULT_WIDTH);
+        int64 height    = node.get_int_member_with_default("height",jorts.Constants.DEFAULT_HEIGHT);
 
         noteData loaded_note = new noteData(title, theme, content, zoom, width, height);
         return loaded_note;
     }
 
-
-
-    // Handles the whole loading. If there is nothing, just start with a blue one
-    public Gee.ArrayList<noteData> load_from_stash() {
+    public Gee.ArrayList<noteData> load_parser(Json.Parser parser) {
         Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
-        string data_directory = Environment.get_user_data_dir ();
-        string storage_path = data_directory + "/saved_state.json";
-    
-        var file = File.new_for_path (storage_path);
-        if (file.query_exists()) {
 
-                // TODO: If the Json is mangled, there is a risk Jorts starts from a blank slate and overwrites it
-                // We should do a backup of the mangled json before overwriting
-                var parser = new Json.Parser();
-
-                try {
-                    parser.load_from_mapped_file (storage_path);
-                    var root = parser.get_root();
-                    var array = root.get_array();
-
-                    foreach (var item in array.get_elements()) {
-                        var stored_note = jorts.Stash.load_node(item.get_object());
-                        loaded_data.add(stored_note);
-                    }
-
-                } catch (Error e) {
-                    warning ("Failed to load file: %s\n", e.message);
-                }
-
-        } else {
-                noteData stored_note    = jorts.Utils.random_note(null);
-                stored_note.theme       = jorts.Constants.default_theme ;
-                loaded_data.add(stored_note);
+        var root = parser.get_root();
+        var array = root.get_array();
+        
+        foreach (var item in array.get_elements()) {
+            var stored_note = jorts.Stash.load_node(item.get_object());
+            loaded_data.add(stored_note);
         }
 
         return loaded_data;
     }
+
+
+
+    // Handles the whole loading. If there is nothing, just start with a blue one
+    // We first try from main storage
+    // If that fails, we go for backup
+    // Still failing ? Start anew
+    public Gee.ArrayList<noteData> load_from_stash() {
+        Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
+        string data_directory = Environment.get_user_data_dir ();
+        string storage_path = data_directory + "/" + jorts.Constants.FILENAME_STASH;
+        string backup_path = data_directory + "/" + jorts.Constants.FILENAME_BACKUP;
+
+        var parser = new Json.Parser();
+
+        // Try standard storage
+        try {
+            parser.load_from_mapped_file (storage_path);
+            loaded_data = load_parser(parser);
+
+        } catch (Error e) {
+            print("[WARNING] Failed to load from main storage! " + e.message.to_string() + "\n");
+            
+            // Try backup file
+            try {
+                parser.load_from_mapped_file (backup_path);
+                loaded_data = load_parser(parser);
+
+            } catch (Error e) {
+
+                // Nothing works
+                print("[WARNING] Failed to load from BACKUP!!! " + e.message.to_string() + "\n");
+
+            }
+
+
+        }
+
+        // If we load nothing: Fallback to a random with blue theme as first
+        if (loaded_data.size == 0 ) {
+            noteData blank_slate    = jorts.Utils.random_note(null);
+            blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
+            loaded_data.add(blank_slate);
+        }
+
+        return loaded_data;
+
+    }
+
+
+
+
+	// We first check if we have a backup or a last saved date
+    // if none of those two, tell we need immediate backup
+    // else, then depending how old we know the backup to be
+	public bool need_backup(string last_backup) {
+        debug("lets check if we need to backup");
+
+        string data_directory = Environment.get_user_data_dir ();
+        string backup_path = data_directory + "/" + jorts.Constants.FILENAME_BACKUP;
+        var file = File.new_for_path (backup_path);
+
+        if ((last_backup == "") || (file.query_exists() == false)) {
+
+            return true;
+
+        } else {
+            var now = new DateTime.now_utc () ;
+            var date_last_backup = new DateTime.from_iso8601 (last_backup, null);
+            TimeSpan date_diff = now.difference(date_last_backup);
+            var days_in_micro = jorts.Constants.DAYS_BETWEEN_BACKUPS * TimeSpan.DAY;
+            return (date_diff > days_in_micro);
+        }
+    }
+
+
+
 }

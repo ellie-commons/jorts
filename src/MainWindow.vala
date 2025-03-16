@@ -105,7 +105,7 @@ namespace jorts {
 
 
 
-            this.set_default_size ((int)data.width, (int)data.height);
+            //this.set_default_size ((int)data.width, (int)data.height);
             this.set_title (this.title_name);
 
             // Rebuild the whole theming
@@ -134,8 +134,8 @@ namespace jorts {
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
-            scrolled.set_size_request (66,54);
-            view = new jorts.StickyView (100, this.content);
+            //scrolled.set_size_request (66,54);
+            view = new jorts.StickyView (this.content);
             scrolled.set_child (view);
 
 

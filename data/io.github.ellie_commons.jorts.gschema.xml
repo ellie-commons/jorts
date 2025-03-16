@@ -11,5 +11,10 @@
 			<summary>Change font to an illegible one</summary>
 			<description>Whether to change font to an illegible one for unfocused sticky notes, for privacy (NOT IMPLEMENTED YET)</description>
 		</key>
+		<key name="last-backup" type="s">
+			<default>""</default>
+			<summary>Last time saved_state.json was backed up</summary>
+			<description>Stores the date in string format for the last time a backup happened. If empty, then the app was just installed, do it immediately (NOT IMPLEMENTED YET)</description>
+		</key>
 	</schema>
 </schemalist>

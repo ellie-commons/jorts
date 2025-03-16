@@ -57,7 +57,7 @@ public class jorts.StickyView : Granite.HyperTextView {
         }  */
 
 
-        public StickyView (int zoom, string? content) {
+        public StickyView (string? content) {
 
                 this.buffer = new Gtk.TextBuffer (null);
                 this.bottom_margin = 10;

@@ -86,6 +86,7 @@
                     <li>New feature: Squiggly mode! Hide sticky notes content when unfocused</li>
                     <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
                     <li>The button in the toolbar displays a random emote everytime you click!</li>
+                    <li>New feature: Jorts does a monthly backup. Should there be any issue you can recover data!</li>
                 </ul>
             </description>
         </release>

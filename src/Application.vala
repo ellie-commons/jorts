@@ -47,7 +47,7 @@ namespace jorts {
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
-            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.default_theme.ascii_down();
+            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
             // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
@@ -179,7 +179,7 @@ namespace jorts {
     public void save_to_stash() {
         jorts.Stash.check_if_stash ();
         string json_data = jorts.Stash.jsonify (open_notes);
-        jorts.Stash.overwrite_stash (json_data);
+        jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_STASH);
     }
 
 
@@ -201,18 +201,26 @@ namespace jorts {
     public void init_all_notes() {
         Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
 
-        //  // If we load nothing: Fallback to a random with blue theme as first
-        //  if (loaded_data.size == 0 ) {
-        //      noteData stored_note    = jorts.Utils.random_note(null);
-        //      stored_note.theme       = jorts.Constants.default_theme ;
-        //      loaded_data.add(stored_note);
-        //  }
+
 
         // Load everything we have
         foreach (noteData data in loaded_data) {
             print("Loaded: " + data.title + "\n");
             this.create_note(data);
         }
+
+
+        if (jorts.Stash.need_backup(gsettings.get_string("last-backup"))) {
+            print("Doing a backup! :)");
+
+            jorts.Stash.check_if_stash ();
+            string json_data = jorts.Stash.jsonify (this.open_notes);
+            jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_BACKUP);
+
+            var now = new DateTime.now_utc ().to_string() ;
+            gsettings.set_string("last-backup", now);
+        }
+
     }
 
 
