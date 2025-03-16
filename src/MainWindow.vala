@@ -157,7 +157,7 @@ namespace jorts {
             var delete_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
                     jorts.Constants.ACCELS_DELETE,
-                    _("Delete sticky note ")
+                    _("Delete sticky note")
                 )
             };
             delete_item.set_icon_name ("edit-delete-symbolic");
@@ -170,11 +170,16 @@ namespace jorts {
             var hide_item = new Gtk.ToggleButton ();
             if (((Application)this.application).squiggly_mode_active) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                hide_item.set_tooltip_text (_("Show text"));
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Show text"));
+                hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                    jorts.Constants.ACCELS_SQUIGGLY,
+                    _("Always show content of sticky notes")
+                );
             } else {
                 hide_item.set_icon_name ("eye-not-looking-symbolic");
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_SQUIGGLY,_("Hide text"));
+                hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                    jorts.Constants.ACCELS_SQUIGGLY,
+                    _("Hide content of unfocused sticky notes")
+                );
             }
 
             hide_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_TOGGLE_SQUIGGLY;
@@ -206,7 +211,7 @@ namespace jorts {
             this.set_zoom(data.zoom);
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
-            app_button.tooltip_text = (_("Settings"));
+            app_button.tooltip_text = (_("Preferences for this sticky note"));
             app_button.set_icon_name("open-menu-symbolic");
             app_button.direction = Gtk.ArrowType.UP;
             app_button.add_css_class("themedbutton");
