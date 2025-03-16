@@ -2,7 +2,6 @@ src/Widgets/ColorPill.vala
 src/Widgets/ColorBox.vala
 src/Widgets/SettingsPopover.vala
 src/Widgets/StickyView.vala
-src/Services/Themer.vala
 src/Services/Utils.vala
 src/MainWindow.vala
 src/Application.vala

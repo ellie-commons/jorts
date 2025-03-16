@@ -92,6 +92,10 @@
                     <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
                     <li>The button in the toolbar displays a random emote everytime you click!</li>
                     <li>New feature: Jorts does a monthly backup. Should there be any issue you can recover data!</li>
+                    <li>Should the main storage be corrupted, Jorts tries to load from backup</li>
+                    <li>Some new fun/cute default titles</li>
+                    <li>Under the hood changes here and there for cleaner code</li>
+
                 </ul>
             </description>
         </release>

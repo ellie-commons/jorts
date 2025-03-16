@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:44+0000\n"
+"POT-Creation-Date: 2025-03-16 13:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,144 +62,32 @@ msgstr "Břidlice"
 #. THEME SELECTION
 #.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:69
+#: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
 msgstr "Barva samolepicího bločku"
 
-#: src/Widgets/SettingsPopover.vala:71
+#: src/Widgets/SettingsPopover.vala:72
 msgid "Choose a colour for this sticky note"
 msgstr ""
 
-#: src/Widgets/SettingsPopover.vala:93
+#: src/Widgets/SettingsPopover.vala:94
 msgid "Zoom out"
 msgstr "Zvětšit"
 
-#: src/Widgets/SettingsPopover.vala:99
+#: src/Widgets/SettingsPopover.vala:100
 msgid "Default zoom level"
 msgstr "Výchozí úroveň přiblížení"
 
-#: src/Widgets/SettingsPopover.vala:106
+#: src/Widgets/SettingsPopover.vala:107
 msgid "Zoom in"
 msgstr "Přiblížit"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:154
+#: src/Widgets/SettingsPopover.vala:155
 msgid "ZOOM%"
 msgstr "ZOOM%"
-
-#: src/Services/Themer.vala:43
-msgid ""
-"\n"
-"            /* Accent color \n"
-"            mix(@${accent_color}_500, @${accent_color}_700, 0.3) */\n"
-"            \n"
-"            window.${accent_color} {\n"
-"                background-color: @${accent_color}_100;\n"
-"            }\n"
-"\n"
-"            window.${accent_color} undershoot.top {\n"
-"                background:\n"
-"                    linear-gradient(\n"
-"                        @${accent_color}_100 0%,\n"
-"                        alpha(@${accent_color}_100, 0) 50%\n"
-"                    );\n"
-"            }\n"
-"\n"
-"            window.${accent_color} undershoot.bottom {\n"
-"                background:\n"
-"                    linear-gradient(\n"
-"                        alpha(@${accent_color}_100, 0) 50%,\n"
-"                        @${accent_color}_100 100%\n"
-"                    );\n"
-"            }\n"
-"\n"
-"\n"
-"            /* WEIRD: if we dont personally just redefine overshoot effect, "
-"the grey theme doesnt have any*/\n"
-"            window.${accent_color} overshoot.top {\n"
-"            background: linear-gradient(to top, alpha(mix(@${accent_color}"
-"_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3), 0.25) 100%); }\n"
-"\n"
-"            window.${accent_color} overshoot.right {\n"
-"            background: linear-gradient(to right, alpha(mix(@${accent_color}"
-"_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3), 0.25) 100%); }\n"
-"\n"
-"            window.${accent_color} overshoot.bottom {\n"
-"            background: linear-gradient(to bottom, alpha(mix(@${accent_color}"
-"_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3), 0.25) 100%); }\n"
-"\n"
-"            window.${accent_color} overshoot.left {\n"
-"            background: linear-gradient(to left, alpha(mix(@${accent_color}"
-"_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3), 0.25) 100%); }\n"
-"\n"
-"            window.${accent_color} textview text selection,\n"
-"            window.${accent_color} editablelabel text selection {\n"
-"                color: shade(@${accent_color}_100, 1.88);\n"
-"                background-color: @${accent_color}_900;\n"
-"            }\n"
-"\n"
-"            window.${accent_color} titlebar,\n"
-"            window.${accent_color} titlebar image,\n"
-"            window.${accent_color} .themedbutton,\n"
-"            window.${accent_color} .themedbutton image,\n"
-"            window.${accent_color} windowcontrols,\n"
-"            window.${accent_color} windowcontrols image,\n"
-"            window.${accent_color} {\n"
-"                color: @${accent_color}_900;\n"
-"            }\n"
-"\n"
-"            window.${accent_color} titlebar,\n"
-"            window.${accent_color} textview,\n"
-"            window.${accent_color} textview text,\n"
-"            window.${accent_color} editablelabel.editing text {\n"
-"                background-color: transparent;\n"
-"                border-bottom-color: @${accent_color}_100;\n"
-"                color: shade(@${accent_color}_900, 0.77);\n"
-"            }\n"
-"\n"
-"            /* Fix the emoticon entry having note color background */\n"
-"            window.${accent_color} entry {\n"
-"                background-color: white;\n"
-"                color: black;\n"
-"            }\n"
-"\n"
-"            window.${accent_color} editablelabel {\n"
-"                color: @${accent_color}_900;\n"
-"            }\n"
-"\n"
-"            window.${accent_color} editablelabel:hover,\n"
-"            window.${accent_color} editablelabel:focus {\n"
-"                border: 1px solid alpha(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3),0.88);\n"
-"            }\n"
-"\n"
-"            window.${accent_color} editablelabel.editing {\n"
-"                border: 1px solid shade(mix(@${accent_color}_500, "
-"@${accent_color}_700, 0.3),0.7);\n"
-"                box-shadow: inset 0 0 2px 2px mix(@${accent_color}_100, "
-"@${accent_color}_500, 0.3);\n"
-"            }\n"
-"\n"
-"            window.${accent_color}:backdrop editablelabel {\n"
-"                color: alpha(@${accent_color}_900, 0.75);\n"
-"            }\n"
-"\n"
-"            window.${accent_color}:backdrop editablelabel,\n"
-"            window.${accent_color}:backdrop actionbar,\n"
-"            window.${accent_color}:backdrop actionbar image,\n"
-"            window.${accent_color}:backdrop windowcontrols,\n"
-"            window.${accent_color}:backdrop windowcontrols image {\n"
-"                color: alpha(@${accent_color}_900, 0.75);\n"
-"            }\n"
-"\n"
-"        "
-msgstr ""
 
 #: src/Services/Utils.vala:80
 msgid "All my very best friends"
@@ -337,88 +225,12 @@ msgstr "Ubrouskové čmáranice"
 msgid "My fav songs to sing along"
 msgstr ""
 
-#: src/Services/Utils.vala:122
-msgid "face-angel-symbolic"
+#: src/Services/Utils.vala:114
+msgid "When to water which plant"
 msgstr ""
 
-#: src/Services/Utils.vala:123
-msgid "face-angry-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:124
-msgid "face-cool-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:125
-msgid "face-crying-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:126
-msgid "face-devilish-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:127
-msgid "face-embarrassed-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:128
-msgid "face-kiss-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:129
-msgid "face-laugh-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:130
-msgid "face-monkey-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:131
-msgid "face-plain-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:132
-msgid "face-raspberry-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:133
-msgid "face-sad-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:134
-msgid "face-sick-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:135
-msgid "face-smile-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:136
-msgid "face-smile-big-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:137
-msgid "face-smirk-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:138
-msgid "face-surprise-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:139
-msgid "face-tired-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:140
-msgid "face-uncertain-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:141
-msgid "face-wink-symbolic"
-msgstr ""
-
-#: src/Services/Utils.vala:142
-msgid "face-worried-symbolic"
+#: src/Services/Utils.vala:115
+msgid "Top 10 anime betrayals"
 msgstr ""
 
 #: src/MainWindow.vala:127
@@ -555,7 +367,7 @@ msgid "2.2.0 The Jorts of light"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:102
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
 msgid "Better translation coverage"
 msgstr ""
 
@@ -579,125 +391,137 @@ msgid ""
 "recover data!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
-msgid "2.1.2 The unrippable jorts"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
+msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
-msgid "Add relief to actionbar buttons"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
+msgid "Some new fun/cute default titles"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
+msgid "Under the hood changes here and there for cleaner code"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
-msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr ""
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
-msgid "Bugfix: Title in multitasking not set correctly"
-msgstr ""
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
-msgid "Bugfix: Icon inconsistency accross icon themes"
+msgid "2.1.2 The unrippable jorts"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
+msgid "Add relief to actionbar buttons"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
+msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
+msgid "Bugfix: Title in multitasking not set correctly"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
+msgid "Bugfix: Icon inconsistency accross icon themes"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:113
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:115
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
 msgid "Clearer appmenu description"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:116
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
 msgid "More consistent theming"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: screenshot not showing"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:126
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:127
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:129
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "Improved translations"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
 msgid "Better shortcut and tooltips"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:138
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "2.0.1 Appcenter release"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
 msgid "10 lovely little colours"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 msgid "Smooth transition when changing theme"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
 msgid "New stickies have a random fun little title and colour"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
 msgid "A few initial translations included, and more to come"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 

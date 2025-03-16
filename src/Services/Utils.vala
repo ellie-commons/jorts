@@ -110,7 +110,10 @@ namespace jorts.Utils {
             _("To bring to the party"),
             _("My amazing mixtape"),
             _("Napkin scribbles"),
-            _("My fav songs to sing along")
+            _("My fav songs to sing along"),
+            _("When to water which plant"),
+            _("Top 10 anime betrayals")
+
         };
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
@@ -118,32 +121,9 @@ namespace jorts.Utils {
 
         // Spits out a cute or funny random title for a new sticky note
         public string random_emote (string? skip_emote) {
-            string[] emotes = {
-                _("face-angel-symbolic"),
-                _("face-angry-symbolic"),
-                _("face-cool-symbolic"),
-                _("face-crying-symbolic"),
-                _("face-devilish-symbolic"),
-                _("face-embarrassed-symbolic"),
-                _("face-kiss-symbolic"),
-                _("face-laugh-symbolic"),
-                _("face-monkey-symbolic"),
-                _("face-plain-symbolic"),
-                _("face-raspberry-symbolic"),
-                _("face-sad-symbolic"),
-                _("face-sick-symbolic"),                
-                _("face-smile-symbolic"),
-                _("face-smile-big-symbolic"),
-                _("face-smirk-symbolic"),
-                _("face-surprise-symbolic"),
-                _("face-tired-symbolic"),
-                _("face-uncertain-symbolic"),
-                _("face-wink-symbolic"),
-                _("face-worried-symbolic")
-            };
 
             Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
-            allemotes.add_all_array (emotes);
+            allemotes.add_all_array (jorts.Constants.EMOTES);
 
             if (skip_emote != null) {
                 allemotes.remove(skip_emote);

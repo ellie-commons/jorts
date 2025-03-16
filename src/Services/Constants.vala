@@ -84,4 +84,32 @@ namespace jorts.Constants {
     public const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
     public const string[] ACCELS_EMOTE =     {"<Control>."};
 
+
+    public const string[] EMOTES = {
+        "face-angel-symbolic",
+        "face-angry-symbolic",
+        "face-cool-symbolic",
+        "face-crying-symbolic",
+        "face-devilish-symbolic",
+        "face-embarrassed-symbolic",
+        "face-kiss-symbolic",
+        "face-laugh-symbolic",
+        "face-monkey-symbolic",
+        "face-plain-symbolic",
+        "face-raspberry-symbolic",
+        "face-sad-symbolic",
+        "face-sick-symbolic",                
+        "face-smile-symbolic",
+        "face-smile-big-symbolic",
+        "face-smirk-symbolic",
+        "face-surprise-symbolic",
+        "face-tired-symbolic",
+        "face-uncertain-symbolic",
+        "face-wink-symbolic",
+        "face-worried-symbolic"
+    };
+
+
+
+
 }
