@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Zoomer"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "Quand arroser qui plante"
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 des trahisons d'anime"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Éditer le titre"
@@ -246,19 +252,19 @@ msgstr "Nouveau post-it"
 msgid "Delete sticky note"
 msgstr "Supprimer le post-it"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Toujours afficher le contenu des post-it"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Masquer le contenu des post-its en arrière-plan"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "insérer les emoji"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Préférences pour ce post-it"
 
@@ -274,9 +280,10 @@ msgstr "Utilitaire de post-it"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Notez les notes, les rappels, les pensées aléatoires et autres informations à court terme"
-"Écrire des notes, des rappels, des pensées aléatoires et d'autres "
-"informations de court terme"
+msgstr ""
+"Notez les notes, les rappels, les pensées aléatoires et autres informations "
+"à court termeÉcrire des notes, des rappels, des pensées aléatoires et "
+"d'autres informations de court terme"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -288,8 +295,9 @@ msgstr "Ni jeans, ni shorts, tout comme les jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "De petites notes collantes colorées pour toutes vos pensées :)"
-"Un petit utilitaire de notes autocollantes colorées, pour vos pensées :)"
+msgstr ""
+"De petites notes collantes colorées pour toutes vos pensées :)Un petit "
+"utilitaire de notes autocollantes colorées, pour vos pensées :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -297,19 +305,23 @@ msgstr "Les fonctionnalités comprennent :"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr "Couleurs: dix jolis thèmes. "
-"Couleurs : dix jolis thèmes. Chaque nouvelle note reçoit un thème aléatoire"
+msgstr ""
+"Couleurs: dix jolis thèmes. Couleurs : dix jolis thèmes. Chaque nouvelle "
+"note reçoit un thème aléatoire"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "adaptatif: les nouvelles notes obtiennent le zoom que vous avez choisi pour la dernière fois"
-"Adaptatif: Les nouvelles notes ont le zoom que vous avez choisi en dernier"
+msgstr ""
+"adaptatif: les nouvelles notes obtiennent le zoom que vous avez choisi pour "
+"la dernière foisAdaptatif: Les nouvelles notes ont le zoom que vous avez "
+"choisi en dernier"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Mignon: Chaque nouvelle note a un titre de Random (modifiable) drôle ou mignon"
-"Mignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle ou "
-"mignon"
+msgstr ""
+"Mignon: Chaque nouvelle note a un titre de Random (modifiable) drôle ou "
+"mignonMignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle "
+"ou mignon"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -321,10 +333,12 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Ceci est une fourche d'une ancienne version de \"notejot\" par Lainsce et n'existerait pas sans son travail. "
-"Il s'agit d'une version dérivée d'une ancienne version de Notejot par "
-"lainsce et n'existerait pas sans son travail. La communauté l'a tellement "
-"aimé que nous avons pensé que ce serait génial de la revivre !"
+msgstr ""
+"Ceci est une fourche d'une ancienne version de \"notejot\" par Lainsce et "
+"n'existerait pas sans son travail. Il s'agit d'une version dérivée d'une "
+"ancienne version de Notejot par lainsce et n'existerait pas sans son "
+"travail. La communauté l'a tellement aimé que nous avons pensé que ce serait "
+"génial de la revivre !"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -357,8 +371,9 @@ msgstr "Un post-it avec le thème « Myrtille »."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr "Vous pouvez modifier la couleur et la taille du texte individuelles!"
-"Vous pouvez modifier la couleur et la taille du texte de chaque post-it!"
+msgstr ""
+"Vous pouvez modifier la couleur et la taille du texte individuelles!Vous "
+"pouvez modifier la couleur et la taille du texte de chaque post-it!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid ""
@@ -395,7 +410,9 @@ msgstr "Nouvelle fonctionnalité: bouton Emoji Picker! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Le bouton de la barre d'outils affiche un émote aléatoire à chaque fois que vous cliquez!"
+msgstr ""
+"Le bouton de la barre d'outils affiche un émote aléatoire à chaque fois que "
+"vous cliquez!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -405,7 +422,9 @@ msgstr "Nouvelle fonctionnalité: Jorts fait une sauvegarde mensuelle. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Si le stockage principal est corrompu, Jorts essaie de charger de la sauvegarde"
+msgstr ""
+"Si le stockage principal est corrompu, Jorts essaie de charger de la "
+"sauvegarde"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Some new fun/cute default titles"
@@ -425,7 +444,8 @@ msgstr "Ajouter des boutons de soulagement à la barre d'action"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "BugFix: case Edge où le thème ou le zoom n'était pas enregistré correctement"
+msgstr ""
+"BugFix: case Edge où le thème ou le zoom n'était pas enregistré correctement"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -471,7 +491,9 @@ msgstr "Comprend un zoom par note! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "Dernier Set Zoom, alias ce qui est le plus confortable pour vous, reste par défaut pour de nouvelles notes"
+msgstr ""
+"Dernier Set Zoom, alias ce qui est le plus confortable pour vous, reste par "
+"défaut pour de nouvelles notes"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -509,9 +531,9 @@ msgstr "Réédition d'une version ancienne mais populaire de Notejot"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
 msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "L'application s'appelle maintenant Jorts. "
-" L'application s'appelle désormais Jorts. Vous ne pouvez cependant pas la "
-"porter"
+msgstr ""
+"L'application s'appelle maintenant Jorts.  L'application s'appelle désormais "
+"Jorts. Vous ne pouvez cependant pas la porter"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
 msgid "10 lovely little colours"
@@ -519,8 +541,10 @@ msgstr "10 jolies petites couleurs"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Construit au sommet de technologies et de formats d'emballage modernes"
-"Construit sur les technologies modernes et formats de distribution Linux"
+msgstr ""
+"Construit au sommet de technologies et de formats d'emballage "
+"modernesConstruit sur les technologies modernes et formats de distribution "
+"Linux"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 msgid "Smooth transition when changing theme"
@@ -537,15 +561,16 @@ msgstr "Quelques traductions initiales incluses, et plus à venir"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "les e-mails et les liens sont cliquables! "
-"Les e-mails et les liens sont cliquables ! Ctrl+Clic pour ouvrir dans le "
-"mail ou le navigateur"
+msgstr ""
+"les e-mails et les liens sont cliquables! Les e-mails et les liens sont "
+"cliquables ! Ctrl+Clic pour ouvrir dans le mail ou le navigateur"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "le texte prend en charge l'annulation, la refonte et vous pouvez utiliser des emojis :)"
-"Le texte prend en charge les fonctions annuler et rétablir, et vous pouvez "
-"utiliser des émoticônes :)"
+msgstr ""
+"le texte prend en charge l'annulation, la refonte et vous pouvez utiliser "
+"des emojis :)Le texte prend en charge les fonctions annuler et rétablir, et "
+"vous pouvez utiliser des émoticônes :)"
 
 #~ msgid "Settings"
 #~ msgstr "Paramètres"
@@ -588,8 +613,9 @@ msgstr "le texte prend en charge l'annulation, la refonte et vous pouvez utilise
 #~ msgstr "Nouvelle note"
 
 #~ msgid "Old Notejot version and UI revived in a new project"
-#~ msgstr "Old NoteJot Version et UI Ravived dans un nouveau projet"
-#~ "L'ancienne version et l'interface de Notejot ont été remises à jour."
+#~ msgstr ""
+#~ "Old NoteJot Version et UI Ravived dans un nouveau projetL'ancienne "
+#~ "version et l'interface de Notejot ont été remises à jour."
 
 #~ msgid "Closer to current elementary OS Stylesheet and named colours"
 #~ msgstr "Plus proche de la feuille de style actuelle de elementary OS"
@@ -620,5 +646,3 @@ msgstr "le texte prend en charge l'annulation, la refonte et vous pouvez utilise
 
 #~ msgid "Note your thoughts"
 #~ msgstr "Note tes pensées"
-
-

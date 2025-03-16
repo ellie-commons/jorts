@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Acercar"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "cuándo regar qué planta"
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 traiciones de anime"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Editar título"
@@ -246,19 +252,19 @@ msgstr "Nueva nota adhesiva"
 msgid "Delete sticky note"
 msgstr "Eliminar nota adhesiva"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Siempre muestre contenido de notas adhesivas"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Ocultar contenido de notas pegajosas desenfrenadas"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "inserte emoji"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Preferencias para esta nota pegajosa"
 
@@ -275,9 +281,10 @@ msgstr "Notas adhesivas"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Escriba notas, recordatorios, pensamientos aleatorios y otras informaciones a corto plazo"
-"Escribir notas, recordatorios, pensamientos aleatorios y otra información a "
-"corto plazo"
+msgstr ""
+"Escriba notas, recordatorios, pensamientos aleatorios y otras informaciones "
+"a corto plazoEscribir notas, recordatorios, pensamientos aleatorios y otra "
+"información a corto plazo"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -303,14 +310,16 @@ msgstr "Colores: Diez bonitos temas. Cada nueva nota recibe una al azar."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Adaptativo: Nuevas notas Obtenga el zoom que eligió por última vez"
-"Adaptable: Las notas nuevas obtienen el zoom que eligió por última vez."
+msgstr ""
+"Adaptativo: Nuevas notas Obtenga el zoom que eligió por última vezAdaptable: "
+"Las notas nuevas obtienen el zoom que eligió por última vez."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Cute: cada nueva nota tiene un título divertido o lindo aleatorio (editable)"
-"Lindo: Cada nota nueva tiene un título aleatorio (editable) divertido o "
-"lindo."
+msgstr ""
+"Cute: cada nueva nota tiene un título divertido o lindo aleatorio "
+"(editable)Lindo: Cada nota nueva tiene un título aleatorio (editable) "
+"divertido o lindo."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -322,10 +331,11 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Esta es una bifurcación de una versión antigua de \"Notejot\" de Lainsce y no existiría sin su trabajo. "
-"Esta es una bifurcación de una versión antigua de Notejot de lainsce,y no "
-"existiría sin su trabajo.¡ A la comunidad le gustó tanto que pensamos "
-"quesería genial revivirla!"
+msgstr ""
+"Esta es una bifurcación de una versión antigua de \"Notejot\" de Lainsce y "
+"no existiría sin su trabajo. Esta es una bifurcación de una versión antigua "
+"de Notejot de lainsce,y no existiría sin su trabajo.¡ A la comunidad le "
+"gustó tanto que pensamos quesería genial revivirla!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -395,7 +405,9 @@ msgstr "Nueva característica: ¡Botón de selección de emoji! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "¡El botón en la barra de herramientas muestra un emote aleatorio cada vez que hace clic!"
+msgstr ""
+"¡El botón en la barra de herramientas muestra un emote aleatorio cada vez "
+"que hace clic!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -405,7 +417,9 @@ msgstr "Nueva característica: Jorts hace una copia de seguridad mensual. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Si el almacenamiento principal se corrompe, Jorts intenta cargarse desde la copia de seguridad"
+msgstr ""
+"Si el almacenamiento principal se corrompe, Jorts intenta cargarse desde la "
+"copia de seguridad"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Some new fun/cute default titles"
@@ -425,13 +439,14 @@ msgstr "Agregar alivio a los botones de Action Bar"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Bugfix: Borde Case donde el tema o el zoom no se guardaron correctamente"
+msgstr ""
+"Bugfix: Borde Case donde el tema o el zoom no se guardaron correctamente"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Bugfix: Título en multitarea no configurado correctamente"
-"Corrección de errores: El título en multitarea no se ha configurado "
-"correctamente."
+msgstr ""
+"Bugfix: Título en multitarea no configurado correctamenteCorrección de "
+"errores: El título en multitarea no se ha configurado correctamente."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Bugfix: Icon inconsistency accross icon themes"
@@ -473,7 +488,9 @@ msgstr "¡Incluye un zoom por nota! Para que pueda agrandar o reducir el texto."
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "El último set Zoom, también conocido como lo más cómodo para usted, permanece como predeterminado para nuevas notas"
+msgstr ""
+"El último set Zoom, también conocido como lo más cómodo para usted, "
+"permanece como predeterminado para nuevas notas"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -494,7 +511,8 @@ msgstr "Mejor acceso directo y información sobre herramientas"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Se corrigió un error donde Jorts permanecía sobre el tema del sistema de luz"
+msgstr ""
+"Se corrigió un error donde Jorts permanecía sobre el tema del sistema de luz"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "2.0.1 Appcenter release"
@@ -536,9 +554,10 @@ msgstr "Se incluyen algunas traducciones iniciales, y habrá más próximamente.
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "¡Se pueden hacer clic en el correo electrónico y los enlaces! "
-"¡Se puede hacer clic en el correo electrónico y en los enlaces! Ctrl+Clic "
-"para abrir en el correo o en el navegador"
+msgstr ""
+"¡Se pueden hacer clic en el correo electrónico y los enlaces! ¡Se puede "
+"hacer clic en el correo electrónico y en los enlaces! Ctrl+Clic para abrir "
+"en el correo o en el navegador"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
@@ -593,9 +612,10 @@ msgstr "El texto admite deshacer, rehacer y puedes usar emojis :)"
 #~ msgstr "Antigua versión y UI de Notejot renovadas en un nuevo proyecto"
 
 #~ msgid "Closer to current elementary OS Stylesheet and named colours"
-#~ msgstr "Más cerca de la hoja de estilo del sistema operativo primario actual y los colores nombrados"
-#~ "Más cercano a la actual hoja de estilo elemental del SO y colores con "
-#~ "nombre"
+#~ msgstr ""
+#~ "Más cerca de la hoja de estilo del sistema operativo primario actual y "
+#~ "los colores nombradosMás cercano a la actual hoja de estilo elemental del "
+#~ "SO y colores con nombre"
 
 #~ msgid "Also more colors than Notejot had"
 #~ msgstr "Además, más colores que los que tenía Notejot"

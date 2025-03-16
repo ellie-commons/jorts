@@ -8,13 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:12+0000\n"
+"POT-Creation-Date: 2025-03-16 13:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
@@ -64,11 +64,11 @@ msgstr ""
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
-msgstr ""
+msgstr "Sticky Note Color"
 
 #: src/Widgets/SettingsPopover.vala:72
 msgid "Choose a colour for this sticky note"
-msgstr ""
+msgstr "Choose a color for this sticky note"
 
 #: src/Widgets/SettingsPopover.vala:94
 msgid "Zoom out"
@@ -85,9 +85,7 @@ msgstr ""
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
-#. Just consider the "%"
-#: src/Widgets/SettingsPopover.vala:157
+#: src/Widgets/SettingsPopover.vala:155
 msgid "ZOOM%"
 msgstr ""
 
@@ -235,10 +233,6 @@ msgstr ""
 msgid "Top 10 anime betrayals"
 msgstr ""
 
-#: src/Services/Utils.vala:116
-msgid "Amazing ascii art!"
-msgstr ""
-
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr ""
@@ -251,19 +245,19 @@ msgstr ""
 msgid "Delete sticky note"
 msgstr ""
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
+#: src/MainWindow.vala:175 src/MainWindow.vala:301
 msgid "Always show content of sticky notes"
 msgstr ""
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
+#: src/MainWindow.vala:181 src/MainWindow.vala:312
 msgid "Hide content of unfocused sticky notes"
 msgstr ""
 
-#: src/MainWindow.vala:193
+#: src/MainWindow.vala:194
 msgid "Insert emoji"
 msgstr ""
 
-#: src/MainWindow.vala:219
+#: src/MainWindow.vala:214
 msgid "Preferences for this sticky note"
 msgstr ""
 

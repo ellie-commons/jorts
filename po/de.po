@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Vergrößern"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "Wann wässern Sie welche Pflanze"
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 Anime -Verrats"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Titel bearbeiten"
@@ -246,19 +252,19 @@ msgstr "Neue Haftnotiz"
 msgid "Delete sticky note"
 msgstr "Haftnotiz Löschen"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Zeigen Sie immer Inhalt von Sticky Notes an"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Inhalte von unkonventionellen Klebern ausblenden"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "Emoji einfügen"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diese klebrige Note"
 
@@ -274,9 +280,10 @@ msgstr "Dienstprogramm für Haftnotizen"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige Informationen aufschreiben"
+msgstr ""
 "Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige "
-"Informationen"
+"Informationen aufschreibenNotizen, Erinnerungen, zufällige Gedanken und "
+"andere kurzfristige Informationen"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -304,9 +311,10 @@ msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "süß: Jede neue Note hat einen lustigen oder niedlichen zufälligen (bearbeitbaren) Titel"
-"Niedlich: Jede neue Notiz hat einen lustigen oder niedlichen zufälligen "
-"(editierbaren) Titel"
+msgstr ""
+"süß: Jede neue Note hat einen lustigen oder niedlichen zufälligen "
+"(bearbeitbaren) TitelNiedlich: Jede neue Notiz hat einen lustigen oder "
+"niedlichen zufälligen (editierbaren) Titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -317,10 +325,12 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Dies ist eine Gabel einer alten Version von \"Notejot\" von Lainsce und würde ohne ihre Arbeit nicht existieren. "
-"Dies ist eine Abspaltung einer alten Version von Notejot von lainsce und "
-"würdeohne ihre Arbeit nicht existieren. Der Community gefiel es so gut, dass "
-"wir dachten, es wäre großartig, es wiederzubeleben!"
+msgstr ""
+"Dies ist eine Gabel einer alten Version von \"Notejot\" von Lainsce und "
+"würde ohne ihre Arbeit nicht existieren. Dies ist eine Abspaltung einer "
+"alten Version von Notejot von lainsce und würdeohne ihre Arbeit nicht "
+"existieren. Der Community gefiel es so gut, dass wir dachten, es wäre "
+"großartig, es wiederzubeleben!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -389,7 +399,9 @@ msgstr "Neues Feature: Emoji Picker Button! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Die Schaltfläche in der Symbolleiste zeigt jedes Mal, wenn Sie klicken, eine zufällige Emote an!"
+msgstr ""
+"Die Schaltfläche in der Symbolleiste zeigt jedes Mal, wenn Sie klicken, eine "
+"zufällige Emote an!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -399,7 +411,9 @@ msgstr "Neue Funktion: Jorts macht ein monatliches Backup. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Sollte der Hauptspeicher beschädigt werden, versucht Jorts, von der Sicherung zu laden"
+msgstr ""
+"Sollte der Hauptspeicher beschädigt werden, versucht Jorts, von der "
+"Sicherung zu laden"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Some new fun/cute default titles"
@@ -419,7 +433,8 @@ msgstr "Fügen Sie den Tasten der ActionBar -Schaltflächen Erleichterung hinzu"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Bugfix: Edge Case, in dem das Thema oder Zoom nicht richtig gespeichert wurde"
+msgstr ""
+"Bugfix: Edge Case, in dem das Thema oder Zoom nicht richtig gespeichert wurde"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -465,7 +480,9 @@ msgstr "Beinhaltet einen Zoom pro Noten! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "Neueste Set Zoom, auch bekannt als für Sie am besten, bleibt für neue Notizen standardmäßig"
+msgstr ""
+"Neueste Set Zoom, auch bekannt als für Sie am besten, bleibt für neue "
+"Notizen standardmäßig"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -486,7 +503,9 @@ msgstr "bessere Abkürzung und Tooltips"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Es wurde ein Fehler behoben, bei dem Jorts auf dem Thema des Lichtsystems blieben"
+msgstr ""
+"Es wurde ein Fehler behoben, bei dem Jorts auf dem Thema des Lichtsystems "
+"blieben"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "2.0.1 Appcenter release"
@@ -528,15 +547,16 @@ msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind geplant."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "E -Mail und Links sind anklickbar! "
-"E-Mail und Links sind anklickbar! Strg+Klick, um in E-Mail oder Browser zu "
-"öffnen"
+msgstr ""
+"E -Mail und Links sind anklickbar! E-Mail und Links sind anklickbar! "
+"Strg+Klick, um in E-Mail oder Browser zu öffnen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis verwenden :)"
-"Text unterstützt Rückgängig und Wiederherstellen und Sie können Emojis "
-"verwenden :)"
+msgstr ""
+"Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis "
+"verwenden :)Text unterstützt Rückgängig und Wiederherstellen und Sie können "
+"Emojis verwenden :)"
 
 #~ msgid "Settings"
 #~ msgstr "Einstellungen"
@@ -612,4 +632,3 @@ msgstr "Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis ver
 
 #~ msgid "Deep deep thoughts"
 #~ msgstr "Tiefe Gedanken"
-

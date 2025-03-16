@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr ""
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "Wanneer te water te geven welke plant"
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 anime -verraad"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Titel bewerken"
@@ -245,19 +251,19 @@ msgstr "Nieuwe Sticky Note"
 msgid "Delete sticky note"
 msgstr "Verwijder Sticky Note"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Toon altijd inhoud van plaknotities"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Verberg inhoud van ongericht plaknotities"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "Voeg emoji in"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Voorkeuren voor deze plakkerige noot"
 
@@ -273,11 +279,14 @@ msgstr "Sticky Notes hulpprogramma"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "noteer notities, herinneringen, willekeurige gedachten en andere kortetermijninformaties"
+msgstr ""
+"noteer notities, herinneringen, willekeurige gedachten en andere "
+"kortetermijninformaties"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "tekst; vlakte; platte tekst; notitieblok; notities; plakkerig; post-it;"
+msgstr ""
+"tekst; vlakte; platte tekst; notitieblok; notities; plakkerig; post-it;"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -301,7 +310,9 @@ msgstr "Adaptief: nieuwe noten krijgen de zoom die je laatst hebt gekozen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "schattig: elke nieuwe noot heeft een grappige of schattige willekeurige (bewerkbare) titel"
+msgstr ""
+"schattig: elke nieuwe noot heeft een grappige of schattige willekeurige "
+"(bewerkbare) titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -312,7 +323,9 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Dit is een vork van een oude versie van \"NoteJot\" door Lainsce en zou niet bestaan ​​zonder haar werk. "
+msgstr ""
+"Dit is een vork van een oude versie van \"NoteJot\" door Lainsce en zou niet "
+"bestaan ​​zonder haar werk. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -381,7 +394,9 @@ msgstr "Nieuwe functie: Emoji Picker -knop! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "De knop op de werkbalk geeft elke keer dat u klikt een willekeurige emote weer!"
+msgstr ""
+"De knop op de werkbalk geeft elke keer dat u klikt een willekeurige emote "
+"weer!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -391,7 +406,8 @@ msgstr "Nieuwe functie: Jorts doet een maandelijkse back -up. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Mocht de hoofdopslag worden beschadigd, probeert Jorts te laden van back -up"
+msgstr ""
+"Mocht de hoofdopslag worden beschadigd, probeert Jorts te laden van back -up"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Some new fun/cute default titles"
@@ -411,7 +427,9 @@ msgstr "Voeg reliëf toe aan actiebar -knoppen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Bugfix: edge case waarbij het thema of zoom derwijd op de juiste manier opgeslagen"
+msgstr ""
+"Bugfix: edge case waarbij het thema of zoom derwijd op de juiste manier "
+"opgeslagen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -457,7 +475,9 @@ msgstr "Inclusief een zoom per noot! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "nieuwste set -zoom, aka wat voor u het meest comfortabel is, blijft standaard voor nieuwe notities"
+msgstr ""
+"nieuwste set -zoom, aka wat voor u het meest comfortabel is, blijft "
+"standaard voor nieuwe notities"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -501,7 +521,8 @@ msgstr "10 mooie kleine kleuren"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Gebouwd bovenop van moderne Linux -technologieën en verpakkingsformaten"
+msgstr ""
+"Gebouwd bovenop van moderne Linux -technologieën en verpakkingsformaten"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 msgid "Smooth transition when changing theme"
@@ -522,4 +543,3 @@ msgstr "E -mail en links zijn klikbaar! "
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekst ondersteunt ongedaan maken, redo, en u kunt emoji's gebruiken :)"
-

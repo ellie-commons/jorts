@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Lähennä"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "Milloin kasvi vettä"
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 anime -petosta"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Muokkaa otsikko"
@@ -245,19 +251,19 @@ msgstr "Uusi tahmea nuotti"
 msgid "Delete sticky note"
 msgstr "Poista tahmea huomautus"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Näytä aina tarttuvien muistiinpanojen sisältö"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Piilota keskittymättömien tarttuvien muistiinpanojen sisältö"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "Aseta emoji"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Tämän tahmean nuotin mieltymykset"
 
@@ -273,11 +279,14 @@ msgstr "Sticky Notes Apuohjelma"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Kirjoita muistiinpanot, muistutukset, satunnaiset ajatukset ja muut lyhytaikaiset tiedot"
+msgstr ""
+"Kirjoita muistiinpanot, muistutukset, satunnaiset ajatukset ja muut "
+"lyhytaikaiset tiedot"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "teksti; tavallinen; selkeä teksti; muisti; huomautukset; tahmea; post-it;"
+msgstr ""
+"teksti; tavallinen; selkeä teksti; muisti; huomautukset; tahmea; post-it;"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -301,7 +310,9 @@ msgstr "Mukautuva: Uudet muistiinpanot Hanki viimeksi valitsemasi zoom"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Söpö: Jokaisella uudella huomautuksella on hauska tai söpö satunnainen (muokattava) otsikko"
+msgstr ""
+"Söpö: Jokaisella uudella huomautuksella on hauska tai söpö satunnainen "
+"(muokattava) otsikko"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -312,7 +323,9 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Tämä on Lainscen \"Notejot\" -haarukka, eikä sitä ole olemassa ilman hänen työtä. "
+msgstr ""
+"Tämä on Lainscen \"Notejot\" -haarukka, eikä sitä ole olemassa ilman hänen "
+"työtä. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -457,7 +470,9 @@ msgstr "Sisältää nuotin zoomin! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "Uusin Set Zoom, AKA, mikä on sinulle mukavin, pysyy oletuksena uusille muistiinpanoille"
+msgstr ""
+"Uusin Set Zoom, AKA, mikä on sinulle mukavin, pysyy oletuksena uusille "
+"muistiinpanoille"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -522,4 +537,3 @@ msgstr "Sähköposti ja linkit ovat napsautettavissa! "
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Teksti tukee kumousta, uudelleen, ja voit käyttää hymiöitä :)"
-

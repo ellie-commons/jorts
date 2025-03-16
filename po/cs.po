@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Přiblížení"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "Kdy zalévat, kterou rostlinu"
 msgid "Top 10 anime betrayals"
 msgstr "10 nejlepších anime zrady"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Upravit název"
@@ -245,19 +251,19 @@ msgstr "Nová lepkavá poznámka"
 msgid "Delete sticky note"
 msgstr "Odstraňte lepkavou poznámku"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Vždy ukažte obsah lepkavých poznámek"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Skryjte obsah nezaostřených lepkavých poznámek"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "Vložte emoji"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Předvolby pro tuto lepkavou poznámku"
 
@@ -273,7 +279,9 @@ msgstr "Sticky Notes Utility"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Zapište si poznámky, připomenutí, náhodné myšlenky a další krátkodobé informace"
+msgstr ""
+"Zapište si poznámky, připomenutí, náhodné myšlenky a další krátkodobé "
+"informace"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -301,7 +309,9 @@ msgstr "Adaptivní: Nové poznámky Získejte zoom, který jste naposledy vybral
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Roztomilý: Každá nová poznámka má legrační nebo roztomilý náhodný (upravitelný) titul"
+msgstr ""
+"Roztomilý: Každá nová poznámka má legrační nebo roztomilý náhodný "
+"(upravitelný) titul"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -312,7 +322,9 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Toto je vidlička staré verze \"Notejot\" od Lainsce a bez její práce by neexistovala. "
+msgstr ""
+"Toto je vidlička staré verze \"Notejot\" od Lainsce a bez její práce by "
+"neexistovala. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -381,7 +393,8 @@ msgstr "Nová funkce: Tlačítko Emoji Picker! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Tlačítko na panelu nástrojů zobrazuje náhodné emoce pokaždé, když kliknete!"
+msgstr ""
+"Tlačítko na panelu nástrojů zobrazuje náhodné emoce pokaždé, když kliknete!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -457,7 +470,9 @@ msgstr "Zahrnuje zoom na notu! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "Nejnovější sada Zoom, aka Co je pro vás nejpohodlnější, zůstává jako výchozí pro nové poznámky"
+msgstr ""
+"Nejnovější sada Zoom, aka Co je pro vás nejpohodlnější, zůstává jako výchozí "
+"pro nové poznámky"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"

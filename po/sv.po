@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 13:55+0000\n"
+"POT-Creation-Date: 2025-03-16 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,7 +85,9 @@ msgstr "Zooma in"
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#: src/Widgets/SettingsPopover.vala:155
+#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+#. Just consider the "%"
+#: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
@@ -233,6 +235,10 @@ msgstr "När man ska vattna vilken växt"
 msgid "Top 10 anime betrayals"
 msgstr "Topp 10 anime förråd"
 
+#: src/Services/Utils.vala:116
+msgid "Amazing ascii art!"
+msgstr ""
+
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Redigera titel"
@@ -245,19 +251,19 @@ msgstr "Ny Sticky Note"
 msgid "Delete sticky note"
 msgstr "Ta bort klibbig anteckning"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:301
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "Visa alltid innehåll i klistermärken"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:312
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "Dölj innehållet i ofokuserade klisterlappar"
 
-#: src/MainWindow.vala:194
+#: src/MainWindow.vala:193
 msgid "Insert emoji"
 msgstr "Infoga emoji"
 
-#: src/MainWindow.vala:214
+#: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
 msgstr "Inställningar för denna klibbiga anteckning"
 
@@ -273,11 +279,14 @@ msgstr "Sticky Notes Utility"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "Skriv ner anteckningar, påminnelser, slumpmässiga tankar och andra kortvariga information"
+msgstr ""
+"Skriv ner anteckningar, påminnelser, slumpmässiga tankar och andra "
+"kortvariga information"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "text; vanlig; vanlig text; anteckningar; anteckningar; klibbig; post-it;"
+msgstr ""
+"text; vanlig; vanlig text; anteckningar; anteckningar; klibbig; post-it;"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -301,7 +310,9 @@ msgstr "Adaptive: Nya anteckningar Få zoomet du senast valde"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Söt: Varje ny anteckning har en rolig eller söt slumpmässig (redigerbar) titel"
+msgstr ""
+"Söt: Varje ny anteckning har en rolig eller söt slumpmässig (redigerbar) "
+"titel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -312,7 +323,9 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Detta är en gaffel av en gammal version av \"Notejot\" av Lainsce och skulle inte existera utan hennes arbete. "
+msgstr ""
+"Detta är en gaffel av en gammal version av \"Notejot\" av Lainsce och skulle "
+"inte existera utan hennes arbete. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -381,7 +394,8 @@ msgstr "Ny funktion: Emoji Picker -knapp! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Knappen i verktygsfältet visar en slumpmässig emote varje gång du klickar!"
+msgstr ""
+"Knappen i verktygsfältet visar en slumpmässig emote varje gång du klickar!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid ""
@@ -391,7 +405,8 @@ msgstr "Ny funktion: Jorts gör en månatlig säkerhetskopia. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Om huvudlagringen skadas försöker jorts att ladda från säkerhetskopiering"
+msgstr ""
+"Om huvudlagringen skadas försöker jorts att ladda från säkerhetskopiering"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 msgid "Some new fun/cute default titles"
@@ -457,7 +472,9 @@ msgstr "Inkluderar en zoom per not! "
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
-msgstr "Senaste uppsättningen zoom, alias vad som är mest bekvämt för dig, förblir som standard för nya anteckningar"
+msgstr ""
+"Senaste uppsättningen zoom, alias vad som är mest bekvämt för dig, förblir "
+"som standard för nya anteckningar"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -522,6 +539,3 @@ msgstr "E -post och länkar är klickbara! "
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Text stöder ångra, göra om, och du kan använda emojis :)"
-
-
-

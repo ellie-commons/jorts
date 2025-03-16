@@ -152,6 +152,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
     public void set_zoomlevel (int64 zoom) {
 
         //TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
+        //It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
+        //Just consider the "%"
         var label = _("ZOOM%");
         label = label.replace ("ZOOM", zoom.to_string ());
         this.zoom_default_button.set_label (label);  
