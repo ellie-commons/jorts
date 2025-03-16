@@ -321,7 +321,7 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Ceci est une fourche d'une ancienne version de \ "notejot \" par Lainsce et n'existerait pas sans son travail. "
+msgstr "Ceci est une fourche d'une ancienne version de \"notejot\" par Lainsce et n'existerait pas sans son travail. "
 "Il s'agit d'une version dérivée d'une ancienne version de Notejot par "
 "lainsce et n'existerait pas sans son travail. La communauté l'a tellement "
 "aimé que nous avons pensé que ce serait génial de la revivre !"
@@ -588,7 +588,7 @@ msgstr "le texte prend en charge l'annulation, la refonte et vous pouvez utilise
 #~ msgstr "Nouvelle note"
 
 #~ msgid "Old Notejot version and UI revived in a new project"
-msgstr "Old NoteJot Version et UI Ravived dans un nouveau projet"
+#~ msgstr "Old NoteJot Version et UI Ravived dans un nouveau projet"
 #~ "L'ancienne version et l'interface de Notejot ont été remises à jour."
 
 #~ msgid "Closer to current elementary OS Stylesheet and named colours"

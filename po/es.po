@@ -322,7 +322,7 @@ msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
-msgstr "Esta es una bifurcación de una versión antigua de \ "notajot \" de Lainsce y no existiría sin su trabajo. "
+msgstr "Esta es una bifurcación de una versión antigua de \"Notejot\" de Lainsce y no existiría sin su trabajo. "
 "Esta es una bifurcación de una versión antigua de Notejot de lainsce,y no "
 "existiría sin su trabajo.¡ A la comunidad le gustó tanto que pensamos "
 "quesería genial revivirla!"
@@ -586,7 +586,6 @@ msgstr "El texto admite deshacer, rehacer y puedes usar emojis :)"
 #~ "Ni vaqueros ni pantalones cortos, sino como los jorts. Una aplicación de "
 #~ "notas adhesivas para elementary OS"
 
-#, fuzzy
 #~ msgid "New screenshot"
 #~ msgstr "Nueva captura de pantalla"
 
@@ -594,7 +593,7 @@ msgstr "El texto admite deshacer, rehacer y puedes usar emojis :)"
 #~ msgstr "Antigua versión y UI de Notejot renovadas en un nuevo proyecto"
 
 #~ msgid "Closer to current elementary OS Stylesheet and named colours"
-msgstr "Más cerca de la hoja de estilo del sistema operativo primario actual y los colores nombrados"
+#~ msgstr "Más cerca de la hoja de estilo del sistema operativo primario actual y los colores nombrados"
 #~ "Más cercano a la actual hoja de estilo elemental del SO y colores con "
 #~ "nombre"
 
