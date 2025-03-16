@@ -56,10 +56,6 @@ namespace jorts.Utils {
         }
     }
 
-    // We need to say stop at some point
-    const int max_zoom = 200;
-    const int min_zoom = 60;
-
 
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
@@ -162,7 +158,7 @@ namespace jorts.Utils {
         debug("Generating random note... Skip:" + skip_theme);
         var randtitle = jorts.Utils.random_title();
         string randtheme = jorts.Utils.random_theme (skip_theme);
-        noteData randnote = new noteData( randtitle, randtheme, "", 100, 330, 270);
+        noteData randnote = new noteData( randtitle, randtheme, "", jorts.Constants.DEFAULT_ZOOM);
         return randnote; 
     }
 }

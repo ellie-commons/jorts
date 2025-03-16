@@ -26,17 +26,14 @@ namespace jorts {
         public string theme;
         public string content;
         public int64 zoom;
-        public int64 width;
-        public int64 height;
 
-        public noteData(string title, string theme, string content, int64 zoom, int64 width, int64 height )
+
+        public noteData(string title, string theme, string content, int64 zoom )
         {
             this.title = title;
             this.theme = theme;
             this.content = content;
             this.zoom = zoom;
-            this.width = width;
-            this.height = height;
         }
     }
 }

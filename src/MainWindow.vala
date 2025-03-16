@@ -326,11 +326,11 @@ namespace jorts {
         // NOTE: We cannot access the buffer if the window is closed, leading to content loss
         // Hence why we need to constantly save the buffer into this.content when changed
         public noteData packaged() {
-            int width, height;
+            //int width, height;
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
-            this.get_default_size(out width, out height);
-            var data = new noteData(current_title, this.theme, this.content , this.zoom, width, height );
+            //this.get_default_size(out width, out height);
+            var data = new noteData(current_title, this.theme, this.content , this.zoom);
             return data;
         }
 
