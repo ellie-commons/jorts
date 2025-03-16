@@ -60,17 +60,16 @@
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the Squiggly Mode!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot3.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot3.png</image>
         </screenshot>
         <screenshot>
             <caption>Like emojis? Well there's an emoji picker!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/shot4.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot4.png</image>
         </screenshot>
         <screenshot>
             <caption>You can unzoom so hard you could do ascii art</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot3.png</image>
         </screenshot>
-
     </screenshots>
     <content_rating type="oars-1.1"/>
     <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
@@ -95,7 +94,6 @@
                     <li>Should the main storage be corrupted, Jorts tries to load from backup</li>
                     <li>Some new fun/cute default titles</li>
                     <li>Under the hood changes here and there for cleaner code</li>
-
                 </ul>
             </description>
         </release>
