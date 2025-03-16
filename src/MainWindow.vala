@@ -189,7 +189,6 @@ namespace jorts {
 
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
-
             var emoji_button = new Gtk.MenuButton();
             emoji_button.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_EMOTE,_("Insert emoji"));
             emoji_button.has_tooltip = true;
@@ -199,10 +198,16 @@ namespace jorts {
             emoji_button.width_request = 32;
             emoji_button.height_request = 32;
 
+            // Display the current zoom level when the popover opens
+            // Else it does not get set
             emojichooser_popover.show.connect (() => {
-                emoji_button.set_icon_name(jorts.Utils.random_emote (emoji_button.get_icon_name ()));
+                emoji_button.set_icon_name(
+                    jorts.Utils.random_emote (
+                        emoji_button.get_icon_name ())
+                );
             });
 
+            // User chose emoji, add it to buffer
             emojichooser_popover.emoji_picked.connect ((emoji) => {
                 view.buffer.insert_at_cursor (emoji,-1);
             });
