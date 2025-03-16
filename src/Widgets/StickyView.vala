@@ -35,44 +35,44 @@ https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
 
 public class jorts.StickyView : Granite.HyperTextView {
 
-        public int zoom;
-        public int max_zoom;
-        public int min_zoom;
-
         //private SimpleActionGroup actions;
         //private Gee.ArrayQueue<FormattingRequest?> formatting_queue = new Gee.ArrayQueue<FormattingRequest?> ();
     
-        public const string FORMAT_ACTION_GROUP_PREFIX = "format";
-        public const string FORMAT_ACTION_PREFIX = FORMAT_ACTION_GROUP_PREFIX + ".";
-        public const string FORMAT_ACTION_BOLD = "bold";
-        public const string FORMAT_ACTION_ITALIC = "italic";
-        public const string FORMAT_ACTION_UNDERLINE = "underline";
+        //  public const string FORMAT_ACTION_GROUP_PREFIX = "format";
+        //  public const string FORMAT_ACTION_PREFIX = FORMAT_ACTION_GROUP_PREFIX + ".";
+        //  public const string FORMAT_ACTION_BOLD = "bold";
+        //  public const string FORMAT_ACTION_ITALIC = "italic";
+        //  public const string FORMAT_ACTION_UNDERLINE = "underline";
     
-        public const string ICON_NAME_BOLD = "format-text-bold-symbolic";
-        public const string ICON_NAME_ITALIC = "format-text-italic-symbolic";
-        public const string ICON_NAME_UNDERLINE = "format-text-underline-symbolic";
+        //  public const string ICON_NAME_BOLD = "format-text-bold-symbolic";
+        //  public const string ICON_NAME_ITALIC = "format-text-italic-symbolic";
+        //  public const string ICON_NAME_UNDERLINE = "format-text-underline-symbolic";
     
-        private static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+/*          private static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         static construct {
                 action_accelerators[FORMAT_ACTION_BOLD] = "<Control>B";
                 action_accelerators[FORMAT_ACTION_ITALIC] = "<Control>I";
                 action_accelerators[FORMAT_ACTION_UNDERLINE] = "<Control>U";
-        }
+        }  */
 
 
         public StickyView (int zoom, string? content) {
 
                 this.buffer = new Gtk.TextBuffer (null);
-                this.buffer.text = content;
-                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);    
                 this.bottom_margin = 10;
                 this.left_margin = 10;
                 this.right_margin = 10;
                 this.top_margin = 10;
+
                 this.set_hexpand (true);
                 this.set_vexpand (true);
+    
+;
 
+                this.buffer.text = content;
+                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);    
+ 
 /*                  this.buffer.create_tag (FORMAT_ACTION_BOLD, "weight", 700);
                 this.buffer.create_tag (FORMAT_ACTION_ITALIC, "style", 2);
                 this.buffer.create_tag (FORMAT_ACTION_UNDERLINE, "underline", Pango.Underline.SINGLE);

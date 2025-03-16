@@ -51,6 +51,7 @@ executable(
 
     'src/Widgets/StickyView.vala',
     'src/Widgets/ColorPill.vala',
+    'src/Widgets/ColorBox.vala',
     'src/Widgets/SettingsPopover.vala',
     
     'src/Application.vala',

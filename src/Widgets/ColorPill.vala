@@ -32,3 +32,4 @@ public class jorts.ColorPill : Gtk.CheckButton {
                 add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
         }
 }
+

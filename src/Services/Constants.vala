@@ -47,7 +47,7 @@ namespace jorts.Constants {
 
 
     // We need to say stop at some point
-    const int ZOOM_MAX                  = 300;
+    const int ZOOM_MAX                  = 240;
     const int ZOOM_MIN                  = 40;
 
     // For new stickies
