@@ -7,7 +7,9 @@
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 [![CI](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml/badge.svg)](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml)
 
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/shot.png" alt="Screenshot of Elly's sticky note as an example"></span>
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/shot1.png" alt="Screenshot of Elly's sticky note as an example"></span>
+
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/spread.png" alt="Several open sticky notes"></span>
 
 <br/>
 <p align="left">
@@ -21,13 +23,14 @@ In the works for next version:
 
 - [x] Squiggly mode
 - [x] Emoji button
-- [ ] Zoom: scroll to zoom
+- [ ] Zoom: ctrl+scroll to zoom
 - [ ] Detect local path to files and folders and open in file explorer
-- [ ] Do sometimes a backup of the stash
-- [ ] More commandline options
-- [ ] Highlight text
-- [ ] Add bold, italic, strikethrough...
-- [ ] Move widget definitions to blueprint files
+- [x] Do sometimes a backup of the stash
+- [x] try loading backup if main is corrupted
+- [ ] More commandline options (reopen all, quit)
+- [ ] Highlight text in different colors? Like a highlighter
+- [ ] Add bold, italic, strikethrough...?
+- [ ] Move widget definitions to blueprint files?
 
 New features may sneak themselves. Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
 
@@ -73,7 +76,7 @@ As of the current date (16March2025), here are the package names to install:
 sudo apt install libgranite-7-common libjson-glib-dev libgee-0.8-2 meson valac libvala-0.56-0 flatpak-builder gettext
 ```
 
-Installation is as simple as cloning this repo (or download and extract the zip archive), change to the new repo's directory, and run the following command:
+Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory, and run the following command:
 
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yml
