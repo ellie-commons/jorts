@@ -13,7 +13,7 @@
 
 <br/>
 <p align="left">
-Available in: <a href="./po/de.po"">🇩🇪 Deutsch</a> · <a  href="./po/es.po">🇪🇸 Spanish</a> · <a href="./po/fr.po">🇫🇷 French </a> · <a href="./po/pt.po"">🇵🇹 Português</a> · <a href="./po/pt_br.po"">🇧🇷 Português (Brazil)</a> · <a href="./po/ru.po"">🇷🇺 Russian</a> . <a href="./po/sv.po"">Swedish</a> <a href="./po/sk.po"">Slovak</a> . <a href="./po/cs.po"">Cszech</a> . <a href="./po/fi.po"">Finnish</a> . <a href="./po/nl.po"">Dutch</a> . <a href="./po/zh_cn.po"">Simplified Chinese</a> . <a href="./po/it.po"">Italian</a>
+Available in: <a href="./po/de.po">🇩🇪 Deutsch</a> · <a  href="./po/es.po">🇪🇸 Spanish</a> · <a href="./po/fr.po">🇫🇷 French </a> · <a href="./po/pt.po"">🇵🇹 Português</a> · <a href="./po/pt_br.po"">🇧🇷 Português (Brazil)</a> · <a href="./po/ru.po"">🇷🇺 Russian</a> . <a href="./po/sv.po">🇸🇪Swedish</a> <a href="./po/sk.po">🇸🇰Slovak</a> . <a href="./po/cs.po">🇨🇿Czech</a> . <a href="./po/fi.po">🇫🇮Finnish</a> . <a href="./po/nl.po">🇳🇱Dutch</a> . <a href="./po/zh_cn.po">🇨🇳Simplified Chinese</a> . <a href="./po/it.po">🇮🇹Italian</a>
 </p>
 
 ## 🛣️ Roadmap
