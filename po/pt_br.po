@@ -237,7 +237,7 @@ msgstr "10 melhores traições de anime"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Arte ascii incrível!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
@@ -248,7 +248,6 @@ msgid "New sticky note"
 msgstr "Nova nota adesiva"
 
 #: src/MainWindow.vala:160
-#, fuzzy
 msgid "Delete sticky note"
 msgstr "Excluir nota adesiva"
 

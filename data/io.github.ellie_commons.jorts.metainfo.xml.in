@@ -82,6 +82,10 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+            <release version="2.2.1" date="2025-03-16">
+            <description>
+                <p>Updated translations</p>
+            </description>
         <release version="2.2.0" date="2025-03-16">
             <description>
                 <p>2.2.0 The Jorts of light</p>

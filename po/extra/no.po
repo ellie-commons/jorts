@@ -377,7 +377,7 @@ msgstr "Bedre oversettelsesdekning"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
 msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
-msgstr "Ny funksjon: Squiggly Mode! "
+msgstr "Ny funksjon: Squiggly-modus! Skjul innholdet på klistrelapper når du ikke fokuserer"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid ""
@@ -393,7 +393,8 @@ msgstr "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
-msgstr "Ny funksjon: Jorts gjør en månedlig sikkerhetskopi. "
+msgstr "Ny funksjon: Jorts tar en månedlig sikkerhetskopi."
+"Skulle det oppstå problemer, kan du gjenopprette data! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"

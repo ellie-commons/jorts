@@ -237,7 +237,7 @@ msgstr "primi 10 tradimenti anime"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Arte ascii sorprendente!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"

@@ -280,8 +280,7 @@ msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
-"Escriba notas, recordatorios, pensamientos aleatorios y otras informaciones "
-"a corto plazoEscribir notas, recordatorios, pensamientos aleatorios y otra "
+"Escribir notas, recordatorios, pensamientos aleatorios y otra "
 "información a corto plazo"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
@@ -323,8 +322,7 @@ msgid ""
 "be great to revive it!"
 msgstr ""
 "Esta es una bifurcación de una versión antigua de \"Notejot\" de Lainsce y "
-"no existiría sin su trabajo. Esta es una bifurcación de una versión antigua "
-"de Notejot de lainsce,y no existiría sin su trabajo.¡ A la comunidad le "
+"no existiría sin su trabajo. ¡ A la comunidad le "
 "gustó tanto que pensamos quesería genial revivirla!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
@@ -368,7 +366,7 @@ msgstr "¿Castreaming? ¿Te preocupa que alguien mire por encima de tu hombro? P
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
-msgstr "¿Como emojis? "
+msgstr "¿Te gustan los emojis?¡Pues aquí tienes un selector de emojis!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "You can unzoom so hard you could do ascii art"
@@ -491,7 +489,6 @@ msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "También un tema un poco mejor. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
-#, fuzzy
 msgid "Improved translations"
 msgstr "Algunas traducciones iniciales :3"
 

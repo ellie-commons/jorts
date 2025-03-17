@@ -281,8 +281,7 @@ msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
 msgstr ""
-"Anote notas, lembretes, pensamentos aleatórios e outras informações de curto "
-"prazoAnote anotações, lembretes, pensamentos aleatórios e outras informações "
+"Anote anotações, lembretes, pensamentos aleatórios e outras informações "
 "de curto prazo informações"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
@@ -297,8 +296,7 @@ msgstr "Nem jeans nem bermuda, assim como jorts"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Colourful little sticky notes for all of your thoughts :)"
 msgstr ""
-"Notas pequenas coloridas para todos os seus pensamentos :)Um pequeno "
-"utilitário colorido de notas adesivas para seus pensamentos :)"
+"Notas pequenas coloridas para todos os seus pensamentos :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -330,8 +328,7 @@ msgid ""
 "be great to revive it!"
 msgstr ""
 "Este é um garfo de uma versão antiga de \"NoteJot\" pela lainsce e não "
-"existiria sem o trabalho dela. Esta é uma bifurcação de uma versão antiga do "
-"\"Notejot\" de lainsce e não existiria existiria sem o trabalho dela. A "
+"existiria sem o trabalho dela. A "
 "comunidade gostou tanto dele que achamos que seria seria ótimo revivê-la!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
@@ -476,7 +473,7 @@ msgstr "2.1.0 Recém-saído da lavanderia!"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr ""
-"Inclui um zoom por nota! Inclui um zoom por nota! Assim, você pode obter um "
+"Inclui um zoom por nota! Assim, você pode obter um "
 "texto maior ou menor"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
@@ -484,10 +481,8 @@ msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
 msgstr ""
-"o último conjunto de conjuntos, também conhecido como o que é mais "
-"confortável para você, permanece como padrão para novas notasO zoom definido "
-"mais recentemente, ou seja, o que for mais confortável para você, permanece "
-"como padrão para novas notas"
+"O zoom definido mais recentemente, ou seja, o que for mais confortável para você, "
+"permanece como padrão para novas anotações"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -508,8 +503,7 @@ msgstr "Melhores atalhos e dicas de ferramentas"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr ""
-"Corrigido um bug em que os jorts permaneceram no tema do sistema "
-"leveCorreção de um erro que fazia com que o Jorts permanecesse no tema do "
+"Correção de um erro que fazia com que o Jorts permanecesse no tema do "
 "sistema claro"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
@@ -536,8 +530,7 @@ msgstr "10 pequenas cores encantadoras"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr ""
-"construído sobre as modernas tecnologias Linux e formatos de embalagemCriado "
-"com base em tecnologias Linux modernas e formatos de empacotamento"
+"Criado com base em tecnologias Linux modernas e formatos de empacotamento"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 msgid "Smooth transition when changing theme"

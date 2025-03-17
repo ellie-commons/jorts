@@ -237,7 +237,7 @@ msgstr "Top 10 anime zrady"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Úžasné ascii umenie!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"

@@ -398,7 +398,8 @@ msgstr "Новая функция: кригский режим! "
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
-msgstr "Новая функция: кнопка сбора эмодзи! "
+msgstr "Новая функция: Кнопка выбора эмодзи! Я знаю, что она есть на правой кнопке мыши, но "
+"кнопки более доступны!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
 msgid "The button in the toolbar displays a random emote everytime you click!"
@@ -496,7 +497,6 @@ msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Также немного более выглядящая тема. "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
-#, fuzzy
 msgid "Improved translations"
 msgstr "Новые переводы :3"
 
@@ -513,7 +513,6 @@ msgid "2.0.1 Appcenter release"
 msgstr "Выпуск 2.0.1 Appcenter"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-#, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "Появление новых цветов: бубльгумового и каменно-серого"
 
@@ -538,15 +537,13 @@ msgid "Smooth transition when changing theme"
 msgstr "Плавный переход при смене темы"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
-#, fuzzy
 msgid "New stickies have a random fun little title and colour"
 msgstr "У новых заметок выбирается случайные, весёлые названия"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
 msgid "A few initial translations included, and more to come"
-msgstr ""
-"несколько первоначальных переводов, включенных, и многое другоеНесколько "
-"первоначальных переводов включены в книгу, и еще несколько будут добавлены"
+msgstr "Несколько первоначальных переводов включены в книгу,"
+" и еще несколько будут добавлены"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"

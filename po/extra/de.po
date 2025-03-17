@@ -281,8 +281,7 @@ msgid ""
 "informations"
 msgstr ""
 "Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige "
-"Informationen aufschreibenNotizen, Erinnerungen, zufällige Gedanken und "
-"andere kurzfristige Informationen"
+"Informationen aufschreiben"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -325,9 +324,8 @@ msgid ""
 "be great to revive it!"
 msgstr ""
 "Dies ist eine auffrischung einer alten Version von \"Notejot\" von Lainsce und "
-"würde ohne ihre Arbeit nicht existieren. Dies ist eine Abspaltung einer "
-"alten Version von Notejot von lainsce und würdeohne ihre Arbeit nicht "
-"existieren. Der Community gefiel es so gut, dass wir dachten, es wäre "
+"würde ohne ihre Arbeit nicht existieren."
+"Der Community gefiel es so gut, dass wir dachten, es wäre "
 "großartig, es wiederzubeleben!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
@@ -366,7 +364,7 @@ msgstr "Sie können die Farbe und Textgröße individuell ändern!"
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
 "Mode!"
-msgstr "Streamen? Haben Sie Angst, dass Ihnen jemand über die Schulter schaut? Versuchen Sie den Scribbles-Modus!"
+msgstr "du teilst deinen Bildschirm? Angst, dass Dir jemand über die Schulter schaut? Versuch Mal den Scribbles-Modus!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
@@ -544,13 +542,12 @@ msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind geplant."
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
-"E -Mail und Links sind anklickbar! E-Mail und Links sind anklickbar! "
+"E -Mail und Links sind anklickbar! "
 "Strg+Klick, um in E-Mail oder Browser zu öffnen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 "Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis "
-"verwenden :)Text unterstützt Rückgängig und Wiederherstellen und Sie können "
-"Emojis verwenden :)"
+"verwenden :)"
 
