@@ -50,7 +50,7 @@
       <color type="primary" scheme_preference="dark">#002e99</color>
     </branding>
     <screenshots>
-        <screenshot>
+        <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot1.png</image>
         </screenshot>

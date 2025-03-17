@@ -339,15 +339,16 @@ msgstr "Einstellungen für diese klebrige Note"
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "Sie können die Farbe und Textgröße individuell ändern!"
 
-#~ msgid ""
-#~ "Streaming? Worried of someone looking above your shoulder? Try the "
-#~ "Squiggly Mode!"
-#~ msgstr ""
-#~ "Streamen? Haben Sie Angst, dass Ihnen jemand über die Schulter schaut? "
-#~ "Versuchen Sie den Scribbles-Modus!"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
+"Mode!"
+msgstr "Du Streamst? Angst, dass dir jemand über die Schulter schaut? Probier den "
+"Scribbles-Modus aus!"
 
-#~ msgid "Like emojis? Well there's an emoji picker!"
-#~ msgstr "Wie Emojis? "
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
+msgid "Like emojis? Well there's an emoji picker!"
+msgstr "Wie Emojis? "
 
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr ""

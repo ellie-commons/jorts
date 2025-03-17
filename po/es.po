@@ -350,12 +350,23 @@ msgstr "Preferencias para esta nota pegajosa"
 
 #~ msgid "Like emojis? Well there's an emoji picker!"
 #~ msgstr "¿Como emojis? "
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
+"Mode!"
+msgstr "¿Streaming? ¿Te preocupa que alguien mire por encima de tu hombro? ¡Prueba el modo "
+"Garabatos!"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
+msgid "Like emojis? Well there's an emoji picker!"
+msgstr "¿Te gustan los emojis? ¡Pues hay un selector de emojis!"
 
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr "Puedes alejarte tanto que podrías hacer arte ASCII."
 
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 los Jorts of Light"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
+msgid "2.2.0 The Jorts of light"
+msgstr "2.2.0 Los jorts de luz"
 
 #~ msgid "Better translation coverage"
 #~ msgstr "Mejor cobertura de traducción"
