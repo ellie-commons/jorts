@@ -237,7 +237,7 @@ msgstr "Top 10 Anime -Verrats"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Erstaunliche ASCII-Kunst!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
@@ -368,7 +368,8 @@ msgstr "Sie können die Farbe und Textgröße individuell ändern!"
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
 "Mode!"
-msgstr "Streaming? "
+msgstr "Du Streamst? Angst, dass dir jemand über die Schulter schaut? Probier den "
+"Squiggly-Modus aus!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
