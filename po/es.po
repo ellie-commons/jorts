@@ -237,7 +237,7 @@ msgstr "Top 10 traiciones de anime"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "¡Increíble arte ASCII!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
@@ -374,11 +374,12 @@ msgstr "¡Puede cambiar el color y el tamaño del texto individualmente!"
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
 "Mode!"
-msgstr "¿Transmisión? "
+msgstr "¿Streaming? ¿Te preocupa que alguien mire por encima de tu hombro? ¡Prueba el modo "
+"Garabatos!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
-msgstr "¿Como emojis? "
+msgstr "¿Te gustan los emojis? ¡Pues hay un selector de emojis!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "You can unzoom so hard you could do ascii art"
@@ -386,7 +387,7 @@ msgstr "Puedes alejarte tanto que podrías hacer arte ASCII."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
 msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 los Jorts of Light"
+msgstr "2.2.0 Los jorts de luz"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
