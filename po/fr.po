@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 19:12+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2025-03-16 HO:MI+ZONE\n"
+"Last-Translator: Stella Ménier stella.menier@posteo.de\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -141,7 +141,7 @@ msgstr "Nouveau post-it, nouveau moi"
 
 #: src/Services/Utils.vala:92
 msgid "Hidden pirate treasure"
-msgstr "Emplacement du trésor pirate"
+msgstr "Emplacement du trésor pirate caché"
 
 #: src/Services/Utils.vala:93
 msgid "To not forget, ever"
@@ -229,7 +229,7 @@ msgstr "Mes chansons préférées pour chanter"
 
 #: src/Services/Utils.vala:114
 msgid "When to water which plant"
-msgstr "Quand arroser qui plante"
+msgstr "Quand arroser quelle plante"
 
 #: src/Services/Utils.vala:115
 msgid "Top 10 anime betrayals"
@@ -237,7 +237,7 @@ msgstr "Top 10 des trahisons d'anime"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Super art ascii!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
@@ -262,7 +262,7 @@ msgstr "Masquer le contenu des post-its en arrière-plan"
 
 #: src/MainWindow.vala:193
 msgid "Insert emoji"
-msgstr "insérer les emoji"
+msgstr "insérer un emoji"
 
 #: src/MainWindow.vala:219
 msgid "Preferences for this sticky note"
@@ -318,10 +318,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
-"Mignon: Chaque nouvelle note a un titre de Random (modifiable) drôle ou "
-"mignonMignon : Chaque nouvelle note a un titre aléatoire (modifiable) drôle "
-"ou mignon"
+msgstr "Mignon: Chaque nouvelle note a un titre aléatoire (modifiable) marrant ou mignon"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 #, fuzzy
@@ -334,7 +331,7 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"Ceci est une fourche d'une ancienne version de \"notejot\" par Lainsce et "
+"Ceci est une réadaptation d'une ancienne version de \"notejot\" par Lainsce et "
 "n'existerait pas sans son travail. Il s'agit d'une version dérivée d'une "
 "ancienne version de Notejot par lainsce et n'existerait pas sans son "
 "travail. La communauté l'a tellement aimé que nous avons pensé que ce serait "
@@ -379,11 +376,11 @@ msgstr ""
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
 "Mode!"
-msgstr "Streaming? "
+msgstr "Vous partagez votre écran? Inquiet des regards par-dessus votre épaule ? Essayez le mode gribouillis ! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
-msgstr "Comme les emojis? "
+msgstr "Vous aimez utiliser des emojis ? Il y a un selecteur d'emojis !"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "You can unzoom so hard you could do ascii art"
@@ -432,32 +429,32 @@ msgstr "quelques nouveaux titres de défaut amusants / mignons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
 msgid "Under the hood changes here and there for cleaner code"
-msgstr "Sous le capot change ici et là pour un code plus propre"
+msgstr "Quelques changements ici et là sous le capot pour un code plus propre"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
 msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2 Les Jorts inéditeurs"
+msgstr "2.1.2 Les Jorts indéchirables"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid "Add relief to actionbar buttons"
-msgstr "Ajouter des boutons de soulagement à la barre d'action"
+msgstr "Ajout de relief sur les boutons de la barre d'action"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr ""
-"BugFix: case Edge où le thème ou le zoom n'était pas enregistré correctement"
+"Correction de bug: cas où le thème ou le zoom n'était pas enregistré correctement"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "BugFix: Titre en multitâche n'est pas réglé correctement"
+msgstr "Correction de bug: Titre en multitâche n'est pas réglé correctement"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "BugFix: thèmes d'icônes à accouchement à l'incohérence"
+msgstr "Correction de bug: thèmes d'icônes à accouchement à l'incohérence"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr "BugFix: les incohérences de thé"
+msgstr "Correction de bug: les incohérences de thé"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
@@ -473,11 +470,11 @@ msgstr "thème plus cohérent"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "BugFix: le raccourci de suppression n'était pas répondu"
+msgstr "Correction de bug: le raccourci de suppression n'était pas répondu"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: screenshot not showing"
-msgstr "BugFix: la capture d'écran ne s'affiche pas"
+msgstr "Correction de bug: la capture d'écran ne s'affiche pas"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
 msgid "2.1.0 Fresh out of the laundry!"
@@ -568,81 +565,5 @@ msgstr ""
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
-"le texte prend en charge l'annulation, la refonte et vous pouvez utiliser "
-"des emojis :)Le texte prend en charge les fonctions annuler et rétablir, et "
-"vous pouvez utiliser des émoticônes :)"
+"Le texte prend en charge les fonctions annuler et rétablir, et vous pouvez utiliser des émoticônes :)"
 
-#~ msgid "Settings"
-#~ msgstr "Paramètres"
-
-#~ msgid "More translations!"
-#~ msgstr "Quelques traductions initiales :3"
-
-#, fuzzy
-#~ msgid ""
-#~ "Neither jeans nor shorts, just like jorts! Colourful little sticky notes "
-#~ "for your thoughts :)"
-#~ msgstr ""
-#~ "Ni jeans, ni shorts, tout comme les jorts. Une application de post-it "
-#~ "pour elementary OS"
-
-#, fuzzy
-#~ msgid "Ten pretty themes with soft transitions"
-#~ msgstr "Dix jolis thèmes avec des transitions douces"
-
-#, fuzzy
-#~ msgid "Striving to keep it simple, cute, modern, light"
-#~ msgstr "Cherche à rester mignon, joli, simple, moderne, léger"
-
-#~ msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
-#~ msgstr "Supporte Annuler, Refaire (Ctrl+Z, Ctrl+Shift+Z)"
-
-#, fuzzy
-#~ msgid "New sticky note (Ctrl+N)"
-#~ msgstr "Nouveau post-it (Ctrl+N)"
-
-#~ msgid ""
-#~ "Neither jeans nor shorts, just like jorts. A sticky notes app for "
-#~ "elementary OS"
-#~ msgstr ""
-#~ "Ni jeans, ni shorts, tout comme les jorts. Une application de post-it "
-#~ "pour elementary OS"
-
-#, fuzzy
-#~ msgid "New screenshot"
-#~ msgstr "Nouvelle note"
-
-#~ msgid "Old Notejot version and UI revived in a new project"
-#~ msgstr ""
-#~ "Old NoteJot Version et UI Ravived dans un nouveau projetL'ancienne "
-#~ "version et l'interface de Notejot ont été remises à jour."
-
-#~ msgid "Closer to current elementary OS Stylesheet and named colours"
-#~ msgstr "Plus proche de la feuille de style actuelle de elementary OS"
-
-#~ msgid "Also more colors than Notejot had"
-#~ msgstr "Aussi plus de couleurs que Notejot n'en avait"
-
-#~ msgid "It builds for flatpak now"
-#~ msgstr "Maintenant distribuée comme flatpak"
-
-#~ msgid "Better adapted to the way Wayland works"
-#~ msgstr "Mieux adapté au fonctionnement de Wayland"
-
-#~ msgid "New stickies have random colour"
-#~ msgstr "Les nouveaux post-it ont une couleur aléatoire"
-
-#~ msgid "Storage system rebuilt from the ground up"
-#~ msgstr "Système de stockage reconstruit de A à Z"
-
-#~ msgid "Latte"
-#~ msgstr "Latte"
-
-#~ msgid "Delete note"
-#~ msgstr "Supprimer la note"
-
-#~ msgid "Deep deep thoughts"
-#~ msgstr "Réflexions très profondes"
-
-#~ msgid "Note your thoughts"
-#~ msgstr "Note tes pensées"
