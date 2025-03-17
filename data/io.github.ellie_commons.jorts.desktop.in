@@ -9,8 +9,12 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Office;
-Actions=NewNote;
+Actions=NewNote;Preferences;
 
 [Desktop Action NewNote]
 Exec=io.github.ellie_commons.jorts --new-note
 Name=New sticky note
+
+[Desktop Action Preferences]
+Exec=io.github.ellie_commons.jorts --preferences
+Name=Open Preferences

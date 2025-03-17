@@ -82,6 +82,16 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+            <release version="2.3.0" date="2025-04-01">
+            <description>
+                <p>2.3.0 The Inner Jorts</p>
+                <ul>
+                    <li>New feature: Preferences dialog!</li>
+                    <li>New feature: Enable minimize</li>
+                    <li>New feature: Encrypt</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.2.1" date="2025-03-17">
             <description>
                 <p>Updated translations</p>

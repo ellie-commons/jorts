@@ -53,8 +53,9 @@ executable(
     'src/Widgets/ColorPill.vala',
     'src/Widgets/ColorBox.vala',
     'src/Widgets/SettingsPopover.vala',
-    
+
     'src/Application.vala',
+    'src/Preferences.vala',    
     'src/MainWindow.vala',
     dependencies: [
         dependency('granite-7'),

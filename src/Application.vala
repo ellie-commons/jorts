@@ -22,7 +22,6 @@ namespace jorts {
         private static bool create_new_window = false;
 
         public static GLib.Settings gsettings;
-        public static Settings animation_settings;
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                     application_id: jorts.Constants.app_rdnn);
@@ -225,8 +224,14 @@ namespace jorts {
 
 
         protected override int command_line (ApplicationCommandLine command_line) {
+            PreferenceWindow preferences;
             string[] args = command_line.get_arguments ();
             activate ();
+
+            // If user asked for preferences do just that
+            if (args[1] == "--preferences") {                
+                preferences = new PreferenceWindow(gsettings);
+            } 
 
             // Create a next window if requested and it's not the app launch
             if (args[1] == "--new-note") {                
