@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:12+0000\n"
+"POT-Creation-Date: 2025-03-17 19:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,7 +243,7 @@ msgstr ""
 msgid "Edit title"
 msgstr "编辑标题"
 
-#: src/MainWindow.vala:147 data/io.github.ellie_commons.jorts.desktop.in:17
+#: src/MainWindow.vala:147
 msgid "New sticky note"
 msgstr "新的粘性音符"
 
@@ -267,264 +267,203 @@ msgstr "插入表情符号"
 msgid "Preferences for this sticky note"
 msgstr "此粘张音符的偏好"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:3
-msgid "Jorts"
-msgstr "jorts"
+#~ msgid "Jorts"
+#~ msgstr "jorts"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:4
-msgid "Sticky notes utility"
-msgstr "粘笔效应"
+#~ msgid "Sticky notes utility"
+#~ msgstr "粘笔效应"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr "写下笔记，提醒，随机思想和其他短期信息"
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr "写下笔记，提醒，随机思想和其他短期信息"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:8
-msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "文字;普通;宣传；记事本;笔记；粘性； post-it;"
+#~ msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
+#~ msgstr "文字;普通;宣传；记事本;笔记；粘性； post-it;"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-msgid "Neither jeans nor shorts, just like jorts"
-msgstr "牛仔裤也不是短裤，就像jorts一样"
+#~ msgid "Neither jeans nor shorts, just like jorts"
+#~ msgstr "牛仔裤也不是短裤，就像jorts一样"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "您所有想法的彩色小粘性笔记:)"
+#~ msgid "Colourful little sticky notes for all of your thoughts :)"
+#~ msgstr "您所有想法的彩色小粘性笔记:)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
-msgid "Features include:"
-msgstr "功能包括："
+#~ msgid "Features include:"
+#~ msgstr "功能包括："
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
-msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr "颜色：十个漂亮的主题。"
+#~ msgid "Colours: Ten pretty themes. Any new note gets a random one"
+#~ msgstr "颜色：十个漂亮的主题。"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
-msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "自适应：新笔记获得您最后选择的变焦"
+#~ msgid "Adaptive: New notes get the zoom you last chose"
+#~ msgstr "自适应：新笔记获得您最后选择的变焦"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
-msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "可爱：每个新音符都有一个有趣或可爱的随机（可编辑）标题"
+#~ msgid "Cute: Each new note has a funny or cute random (editable) title"
+#~ msgstr "可爱：每个新音符都有一个有趣或可爱的随机（可编辑）标题"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
-msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "方便：您可以使用CTRL单击打开链接和电子邮件"
+#~ msgid "Handy: You can open links and emails with Ctrl+Click"
+#~ msgstr "方便：您可以使用CTRL单击打开链接和电子邮件"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:18
-msgid ""
-"This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
-"exist without her work. The community liked it so much, we thought it would "
-"be great to revive it!"
-msgstr "这是Lainsce的\" Notejot \"的旧版本的叉子，没有她的工作就不存在。"
+#~ msgid ""
+#~ "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
+#~ "exist without her work. The community liked it so much, we thought it "
+#~ "would be great to revive it!"
+#~ msgstr "这是Lainsce的\" Notejot \"的旧版本的叉子，没有她的工作就不存在。"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
-msgid "Stella - Teamcons"
-msgstr "Stella -Teamcons"
+#~ msgid "Stella - Teamcons"
+#~ msgstr "Stella -Teamcons"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
-msgid "Sticky notes"
-msgstr "粘笔"
+#~ msgid "Sticky notes"
+#~ msgstr "粘笔"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
-msgid "Notes"
-msgstr "笔记"
+#~ msgid "Notes"
+#~ msgstr "笔记"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
-msgid "Cute"
-msgstr "可爱"
+#~ msgid "Cute"
+#~ msgstr "可爱"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
-msgid "Desktop"
-msgstr "桌面"
+#~ msgid "Desktop"
+#~ msgstr "桌面"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
-msgid "Reminder"
-msgstr "提醒"
+#~ msgid "Reminder"
+#~ msgstr "提醒"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:54
-msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "带有\" blueberry \"主题的粘性音符"
+#~ msgid "A sticky note with the \"Blueberry\" theme"
+#~ msgstr "带有\" blueberry \"主题的粘性音符"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
-msgid "You can change individual colour and text size!"
-msgstr "您可以更改单独的颜色和文字大小！"
+#~ msgid "You can change individual colour and text size!"
+#~ msgstr "您可以更改单独的颜色和文字大小！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
-msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
-"Mode!"
-msgstr "流？"
+#~ msgid ""
+#~ "Streaming? Worried of someone looking above your shoulder? Try the "
+#~ "Squiggly Mode!"
+#~ msgstr "流？"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
-msgid "Like emojis? Well there's an emoji picker!"
-msgstr "像表情符号一样？"
+#~ msgid "Like emojis? Well there's an emoji picker!"
+#~ msgstr "像表情符号一样？"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
-msgid "You can unzoom so hard you could do ascii art"
-msgstr "您可以很难解散，您可以做ASCII艺术"
+#~ msgid "You can unzoom so hard you could do ascii art"
+#~ msgstr "您可以很难解散，您可以做ASCII艺术"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
-msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0光线"
+#~ msgid "2.2.0 The Jorts of light"
+#~ msgstr "2.2.0光线"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
-msgid "Better translation coverage"
-msgstr "更好的翻译覆盖范围"
+#~ msgid "Better translation coverage"
+#~ msgstr "更好的翻译覆盖范围"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
-msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
-msgstr "新功能：弯曲模式！"
+#~ msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
+#~ msgstr "新功能：弯曲模式！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
-msgid ""
-"New feature: Emoji picker button! I know there is one on right-click, but "
-"buttons are more accessible!"
-msgstr "新功能：表情符号选择器按钮！"
+#~ msgid ""
+#~ "New feature: Emoji picker button! I know there is one on right-click, but "
+#~ "buttons are more accessible!"
+#~ msgstr "新功能：表情符号选择器按钮！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
-msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "工具栏中的按钮每次单击时都会显示一个随机的表情！"
+#~ msgid ""
+#~ "The button in the toolbar displays a random emote everytime you click!"
+#~ msgstr "工具栏中的按钮每次单击时都会显示一个随机的表情！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid ""
-"New feature: Jorts does a monthly backup. Should there be any issue you can "
-"recover data!"
-msgstr "新功能：Jorts每月备份。"
+#~ msgid ""
+#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "can recover data!"
+#~ msgstr "新功能：Jorts每月备份。"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "如果主存储损坏，Jorts试图从备用中加载"
+#~ msgid ""
+#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ msgstr "如果主存储损坏，Jorts试图从备用中加载"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
-msgid "Some new fun/cute default titles"
-msgstr "一些新的有趣/可爱的默认标题"
+#~ msgid "Some new fun/cute default titles"
+#~ msgstr "一些新的有趣/可爱的默认标题"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
-msgid "Under the hood changes here and there for cleaner code"
-msgstr "在这里和那里的引擎盖下更改以进行清洁代码"
+#~ msgid "Under the hood changes here and there for cleaner code"
+#~ msgstr "在这里和那里的引擎盖下更改以进行清洁代码"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
-msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2无法脱离的杂耍"
+#~ msgid "2.1.2 The unrippable jorts"
+#~ msgstr "2.1.2无法脱离的杂耍"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
-msgid "Add relief to actionbar buttons"
-msgstr "增加动作栏按钮的缓解"
+#~ msgid "Add relief to actionbar buttons"
+#~ msgstr "增加动作栏按钮的缓解"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
-msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "bugfix：主题或缩放正确保存的边缘情况"
+#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
+#~ msgstr "bugfix：主题或缩放正确保存的边缘情况"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
-msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "错误文件：多任务中的标题未正确设置"
+#~ msgid "Bugfix: Title in multitasking not set correctly"
+#~ msgstr "错误文件：多任务中的标题未正确设置"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
-msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "bugfix：图标不一致的累加图标主题"
+#~ msgid "Bugfix: Icon inconsistency accross icon themes"
+#~ msgstr "bugfix：图标不一致的累加图标主题"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
-msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr "bugfix：主题不一致会引起粘性"
+#~ msgid "Bugfix: Theming inconsistencies accross stickies"
+#~ msgstr "bugfix：主题不一致会引起粘性"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
-msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr "2.1.1刚从洗衣店出来！ "
+#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
+#~ msgstr "2.1.1刚从洗衣店出来！ "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
-msgid "Clearer appmenu description"
-msgstr "更清晰的AppMenu说明"
+#~ msgid "Clearer appmenu description"
+#~ msgstr "更清晰的AppMenu说明"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
-msgid "More consistent theming"
-msgstr "更一致的主题"
+#~ msgid "More consistent theming"
+#~ msgstr "更一致的主题"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
-msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "bugfix：删除快捷方式不反应"
+#~ msgid "Bugfix: the delete shortcut was unresponsible"
+#~ msgstr "bugfix：删除快捷方式不反应"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
-msgid "Bugfix: screenshot not showing"
-msgstr "bugfix：屏幕截图未显示"
+#~ msgid "Bugfix: screenshot not showing"
+#~ msgstr "bugfix：屏幕截图未显示"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
-msgid "2.1.0 Fresh out of the laundry!"
-msgstr "2.1.0刚从洗衣店出来！"
+#~ msgid "2.1.0 Fresh out of the laundry!"
+#~ msgstr "2.1.0刚从洗衣店出来！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
-msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "包括每个注释变焦！"
+#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
+#~ msgstr "包括每个注释变焦！"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
-msgid ""
-"Latest set zoom, aka what is most comfortable to you, stays as default for "
-"new notes"
-msgstr "最新套装Zoom，aka，最舒适的是您的默认值"
+#~ msgid ""
+#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
+#~ "for new notes"
+#~ msgstr "最新套装Zoom，aka，最舒适的是您的默认值"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
-msgid "Better readability (WCAG AA or AAA depending on theme)"
-msgstr "更好的可读性（WCAG AA或AAA取决于主题）"
+#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
+#~ msgstr "更好的可读性（WCAG AA或AAA取决于主题）"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
-msgid "Also slightly better looking theme. Yes even more :)"
-msgstr "外观主题也稍好。"
+#~ msgid "Also slightly better looking theme. Yes even more :)"
+#~ msgstr "外观主题也稍好。"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
-msgid "Improved translations"
-msgstr "​​改进的翻译"
+#~ msgid "Improved translations"
+#~ msgstr "​​改进的翻译"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
-msgid "Better shortcut and tooltips"
-msgstr "更好的捷径和工具提示"
+#~ msgid "Better shortcut and tooltips"
+#~ msgstr "更好的捷径和工具提示"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
-msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "修复了一个障碍，其中jorts留在光系统主题上"
+#~ msgid "Fixed a bug where Jorts stayed on light system theme"
+#~ msgstr "修复了一个障碍，其中jorts留在光系统主题上"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
-msgid "2.0.1 Appcenter release"
-msgstr "2.0.1 AppCenter版本"
+#~ msgid "2.0.1 Appcenter release"
+#~ msgstr "2.0.1 AppCenter版本"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "2.0.0发行：板岩和泡泡糖"
+#~ msgid "2.0.0 Release: Slate And Bubblegum"
+#~ msgstr "2.0.0发行：板岩和泡泡糖"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
-msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "复兴的古老但被爱的notejot版本"
+#~ msgid "Revival of an ancient but well loved version of Notejot"
+#~ msgstr "复兴的古老但被爱的notejot版本"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
-msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "该应用现在被命名为Jorts。"
+#~ msgid "The app is now named Jorts. You however cannot wear it"
+#~ msgstr "该应用现在被命名为Jorts。"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
-msgid "10 lovely little colours"
-msgstr "10个可爱的小颜色"
+#~ msgid "10 lovely little colours"
+#~ msgstr "10个可爱的小颜色"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
-msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "现代Linux技术和包装格式的建造"
+#~ msgid "Built atop of modern Linux technologies and packaging formats"
+#~ msgstr "现代Linux技术和包装格式的建造"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
-msgid "Smooth transition when changing theme"
-msgstr "更改主题时的平稳过渡"
+#~ msgid "Smooth transition when changing theme"
+#~ msgstr "更改主题时的平稳过渡"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
-msgid "New stickies have a random fun little title and colour"
-msgstr "新粘贴有一个随机有趣的小标题和颜色"
+#~ msgid "New stickies have a random fun little title and colour"
+#~ msgstr "新粘贴有一个随机有趣的小标题和颜色"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
-msgid "A few initial translations included, and more to come"
-msgstr "包括一些初始翻译，还有更多"
+#~ msgid "A few initial translations included, and more to come"
+#~ msgstr "包括一些初始翻译，还有更多"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
-msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "电子邮件和链接可单击！ "
+#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
+#~ msgstr "电子邮件和链接可单击！ "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
-msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "文字支持撤消，重做，您可以使用表情符号:)"
+#~ msgid "Text supports undo, redo, and you can use emojis :)"
+#~ msgstr "文字支持撤消，重做，您可以使用表情符号:)"

@@ -5,5 +5,3 @@ src/Widgets/StickyView.vala
 src/Services/Utils.vala
 src/MainWindow.vala
 src/Application.vala
-data/io.github.ellie_commons.jorts.desktop.in
-data/io.github.ellie_commons.jorts.metainfo.xml.in

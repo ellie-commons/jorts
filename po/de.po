@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:12+0000\n"
+"POT-Creation-Date: 2025-03-17 19:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,18 +237,17 @@ msgstr "Top 10 Anime -Verrats"
 
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Erstaunliche Ascii-Kunst!"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
 msgstr "Titel bearbeiten"
 
-#: src/MainWindow.vala:147 data/io.github.ellie_commons.jorts.desktop.in:17
+#: src/MainWindow.vala:147
 msgid "New sticky note"
 msgstr "Neue Haftnotiz"
 
 #: src/MainWindow.vala:160
-#, fuzzy
 msgid "Delete sticky note"
 msgstr "Haftnotiz Löschen"
 
@@ -268,367 +267,231 @@ msgstr "Emoji einfügen"
 msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diese klebrige Note"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:3
-msgid "Jorts"
-msgstr ""
+#~ msgid "Sticky notes utility"
+#~ msgstr "Dienstprogramm für Haftnotizen"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:4
-msgid "Sticky notes utility"
-msgstr "Dienstprogramm für Haftnotizen"
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige "
+#~ "Informationen aufschreibenNotizen, Erinnerungen, zufällige Gedanken und "
+#~ "andere kurzfristige Informationen"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige "
-"Informationen aufschreibenNotizen, Erinnerungen, zufällige Gedanken und "
-"andere kurzfristige Informationen"
+#~ msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
+#~ msgstr "Text; Plaintetext; Notepad; Notizen; klebrig; post-it;"
 
-#: data/io.github.ellie_commons.jorts.desktop.in:8
-msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "Text; Plaintetext; Notepad; Notizen; klebrig; post-it;"
+#~ msgid "Neither jeans nor shorts, just like jorts"
+#~ msgstr "Weder Jeans noch Shorts, genau wie Jorts"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-msgid "Neither jeans nor shorts, just like jorts"
-msgstr "Weder Jeans noch Shorts, genau wie Jorts"
+#~ msgid "Colourful little sticky notes for all of your thoughts :)"
+#~ msgstr "Bunte kleine Haftnotizen für all Ihre Gedanken :)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-msgid "Colourful little sticky notes for all of your thoughts :)"
-msgstr "Bunte kleine Haftnotizen für all Ihre Gedanken :)"
+#~ msgid "Features include:"
+#~ msgstr "Zu den Funktionen gehören:"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
-msgid "Features include:"
-msgstr "Zu den Funktionen gehören:"
+#~ msgid "Colours: Ten pretty themes. Any new note gets a random one"
+#~ msgstr "Farben: Zehn hübsche Themen. Jede neue Note erhält eine zufällige"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
-msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr "Farben: Zehn hübsche Themen. Jede neue Note erhält eine zufällige"
+#~ msgid "Adaptive: New notes get the zoom you last chose"
+#~ msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
-msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
+#~ msgid "Cute: Each new note has a funny or cute random (editable) title"
+#~ msgstr ""
+#~ "süß: Jede neue Note hat einen lustigen oder niedlichen zufälligen "
+#~ "(bearbeitbaren) Titel"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
-msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
-"süß: Jede neue Note hat einen lustigen oder niedlichen zufälligen "
-"(bearbeitbaren) TitelNiedlich: Jede neue Notiz hat einen lustigen oder "
-"niedlichen zufälligen (editierbaren) Titel"
+#~ msgid "Handy: You can open links and emails with Ctrl+Click"
+#~ msgstr "Praktisch: Sie können Links und E-Mails mit Strg+Klick öffnen"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
-msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "Praktisch: Sie können Links und E-Mails mit Strg+Klick öffnen"
+#~ msgid ""
+#~ "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
+#~ "exist without her work. The community liked it so much, we thought it "
+#~ "would be great to revive it!"
+#~ msgstr ""
+#~ "Dies ist eine auffrischung einer alten Version von \"Notejot\" von "
+#~ "Lainsce und würde ohne ihre Arbeit nicht existieren. Dies ist eine "
+#~ "Abspaltung einer alten Version von Notejot von lainsce und würdeohne ihre "
+#~ "Arbeit nicht existieren. Der Community gefiel es so gut, dass wir "
+#~ "dachten, es wäre großartig, es wiederzubeleben!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:18
-msgid ""
-"This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
-"exist without her work. The community liked it so much, we thought it would "
-"be great to revive it!"
-msgstr ""
-"Dies ist eine Gabel einer alten Version von \"Notejot\" von Lainsce und "
-"würde ohne ihre Arbeit nicht existieren. Dies ist eine Abspaltung einer "
-"alten Version von Notejot von lainsce und würdeohne ihre Arbeit nicht "
-"existieren. Der Community gefiel es so gut, dass wir dachten, es wäre "
-"großartig, es wiederzubeleben!"
+#~ msgid "Stella - Teamcons"
+#~ msgstr "Stella - Teamcons"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
-msgid "Stella - Teamcons"
-msgstr "Stella - Teamcons"
+#~ msgid "Sticky notes"
+#~ msgstr "Haftnotizen"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
-msgid "Sticky notes"
-msgstr "Haftnotizen"
+#~ msgid "Notes"
+#~ msgstr "Notizen"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
-msgid "Notes"
-msgstr "Notizen"
+#~ msgid "Cute"
+#~ msgstr "Niedlich"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
-msgid "Cute"
-msgstr "Niedlich"
+#~ msgid "Desktop"
+#~ msgstr "Schreibtisch"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
-msgid "Desktop"
-msgstr "Schreibtisch"
+#~ msgid "Reminder"
+#~ msgstr "Erinnerung"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
-msgid "Reminder"
-msgstr "Erinnerung"
+#~ msgid "A sticky note with the \"Blueberry\" theme"
+#~ msgstr "Eine Haftnotiz mit dem Blaubeer-Thema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:54
-msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "Eine Haftnotiz mit dem Blaubeer-Thema"
+#~ msgid "You can change individual colour and text size!"
+#~ msgstr "Sie können die Farbe und Textgröße individuell ändern!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
-msgid "You can change individual colour and text size!"
-msgstr "Sie können die Farbe und Textgröße individuell ändern!"
+#~ msgid ""
+#~ "Streaming? Worried of someone looking above your shoulder? Try the "
+#~ "Squiggly Mode!"
+#~ msgstr ""
+#~ "Streamen? Haben Sie Angst, dass Ihnen jemand über die Schulter schaut? "
+#~ "Versuchen Sie den Scribbles-Modus!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
-msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
-"Mode!"
-msgstr "Streaming? "
+#~ msgid "Like emojis? Well there's an emoji picker!"
+#~ msgstr "Wie Emojis? "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
-msgid "Like emojis? Well there's an emoji picker!"
-msgstr "Wie Emojis? "
+#~ msgid "You can unzoom so hard you could do ascii art"
+#~ msgstr ""
+#~ "Sie können so stark herauszoomen, dass Sie ASCII-Kunst machen könnten"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
-msgid "You can unzoom so hard you could do ascii art"
-msgstr "Sie können so stark herauszoomen, dass Sie ASCII-Kunst machen könnten"
+#~ msgid "2.2.0 The Jorts of light"
+#~ msgstr "2.2.0 Die Jorts des Lichts"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
-msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 Die Jorts des Lichts"
+#~ msgid "Better translation coverage"
+#~ msgstr "bessere Übersetzungsabdeckung"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
-msgid "Better translation coverage"
-msgstr "bessere Übersetzungsabdeckung"
+#~ msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
+#~ msgstr "Neues Feature: Squiggly -Modus! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
-msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
-msgstr "Neues Feature: Squiggly -Modus! "
+#~ msgid ""
+#~ "New feature: Emoji picker button! I know there is one on right-click, but "
+#~ "buttons are more accessible!"
+#~ msgstr "Neues Feature: Emoji Picker Button! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
-msgid ""
-"New feature: Emoji picker button! I know there is one on right-click, but "
-"buttons are more accessible!"
-msgstr "Neues Feature: Emoji Picker Button! "
+#~ msgid ""
+#~ "The button in the toolbar displays a random emote everytime you click!"
+#~ msgstr ""
+#~ "Die Schaltfläche in der Symbolleiste zeigt jedes Mal, wenn Sie klicken, "
+#~ "eine zufällige Emote an!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
-msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr ""
-"Die Schaltfläche in der Symbolleiste zeigt jedes Mal, wenn Sie klicken, eine "
-"zufällige Emote an!"
+#~ msgid ""
+#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "can recover data!"
+#~ msgstr "Neue Funktion: Jorts macht ein monatliches Backup. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid ""
-"New feature: Jorts does a monthly backup. Should there be any issue you can "
-"recover data!"
-msgstr "Neue Funktion: Jorts macht ein monatliches Backup. "
+#~ msgid ""
+#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ msgstr ""
+#~ "Sollte der Hauptspeicher beschädigt werden, versucht Jorts, von der "
+#~ "Sicherung zu laden"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr ""
-"Sollte der Hauptspeicher beschädigt werden, versucht Jorts, von der "
-"Sicherung zu laden"
+#~ msgid "Some new fun/cute default titles"
+#~ msgstr "Einige neue lustige/süße Standardtitel"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
-msgid "Some new fun/cute default titles"
-msgstr "Einige neue lustige/süße Standardtitel"
+#~ msgid "Under the hood changes here and there for cleaner code"
+#~ msgstr "Unter der Motorhaube ändert sich hier und da für sauberere Code"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
-msgid "Under the hood changes here and there for cleaner code"
-msgstr "Unter der Motorhaube ändert sich hier und da für sauberere Code"
+#~ msgid "2.1.2 The unrippable jorts"
+#~ msgstr "2.1.2 Die unzerreißbare Latzhose"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
-msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2 Die unzerreißbare Latzhose"
+#~ msgid "Add relief to actionbar buttons"
+#~ msgstr ""
+#~ "Fügen Sie den Tasten der ActionBar -Schaltflächen Erleichterung hinzu"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
-msgid "Add relief to actionbar buttons"
-msgstr "Fügen Sie den Tasten der ActionBar -Schaltflächen Erleichterung hinzu"
+#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
+#~ msgstr ""
+#~ "Bugfix: Edge Case, in dem das Thema oder Zoom nicht richtig gespeichert "
+#~ "wurde"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
-msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr ""
-"Bugfix: Edge Case, in dem das Thema oder Zoom nicht richtig gespeichert wurde"
+#~ msgid "Bugfix: Title in multitasking not set correctly"
+#~ msgstr "Fehlerbehebung: Titel im Multitasking nicht korrekt eingestellt"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
-msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Fehlerbehebung: Titel im Multitasking nicht korrekt eingestellt"
+#~ msgid "Bugfix: Icon inconsistency accross icon themes"
+#~ msgstr "Bugfix: Symbol Inkonsistenz Accross Symbol Themen"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
-msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "Bugfix: Symbol Inkonsistenz Accross Symbol Themen"
+#~ msgid "Bugfix: Theming inconsistencies accross stickies"
+#~ msgstr "Bugfix: Themen -Inkonsistenzen, die Stickies abrufen"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
-msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr "Bugfix: Themen -Inkonsistenzen, die Stickies abrufen"
+#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
+#~ msgstr "2.1.1 Frisch aus der Wäscherei! (2: Electric Boogaloo)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
-msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr "2.1.1 Frisch aus der Wäscherei! (2: Electric Boogaloo)"
+#~ msgid "Clearer appmenu description"
+#~ msgstr "Klarere Beschreibung des App-Menüs"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
-msgid "Clearer appmenu description"
-msgstr "Klarere Beschreibung des App-Menüs"
+#~ msgid "More consistent theming"
+#~ msgstr "konsequenteres Thema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
-msgid "More consistent theming"
-msgstr "konsequenteres Thema"
+#~ msgid "Bugfix: the delete shortcut was unresponsible"
+#~ msgstr "Bugfix: Die Löschverknüpfung war nicht reagierbar"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
-msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "Bugfix: Die Löschverknüpfung war nicht reagierbar"
+#~ msgid "Bugfix: screenshot not showing"
+#~ msgstr "Bugfix: Screenshot nicht angezeigt"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
-msgid "Bugfix: screenshot not showing"
-msgstr "Bugfix: Screenshot nicht angezeigt"
+#~ msgid "2.1.0 Fresh out of the laundry!"
+#~ msgstr "2.1.0 frisch aus der Wäsche!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
-msgid "2.1.0 Fresh out of the laundry!"
-msgstr "2.1.0 frisch aus der Wäsche!"
+#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
+#~ msgstr "Beinhaltet einen Zoom pro Noten! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
-msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Beinhaltet einen Zoom pro Noten! "
+#~ msgid ""
+#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
+#~ "for new notes"
+#~ msgstr ""
+#~ "Neueste Set Zoom, auch bekannt als für Sie am besten, bleibt für neue "
+#~ "Notizen standardmäßig"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
-msgid ""
-"Latest set zoom, aka what is most comfortable to you, stays as default for "
-"new notes"
-msgstr ""
-"Neueste Set Zoom, auch bekannt als für Sie am besten, bleibt für neue "
-"Notizen standardmäßig"
+#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
+#~ msgstr "Bessere Lesbarkeit (WCAG AA oder AAA, abhängig vom Thema)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
-msgid "Better readability (WCAG AA or AAA depending on theme)"
-msgstr "Bessere Lesbarkeit (WCAG AA oder AAA, abhängig vom Thema)"
+#~ msgid "Also slightly better looking theme. Yes even more :)"
+#~ msgstr "Auch ein etwas besser aussehendes Thema. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
-msgid "Also slightly better looking theme. Yes even more :)"
-msgstr "Auch ein etwas besser aussehendes Thema. "
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
-#, fuzzy
-msgid "Improved translations"
-msgstr "Einige erste Übersetzungen :3"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
-msgid "Better shortcut and tooltips"
-msgstr "bessere Abkürzung und Tooltips"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
-msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr ""
-"Es wurde ein Fehler behoben, bei dem Jorts auf dem Thema des Lichtsystems "
-"blieben"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
-msgid "2.0.1 Appcenter release"
-msgstr "2.0.1 Appcenter-Veröffentlichung"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-#, fuzzy
-msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "2.0.0-Version: Schiefer und Bubblegum"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
-msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "Wiederbelebung einer alten, aber beliebten Version von Notejot"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
-msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "Die App heißt jetzt Jorts. Man kann sie aber nicht tragen"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
-msgid "10 lovely little colours"
-msgstr "10 liebliche kleine Farben"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
-msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Erstellt auf Basis moderner Linux-Technologien und Paketformate"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
-msgid "Smooth transition when changing theme"
-msgstr "Fließender Übergang beim Wechsel des Themes"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
-#, fuzzy
-msgid "New stickies have a random fun little title and colour"
-msgstr "Neue Haftnotizen haben einen zufälligen, lustigen kleinen Titel"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
-msgid "A few initial translations included, and more to come"
-msgstr "Ein paar erste Übersetzungen sind enthalten, und weitere sind geplant."
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
-msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr ""
-"E -Mail und Links sind anklickbar! E-Mail und Links sind anklickbar! "
-"Strg+Klick, um in E-Mail oder Browser zu öffnen"
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
-msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr ""
-"Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis "
-"verwenden :)Text unterstützt Rückgängig und Wiederherstellen und Sie können "
-"Emojis verwenden :)"
-
-#~ msgid "Settings"
-#~ msgstr "Einstellungen"
-
-#~ msgid "More translations!"
+#~ msgid "Improved translations"
 #~ msgstr "Einige erste Übersetzungen :3"
 
-#~ msgid "Ctrl+Scroll to change zoom"
-#~ msgstr "Strg+Scrollen, um den Zoom zu ändern"
+#~ msgid "Better shortcut and tooltips"
+#~ msgstr "bessere Abkürzung und Tooltips"
 
-#~ msgid "Lighter and yet more resilient theming system"
-#~ msgstr "Leichteres und dennoch widerstandsfähigeres Themensystem"
-
-#, fuzzy
-#~ msgid ""
-#~ "Neither jeans nor shorts, just like jorts! Colourful little sticky notes "
-#~ "for your thoughts :)"
+#~ msgid "Fixed a bug where Jorts stayed on light system theme"
 #~ msgstr ""
-#~ "Weder Jeans noch Shorts, genau wie Jorts. Eine Anwendung für Haftnotizen "
-#~ "für elementary OS"
+#~ "Es wurde ein Fehler behoben, bei dem Jorts auf dem Thema des Lichtsystems "
+#~ "blieben"
+
+#~ msgid "2.0.1 Appcenter release"
+#~ msgstr "2.0.1 Appcenter-Veröffentlichung"
 
 #, fuzzy
-#~ msgid "Ten pretty themes with soft transitions"
-#~ msgstr "Zehn gut aussehende Themen mit weichen Übergängen"
+#~ msgid "2.0.0 Release: Slate And Bubblegum"
+#~ msgstr "2.0.0-Version: Schiefer und Bubblegum"
 
-#, fuzzy
-#~ msgid "Striving to keep it simple, cute, modern, light"
-#~ msgstr "Niedlich, hübsch, einfach, modern, leicht"
+#~ msgid "Revival of an ancient but well loved version of Notejot"
+#~ msgstr "Wiederbelebung einer alten, aber beliebten Version von Notejot"
 
-#~ msgid "Supports Undo, Redo (Ctrl+Z, Ctrl+Shift+Z)"
-#~ msgstr "Unterstützt Rückgängig, Wiederherstellen (Strg+Z, Strg+Umschalt+Z)"
+#~ msgid "The app is now named Jorts. You however cannot wear it"
+#~ msgstr "Die App heißt jetzt Jorts. Man kann sie aber nicht tragen"
 
-#~ msgid "New sticky note (Ctrl+N)"
-#~ msgstr "Neue Haftnotiz (Strg+N)"
+#~ msgid "10 lovely little colours"
+#~ msgstr "10 liebliche kleine Farben"
 
-#~ msgid ""
-#~ "Neither jeans nor shorts, just like jorts. A sticky notes app for "
-#~ "elementary OS"
+#~ msgid "Built atop of modern Linux technologies and packaging formats"
+#~ msgstr "Erstellt auf Basis moderner Linux-Technologien und Paketformate"
+
+#~ msgid "Smooth transition when changing theme"
+#~ msgstr "Fließender Übergang beim Wechsel des Themes"
+
+#~ msgid "New stickies have a random fun little title and colour"
+#~ msgstr "Neue Haftnotizen haben einen zufälligen, lustigen kleinen Titel"
+
+#~ msgid "A few initial translations included, and more to come"
 #~ msgstr ""
-#~ "Weder Jeans noch Shorts, genau wie Jorts. Eine Anwendung für Haftnotizen "
-#~ "für elementary OS"
+#~ "Ein paar erste Übersetzungen sind enthalten, und weitere sind geplant."
 
-#, fuzzy
-#~ msgid "New screenshot"
-#~ msgstr "Neue Notiz"
+#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
+#~ msgstr ""
+#~ "E -Mail und Links sind anklickbar! E-Mail und Links sind anklickbar! "
+#~ "Strg+Klick, um in E-Mail oder Browser zu öffnen"
 
-#~ msgid "Old Notejot version and UI revived in a new project"
-#~ msgstr "Alte Notejot-Version und UI in einem neuen Projekt wiederbelebt"
-
-#~ msgid "Closer to current elementary OS Stylesheet and named colours"
-#~ msgstr "Näher am aktuellen elementaren OS Stylesheet und benannten Farben"
-
-#~ msgid "Also more colors than Notejot had"
-#~ msgstr "Auch mehr Farben als Notejot hatte"
-
-#~ msgid "It builds for flatpak now"
-#~ msgstr "Es wird jetzt für Flatpak gebaut“"
-
-#~ msgid "Better adapted to the way Wayland works"
-#~ msgstr "Besser angepasst an die Arbeitsweise von Wayland"
-
-#~ msgid "New stickies have random colour"
-#~ msgstr "Neue Haftnotizen haben eine zufällige Farbe"
-
-#~ msgid "Storage system rebuilt from the ground up"
-#~ msgstr "Speichersystem von Grund auf neu aufgebaut"
-
-#~ msgid "Latte"
-#~ msgstr "Latte"
-
-#~ msgid "Delete note"
-#~ msgstr "Notiz löschen"
-
-#~ msgid "Deep deep thoughts"
-#~ msgstr "Tiefe Gedanken"
+#~ msgid "Text supports undo, redo, and you can use emojis :)"
+#~ msgstr ""
+#~ "Text unterstützt Rückgänger, Wiederholung, und Sie können Emojis "
+#~ "verwenden :)Text unterstützt Rückgängig und Wiederherstellen und Sie "
+#~ "können Emojis verwenden :)"
