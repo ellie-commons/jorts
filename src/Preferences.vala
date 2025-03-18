@@ -36,28 +36,24 @@ namespace jorts {
             // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
-            gtk_settings.gtk_icon_theme_name = "elementary";
-
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
 
 
             var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
-            //set_name (titlelabel.get_text ());
+            set_name (titlelabel.get_text ());
 
             var headerbar = new Gtk.HeaderBar () {
                 show_title_buttons = false,
                 title_widget = titlelabel
             };
 
-            
             set_titlebar (headerbar);
-
-
-
-
+            set_size_request (650, 500);
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
+
+
 
             /*************************************************/
             // Box with settingsbox and then reset button
@@ -162,7 +158,7 @@ namespace jorts {
             // we have to revert to default when this one is focused
             this.notify["is-active"].connect(() => {
                 if (this.is_active) {
-                    gtk_settings.gtk_theme_name = (Gtk.Settings.get_default ()).gtk_theme_name;
+                    gtk_settings.gtk_theme_name = "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
                 }
             });
 
