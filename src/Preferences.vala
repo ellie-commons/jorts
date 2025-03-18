@@ -49,7 +49,7 @@ namespace jorts {
             };
 
             set_titlebar (headerbar);
-            set_size_request (650, 500);
+            set_size_request (525, 350);
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
