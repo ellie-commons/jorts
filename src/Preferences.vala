@@ -47,9 +47,7 @@ namespace jorts {
                 margin_end = 12
             };
 
-            var preferences_label = new Granite.HeaderLabel (_("Preferences for all sticky notes")) {
-                xalign = 0.0f
-            };
+            var preferences_label = new Granite.HeaderLabel (_("Preferences for all sticky notes"));
             preferences_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
             settingsbox.append(preferences_label); 
 
@@ -109,7 +107,7 @@ namespace jorts {
             actionbar.set_hexpand (true);
             actionbar.set_vexpand (false);
 
-            var reset_button = Gtk.Button();
+            var reset_button = new Gtk.Button();
             reset_button.set_label( _("Reset to Default"));
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
             actionbar.pack_start (reset_button);
@@ -136,7 +134,30 @@ namespace jorts {
             this.present ();
         }
 
+        /**
+        * Convert string representation of font to Pango.FontDescription.
+        *
+        * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
+        * @see SettingsBindGetMappingShared
+        */
+        protected static bool font_button_bind_get (Value value, Variant variant, void* user_data) {
+            string font = variant.get_string ();
+            var desc = Pango.FontDescription.from_string (font);
+            value.set_boxed (desc);
+            return true;
+        }
 
+        /**
+        * Convert Pango.FontDescription to string representation of font.
+        *
+        * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
+        * @see SettingsBindSetMappingShared
+        */
+        protected static Variant font_button_bind_set (Value value, VariantType expected_type, void* user_data) {
+            var desc = (Pango.FontDescription) value.get_boxed ();
+            string font = desc.to_string ();
+            return new Variant.string (font);
+        }
     }
 }
 
