@@ -27,8 +27,9 @@ namespace jorts {
     public class PreferenceWindow :  Granite.Dialog {
         public PreferenceWindow (GLib.Settings gsettings) {
 
-            set_name (_("Preferences"));
+            set_name (_("Preferences for Jorts"));
 
+            /*************************************************/
             // Box with settingsbox and then reset button
             var mainbox = new Gtk.Box (VERTICAL, 0) {
                 margin_bottom = 0,
@@ -43,75 +44,98 @@ namespace jorts {
                 margin_end = 12
             };
 
-            var preferences_label = new Gtk.Label (_("Preferences")) {
+            var preferences_label = new Granite.HeaderLabel (_("Preferences for all sticky notes")) {
                 xalign = 0.0f
             };
             preferences_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-
             settingsbox.append(preferences_label); 
 
-            // Scribble mode
-            var scribble_toggle = new Granite.SwitchModelButton (_("Activate scribble mode")) {
-                description = _("If enabled, unfocused sticky notes become unreadable"),
-                active = gsettings.get_boolean ("squiggly-mode-active")
-            };
-            settingsbox.append (scribble_toggle);
 
 
+                /*************************************************/
+                /*                  Default Font                 */
+                /*************************************************/
+
+                var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
+                    hexpand = true
+                };
+                var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+                    valign = Gtk.Align.CENTER,
+                    use_font = true
+                };
+                var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+                default_font_box.append (default_font_label);
+                default_font_box.append (default_font_button);
+                settingsbox.append(default_font_box); 
+
+                gsettings.bind_with_mapping (
+                    "font-name", default_font_button,
+                    "font-desc", SettingsBindFlags.DEFAULT,
+                    font_button_bind_get, font_button_bind_set, null, null);
+
+
+                /*************************************************/
+                /*              Scribble Toggle                  */
+                /*************************************************/
+
+                var scribble_toggle = new Gtk.Switch () {
+                    halign = Gtk.Align.END,
+                    hexpand = true,
+                    valign = Gtk.Align.CENTER
+                };
+                var scribble_label = new Granite.HeaderLabel (_("Activate scribble mode")) {
+                    mnemonic_widget = scribble_toggle,
+                    secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes")
+                };
+                var scribble_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+                scribble_box.append (animations_label);
+                scribble_box.append (scribble_label);
+                settingsbox.append(scribble_box); 
+
+                scribble_toggle.notify["active"].connect (() => {
+                    gsettings.set_boolean ("squiggly-mode-active", animations_switch.active);
+                });
+                gsettings.bind ("squiggly-mode-active", scribble_toggle, "active", BOOLEAN);
+
+
+
+
+            /*************************************************/
+            // Bar at the bottom
+            actionbar = new Gtk.ActionBar ();
+            actionbar.set_hexpand (true);
+            actionbar.set_vexpand (false);
+
+            var reset_button = Gtk.Button();
+            reset_button.set_label( _("Reset to Default"));
+            reset_button.tooltip_markup = (_("Reset all settings to defaults"));
+            actionbar.pack_start (reset_button);
+
+            reset_button.clicked.connect(() => {
+                string[] keys = {"font-name", "squiggly-mode-active"};
+                foreach (var key in keys) {
+                    interface_settings.reset (key);
+                }
+            })
+
+        
+            var close_button = new Gtk.Button ();
+            close_button.set_label(_("Close"));
+            close_button.action = Gtk.ResponseType.CLOSE;
+            actionbar.pack_end (close_button);
 
 
             mainbox.append (settingsbox);
-            //mainbox.attach(actionbar);
+            mainbox.append(actionbar);
 
             this.child = mainbox;
             this.show ();
             this.present ();
         }
+
+
     }
 }
-
-
-
-/*          // Bar at the bottom
-        actionbar = new Gtk.ActionBar ();
-        actionbar.set_hexpand (true);
-        actionbar.set_vexpand (false);
-
-        var reset_button = new Gtk.Button () {
-            tooltip_markup = _("Reset all settings to defaults");
-        };
-        actionbar.pack_end (reset_button);
-  */
-
-
-/*      var reset = add_button (_("Reset to Default"));
-
-    reset.clicked.connect (on_click_reset);
-    private void on_click_reset () {
-        var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Are you sure you want to reset personalization?"),
-            _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
-            "dialog-warning", Gtk.ButtonsType.CANCEL
-        ) {
-            modal = true,
-            transient_for = (Gtk.Window) get_root ()
-        };
-        var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
-        reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        reset_confirm_dialog.response.connect ((response_id) => {
-            if (response_id != Gtk.ResponseType.ACCEPT) {
-                reset_confirm_dialog.destroy ();
-                return;
-            }
-
-            do_reset ();
-            reset_confirm_dialog.destroy ();
-            restored ();
-        });
-        reset_confirm_dialog.show ();
-    }  */
-
-
 
 
 
