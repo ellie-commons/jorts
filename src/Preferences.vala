@@ -116,7 +116,7 @@ namespace jorts {
                 foreach (var key in keys) {
                     interface_settings.reset (key);
                 }
-            })
+            });
 
         
             var close_button = new Gtk.Button ();
