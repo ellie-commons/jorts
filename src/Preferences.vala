@@ -115,7 +115,7 @@ namespace jorts {
             reset_button.clicked.connect(() => {
                 string[] keys = {"font-name", "squiggly-mode-active"};
                 foreach (var key in keys) {
-                    interface_settings.reset (key);
+                    gsettings.reset (key);
                 }
             });
 
