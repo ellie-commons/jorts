@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-17 20:18+0100\n"
+"POT-Creation-Date: 2025-03-18 20:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,6 +90,70 @@ msgstr "Zoomer"
 #: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
+
+#: src/Preferences.vala:45
+#, fuzzy
+msgid "Preferences for all sticky notes"
+msgstr "Préférences pour ce post-it"
+
+#. ***********************************************
+#. Default Font
+#. ***********************************************
+#: src/Preferences.vala:85
+#, fuzzy
+msgid "Default Font"
+msgstr "Zoom par défaut"
+
+#: src/Preferences.vala:112
+msgid "Activate scribble mode"
+msgstr ""
+
+#: src/Preferences.vala:114
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes"
+msgstr ""
+
+#: src/Preferences.vala:136
+msgid "Reset to Default"
+msgstr ""
+
+#: src/Preferences.vala:137
+msgid "Reset all settings to defaults"
+msgstr ""
+
+#: src/Preferences.vala:149
+msgid "Close"
+msgstr ""
+
+#: src/MainWindow.vala:127
+msgid "Edit title"
+msgstr "Éditer le titre"
+
+#: src/MainWindow.vala:147
+msgid "New sticky note"
+msgstr "Nouveau post-it"
+
+#: src/MainWindow.vala:160
+#, fuzzy
+msgid "Delete sticky note"
+msgstr "Supprimer le post-it"
+
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
+msgid "Always show content of sticky notes"
+msgstr "Toujours afficher le contenu des post-it"
+
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
+msgid "Hide content of unfocused sticky notes"
+msgstr "Masquer le contenu des post-its en arrière-plan"
+
+#: src/MainWindow.vala:193
+msgid "Insert emoji"
+msgstr "insérer un emoji"
+
+#: src/MainWindow.vala:219
+msgid "Preferences for this sticky note"
+msgstr "Préférences pour ce post-it"
 
 #: src/Services/Utils.vala:80
 msgid "All my very best friends"
@@ -238,32 +302,3 @@ msgstr "Top 10 des trahisons d'anime"
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
 msgstr "Super art ascii!"
-
-#: src/MainWindow.vala:127
-msgid "Edit title"
-msgstr "Éditer le titre"
-
-#: src/MainWindow.vala:147
-msgid "New sticky note"
-msgstr "Nouveau post-it"
-
-#: src/MainWindow.vala:160
-#, fuzzy
-msgid "Delete sticky note"
-msgstr "Supprimer le post-it"
-
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "Toujours afficher le contenu des post-it"
-
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "Masquer le contenu des post-its en arrière-plan"
-
-#: src/MainWindow.vala:193
-msgid "Insert emoji"
-msgstr "insérer un emoji"
-
-#: src/MainWindow.vala:219
-msgid "Preferences for this sticky note"
-msgstr "Préférences pour ce post-it"

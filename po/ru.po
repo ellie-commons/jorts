@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-17 20:18+0100\n"
+"POT-Creation-Date: 2025-03-18 20:18+0100\n"
 "PO-Revision-Date: 2025-02-17 22:17+0300\n"
 "Last-Translator: Leo <lenemter@gmail.com>\n"
 "Language-Team: none\n"
@@ -89,6 +89,69 @@ msgstr "Увеличение"
 #: src/Widgets/SettingsPopover.vala:157
 msgid "ZOOM%"
 msgstr "ZOOM%"
+
+#: src/Preferences.vala:45
+#, fuzzy
+msgid "Preferences for all sticky notes"
+msgstr "предпочтения для этой липкой ноты"
+
+#. ***********************************************
+#. Default Font
+#. ***********************************************
+#: src/Preferences.vala:85
+#, fuzzy
+msgid "Default Font"
+msgstr "Уровень масштабирования по умолчанию"
+
+#: src/Preferences.vala:112
+msgid "Activate scribble mode"
+msgstr ""
+
+#: src/Preferences.vala:114
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes"
+msgstr ""
+
+#: src/Preferences.vala:136
+msgid "Reset to Default"
+msgstr ""
+
+#: src/Preferences.vala:137
+msgid "Reset all settings to defaults"
+msgstr ""
+
+#: src/Preferences.vala:149
+msgid "Close"
+msgstr ""
+
+#: src/MainWindow.vala:127
+msgid "Edit title"
+msgstr "Редактировать название"
+
+#: src/MainWindow.vala:147
+msgid "New sticky note"
+msgstr "Новая заметка"
+
+#: src/MainWindow.vala:160
+msgid "Delete sticky note"
+msgstr "Удалить заметку (Ctrl+W)"
+
+#: src/MainWindow.vala:175 src/MainWindow.vala:306
+msgid "Always show content of sticky notes"
+msgstr "Всегда показывайте содержание липких заметок"
+
+#: src/MainWindow.vala:181 src/MainWindow.vala:317
+msgid "Hide content of unfocused sticky notes"
+msgstr "Скрыть содержание сфокусированных липких заметок"
+
+#: src/MainWindow.vala:193
+msgid "Insert emoji"
+msgstr "вставьте смайлики"
+
+#: src/MainWindow.vala:219
+msgid "Preferences for this sticky note"
+msgstr "предпочтения для этой липкой ноты"
 
 #: src/Services/Utils.vala:80
 msgid "All my very best friends"
@@ -237,32 +300,3 @@ msgstr "10 лучших аниме предательства"
 #: src/Services/Utils.vala:116
 msgid "Amazing ascii art!"
 msgstr ""
-
-#: src/MainWindow.vala:127
-msgid "Edit title"
-msgstr "Редактировать название"
-
-#: src/MainWindow.vala:147
-msgid "New sticky note"
-msgstr "Новая заметка"
-
-#: src/MainWindow.vala:160
-msgid "Delete sticky note"
-msgstr "Удалить заметку (Ctrl+W)"
-
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "Всегда показывайте содержание липких заметок"
-
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "Скрыть содержание сфокусированных липких заметок"
-
-#: src/MainWindow.vala:193
-msgid "Insert emoji"
-msgstr "вставьте смайлики"
-
-#: src/MainWindow.vala:219
-msgid "Preferences for this sticky note"
-msgstr "предпочтения для этой липкой ноты"
-

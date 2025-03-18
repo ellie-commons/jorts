@@ -30,7 +30,7 @@ namespace jorts {
 	    public int64 latest_zoom;
         public bool squiggly_mode_active = false;
         public signal void squiggly_changed (bool squiggly);
-
+        public static string system_accent;
 
         public override void startup () {
             base.startup ();
@@ -46,7 +46,13 @@ namespace jorts {
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
+
+            system_accent = gtk_settings.gtk_theme_name;
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+
+
+
+
 
             // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
@@ -71,8 +77,7 @@ namespace jorts {
         }
 
         construct {
-            this.squiggly_mode_active = gsettings.get_boolean ("squiggly-mode-active");
-            
+
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
@@ -125,10 +130,14 @@ namespace jorts {
             var toggle_squiggly = new SimpleAction ("toggle_squiggly", null);
             set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
             add_action (toggle_squiggly);
-            toggle_squiggly.activate.connect (() => {
-                this.toggle_squiggly();
-            });
+            toggle_squiggly.activate.connect (() => {this.toggle_squiggly();});
 
+
+
+            
+            this.squiggly_mode_active = gsettings.get_boolean ("squiggly-mode-active");
+
+            gsettings.notify["squiggly-mode-active"].connect (() => {this.toggle_squiggly();}); 
 
         }
 

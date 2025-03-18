@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:12+0000\n"
+"POT-Creation-Date: 2025-03-18 20:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,256 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:45
-msgid "Blueberry"
-msgstr "Blåbär"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Lime"
-msgstr "Lime"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Mint"
-msgstr "Mint"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Banana"
-msgstr "Banan"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Strawberry"
-msgstr "Jordgubbe"
-
-#: src/Widgets/ColorBox.vala:50
-msgid "Orange"
-msgstr "Apelsin"
-
-#: src/Widgets/ColorBox.vala:51
-msgid "Bubblegum"
-msgstr "Bubblegum"
-
-#: src/Widgets/ColorBox.vala:52
-msgid "Grape"
-msgstr "druva"
-
-#: src/Widgets/ColorBox.vala:53
-msgid "Cocoa"
-msgstr "kakao"
-
-#: src/Widgets/ColorBox.vala:54
-msgid "Slate"
-msgstr "skiffer"
-
-#.
-#. THEME SELECTION
-#.
-#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:70
-msgid "Sticky Note Colour"
-msgstr "klibbig anteckningsfärg"
-
-#: src/Widgets/SettingsPopover.vala:72
-msgid "Choose a colour for this sticky note"
-msgstr "Välj en färg för den här klibbiga anteckningen"
-
-#: src/Widgets/SettingsPopover.vala:94
-msgid "Zoom out"
-msgstr "Zooma ut"
-
-#: src/Widgets/SettingsPopover.vala:100
-msgid "Default zoom level"
-msgstr "Standard zoomnivå"
-
-#: src/Widgets/SettingsPopover.vala:107
-msgid "Zoom in"
-msgstr "Zooma in"
-
-#. Called by the Mainwindow when adjusting to new zoomlevel
-#. Mainwindow reacts to a signal by the popover
-#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
-#. Just consider the "%"
-#: src/Widgets/SettingsPopover.vala:157
-msgid "ZOOM%"
-msgstr "ZOOM%"
-
-#: src/Services/Utils.vala:80
-msgid "All my very best friends"
-msgstr "Alla mina allra bästa vänner"
-
-#: src/Services/Utils.vala:81
-msgid "My super good secret recipe"
-msgstr "Mitt super goda hemliga recept"
-
-#: src/Services/Utils.vala:82
-msgid "My todo list"
-msgstr "Min TODO -lista"
-
-#: src/Services/Utils.vala:83
-msgid "Super secret to not tell anyone"
-msgstr "Super Secret att inte berätta för någon"
-
-#: src/Services/Utils.vala:84
-msgid "My grocery list"
-msgstr "Min livsmedelslista"
-
-#: src/Services/Utils.vala:85
-msgid "Random shower thoughts"
-msgstr "Slumpmässiga duschtankar"
-
-#: src/Services/Utils.vala:86
-msgid "My fav fanfics"
-msgstr "Mina favoritfanfics"
-
-#: src/Services/Utils.vala:87
-msgid "My fav dinosaurs"
-msgstr "Mina favoritdinosaurier"
-
-#: src/Services/Utils.vala:88
-msgid "My evil mastermind plan"
-msgstr "Min onda mastermind -plan"
-
-#: src/Services/Utils.vala:89
-msgid "What made me smile today"
-msgstr "Vad fick mig att le idag"
-
-#: src/Services/Utils.vala:90
-msgid "Hello world!"
-msgstr "Hej värld!"
-
-#: src/Services/Utils.vala:91
-msgid "New sticky, new me"
-msgstr "Ny klibbig, ny mig"
-
-#: src/Services/Utils.vala:92
-msgid "Hidden pirate treasure"
-msgstr "dold piratskatt"
-
-#: src/Services/Utils.vala:93
-msgid "To not forget, ever"
-msgstr "att inte glömma, någonsin"
-
-#: src/Services/Utils.vala:94
-msgid "Dear Diary,"
-msgstr "Kära dagbok,"
-
-#: src/Services/Utils.vala:95
-msgid "Hi im a square"
-msgstr "Hej jag är en fyrkant"
-
-#: src/Services/Utils.vala:96
-msgid "Have a nice day! :)"
-msgstr "Ha en trevlig dag! "
-
-#: src/Services/Utils.vala:97
-msgid "My meds schedule"
-msgstr "Mitt medicin schema"
-
-#: src/Services/Utils.vala:98
-msgid "Household chores"
-msgstr "Hushållssysslor"
-
-#: src/Services/Utils.vala:99
-msgid "Ode to my cat"
-msgstr "ode till min katt"
-
-#: src/Services/Utils.vala:100
-msgid "My dogs favourite toys"
-msgstr "Mina hundens favoritleksaker"
-
-#: src/Services/Utils.vala:101
-msgid "How cool my birds are"
-msgstr "Hur coola mina fåglar är"
-
-#: src/Services/Utils.vala:102
-msgid "Suspects in the Last Cookie affair"
-msgstr "Misstänkta i den senaste cookie -affären"
-
-#: src/Services/Utils.vala:103
-msgid "Words my parrots know"
-msgstr "Ord som mina papegojor vet"
-
-#: src/Services/Utils.vala:104
-msgid "Cool and funny compliments to give out"
-msgstr "Cool och roliga komplimanger att ge ut"
-
-#: src/Services/Utils.vala:105
-msgid "Ok, listen here,"
-msgstr "OK, lyssna här,"
-
-#: src/Services/Utils.vala:106
-msgid "My dream Pokemon team"
-msgstr "Mitt dröm Pokemon -team"
-
-#: src/Services/Utils.vala:107
-msgid "My little notes"
-msgstr "Mina små anteckningar"
-
-#: src/Services/Utils.vala:108
-msgid "Surprise gift list"
-msgstr "Överraskningspresentlistan"
-
-#: src/Services/Utils.vala:109
-msgid "Brainstorming notes"
-msgstr "Brainstorming Notes"
-
-#: src/Services/Utils.vala:110
-msgid "To bring to the party"
-msgstr "Att föra till festen"
-
-#: src/Services/Utils.vala:111
-msgid "My amazing mixtape"
-msgstr "Min fantastiska mixtape"
-
-#: src/Services/Utils.vala:112
-msgid "Napkin scribbles"
-msgstr "servettklott"
-
-#: src/Services/Utils.vala:113
-msgid "My fav songs to sing along"
-msgstr "Mina favoritlåtar att sjunga med"
-
-#: src/Services/Utils.vala:114
-msgid "When to water which plant"
-msgstr "När man ska vattna vilken växt"
-
-#: src/Services/Utils.vala:115
-msgid "Top 10 anime betrayals"
-msgstr "Topp 10 anime förråd"
-
-#: src/Services/Utils.vala:116
-msgid "Amazing ascii art!"
-msgstr "Fantastisk ascii-konst!"
-
-#: src/MainWindow.vala:127
-msgid "Edit title"
-msgstr "Redigera titel"
-
-#: src/MainWindow.vala:147 data/io.github.ellie_commons.jorts.desktop.in:17
-msgid "New sticky note"
-msgstr "Ny Sticky Note"
-
-#: src/MainWindow.vala:160
-msgid "Delete sticky note"
-msgstr "Ta bort klibbig anteckning"
-
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "Visa alltid innehåll i klistermärken"
-
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "Dölj innehållet i ofokuserade klisterlappar"
-
-#: src/MainWindow.vala:193
-msgid "Insert emoji"
-msgstr "Infoga emoji"
-
-#: src/MainWindow.vala:219
-msgid "Preferences for this sticky note"
-msgstr "Inställningar för denna klibbiga anteckning"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -287,6 +37,14 @@ msgstr ""
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 "text; vanlig; vanlig text; anteckningar; anteckningar; klibbig; post-it;"
+
+#: data/io.github.ellie_commons.jorts.desktop.in:17
+msgid "New sticky note"
+msgstr "Ny Sticky Note"
+
+#: data/io.github.ellie_commons.jorts.desktop.in:21
+msgid "Preferences"
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -360,11 +118,13 @@ msgid "You can change individual colour and text size!"
 msgstr "Du kan ändra individuell färg och textstorlek!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+#, fuzzy
 msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
+"Streaming? Worried of someone looking above your shoulder? Try the scribble "
 "Mode!"
-msgstr "Streaming? Är du orolig för att någon tittar över din axel? Prova det krusiga "
-"-läge!"
+msgstr ""
+"Streaming? Är du orolig för att någon tittar över din axel? Prova det "
+"krusiga -läge!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "Like emojis? Well there's an emoji picker!"
@@ -374,103 +134,135 @@ msgstr "Som emojis? "
 msgid "You can unzoom so hard you could do ascii art"
 msgstr "Du kan ta bort så hårt att du kan göra ASCII -konst"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
-msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 Ljusjorten"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:87
+#, fuzzy
+msgid "2.3.0 The Inner Jorts"
+msgstr "2.1.2 De omplacerbara jorts"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
-msgid "Better translation coverage"
-msgstr "Bättre översättningstäckning"
+msgid "Scribble mode has been moved to the new preference dialog"
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
-msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
-msgstr "Ny funktion: Skribblingsläge! "
+msgid "New feature: Default font. You can now set a specific font for Jorts."
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid ""
+"Improvement for translators: Translations have been separated in 2: One for "
+"the UI one for the extra content"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+#, fuzzy
+msgid "Updated translations"
+msgstr "Förbättrade översättningar"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
+msgid "2.2.0 The Jorts of light"
+msgstr "2.2.0 Ljusjorten"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
+msgid "Better translation coverage"
+msgstr "Bättre översättningstäckning"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
+#, fuzzy
+msgid "New feature: scribble mode! Hide sticky notes content when unfocused"
+msgstr "Ny funktion: Skribblingsläge! "
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
+msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
-msgstr "Ny funktion: Emoji-väljarknapp! Jag vet att det finns en på högerklick, men "
-"-knappar är mer tillgängliga!"
+msgstr ""
+"Ny funktion: Emoji-väljarknapp! Jag vet att det finns en på högerklick, men -"
+"knappar är mer tillgängliga!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr ""
 "Knappen i verktygsfältet visar en slumpmässig emote varje gång du klickar!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
 msgstr "Ny funktion: Jorts gör en månatlig säkerhetskopia. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr ""
 "Om huvudlagringen skadas försöker jorts att ladda från säkerhetskopiering"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Some new fun/cute default titles"
 msgstr "Några nya roliga/söta standardtitlar"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Under huven ändras här och där för renare kod"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 De omplacerbara jorts"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Add relief to actionbar buttons"
 msgstr "Lägg till lättnad till ActionBar -knapparna"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "Bugfix: Edge Case där temat eller zoom var inte korrekt räddat"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr "Bugfix: Titel i multitasking inte korrekt"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "Bugfix: Icon Inconsistency Accross Icon -teman"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:125
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Bugfix: tema inkonsekvenser över klibbor"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 Färsk ut ur tvätten! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Clearer appmenu description"
 msgstr "Tydligare beskrivning av appmenyn"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "More consistent theming"
 msgstr "Mer konsekvent teman"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "BUGFIX: Radera genvägen var ansvarsfull"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Bugfix: screenshot not showing"
 msgstr "Bugfix: Skärmdump visar inte"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 färskt ur tvätten!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "Inkluderar en zoom per not! Så att du kan få större eller mindre text"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -478,66 +270,243 @@ msgstr ""
 "Senaste uppsättningen zoom, alias vad som är mest bekvämt för dig, förblir "
 "som standard för nya anteckningar"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Bättre läsbarhet (WCAG AA eller AAA beroende på tema)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Också lite snyggare tema. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
 msgid "Improved translations"
 msgstr "Förbättrade översättningar"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
 msgid "Better shortcut and tooltips"
 msgstr "Bättre genvägs- och verktygstips"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "Fixade ett fel där jorts stannade kvar på lätt systemtema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 AppCenter Release"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 Släpp: Slate and Bubblegum"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Återupplivning av en forntida men väl älskad version av NoteJot"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Appen heter nu Jorts. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
 msgid "10 lovely little colours"
 msgstr "10 härliga små färger"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "Byggt ovanpå modern Linux -teknik och förpackningsformat"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
 msgid "Smooth transition when changing theme"
 msgstr "Smidig övergång vid ändring av tema"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "New stickies have a random fun little title and colour"
 msgstr "Nya klistor har en slumpmässig rolig liten titel och färg"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "A few initial translations included, and more to come"
 msgstr "Några första översättningar inkluderade och mer framöver"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr "E -post och länkar är klickbara! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Text stöder ångra, göra om, och du kan använda emojis :)"
+
+#~ msgid "Blueberry"
+#~ msgstr "Blåbär"
+
+#~ msgid "Lime"
+#~ msgstr "Lime"
+
+#~ msgid "Mint"
+#~ msgstr "Mint"
+
+#~ msgid "Banana"
+#~ msgstr "Banan"
+
+#~ msgid "Strawberry"
+#~ msgstr "Jordgubbe"
+
+#~ msgid "Orange"
+#~ msgstr "Apelsin"
+
+#~ msgid "Bubblegum"
+#~ msgstr "Bubblegum"
+
+#~ msgid "Grape"
+#~ msgstr "druva"
+
+#~ msgid "Cocoa"
+#~ msgstr "kakao"
+
+#~ msgid "Slate"
+#~ msgstr "skiffer"
+
+#~ msgid "Sticky Note Colour"
+#~ msgstr "klibbig anteckningsfärg"
+
+#~ msgid "Choose a colour for this sticky note"
+#~ msgstr "Välj en färg för den här klibbiga anteckningen"
+
+#~ msgid "Zoom out"
+#~ msgstr "Zooma ut"
+
+#~ msgid "Default zoom level"
+#~ msgstr "Standard zoomnivå"
+
+#~ msgid "Zoom in"
+#~ msgstr "Zooma in"
+
+#~ msgid "ZOOM%"
+#~ msgstr "ZOOM%"
+
+#~ msgid "All my very best friends"
+#~ msgstr "Alla mina allra bästa vänner"
+
+#~ msgid "My super good secret recipe"
+#~ msgstr "Mitt super goda hemliga recept"
+
+#~ msgid "My todo list"
+#~ msgstr "Min TODO -lista"
+
+#~ msgid "Super secret to not tell anyone"
+#~ msgstr "Super Secret att inte berätta för någon"
+
+#~ msgid "My grocery list"
+#~ msgstr "Min livsmedelslista"
+
+#~ msgid "Random shower thoughts"
+#~ msgstr "Slumpmässiga duschtankar"
+
+#~ msgid "My fav fanfics"
+#~ msgstr "Mina favoritfanfics"
+
+#~ msgid "My fav dinosaurs"
+#~ msgstr "Mina favoritdinosaurier"
+
+#~ msgid "My evil mastermind plan"
+#~ msgstr "Min onda mastermind -plan"
+
+#~ msgid "What made me smile today"
+#~ msgstr "Vad fick mig att le idag"
+
+#~ msgid "Hello world!"
+#~ msgstr "Hej värld!"
+
+#~ msgid "New sticky, new me"
+#~ msgstr "Ny klibbig, ny mig"
+
+#~ msgid "Hidden pirate treasure"
+#~ msgstr "dold piratskatt"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "att inte glömma, någonsin"
+
+#~ msgid "Dear Diary,"
+#~ msgstr "Kära dagbok,"
+
+#~ msgid "Hi im a square"
+#~ msgstr "Hej jag är en fyrkant"
+
+#~ msgid "Have a nice day! :)"
+#~ msgstr "Ha en trevlig dag! "
+
+#~ msgid "My meds schedule"
+#~ msgstr "Mitt medicin schema"
+
+#~ msgid "Household chores"
+#~ msgstr "Hushållssysslor"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "ode till min katt"
+
+#~ msgid "My dogs favourite toys"
+#~ msgstr "Mina hundens favoritleksaker"
+
+#~ msgid "How cool my birds are"
+#~ msgstr "Hur coola mina fåglar är"
+
+#~ msgid "Suspects in the Last Cookie affair"
+#~ msgstr "Misstänkta i den senaste cookie -affären"
+
+#~ msgid "Words my parrots know"
+#~ msgstr "Ord som mina papegojor vet"
+
+#~ msgid "Cool and funny compliments to give out"
+#~ msgstr "Cool och roliga komplimanger att ge ut"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "OK, lyssna här,"
+
+#~ msgid "My dream Pokemon team"
+#~ msgstr "Mitt dröm Pokemon -team"
+
+#~ msgid "My little notes"
+#~ msgstr "Mina små anteckningar"
+
+#~ msgid "Surprise gift list"
+#~ msgstr "Överraskningspresentlistan"
+
+#~ msgid "Brainstorming notes"
+#~ msgstr "Brainstorming Notes"
+
+#~ msgid "To bring to the party"
+#~ msgstr "Att föra till festen"
+
+#~ msgid "My amazing mixtape"
+#~ msgstr "Min fantastiska mixtape"
+
+#~ msgid "Napkin scribbles"
+#~ msgstr "servettklott"
+
+#~ msgid "My fav songs to sing along"
+#~ msgstr "Mina favoritlåtar att sjunga med"
+
+#~ msgid "When to water which plant"
+#~ msgstr "När man ska vattna vilken växt"
+
+#~ msgid "Top 10 anime betrayals"
+#~ msgstr "Topp 10 anime förråd"
+
+#~ msgid "Amazing ascii art!"
+#~ msgstr "Fantastisk ascii-konst!"
+
+#~ msgid "Edit title"
+#~ msgstr "Redigera titel"
+
+#~ msgid "Delete sticky note"
+#~ msgstr "Ta bort klibbig anteckning"
+
+#~ msgid "Always show content of sticky notes"
+#~ msgstr "Visa alltid innehåll i klistermärken"
+
+#~ msgid "Hide content of unfocused sticky notes"
+#~ msgstr "Dölj innehållet i ofokuserade klisterlappar"
+
+#~ msgid "Insert emoji"
+#~ msgstr "Infoga emoji"
+
+#~ msgid "Preferences for this sticky note"
+#~ msgstr "Inställningar för denna klibbiga anteckning"

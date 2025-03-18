@@ -2,7 +2,7 @@
 <schemalist>
   <schema path="/io/github/ellie_commons/jorts/" id="io.github.ellie_commons.jorts">
 		<key name="font-name" type="s">
-			<default>"Inter 9"</default>	
+			<default>"Inter Regular 9"</default>	
 			<summary>The default font for sticky notes</summary>
 			<description>The default font for sticky notes. use [Font Name] [Property] [Size]. eg. Droid Sans Mono 12. By default this follows system theme</description>	
 	    </key>

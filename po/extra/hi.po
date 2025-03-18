@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 19:12+0000\n"
+"POT-Creation-Date: 2025-03-18 20:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,256 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:45
-msgid "Blueberry"
-msgstr "ब्लूबेरी"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Lime"
-msgstr "चूना"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Mint"
-msgstr "टकसाल"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Banana"
-msgstr "केला"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Strawberry"
-msgstr "स्ट्रॉबेरी"
-
-#: src/Widgets/ColorBox.vala:50
-msgid "Orange"
-msgstr "नारंगी"
-
-#: src/Widgets/ColorBox.vala:51
-msgid "Bubblegum"
-msgstr "बबलगम"
-
-#: src/Widgets/ColorBox.vala:52
-msgid "Grape"
-msgstr "अंगूर"
-
-#: src/Widgets/ColorBox.vala:53
-msgid "Cocoa"
-msgstr "कोको"
-
-#: src/Widgets/ColorBox.vala:54
-msgid "Slate"
-msgstr "स्लेट"
-
-#.
-#. THEME SELECTION
-#.
-#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:70
-msgid "Sticky Note Colour"
-msgstr "चिपचिपा नोट रंग"
-
-#: src/Widgets/SettingsPopover.vala:72
-msgid "Choose a colour for this sticky note"
-msgstr "इस चिपचिपे नोट के लिए एक रंग चुनें"
-
-#: src/Widgets/SettingsPopover.vala:94
-msgid "Zoom out"
-msgstr "ज़ूम आउट"
-
-#: src/Widgets/SettingsPopover.vala:100
-msgid "Default zoom level"
-msgstr "डिफ़ॉल्ट ज़ूम स्तर"
-
-#: src/Widgets/SettingsPopover.vala:107
-msgid "Zoom in"
-msgstr "ज़ूम इन"
-
-#. Called by the Mainwindow when adjusting to new zoomlevel
-#. Mainwindow reacts to a signal by the popover
-#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
-#. Just consider the "%"
-#: src/Widgets/SettingsPopover.vala:157
-msgid "ZOOM%"
-msgstr "ZOOM%"
-
-#: src/Services/Utils.vala:80
-msgid "All my very best friends"
-msgstr "मेरे सभी सबसे अच्छे दोस्त"
-
-#: src/Services/Utils.vala:81
-msgid "My super good secret recipe"
-msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
-
-#: src/Services/Utils.vala:82
-msgid "My todo list"
-msgstr "मेरी टोडो सूची"
-
-#: src/Services/Utils.vala:83
-msgid "Super secret to not tell anyone"
-msgstr "किसी को नहीं बताने के लिए सुपर सीक्रेट"
-
-#: src/Services/Utils.vala:84
-msgid "My grocery list"
-msgstr "मेरी किराने की सूची"
-
-#: src/Services/Utils.vala:85
-msgid "Random shower thoughts"
-msgstr "यादृच्छिक शावर विचार"
-
-#: src/Services/Utils.vala:86
-msgid "My fav fanfics"
-msgstr "मेरे फेव फैनफिक्स"
-
-#: src/Services/Utils.vala:87
-msgid "My fav dinosaurs"
-msgstr "मेरे फेव डायनासोर"
-
-#: src/Services/Utils.vala:88
-msgid "My evil mastermind plan"
-msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
-
-#: src/Services/Utils.vala:89
-msgid "What made me smile today"
-msgstr "आज मुझे क्या मुस्कुरा दिया"
-
-#: src/Services/Utils.vala:90
-msgid "Hello world!"
-msgstr "हैलो वर्ल्ड!"
-
-#: src/Services/Utils.vala:91
-msgid "New sticky, new me"
-msgstr "नया चिपचिपा, नया मुझे"
-
-#: src/Services/Utils.vala:92
-msgid "Hidden pirate treasure"
-msgstr "छिपा हुआ समुद्री डाकू खजाना"
-
-#: src/Services/Utils.vala:93
-msgid "To not forget, ever"
-msgstr "कभी नहीं भूलना, कभी भी"
-
-#: src/Services/Utils.vala:94
-msgid "Dear Diary,"
-msgstr "प्रिय डायरी,"
-
-#: src/Services/Utils.vala:95
-msgid "Hi im a square"
-msgstr "हाय एक वर्ग im"
-
-#: src/Services/Utils.vala:96
-msgid "Have a nice day! :)"
-msgstr "आपका दिन शुभ हो! "
-
-#: src/Services/Utils.vala:97
-msgid "My meds schedule"
-msgstr "मेरे मेड्स शेड्यूल"
-
-#: src/Services/Utils.vala:98
-msgid "Household chores"
-msgstr "घरेलू काम"
-
-#: src/Services/Utils.vala:99
-msgid "Ode to my cat"
-msgstr "मेरी बिल्ली के लिए ode"
-
-#: src/Services/Utils.vala:100
-msgid "My dogs favourite toys"
-msgstr "मेरे कुत्ते पसंदीदा खिलौने"
-
-#: src/Services/Utils.vala:101
-msgid "How cool my birds are"
-msgstr "मेरे पक्षी कितने शांत हैं"
-
-#: src/Services/Utils.vala:102
-msgid "Suspects in the Last Cookie affair"
-msgstr "अंतिम कुकी चक्कर में संदिग्ध"
-
-#: src/Services/Utils.vala:103
-msgid "Words my parrots know"
-msgstr "शब्द मेरे तोते जानते हैं"
-
-#: src/Services/Utils.vala:104
-msgid "Cool and funny compliments to give out"
-msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
-
-#: src/Services/Utils.vala:105
-msgid "Ok, listen here,"
-msgstr "ठीक है, यहाँ सुनो,"
-
-#: src/Services/Utils.vala:106
-msgid "My dream Pokemon team"
-msgstr "मेरा ड्रीम पोकेमॉन टीम"
-
-#: src/Services/Utils.vala:107
-msgid "My little notes"
-msgstr "मेरे छोटे नोट"
-
-#: src/Services/Utils.vala:108
-msgid "Surprise gift list"
-msgstr "आश्चर्य उपहार सूची"
-
-#: src/Services/Utils.vala:109
-msgid "Brainstorming notes"
-msgstr "विचार मंथन नोट्स"
-
-#: src/Services/Utils.vala:110
-msgid "To bring to the party"
-msgstr "पार्टी में लाने के लिए"
-
-#: src/Services/Utils.vala:111
-msgid "My amazing mixtape"
-msgstr "मेरा अद्भुत मिक्सटेप"
-
-#: src/Services/Utils.vala:112
-msgid "Napkin scribbles"
-msgstr "नैपकिन स्क्रिबल्स"
-
-#: src/Services/Utils.vala:113
-msgid "My fav songs to sing along"
-msgstr "मेरे fav गाने के साथ गाने के लिए"
-
-#: src/Services/Utils.vala:114
-msgid "When to water which plant"
-msgstr "कब पानी के लिए पानी"
-
-#: src/Services/Utils.vala:115
-msgid "Top 10 anime betrayals"
-msgstr "शीर्ष 10 एनीमे विश्वासघात"
-
-#: src/Services/Utils.vala:116
-msgid "Amazing ascii art!"
-msgstr ""
-
-#: src/MainWindow.vala:127
-msgid "Edit title"
-msgstr "शीर्षक संपादित करें"
-
-#: src/MainWindow.vala:147 data/io.github.ellie_commons.jorts.desktop.in:17
-msgid "New sticky note"
-msgstr "नया चिपचिपा नोट"
-
-#: src/MainWindow.vala:160
-msgid "Delete sticky note"
-msgstr "चिपचिपा नोट हटाएं"
-
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "हमेशा चिपचिपे नोटों की सामग्री दिखाएं"
-
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "अनफोकस्ड स्टिकी नोट्स की सामग्री छिपाएं"
-
-#: src/MainWindow.vala:193
-msgid "Insert emoji"
-msgstr "इमोजी डालें"
-
-#: src/MainWindow.vala:219
-msgid "Preferences for this sticky note"
-msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -284,6 +34,14 @@ msgstr "नोट्स, रिमाइंडर, यादृच्छिक �
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr "पाठ; सादा; प्लेनटेक्स्ट; नोटपैड; नोट; स्टिकी; पोस्ट-इट;"
+
+#: data/io.github.ellie_commons.jorts.desktop.in:17
+msgid "New sticky note"
+msgstr "नया चिपचिपा नोट"
+
+#: data/io.github.ellie_commons.jorts.desktop.in:21
+msgid "Preferences"
+msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -355,8 +113,9 @@ msgid "You can change individual colour and text size!"
 msgstr "आप व्यक्तिगत रंग और पाठ का आकार बदल सकते हैं!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
+#, fuzzy
 msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
+"Streaming? Worried of someone looking above your shoulder? Try the scribble "
 "Mode!"
 msgstr "स्ट्रीमिंग? "
 
@@ -368,100 +127,131 @@ msgstr "इमोजी की तरह? "
 msgid "You can unzoom so hard you could do ascii art"
 msgstr "आप इतनी मेहनत कर सकते हैं कि आप ASCII कला कर सकते हैं"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:87
+#, fuzzy
+msgid "2.3.0 The Inner Jorts"
+msgstr "2.1.2 अनियंत्रित जोर्ट्स"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
+msgid "Scribble mode has been moved to the new preference dialog"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
+msgid "New feature: Default font. You can now set a specific font for Jorts."
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+msgid ""
+"Improvement for translators: Translations have been separated in 2: One for "
+"the UI one for the extra content"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+#, fuzzy
+msgid "Updated translations"
+msgstr "बेहतर अनुवाद"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 प्रकाश के जोर्ट्स"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
 msgid "Better translation coverage"
 msgstr "बेहतर अनुवाद कवरेज"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
-msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
+#, fuzzy
+msgid "New feature: scribble mode! Hide sticky notes content when unfocused"
 msgstr "नई सुविधा: स्क्विगली मोड! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
 msgstr "नई सुविधा: इमोजी पिकर बटन! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:93
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr "टूलबार में बटन एक यादृच्छिक emote प्रदर्शित करता है जो आप क्लिक करते हैं!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
 msgstr "नई सुविधा: जोर्ट्स एक मासिक बैकअप करता है। "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr "क्या मुख्य भंडारण भ्रष्ट होना चाहिए, जोर्ट्स बैकअप से लोड करने की कोशिश करता है"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Some new fun/cute default titles"
 msgstr "कुछ नए मज़ा/प्यारा डिफ़ॉल्ट शीर्षक"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "क्लीनर कोड के लिए यहां और वहां हुड में बदलाव के तहत"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 अनियंत्रित जोर्ट्स"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Add relief to actionbar buttons"
 msgstr "एक्शनबार बटन में राहत जोड़ें"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "बगफिक्स: एज केस जहां थीम या ज़ूम ठीक से बचाया गया"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr "बगफिक्स: मल्टीटास्किंग में शीर्षक सही तरीके से सेट नहीं है"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "बगफिक्स: आइकन असंगतता एक्रॉस आइकन थीम"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:125
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "बगफिक्स: थीमिंग असंगतता"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 कपड़े धोने से बाहर ताजा! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Clearer appmenu description"
 msgstr "Clearer AppMenu विवरण"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "More consistent theming"
 msgstr "अधिक सुसंगत थीमिंग"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "बगफिक्स: डिलीट शॉर्टकट अनुत्तरदायी था"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
 msgid "Bugfix: screenshot not showing"
 msgstr "बगफिक्स: स्क्रीनशॉट नहीं दिखा रहा है"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 कपड़े धोने से बाहर ताजा!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "एक प्रति-नोट ज़ूम शामिल है! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -469,66 +259,240 @@ msgstr ""
 "नवीनतम सेट ज़ूम, उर्फ ​​क्या आपके लिए सबसे आरामदायक है, नए नोटों के लिए डिफ़ॉल्ट के रूप में "
 "रहता है"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "बेहतर पठनीयता (WCAG AA या AAA थीम के आधार पर)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "इसके अलावा थोड़ा बेहतर दिखने वाला विषय। "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
 msgid "Improved translations"
 msgstr "बेहतर अनुवाद"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
 msgid "Better shortcut and tooltips"
 msgstr "बेहतर शॉर्टकट और टूलटिप्स"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "एक बग फिक्स्ड जहां जोर्ट्स लाइट सिस्टम थीम पर रहे"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 AppCenter रिलीज़"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 रिलीज़: स्लेट और बबलगम"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "नोटजोट के एक प्राचीन लेकिन अच्छी तरह से पसंद किए गए संस्करण का पुनरुद्धार"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "ऐप को अब Jorts नाम दिया गया है। "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
 msgid "10 lovely little colours"
 msgstr "10 प्यारे छोटे रंग"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "आधुनिक लिनक्स प्रौद्योगिकियों और पैकेजिंग प्रारूपों का निर्माण"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
 msgid "Smooth transition when changing theme"
 msgstr "थीम को बदलते समय चिकनी संक्रमण"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "New stickies have a random fun little title and colour"
 msgstr "नई स्टिकियों में एक यादृच्छिक मजेदार छोटा शीर्षक और रंग होता है"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "A few initial translations included, and more to come"
 msgstr "कुछ प्रारंभिक अनुवाद शामिल थे, और बहुत कुछ आने के लिए"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr "ईमेल और लिंक क्लिक करने योग्य हैं! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "पाठ पूर्ववत, redo का समर्थन करता है, और आप emojis का उपयोग कर सकते हैं :)"
+
+#~ msgid "Blueberry"
+#~ msgstr "ब्लूबेरी"
+
+#~ msgid "Lime"
+#~ msgstr "चूना"
+
+#~ msgid "Mint"
+#~ msgstr "टकसाल"
+
+#~ msgid "Banana"
+#~ msgstr "केला"
+
+#~ msgid "Strawberry"
+#~ msgstr "स्ट्रॉबेरी"
+
+#~ msgid "Orange"
+#~ msgstr "नारंगी"
+
+#~ msgid "Bubblegum"
+#~ msgstr "बबलगम"
+
+#~ msgid "Grape"
+#~ msgstr "अंगूर"
+
+#~ msgid "Cocoa"
+#~ msgstr "कोको"
+
+#~ msgid "Slate"
+#~ msgstr "स्लेट"
+
+#~ msgid "Sticky Note Colour"
+#~ msgstr "चिपचिपा नोट रंग"
+
+#~ msgid "Choose a colour for this sticky note"
+#~ msgstr "इस चिपचिपे नोट के लिए एक रंग चुनें"
+
+#~ msgid "Zoom out"
+#~ msgstr "ज़ूम आउट"
+
+#~ msgid "Default zoom level"
+#~ msgstr "डिफ़ॉल्ट ज़ूम स्तर"
+
+#~ msgid "Zoom in"
+#~ msgstr "ज़ूम इन"
+
+#~ msgid "ZOOM%"
+#~ msgstr "ZOOM%"
+
+#~ msgid "All my very best friends"
+#~ msgstr "मेरे सभी सबसे अच्छे दोस्त"
+
+#~ msgid "My super good secret recipe"
+#~ msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
+
+#~ msgid "My todo list"
+#~ msgstr "मेरी टोडो सूची"
+
+#~ msgid "Super secret to not tell anyone"
+#~ msgstr "किसी को नहीं बताने के लिए सुपर सीक्रेट"
+
+#~ msgid "My grocery list"
+#~ msgstr "मेरी किराने की सूची"
+
+#~ msgid "Random shower thoughts"
+#~ msgstr "यादृच्छिक शावर विचार"
+
+#~ msgid "My fav fanfics"
+#~ msgstr "मेरे फेव फैनफिक्स"
+
+#~ msgid "My fav dinosaurs"
+#~ msgstr "मेरे फेव डायनासोर"
+
+#~ msgid "My evil mastermind plan"
+#~ msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
+
+#~ msgid "What made me smile today"
+#~ msgstr "आज मुझे क्या मुस्कुरा दिया"
+
+#~ msgid "Hello world!"
+#~ msgstr "हैलो वर्ल्ड!"
+
+#~ msgid "New sticky, new me"
+#~ msgstr "नया चिपचिपा, नया मुझे"
+
+#~ msgid "Hidden pirate treasure"
+#~ msgstr "छिपा हुआ समुद्री डाकू खजाना"
+
+#~ msgid "To not forget, ever"
+#~ msgstr "कभी नहीं भूलना, कभी भी"
+
+#~ msgid "Dear Diary,"
+#~ msgstr "प्रिय डायरी,"
+
+#~ msgid "Hi im a square"
+#~ msgstr "हाय एक वर्ग im"
+
+#~ msgid "Have a nice day! :)"
+#~ msgstr "आपका दिन शुभ हो! "
+
+#~ msgid "My meds schedule"
+#~ msgstr "मेरे मेड्स शेड्यूल"
+
+#~ msgid "Household chores"
+#~ msgstr "घरेलू काम"
+
+#~ msgid "Ode to my cat"
+#~ msgstr "मेरी बिल्ली के लिए ode"
+
+#~ msgid "My dogs favourite toys"
+#~ msgstr "मेरे कुत्ते पसंदीदा खिलौने"
+
+#~ msgid "How cool my birds are"
+#~ msgstr "मेरे पक्षी कितने शांत हैं"
+
+#~ msgid "Suspects in the Last Cookie affair"
+#~ msgstr "अंतिम कुकी चक्कर में संदिग्ध"
+
+#~ msgid "Words my parrots know"
+#~ msgstr "शब्द मेरे तोते जानते हैं"
+
+#~ msgid "Cool and funny compliments to give out"
+#~ msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
+
+#~ msgid "Ok, listen here,"
+#~ msgstr "ठीक है, यहाँ सुनो,"
+
+#~ msgid "My dream Pokemon team"
+#~ msgstr "मेरा ड्रीम पोकेमॉन टीम"
+
+#~ msgid "My little notes"
+#~ msgstr "मेरे छोटे नोट"
+
+#~ msgid "Surprise gift list"
+#~ msgstr "आश्चर्य उपहार सूची"
+
+#~ msgid "Brainstorming notes"
+#~ msgstr "विचार मंथन नोट्स"
+
+#~ msgid "To bring to the party"
+#~ msgstr "पार्टी में लाने के लिए"
+
+#~ msgid "My amazing mixtape"
+#~ msgstr "मेरा अद्भुत मिक्सटेप"
+
+#~ msgid "Napkin scribbles"
+#~ msgstr "नैपकिन स्क्रिबल्स"
+
+#~ msgid "My fav songs to sing along"
+#~ msgstr "मेरे fav गाने के साथ गाने के लिए"
+
+#~ msgid "When to water which plant"
+#~ msgstr "कब पानी के लिए पानी"
+
+#~ msgid "Top 10 anime betrayals"
+#~ msgstr "शीर्ष 10 एनीमे विश्वासघात"
+
+#~ msgid "Edit title"
+#~ msgstr "शीर्षक संपादित करें"
+
+#~ msgid "Delete sticky note"
+#~ msgstr "चिपचिपा नोट हटाएं"
+
+#~ msgid "Always show content of sticky notes"
+#~ msgstr "हमेशा चिपचिपे नोटों की सामग्री दिखाएं"
+
+#~ msgid "Hide content of unfocused sticky notes"
+#~ msgstr "अनफोकस्ड स्टिकी नोट्स की सामग्री छिपाएं"
+
+#~ msgid "Insert emoji"
+#~ msgstr "इमोजी डालें"
+
+#~ msgid "Preferences for this sticky note"
+#~ msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"

@@ -17,4 +17,4 @@ Name=New sticky note
 
 [Desktop Action Preferences]
 Exec=io.github.ellie_commons.jorts --preferences
-Name=Open Preferences
+Name=Preferences

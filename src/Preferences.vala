@@ -24,34 +24,59 @@
 
 */
 namespace jorts {
-    public class PreferenceWindow :  Granite.Dialog {
+    public class PreferenceWindow :  Gtk.Window {
+
+        public static Gtk.Settings gtk_settings;
 
 
 
         public PreferenceWindow (GLib.Settings gsettings) {
 
-            set_name (_("Preferences for Jorts"));
+
+            // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
+            var granite_settings = Granite.Settings.get_default ();
+            var gtk_settings = Gtk.Settings.get_default ();
+            gtk_settings.gtk_icon_theme_name = "elementary";
+
+            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+
+
+
+            var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
+            //set_name (titlelabel.get_text ());
+
+            var headerbar = new Gtk.HeaderBar () {
+                show_title_buttons = false,
+                title_widget = titlelabel
+            };
+
+            
+            set_titlebar (headerbar);
+
+
+
+
+            add_css_class ("dialog");
+            add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
             /*************************************************/
             // Box with settingsbox and then reset button
             var mainbox = new Gtk.Box (VERTICAL, 0) {
-                margin_bottom = 0,
-                margin_top = 0,
-            };
-
-            // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, 6) {
-                margin_bottom = 12,
-                margin_top = 12,
+                margin_bottom = 6,
+                margin_top = 6,
                 margin_start = 12,
                 margin_end = 12
             };
 
-            var preferences_label = new Granite.HeaderLabel (_("Preferences for all sticky notes"));
-            preferences_label.add_css_class (Granite.STYLE_CLASS_H4_LABEL);
-            settingsbox.append(preferences_label); 
-
-
+            // the box with all the settings
+            var settingsbox = new Gtk.Box (VERTICAL, 6) {
+                margin_bottom = 0,
+                margin_top = 0,
+                margin_start = 0,
+                margin_end = 0,
+                hexpand = true,
+                vexpand = true
+            };
 
                 /*************************************************/
                 /*                  Default Font                 */
@@ -130,6 +155,18 @@ namespace jorts {
             mainbox.append(actionbar);
 
             this.child = mainbox;
+
+
+
+            // Since each sticky note adopts a different accent color
+            // we have to revert to default when this one is focused
+            this.notify["is-active"].connect(() => {
+                if (this.is_active) {
+                    gtk_settings.gtk_theme_name = (Gtk.Settings.get_default ()).gtk_theme_name;
+                }
+            });
+
+            
             this.show ();
             this.present ();
         }
