@@ -25,6 +25,9 @@
 */
 namespace jorts {
     public class PreferenceWindow :  Granite.Dialog {
+
+
+
         public PreferenceWindow (GLib.Settings gsettings) {
 
             set_name (_("Preferences for Jorts"));
@@ -88,21 +91,21 @@ namespace jorts {
                     secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes")
                 };
                 var scribble_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-                scribble_box.append (animations_label);
                 scribble_box.append (scribble_label);
+                scribble_box.append (scribble_toggle);
                 settingsbox.append(scribble_box); 
 
                 scribble_toggle.notify["active"].connect (() => {
-                    gsettings.set_boolean ("squiggly-mode-active", animations_switch.active);
+                    gsettings.set_boolean ("squiggly-mode-active", scribble_toggle.active);
                 });
-                gsettings.bind ("squiggly-mode-active", scribble_toggle, "active", BOOLEAN);
+                gsettings.bind ("squiggly-mode-active", scribble_toggle, "active",SettingsBindFlags.DEFAULT);
 
 
 
 
             /*************************************************/
             // Bar at the bottom
-            actionbar = new Gtk.ActionBar ();
+            var actionbar = new Gtk.ActionBar ();
             actionbar.set_hexpand (true);
             actionbar.set_vexpand (false);
 
@@ -121,7 +124,7 @@ namespace jorts {
         
             var close_button = new Gtk.Button ();
             close_button.set_label(_("Close"));
-            close_button.action = Gtk.ResponseType.CLOSE;
+            close_button.clicked.connect(() => this.close());
             actionbar.pack_end (close_button);
 
 
