@@ -87,6 +87,7 @@
                     <li>New feature: Default font. You can now set a specific font for Jorts.</li>
                     <li>Improvement for translators: Translations have been separated in 2: One for the UI one for the extra content</li>
                     <li>Comfort: Easier to grab and drag stickies</li>
+                    <li>Bugfix: Screenshots in the appcenter were a mess aaaa</li>
                 </ul>
             </description>
         </release>
