@@ -86,6 +86,7 @@
                     <li>Scribble mode has been moved to the new preference dialog</li>
                     <li>New feature: Default font. You can now set a specific font for Jorts.</li>
                     <li>Improvement for translators: Translations have been separated in 2: One for the UI one for the extra content</li>
+                    <li>Comfort: Easier to grab and drag stickies</li>
                 </ul>
             </description>
         </release>

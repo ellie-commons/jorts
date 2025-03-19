@@ -46,7 +46,8 @@ namespace jorts {
 
 
             var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
-            set_name (titlelabel.get_text ());
+            set_title (titlelabel.get_text ());
+            
 
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
@@ -155,12 +156,11 @@ namespace jorts {
             mainbox.append (settingsbox);
             mainbox.append(actionbar);
 
-            this.child = mainbox;
+            var handle = new Gtk.WindowHandle () {
+                child = mainbox
+            };
 
-
-
-
-            
+            this.child = handle;
             this.show ();
             this.present ();
         }

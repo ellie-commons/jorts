@@ -233,10 +233,14 @@ namespace jorts {
 
 
             // Define the grid 
-            var grid = new Gtk.Grid ();
-            grid.orientation = Gtk.Orientation.VERTICAL;
-            grid.attach(scrolled, 0, 0, 1, 1);
-            grid.attach(actionbar, 0, 1, 1, 1);
+            var grid = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
+            grid.append(scrolled);
+
+            var handle = new Gtk.WindowHandle () {
+                child = actionbar
+            };
+    
+            grid.append(handle);
             grid.show ();
             this.set_child (grid);
             this.show();
