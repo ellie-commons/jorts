@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-18 20:28+0100\n"
+"POT-Creation-Date: 2025-03-19 20:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "Text; Plaintetext; Notepad; Notizen; klebrig; post-it;"
+msgstr "Text; Plaintext; Notepad; Notizen; klebrig; post-it;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"

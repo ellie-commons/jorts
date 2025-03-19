@@ -25,18 +25,23 @@
 */
 namespace jorts {
     public class PreferenceWindow :  Gtk.Window {
-
         public static Gtk.Settings gtk_settings;
 
-
-
-        public PreferenceWindow (GLib.Settings gsettings) {
+        public PreferenceWindow () {
 
 
             // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
-            var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
-            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+
+
+            // Since each sticky note adopts a different accent color
+            // we have to revert to default when this one is focused
+            this.notify["is-active"].connect(() => {
+                if (this.is_active) {
+                    //gtk_settings.gtk_theme_name = Application.system_accent;
+                    gtk_settings.gtk_theme_name = "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+                }
+            });
 
 
 
@@ -44,12 +49,14 @@ namespace jorts {
             set_name (titlelabel.get_text ());
 
             var headerbar = new Gtk.HeaderBar () {
-                show_title_buttons = false,
-                title_widget = titlelabel
+                title_widget = titlelabel,
+                show_title_buttons = false
             };
 
+
             set_titlebar (headerbar);
-            set_size_request (525, 350);
+            set_size_request (320, 220);
+            resizable = false;
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
@@ -65,7 +72,7 @@ namespace jorts {
             };
 
             // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, 6) {
+            var settingsbox = new Gtk.Box (VERTICAL, 10) {
                 margin_bottom = 0,
                 margin_top = 0,
                 margin_start = 0,
@@ -90,7 +97,7 @@ namespace jorts {
                 default_font_box.append (default_font_button);
                 settingsbox.append(default_font_box); 
 
-                gsettings.bind_with_mapping (
+                Application.gsettings.bind_with_mapping (
                     "font-name", default_font_button,
                     "font-desc", SettingsBindFlags.DEFAULT,
                     font_button_bind_get, font_button_bind_set, null, null);
@@ -103,7 +110,7 @@ namespace jorts {
                 var scribble_toggle = new Gtk.Switch () {
                     halign = Gtk.Align.END,
                     hexpand = true,
-                    valign = Gtk.Align.CENTER
+                    valign = Gtk.Align.CENTER,
                 };
                 var scribble_label = new Granite.HeaderLabel (_("Activate scribble mode")) {
                     mnemonic_widget = scribble_toggle,
@@ -114,11 +121,7 @@ namespace jorts {
                 scribble_box.append (scribble_toggle);
                 settingsbox.append(scribble_box); 
 
-                scribble_toggle.notify["active"].connect (() => {
-                    gsettings.set_boolean ("squiggly-mode-active", scribble_toggle.active);
-                });
-                gsettings.bind ("squiggly-mode-active", scribble_toggle, "active",SettingsBindFlags.DEFAULT);
-
+                Application.gsettings.bind ("squiggly-mode-active", scribble_toggle, "active",SettingsBindFlags.DEFAULT);
 
 
 
@@ -136,13 +139,15 @@ namespace jorts {
             reset_button.clicked.connect(() => {
                 string[] keys = {"font-name", "squiggly-mode-active"};
                 foreach (var key in keys) {
-                    gsettings.reset (key);
+                    Application.gsettings.reset (key);
                 }
             });
 
         
             var close_button = new Gtk.Button ();
             close_button.set_label(_("Close"));
+            close_button.width_request = 24;
+
             close_button.clicked.connect(() => this.close());
             actionbar.pack_end (close_button);
 
@@ -154,13 +159,6 @@ namespace jorts {
 
 
 
-            // Since each sticky note adopts a different accent color
-            // we have to revert to default when this one is focused
-            this.notify["is-active"].connect(() => {
-                if (this.is_active) {
-                    gtk_settings.gtk_theme_name = "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
-                }
-            });
 
             
             this.show ();

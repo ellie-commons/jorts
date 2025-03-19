@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-18 20:18+0100\n"
+"POT-Creation-Date: 2025-03-19 20:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgstr "জুম ইন"
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
-#: src/Preferences.vala:45
+#: src/Preferences.vala:42
 #, fuzzy
 msgid "Preferences for all sticky notes"
 msgstr "এই স্টিকি নোটের জন্য পছন্দগুলি"
@@ -99,30 +99,30 @@ msgstr "এই স্টিকি নোটের জন্য পছন্দ�
 #. ***********************************************
 #. Default Font
 #. ***********************************************
-#: src/Preferences.vala:85
+#: src/Preferences.vala:82
 #, fuzzy
 msgid "Default Font"
 msgstr "ডিফল্ট জুম স্তর"
 
-#: src/Preferences.vala:112
+#: src/Preferences.vala:109
 msgid "Activate scribble mode"
 msgstr ""
 
-#: src/Preferences.vala:114
+#: src/Preferences.vala:111
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes"
 msgstr ""
 
-#: src/Preferences.vala:136
+#: src/Preferences.vala:129
 msgid "Reset to Default"
 msgstr ""
 
-#: src/Preferences.vala:137
+#: src/Preferences.vala:130
 msgid "Reset all settings to defaults"
 msgstr ""
 
-#: src/Preferences.vala:149
+#: src/Preferences.vala:142
 msgid "Close"
 msgstr ""
 

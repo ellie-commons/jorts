@@ -28,8 +28,8 @@ namespace jorts {
         }
 
 	    public int64 latest_zoom;
-        public bool squiggly_mode_active = false;
-        public signal void squiggly_changed (bool squiggly);
+        //public bool squiggly_mode_active;
+        //public signal void squiggly_changed (bool squiggly);
         public static string system_accent;
 
         public override void startup () {
@@ -48,6 +48,7 @@ namespace jorts {
             gtk_settings.gtk_icon_theme_name = "elementary";
 
             system_accent = gtk_settings.gtk_theme_name;
+            print(system_accent + "\n");
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
 
@@ -77,7 +78,6 @@ namespace jorts {
         }
 
         construct {
-
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
@@ -130,14 +130,10 @@ namespace jorts {
             var toggle_squiggly = new SimpleAction ("toggle_squiggly", null);
             set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
             add_action (toggle_squiggly);
-            toggle_squiggly.activate.connect (() => {this.toggle_squiggly();});
+            toggle_squiggly.activate.connect (() => {
+                this.toggle_squiggly();
+            });
 
-
-
-            
-            this.squiggly_mode_active = gsettings.get_boolean ("squiggly-mode-active");
-
-            gsettings.notify["squiggly-mode-active"].connect (() => {this.toggle_squiggly();}); 
 
         }
 
@@ -192,15 +188,14 @@ namespace jorts {
 
 
     public void toggle_squiggly() {
-        
-        if (this.squiggly_mode_active) {
-            this.squiggly_mode_active = false;
+        var squiggly_mode_active = Application.gsettings.get_boolean ("squiggly-mode-active");
+        if (squiggly_mode_active) {
+            gsettings.set_boolean ("squiggly-mode-active",false);
         } else {
-            this.squiggly_mode_active = true;
+            gsettings.set_boolean ("squiggly-mode-active",true);
         }
 
-        gsettings.set_boolean ("squiggly-mode-active",this.squiggly_mode_active);
-        this.squiggly_changed(this.squiggly_mode_active);
+
 
     }
 
@@ -239,7 +234,7 @@ namespace jorts {
 
             // If user asked for preferences do just that
             if (args[1] == "--preferences") {                
-                preferences = new PreferenceWindow(gsettings);
+                preferences = new PreferenceWindow();
             } 
 
             // Create a next window if requested and it's not the app launch

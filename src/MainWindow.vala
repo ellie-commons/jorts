@@ -168,7 +168,7 @@ namespace jorts {
 
 
             var hide_item = new Gtk.ToggleButton ();
-            if (((Application)this.application).squiggly_mode_active) {
+              if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
                     jorts.Constants.ACCELS_SQUIGGLY,
@@ -267,7 +267,7 @@ namespace jorts {
                     this.gtk_settings.gtk_theme_name = stylesheet;
                 }
 
-                if (((Application)this.application).squiggly_mode_active) {
+                if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
 
                     if (this.is_active) {
                         remove_css_class ("squiggly");
@@ -297,8 +297,8 @@ namespace jorts {
             });
 
             //The application tells us the squiffly state has changed!
-            ((Application)this.application).squiggly_changed.connect ((squiggly) => {
-                    if (squiggly) {
+            Application.gsettings.changed["squiggly-mode-active"].connect (() => {
+                    if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
                         //this.add_css_class ("squiggly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (
