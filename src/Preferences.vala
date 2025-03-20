@@ -50,8 +50,8 @@ namespace jorts {
             };
 
             set_titlebar (headerbar);
-            set_size_request (340, 220);
-            set_default_size (340, 220);
+            set_size_request (380, 240);
+            set_default_size (380, 240);
             resizable = false;
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
