@@ -28,11 +28,8 @@ namespace jorts {
         public static Gtk.Settings gtk_settings;
 
         public PreferenceWindow () {
-
-
-            // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
+            
             var gtk_settings = Gtk.Settings.get_default ();
-
 
             // Since each sticky note adopts a different accent color
             // we have to revert to default when this one is focused
@@ -43,20 +40,18 @@ namespace jorts {
                 }
             });
 
-
-
             var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
             set_title (titlelabel.get_text ());
             
-
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
-                show_title_buttons = false
+                show_title_buttons = true,
+                decoration_layout = "close:"
             };
-
 
             set_titlebar (headerbar);
             set_size_request (340, 220);
+            set_default_size (340, 220);
             resizable = false;
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
@@ -132,10 +127,19 @@ namespace jorts {
             actionbar.set_hexpand (true);
             actionbar.set_vexpand (false);
 
+            // Monies?
+            var support_button = new Gtk.LinkButton.with_label (
+                jorts.Constants.DONATE_LINK,
+                _("Support us!")
+            );
+            actionbar.pack_start (support_button);
+
+
+            // Reset
             var reset_button = new Gtk.Button();
             reset_button.set_label( _("Reset to Default"));
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
-            actionbar.pack_start (reset_button);
+            actionbar.pack_end (reset_button);
 
             reset_button.clicked.connect(() => {
                 string[] keys = {"font-name", "squiggly-mode-active"};
@@ -144,18 +148,10 @@ namespace jorts {
                 }
             });
 
-        
-            var close_button = new Gtk.Button ();
-            close_button.set_label(_("Close"));
-            close_button.width_request = 24;
-
-            close_button.clicked.connect(() => this.close());
-            actionbar.pack_end (close_button);
-
-
             mainbox.append (settingsbox);
             mainbox.append(actionbar);
 
+            // Make the whole window grabbable
             var handle = new Gtk.WindowHandle () {
                 child = mainbox
             };

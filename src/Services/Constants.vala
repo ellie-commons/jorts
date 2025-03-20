@@ -110,6 +110,6 @@ namespace jorts.Constants {
     };
 
 
-
+    public const string DONATE_LINK = "https://ko-fi.com/teamcons";
 
 }
