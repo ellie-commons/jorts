@@ -4,7 +4,9 @@ project('io.github.ellie_commons.jorts', ['vala', 'c'],
 )
 
 gnome = import('gnome')
+i18n = import('i18n')
 
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 
 #================================
@@ -26,14 +28,6 @@ gresource = gnome.compile_resources(
     'data' / 'io.github.ellie_commons.jorts.gresource.xml',
     source_dir: 'data'
 )
-
-#================================
-# Include the translations module
-i18n = import('i18n')
-
-# Set our translation domain
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
-
 
 
 #================================
