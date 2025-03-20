@@ -51,8 +51,11 @@ namespace jorts {
             print(system_accent + "\n");
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
+            gtk_settings.gtk_font_name = gsettings.get_string("font-name");
 
-
+            gsettings.changed["font-name"].connect(() => {
+                gtk_settings.gtk_font_name = gsettings.get_string("font-name");
+            });
 
 
             // Also follow dark if system is dark lIke mY sOul.
@@ -66,6 +69,8 @@ namespace jorts {
                     );
             }); 
 
+
+
             //this.squiggly_mode_active = gsettings.get_boolean ("squiggly_mode_active");
 
             // build all the stylesheets
@@ -78,6 +83,7 @@ namespace jorts {
         }
 
         construct {
+
             var quit_action = new SimpleAction ("quit", null);
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
