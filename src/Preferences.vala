@@ -40,6 +40,9 @@ namespace jorts {
                 }
             });
 
+
+            /*************************************************/
+            // Headerbar bs
             var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
             set_title (titlelabel.get_text ());
             
@@ -81,7 +84,7 @@ namespace jorts {
                 /*                  Default Font                 */
                 /*************************************************/
 
-                var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
+/*                  var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
                     hexpand = true
                 };
                 var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
@@ -97,7 +100,7 @@ namespace jorts {
                     "font-name", default_font_button,
                     "font-desc", SettingsBindFlags.DEFAULT,
                     font_button_bind_get, font_button_bind_set, null, null);
-
+  */
 
                 /*************************************************/
                 /*              Scribble Toggle                  */

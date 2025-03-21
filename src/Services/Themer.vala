@@ -20,20 +20,15 @@
 
 /*
 
-themearray
---> Global array of all the themes
-
 generate_css(theme)
-TODO: this would need to be static
-
 init_all_themes()
---> generate_css for everything in themearray
 
 */
 
 
 namespace jorts.Themer {
 
+    /*************************************************/
     // Here we go
     // Take up a elementary OS color name and gurgle back a CSS string
     public static string generate_css (string theme) {
@@ -142,6 +137,9 @@ namespace jorts.Themer {
         return style;
     }
 
+
+
+    /*************************************************/    
     // Called once, at the start of the app
     // Loads the standard sheet, then do all the different themes
     public static void init_all_themes() {
@@ -157,7 +155,7 @@ namespace jorts.Themer {
         );
 
         // Then generate all theme classes
-        foreach (unowned var theme in jorts.Constants.themearray) {
+        foreach (unowned var theme in jorts.Constants.THEMES) {
             var theme_provider = new Gtk.CssProvider ();
             var style = jorts.Themer.generate_css (theme);
 

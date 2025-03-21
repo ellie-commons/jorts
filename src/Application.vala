@@ -1,5 +1,6 @@
 /*
-* Copyright (c) 2017 Lains
+* Copyright (c) 2017-2024 Lains
+* Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -16,6 +17,8 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
+
+
 namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
@@ -28,10 +31,8 @@ namespace jorts {
         }
 
 	    public int64 latest_zoom;
-        //public bool squiggly_mode_active;
-        //public signal void squiggly_changed (bool squiggly);
-        public static string system_accent;
 
+        /*************************************************/
         public override void startup () {
             base.startup ();
 
@@ -51,11 +52,10 @@ namespace jorts {
             print(system_accent + "\n");
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
-            gtk_settings.gtk_font_name = gsettings.get_string("font-name");
-
-            gsettings.changed["font-name"].connect(() => {
-                gtk_settings.gtk_font_name = gsettings.get_string("font-name");
-            });
+            //  gtk_settings.gtk_font_name = gsettings.get_string("font-name");
+            //  gsettings.changed["font-name"].connect(() => {
+            //      gtk_settings.gtk_font_name = gsettings.get_string("font-name");
+            //  });
 
 
             // Also follow dark if system is dark lIke mY sOul.
@@ -77,11 +77,16 @@ namespace jorts {
             jorts.Themer.init_all_themes();
         }
 
+
+
+        /*************************************************/        
         static construct {
             gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
 
         }
 
+
+        /*************************************************/
         construct {
 
             var quit_action = new SimpleAction ("quit", null);
@@ -206,7 +211,7 @@ namespace jorts {
     }
 
 
-    // the thing that 
+    /*************************************************/
     public void init_all_notes() {
         Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
 
@@ -233,6 +238,9 @@ namespace jorts {
     }
 
 
+
+
+        /*************************************************/
         protected override int command_line (ApplicationCommandLine command_line) {
             PreferenceWindow preferences;
             string[] args = command_line.get_arguments ();

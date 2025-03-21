@@ -20,20 +20,17 @@
 
 /* CONTENT
 
-random_theme()
-TODO: take a theme as argument to skip
-
+random_theme(skip_theme)
 random_title()
-
-random_note(uid)
-TODO: will need to know the theme to skip
+random_emote(skip_emote)
+random_note(skip_theme)
 
 */
 
 namespace jorts.Utils {
 
-
-        // We cannot use numbers in CSS, so we have to translate a number into a string
+    /*************************************************/
+    // We cannot use numbers in CSS, so we have to translate a number into a string
     public string zoom_to_class(int64 zoom) {
         switch (zoom) {
             case 20: return "antsized";
@@ -51,18 +48,18 @@ namespace jorts.Utils {
             case 260: return "ultrahuge";
             case 280: return "massive";
             case 300: return "urmom";
-
             default: return "normal_zoom";
         }
     }
 
 
+    /*************************************************/
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
     // Having an gee.arraylist defined from the start only causes issues
     public string random_theme (string? skip_theme) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (jorts.Constants.themearray);
+        themes.add_all_array (jorts.Constants.THEMES);
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
@@ -73,7 +70,7 @@ namespace jorts.Utils {
     }
 
 
-
+    /*************************************************/
     // Spits out a cute or funny random title for a new sticky note
     public string random_title () {
         string[] alltitles = {
@@ -118,21 +115,23 @@ namespace jorts.Utils {
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }
 
+    /*************************************************/
+    // Spits out a cute or funny random title for a new sticky note
+    public string random_emote (string? skip_emote) {
 
-        // Spits out a cute or funny random title for a new sticky note
-        public string random_emote (string? skip_emote) {
+        Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
+        allemotes.add_all_array (jorts.Constants.EMOTES);
 
-            Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
-            allemotes.add_all_array (jorts.Constants.EMOTES);
-
-            if (skip_emote != null) {
-                allemotes.remove(skip_emote);
-            }
+        if (skip_emote != null) {
+            allemotes.remove(skip_emote);
+        }
     
-            var random_in_range = Random.int_range (0,(allemotes.size - 1));
-            return allemotes[random_in_range];
+        var random_in_range = Random.int_range (0,(allemotes.size - 1));
+        return allemotes[random_in_range];
     }
 
+
+    /*************************************************/
     // Spits out a fresh new note
     public noteData random_note (string? skip_theme) {
         debug("Generating random note... Skip:" + skip_theme);

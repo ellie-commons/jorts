@@ -29,23 +29,10 @@ namespace jorts.Constants {
 
     const string app_rdnn               = "io.github.ellie_commons.jorts";
 
-
-    // As seen on TV!
-    // Later adds: LATTE, BLACK, SILVER, AUTO
-    const string[] themearray = {
-        "BLUEBERRY",
-        "MINT",
-        "LIME",
-        "BANANA",
-        "ORANGE",
-        "STRAWBERRY",
-        "BUBBLEGUM",
-        "GRAPE",
-        "COCOA",
-        "SLATE"
-    };
+    const string DONATE_LINK = "https://ko-fi.com/teamcons";
 
 
+    /*************************************************/
     // We need to say stop at some point
     const int ZOOM_MAX                  = 240;
     const int ZOOM_MIN                  = 40;
@@ -64,28 +51,44 @@ namespace jorts.Constants {
 
 
 
-
+    /*************************************************/
     // Shortcuts
     const string[] ACCELS_ZOOM_DEFAULT  = { "<control>0", "<Control>KP_0" };
     const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>equal", "<Control>KP_Add" };
     const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
 
-    public const string ACTION_PREFIX   = "app.";
-    public const string ACTION_NEW      = "action_new";
-    public const string ACTION_DELETE   = "action_delete";
+    const string ACTION_PREFIX   = "app.";
+    const string ACTION_NEW      = "action_new";
+    const string ACTION_DELETE   = "action_delete";
 
-    public const string ACTION_ZOOM_OUT = "zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "zoom_default";
-    public const string ACTION_ZOOM_IN = "zoom_in";
-    public const string ACTION_TOGGLE_SQUIGGLY = "toggle_squiggly";
+    const string ACTION_ZOOM_OUT = "zoom_out";
+    const string ACTION_ZOOM_DEFAULT = "zoom_default";
+    const string ACTION_ZOOM_IN = "zoom_in";
+    const string ACTION_TOGGLE_SQUIGGLY = "toggle_squiggly";
 
-    public const string[] ACCELS_NEW =     {"<Control>n"};
-    public const string[] ACCELS_DELETE =     {"<Control>w"};
-    public const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
-    public const string[] ACCELS_EMOTE =     {"<Control>."};
+    const string[] ACCELS_NEW =     {"<Control>n"};
+    const string[] ACCELS_DELETE =     {"<Control>w"};
+    const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
+    const string[] ACCELS_EMOTE =     {"<Control>."};
 
 
-    public const string[] EMOTES = {
+    /*************************************************/
+    // As seen on TV!
+    // Later adds: LATTE, BLACK, SILVER, AUTO
+    const string[] THEMES = {
+        "BLUEBERRY",
+        "MINT",
+        "LIME",
+        "BANANA",
+        "ORANGE",
+        "STRAWBERRY",
+        "BUBBLEGUM",
+        "GRAPE",
+        "COCOA",
+        "SLATE"
+    };
+
+    const string[] EMOTES = {
         "face-angel-symbolic",
         "face-angry-symbolic",
         "face-cool-symbolic",
@@ -110,6 +113,6 @@ namespace jorts.Constants {
     };
 
 
-    public const string DONATE_LINK = "https://ko-fi.com/teamcons";
+
 
 }

@@ -38,6 +38,7 @@ load_from_stash()
 
 namespace jorts.Stash {
 
+    /*************************************************/
 	// Ok first check if we have a directory to store data
 	public void check_if_stash() {
 
@@ -52,6 +53,8 @@ namespace jorts.Stash {
 		}
 	}
 
+
+    /*************************************************/
     // Loop through the list of windows and convert it into a giant json string
     public string jsonify (Gee.ArrayList<MainWindow> notes) {
         Json.Builder builder = new Json.Builder ();
@@ -85,7 +88,7 @@ namespace jorts.Stash {
         return str;
     }
 
-
+    /*************************************************/
     // Just slams a json in the storage file
     // TODO: Simplify this
     public void overwrite_stash(string json_data, string file_overwrite) {
@@ -113,6 +116,7 @@ namespace jorts.Stash {
 
     }
 
+    /*************************************************/
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
     public jorts.noteData load_node(Json.Object node) {
@@ -128,6 +132,8 @@ namespace jorts.Stash {
         return loaded_note;
     }
 
+
+    /*************************************************/    
     public Gee.ArrayList<noteData> load_parser(Json.Parser parser) {
         Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
 
@@ -143,7 +149,7 @@ namespace jorts.Stash {
     }
 
 
-
+    /*************************************************/
     // Handles the whole loading. If there is nothing, just start with a blue one
     // We first try from main storage
     // If that fails, we go for backup
@@ -192,7 +198,7 @@ namespace jorts.Stash {
 
 
 
-
+    /*************************************************/
 	// We first check if we have a backup or a last saved date
     // if none of those two, tell we need immediate backup
     // else, then depending how old we know the backup to be

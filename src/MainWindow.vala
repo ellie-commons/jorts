@@ -83,7 +83,12 @@ namespace jorts {
             { ACTION_TOGGLE_SQUIGGLY,   toggle_squiggly         }
         };
 
-        // Init or something
+
+
+        /*************************************************/
+        /*           Lets build a window                 */
+        /*************************************************/
+
         public MainWindow (Gtk.Application app, noteData data) {
             Object (application: app);
             Intl.setlocale ();
@@ -168,7 +173,9 @@ namespace jorts {
 
 
             var hide_item = new Gtk.ToggleButton ();
-              if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
+            
+
+            if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
                     jorts.Constants.ACCELS_SQUIGGLY,
@@ -300,6 +307,11 @@ namespace jorts {
                 }
             });
 
+
+            /*************************************************/
+            /*              Squiggly feature                 */
+            /*************************************************/
+
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["squiggly-mode-active"].connect (() => {
                     if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
@@ -328,12 +340,18 @@ namespace jorts {
                     }
                 }
             );
-
-
-
-
-
         }
+
+
+
+
+
+
+        /********************************************/
+        /*                  METHODS                 */
+        /********************************************/
+
+
 
         // TITLE IS TITLE
         public new void set_title (string title) {
@@ -366,19 +384,14 @@ namespace jorts {
         // Tells the application "hey, toggle the squiggly"
         private void toggle_squiggly () {
             ((Application)this.application).toggle_squiggly ();
-
-
         }
 
         private void zoom_default () {
             this.set_zoom(100);
         }
 
-
-
         // Switches stylesheet
-        // First use appropriate stylesheet
-        // Then switch the theme classes
+        // First use appropriate stylesheet, Then switch the theme classes
         private void update_theme(string theme) {
 
             var stylesheet = "io.elementary.stylesheet." + theme.ascii_down();
@@ -391,6 +404,13 @@ namespace jorts {
             ((Application)this.application).save_to_stash (); 
         }
 
+
+
+
+
+        /*************************************************/
+        /*              ZOOM feature                 */
+        /*************************************************/
 
         // First check an increase doesnt go above limit
         public void zoom_in() {
