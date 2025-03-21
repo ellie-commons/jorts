@@ -60,6 +60,8 @@ namespace jorts.Constants {
     const string ACTION_PREFIX   = "app.";
     const string ACTION_NEW      = "action_new";
     const string ACTION_DELETE   = "action_delete";
+    const string ACTION_SAVE   = "action_delete";
+    const string ACTION_QUIT   = "action_quit";
 
     const string ACTION_ZOOM_OUT = "zoom_out";
     const string ACTION_ZOOM_DEFAULT = "zoom_default";
@@ -68,9 +70,10 @@ namespace jorts.Constants {
 
     const string[] ACCELS_NEW =     {"<Control>n"};
     const string[] ACCELS_DELETE =     {"<Control>w"};
+    const string[] ACCELS_SAVE =     {"<Control>s"};
+    const string[] ACCELS_QUIT =     {"<Control>q"};
     const string[] ACCELS_SQUIGGLY =     {"<Control>h"};
     const string[] ACCELS_EMOTE =     {"<Control>."};
-
 
     /*************************************************/
     // As seen on TV!

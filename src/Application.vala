@@ -48,15 +48,7 @@ namespace jorts {
             var gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
 
-            system_accent = gtk_settings.gtk_theme_name;
-            print(system_accent + "\n");
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
-
-            //  gtk_settings.gtk_font_name = gsettings.get_string("font-name");
-            //  gsettings.changed["font-name"].connect(() => {
-            //      gtk_settings.gtk_font_name = gsettings.get_string("font-name");
-            //  });
-
 
             // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
@@ -93,50 +85,14 @@ namespace jorts {
             set_accels_for_action ("app.quit", {"<Control>q"});
             add_action (quit_action);
             quit_action.activate.connect (() => {
-    	        foreach (MainWindow windows in open_notes) {
-                    debug ("Quitting all notes…\n");
-    	            windows.close();
-    	        }
-            });
-            var new_action = new SimpleAction ("new", null);
-            set_accels_for_action ("app.action_new", {"<Control>n"});
-            add_action (new_action);
-            new_action.activate.connect (() => {
-                create_note(null);
-            });
-            var delete_action = new SimpleAction ("delete", null);
-            set_accels_for_action ("app.action_delete", {"<Control>w"});
-            add_action (delete_action);
-            delete_action.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                remove_note(note);
+                this.save_to_stash ();
+                this.quit();
             });
             var save_action = new SimpleAction ("save", null);
             set_accels_for_action ("app.save", {"<Control>s"});
             add_action (save_action);
             save_action.activate.connect (() => {
                 this.save_to_stash ();
-            });
-            var zoom_out = new SimpleAction ("zoom_out", null);
-            set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
-            add_action (zoom_out);
-            zoom_out.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.zoom_out ();
-            });
-            var zoom_default = new SimpleAction ("zoom_default", null);
-            set_accels_for_action ("app.zoom_default", { "<control>0", "<Control>KP_0", null });
-            add_action (zoom_default);
-            zoom_default.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.set_zoom (100);
-            });
-            var zoom_in = new SimpleAction ("zoom_in", null);
-            set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>equal", "<Control>KP_Add", null });
-            add_action (zoom_in);
-            zoom_in.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.zoom_in ();
             });
             var toggle_squiggly = new SimpleAction ("toggle_squiggly", null);
             set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
@@ -154,11 +110,7 @@ namespace jorts {
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
             if (get_windows ().length () > 0) {
-                foreach (var window in open_notes) {
-                    if (window.visible) {
-                        window.present ();
-                    }
-                }
+                show_all();
             } else {
                 this.init_all_notes ();
             }     
@@ -205,10 +157,18 @@ namespace jorts {
         } else {
             gsettings.set_boolean ("squiggly-mode-active",true);
         }
-
-
-
     }
+
+
+    public void show_all() {
+        foreach (var window in open_notes) {
+            if (window.visible) {
+                window.present ();
+            }
+        }
+    }
+
+
 
 
     /*************************************************/
@@ -244,18 +204,23 @@ namespace jorts {
         protected override int command_line (ApplicationCommandLine command_line) {
             PreferenceWindow preferences;
             string[] args = command_line.get_arguments ();
+
             activate ();
+            switch (args[1]) {
 
-            // If user asked for preferences do just that
-            if (args[1] == "--preferences") {                
-                preferences = new PreferenceWindow();
-            } 
-
-            // Create a next window if requested and it's not the app launch
-            if (args[1] == "--new-note") {                
-                create_note(null);
-            } 
+                case "--show-all":
+                    show_all();
+                    break;
+                case "--new-note":
+                    create_note(null);
+                    break;
+                case "--preferences":
+                    preferences = new PreferenceWindow(this);
+                    break;
+                default: break;
+            }
             return 0;
+
         }
 
         const OptionEntry[] entries = {

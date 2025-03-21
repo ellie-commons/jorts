@@ -58,9 +58,6 @@ namespace jorts {
         public string content;
         public int64 zoom;
 
-        public static int max_zoom = 200;
-        public static int min_zoom = 60;
-
         public SimpleActionGroup actions { get; construct; }
 
         public const string ACTION_PREFIX   = "app.";
@@ -70,7 +67,6 @@ namespace jorts {
         public const string ACTION_ZOOM_OUT = "zoom_out";
         public const string ACTION_ZOOM_DEFAULT = "zoom_default";
         public const string ACTION_ZOOM_IN = "zoom_in";
-        public const string ACTION_TOGGLE_SQUIGGLY = "toggle_squiggly";
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
@@ -79,8 +75,7 @@ namespace jorts {
             { ACTION_DELETE,            action_delete   },
             { ACTION_ZOOM_OUT,          zoom_out        },
             { ACTION_ZOOM_DEFAULT,      zoom_default    },
-            { ACTION_ZOOM_IN,           zoom_in         },
-            { ACTION_TOGGLE_SQUIGGLY,   toggle_squiggly         }
+            { ACTION_ZOOM_IN,           zoom_in         }
         };
 
 
@@ -189,7 +184,7 @@ namespace jorts {
                 );
             }
 
-            hide_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_TOGGLE_SQUIGGLY;
+            hide_item.action_name = "app.toggle_squiggly";
             hide_item.width_request = 32;
             hide_item.height_request = 32;
             hide_item.add_css_class("themedbutton");
@@ -378,12 +373,6 @@ namespace jorts {
         private void action_delete () {
             ((Application)this.application).remove_note(this);
             this.close ();
-        }
-
-        // Called when shortcut for squiggly
-        // Tells the application "hey, toggle the squiggly"
-        private void toggle_squiggly () {
-            ((Application)this.application).toggle_squiggly ();
         }
 
         private void zoom_default () {

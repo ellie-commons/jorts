@@ -27,8 +27,12 @@ namespace jorts {
     public class PreferenceWindow :  Gtk.Window {
         public static Gtk.Settings gtk_settings;
 
-        public PreferenceWindow () {
-            
+        public PreferenceWindow (Gtk.Application app) {
+            debug("Preference window");
+
+            Object (application: app);
+            Intl.setlocale ();
+
             var gtk_settings = Gtk.Settings.get_default ();
 
             // Since each sticky note adopts a different accent color
@@ -55,7 +59,7 @@ namespace jorts {
             set_titlebar (headerbar);
             set_size_request (440, 260);
             set_default_size (440, 260);
-            resizable = false;
+            resizable = true;
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
@@ -80,27 +84,6 @@ namespace jorts {
                 vexpand = true
             };
 
-                /*************************************************/
-                /*                  Default Font                 */
-                /*************************************************/
-
-/*                  var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
-                    hexpand = true
-                };
-                var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-                    valign = Gtk.Align.CENTER,
-                    use_font = true
-                };
-                var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-                default_font_box.append (default_font_label);
-                default_font_box.append (default_font_button);
-                settingsbox.append(default_font_box); 
-
-                Application.gsettings.bind_with_mapping (
-                    "font-name", default_font_button,
-                    "font-desc", SettingsBindFlags.DEFAULT,
-                    font_button_bind_get, font_button_bind_set, null, null);
-  */
 
                 /*************************************************/
                 /*              Scribble Toggle                  */
@@ -164,30 +147,6 @@ namespace jorts {
             this.present ();
         }
 
-        /**
-        * Convert string representation of font to Pango.FontDescription.
-        *
-        * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-        * @see SettingsBindGetMappingShared
-        */
-        protected static bool font_button_bind_get (Value value, Variant variant, void* user_data) {
-            string font = variant.get_string ();
-            var desc = Pango.FontDescription.from_string (font);
-            value.set_boxed (desc);
-            return true;
-        }
-
-        /**
-        * Convert Pango.FontDescription to string representation of font.
-        *
-        * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-        * @see SettingsBindSetMappingShared
-        */
-        protected static Variant font_button_bind_set (Value value, VariantType expected_type, void* user_data) {
-            var desc = (Pango.FontDescription) value.get_boxed ();
-            string font = desc.to_string ();
-            return new Variant.string (font);
-        }
     }
 }
 

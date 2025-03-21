@@ -43,6 +43,7 @@ namespace jorts.Themer {
                 background-color: @${accent_color}_100;
             }
 
+
             window.${accent_color} undershoot.top {
                 background:
                     linear-gradient(
