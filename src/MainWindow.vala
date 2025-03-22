@@ -377,7 +377,7 @@ namespace jorts {
         }
 
         private void zoom_default () {
-            this.set_zoom(100);
+            this.set_zoom(jorts.Constants.DEFAULT_ZOOM);
         }
 
         // Switches stylesheet
@@ -411,6 +411,7 @@ namespace jorts {
             } else if (zoomkind == "reset") {
                 this.set_zoom(100);
             }
+            ((Application)this.application).save_to_stash (); 
         }
 
 
@@ -440,7 +441,7 @@ namespace jorts {
 
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
-            ((Application)this.application).save_to_stash (); 
+
         }
     }
 }

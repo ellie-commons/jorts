@@ -22,14 +22,17 @@
 namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
-
         public static GLib.Settings gsettings;
+
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: jorts.Constants.app_rdnn);
+                    application_id: jorts.Constants.RDNN);
         }
 
+        // Changed whenever a note changes zoom
+        // So we can adjust new notes to have whatever user feel is comfortable
 	    public int64 latest_zoom;
+
 
         /*************************************************/
         public override void startup () {
@@ -60,8 +63,6 @@ namespace jorts {
                     );
             }); 
 
-
-
             //this.scribbly_mode_active = gsettings.get_boolean ("scribbly_mode_active");
 
             // build all the stylesheets
@@ -72,7 +73,7 @@ namespace jorts {
 
         /*************************************************/        
         static construct {
-            gsettings = new GLib.Settings (jorts.Constants.app_rdnn);
+            gsettings = new GLib.Settings (jorts.Constants.RDNN);
 
         }
 
@@ -179,8 +180,6 @@ namespace jorts {
     /*************************************************/
     public void init_all_notes() {
         Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
-
-
 
         // Load everything we have
         foreach (noteData data in loaded_data) {

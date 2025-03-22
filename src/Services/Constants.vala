@@ -27,27 +27,31 @@ Just Dump constants here
 
 namespace jorts.Constants {
 
-    const string app_rdnn               = "io.github.ellie_commons.jorts";
-
-    const string DONATE_LINK = "https://ko-fi.com/teamcons";
 
 
     /*************************************************/
-    // We need to say stop at some point
-    const int ZOOM_MAX                  = 240;
-    const int ZOOM_MIN                  = 40;
-
-    // For new stickies
-    const int DEFAULT_HEIGHT             = 330;
-    const int DEFAULT_WIDTH              = 270;
+    const string RDNN               = "io.github.ellie_commons.jorts";
+    const string DONATE_LINK            = "https://ko-fi.com/teamcons";
 
     // signature theme
-    const string DEFAULT_THEME          = "BLUEBERRY";
-    const int DEFAULT_ZOOM               = 100;
+    const string DEFAULT_THEME           = "BLUEBERRY";
+    const int DAYS_BETWEEN_BACKUPS       = 30;
+    const string FILENAME_STASH          = "saved_state.json";
+    const string FILENAME_BACKUP         = "backup_state.json";
 
-    const int DAYS_BETWEEN_BACKUPS              = 30;
-    const string FILENAME_STASH              = "saved_state.json";
-    const string FILENAME_BACKUP              = "backup_state.json";
+
+    // We need to say stop at some point
+    const int ZOOM_MAX                   = 240;
+    const int DEFAULT_ZOOM               = 100;    
+    const int ZOOM_MIN                   = 40;
+
+    // For new stickies
+    const int DEFAULT_WIDTH              = 270;
+    const int DEFAULT_HEIGHT             = 330;
+
+    // New preference window
+    const int DEFAULT_PREF_WIDTH         = 440;
+    const int DEFAULT_PREF_HEIGHT        = 260;
 
 
 

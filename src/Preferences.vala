@@ -58,8 +58,8 @@ namespace jorts {
             };
 
             set_titlebar (headerbar);
-            set_size_request (440, 260);
-            set_default_size (440, 260);
+            set_size_request (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
+            set_default_size (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
             resizable = true;
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
