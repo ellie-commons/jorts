@@ -72,6 +72,7 @@ namespace jorts.Utils {
 
     /*************************************************/
     // Spits out a cute or funny random title for a new sticky note
+    ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding 
     public string random_title () {
         string[] alltitles = {
             _("All my very best friends"),

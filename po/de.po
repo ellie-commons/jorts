@@ -107,7 +107,7 @@ msgstr ""
 
 #: src/Preferences.vala:124
 msgid "Support us!"
-msgstr "Unterstützen Sie uns!"
+msgstr "Uns unterstützen!"
 
 #. Reset
 #: src/Preferences.vala:131

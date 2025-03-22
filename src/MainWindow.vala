@@ -143,7 +143,7 @@ namespace jorts {
             
             var new_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_NEW,
+                    {"<Control>n"},
                     _("New sticky note")
                 )
             };
@@ -156,7 +156,7 @@ namespace jorts {
 
             var delete_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_DELETE,
+                    {"<Control>w"},
                     _("Delete sticky note")
                 )
             };

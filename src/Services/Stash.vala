@@ -73,10 +73,6 @@ namespace jorts.Stash {
             builder.add_string_value (data.content);
 			builder.set_member_name ("zoom");
             builder.add_int_value (data.zoom);
-            //  builder.set_member_name ("width");
-            //  builder.add_int_value (data.width);
-            //  builder.set_member_name ("height");
-            //  builder.add_int_value (data.height);
             builder.end_object ();
         };
         builder.end_array ();
@@ -125,8 +121,6 @@ namespace jorts.Stash {
         string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
         string content  = node.get_string_member_with_default("content","");
         int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_ZOOM);
-        //int64 width     = node.get_int_member_with_default("width",jorts.Constants.DEFAULT_WIDTH);
-        //int64 height    = node.get_int_member_with_default("height",jorts.Constants.DEFAULT_HEIGHT);
 
         noteData loaded_note = new noteData(title, theme, content, zoom);
         return loaded_note;

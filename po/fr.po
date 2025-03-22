@@ -71,7 +71,7 @@ msgstr "Zoom arrière"
 
 #: src/Widgets/SettingsPopover.vala:100
 msgid "Default zoom level"
-msgstr "Niveau de zoom par défaut"
+msgstr "Zoom par défaut"
 
 #: src/Widgets/SettingsPopover.vala:107
 msgid "Zoom in"

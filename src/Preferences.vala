@@ -47,6 +47,8 @@ namespace jorts {
 
             /*************************************************/
             // Headerbar bs
+
+            /// TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
             var titlelabel = new Gtk.Label (_("Preferences for your Jorts"));
             set_title (titlelabel.get_text ());
             
