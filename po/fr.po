@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: fr\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-22 12:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
@@ -53,7 +53,9 @@ msgstr "Cacao"
 msgid "Slate"
 msgstr "Ardoise"
 
+#.
 #. THEME SELECTION
+#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
@@ -88,7 +90,7 @@ msgstr "ZOOM%"
 #. Headerbar bs
 #: src/Preferences.vala:50
 #, fuzzy
-msgid "Preferences for all sticky notes"
+msgid "Preferences for your Jorts"
 msgstr "Préférences pour toutes les notes autocollantes"
 
 #: src/Preferences.vala:99
@@ -96,8 +98,12 @@ msgid "Activate scribbly mode"
 msgstr "Activer le mode scribouillard"
 
 #: src/Preferences.vala:101
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
-msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets."
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes"
+msgstr ""
+"Si cette option est activée, les notes autocollantes non ciblées deviennent "
+"illisibles afin de protéger leur contenu des regards indiscrets."
 
 #: src/Preferences.vala:124
 msgid "Support us!"
@@ -124,13 +130,11 @@ msgstr "Nouvelle note autocollante"
 msgid "Delete sticky note"
 msgstr "Supprimer une note autocollante"
 
-#: src/MainWindow.vala:177
-#: src/MainWindow.vala:317
+#: src/MainWindow.vala:177 src/MainWindow.vala:317
 msgid "Always show content of sticky notes"
 msgstr "Toujours afficher le contenu des notes autocollantes"
 
-#: src/MainWindow.vala:183
-#: src/MainWindow.vala:328
+#: src/MainWindow.vala:183 src/MainWindow.vala:328
 msgid "Hide content of unfocused sticky notes"
 msgstr "Masquer le contenu des notes autocollantes non ciblées"
 

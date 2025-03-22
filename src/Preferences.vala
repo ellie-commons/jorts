@@ -47,7 +47,7 @@ namespace jorts {
 
             /*************************************************/
             // Headerbar bs
-            var titlelabel = new Gtk.Label (_("Preferences for all sticky notes"));
+            var titlelabel = new Gtk.Label (_("Preferences for your Jorts"));
             set_title (titlelabel.get_text ());
             
             var headerbar = new Gtk.HeaderBar () {
