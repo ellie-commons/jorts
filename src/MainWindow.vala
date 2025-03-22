@@ -139,13 +139,24 @@ namespace jorts {
             notetitle.set_tooltip_text (_("Edit title"));
             notetitle.xalign = 0.5f;
 
+            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
+            notetitle.changed.connect (() => {
+                this.set_title(notetitle.text);
+                ((Application)this.application).save_to_stash ();            
+            });
+
             headerbar.set_title_widget(notetitle);
             this.set_titlebar(headerbar);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
-            //scrolled.set_size_request (66,54);
+
             view = new jorts.StickyView (this.content);
+
+            view.buffer.changed.connect (() => {
+                ((Application)this.application).save_to_stash ();            
+            });
+
             scrolled.set_child (view);
 
 
@@ -213,6 +224,18 @@ namespace jorts {
 
             this.popover = new SettingsPopover (this.theme);
             this.set_zoom(data.zoom);
+
+            // The settings popover tells us a new theme has been chosen!
+            this.popover.theme_changed.connect ((selected) => {
+                this.update_theme(selected);
+            });
+
+            // The settings popover tells us a new zoom has been chosen!
+            this.popover.zoom_changed.connect ((zoomkind) => {
+                this.on_zoom_changed(zoomkind);
+            });
+
+
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
             app_button.tooltip_text = (_("Preferences for this sticky note"));
@@ -243,22 +266,9 @@ namespace jorts {
             set_child (mainbox);
             show();
 
-            // ================================================================ //
-
             /*****************************************/
             /*              CONNECTS                 */
             /*****************************************/
-
-            // Save when the text thingy has changed
-            view.buffer.changed.connect (() => {
-                ((Application)this.application).save_to_stash ();            
-            });
-
-            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
-            notetitle.changed.connect (() => {
-                this.set_title(notetitle.text);
-                ((Application)this.application).save_to_stash ();            
-            });
 
             // Save when the window is closed
             this.close_request.connect (() => {
@@ -271,15 +281,7 @@ namespace jorts {
                 this.on_focus_changed();
             });
 
-            // The settings popover tells us a new theme has been chosen!
-            this.popover.theme_changed.connect ((selected) => {
-                this.update_theme(selected);
-            });
 
-            // The settings popover tells us a new zoom has been chosen!
-            this.popover.zoom_changed.connect ((zoomkind) => {
-                this.on_zoom_changed(zoomkind);
-            });
 
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (() => {
@@ -352,11 +354,15 @@ namespace jorts {
         // NOTE: We cannot access the buffer if the window is closed, leading to content loss
         // Hence why we need to constantly save the buffer into this.content when changed
         public noteData packaged() {
-            //int width, height;
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
-            //this.get_default_size(out width, out height);
-            var data = new noteData(current_title, this.theme, this.content , this.zoom);
+
+            var data = new noteData(
+                current_title,
+                this.theme,
+                this.content,
+                this.zoom);
+
             return data;
         }
 

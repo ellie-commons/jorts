@@ -111,7 +111,8 @@ namespace jorts.Utils {
             _("My fav songs to sing along"),
             _("When to water which plant"),
             _("Top 10 anime betrayals"),
-            _("Amazing ascii art!")
+            _("Amazing ascii art!"),
+            _("Now with more ligma!")
         };
         return alltitles[Random.int_range (0,(alltitles.length - 1))];
     }

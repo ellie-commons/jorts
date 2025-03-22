@@ -150,7 +150,7 @@ namespace jorts {
 
     public void save_to_stash() {
         jorts.Stash.check_if_stash ();
-        string json_data = jorts.Stash.jsonify (open_notes);
+        string json_data = jorts.Jason.jsonify (open_notes);
         jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_STASH);
     }
 
@@ -193,7 +193,7 @@ namespace jorts {
             print("Doing a backup! :)");
 
             jorts.Stash.check_if_stash ();
-            string json_data = jorts.Stash.jsonify (this.open_notes);
+            string json_data = jorts.Jason.jsonify (this.open_notes);
             jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_BACKUP);
 
             var now = new DateTime.now_utc ().to_string() ;

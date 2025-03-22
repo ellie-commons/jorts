@@ -39,6 +39,7 @@ executable(
     'src/Objects/noteData.vala', 
 
     'src/Services/Constants.vala',
+    'src/Services/Jason.vala',
     'src/Services/Stash.vala',
     'src/Services/Themer.vala',
     'src/Services/Utils.vala',

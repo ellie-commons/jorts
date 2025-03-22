@@ -55,36 +55,6 @@ namespace jorts.Stash {
 
 
     /*************************************************/
-    // Loop through the list of windows and convert it into a giant json string
-    public string jsonify (Gee.ArrayList<MainWindow> notes) {
-        Json.Builder builder = new Json.Builder ();
-        builder.begin_array ();
-        foreach (MainWindow note in notes) {
-            noteData data = note.packaged ();
-            //print("saving " + note.title_name + "\n");
-
-			// Lets fkin gooo
-            builder.begin_object ();
-            builder.set_member_name ("title");
-            builder.add_string_value (data.title);
-            builder.set_member_name ("theme");
-            builder.add_string_value (data.theme);
-            builder.set_member_name ("content");
-            builder.add_string_value (data.content);
-			builder.set_member_name ("zoom");
-            builder.add_int_value (data.zoom);
-            builder.end_object ();
-        };
-        builder.end_array ();
-
-        Json.Generator generator = new Json.Generator ();
-        Json.Node root = builder.get_root ();
-        generator.set_root (root);
-        string str = generator.to_data (null);
-        return str;
-    }
-
-    /*************************************************/
     // Just slams a json in the storage file
     // TODO: Simplify this
     public void overwrite_stash(string json_data, string file_overwrite) {
@@ -112,35 +82,6 @@ namespace jorts.Stash {
 
     }
 
-    /*************************************************/
-    // Takes a single node, tries its best to get its content.
-    // Does not fail if something is missing or unreadable, go to fallback for the element instead
-    public jorts.noteData load_node(Json.Object node) {
-
-        string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
-        string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
-        string content  = node.get_string_member_with_default("content","");
-        int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_ZOOM);
-
-        noteData loaded_note = new noteData(title, theme, content, zoom);
-        return loaded_note;
-    }
-
-
-    /*************************************************/    
-    public Gee.ArrayList<noteData> load_parser(Json.Parser parser) {
-        Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
-
-        var root = parser.get_root();
-        var array = root.get_array();
-        
-        foreach (var item in array.get_elements()) {
-            var stored_note = jorts.Stash.load_node(item.get_object());
-            loaded_data.add(stored_note);
-        }
-
-        return loaded_data;
-    }
 
 
     /*************************************************/
@@ -161,7 +102,7 @@ namespace jorts.Stash {
         // Try standard storage
         try {
             parser.load_from_mapped_file (storage_path);
-            loaded_data = load_parser(parser);
+            loaded_data = jorts.Jason.load_parser(parser);
 
         } catch (Error e) {
             print("[WARNING] Failed to load from main storage! " + e.message.to_string() + "\n");
@@ -169,7 +110,7 @@ namespace jorts.Stash {
             // Try backup file
             try {
                 parser.load_from_mapped_file (backup_path);
-                loaded_data = load_parser(parser);
+                loaded_data = jorts.Jason.load_parser(parser);
 
             } catch (Error e) {
 
