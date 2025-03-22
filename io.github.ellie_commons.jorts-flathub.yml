@@ -14,3 +14,20 @@ modules:
     sources:
       - type: dir
         path: .
+  - name: granite
+    buildsystem: meson
+    source:
+      - type: git
+        url: https://github.com/elementary/granite/
+        commit: 065ba1f245b60ef867a6ca145e0891cf84eddcc7
+  - name: stylesheet
+    buildsystem: meson
+    source:
+      - type: git
+        url: https://github.com/elementary/stylesheet/
+        commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
+
+
+
+
+

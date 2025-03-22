@@ -42,10 +42,14 @@ namespace jorts {
 
     public class MainWindow : Gtk.Window {
 
-        private Gtk.HeaderBar header;
         public Gtk.EditableLabel notetitle;
         private jorts.StickyView view;
         private Gtk.ActionBar actionbar;
+
+        private Gtk.Button new_item;
+        private Gtk.Button delete_item;
+        private Gtk.ToggleButton hide_item;
+
         private SettingsPopover popover;
 
         public jorts.noteData data;
@@ -93,8 +97,12 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("app", actions);
 
-
             this.gtk_settings = Gtk.Settings.get_default ();
+
+
+            /*****************************************/
+            /*              LOAD NOTE                */
+            /*****************************************/
 
             this.data = data;
             this.title_name = data.title;
@@ -111,12 +119,18 @@ namespace jorts {
             this.add_css_class("rounded");
             this.add_css_class ("animations");
 
-            header = new Gtk.HeaderBar();
-            header.add_css_class ("flat");
-            header.add_css_class("headertitle");
+
+
+            /**********************************************/
+            /*              USER INTERFACE                */
+            /**********************************************/
+
+            var headerbar = new Gtk.HeaderBar();
+            headerbar.add_css_class ("flat");
+            headerbar.add_css_class("headertitle");
             //header.has_subtitle = false;
-            header.set_show_title_buttons (true);
-            header.decoration_layout = "close:";
+            headerbar.set_show_title_buttons (true);
+            headerbar.decoration_layout = "close:";
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
@@ -125,8 +139,8 @@ namespace jorts {
             notetitle.set_tooltip_text (_("Edit title"));
             notetitle.xalign = 0.5f;
 
-            header.set_title_widget(notetitle);
-            this.set_titlebar(header);
+            headerbar.set_title_widget(notetitle);
+            this.set_titlebar(headerbar);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
@@ -139,7 +153,7 @@ namespace jorts {
             actionbar = new Gtk.ActionBar ();
             actionbar.set_hexpand (true);
             
-            var new_item = new Gtk.Button () {
+            new_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
                     {"<Control>n"},
                     _("New sticky note")
@@ -152,7 +166,7 @@ namespace jorts {
             new_item.height_request = 32;
             new_item.add_css_class("themedbutton");
 
-            var delete_item = new Gtk.Button () {
+            delete_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
                     {"<Control>w"},
                     _("Delete sticky note")
@@ -165,28 +179,13 @@ namespace jorts {
             delete_item.add_css_class("themedbutton");
 
 
-            var hide_item = new Gtk.ToggleButton ();
-            
+            this.hide_item = new Gtk.ToggleButton ();
+            this.hide_item.action_name = "app.toggle_scribbly";
+            this.hide_item.width_request = 32;
+            this.hide_item.height_request = 32;
+            this.hide_item.add_css_class("themedbutton");
 
-            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-                hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_SCRIBBLY,
-                    _("Always show content of sticky notes")
-                );
-            } else {
-                hide_item.set_icon_name ("eye-not-looking-symbolic");
-                hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_SCRIBBLY,
-                    _("Hide content of unfocused sticky notes")
-                );
-            }
-
-            hide_item.action_name = "app.toggle_scribbly";
-            hide_item.width_request = 32;
-            hide_item.height_request = 32;
-            hide_item.add_css_class("themedbutton");
-
+            this.on_scribbly_changed();
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
             var emoji_button = new Gtk.MenuButton();
@@ -233,20 +232,23 @@ namespace jorts {
 
 
             // Define the grid 
-            var grid = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
-            grid.append(scrolled);
+            var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
+            mainbox.append(scrolled);
 
             var handle = new Gtk.WindowHandle () {
                 child = actionbar
             };
     
-            grid.append(handle);
-            grid.show ();
-            this.set_child (grid);
-            this.show();
+            mainbox.append(handle);
+            set_child (mainbox);
+            show();
 
             // ================================================================ //
-            // EVENTS            
+
+            /*****************************************/
+            /*              CONNECTS                 */
+            /*****************************************/
+
             // Save when the text thingy has changed
             view.buffer.changed.connect (() => {
                 ((Application)this.application).save_to_stash ();            
@@ -266,22 +268,7 @@ namespace jorts {
 
             // Use the color theme of this sticky note when focused
             this.notify["is-active"].connect(() => {
-                if (this.is_active) {
-                    var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
-                    gtk_settings.gtk_theme_name = stylesheet;
-                }
-
-                if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-
-                    if (this.is_active) {
-                        remove_css_class ("scribbly");
-                    } else {
-                        add_css_class ("scribbly");
-                    }
-
-                } else {
-                    remove_css_class ("scribbly");
-                }
+                this.on_focus_changed();
             });
 
             // The settings popover tells us a new theme has been chosen!
@@ -291,49 +278,14 @@ namespace jorts {
 
             // The settings popover tells us a new zoom has been chosen!
             this.popover.zoom_changed.connect ((zoomkind) => {
-                if (zoomkind == "zoom_in") {
-                    this.zoom_in();
-                } else if (zoomkind == "zoom_out") {
-                    this.zoom_out();
-                } else if (zoomkind == "reset") {
-                    this.set_zoom(100);
-                }
+                this.on_zoom_changed(zoomkind);
             });
-
-
-            /*************************************************/
-            /*              scribbly feature                 */
-            /*************************************************/
 
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (() => {
-                    if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-                        //this.add_css_class ("scribbly");
-                        hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_SCRIBBLY,
-                            _("Always show content of sticky notes")
-                        );
-
-                        if (this.is_active == false) {
-                            this.add_css_class ("scribbly");
-                        }
-
-                    } else {
-                        hide_item.set_icon_name ("eye-not-looking-symbolic");
-                        hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_SCRIBBLY,
-                            _("Hide content of unfocused sticky notes")
-                        );
-
-                        if (this.is_active == false) {
-                            this.remove_css_class ("scribbly");
-                        }
-
-                    }
-                }
-            );
-        }
+                this.on_scribbly_changed();
+            }); // END OF APP SCRIBBLY HANDLER
+        } // END OF MAIN CONSTRUCT
 
 
 
@@ -344,6 +296,51 @@ namespace jorts {
         /*                  METHODS                 */
         /********************************************/
 
+        // Called when a change in settings is detected
+        public void on_scribbly_changed() {
+            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+                //this.add_css_class ("scribbly");
+                this.hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
+                this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                    jorts.Constants.ACCELS_SCRIBBLY,
+                    _("Always show content of sticky notes")
+                );
+
+                if (this.is_active == false) {
+                    this.add_css_class ("scribbly");
+                }
+
+            } else {
+                this.hide_item.set_icon_name ("eye-not-looking-symbolic");
+                this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
+                    jorts.Constants.ACCELS_SCRIBBLY,
+                    _("Hide content of unfocused sticky notes")
+                );
+
+                if (this.is_active == false) {
+                    this.remove_css_class ("scribbly");
+                }
+            }
+        }
+
+
+        // Called when the window is-active property changes
+        public void on_focus_changed() {
+            if (this.is_active) {
+                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
+                gtk_settings.gtk_theme_name = stylesheet;
+            }
+
+            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+                if (this.is_active) {
+                    this.remove_css_class ("scribbly");
+                } else {
+                    this.add_css_class ("scribbly");
+                }
+            } else {
+                this.remove_css_class ("scribbly");
+            }
+        }
 
 
         // TITLE IS TITLE
@@ -398,6 +395,18 @@ namespace jorts {
         /*************************************************/
         /*              ZOOM feature                 */
         /*************************************************/
+
+        // Called when a signal from the popover says stuff got changed
+        public void on_zoom_changed(string zoomkind) {
+            if (zoomkind == "zoom_in") {
+                this.zoom_in();
+            } else if (zoomkind == "zoom_out") {
+                this.zoom_out();
+            } else if (zoomkind == "reset") {
+                this.set_zoom(100);
+            }
+        }
+
 
         // First check an increase doesnt go above limit
         public void zoom_in() {

@@ -101,6 +101,12 @@ namespace jorts {
             });
 
 
+            //  gsettings.changed["scribbly-mode-active"].connect (() => {
+            //      foreach (MainWindow note in this.open_notes) {
+            //          note.on_scribbly_changed();
+            //      }
+            //  });
+
         }
 
         // Clicked: Either show all windows, or rebuild from storage
