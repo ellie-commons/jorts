@@ -106,7 +106,7 @@ namespace jorts.Utils {
             _("Brainstorming notes"),
             _("To bring to the party"),
             _("My amazing mixtape"),
-            _("Napkin scribbles"),
+            _("Napkin scribblys"),
             _("My fav songs to sing along"),
             _("When to water which plant"),
             _("Top 10 anime betrayals"),

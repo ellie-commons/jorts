@@ -53,7 +53,6 @@ namespace jorts {
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
                 show_title_buttons = true,
-                decoration_layout = "close:"
             };
 
             set_titlebar (headerbar);
@@ -86,24 +85,30 @@ namespace jorts {
 
 
                 /*************************************************/
-                /*              Scribble Toggle                  */
+                /*              scribbly Toggle                  */
                 /*************************************************/
 
-                var scribble_toggle = new Gtk.Switch () {
+                var scribbly_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+
+                var scribbly_toggle = new Gtk.Switch () {
                     halign = Gtk.Align.END,
                     hexpand = true,
                     valign = Gtk.Align.CENTER,
                 };
-                var scribble_label = new Granite.HeaderLabel (_("Activate scribble mode")) {
-                    mnemonic_widget = scribble_toggle,
+
+                var scribbly_label = new Granite.HeaderLabel (_("Activate scribbly mode")) {
+                    mnemonic_widget = scribbly_toggle,
                     secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes")
                 };
-                var scribble_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-                scribble_box.append (scribble_label);
-                scribble_box.append (scribble_toggle);
-                settingsbox.append(scribble_box); 
 
-                Application.gsettings.bind ("squiggly-mode-active", scribble_toggle, "active",SettingsBindFlags.DEFAULT);
+                scribbly_box.append (scribbly_label);
+                scribbly_box.append (scribbly_toggle);
+                settingsbox.append(scribbly_box); 
+
+                Application.gsettings.bind (
+                    "scribbly-mode-active", 
+                    scribbly_toggle, "active",
+                    SettingsBindFlags.DEFAULT);
 
 
 
@@ -128,7 +133,7 @@ namespace jorts {
             actionbar.pack_end (reset_button);
 
             reset_button.clicked.connect(() => {
-                string[] keys = {"font-name", "squiggly-mode-active"};
+                string[] keys = {"font-name", "scribbly-mode-active"};
                 foreach (var key in keys) {
                     Application.gsettings.reset (key);
                 }

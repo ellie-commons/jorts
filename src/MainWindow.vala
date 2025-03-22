@@ -170,21 +170,21 @@ namespace jorts {
             var hide_item = new Gtk.ToggleButton ();
             
 
-            if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
+            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_SQUIGGLY,
+                    jorts.Constants.ACCELS_scribbly,
                     _("Always show content of sticky notes")
                 );
             } else {
                 hide_item.set_icon_name ("eye-not-looking-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_SQUIGGLY,
+                    jorts.Constants.ACCELS_scribbly,
                     _("Hide content of unfocused sticky notes")
                 );
             }
 
-            hide_item.action_name = "app.toggle_squiggly";
+            hide_item.action_name = "app.toggle_scribbly";
             hide_item.width_request = 32;
             hide_item.height_request = 32;
             hide_item.add_css_class("themedbutton");
@@ -273,16 +273,16 @@ namespace jorts {
                     this.gtk_settings.gtk_theme_name = stylesheet;
                 }
 
-                if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
+                if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
 
                     if (this.is_active) {
-                        remove_css_class ("squiggly");
+                        remove_css_class ("scribbly");
                     } else {
-                        add_css_class ("squiggly");
+                        add_css_class ("scribbly");
                     }
 
                 } else {
-                    remove_css_class ("squiggly");
+                    remove_css_class ("scribbly");
                 }
             });
 
@@ -304,32 +304,32 @@ namespace jorts {
 
 
             /*************************************************/
-            /*              Squiggly feature                 */
+            /*              scribbly feature                 */
             /*************************************************/
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.changed["squiggly-mode-active"].connect (() => {
-                    if (Application.gsettings.get_boolean ("squiggly-mode-active")) {
-                        //this.add_css_class ("squiggly");
+            Application.gsettings.changed["scribbly-mode-active"].connect (() => {
+                    if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+                        //this.add_css_class ("scribbly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_SQUIGGLY,
+                            jorts.Constants.ACCELS_scribbly,
                             _("Always show content of sticky notes")
                         );
 
                         if (this.is_active == false) {
-                            this.add_css_class ("squiggly");
+                            this.add_css_class ("scribbly");
                         }
 
                     } else {
                         hide_item.set_icon_name ("eye-not-looking-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_SQUIGGLY,
+                            jorts.Constants.ACCELS_scribbly,
                             _("Hide content of unfocused sticky notes")
                         );
 
                         if (this.is_active == false) {
-                            this.remove_css_class ("squiggly");
+                            this.remove_css_class ("scribbly");
                         }
 
                     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema path="/io/github/ellie_commons/jorts/" id="io.github.ellie_commons.jorts">
-		<key name="squiggly-mode-active" type="b">
+		<key name="scribbly-mode-active" type="b">
 			<default>false</default>
 			<summary>Change font to an illegible one</summary>
 			<description>Whether to change font to an illegible one for unfocused sticky notes, for privacy (NOT IMPLEMENTED YET)</description>
@@ -10,11 +10,6 @@
 			<default>""</default>
 			<summary>Last time saved_state.json was backed up</summary>
 			<description>Stores the date in string format for the last time a backup happened. If empty, then the app was just installed, do it immediately (NOT IMPLEMENTED YET)</description>
-		</key>
-		<key name="hide-buttons" type="b">
-			<default>false</default>
-			<summary>Hide new and delete buttons</summary>
-			<description>Whether to hide new and delete buttons in sticky notes (NOT IMPLEMENTED YET)</description>
 		</key>
 		<key name="enable-minimize" type="b">
 			<default>false</default>

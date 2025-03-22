@@ -121,8 +121,8 @@ popover button image {
 }
 
 /* Obfuscate note */
-window.squiggly textview,
-window.squiggly editablelabel {
+window.scribbly textview,
+window.scribbly editablelabel {
     font-family: "Redacted Script";
 }
 

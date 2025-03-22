@@ -220,7 +220,7 @@ msgid "My amazing mixtape"
 msgstr "Min fantastiske blanding"
 
 #: src/Services/Utils.vala:112
-msgid "Napkin scribbles"
+msgid "Napkin scribblys"
 msgstr "Serviettskribler"
 
 #: src/Services/Utils.vala:113
@@ -354,7 +354,7 @@ msgstr "Du kan endre individuell farge og tekststørrelse!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the Squiggly "
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
 msgstr "Streaming? "
 
@@ -376,8 +376,8 @@ msgid "Better translation coverage"
 msgstr "Bedre oversettelsesdekning"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
-msgid "New feature: Squiggly mode! Hide sticky notes content when unfocused"
-msgstr "Ny funksjon: Squiggly Mode! "
+msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
+msgstr "Ny funksjon: scribbly Mode! "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 msgid ""

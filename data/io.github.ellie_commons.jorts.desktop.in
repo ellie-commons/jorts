@@ -9,15 +9,11 @@ Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Office;
-Actions=NewNote;ShowAll;Preferences;
+Actions=NewNote;Preferences;
 
 [Desktop Action NewNote]
 Exec=io.github.ellie_commons.jorts --new-note
 Name=New sticky note
-
-[Desktop Action ShowAll]
-Exec=io.github.ellie_commons.jorts --show-all
-Name=Show all sticky notes
 
 [Desktop Action Preferences]
 Exec=io.github.ellie_commons.jorts --preferences

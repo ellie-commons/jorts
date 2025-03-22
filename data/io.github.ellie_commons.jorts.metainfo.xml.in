@@ -7,7 +7,7 @@
     <name translate="no">Jorts</name>
     <summary>Neither jeans nor shorts, just like jorts</summary>
     <description>
-        <p>Colourful little sticky notes for all of your thoughts :)</p>
+        <p>Colourful and happy little sticky notes for all of your thoughts! :)</p>
         <p>Features include:</p>
         <ul>
             <li>Colours: Ten pretty themes. Any new note gets a random one</li>
@@ -59,7 +59,7 @@
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot2.png</image>
         </screenshot>
         <screenshot>
-            <caption>Streaming? Worried of someone looking above your shoulder? Try the scribble Mode!</caption>
+            <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot3.png</image>
         </screenshot>
         <screenshot>
@@ -83,7 +83,7 @@
                 <p>2.3.0 The Inner Jorts</p>
                 <ul>
                     <li>New feature: Preferences dialog! Right-click on the app icon to see the option</li>
-                    <li>Scribble mode has been moved to the new preference dialog</li>
+                    <li>scribbly mode has been moved to the new preference dialog</li>
                     <li>New feature: Default font. You can now set a specific font for Jorts.</li>
                     <li>Improvement for translators: Translations have been separated in 2: One for the UI one for the extra content</li>
                     <li>Comfort: Easier to grab and drag stickies</li>
@@ -101,7 +101,7 @@
                 <p>2.2.0 The Jorts of light</p>
                 <ul>
                     <li>Better translation coverage</li>
-                    <li>New feature: scribble mode! Hide sticky notes content when unfocused</li>
+                    <li>New feature: scribbly mode! Hide sticky notes content when unfocused</li>
                     <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
                     <li>The button in the toolbar displays a random emote everytime you click!</li>
                     <li>New feature: Jorts does a monthly backup. Should there be any issue you can recover data!</li>

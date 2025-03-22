@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 20:09+0100\n"
+"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,39 +91,34 @@ msgstr "Zooma in"
 msgid "ZOOM%"
 msgstr "ZOOM%"
 
-#: src/Preferences.vala:42
+#. ***********************************************
+#. Headerbar bs
+#: src/Preferences.vala:50
 #, fuzzy
 msgid "Preferences for all sticky notes"
 msgstr "Inställningar för denna klibbiga anteckning"
 
-#. ***********************************************
-#. Default Font
-#. ***********************************************
-#: src/Preferences.vala:82
-#, fuzzy
-msgid "Default Font"
-msgstr "Standard zoomnivå"
-
-#: src/Preferences.vala:109
-msgid "Activate scribble mode"
+#: src/Preferences.vala:99
+msgid "Activate scribbly mode"
 msgstr ""
 
-#: src/Preferences.vala:111
+#: src/Preferences.vala:101
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes"
 msgstr ""
 
-#: src/Preferences.vala:129
+#: src/Preferences.vala:124
+msgid "Support us!"
+msgstr ""
+
+#. Reset
+#: src/Preferences.vala:131
 msgid "Reset to Default"
 msgstr ""
 
-#: src/Preferences.vala:130
+#: src/Preferences.vala:132
 msgid "Reset all settings to defaults"
-msgstr ""
-
-#: src/Preferences.vala:142
-msgid "Close"
 msgstr ""
 
 #: src/MainWindow.vala:127
@@ -138,166 +133,170 @@ msgstr "Ny Sticky Note"
 msgid "Delete sticky note"
 msgstr "Ta bort klibbig anteckning"
 
-#: src/MainWindow.vala:175 src/MainWindow.vala:306
+#: src/MainWindow.vala:177 src/MainWindow.vala:317
 msgid "Always show content of sticky notes"
 msgstr "Visa alltid innehåll i klistermärken"
 
-#: src/MainWindow.vala:181 src/MainWindow.vala:317
+#: src/MainWindow.vala:183 src/MainWindow.vala:328
 msgid "Hide content of unfocused sticky notes"
 msgstr "Dölj innehållet i ofokuserade klisterlappar"
 
-#: src/MainWindow.vala:193
+#: src/MainWindow.vala:195
 msgid "Insert emoji"
 msgstr "Infoga emoji"
 
-#: src/MainWindow.vala:219
+#: src/MainWindow.vala:221
 msgid "Preferences for this sticky note"
 msgstr "Inställningar för denna klibbiga anteckning"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:77
 msgid "All my very best friends"
 msgstr "Alla mina allra bästa vänner"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:78
 msgid "My super good secret recipe"
 msgstr "Mitt super goda hemliga recept"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:79
 msgid "My todo list"
 msgstr "Min TODO -lista"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:80
 msgid "Super secret to not tell anyone"
 msgstr "Super Secret att inte berätta för någon"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:81
 msgid "My grocery list"
 msgstr "Min livsmedelslista"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:82
 msgid "Random shower thoughts"
 msgstr "Slumpmässiga duschtankar"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:83
 msgid "My fav fanfics"
 msgstr "Mina favoritfanfics"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:84
 msgid "My fav dinosaurs"
 msgstr "Mina favoritdinosaurier"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:85
 msgid "My evil mastermind plan"
 msgstr "Min onda mastermind -plan"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:86
 msgid "What made me smile today"
 msgstr "Vad fick mig att le idag"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:87
 msgid "Hello world!"
 msgstr "Hej värld!"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:88
 msgid "New sticky, new me"
 msgstr "Ny klibbig, ny mig"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:89
 msgid "Hidden pirate treasure"
 msgstr "dold piratskatt"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:90
 msgid "To not forget, ever"
 msgstr "att inte glömma, någonsin"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:91
 msgid "Dear Diary,"
 msgstr "Kära dagbok,"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:92
 msgid "Hi im a square"
 msgstr "Hej jag är en fyrkant"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:93
 msgid "Have a nice day! :)"
 msgstr "Ha en trevlig dag! "
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:94
 msgid "My meds schedule"
 msgstr "Mitt medicin schema"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:95
 msgid "Household chores"
 msgstr "Hushållssysslor"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:96
 msgid "Ode to my cat"
 msgstr "ode till min katt"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:97
 msgid "My dogs favourite toys"
 msgstr "Mina hundens favoritleksaker"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:98
 msgid "How cool my birds are"
 msgstr "Hur coola mina fåglar är"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:99
 msgid "Suspects in the Last Cookie affair"
 msgstr "Misstänkta i den senaste cookie -affären"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:100
 msgid "Words my parrots know"
 msgstr "Ord som mina papegojor vet"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:101
 msgid "Cool and funny compliments to give out"
 msgstr "Cool och roliga komplimanger att ge ut"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:102
 msgid "Ok, listen here,"
 msgstr "OK, lyssna här,"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:103
 msgid "My dream Pokemon team"
 msgstr "Mitt dröm Pokemon -team"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:104
 msgid "My little notes"
 msgstr "Mina små anteckningar"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:105
 msgid "Surprise gift list"
 msgstr "Överraskningspresentlistan"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:106
 msgid "Brainstorming notes"
 msgstr "Brainstorming Notes"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:107
 msgid "To bring to the party"
 msgstr "Att föra till festen"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:108
 msgid "My amazing mixtape"
 msgstr "Min fantastiska mixtape"
 
-#: src/Services/Utils.vala:112
-msgid "Napkin scribbles"
+#: src/Services/Utils.vala:109
+msgid "Napkin scribblys"
 msgstr "servettklott"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:110
 msgid "My fav songs to sing along"
 msgstr "Mina favoritlåtar att sjunga med"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:111
 msgid "When to water which plant"
 msgstr "När man ska vattna vilken växt"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:112
 msgid "Top 10 anime betrayals"
 msgstr "Topp 10 anime förråd"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:113
 msgid "Amazing ascii art!"
 msgstr "Fantastisk ascii-konst!"
+
+#, fuzzy
+#~ msgid "Default Font"
+#~ msgstr "Standard zoomnivå"

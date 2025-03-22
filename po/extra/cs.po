@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-19 20:10+0100\n"
+"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,8 @@ msgid "Neither jeans nor shorts, just like jorts"
 msgstr "Ani džíny, ani šortky, stejně jako Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-msgid "Colourful little sticky notes for all of your thoughts :)"
+#, fuzzy
+msgid "Colourful and happy little sticky notes for all of your thoughts! :)"
 msgstr "Barevné malé lepkavé poznámky pro všechny vaše myšlenky :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
@@ -119,144 +120,148 @@ msgstr "Můžete změnit velikost individuální barvy a textu!"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
 #, fuzzy
 msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the scribble "
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
 msgstr "Streamování? "
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
-msgid "Like emojis? Well there's an emoji picker!"
-msgstr "Jako emodži? "
-
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:70
 msgid "You can unzoom so hard you could do ascii art"
 msgstr "Můžete unzoom tak tvrdě, že byste mohli dělat ASCII ART"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:87
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
 #, fuzzy
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.1.2 Neochvěditelné jorty"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:85
 msgid ""
 "New feature: Preferences dialog! Right-click on the app icon to see the "
 "option"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
-msgid "Scribble mode has been moved to the new preference dialog"
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:86
+msgid "scribbly mode has been moved to the new preference dialog"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:91
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:87
 msgid "New feature: Default font. You can now set a specific font for Jorts."
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
 msgid ""
 "Improvement for translators: Translations have been separated in 2: One for "
 "the UI one for the extra content"
 msgstr ""
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
+msgid "Comfort: Easier to grab and drag stickies"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
+msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
 #, fuzzy
 msgid "Updated translations"
 msgstr "Vylepšené překlady"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 Jorts of Light"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
 msgid "Better translation coverage"
 msgstr "Lepší pokrytí překladu"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
 #, fuzzy
-msgid "New feature: scribble mode! Hide sticky notes content when unfocused"
-msgstr "Nová funkce: Squiggly režim! "
+msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
+msgstr "Nová funkce: scribbly režim! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
 msgstr "Nová funkce: Tlačítko Emoji Picker! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr ""
 "Tlačítko na panelu nástrojů zobrazuje náhodné emoce pokaždé, když kliknete!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
 msgstr "Nová funkce: Jorts provádí měsíční zálohu. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr "Pokud bude hlavní úložiště poškozeno, Jorts se snaží načíst ze zálohy"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Some new fun/cute default titles"
 msgstr "Některé nové zábavné/roztomilé výchozí tituly"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Pod kapotou se mění sem a tam pro čistší kód"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:116
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 Neochvěditelné jorty"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
 msgid "Add relief to actionbar buttons"
 msgstr "Přidejte úlevu k tlačítkům ActionBar"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "Bugfix: případ Edge, kde je téma nebo zoom správně uloženo"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr "Bugfix: Název v multitaskingu není nastaven správně"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "Bugfix: Ikona nekonzistentnost Accross Icon Témata"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:125
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Bugfix: Tématické nekonzistence narůstají"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:129
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 Čerstvé z prádelny! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid "Clearer appmenu description"
 msgstr "Popis jasnějších appmenu"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "More consistent theming"
 msgstr "Konzistentnější téma"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:135
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "Bugfix: Smazání zkratky nebyla neodpovídatelná"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:136
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "Bugfix: screenshot not showing"
 msgstr "Bugfix: Screenshot se nezobrazí"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:140
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 čerstvé z prádelny!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "Zahrnuje zoom na notu! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -264,222 +269,66 @@ msgstr ""
 "Nejnovější sada Zoom, aka Co je pro vás nejpohodlnější, zůstává jako výchozí "
 "pro nové poznámky"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Lepší čitelnost (WCAG AA nebo AAA v závislosti na tématu)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Také trochu lépe vypadající téma. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
 msgid "Improved translations"
 msgstr "Vylepšené překlady"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:149
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "Better shortcut and tooltips"
 msgstr "Lepší zkratky a popisky"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "Opravena chyba, kde Jorts zůstal na téma Světelného systému"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 AppCenter Release"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:159
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 Vydání: břidlice a bubblegum"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Oživení starověké, ale dobře milované verze Notejot"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:162
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Aplikace se nyní jmenuje Jorts. "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
 msgid "10 lovely little colours"
 msgstr "10 krásných malých barev"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "Postaveno na vrcholu moderních linuxových technologií a formátů balení"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
 msgid "Smooth transition when changing theme"
 msgstr "Hladký přechod při změně tématu"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "New stickies have a random fun little title and colour"
 msgstr "Nové Stickies mají náhodný zábavný malý název a barvu"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
 msgid "A few initial translations included, and more to come"
 msgstr "včetně několika počátečních překladů a dalších dalších"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr "E -mail a odkazy lze kliknout! "
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Text podporuje zpět, redo a můžete použít emodži :)"
-
-#~ msgid "Blueberry"
-#~ msgstr "borůvka"
-
-#~ msgid "Lime"
-#~ msgstr "vápno"
-
-#~ msgid "Banana"
-#~ msgstr "Banán"
-
-#~ msgid "Cocoa"
-#~ msgstr "kakao"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Stiphy Note Color"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Vyberte barvu pro tuto lepkavou poznámku"
-
-#~ msgid "Zoom out"
-#~ msgstr "Oddálení"
-
-#~ msgid "Default zoom level"
-#~ msgstr "Výchozí úroveň zoomu"
-
-#~ msgid "Zoom in"
-#~ msgstr "Přiblížení"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%"
-
-#~ msgid "All my very best friends"
-#~ msgstr "Všichni moji nejlepší přátelé"
-
-#~ msgid "My super good secret recipe"
-#~ msgstr "Můj super dobrý tajný recept"
-
-#~ msgid "My todo list"
-#~ msgstr "Můj seznam todo"
-
-#~ msgid "Super secret to not tell anyone"
-#~ msgstr "Super tajemství, že to nikomu neřeknu"
-
-#~ msgid "My grocery list"
-#~ msgstr "Můj seznam potravin"
-
-#~ msgid "Random shower thoughts"
-#~ msgstr "Náhodné sprchové myšlenky"
-
-#~ msgid "My fav fanfics"
-#~ msgstr "Moje fav fanfics"
-
-#~ msgid "My fav dinosaurs"
-#~ msgstr "Moji oblíbení dinosauři"
-
-#~ msgid "My evil mastermind plan"
-#~ msgstr "Můj plán zlého mistra"
-
-#~ msgid "What made me smile today"
-#~ msgstr "Co mě dnes rozesmálo"
-
-#~ msgid "Hello world!"
-#~ msgstr "Ahoj svět!"
-
-#~ msgid "New sticky, new me"
-#~ msgstr "Nové lepkavé, nové mě"
-
-#~ msgid "Hidden pirate treasure"
-#~ msgstr "Skrytý pirátský poklad"
-
-#~ msgid "To not forget, ever"
-#~ msgstr "Nezapomenout, nikdy"
-
-#~ msgid "Dear Diary,"
-#~ msgstr "Drahý deník,"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Ahoj im čtverco"
-
-#~ msgid "Have a nice day! :)"
-#~ msgstr "Přeji hezký den! "
-
-#~ msgid "My meds schedule"
-#~ msgstr "Můj rozvrh Meds"
-
-#~ msgid "Household chores"
-#~ msgstr "domácí práce"
-
-#~ msgid "Ode to my cat"
-#~ msgstr "Óda k mé kočce"
-
-#~ msgid "My dogs favourite toys"
-#~ msgstr "oblíbené hračky mých psů"
-
-#~ msgid "How cool my birds are"
-#~ msgstr "Jak cool jsou moji ptáci"
-
-#~ msgid "Suspects in the Last Cookie affair"
-#~ msgstr "Podezřelí v poslední aféře cookie"
-
-#~ msgid "Words my parrots know"
-#~ msgstr "Slova moji papoušci vědí"
-
-#~ msgid "Cool and funny compliments to give out"
-#~ msgstr "Skvělé a vtipné komplimenty"
-
-#~ msgid "Ok, listen here,"
-#~ msgstr "Dobře, poslouchejte tady,"
-
-#~ msgid "My dream Pokemon team"
-#~ msgstr "Můj tým Dream Pokemon"
-
-#~ msgid "My little notes"
-#~ msgstr "Moje malé poznámky"
-
-#~ msgid "Surprise gift list"
-#~ msgstr "Seznam dárků překvapení"
-
-#~ msgid "Brainstorming notes"
-#~ msgstr "Poznámky k brainstormingu"
-
-#~ msgid "To bring to the party"
-#~ msgstr "Přivést na stranu"
-
-#~ msgid "My amazing mixtape"
-#~ msgstr "Moje úžasná směsice"
-
-#~ msgid "Napkin scribbles"
-#~ msgstr "Ubrousky"
-
-#~ msgid "My fav songs to sing along"
-#~ msgstr "Moje oblíbené písně, které zpívají"
-
-#~ msgid "When to water which plant"
-#~ msgstr "Kdy zalévat, kterou rostlinu"
-
-#~ msgid "Top 10 anime betrayals"
-#~ msgstr "10 nejlepších anime zrady"
-
-#~ msgid "Edit title"
-#~ msgstr "Upravit název"
-
-#~ msgid "Delete sticky note"
-#~ msgstr "Odstraňte lepkavou poznámku"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Vždy ukažte obsah lepkavých poznámek"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Skryjte obsah nezaostřených lepkavých poznámek"
-
-#~ msgid "Insert emoji"
-#~ msgstr "Vložte emoji"
-
-#~ msgid "Preferences for this sticky note"
-#~ msgstr "Předvolby pro tuto lepkavou poznámku"

@@ -22,7 +22,6 @@
 namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
-        private static bool create_new_window = false;
 
         public static GLib.Settings gsettings;
         public Application () {
@@ -63,7 +62,7 @@ namespace jorts {
 
 
 
-            //this.squiggly_mode_active = gsettings.get_boolean ("squiggly_mode_active");
+            //this.scribbly_mode_active = gsettings.get_boolean ("scribbly_mode_active");
 
             // build all the stylesheets
             jorts.Themer.init_all_themes();
@@ -94,11 +93,11 @@ namespace jorts {
             save_action.activate.connect (() => {
                 this.save_to_stash ();
             });
-            var toggle_squiggly = new SimpleAction ("toggle_squiggly", null);
-            set_accels_for_action ("app.toggle_squiggly", { "<Control>H", null });
-            add_action (toggle_squiggly);
-            toggle_squiggly.activate.connect (() => {
-                this.toggle_squiggly();
+            var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
+            set_accels_for_action ("app.toggle_scribbly", { "<Control>H", null });
+            add_action (toggle_scribbly);
+            toggle_scribbly.activate.connect (() => {
+                this.toggle_scribbly();
             });
 
 
@@ -150,12 +149,12 @@ namespace jorts {
     }
 
 
-    public void toggle_squiggly() {
-        var squiggly_mode_active = Application.gsettings.get_boolean ("squiggly-mode-active");
-        if (squiggly_mode_active) {
-            gsettings.set_boolean ("squiggly-mode-active",false);
+    public void toggle_scribbly() {
+        var scribbly_mode_active = Application.gsettings.get_boolean ("scribbly-mode-active");
+        if (scribbly_mode_active) {
+            gsettings.set_boolean ("scribbly-mode-active",false);
         } else {
-            gsettings.set_boolean ("squiggly-mode-active",true);
+            gsettings.set_boolean ("scribbly-mode-active",true);
         }
     }
 
@@ -207,10 +206,6 @@ namespace jorts {
 
             activate ();
             switch (args[1]) {
-
-                case "--show-all":
-                    show_all();
-                    break;
                 case "--new-note":
                     create_note(null);
                     break;
@@ -222,12 +217,6 @@ namespace jorts {
             return 0;
 
         }
-
-        const OptionEntry[] entries = {
-            { "--new-note", 'n', 0, OptionArg.NONE, out create_new_window, "New Note", null },
-            //  { "--show-all", 'n', 0, OptionArg.NONE, out show_all, "Show All", null },
-            { null }
-        };
 
         public static int main (string[] args) {
             var app = new Application();

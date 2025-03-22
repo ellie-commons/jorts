@@ -9,27 +9,12 @@
 
 <span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/shot1.png" alt="Screenshot of Elly's sticky note as an example"></span>
 
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/spread.png" alt="Several open sticky notes"></span>
-
 <br/>
 
 ## 🛣️ Roadmap
 
-Jorts is a cute simple little notes app, and is planned to stay as a cute simple little notes app.
-In the works for next version:
-
-- [x] Squiggly mode
-- [x] Emoji button
-- [ ] Zoom: ctrl+scroll to zoom
-- [ ] Detect local path to files and folders and open in file explorer
-- [x] Do sometimes a backup of the stash
-- [x] try loading backup if main is corrupted
-- [ ] More commandline options (reopen all, quit)
-- [ ] Highlight text in different colors? Like a highlighter
-- [ ] Add bold, italic, strikethrough...?
-- [ ] Move widget definitions to blueprint files?
-
-New features may sneak themselves. Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
+Jorts is a cute simple little notes app
+Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
 
 ## 💝 Donations
 
