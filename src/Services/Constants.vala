@@ -66,14 +66,15 @@ namespace jorts.Constants {
     const string ACTION_ZOOM_OUT = "zoom_out";
     const string ACTION_ZOOM_DEFAULT = "zoom_default";
     const string ACTION_ZOOM_IN = "zoom_in";
-    const string ACTION_TOGGLE_scribbly = "toggle_scribbly";
+    const string ACTION_TOGGLE_SCRIBBLY = "toggle_scribbly";
 
     const string[] ACCELS_NEW =     {"<Control>n"};
     const string[] ACCELS_DELETE =     {"<Control>w"};
     const string[] ACCELS_SAVE =     {"<Control>s"};
     const string[] ACCELS_QUIT =     {"<Control>q"};
-    const string[] ACCELS_scribbly =     {"<Control>h"};
+    const string[] ACCELS_SCRIBBLY =     {"<Control>h"};
     const string[] ACCELS_EMOTE =     {"<Control>."};
+
 
     /*************************************************/
     // As seen on TV!

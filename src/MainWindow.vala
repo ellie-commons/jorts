@@ -93,8 +93,6 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("app", actions);
 
-            //this.set_hexpand (false);
-            //this.set_vexpand (false);
 
             this.gtk_settings = Gtk.Settings.get_default ();
 
@@ -173,13 +171,13 @@ namespace jorts {
             if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
                 hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_scribbly,
+                    jorts.Constants.ACCELS_SCRIBBLY,
                     _("Always show content of sticky notes")
                 );
             } else {
                 hide_item.set_icon_name ("eye-not-looking-symbolic");
                 hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                    jorts.Constants.ACCELS_scribbly,
+                    jorts.Constants.ACCELS_SCRIBBLY,
                     _("Hide content of unfocused sticky notes")
                 );
             }
@@ -270,7 +268,7 @@ namespace jorts {
             this.notify["is-active"].connect(() => {
                 if (this.is_active) {
                     var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
-                    this.gtk_settings.gtk_theme_name = stylesheet;
+                    gtk_settings.gtk_theme_name = stylesheet;
                 }
 
                 if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
@@ -313,7 +311,7 @@ namespace jorts {
                         //this.add_css_class ("scribbly");
                         hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_scribbly,
+                            jorts.Constants.ACCELS_SCRIBBLY,
                             _("Always show content of sticky notes")
                         );
 
@@ -324,7 +322,7 @@ namespace jorts {
                     } else {
                         hide_item.set_icon_name ("eye-not-looking-symbolic");
                         hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                            jorts.Constants.ACCELS_scribbly,
+                            jorts.Constants.ACCELS_SCRIBBLY,
                             _("Hide content of unfocused sticky notes")
                         );
 

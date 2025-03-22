@@ -41,7 +41,7 @@ namespace jorts.Stash {
     /*************************************************/
 	// Ok first check if we have a directory to store data
 	public void check_if_stash() {
-
+        debug("do we have a data directory?");
 		var data_directory  = File.new_for_path(Environment.get_user_data_dir ());	
 		try {
 			if (!data_directory.query_exists()) {
@@ -88,7 +88,7 @@ namespace jorts.Stash {
     // Just slams a json in the storage file
     // TODO: Simplify this
     public void overwrite_stash(string json_data, string file_overwrite) {
-
+        debug("writing to stash...");
         string data_directory = Environment.get_user_data_dir ();
         string storage_path = data_directory + "/" + file_overwrite;
     
@@ -149,6 +149,8 @@ namespace jorts.Stash {
     // If that fails, we go for backup
     // Still failing ? Start anew
     public Gee.ArrayList<noteData> load_from_stash() {
+        debug("loading from stash...");
+
         Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
         string data_directory = Environment.get_user_data_dir ();
         string storage_path = data_directory + "/" + jorts.Constants.FILENAME_STASH;
@@ -163,7 +165,7 @@ namespace jorts.Stash {
 
         } catch (Error e) {
             print("[WARNING] Failed to load from main storage! " + e.message.to_string() + "\n");
-            
+            debug("Trying backup");
             // Try backup file
             try {
                 parser.load_from_mapped_file (backup_path);
@@ -181,6 +183,7 @@ namespace jorts.Stash {
 
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
+            debug("nothing loaded");
             noteData blank_slate    = jorts.Utils.random_note(null);
             blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
             loaded_data.add(blank_slate);

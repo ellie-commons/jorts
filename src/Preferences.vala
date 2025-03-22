@@ -25,10 +25,10 @@
 */
 namespace jorts {
     public class PreferenceWindow :  Gtk.Window {
-        public static Gtk.Settings gtk_settings;
+
 
         public PreferenceWindow (Gtk.Application app) {
-            debug("Preference window");
+            debug("Showing preference window");
 
             Object (application: app);
             Intl.setlocale ();
