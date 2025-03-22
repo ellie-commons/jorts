@@ -1,21 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt_br\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2025-02-18 11:43-03\n"
+"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 10:39+0100\n"
-"PO-Revision-Date: 2025-02-18 11:43-03\n"
-"Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt_br\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
@@ -58,9 +53,7 @@ msgstr "Cacau"
 msgid "Slate"
 msgstr "Ardósia"
 
-#.
 #. THEME SELECTION
-#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
@@ -100,26 +93,24 @@ msgstr "Preferências para esta nota pegajosa"
 
 #: src/Preferences.vala:99
 msgid "Activate scribbly mode"
-msgstr ""
+msgstr "Ativar o modo de rabisco"
 
 #: src/Preferences.vala:101
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
-msgstr ""
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
+msgstr "Se ativado, as notas autocolantes desfocadas tornam-se ilegíveis para proteger o seu conteúdo de olhares curiosos"
 
 #: src/Preferences.vala:124
 msgid "Support us!"
-msgstr ""
+msgstr "Apoie-nos!"
 
 #. Reset
 #: src/Preferences.vala:131
 msgid "Reset to Default"
-msgstr ""
+msgstr "Repor a predefinição"
 
 #: src/Preferences.vala:132
 msgid "Reset all settings to defaults"
-msgstr ""
+msgstr "Repor todas as definições para as predefinições"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
@@ -133,11 +124,13 @@ msgstr "Nova nota adesiva"
 msgid "Delete sticky note"
 msgstr "Excluir nota adesiva"
 
-#: src/MainWindow.vala:177 src/MainWindow.vala:317
+#: src/MainWindow.vala:177
+#: src/MainWindow.vala:317
 msgid "Always show content of sticky notes"
 msgstr "sempre mostre conteúdo de notas adesivas"
 
-#: src/MainWindow.vala:183 src/MainWindow.vala:328
+#: src/MainWindow.vala:183
+#: src/MainWindow.vala:328
 msgid "Hide content of unfocused sticky notes"
 msgstr "ocultar o conteúdo de notas pegajosas sem foco"
 

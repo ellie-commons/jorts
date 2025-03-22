@@ -1,34 +1,29 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 10:39+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fi\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
 msgid "Blueberry"
-msgstr "mustikka"
+msgstr "Mustikka"
 
 #: src/Widgets/ColorBox.vala:46
 msgid "Lime"
-msgstr ""
+msgstr "Lime"
 
 #: src/Widgets/ColorBox.vala:47
 msgid "Mint"
-msgstr "minttu"
+msgstr "Minttu"
 
 #: src/Widgets/ColorBox.vala:48
 msgid "Banana"
@@ -44,11 +39,11 @@ msgstr "Oranssi"
 
 #: src/Widgets/ColorBox.vala:51
 msgid "Bubblegum"
-msgstr ""
+msgstr "Bubblegum"
 
 #: src/Widgets/ColorBox.vala:52
 msgid "Grape"
-msgstr "Rypäle"
+msgstr "Viinirypäle"
 
 #: src/Widgets/ColorBox.vala:53
 msgid "Cocoa"
@@ -56,31 +51,29 @@ msgstr "Kaakao"
 
 #: src/Widgets/ColorBox.vala:54
 msgid "Slate"
-msgstr "liuskekivi"
+msgstr "Liuskekivi"
 
-#.
 #. THEME SELECTION
-#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
-msgstr "tahmea nuotin väri"
+msgstr "Tarralapun väri"
 
 #: src/Widgets/SettingsPopover.vala:72
 msgid "Choose a colour for this sticky note"
-msgstr "Valitse väri tälle tahmealle muistiinpanolle"
+msgstr "Valitse tämän muistilapun väri"
 
 #: src/Widgets/SettingsPopover.vala:94
 msgid "Zoom out"
-msgstr "zoomaa"
+msgstr "Pienennä"
 
 #: src/Widgets/SettingsPopover.vala:100
 msgid "Default zoom level"
-msgstr "oletusarvoinen zoom -taso"
+msgstr "Oletusarvoinen zoomaustaso"
 
 #: src/Widgets/SettingsPopover.vala:107
 msgid "Zoom in"
-msgstr "Lähennä"
+msgstr "Suurenna"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
@@ -96,58 +89,58 @@ msgstr "ZOOM%"
 #: src/Preferences.vala:50
 #, fuzzy
 msgid "Preferences for all sticky notes"
-msgstr "Tämän tahmean nuotin mieltymykset"
+msgstr "Kaikkien muistilappujen asetukset"
 
 #: src/Preferences.vala:99
 msgid "Activate scribbly mode"
-msgstr ""
+msgstr "Aktivoi scribbly-tila"
 
 #: src/Preferences.vala:101
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
-msgstr ""
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
+msgstr "Jos tämä on käytössä, tarkentamattomat muistilaput muuttuvat lukukelvottomiksi, jotta niiden sisältö voidaan suojata tirkisteleviltä katseilta."
 
 #: src/Preferences.vala:124
 msgid "Support us!"
-msgstr ""
+msgstr "Tue meitä!"
 
 #. Reset
 #: src/Preferences.vala:131
 msgid "Reset to Default"
-msgstr ""
+msgstr "Palauta oletusasetuksiin"
 
 #: src/Preferences.vala:132
 msgid "Reset all settings to defaults"
-msgstr ""
+msgstr "Nollaa kaikki asetukset oletusasetuksiin"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
-msgstr "Muokkaa otsikko"
+msgstr "Muokkaa otsikkoa"
 
 #: src/MainWindow.vala:147
 msgid "New sticky note"
-msgstr "Uusi tahmea nuotti"
+msgstr "Uusi muistilappu"
 
 #: src/MainWindow.vala:160
 msgid "Delete sticky note"
-msgstr "Poista tahmea huomautus"
+msgstr "Poista muistilappu"
 
-#: src/MainWindow.vala:177 src/MainWindow.vala:317
+#: src/MainWindow.vala:177
+#: src/MainWindow.vala:317
 msgid "Always show content of sticky notes"
-msgstr "Näytä aina tarttuvien muistiinpanojen sisältö"
+msgstr "Näytä aina muistilappujen sisältö"
 
-#: src/MainWindow.vala:183 src/MainWindow.vala:328
+#: src/MainWindow.vala:183
+#: src/MainWindow.vala:328
 msgid "Hide content of unfocused sticky notes"
-msgstr "Piilota keskittymättömien tarttuvien muistiinpanojen sisältö"
+msgstr "Kohdistamattomien muistilappujen sisällön piilottaminen"
 
 #: src/MainWindow.vala:195
 msgid "Insert emoji"
-msgstr "Aseta emoji"
+msgstr "Lisää hymiö"
 
 #: src/MainWindow.vala:221
 msgid "Preferences for this sticky note"
-msgstr "Tämän tahmean nuotin mieltymykset"
+msgstr "Tämän muistilapun asetukset"
 
 #: src/Services/Utils.vala:77
 msgid "All my very best friends"
@@ -155,35 +148,35 @@ msgstr "Kaikki parhaat ystäväni"
 
 #: src/Services/Utils.vala:78
 msgid "My super good secret recipe"
-msgstr "Erittäin hyvä salaisuus reseptini"
+msgstr "Minun superhyvä salainen reseptini"
 
 #: src/Services/Utils.vala:79
 msgid "My todo list"
-msgstr "TODO -luetteloni"
+msgstr "Minun tehtävälistani"
 
 #: src/Services/Utils.vala:80
 msgid "Super secret to not tell anyone"
-msgstr "Erittäin salainen olla kertomatta kenellekään"
+msgstr "Supersalaisuus, jota ei saa kertoa kenellekään"
 
 #: src/Services/Utils.vala:81
 msgid "My grocery list"
-msgstr ""
+msgstr "Ostoslistani"
 
 #: src/Services/Utils.vala:82
 msgid "Random shower thoughts"
-msgstr "Satunnaiset suihku -ajatukset"
+msgstr "Satunnaisia ajatuksia suihkusta"
 
 #: src/Services/Utils.vala:83
 msgid "My fav fanfics"
-msgstr "FAV -fanit"
+msgstr "Minun suosikki fanifiktiot"
 
 #: src/Services/Utils.vala:84
 msgid "My fav dinosaurs"
-msgstr "Fav -dinosaurukset"
+msgstr "Minun suosikkini dinosaurukset"
 
 #: src/Services/Utils.vala:85
 msgid "My evil mastermind plan"
-msgstr "Paha päämieheni suunnitelmani"
+msgstr "Minun pahan aivoriiheni suunnitelma"
 
 #: src/Services/Utils.vala:86
 msgid "What made me smile today"
@@ -195,15 +188,15 @@ msgstr "Hei maailma!"
 
 #: src/Services/Utils.vala:88
 msgid "New sticky, new me"
-msgstr "Uusi tahmea, uusi minä"
+msgstr "Uusi tarra, uusi minä"
 
 #: src/Services/Utils.vala:89
 msgid "Hidden pirate treasure"
-msgstr "Piilotettu merirosvo -aarre"
+msgstr "Piilotettu merirosvoaarre"
 
 #: src/Services/Utils.vala:90
 msgid "To not forget, ever"
-msgstr "Älä unohda koskaan"
+msgstr "Ettei unohda, koskaan"
 
 #: src/Services/Utils.vala:91
 msgid "Dear Diary,"
@@ -211,19 +204,19 @@ msgstr "Rakas päiväkirja,"
 
 #: src/Services/Utils.vala:92
 msgid "Hi im a square"
-msgstr "Hei im aukio"
+msgstr "Hei im neliö"
 
 #: src/Services/Utils.vala:93
 msgid "Have a nice day! :)"
-msgstr "Hyvää päivää! "
+msgstr "Hyvää päivänjatkoa! :)"
 
 #: src/Services/Utils.vala:94
 msgid "My meds schedule"
-msgstr "Leds -aikataulu"
+msgstr "Lääkkeideni aikataulu"
 
 #: src/Services/Utils.vala:95
 msgid "Household chores"
-msgstr "Kotitaloustyöt"
+msgstr "Kotityöt"
 
 #: src/Services/Utils.vala:96
 msgid "Ode to my cat"
@@ -231,31 +224,31 @@ msgstr "Oodi kissalleni"
 
 #: src/Services/Utils.vala:97
 msgid "My dogs favourite toys"
-msgstr "Koirani suosikkilelut"
+msgstr "Koirieni lempilelut"
 
 #: src/Services/Utils.vala:98
 msgid "How cool my birds are"
-msgstr "Kuinka viileitä lintujeni ovat"
+msgstr "Kuinka siistejä lintuni ovat"
 
 #: src/Services/Utils.vala:99
 msgid "Suspects in the Last Cookie affair"
-msgstr "Epäiltyjä viimeisessä evästeosassa"
+msgstr "Viimeisen keksin tapauksen epäillyt"
 
 #: src/Services/Utils.vala:100
 msgid "Words my parrots know"
-msgstr "Papukaijani tietävät sanat"
+msgstr "Sanat, jotka papukaijani tuntevat"
 
 #: src/Services/Utils.vala:101
 msgid "Cool and funny compliments to give out"
-msgstr "Viileät ja hauskat kohteliaisuudet antaa"
+msgstr "Siistit ja hauskat kohteliaisuudet jaettavaksi"
 
 #: src/Services/Utils.vala:102
 msgid "Ok, listen here,"
-msgstr "OK, kuuntele täällä,"
+msgstr "Kuunnelkaa,"
 
 #: src/Services/Utils.vala:103
 msgid "My dream Pokemon team"
-msgstr "Unelmani Pokemon -tiimini"
+msgstr "Unelmieni Pokemon-joukkue"
 
 #: src/Services/Utils.vala:104
 msgid "My little notes"
@@ -263,7 +256,7 @@ msgstr "Pienet muistiinpanoni"
 
 #: src/Services/Utils.vala:105
 msgid "Surprise gift list"
-msgstr "Yllätyslahjaluettelo"
+msgstr "Yllätyslahjalista"
 
 #: src/Services/Utils.vala:106
 msgid "Brainstorming notes"
@@ -271,32 +264,32 @@ msgstr "Aivoriihi muistiinpanot"
 
 #: src/Services/Utils.vala:107
 msgid "To bring to the party"
-msgstr "tuoda juhliin"
+msgstr "Tuo juhliin"
 
 #: src/Services/Utils.vala:108
 msgid "My amazing mixtape"
-msgstr "Amazing Mixtape"
+msgstr "Minun hämmästyttävä mixtape"
 
 #: src/Services/Utils.vala:109
 msgid "Napkin scribblys"
-msgstr "lautasliinakirjoitukset"
+msgstr "Lautasliina scribblys"
 
 #: src/Services/Utils.vala:110
 msgid "My fav songs to sing along"
-msgstr "FAV -kappaleeni laulaa"
+msgstr "Minun suosikki kappaleita laulaa yhdessä"
 
 #: src/Services/Utils.vala:111
 msgid "When to water which plant"
-msgstr "Milloin kasvi vettä"
+msgstr "Milloin mitäkin kasvia kastellaan"
 
 #: src/Services/Utils.vala:112
 msgid "Top 10 anime betrayals"
-msgstr "Top 10 anime -petosta"
+msgstr "Top 10 anime pettämistä"
 
 #: src/Services/Utils.vala:113
 msgid "Amazing ascii art!"
-msgstr ""
+msgstr "Uskomatonta ascii-taidetta!"
 
 #, fuzzy
 #~ msgid "Default Font"
-#~ msgstr "oletusarvoinen zoom -taso"
+#~ msgstr "Oletusfontti"

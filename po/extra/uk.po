@@ -2,72 +2,71 @@
 msgid ""
 msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: de\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Language: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "POT-Creation-Date: 2025-03-22 10:39+0100\n"
-"Project-Id-Version: io.github.ellie_commons.jorts\n"
+"Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
-msgstr "Jorts"
+msgstr "Джинси"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
 msgid "Sticky notes utility"
-msgstr "Dienstprogramm für Haftnotizen"
+msgstr "Утиліта для стікерів"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
 msgid "Write down notes, reminders, random thoughts and other short-term informations"
-msgstr "Notizen, Erinnerungen, zufällige Gedanken und andere kurzfristige Informationen aufschreiben"
+msgstr "Записуйте нотатки, нагадування, випадкові думки та іншу короткострокову інформацію"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "Text;einfach;Klartext;Notizblock;Notizen;Haftnotizen;Post-it;"
+msgstr "текст;звичайний;звичайний текст;блокнот;нотатки;клейкий;стікер;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
-msgstr "Neue Haftnotiz"
+msgstr "Нова наліпка"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:21
 msgid "Preferences"
-msgstr "Präferenzen"
+msgstr "Уподобання"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
-msgstr "Weder Jeans noch Shorts, genau wie Jorts"
+msgstr "Ні джинси, ні шорти, так само як і джети"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-#, fuzzy
 msgid "Colourful and happy little sticky notes for all of your thoughts! :)"
-msgstr "Bunte und fröhliche kleine Haftnotizen für alle deine Gedanken! :)"
+msgstr "Яскраві та веселі маленькі стікери для всіх ваших думок! :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
-msgstr "Die Merkmale umfassen:"
+msgstr "Особливості включають в себе:"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
-msgstr "Farben: Zehn hübsche Themen. Jede neue Notiz erhält ein zufälliges Thema"
+msgstr "Кольори: Десять красивих тем. Кожна нова нотатка отримує випадкову тему"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Anpassungsfähig: Neue Notizen erhalten den zuletzt gewählten Zoom"
+msgstr "Адаптивний: Нові нотатки отримують масштаб, який ви обрали востаннє"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Niedlich: Jede neue Notiz hat einen lustigen oder niedlichen, zufälligen (editierbaren) Titel"
+msgstr "Мило: Кожна нова нотатка має кумедну або милу випадкову (редаговану) назву"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "Praktisch: Sie können Links und E-Mails mit Strg+Klick öffnen"
+msgstr "Зручно: Ви можете відкривати посилання та електронні листи за допомогою комбінації клавіш Ctrl+Click"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:18
 msgid "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't exist without her work. The community liked it so much, we thought it would be great to revive it!"
-msgstr "Dies ist ein Fork einer alten Version von \"Notejot\" von lainsce und würde ohne ihre Arbeit nicht existieren. Die Community mochte sie so sehr, dass wir dachten, es wäre toll, sie wiederzubeleben!"
+msgstr "Це форк старої версії \"Нотатника\" від lainsce, і без її роботи він би не існував. Спільноті він так сподобався, що ми подумали, що було б чудово його відродити!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:26
 msgid "Stella - Teamcons"
@@ -75,230 +74,225 @@ msgstr "Stella - Teamcons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:42
 msgid "Sticky notes"
-msgstr "Haftnotizen"
+msgstr "Стікери"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Notes"
-msgstr "Anmerkungen"
+msgstr "Примітки"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Cute"
-msgstr "Niedlich"
+msgstr "Мило."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Desktop"
-msgstr "Schreibtisch"
+msgstr "Робочий стіл"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "Reminder"
-msgstr "Erinnerung"
+msgstr "Нагадування"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:54
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "Eine Haftnotiz mit dem Thema \"Blaubeere"
+msgstr "Наліпка на тему \"Чорниця\""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:58
 msgid "You can change individual colour and text size!"
-msgstr "Sie können Farbe und Textgröße individuell anpassen!"
+msgstr "Ви можете змінити індивідуальний колір і розмір тексту!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:62
-#, fuzzy
 msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-msgstr "Streaming? Haben Sie Angst, dass Ihnen jemand über die Schulter schaut? Versuchen Sie den Scribbly-Modus!"
+msgstr "Стрімінг? Хвилюєтеся, що хтось зазирає вам через плече? Спробуйте каракулевий режим!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:66
 msgid "You can unzoom so hard you could do ascii art"
-msgstr "Man kann so stark entzoomen, dass man Ascii-Kunst machen könnte"
+msgstr "Ви можете зменшити масштаб настільки, що зможете намалювати картину"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:83
-#, fuzzy
 msgid "2.3.0 The Inner Jorts"
-msgstr "2.3.0 Die Innenhose"
+msgstr "2.3.0 Внутрішні штани"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:85
 msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
-msgstr "Neue Funktion: Einstellungsdialog! Klicken Sie mit der rechten Maustaste auf das App-Symbol, um die Option zu sehen"
+msgstr "Нова функція: Діалогове вікно налаштувань! Клацніть правою кнопкою миші на іконці програми, щоб побачити опцію"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:86
 msgid "scribbly mode has been moved to the new preference dialog"
-msgstr "Der Schreibmodus wurde in den neuen Einstellungsdialog verschoben."
+msgstr "режим каракулів перенесено до нового діалогового вікна налаштувань"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:87
 msgid "New feature: Default font. You can now set a specific font for Jorts."
-msgstr "Neue Funktion: Standard-Schriftart. Sie können jetzt eine bestimmte Schriftart für Jorts festlegen."
+msgstr "Нова функція: Шрифт за замовчуванням. Тепер ви можете встановити певний шрифт для Jorts."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:88
 msgid "Improvement for translators: Translations have been separated in 2: One for the UI one for the extra content"
-msgstr "Verbesserung für Übersetzer: Die Übersetzungen wurden in 2 aufgeteilt: Eine für die Benutzeroberfläche und eine für den zusätzlichen Inhalt"
+msgstr "Покращення для перекладачів: Переклади розділено на 2: один для інтерфейсу, інший для додаткового контенту"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:89
 msgid "Comfort: Easier to grab and drag stickies"
-msgstr "Komfort: Leichteres Greifen und Ziehen von Stickies"
+msgstr "Зручність: Легше захоплювати та перетягувати наклейки"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:90
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-msgstr "Bugfix: Screenshots im Appcenter waren unübersichtlich aaaa"
+msgstr "Виправлено: скріншоти в апцентрі були безладними аааа"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
-#, fuzzy
 msgid "Updated translations"
-msgstr "Aktualisierte Übersetzungen"
+msgstr "Оновлені переклади"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 Die Jorts des Lichts"
+msgstr "2.2.0 Джорти світла"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:103
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
 msgid "Better translation coverage"
-msgstr "Bessere Übersetzungsabdeckung"
+msgstr "Краще охоплення перекладу"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
-#, fuzzy
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Neue Funktion: Scribbly-Modus! Inhalt von Haftnotizen ausblenden, wenn nicht fokussiert"
+msgstr "Нова функція: режим каракулів! Приховуйте вміст стікерів, коли ви не сфокусовані"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:105
 msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-msgstr "Neue Funktion: Emoji-Auswahltaste! Ich weiß, es gibt eine auf der rechten Maustaste, aber Tasten sind besser zugänglich!"
+msgstr "Нова функція: Кнопка вибору емодзі! Я знаю, що вона є на правій кнопці миші, але кнопки більш доступні!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:106
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Die Schaltfläche in der Symbolleiste zeigt jedes Mal, wenn du klickst, ein zufälliges Emote an!"
+msgstr "Кнопка на панелі інструментів відображає випадковий смайл при кожному натисканні!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-msgstr "Neue Funktion: Jorts macht ein monatliches Backup. Sollte es ein Problem geben, können Sie Daten wiederherstellen!"
+msgstr "Нова функція: Jorts робить щомісячне резервне копіювання. Якщо виникне якась проблема, ви зможете відновити дані!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:108
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Sollte der Hauptspeicher beschädigt sein, versucht Jorts, vom Backup zu laden"
+msgstr "Якщо основне сховище пошкоджено, Jorts намагається завантажитися з резервної копії"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid "Some new fun/cute default titles"
-msgstr "Einige neue lustige/niedliche Standardtitel"
+msgstr "Кілька нових веселих/милих назв за замовчуванням"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "Under the hood changes here and there for cleaner code"
-msgstr "Änderungen unter der Haube hier und da für saubereren Code"
+msgstr "Під капотом зміни тут і там для більш чистого коду"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:116
 msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2 Die unverkäuflichen Jorts"
+msgstr "2.1.2 Нерозбірні джорти"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
 msgid "Add relief to actionbar buttons"
-msgstr "Relief zu Aktionsleistenschaltflächen hinzufügen"
+msgstr "Додайте рельєф до кнопок панелі дій"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Bugfix: Randfall, bei dem das Thema oder der Zoom nicht richtig gespeichert wurde"
+msgstr "Виправлення: крайній випадок, коли тема або масштабування не зберігалися належним чином"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:121
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Bugfix: Titel im Multitasking nicht korrekt gesetzt"
+msgstr "Виправлення: неправильно встановлювався заголовок у багатозадачному режимі"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:122
 msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "Bugfix: Icon-Inkonsistenz bei verschiedenen Icon-Themen"
+msgstr "Виправлено: неузгодженість іконок у різних темах іконок"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:123
 msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr "Bugfix: Theming-Ungereimtheiten bei Stickies"
+msgstr "Виправлено: неузгодженість тем у різних стікерах"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:129
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr "2.1.1 Frisch aus der Wäsche! (2: elektrischer Boogaloo)"
+msgstr "2.1.1 Щойно з пральні! (2: електричний бугай)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid "Clearer appmenu description"
-msgstr "Übersichtlichere Beschreibung des Anwendungsmenüs"
+msgstr "Чіткіший опис меню"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "More consistent theming"
-msgstr "Einheitlichere Thematisierung"
+msgstr "Більш послідовна тематика"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "Bugfix: Die Verknüpfung \"Löschen\" war nicht zu verantworten"
+msgstr "Виправлення: ярлик видалення був безвідповідальним"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:134
 msgid "Bugfix: screenshot not showing"
-msgstr "Bugfix: Bildschirmfoto wird nicht angezeigt"
+msgstr "Виправлення: не показувався скріншот"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:140
 msgid "2.1.0 Fresh out of the laundry!"
-msgstr "2.1.0 Frisch aus der Wäsche!"
+msgstr "2.1.0 Щойно з пральні!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Enthält einen Zoom pro Note! So können Sie den Text größer oder kleiner machen"
+msgstr "Включає масштабування для кожної нотатки! Тож ви можете збільшити або зменшити текст"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
 msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-msgstr "Der zuletzt eingestellte Zoom, d.h. der für Sie bequemste, bleibt als Standard für neue Notizen erhalten"
+msgstr "Для нових нотаток за замовчуванням використовується найзручніший для вас масштаб"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "Better readability (WCAG AA or AAA depending on theme)"
-msgstr "Bessere Lesbarkeit (WCAG AA oder AAA je nach Thema)"
+msgstr "Краща читабельність (WCAG AA або AAA залежно від теми)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid "Also slightly better looking theme. Yes even more :)"
-msgstr "Auch etwas besser aussehende Thema. Ja sogar noch mehr :)"
+msgstr "Також трохи краще виглядає тема. Так, навіть більше :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
 msgid "Improved translations"
-msgstr "Verbesserte Übersetzungen"
+msgstr "Покращені переклади"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
 msgid "Better shortcut and tooltips"
-msgstr "Bessere Shortcuts und Tooltips"
+msgstr "Кращий ярлик та підказки"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Ein Fehler wurde behoben, bei dem Jorts auf dem hellen Systemthema blieb"
+msgstr "Виправлено помилку, коли джорти залишалися на темі легкої системи"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
 msgid "2.0.1 Appcenter release"
-msgstr "Version 2.0.1 Appcenter"
+msgstr "2.0.1 Випуск Appcenter"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:159
-#, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "2.0.0 Veröffentlichung: Schiefer und Bubblegum"
+msgstr "2.0.0 Release: Slate and Bubblegum"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:161
 msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "Wiederbelebung einer alten, aber sehr beliebten Version von Notejot"
+msgstr "Відродження давньої, але улюбленої версії Нотатника"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:162
 msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "Die App heißt jetzt Jorts. Sie können sie jedoch nicht tragen"
+msgstr "Додаток тепер називається Jorts. Однак ви не можете його носити"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
 msgid "10 lovely little colours"
-msgstr "10 schöne kleine Farben"
+msgstr "10 чудових маленьких кольорів"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Aufbauend auf modernen Linux-Technologien und Paketformaten"
+msgstr "Створено на основі сучасних технологій Linux та форматів пакунків"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
 msgid "Smooth transition when changing theme"
-msgstr "Reibungsloser Übergang beim Themenwechsel"
+msgstr "Плавний перехід при зміні теми"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "New stickies have a random fun little title and colour"
-msgstr "Neue Stickies haben einen zufälligen, lustigen Titel und eine Farbe"
+msgstr "Нові наліпки мають випадкову веселу назву та колір"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
 msgid "A few initial translations included, and more to come"
-msgstr "Einige erste Übersetzungen sind enthalten, weitere werden folgen"
+msgstr "Кілька початкових перекладів вже є, і ще більше попереду"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "E-Mails und Links sind klickbar! Strg+Klick zum Öffnen in Mail oder Browser"
+msgstr "Електронні листи та посилання клікабельні! Ctrl+Клікнути, щоб відкрити в пошті або браузері"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "Text unterstützt Rückgängig machen, Wiederherstellen, und Sie können Emojis verwenden :)"
+msgstr "Текст підтримує скасування, повтор, і ви можете використовувати смайлики :)"

@@ -1,86 +1,79 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-03-22 10:39+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-22 10:39+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
 msgid "Blueberry"
-msgstr "蓝莓"
+msgstr "Чорниця."
 
 #: src/Widgets/ColorBox.vala:46
 msgid "Lime"
-msgstr "石灰"
+msgstr "Вапно."
 
 #: src/Widgets/ColorBox.vala:47
 msgid "Mint"
-msgstr "薄荷"
+msgstr "М'ята"
 
 #: src/Widgets/ColorBox.vala:48
 msgid "Banana"
-msgstr "香蕉"
+msgstr "Банан."
 
 #: src/Widgets/ColorBox.vala:49
 msgid "Strawberry"
-msgstr "草莓"
+msgstr "Полуничка."
 
 #: src/Widgets/ColorBox.vala:50
 msgid "Orange"
-msgstr "橙色"
+msgstr "Помаранчевий"
 
 #: src/Widgets/ColorBox.vala:51
 msgid "Bubblegum"
-msgstr "泡泡糖"
+msgstr "Жуйка"
 
 #: src/Widgets/ColorBox.vala:52
 msgid "Grape"
-msgstr "葡萄"
+msgstr "Виноград."
 
 #: src/Widgets/ColorBox.vala:53
 msgid "Cocoa"
-msgstr "可可"
+msgstr "Какао"
 
 #: src/Widgets/ColorBox.vala:54
 msgid "Slate"
-msgstr "板岩"
+msgstr "Сланці"
 
-#.
 #. THEME SELECTION
-#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
-msgstr "粘稠的颜色"
+msgstr "Колір стікера Колір стікера"
 
 #: src/Widgets/SettingsPopover.vala:72
 msgid "Choose a colour for this sticky note"
-msgstr "为此粘附选择一种颜色"
+msgstr "Виберіть колір для цієї наліпки"
 
 #: src/Widgets/SettingsPopover.vala:94
 msgid "Zoom out"
-msgstr "缩小"
+msgstr "Зменшити"
 
 #: src/Widgets/SettingsPopover.vala:100
 msgid "Default zoom level"
-msgstr "默认缩放级别"
+msgstr "Рівень масштабування за замовчуванням"
 
 #: src/Widgets/SettingsPopover.vala:107
 msgid "Zoom in"
-msgstr "放大"
+msgstr "Збільшити"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
@@ -94,209 +87,204 @@ msgstr "ZOOM%"
 #. ***********************************************
 #. Headerbar bs
 #: src/Preferences.vala:50
-#, fuzzy
 msgid "Preferences for all sticky notes"
-msgstr "此粘张音符的偏好"
+msgstr "Налаштування для всіх стікерів"
 
 #: src/Preferences.vala:99
 msgid "Activate scribbly mode"
-msgstr ""
+msgstr "Увімкнути режим каракулів"
 
 #: src/Preferences.vala:101
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
-msgstr ""
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
+msgstr "Якщо увімкнено, розфокусовані стікери стають нечитабельними, щоб захистити їхній вміст від сторонніх очей"
 
 #: src/Preferences.vala:124
 msgid "Support us!"
-msgstr ""
+msgstr "Підтримайте нас!"
 
 #. Reset
 #: src/Preferences.vala:131
 msgid "Reset to Default"
-msgstr ""
+msgstr "Скидання до налаштувань за замовчуванням"
 
 #: src/Preferences.vala:132
 msgid "Reset all settings to defaults"
-msgstr ""
+msgstr "Скидання всіх налаштувань до значень за замовчуванням"
 
 #: src/MainWindow.vala:127
 msgid "Edit title"
-msgstr "编辑标题"
+msgstr "Редагувати заголовок"
 
 #: src/MainWindow.vala:147
 msgid "New sticky note"
-msgstr "新的粘性音符"
+msgstr "Нова наліпка"
 
 #: src/MainWindow.vala:160
 msgid "Delete sticky note"
-msgstr "删除粘性笔记"
+msgstr "Видалити наліпку"
 
-#: src/MainWindow.vala:177 src/MainWindow.vala:317
+#: src/MainWindow.vala:177
+#: src/MainWindow.vala:317
 msgid "Always show content of sticky notes"
-msgstr "始终显示粘笔的内容"
+msgstr "Завжди показуйте вміст стікерів"
 
-#: src/MainWindow.vala:183 src/MainWindow.vala:328
+#: src/MainWindow.vala:183
+#: src/MainWindow.vala:328
 msgid "Hide content of unfocused sticky notes"
-msgstr "隐藏未关注粘性笔记的内容"
+msgstr "Приховати вміст нефокусованих стікерів"
 
 #: src/MainWindow.vala:195
 msgid "Insert emoji"
-msgstr "插入表情符号"
+msgstr "Вставте емодзі"
 
 #: src/MainWindow.vala:221
 msgid "Preferences for this sticky note"
-msgstr "此粘张音符的偏好"
+msgstr "Уподобання для цієї наліпки"
 
 #: src/Services/Utils.vala:77
 msgid "All my very best friends"
-msgstr "我所有最好的朋友"
+msgstr "Всі мої найкращі друзі"
 
 #: src/Services/Utils.vala:78
 msgid "My super good secret recipe"
-msgstr "我的超级秘密食谱"
+msgstr "Мій супер смачний секретний рецепт"
 
 #: src/Services/Utils.vala:79
 msgid "My todo list"
-msgstr "我的待办事项清单"
+msgstr "Мій список справ"
 
 #: src/Services/Utils.vala:80
 msgid "Super secret to not tell anyone"
-msgstr "超级秘密不告诉任何人"
+msgstr "Суперсекрет, який нікому не можна розголошувати"
 
 #: src/Services/Utils.vala:81
 msgid "My grocery list"
-msgstr "我的杂货清单"
+msgstr "Мій список продуктів"
 
 #: src/Services/Utils.vala:82
 msgid "Random shower thoughts"
-msgstr "随机淋浴的想法"
+msgstr "Випадкові думки в душі"
 
 #: src/Services/Utils.vala:83
 msgid "My fav fanfics"
-msgstr "我最喜欢的狂热者"
+msgstr "Мої улюблені фанфіки"
 
 #: src/Services/Utils.vala:84
 msgid "My fav dinosaurs"
-msgstr "我最喜欢的恐龙"
+msgstr "Мої улюблені динозаври"
 
 #: src/Services/Utils.vala:85
 msgid "My evil mastermind plan"
-msgstr "我的邪恶策划计划"
+msgstr "Мій злий план"
 
 #: src/Services/Utils.vala:86
 msgid "What made me smile today"
-msgstr "是什么让我今天微笑"
+msgstr "Що змусило мене посміхнутися сьогодні"
 
 #: src/Services/Utils.vala:87
 msgid "Hello world!"
-msgstr "你好世界！"
+msgstr "Привіт, світе!"
 
 #: src/Services/Utils.vala:88
 msgid "New sticky, new me"
-msgstr "新粘性，新我"
+msgstr "Новий липкий, новий я"
 
 #: src/Services/Utils.vala:89
 msgid "Hidden pirate treasure"
-msgstr "隐藏的海盗宝藏"
+msgstr "Захований піратський скарб"
 
 #: src/Services/Utils.vala:90
 msgid "To not forget, ever"
-msgstr "不要忘记，永远"
+msgstr "Щоб ніколи не забути"
 
 #: src/Services/Utils.vala:91
 msgid "Dear Diary,"
-msgstr "亲爱的日记，"
+msgstr "Дорогий щоденнику,"
 
 #: src/Services/Utils.vala:92
 msgid "Hi im a square"
-msgstr "嗨，我是一个正方形"
+msgstr "Привіт, я квадрат."
 
 #: src/Services/Utils.vala:93
 msgid "Have a nice day! :)"
-msgstr "祝您有美好的一天！ "
+msgstr "Гарного вам дня! :)"
 
 #: src/Services/Utils.vala:94
 msgid "My meds schedule"
-msgstr "我的药物时间表"
+msgstr "Мій графік прийому ліків"
 
 #: src/Services/Utils.vala:95
 msgid "Household chores"
-msgstr "家务"
+msgstr "Домашні справи"
 
 #: src/Services/Utils.vala:96
 msgid "Ode to my cat"
-msgstr "对我的猫的颂歌"
+msgstr "Ода моєму коту"
 
 #: src/Services/Utils.vala:97
 msgid "My dogs favourite toys"
-msgstr "我的狗最喜欢的玩具"
+msgstr "Улюблені іграшки моїх собак"
 
 #: src/Services/Utils.vala:98
 msgid "How cool my birds are"
-msgstr "我的鸟有多酷"
+msgstr "Які круті мої пташки"
 
 #: src/Services/Utils.vala:99
 msgid "Suspects in the Last Cookie affair"
-msgstr "嫌疑人在最后的饼干事件中"
+msgstr "Підозрювані у справі \"Останнього печива"
 
 #: src/Services/Utils.vala:100
 msgid "Words my parrots know"
-msgstr "我的鹦鹉知道的话"
+msgstr "Слова, які знають мої папуги"
 
 #: src/Services/Utils.vala:101
 msgid "Cool and funny compliments to give out"
-msgstr "很酷又有趣的赞美"
+msgstr "Прикольні та смішні компліменти для роздачі"
 
 #: src/Services/Utils.vala:102
 msgid "Ok, listen here,"
-msgstr "好的，在这里听，"
+msgstr "Гаразд, слухай сюди,"
 
 #: src/Services/Utils.vala:103
 msgid "My dream Pokemon team"
-msgstr "我梦dream以求的口袋妖怪团队"
+msgstr "Команда покемонів моєї мрії"
 
 #: src/Services/Utils.vala:104
 msgid "My little notes"
-msgstr "我的小笔记"
+msgstr "Мої маленькі нотатки."
 
 #: src/Services/Utils.vala:105
 msgid "Surprise gift list"
-msgstr "惊喜礼物清单"
+msgstr "Список подарунків-сюрпризів"
 
 #: src/Services/Utils.vala:106
 msgid "Brainstorming notes"
-msgstr "头脑风暴笔记"
+msgstr "Нотатки для мозкового штурму"
 
 #: src/Services/Utils.vala:107
 msgid "To bring to the party"
-msgstr "带来聚会"
+msgstr "Принести на вечірку"
 
 #: src/Services/Utils.vala:108
 msgid "My amazing mixtape"
-msgstr "我惊人的混音带"
+msgstr "Мій дивовижний мікстейп"
 
 #: src/Services/Utils.vala:109
 msgid "Napkin scribblys"
-msgstr "餐巾纸涂鸦"
+msgstr "Каракулі на серветках"
 
 #: src/Services/Utils.vala:110
 msgid "My fav songs to sing along"
-msgstr "我最喜欢的歌曲"
+msgstr "Мої улюблені пісні для підспівування"
 
 #: src/Services/Utils.vala:111
 msgid "When to water which plant"
-msgstr "何时浇水哪种植物"
+msgstr "Коли поливати яку рослину"
 
 #: src/Services/Utils.vala:112
 msgid "Top 10 anime betrayals"
-msgstr "十大动漫背叛"
+msgstr "Топ-10 аніме-зрад"
 
 #: src/Services/Utils.vala:113
 msgid "Amazing ascii art!"
-msgstr ""
-
-#, fuzzy
-#~ msgid "Default Font"
-#~ msgstr "默认缩放级别"
+msgstr "Дивовижне мистецтво сходження!"

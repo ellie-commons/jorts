@@ -6,8 +6,6 @@ builddir/
 app-dir/
 obj-x86_64-linux-gnu/
 repo/
-src/dump.vala
-src/dump.txt
 .vscode/settings.json
 data/Application copy.css
 src/Widgets/SettingsPopover copy.vala
@@ -16,5 +14,6 @@ generate_stylesheets.sh
 src/Widgets/help/ActionBar.vala
 .gitignore
 src/Widgets/help/MainWindow.vala
-.flatpak/meson.sh
+.flatpak/
 src/Widgets/help/dumped
+.potrans
