@@ -14,6 +14,7 @@
             <li>Adaptive: New notes get the zoom you last chose</li>
             <li>Cute: Each new note has a funny or cute random (editable) title</li>
             <li>Handy: You can open links and emails with Ctrl+Click</li>
+            <li>Private: Try the scribble mode!</li>
         </ul>
         <p>This is a fork of an old version of "Notejot" by lainsce and wouldn't exist without her work. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
@@ -70,7 +71,7 @@
             <caption>The preferences dialog in light mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
         </screenshot>
-        <screenshot environment="pantheon:dark">
+        <screenshot environment="pantheon">
             <caption>The preferences dialog in dark mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>

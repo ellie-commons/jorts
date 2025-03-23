@@ -1,81 +1,79 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-03-23 12:30+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 12:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: it\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
 msgid "Blueberry"
-msgstr "Mirtillo"
+msgstr "Jagoda"
 
 #: src/Widgets/ColorBox.vala:46
 msgid "Lime"
-msgstr "Calce"
+msgstr "Limonka"
 
 #: src/Widgets/ColorBox.vala:47
 msgid "Mint"
-msgstr "Menta"
+msgstr "Mięta"
 
 #: src/Widgets/ColorBox.vala:48
 msgid "Banana"
-msgstr "Banana"
+msgstr "Banan"
 
 #: src/Widgets/ColorBox.vala:49
 msgid "Strawberry"
-msgstr "Fragola"
+msgstr "Truskawka"
 
 #: src/Widgets/ColorBox.vala:50
 msgid "Orange"
-msgstr "Arancione"
+msgstr "Pomarańczowy"
 
 #: src/Widgets/ColorBox.vala:51
 msgid "Bubblegum"
-msgstr "Gomma da masticare"
+msgstr "Bubblegum"
 
 #: src/Widgets/ColorBox.vala:52
 msgid "Grape"
-msgstr "Uva"
+msgstr "Winogrono"
 
 #: src/Widgets/ColorBox.vala:53
 msgid "Cocoa"
-msgstr "Cacao"
+msgstr "Kakao"
 
 #: src/Widgets/ColorBox.vala:54
 msgid "Slate"
-msgstr "Ardesia"
+msgstr "Łupek"
 
-#.
 #. THEME SELECTION
-#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
-msgstr "Colore delle note adesive"
+msgstr "Kolor karteczki samoprzylepnej"
 
 #: src/Widgets/SettingsPopover.vala:72
 msgid "Choose a colour for this sticky note"
-msgstr "Scegliete un colore per questa nota adesiva"
+msgstr "Wybierz kolor dla tej karteczki samoprzylepnej"
 
 #: src/Widgets/SettingsPopover.vala:94
 msgid "Zoom out"
-msgstr "Zoom out"
+msgstr "Powiększenie"
 
 #: src/Widgets/SettingsPopover.vala:100
 msgid "Default zoom level"
-msgstr "Livello di zoom predefinito"
+msgstr "Domyślny poziom powiększenia"
 
 #: src/Widgets/SettingsPopover.vala:107
 msgid "Zoom in"
-msgstr "Ingrandimento"
+msgstr "Powiększenie"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
@@ -90,212 +88,206 @@ msgstr "ZOOM%"
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Preferences.vala:52
-#, fuzzy
 msgid "Preferences for your Jorts"
-msgstr "Preferenze per tutte le note adesive"
+msgstr "Preferencje dotyczące spodenek Jorts"
 
 #: src/Preferences.vala:102
 msgid "Activate scribbly mode"
-msgstr "Attivare la modalità scribbly"
+msgstr "Aktywacja trybu rysika"
 
 #: src/Preferences.vala:104
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
-msgstr ""
-"Se attivata, le note adesive non focalizzate diventano illeggibili per "
-"proteggere il loro contenuto da occhi indiscreti."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
+msgstr "Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
 
 #: src/Preferences.vala:127
 msgid "Support us!"
-msgstr "Sosteneteci!"
+msgstr "Wesprzyj nas!"
 
 #. Reset
 #: src/Preferences.vala:134
 msgid "Reset to Default"
-msgstr "Ripristino delle impostazioni predefinite"
+msgstr "Przywróć ustawienia domyślne"
 
 #: src/Preferences.vala:135
 msgid "Reset all settings to defaults"
-msgstr "Ripristinare tutte le impostazioni predefinite"
+msgstr "Resetowanie wszystkich ustawień do wartości domyślnych"
 
 #: src/MainWindow.vala:139
 msgid "Edit title"
-msgstr "Modifica del titolo"
+msgstr "Edytuj tytuł"
 
 #: src/MainWindow.vala:170
 msgid "New sticky note"
-msgstr "Nuova nota adesiva"
+msgstr "Nowa karteczka samoprzylepna"
 
 #: src/MainWindow.vala:183
-#, fuzzy
 msgid "Delete sticky note"
-msgstr "Cancellare la nota adesiva"
+msgstr "Usuń karteczkę samoprzylepną"
 
 #: src/MainWindow.vala:203
 msgid "Insert emoji"
-msgstr "Inserire emoji"
+msgstr "Wstaw emoji"
 
 #: src/MainWindow.vala:241
 msgid "Preferences for this sticky note"
-msgstr "Preferenze per questa nota adesiva"
+msgstr "Preferencje dla tej karteczki samoprzylepnej"
 
 #: src/MainWindow.vala:308
 msgid "Always show content of sticky notes"
-msgstr "Mostra sempre il contenuto delle note adesive"
+msgstr "Zawsze wyświetlaj zawartość karteczek samoprzylepnych"
 
 #: src/MainWindow.vala:319
 msgid "Hide content of unfocused sticky notes"
-msgstr "Nascondere il contenuto delle note adesive non focalizzate"
+msgstr "Ukryj zawartość nieostrych karteczek samoprzylepnych"
 
 #: src/Services/Utils.vala:78
 msgid "All my very best friends"
-msgstr "Tutti i miei migliori amici"
+msgstr "Wszyscy moi najlepsi przyjaciele"
 
 #: src/Services/Utils.vala:79
 msgid "My super good secret recipe"
-msgstr "La mia ricetta segreta super buona"
+msgstr "Mój super dobry sekretny przepis"
 
 #: src/Services/Utils.vala:80
 msgid "My todo list"
-msgstr "Il mio elenco di cose da fare"
+msgstr "Moja lista rzeczy do zrobienia"
 
 #: src/Services/Utils.vala:81
 msgid "Super secret to not tell anyone"
-msgstr "Un super segreto da non dire a nessuno"
+msgstr "Super sekret, o którym nikomu nie należy mówić"
 
 #: src/Services/Utils.vala:82
 msgid "My grocery list"
-msgstr "La mia lista della spesa"
+msgstr "Moja lista zakupów"
 
 #: src/Services/Utils.vala:83
 msgid "Random shower thoughts"
-msgstr "Pensieri casuali sulla doccia"
+msgstr "Przypadkowe przemyślenia pod prysznicem"
 
 #: src/Services/Utils.vala:84
 msgid "My fav fanfics"
-msgstr "Le mie fanfic preferite"
+msgstr "Moje ulubione fanfiki"
 
 #: src/Services/Utils.vala:85
 msgid "My fav dinosaurs"
-msgstr "I miei dinosauri preferiti"
+msgstr "Moje ulubione dinozaury"
 
 #: src/Services/Utils.vala:86
 msgid "My evil mastermind plan"
-msgstr "Il mio piano da genio del male"
+msgstr "Mój szatański plan"
 
 #: src/Services/Utils.vala:87
 msgid "What made me smile today"
-msgstr "Cosa mi ha fatto sorridere oggi"
+msgstr "Co sprawiło, że się dziś uśmiechnąłem"
 
 #: src/Services/Utils.vala:88
 msgid "Hello world!"
-msgstr "Ciao mondo!"
+msgstr "Witaj świecie!"
 
 #: src/Services/Utils.vala:89
 msgid "New sticky, new me"
-msgstr "Nuovo appiccicoso, nuovo me"
+msgstr "Nowy sticky, nowy ja"
 
 #: src/Services/Utils.vala:90
 msgid "Hidden pirate treasure"
-msgstr "Il tesoro nascosto dei pirati"
+msgstr "Ukryty piracki skarb"
 
 #: src/Services/Utils.vala:91
 msgid "To not forget, ever"
-msgstr "Per non dimenticare, mai"
+msgstr "Aby nigdy nie zapomnieć"
 
 #: src/Services/Utils.vala:92
 msgid "Dear Diary,"
-msgstr "Caro Diario,"
+msgstr "Drogi pamiętniku,"
 
 #: src/Services/Utils.vala:93
 msgid "Hi im a square"
-msgstr "Ciao, sono un quadrato"
+msgstr "Cześć, jestem kwadratem"
 
 #: src/Services/Utils.vala:94
 msgid "Have a nice day! :)"
-msgstr "Buona giornata! :)"
+msgstr "Miłego dnia! :)"
 
 #: src/Services/Utils.vala:95
 msgid "My meds schedule"
-msgstr "Il mio programma di farmaci"
+msgstr "Mój harmonogram przyjmowania leków"
 
 #: src/Services/Utils.vala:96
 msgid "Household chores"
-msgstr "Faccende domestiche"
+msgstr "Obowiązki domowe"
 
 #: src/Services/Utils.vala:97
 msgid "Ode to my cat"
-msgstr "Ode al mio gatto"
+msgstr "Oda do mojego kota"
 
 #: src/Services/Utils.vala:98
 msgid "My dogs favourite toys"
-msgstr "I giocattoli preferiti dai miei cani"
+msgstr "Ulubione zabawki moich psów"
 
 #: src/Services/Utils.vala:99
 msgid "How cool my birds are"
-msgstr "Quanto sono belli i miei uccelli"
+msgstr "Jak fajne są moje ptaki"
 
 #: src/Services/Utils.vala:100
 msgid "Suspects in the Last Cookie affair"
-msgstr "Sospetti nella vicenda dell'ultimo biscotto"
+msgstr "Podejrzani w aferze Last Cookie"
 
 #: src/Services/Utils.vala:101
 msgid "Words my parrots know"
-msgstr "Le parole che i miei pappagalli conoscono"
+msgstr "Słowa, które znają moje papugi"
 
 #: src/Services/Utils.vala:102
 msgid "Cool and funny compliments to give out"
-msgstr "Complimenti simpatici e divertenti da distribuire"
+msgstr "Fajne i zabawne komplementy do rozdania"
 
 #: src/Services/Utils.vala:103
 msgid "Ok, listen here,"
-msgstr "Ok, ascoltate qui,"
+msgstr "Ok, posłuchaj tutaj,"
 
 #: src/Services/Utils.vala:104
 msgid "My dream Pokemon team"
-msgstr "La squadra Pokemon dei miei sogni"
+msgstr "Moja wymarzona drużyna Pokemon"
 
 #: src/Services/Utils.vala:105
 msgid "My little notes"
-msgstr "Le mie piccole note"
+msgstr "Moje małe notatki"
 
 #: src/Services/Utils.vala:106
 msgid "Surprise gift list"
-msgstr "Lista di regali a sorpresa"
+msgstr "Lista prezentów niespodzianek"
 
 #: src/Services/Utils.vala:107
 msgid "Brainstorming notes"
-msgstr "Note di brainstorming"
+msgstr "Notatki z burzy mózgów"
 
 #: src/Services/Utils.vala:108
 msgid "To bring to the party"
-msgstr "Da portare alla festa"
+msgstr "Do zabrania na imprezę"
 
 #: src/Services/Utils.vala:109
 msgid "My amazing mixtape"
-msgstr "Il mio fantastico mixtape"
+msgstr "Mój niesamowity mixtape"
 
 #: src/Services/Utils.vala:110
 msgid "Napkin scribblys"
-msgstr "Tovaglioli scribblys"
+msgstr "Serwetki w kratkę"
 
 #: src/Services/Utils.vala:111
 msgid "My fav songs to sing along"
-msgstr "Le mie canzoni preferite da cantare insieme"
+msgstr "Moje ulubione piosenki do śpiewania"
 
 #: src/Services/Utils.vala:112
 msgid "When to water which plant"
-msgstr "Quando innaffiare quale pianta"
+msgstr "Kiedy podlewać jaką roślinę"
 
 #: src/Services/Utils.vala:113
 msgid "Top 10 anime betrayals"
-msgstr "I 10 migliori tradimenti degli anime"
+msgstr "Top 10 zdrad w anime"
 
 #: src/Services/Utils.vala:114
 msgid "Amazing ascii art!"
-msgstr "Arte ascii sorprendente!"
+msgstr "Niesamowita grafika ascii!"
 
 #: src/Services/Utils.vala:115
 msgid "Now with more ligma!"
-msgstr "Ora con più legumi!"
+msgstr "Teraz z większą ilością ligmy!"

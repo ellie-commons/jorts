@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-03-23 12:01+0100\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-23 12:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:45
@@ -53,7 +53,9 @@ msgstr "可可"
 msgid "Slate"
 msgstr "石板"
 
+#.
 #. THEME SELECTION
+#.
 #. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
 #: src/Widgets/SettingsPopover.vala:70
 msgid "Sticky Note Colour"
@@ -97,7 +99,9 @@ msgid "Activate scribbly mode"
 msgstr "激活涂鸦模式"
 
 #: src/Preferences.vala:104
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
 #: src/Preferences.vala:127
