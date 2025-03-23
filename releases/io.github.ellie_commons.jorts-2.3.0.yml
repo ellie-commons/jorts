@@ -13,4 +13,4 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ellie-commons/Jorts/archive/refs/tags/2.1.1.tar.gz
+        url: https://github.com/ellie-commons/Jorts/archive/refs/tags/2.3.0.tar.gz

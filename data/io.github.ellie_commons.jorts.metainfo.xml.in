@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
     <id>io.github.ellie_commons.jorts</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
@@ -52,19 +52,27 @@
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot1.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/default.png</image>
         </screenshot>
         <screenshot>
-            <caption>You can change individual colour and text size!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot2.png</image>
+            <caption>Change colours, zoom in and out, and there is even an emoji button!</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/emotes.png</image>
         </screenshot>
         <screenshot>
             <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot3.png</image>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/scribbly.png</image>
         </screenshot>
         <screenshot>
-            <caption>You can unzoom so hard you could do ascii art</caption>
-            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/shot4.png</image>
+            <caption>Look! Ascii art in a sticky note!</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/ascii.png</image>
+        </screenshot>
+        <screenshot environment="pantheon">
+            <caption>The preferences dialog in light mode</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
+        </screenshot>
+        <screenshot environment="pantheon:dark">
+            <caption>The preferences dialog in dark mode</caption>
+            <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
     <content_rating type="oars-1.1"/>
@@ -84,8 +92,7 @@
                 <ul>
                     <li>New feature: Preferences dialog! Right-click on the app icon to see the option</li>
                     <li>scribbly mode has been moved to the new preference dialog</li>
-                    <li>New feature: Default font. You can now set a specific font for Jorts.</li>
-                    <li>Improvement for translators: Translations have been separated in 2: One for the UI one for the extra content</li>
+                    <li>For translators: Translations have been separated in 2: One for the UI one for the extra content</li>
                     <li>Comfort: Easier to grab and drag stickies</li>
                     <li>Bugfix: Screenshots in the appcenter were a mess aaaa</li>
                 </ul>
