@@ -106,7 +106,6 @@ msgid "Change colours, zoom in and out, and there is even an emoji button!"
 msgstr "Ändern Sie die Farben, zoomen Sie hinein und heraus, und es gibt sogar eine Emoji-Taste!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:63
-#, fuzzy
 msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
 msgstr "Streaming? Haben Sie Angst, dass Ihnen jemand über die Schulter schaut? Versuchen Sie den Scribbly-Modus!"
 
@@ -123,7 +122,6 @@ msgid "The preferences dialog in dark mode"
 msgstr "Der Einstellungsdialog im dunklen Modus"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
-#, fuzzy
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 Die Innenhose"
 

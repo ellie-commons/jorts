@@ -91,7 +91,7 @@ msgstr "ZOOM%"
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Preferences.vala:52
 msgid "Preferences for your Jorts"
-msgstr "Voreinstellungen für deine Jorts !"
+msgstr "Voreinstellungen für deine Jorts!"
 
 #: src/Preferences.vala:102
 msgid "Activate scribbly mode"
