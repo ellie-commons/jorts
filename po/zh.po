@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 12:30+0100\n"
+"POT-Creation-Date: 2025-03-23 13:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -296,3 +296,7 @@ msgstr "令人惊叹的 ascii 艺术！"
 #: src/Services/Utils.vala:115
 msgid "Now with more ligma!"
 msgstr "现在有了更多的灯具！"
+
+#: src/Services/Utils.vala:116
+msgid "I use arch btw"
+msgstr ""
