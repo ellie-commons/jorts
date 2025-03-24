@@ -120,12 +120,12 @@ namespace jorts.Themer {
             }
 
             window.${accent_color} editablelabel.editing {
-                border: 1px solid shade(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.7);
-                box-shadow: inset 0 0 2px 2px mix(@${accent_color}_100, @${accent_color}_500, 0.3);
+                border: 1px solid @${accent_color}_700;
+                /*  box-shadow: inset 0 0 2px 2px mix(@${accent_color}_100, @${accent_color}_500, 0.3);  */
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.75);
+                color: alpha(@${accent_color}_900, 0.70);
             }
 
             window.${accent_color}:backdrop editablelabel,
