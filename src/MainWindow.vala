@@ -60,7 +60,7 @@ namespace jorts {
         public string title_name;
         public string theme;
         public string content;
-        public int64 zoom;
+        public int zoom;
 
         public SimpleActionGroup actions { get; construct; }
 
@@ -430,7 +430,7 @@ namespace jorts {
         }
 
         // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom(int64 zoom) {
+        public void set_zoom(int zoom) {
             // Switches the classes that control font size
             this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
             this.zoom = zoom;

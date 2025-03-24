@@ -55,7 +55,7 @@ namespace jorts.Zoom {
 
 
         // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom(jorts.MainWindow note, int64 zoom) {
+        public void set_zoom(jorts.MainWindow note, int zoom) {
             // Switches the classes that control font size
             note.remove_css_class (jorts.Utils.zoom_to_class( note.zoom));
             note.zoom = zoom;

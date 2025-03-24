@@ -31,7 +31,7 @@ namespace jorts {
 
         // Changed whenever a note changes zoom
         // So we can adjust new notes to have whatever user feel is comfortable
-	    public int64 latest_zoom;
+	    public int latest_zoom;
 
 
         /*************************************************/

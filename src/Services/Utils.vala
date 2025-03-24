@@ -31,7 +31,7 @@ namespace jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public string zoom_to_class(int64 zoom) {
+    public string zoom_to_class(int zoom) {
         switch (zoom) {
             case 20: return "antsized";
             case 40: return "muchsmaller";
