@@ -77,6 +77,7 @@ windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
     border-radius: 6px;
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Have windowcontrol act like the other buttons */
