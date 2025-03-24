@@ -36,9 +36,14 @@ namespace jorts.Jason {
         string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
         string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
         string content  = node.get_string_member_with_default("content","");
+
+        // TODO: If this one fails, whole note fails...
         int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_ZOOM);
-        if (zoom < jorts.Constants.ZOOM_MIN || zoom > jorts.Constants.ZOOM_MAX) {
-            zoom = jorts.Constants.DEFAULT_ZOOM;
+
+        if (zoom < jorts.Constants.ZOOM_MIN) {
+            zoom = jorts.Constants.ZOOM_MIN;
+        } else if (zoom > jorts.Constants.ZOOM_MAX) {
+            zoom = jorts.Constants.ZOOM_MAX;
         }
 
         jorts.noteData loaded_note = new jorts.noteData(title, theme, content, (int) zoom);

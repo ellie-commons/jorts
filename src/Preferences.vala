@@ -20,7 +20,12 @@
 
 /* CONTENT
 
+Preferences is boring
+Everything is in a Handle so user can move the window from anywhere
+It is a box, with inside of it a box and an actionbar
 
+the innerbox has widgets for settings.
+the actionbar has a donate me and a set back to defaults just like elementaryOS
 
 */
 namespace jorts {

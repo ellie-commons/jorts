@@ -20,21 +20,19 @@
 
 /* CONTENT
 
-MainWindow --> Each MainWindow instance is its own sticky note.
-Initialization:
-unpack notedata
+Each MainWindow instance is a sticky note
+It takes a noteData, and creates the UI
 
+It is connected to settings and reacts to changes
 
-Window
-> Header
--> EditableLabel
+It sometimes calls Application methods for actions that requires higher oversight level
+like creating a new note, or saving
 
-> Grid
-->ScrolledWindow
---> Sourceview
+Notably, it interacts with popover - a SettingsPopover instant, where stuff is more hairy
+Both interact through signals and methods.
 
-->Actionbar
---> new, delete, settings (settingspopover)
+A method packages the informations into one noteData
+Theme and Zoom changing are just a matter of adding and removing classes
 
 
 */

@@ -19,6 +19,17 @@
 */
 
 
+/*
+
+General oversight of loading and supporting functions
+At some point i may move this in its own file
+
+
+
+*/
+
+
+
 namespace jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-23 13:10+0100\n"
+"POT-Creation-Date: 2025-03-24 19:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,25 +79,25 @@ msgstr "ズームイン"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
-#. TRANSLATORS: ZOOM is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "ZOOM" in the translation so the app can replace it with the current zoom level.
-#. Just consider the "%"
-#: src/Widgets/SettingsPopover.vala:157
-msgid "ZOOM%"
-msgstr "ズーム"
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/SettingsPopover.vala:156
+#, c-format
+msgid "%d%%"
+msgstr ""
 
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:52
+#: src/Preferences.vala:57
 msgid "Preferences for your Jorts"
 msgstr "ジョーツの好み"
 
-#: src/Preferences.vala:102
+#: src/Preferences.vala:107
 msgid "Activate scribbly mode"
 msgstr "走り書きモードを有効にする"
 
-#: src/Preferences.vala:104
+#: src/Preferences.vala:109
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes"
@@ -105,44 +105,44 @@ msgstr ""
 "有効にすると、フォーカスされていない付箋は読めなくなり、覗き見から内容を保護"
 "します。"
 
-#: src/Preferences.vala:127
+#: src/Preferences.vala:132
 msgid "Support us!"
 msgstr "応援してください！"
 
 #. Reset
-#: src/Preferences.vala:134
+#: src/Preferences.vala:139
 msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
-#: src/Preferences.vala:135
+#: src/Preferences.vala:140
 msgid "Reset all settings to defaults"
 msgstr "すべての設定をデフォルトに戻す"
 
-#: src/MainWindow.vala:139
+#: src/MainWindow.vala:137
 msgid "Edit title"
 msgstr "編集タイトル"
 
-#: src/MainWindow.vala:170
+#: src/MainWindow.vala:168
 msgid "New sticky note"
 msgstr "新しい付箋"
 
-#: src/MainWindow.vala:183
+#: src/MainWindow.vala:181
 msgid "Delete sticky note"
 msgstr "付箋の削除"
 
-#: src/MainWindow.vala:203
+#: src/MainWindow.vala:201
 msgid "Insert emoji"
 msgstr "絵文字を入れる"
 
-#: src/MainWindow.vala:241
+#: src/MainWindow.vala:239
 msgid "Preferences for this sticky note"
 msgstr "この付箋の設定"
 
-#: src/MainWindow.vala:308
+#: src/MainWindow.vala:306
 msgid "Always show content of sticky notes"
 msgstr "付箋の内容を常に表示"
 
-#: src/MainWindow.vala:319
+#: src/MainWindow.vala:317
 msgid "Hide content of unfocused sticky notes"
 msgstr "フォーカスされていない付箋の内容を隠す"
 
@@ -301,3 +301,6 @@ msgstr "今はより多くのリグマがある！"
 #: src/Services/Utils.vala:116
 msgid "I use arch btw"
 msgstr ""
+
+#~ msgid "ZOOM%"
+#~ msgstr "ズーム"

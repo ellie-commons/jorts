@@ -19,7 +19,7 @@
 */
 
 /*
-Move the text view elsewhere so we can extend it more comfortably
+This handles everything view
 
 Notably:
 -recognize links to open in fav browser
