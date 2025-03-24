@@ -77,7 +77,6 @@ windowcontrols button:focus {
     background-color: alpha(@fg_color, 0.3);
     border-radius: 6px;
     transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background-color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Have windowcontrol act like the other buttons */
@@ -117,13 +116,18 @@ popover button image {
     color: @fg_color;
 }
 
+
 /* Obfuscate note */
 window.scribbly textview,
 window.scribbly editablelabel {
     font-family: "Redacted Script";
 }
 
+
+
 /* Font zooms */
+
+
 window.antsized textview {font-size: 0.4em;}
 window.antsized editablelabel {font-size: 0.25em;}
 window.antsized editablelabel.editing {font-size: 0.20em;}
@@ -186,6 +190,7 @@ window.urmom editablelabel.editing {font-size: 3.00em;}
 
 
 /* ALL the colorpills */
+
 colorpill.blueberry {background-color: @BLUEBERRY_300;}
 colorpill.blueberry:hover {border: 1px solid @BLUEBERRY_900;}
 
@@ -218,3 +223,43 @@ colorpill.cocoa:hover {border: 1px solid @COCOA_900;}
 
 colorpill.slate {background-color: @SLATE_300;}
 colorpill.slate:hover {border: 1px solid @SLATE_900;}
+
+
+
+/* ANIMATION */
+
+
+window.animated windowcontrols,
+windowcontrols:backdrop {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated,
+window.animated overshoot,
+window.animated undershoot {
+    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated textview,
+window.animated textview text,
+window.animated headertitle {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated actionbar {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated actionbar .themedbutton:hover,
+window.animated actionbar .themedbutton:focus,
+window.animated windowcontrols button:hover,
+window.animated windowcontrols button:focus {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+window.animated editablelabel,
+window.animated windowcontrols image,
+window.animated windowcontrols:backdrop image,
+window.animated actionbar image {
+    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}

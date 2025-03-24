@@ -132,6 +132,7 @@ namespace jorts {
             //header.has_subtitle = false;
             headerbar.set_show_title_buttons (false);
             headerbar.decoration_layout = "close:";
+            headerbar.height_request = 32;
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);

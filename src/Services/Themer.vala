@@ -107,9 +107,6 @@ namespace jorts.Themer {
 
             window.${accent_color} editablelabel {
                 color: @${accent_color}_900;
-                            
-                /* Avoid other widgets being pushed down when editablelabel is hover or focus*/
-                /*  border: 1px solid @${accent_color}_100;  */
             }
 
 
