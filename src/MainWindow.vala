@@ -269,10 +269,10 @@ namespace jorts {
             /*****************************************/
 
             // Save when the window is closed
-            this.close_request.connect (() => {
-                ((Application)this.application).save_to_stash (); 
-                return false;           
-            });
+            //this.close_request.connect (() => {
+            //    ((Application)this.application).save_to_stash (); 
+            //    return false;           
+            //});
 
             // Use the color theme of this sticky note when focused
             this.notify["is-active"].connect(() => {
