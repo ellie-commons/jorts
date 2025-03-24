@@ -108,7 +108,10 @@ namespace jorts {
             this.content = data.content;
 
             this.set_title (this.title_name);
-            this.set_default_size (jorts.Constants.DEFAULT_WIDTH, jorts.Constants.DEFAULT_HEIGHT);
+            this.set_default_size (
+                jorts.Constants.DEFAULT_WIDTH, 
+                jorts.Constants.DEFAULT_HEIGHT
+            );
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
@@ -127,7 +130,7 @@ namespace jorts {
             headerbar.add_css_class ("flat");
             headerbar.add_css_class("headertitle");
             //header.has_subtitle = false;
-            headerbar.set_show_title_buttons (true);
+            headerbar.set_show_title_buttons (false);
             headerbar.decoration_layout = "close:";
 
             // Defime the label you can edit. Which is editable.
@@ -246,7 +249,7 @@ namespace jorts {
 
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
-            actionbar.pack_start (hide_item);
+            //actionbar.pack_start (hide_item);
 
             actionbar.pack_end (app_button);
             actionbar.pack_end (emoji_button);
@@ -364,7 +367,6 @@ namespace jorts {
             return data;
         }
 
-
         private void action_new () {
             ((Application)this.application).create_note(null);
         }
@@ -439,7 +441,6 @@ namespace jorts {
 
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
-
         }
     }
 }
