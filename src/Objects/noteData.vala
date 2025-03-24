@@ -25,10 +25,10 @@ namespace jorts {
         public string title;
         public string theme;
         public string content;
-        public int64 zoom;
+        public int zoom;
 
 
-        public noteData(string title, string theme, string content, int64 zoom )
+        public noteData(string title, string theme, string content, int zoom )
         {
             this.title = title;
             this.theme = theme;
