@@ -4,17 +4,17 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-24 19:29+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2025-03-25 22:37+0900\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
-msgstr "ジョーツ"
+msgstr "Jorts"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:4
 msgid "Sticky notes utility"
@@ -24,11 +24,11 @@ msgstr "付箋ユーティリティ"
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
-msgstr "メモ、備忘録、思いつき、その他短期的な情報を書き留める"
+msgstr "メモ、備忘録、思いつき、その他短期的な情報を書き留めます"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "テキスト;プレーンテキスト;メモ帳;メモ;付箋;ポストイット；"
+msgstr "テキスト;プレーンテキスト;メモ帳;メモ;付箋;ポストイット;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
@@ -36,7 +36,7 @@ msgstr "新しい付箋"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:21
 msgid "Preferences"
-msgstr "好み"
+msgstr "着こなす"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
 msgid "Neither jeans nor shorts, just like jorts"
@@ -85,7 +85,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
-msgstr "ステラ - チームコンズ"
+msgstr "Stella - Teamcons"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:43
 msgid "Sticky notes"
@@ -93,7 +93,7 @@ msgstr "付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Notes"
-msgstr "備考"
+msgstr "メモ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Cute"
@@ -105,11 +105,11 @@ msgstr "デスクトップ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
 msgid "Reminder"
-msgstr "リマインダー"
+msgstr "備忘録"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:55
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "ブルーベリー」をテーマにした付箋"
+msgstr "\"ブルーベリー\" テーマの付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:59
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
