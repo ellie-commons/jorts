@@ -126,7 +126,11 @@ namespace jorts.Stash {
         if (loaded_data.size == 0 ) {
             debug("nothing loaded");
             noteData blank_slate    = jorts.Utils.random_note(null);
-            blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
+
+            if ((blank_slate.content != "") && (blank_slate.theme != "BANANA")) { 
+                blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
+            }
+
             loaded_data.add(blank_slate);
         }
 

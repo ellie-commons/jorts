@@ -87,13 +87,16 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-    <release version="2.3.1" date="2025-03-23">
+    <release version="2.4.0" date="2025-03-30">
             <description>
-                <p>2.3.1 The Jort of Ice</p>
+                <p>2.4.0 The Jorts of Ice</p>
                 <ul>
                     <li>Fixed elements moving when a note title is hovered or selected</li>
                     <li>Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now</li>
                     <li>Respect reduce animations settings</li>
+                    <li>New and delete accels were not working oops sorry it's fixed now</li>
+                    <li>Bugfix where random components skipped the last possible choice</li>
+                    <li>Lil easter egg</li>
                 </ul>
             </description>
         </release>

@@ -99,6 +99,19 @@ namespace jorts {
                 this.save_to_stash ();
                 this.quit();
             });
+            var new_action = new SimpleAction ("new", null);
+            set_accels_for_action ("app.action_new", {"<Control>n"});
+            add_action (new_action);
+            new_action.activate.connect (() => {
+                create_note(null);
+            });
+            var delete_action = new SimpleAction ("delete", null);
+            set_accels_for_action ("app.action_delete", {"<Control>w"});
+            add_action (delete_action);
+            delete_action.activate.connect (() => {
+                MainWindow note = (MainWindow)get_active_window ();
+                remove_note(note);
+            });
             var save_action = new SimpleAction ("save", null);
             set_accels_for_action ("app.save", {"<Control>s"});
             add_action (save_action);
@@ -156,6 +169,9 @@ namespace jorts {
 
 
     // Create new instances of MainWindow
+    // If we have data, nice, just load it into a new instance
+    // Else we do a lil new note
+
 	public void create_note(noteData? data) {
         MainWindow note;
         if (data != null) {
@@ -167,8 +183,15 @@ namespace jorts {
             MainWindow last_note = this.open_notes.last ();
             string skip_theme = last_note.theme;
             var random_data = jorts.Utils.random_note(skip_theme);
+
+            // A chance at pulling the Golden Sticky
+            random_data = jorts.Utils.golden_sticky(random_data);
+
             random_data.zoom = this.latest_zoom;
             note = new MainWindow(this, random_data);
+
+
+
         }
         this.open_notes.add(note);
         this.save_to_stash ();

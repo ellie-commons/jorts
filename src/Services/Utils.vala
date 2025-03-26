@@ -19,6 +19,7 @@
 */
 
 /* CONTENT
+randrange does not include upper bound.
 
 random_theme(skip_theme)
 random_title()
@@ -65,7 +66,7 @@ namespace jorts.Utils {
             themes.remove(skip_theme);
         }
 
-        var random_in_range = Random.int_range (0,(themes.size - 1));
+        var random_in_range = Random.int_range (0,themes.size);
         return themes[random_in_range];
     }
 
@@ -115,7 +116,7 @@ namespace jorts.Utils {
             _("Now with more ligma!"),
             _("I use arch btw")
         };
-        return alltitles[Random.int_range (0,(alltitles.length - 1))];
+        return alltitles[Random.int_range (0,alltitles.length)];
     }
 
     /*************************************************/
@@ -129,9 +130,46 @@ namespace jorts.Utils {
             allemotes.remove(skip_emote);
         }
     
-        var random_in_range = Random.int_range (0,(allemotes.size - 1));
+        var random_in_range = Random.int_range (0,allemotes.size);
         return allemotes[random_in_range];
     }
+
+
+    /*************************************************/
+    // Hey! Looking in the source code is cheating!
+
+
+
+
+    /*************************************************/
+    // Hey! Looking in the source code is cheating!
+
+    public noteData golden_sticky(noteData blank_slate) {
+
+        var random_in_range = Random.int_range (0,1000);
+
+        // ONE IN THOUSAND
+        if (random_in_range == 1) {
+
+            print("GOLDEN STICKY");
+            blank_slate.title = _("🔥WOW Congratulations!🔥");       
+            blank_slate.content = _(
+"""You have found the Golden Sticky Note!
+
+CRAZY BUT TRU: This message appears once in a thousand times!
+Nobody will believe you hehehe ;)
+
+I hope my little app brings you a lot of joy
+Have a great day!🎇
+""");
+            blank_slate.theme = "BANANA";
+        }
+
+        return blank_slate;
+    }
+
+
+
 
 
     /*************************************************/
@@ -140,7 +178,10 @@ namespace jorts.Utils {
         debug("Generating random note... Skip:" + skip_theme);
         var randtitle = jorts.Utils.random_title();
         string randtheme = jorts.Utils.random_theme (skip_theme);
+
         noteData randnote = new noteData( randtitle, randtheme, "", jorts.Constants.DEFAULT_ZOOM);
+
+
         return randnote; 
     }
 }

@@ -11,10 +11,10 @@
 			<summary>Last time saved_state.json was backed up</summary>
 			<description>Stores the date in string format for the last time a backup happened. If empty, then the app was just installed, do it immediately (NOT IMPLEMENTED YET)</description>
 		</key>
-		<key name="enable-minimize" type="b">
+		<key name="hide-bar" type="b">
 			<default>false</default>
-			<summary>Hide new and delete buttons</summary>
-			<description>Whether to hide new and delete buttons in sticky notes (NOT IMPLEMENTED YET)</description>
+			<summary>Hide actionbar</summary>
+			<description>Whether to hide actionbar (NOT IMPLEMENTED YET)</description>
 		</key>
 	</schema>
 </schemalist>
