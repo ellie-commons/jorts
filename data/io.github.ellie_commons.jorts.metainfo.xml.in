@@ -92,6 +92,8 @@
                 <p>2.3.1 The Jort of Ice</p>
                 <ul>
                     <li>Fixed elements moving when a note title is hovered or selected</li>
+                    <li>Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now</li>
+                    <li>Respect reduce animations settings</li>
                 </ul>
             </description>
         </release>

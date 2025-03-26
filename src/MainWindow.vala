@@ -118,7 +118,10 @@ namespace jorts {
 
             // add required base classes
             this.add_css_class("rounded");
-            this.add_css_class ("animations");
+
+            if (gtk_settings.gtk_enable_animations) {
+                this.add_css_class ("animated");
+            }
 
 
 
@@ -288,7 +291,17 @@ namespace jorts {
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (() => {
                 this.on_scribbly_changed();
-            }); // END OF APP SCRIBBLY HANDLER
+            });
+
+            gtk_settings.notify["enable-animations"].connect (() => {
+                this.on_reduceanimation_changed();
+            });
+
+
+
+
+
+
         } // END OF MAIN CONSTRUCT
 
 
@@ -343,6 +356,17 @@ namespace jorts {
                 }
             } else {
                 this.remove_css_class ("scribbly");
+            }
+        }
+
+
+        // Called when the window is-active property changes
+        public void on_reduceanimation_changed() {
+
+            if (gtk_settings.gtk_enable_animations) {
+                this.add_css_class ("animated");
+            } else {
+                this.remove_css_class ("animated");
             }
         }
 
