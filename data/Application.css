@@ -34,16 +34,16 @@
     padding-top: 0.5em;
 }
 
-windowcontrols,
+/* windowcontrols,
 windowcontrols:backdrop {
     background-color: transparent;
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
 window,
 overshoot,
 undershoot {
-    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textview,
@@ -53,7 +53,7 @@ headertitle {
     font-weight: 500;
     font-size: 1.2em;
     box-shadow: none;
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 actionbar {
@@ -62,7 +62,7 @@ actionbar {
     background-image: none;
     padding: 3px;
     border: none;
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* White relief in actionbar icons */
@@ -70,22 +70,22 @@ actionbar image {
     -gtk-icon-shadow: 0px 1px rgba(255,255,255,0.5);
 }
 
+/*windowcontrols button:hover,
+windowcontrols button:focus,*/
 actionbar .themedbutton:hover,
-actionbar .themedbutton:focus,
-windowcontrols button:hover,
-windowcontrols button:focus {
+actionbar .themedbutton:focus {
     background-color: alpha(@fg_color, 0.3);
     border-radius: 6px;
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Have windowcontrol act like the other buttons */
+/* Have windowcontrol act like the other buttons 
 windowcontrols:backdrop button:hover {
     background: alpha(@fg_color, 0.3);
 }
 windowcontrols:backdrop button:not(:hover) {
 	background: none;
-}
+}*/
 
 editablelabel {
     font-weight: 800;
@@ -104,11 +104,11 @@ editablelabel.editing {
     letter-spacing: .0em;
 }
 
+/*windowcontrols image,
+windowcontrols:backdrop image,*/
 editablelabel,
-windowcontrols image,
-windowcontrols:backdrop image,
 actionbar image {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Fix buttons in popover inheriting the color */
@@ -226,40 +226,31 @@ colorpill.slate:hover {border: 1px solid @SLATE_900;}
 
 
 
-/* ANIMATION */
+/* ANIMATION 
 
-
-window.animated windowcontrols,
-windowcontrols:backdrop {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 window.animated,
 window.animated overshoot,
 window.animated undershoot {
-    transition: background 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window.animated textview,
 window.animated textview text,
 window.animated headertitle {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window.animated actionbar {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window.animated actionbar .themedbutton:hover,
-window.animated actionbar .themedbutton:focus,
-window.animated windowcontrols button:hover,
-window.animated windowcontrols button:focus {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
+window.animated actionbar .themedbutton:focus {
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window.animated editablelabel,
-window.animated windowcontrols image,
-window.animated windowcontrols:backdrop image,
 window.animated actionbar image {
-    transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}*/
