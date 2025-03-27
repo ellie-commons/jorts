@@ -46,8 +46,8 @@ namespace jorts.Constants {
     const int ZOOM_MIN                   = 40;
 
     // For new stickies
-    const int DEFAULT_WIDTH              = 270;
-    const int DEFAULT_HEIGHT             = 330;
+    const int DEFAULT_WIDTH              = 290;
+    const int DEFAULT_HEIGHT             = 320;
 
     // New preference window
     const int DEFAULT_PREF_WIDTH         = 440;
