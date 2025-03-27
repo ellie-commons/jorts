@@ -85,7 +85,6 @@ namespace jorts {
         /*************************************************/        
         static construct {
             gsettings = new GLib.Settings (jorts.Constants.RDNN);
-
         }
 
 
@@ -140,18 +139,17 @@ namespace jorts {
                 note.zoom_in ();
             });
             var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
-            set_accels_for_action ("app.toggle_scribbly", { "<Control>H", null });
+            set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
             add_action (toggle_scribbly);
             toggle_scribbly.activate.connect (() => {
                 this.toggle_scribbly();
             });
-
-
-            //  gsettings.changed["scribbly-mode-active"].connect (() => {
-            //      foreach (MainWindow note in this.open_notes) {
-            //          note.on_scribbly_changed();
-            //      }
-            //  });
+            var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
+            set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
+            add_action (toggle_hidebar);
+            toggle_hidebar.activate.connect (() => {
+                this.toggle_hidebar();
+            });
 
         }
 
@@ -212,13 +210,21 @@ namespace jorts {
 
 
     public void toggle_scribbly() {
-        var scribbly_mode_active = Application.gsettings.get_boolean ("scribbly-mode-active");
-        if (scribbly_mode_active) {
+        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
             gsettings.set_boolean ("scribbly-mode-active",false);
         } else {
             gsettings.set_boolean ("scribbly-mode-active",true);
         }
     }
+
+    public void toggle_hidebar() {
+        if (Application.gsettings.get_boolean ("hide-bar")) {
+            gsettings.set_boolean ("hide-bar",false);
+        } else {
+            gsettings.set_boolean ("hide-bar",true);
+        }
+    }
+
 
 
     public void show_all() {

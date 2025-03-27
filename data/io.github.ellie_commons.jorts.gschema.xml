@@ -14,7 +14,7 @@
 		<key name="hide-bar" type="b">
 			<default>false</default>
 			<summary>Hide actionbar</summary>
-			<description>Whether to hide actionbar (NOT IMPLEMENTED YET)</description>
+			<description>Whether to hide the actionbar and its buttons</description>
 		</key>
 	</schema>
 </schemalist>

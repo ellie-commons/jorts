@@ -164,7 +164,7 @@ Have a great day!🎇
 """);
             blank_slate.theme = "BANANA";
         }
-
+        
         return blank_slate;
     }
 

@@ -67,8 +67,6 @@ public class jorts.StickyView : Granite.HyperTextView {
 
                 this.set_hexpand (true);
                 this.set_vexpand (true);
-    
-;
 
                 this.buffer.text = content;
                 this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);    

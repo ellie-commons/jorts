@@ -104,7 +104,7 @@ namespace jorts {
                     valign = Gtk.Align.CENTER,
                 };
 
-                var scribbly_label = new Granite.HeaderLabel (_("Activate scribbly mode")) {
+                var scribbly_label = new Granite.HeaderLabel (_("Activate scribbly mode (Ctrl+H)")) {
                     mnemonic_widget = scribbly_toggle,
                     secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes")
                 };
@@ -117,6 +117,38 @@ namespace jorts {
                     "scribbly-mode-active", 
                     scribbly_toggle, "active",
                     SettingsBindFlags.DEFAULT);
+
+
+
+
+
+
+                /*************************************************/
+                /*               hidebar Toggle                  */
+                /*************************************************/
+
+                var hidebar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+
+                var hidebar_toggle = new Gtk.Switch () {
+                    halign = Gtk.Align.END,
+                    hexpand = true,
+                    valign = Gtk.Align.CENTER,
+                };
+
+                var hidebar_label = new Granite.HeaderLabel (_("Hide button bar (Ctrl+T)")) {
+                    mnemonic_widget = hidebar_toggle,
+                    secondary_text = _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function")
+                };
+
+                hidebar_box.append (hidebar_label);
+                hidebar_box.append (hidebar_toggle);
+                settingsbox.append(hidebar_box); 
+
+                Application.gsettings.bind (
+                    "hide-bar", 
+                    hidebar_toggle, "active",
+                    SettingsBindFlags.DEFAULT);
+
 
 
 

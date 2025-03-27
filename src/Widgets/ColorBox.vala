@@ -34,7 +34,7 @@ public class jorts.ColorBox : Gtk.Box {
         orientation = Gtk.Orientation.HORIZONTAL;
         
 
-        margin_top = 3;
+        margin_top = 6;
         margin_bottom = 12;
         margin_start = 12;
         margin_end = 12;

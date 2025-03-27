@@ -136,7 +136,7 @@ namespace jorts {
             //header.has_subtitle = false;
             headerbar.set_show_title_buttons (false);
             headerbar.decoration_layout = "close:";
-            headerbar.height_request = 32;
+            headerbar.height_request = 36;
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
@@ -258,7 +258,7 @@ namespace jorts {
 
             actionbar.pack_end (app_button);
             actionbar.pack_end (emoji_button);
-
+            on_hidebar_changed();
 
             // Define the grid 
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
@@ -293,6 +293,11 @@ namespace jorts {
             Application.gsettings.changed["scribbly-mode-active"].connect (() => {
                 this.on_scribbly_changed();
             });
+
+            //The application tells us the squiffly state has changed!
+            Application.gsettings.changed["hide-bar"].connect (() => {
+                this.on_hidebar_changed();
+            });            
 
             gtk_settings.notify["enable-animations"].connect (() => {
                 this.on_reduceanimation_changed();
@@ -360,6 +365,15 @@ namespace jorts {
             }
         }
 
+        // Called when the window is-active property changes
+        public void on_hidebar_changed() {
+
+            if (Application.gsettings.get_boolean ("hide-bar")) {
+                this.actionbar.hide();
+            } else {
+                this.actionbar.show();
+            }
+        }
 
         // Called when the window is-active property changes
         public void on_reduceanimation_changed() {
@@ -370,7 +384,6 @@ namespace jorts {
                 this.remove_css_class ("animated");
             }
         }
-
 
         // TITLE IS TITLE
         public new void set_title (string title) {

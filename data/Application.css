@@ -18,12 +18,12 @@
 * Boston, MA 02110-1301 USA
 */
 
- /* workaround to headerlabel */
+ /* workaround to headerlabel 
  .heading {
     font-weight: 700;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
-}
+}*/
 
 textview,
 textview text,
