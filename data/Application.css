@@ -25,6 +25,10 @@
     padding-top: 0.5em;
 }*/
 
+windowcontrols:backdrop {
+    background: none;
+}
+
 textview,
 textview text,
 headertitle {

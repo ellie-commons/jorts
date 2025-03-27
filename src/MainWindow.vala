@@ -137,7 +137,7 @@ namespace jorts {
             //header.has_subtitle = false;
 
             headerbar.decoration_layout = "close:";
-            headerbar.set_show_title_buttons(false);
+            headerbar.set_show_title_buttons(true);
             headerbar.height_request = 36;
 
             // Defime the label you can edit. Which is editable.

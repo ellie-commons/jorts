@@ -54,9 +54,9 @@ public class jorts.SettingsPopover : Gtk.Popover {
         this.set_halign (Gtk.Align.END);
 
         // Everything is in this
-        var setting_grid = new Gtk.Box (Gtk.Orientation.VERTICAL, 0) {
-            margin_top = 3,
-            margin_bottom = 3
+        var setting_grid = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
+            margin_top = 12,
+            margin_bottom = 12
         };
 
 
@@ -66,17 +66,20 @@ public class jorts.SettingsPopover : Gtk.Popover {
         */
 
         
-        //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-        var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
-        color_button_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        color_button_label.tooltip_text = _("Choose a colour for this sticky note");
-        color_button_label.margin_top = 6;
+        //  //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
+        //  var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
+        //  color_button_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+        //  color_button_label.tooltip_text = _("Choose a colour for this sticky note");
+        //  color_button_label.margin_top = 9;
 
-        setting_grid.append (color_button_label);
+        //setting_grid.append (color_button_label);
 
 
         //TODO: Multiline
-        var color_button_box = new jorts.ColorBox(theme);
+        var color_button_box = new jorts.ColorBox(theme) {
+            margin_start = 12,
+            margin_end = 12
+        };
 
 
         color_button_box.theme_changed.connect ((selected) => {this.theme_changed(selected);});
@@ -116,10 +119,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
         var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
             homogeneous = true,
             hexpand = true,
-            margin_top = 12,
             margin_start = 12,
-            margin_end = 12,
-            margin_bottom = 12
+            margin_end = 12
         };
 
         font_size_box.append (this.zoom_out_button);

@@ -109,8 +109,6 @@ namespace jorts.Themer {
                 color: @${accent_color}_900;
             }
 
-
-
             window.${accent_color} editablelabel:hover,
             window.${accent_color} editablelabel:focus {
                 border: 1px solid alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3),0.88);

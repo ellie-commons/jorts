@@ -30,6 +30,11 @@ public class jorts.ColorPill : Gtk.CheckButton {
                 set_size_request (24, 24);
                 set_tooltip_text (tooltip);
                 add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
+
+                margin_top = 0;
+                margin_bottom = 0;
+                margin_start = 0;
+                margin_end = 0;
         }
 }
 

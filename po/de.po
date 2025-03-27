@@ -31,7 +31,7 @@ msgstr "Banane"
 
 #: src/Widgets/ColorBox.vala:49
 msgid "Strawberry"
-msgstr "Strawberry"
+msgstr "Erdbeere"
 
 #: src/Widgets/ColorBox.vala:50
 msgid "Orange"

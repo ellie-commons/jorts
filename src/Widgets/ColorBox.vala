@@ -32,14 +32,9 @@ public class jorts.ColorBox : Gtk.Box {
     public ColorBox (string theme)  {
             
         orientation = Gtk.Orientation.HORIZONTAL;
-        
-
-        margin_top = 6;
-        margin_bottom = 12;
-        margin_start = 12;
-        margin_end = 12;
 
         accessible_role = Gtk.AccessibleRole.LIST;
+        spacing = 0;
 
             //TRANSLATORS: Shown as a tooltip when people hover a color theme
             var color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
