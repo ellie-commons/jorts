@@ -128,7 +128,7 @@ namespace jorts.Themer {
             window.${accent_color}:backdrop actionbar image,
             window.${accent_color}:backdrop windowcontrols,
             window.${accent_color}:backdrop windowcontrols image {
-                color: alpha(@${accent_color}_900, 0.75);
+                color: alpha(@${accent_color}_900, 0.65);
             }
 
         """));

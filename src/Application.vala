@@ -74,6 +74,26 @@ namespace jorts {
                     );
             }); 
 
+
+
+            //  var portal = new Xdp.Portal();
+
+
+            
+            //  GenericArray<weak string> cmd = new GenericArray<weak string> ();
+            //  cmd.add ("io.github.ellie_commons.jorts");
+
+
+            //  portal.request_background(
+            //      null, 
+            //      "autostart", 
+            //      cmd, 
+            //      Xdp.BackgroundFlags.AUTOSTART, 
+            //      null);
+
+                
+                
+
             //this.scribbly_mode_active = gsettings.get_boolean ("scribbly_mode_active");
 
             // build all the stylesheets
