@@ -74,15 +74,9 @@ namespace jorts {
                     );
             }); 
 
-
-
             //  var portal = new Xdp.Portal();
-
-
-            
             //  GenericArray<weak string> cmd = new GenericArray<weak string> ();
             //  cmd.add ("io.github.ellie_commons.jorts");
-
 
             //  portal.request_background(
             //      null, 
@@ -90,11 +84,6 @@ namespace jorts {
             //      cmd, 
             //      Xdp.BackgroundFlags.AUTOSTART, 
             //      null);
-
-                
-                
-
-            //this.scribbly_mode_active = gsettings.get_boolean ("scribbly_mode_active");
 
             // build all the stylesheets
             jorts.Themer.init_all_themes();
@@ -121,16 +110,11 @@ namespace jorts {
             var new_action = new SimpleAction ("new", null);
             set_accels_for_action ("app.action_new", {"<Control>n"});
             add_action (new_action);
-            new_action.activate.connect (() => {
-                create_note(null);
-            });
+
             var delete_action = new SimpleAction ("delete", null);
             set_accels_for_action ("app.action_delete", {"<Control>w"});
             add_action (delete_action);
-            delete_action.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                remove_note(note);
-            });
+
             var save_action = new SimpleAction ("save", null);
             set_accels_for_action ("app.save", {"<Control>s"});
             add_action (save_action);
@@ -140,24 +124,15 @@ namespace jorts {
             var zoom_out = new SimpleAction ("zoom_out", null);
             set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
             add_action (zoom_out);
-            zoom_out.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.zoom_out ();
-            });
+
             var zoom_default = new SimpleAction ("zoom_default", null);
             set_accels_for_action ("app.zoom_default", { "<control>0", "<Control>KP_0", null });
             add_action (zoom_default);
-            zoom_default.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.set_zoom (jorts.Constants.DEFAULT_ZOOM);
-            });
+
             var zoom_in = new SimpleAction ("zoom_in", null);
             set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>equal", "<Control>KP_Add", null });
             add_action (zoom_in);
-            zoom_in.activate.connect (() => {
-                MainWindow note = (MainWindow)get_active_window ();
-                note.zoom_in ();
-            });
+
             var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
             set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
             add_action (toggle_scribbly);
@@ -290,15 +265,25 @@ namespace jorts {
             PreferenceWindow preferences;
             string[] args = command_line.get_arguments ();
 
-            activate ();
             switch (args[1]) {
+
                 case "--new-note":
+                    activate ();    
                     create_note(null);
                     break;
+
                 case "--preferences":
+                    activate ();
                     preferences = new PreferenceWindow(this);
                     break;
-                default: break;
+
+                case "--dump":
+                    print(jorts.Jason.jsonify (open_notes));
+                    break;
+
+                default:
+                    activate ();
+                    break;
             }
             return 0;
 

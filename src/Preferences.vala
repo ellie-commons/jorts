@@ -83,10 +83,10 @@ namespace jorts {
 
             // the box with all the settings
             var settingsbox = new Gtk.Box (VERTICAL, 24) {
-                margin_bottom = 0,
-                margin_top = 0,
-                margin_start = 0,
-                margin_end = 0,
+                margin_bottom = 6,
+                margin_top = 6,
+                margin_start = 6,
+                margin_end = 6,
                 hexpand = true,
                 vexpand = true
             };
@@ -150,6 +150,33 @@ namespace jorts {
                     SettingsBindFlags.DEFAULT);
 
 
+
+
+
+                /*************************************************/
+                /*               Autostart Link                  */
+                /*************************************************/
+
+                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+
+                var permissions_link = new Gtk.LinkButton.with_label (
+                                            Granite.SettingsUri.PERMISSIONS,
+                                            _("App permissions")
+                                        );
+
+                // _("Applications → Permissions")
+                permissions_link.tooltip_text = Granite.SettingsUri.PERMISSIONS;
+                permissions_link.halign = Gtk.Align.END;
+
+                var permissions_label = new Granite.HeaderLabel (_("Start with the computer")) {
+                    mnemonic_widget = permissions_link,
+                    secondary_text = _("You can set your sticky notes to appear when you log in via the system settings")
+                };
+                permissions_label.set_hexpand (true);
+
+                permissions_box.append (permissions_label);
+                permissions_box.append (permissions_link);
+                settingsbox.append(permissions_box); 
 
 
             /*************************************************/
