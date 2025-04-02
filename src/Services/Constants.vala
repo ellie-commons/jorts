@@ -51,7 +51,7 @@ namespace jorts.Constants {
 
     // New preference window
     const int DEFAULT_PREF_WIDTH         = 440;
-    const int DEFAULT_PREF_HEIGHT        = 260;
+    const int DEFAULT_PREF_HEIGHT        = 290;
 
 
 
