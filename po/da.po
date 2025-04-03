@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,7 +72,7 @@ msgstr "Zoom ind"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
@@ -83,40 +83,32 @@ msgstr "Præferencer for dine Jorts"
 
 #: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Gør ufokuserede noter ulæselige"
 
 #: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at "
-"beskytte deres indhold mod nysgerrige blikke."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at beskytte deres indhold mod nysgerrige blikke."
 
 #: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Skjul knapbjælke"
 
 #: src/Preferences.vala:155
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. Tastaturgenveje vil stadig fungere (Ctrl+T)"
 
 #: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Tilladelser"
 
 #: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Tillad at starte ved login"
 
 #: src/Preferences.vala:188
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Du kan indstille klistermærkerne til at blive vist, når du logger ind, ved at tilføje Jorts til autostart"
 
 #: src/Preferences.vala:206
 msgid "Support us!"
@@ -133,7 +125,7 @@ msgstr "Nulstil alle indstillinger til standard"
 
 #: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Luk"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -309,11 +301,11 @@ msgstr "Nu med mere ligma!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Jeg bruger i øvrigt arch"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW Tillykke! 🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -324,7 +316,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Du har fundet den gyldne sticky note!\n"
+"\n"
+"CRAZY BUT TRU: Denne besked dukker op én gang ud af tusind!\n"
+"Ingen vil tro på dig hehehe ;)\n"
+"\n"
+"Jeg håber, at min lille app bringer dig en masse glæde\n"
+"Hav en god dag!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Sticky Note farve"

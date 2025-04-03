@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,7 +72,7 @@ msgstr "Powiększenie"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
@@ -83,40 +83,32 @@ msgstr "Preferencje dotyczące spodenek Jorts"
 
 #: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Sprawiają, że nieostre notatki stają się nieczytelne"
 
 #: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się "
-"nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
 
 #: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Ukryj pasek przycisków"
 
 #: src/Preferences.vala:155
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Jeśli jest włączona, ukrywa dolny pasek w notatkach samoprzylepnych. Skróty klawiaturowe będą nadal działać (Ctrl+T)."
 
 #: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Uprawnienia"
 
 #: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Zezwalaj na uruchomienie przy logowaniu"
 
 #: src/Preferences.vala:188
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Można ustawić wyświetlanie notatek samoprzylepnych po zalogowaniu, dodając Jorts do autostartu"
 
 #: src/Preferences.vala:206
 msgid "Support us!"
@@ -133,7 +125,7 @@ msgstr "Resetowanie wszystkich ustawień do wartości domyślnych"
 
 #: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -309,11 +301,11 @@ msgstr "Teraz z większą ilością ligmy!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Używam arch btw"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW Gratulacje! 🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -324,7 +316,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Znalazłeś złotą karteczkę samoprzylepną!\n"
+"\n"
+"CRAZY BUT TRU: Ta wiadomość pojawia się raz na tysiąc razy!\n"
+"Nikt ci nie uwierzy hehe ;)\n"
+"\n"
+"Mam nadzieję, że moja mała aplikacja przyniesie Ci wiele radości\n"
+"Miłego dnia!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Kolor karteczki samoprzylepnej"

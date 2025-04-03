@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,7 +72,7 @@ msgstr "Inzoomen"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
@@ -84,40 +84,32 @@ msgstr "Voorkeuren voor alle plaknotities"
 
 #: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Maak ongerichte notities onleesbaar"
 
 #: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Indien ingeschakeld worden onscherpe sticky notes onleesbaar om hun inhoud "
-"te beschermen tegen glurende ogen"
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Indien ingeschakeld worden onscherpe sticky notes onleesbaar om hun inhoud te beschermen tegen glurende ogen"
 
 #: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Knoppenbalk verbergen"
 
 #: src/Preferences.vala:155
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Indien ingeschakeld, wordt de onderste balk in plaknotities verborgen. Sneltoetsen werken nog steeds (Ctrl+T)"
 
 #: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Rechten"
 
 #: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Toestaan om te starten bij aanmelden"
 
 #: src/Preferences.vala:188
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "U kunt instellen dat de sticky notes verschijnen wanneer u inlogt door Jorts toe te voegen aan autostart"
 
 #: src/Preferences.vala:206
 msgid "Support us!"
@@ -134,7 +126,7 @@ msgstr "Alle instellingen terugzetten op standaardwaarden"
 
 #: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Sluit"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -310,11 +302,11 @@ msgstr "Nu met meer ligma!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Ik gebruik arch btw"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "Gefeliciteerd!"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -325,7 +317,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Je hebt de Gouden Sticky Note gevonden!\n"
+"\n"
+"CRAZY BUT TRU: Dit bericht verschijnt eens in de duizend keer!\n"
+"Niemand zal je geloven hehehe ;)\n"
+"\n"
+"Ik hoop dat mijn kleine app je veel plezier brengt\n"
+"Fijne dag!\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Sticky Notitie Kleur"

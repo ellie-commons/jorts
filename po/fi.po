@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fi\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,7 +72,7 @@ msgstr "Suurenna"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
@@ -84,41 +84,32 @@ msgstr "Kaikkien muistilappujen asetukset"
 
 #: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Tee keskittymättömistä muistiinpanoista lukukelvottomia"
 
 #: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Jos tämä on käytössä, tarkentamattomat muistilaput muuttuvat "
-"lukukelvottomiksi, jotta niiden sisältö voidaan suojata tirkisteleviltä "
-"katseilta."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Jos tämä on käytössä, tarkentamattomat muistilaput muuttuvat lukukelvottomiksi, jotta niiden sisältö voidaan suojata tirkisteleviltä katseilta."
 
 #: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Piilota painikepalkki"
 
 #: src/Preferences.vala:155
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Jos tämä on käytössä, piilottaa muistilappujen alapalkin. Näppäimistön pikanäppäimet toimivat edelleen (Ctrl+T)."
 
 #: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Luvat"
 
 #: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Salli aloittaa kirjautumisen yhteydessä"
 
 #: src/Preferences.vala:188
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Voit asettaa muistilaput näkymään, kun kirjaudut sisään, lisäämällä Jortsin automaattiseen käynnistykseen."
 
 #: src/Preferences.vala:206
 msgid "Support us!"
@@ -135,7 +126,7 @@ msgstr "Nollaa kaikki asetukset oletusasetuksiin"
 
 #: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -311,11 +302,11 @@ msgstr "Nyt enemmän ligmaa!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Käytän arch btw"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW Onnittelut!🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -326,7 +317,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Olet löytänyt kultaisen muistilapun!\n"
+"\n"
+"CRAZY BUT TRU: Tämä viesti ilmestyy kerran tuhannesta kerrasta!\n"
+"Kukaan ei usko sinua hehehe ;)\n"
+"\n"
+"Toivottavasti pieni sovellukseni tuo sinulle paljon iloa.\n"
+"Hyvää päivänjatkoa!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Tarralapun väri"
