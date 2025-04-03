@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 19:29+0100\n"
+"POT-Creation-Date: 2025-04-03 19:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,67 +13,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:45
+#: src/Widgets/ColorBox.vala:40
 msgid "Blueberry"
 msgstr "Borůvky"
 
-#: src/Widgets/ColorBox.vala:46
+#: src/Widgets/ColorBox.vala:41
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Widgets/ColorBox.vala:47
+#: src/Widgets/ColorBox.vala:42
 msgid "Mint"
 msgstr "Mátový"
 
-#: src/Widgets/ColorBox.vala:48
+#: src/Widgets/ColorBox.vala:43
 msgid "Banana"
 msgstr "Banán"
 
-#: src/Widgets/ColorBox.vala:49
+#: src/Widgets/ColorBox.vala:44
 msgid "Strawberry"
 msgstr "Jahoda"
 
-#: src/Widgets/ColorBox.vala:50
+#: src/Widgets/ColorBox.vala:45
 msgid "Orange"
 msgstr "Orange"
 
-#: src/Widgets/ColorBox.vala:51
+#: src/Widgets/ColorBox.vala:46
 msgid "Bubblegum"
 msgstr "Žvýkačka"
 
-#: src/Widgets/ColorBox.vala:52
+#: src/Widgets/ColorBox.vala:47
 msgid "Grape"
 msgstr "Hrozny"
 
-#: src/Widgets/ColorBox.vala:53
+#: src/Widgets/ColorBox.vala:48
 msgid "Cocoa"
 msgstr "Kakao"
 
-#: src/Widgets/ColorBox.vala:54
+#: src/Widgets/ColorBox.vala:49
 msgid "Slate"
 msgstr "Břidlice"
 
-#.
-#. THEME SELECTION
-#.
-#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:70
-msgid "Sticky Note Colour"
-msgstr "Barva samolepicího bločku"
-
-#: src/Widgets/SettingsPopover.vala:72
-msgid "Choose a colour for this sticky note"
-msgstr "Výběr barvy pro tento samolepicí bloček"
-
-#: src/Widgets/SettingsPopover.vala:94
+#: src/Widgets/SettingsPopover.vala:97
 msgid "Zoom out"
 msgstr "Zvětšení"
 
-#: src/Widgets/SettingsPopover.vala:100
+#: src/Widgets/SettingsPopover.vala:103
 msgid "Default zoom level"
 msgstr "Výchozí úroveň přiblížení"
 
-#: src/Widgets/SettingsPopover.vala:107
+#: src/Widgets/SettingsPopover.vala:110
 msgid "Zoom in"
 msgstr "Přiblížení"
 
@@ -81,7 +69,7 @@ msgstr "Přiblížení"
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:156
+#: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
 msgstr ""
@@ -89,219 +77,270 @@ msgstr ""
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
+#: src/Preferences.vala:59
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
-#: src/Preferences.vala:107
-msgid "Activate scribbly mode"
-msgstr "Aktivace režimu scribbly"
-
 #: src/Preferences.vala:109
+msgid "Make unfocused notes unreadable"
+msgstr ""
+
+#: src/Preferences.vala:111
+#, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
+"content from peeking eyes (Ctrl+H)"
 msgstr ""
 "Pokud je tato funkce povolena, stanou se nesoustředěné samolepicí poznámky "
 "nečitelnými, aby byl jejich obsah chráněn před pohledy zvědavců."
 
-#: src/Preferences.vala:132
+#: src/Preferences.vala:140
+msgid "Hide button bar"
+msgstr ""
+
+#: src/Preferences.vala:142
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+
+#: src/Preferences.vala:166
+msgid "Permissions"
+msgstr ""
+
+#: src/Preferences.vala:173
+msgid "Allow to start at login"
+msgstr ""
+
+#: src/Preferences.vala:175
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+
+#: src/Preferences.vala:193
 msgid "Support us!"
 msgstr "Podpořte nás!"
 
 #. Reset
-#: src/Preferences.vala:139
+#: src/Preferences.vala:200
 msgid "Reset to Default"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:201
 msgid "Reset all settings to defaults"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/MainWindow.vala:137
+#: src/Preferences.vala:206
+msgid "Close"
+msgstr ""
+
+#: src/MainWindow.vala:147
 msgid "Edit title"
 msgstr "Upravit název"
 
-#: src/MainWindow.vala:168
+#: src/MainWindow.vala:178
 msgid "New sticky note"
 msgstr "Nová samolepicí poznámka"
 
-#: src/MainWindow.vala:181
+#: src/MainWindow.vala:191
 msgid "Delete sticky note"
 msgstr "Odstranění samolepicí poznámky"
 
-#: src/MainWindow.vala:201
+#: src/MainWindow.vala:211
 msgid "Insert emoji"
 msgstr "Vložte emoji"
 
-#: src/MainWindow.vala:239
+#: src/MainWindow.vala:249
 msgid "Preferences for this sticky note"
 msgstr "Předvolby pro tuto samolepicí poznámku"
 
-#: src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "Vždy zobrazte obsah samolepicích poznámek"
-
-#: src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "Skrytí obsahu nesoustředěných samolepicích poznámek"
-
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:79
 msgid "All my very best friends"
 msgstr "Všichni moji nejlepší přátelé"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:80
 msgid "My super good secret recipe"
 msgstr "Můj super dobrý tajný recept"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:81
 msgid "My todo list"
 msgstr "Můj seznam úkolů"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:82
 msgid "Super secret to not tell anyone"
 msgstr "Super tajemství, které nesmíte nikomu říct"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:83
 msgid "My grocery list"
 msgstr "Můj seznam potravin"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:84
 msgid "Random shower thoughts"
 msgstr "Náhodné myšlenky ze sprchy"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:85
 msgid "My fav fanfics"
 msgstr "Moje oblíbené fanouškovské texty"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:86
 msgid "My fav dinosaurs"
 msgstr "Moji oblíbení dinosauři"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:87
 msgid "My evil mastermind plan"
 msgstr "Můj ďábelský plán"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:88
 msgid "What made me smile today"
 msgstr "Co mě dnes rozesmálo"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:89
 msgid "Hello world!"
 msgstr "Ahoj světe!"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:90
 msgid "New sticky, new me"
 msgstr "Nové lepidlo, nové já"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:91
 msgid "Hidden pirate treasure"
 msgstr "Skrytý pirátský poklad"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:92
 msgid "To not forget, ever"
 msgstr "Nezapomenout, nikdy"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:93
 msgid "Dear Diary,"
 msgstr "Milý deníčku,"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:94
 msgid "Hi im a square"
 msgstr "Ahoj, jsem čtverec"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:95
 msgid "Have a nice day! :)"
 msgstr "Hezký den! :)"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:96
 msgid "My meds schedule"
 msgstr "Můj rozpis léků"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:97
 msgid "Household chores"
 msgstr "Domácí práce"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:98
 msgid "Ode to my cat"
 msgstr "Óda na mou kočku"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:99
 msgid "My dogs favourite toys"
 msgstr "Oblíbené hračky mých psů"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:100
 msgid "How cool my birds are"
 msgstr "Jak skvělí jsou moji ptáci"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:101
 msgid "Suspects in the Last Cookie affair"
 msgstr "Podezřelí v aféře Last Cookie"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:102
 msgid "Words my parrots know"
 msgstr "Slova, která moji papoušci znají"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:103
 msgid "Cool and funny compliments to give out"
 msgstr "Skvělé a vtipné komplimenty, které můžete rozdávat"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:104
 msgid "Ok, listen here,"
 msgstr "Dobře, poslouchejte,"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:105
 msgid "My dream Pokemon team"
 msgstr "Můj vysněný tým Pokémonů"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:106
 msgid "My little notes"
 msgstr "Moje malé poznámky"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:107
 msgid "Surprise gift list"
 msgstr "Seznam dárků s překvapením"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:108
 msgid "Brainstorming notes"
 msgstr "Poznámky k brainstormingu"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:109
 msgid "To bring to the party"
 msgstr "Přinést na večírek"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:110
 msgid "My amazing mixtape"
 msgstr "Můj úžasný mixtape"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:111
 msgid "Napkin scribblys"
 msgstr "Ubrousky scribblys"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:112
 msgid "My fav songs to sing along"
 msgstr "Moje oblíbené písničky, které si zpívám"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:113
 msgid "When to water which plant"
 msgstr "Kdy zalévat kterou rostlinu"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:114
 msgid "Top 10 anime betrayals"
 msgstr "10 nejlepších zrad v anime"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:115
 msgid "Amazing ascii art!"
 msgstr "Úžasné ascii umění!"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:116
 msgid "Now with more ligma!"
 msgstr "Nyní s více ligmy!"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:117
 msgid "I use arch btw"
 msgstr ""
+
+#: src/Services/Utils.vala:155
+msgid "🔥WOW Congratulations!🔥"
+msgstr ""
+
+#: src/Services/Utils.vala:157
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+
+#~ msgid "Sticky Note Colour"
+#~ msgstr "Barva samolepicího bločku"
+
+#~ msgid "Choose a colour for this sticky note"
+#~ msgstr "Výběr barvy pro tento samolepicí bloček"
+
+#~ msgid "Activate scribbly mode"
+#~ msgstr "Aktivace režimu scribbly"
+
+#~ msgid "Always show content of sticky notes"
+#~ msgstr "Vždy zobrazte obsah samolepicích poznámek"
+
+#~ msgid "Hide content of unfocused sticky notes"
+#~ msgstr "Skrytí obsahu nesoustředěných samolepicích poznámek"
 
 #~ msgid "ZOOM%"
 #~ msgstr "ZOOM%"

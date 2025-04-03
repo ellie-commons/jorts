@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 19:29+0100\n"
+"POT-Creation-Date: 2025-04-03 19:36+0200\n"
 "PO-Revision-Date: 2025-03-25 23:19+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -13,67 +13,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:45
+#: src/Widgets/ColorBox.vala:40
 msgid "Blueberry"
 msgstr "ブルーベリー"
 
-#: src/Widgets/ColorBox.vala:46
+#: src/Widgets/ColorBox.vala:41
 msgid "Lime"
 msgstr "ライム"
 
-#: src/Widgets/ColorBox.vala:47
+#: src/Widgets/ColorBox.vala:42
 msgid "Mint"
 msgstr "ミント"
 
-#: src/Widgets/ColorBox.vala:48
+#: src/Widgets/ColorBox.vala:43
 msgid "Banana"
 msgstr "バナナ"
 
-#: src/Widgets/ColorBox.vala:49
+#: src/Widgets/ColorBox.vala:44
 msgid "Strawberry"
 msgstr "ストロベリー"
 
-#: src/Widgets/ColorBox.vala:50
+#: src/Widgets/ColorBox.vala:45
 msgid "Orange"
 msgstr "オレンジ"
 
-#: src/Widgets/ColorBox.vala:51
+#: src/Widgets/ColorBox.vala:46
 msgid "Bubblegum"
 msgstr "バブルガム"
 
-#: src/Widgets/ColorBox.vala:52
+#: src/Widgets/ColorBox.vala:47
 msgid "Grape"
 msgstr "グレープ"
 
-#: src/Widgets/ColorBox.vala:53
+#: src/Widgets/ColorBox.vala:48
 msgid "Cocoa"
 msgstr "ココア"
 
-#: src/Widgets/ColorBox.vala:54
+#: src/Widgets/ColorBox.vala:49
 msgid "Slate"
 msgstr "スレート"
 
-#.
-#. THEME SELECTION
-#.
-#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:70
-msgid "Sticky Note Colour"
-msgstr "付箋の色"
-
-#: src/Widgets/SettingsPopover.vala:72
-msgid "Choose a colour for this sticky note"
-msgstr "付箋の色を選ぶ"
-
-#: src/Widgets/SettingsPopover.vala:94
+#: src/Widgets/SettingsPopover.vala:97
 msgid "Zoom out"
 msgstr "縮小"
 
-#: src/Widgets/SettingsPopover.vala:100
+#: src/Widgets/SettingsPopover.vala:103
 msgid "Default zoom level"
 msgstr "デフォルトのズームレベル"
 
-#: src/Widgets/SettingsPopover.vala:107
+#: src/Widgets/SettingsPopover.vala:110
 msgid "Zoom in"
 msgstr "拡大"
 
@@ -81,7 +69,7 @@ msgstr "拡大"
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:156
+#: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -89,215 +77,266 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
+#: src/Preferences.vala:59
 msgid "Preferences for your Jorts"
 msgstr "Jorts を着こなす"
 
-#: src/Preferences.vala:107
-msgid "Activate scribbly mode"
-msgstr "走り書きモードを有効にする"
-
 #: src/Preferences.vala:109
+msgid "Make unfocused notes unreadable"
+msgstr ""
+
+#: src/Preferences.vala:111
+#, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
+"content from peeking eyes (Ctrl+H)"
 msgstr ""
-"有効にすると、フォーカスされていない付箋は走り書きのように読めなくな"
-"り、内容の覗き見防止になります"
+"有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容"
+"の覗き見防止になります"
 
-#: src/Preferences.vala:132
+#: src/Preferences.vala:140
+msgid "Hide button bar"
+msgstr ""
+
+#: src/Preferences.vala:142
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+
+#: src/Preferences.vala:166
+msgid "Permissions"
+msgstr ""
+
+#: src/Preferences.vala:173
+msgid "Allow to start at login"
+msgstr ""
+
+#: src/Preferences.vala:175
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+
+#: src/Preferences.vala:193
 msgid "Support us!"
 msgstr "ご支援をお願いいたします!"
 
 #. Reset
-#: src/Preferences.vala:139
+#: src/Preferences.vala:200
 msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:201
 msgid "Reset all settings to defaults"
 msgstr "すべての設定をデフォルトに戻す"
 
-#: src/MainWindow.vala:137
+#: src/Preferences.vala:206
+msgid "Close"
+msgstr ""
+
+#: src/MainWindow.vala:147
 msgid "Edit title"
 msgstr "タイトルを編集"
 
-#: src/MainWindow.vala:168
+#: src/MainWindow.vala:178
 msgid "New sticky note"
 msgstr "新しい付箋"
 
-#: src/MainWindow.vala:181
+#: src/MainWindow.vala:191
 msgid "Delete sticky note"
 msgstr "付箋を削除"
 
-#: src/MainWindow.vala:201
+#: src/MainWindow.vala:211
 msgid "Insert emoji"
 msgstr "絵文字を挿入"
 
-#: src/MainWindow.vala:239
+#: src/MainWindow.vala:249
 msgid "Preferences for this sticky note"
 msgstr "この付箋の設定"
 
-#: src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "付箋の内容を常に表示"
-
-#: src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "フォーカスされていない付箋の内容を隠す"
-
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:79
 msgid "All my very best friends"
 msgstr "私の大事な親友"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:80
 msgid "My super good secret recipe"
 msgstr "とってもおいしい私の秘伝レシピ"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:81
 msgid "My todo list"
 msgstr "私のやることリスト"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:82
 msgid "Super secret to not tell anyone"
 msgstr "誰にも言えない秘密"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:83
 msgid "My grocery list"
 msgstr "食料品リスト"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:84
 msgid "Random shower thoughts"
 msgstr "脈絡のない思いつき"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:85
 msgid "My fav fanfics"
 msgstr "私のお気に入りの二次創作"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:86
 msgid "My fav dinosaurs"
 msgstr "私の好きな恐竜"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:87
 msgid "My evil mastermind plan"
 msgstr "ぼくのかんがえたさいきょうのいたずら作戦"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:88
 msgid "What made me smile today"
 msgstr "今日笑ったこと"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:89
 msgid "Hello world!"
 msgstr "こんにちは世界!"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:90
 msgid "New sticky, new me"
 msgstr "新しい付箋、新しい自分"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:91
 msgid "Hidden pirate treasure"
 msgstr "隠された海賊の財宝"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:92
 msgid "To not forget, ever"
 msgstr "決して忘れないために"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:93
 msgid "Dear Diary,"
 msgstr "私の日記"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:94
 msgid "Hi im a square"
 msgstr "やあ、僕は四角だよ"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:95
 msgid "Have a nice day! :)"
 msgstr "良い一日を! :)"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:96
 msgid "My meds schedule"
 msgstr "私の服用スケジュール"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:97
 msgid "Household chores"
 msgstr "家事"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:98
 msgid "Ode to my cat"
 msgstr "愛猫への頌歌"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:99
 msgid "My dogs favourite toys"
 msgstr "愛犬のお気に入りのおもちゃ"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:100
 msgid "How cool my birds are"
 msgstr "俺の飼っている鳥が好きすぎる件"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:101
 msgid "Suspects in the Last Cookie affair"
 msgstr "クッキー最後の一枚消失事件の容疑者"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:102
 msgid "Words my parrots know"
 msgstr "我が家のオウムが知っている言葉"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:103
 msgid "Cool and funny compliments to give out"
 msgstr "クールで面白い褒め言葉"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:104
 msgid "Ok, listen here,"
 msgstr "皆の衆、よく聞きたまえ!"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:105
 msgid "My dream Pokemon team"
 msgstr "夢のポケモンチーム"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:106
 msgid "My little notes"
 msgstr "私の小さなメモ"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:107
 msgid "Surprise gift list"
 msgstr "サプライズプレゼントリスト"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:108
 msgid "Brainstorming notes"
 msgstr "ブレインストーミング"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:109
 msgid "To bring to the party"
 msgstr "パーティーに持参する"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:110
 msgid "My amazing mixtape"
 msgstr "私の素晴らしいミックステープ"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:111
 msgid "Napkin scribblys"
 msgstr "紙ナプキンに落書き"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:112
 msgid "My fav songs to sing along"
 msgstr "一緒に歌いたいお気に入りの曲"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:113
 msgid "When to water which plant"
 msgstr "どの植物にいつ水をやるか"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:114
 msgid "Top 10 anime betrayals"
 msgstr "アニメの裏切りシーントップ 10"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:115
 msgid "Amazing ascii art!"
 msgstr "素晴らしいアスキーアート!"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:116
 msgid "Now with more ligma!"
 msgstr "今はより多くのリグマがある！"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:117
 msgid "I use arch btw"
 msgstr "I use arch btw"
+
+#: src/Services/Utils.vala:155
+msgid "🔥WOW Congratulations!🔥"
+msgstr ""
+
+#: src/Services/Utils.vala:157
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+
+#~ msgid "Sticky Note Colour"
+#~ msgstr "付箋の色"
+
+#~ msgid "Choose a colour for this sticky note"
+#~ msgstr "付箋の色を選ぶ"
+
+#~ msgid "Activate scribbly mode"
+#~ msgstr "走り書きモードを有効にする"
+
+#~ msgid "Always show content of sticky notes"
+#~ msgstr "付箋の内容を常に表示"
+
+#~ msgid "Hide content of unfocused sticky notes"
+#~ msgstr "フォーカスされていない付箋の内容を隠す"

@@ -50,15 +50,15 @@ namespace jorts.Constants {
     const int DEFAULT_HEIGHT             = 320;
 
     // New preference window
-    const int DEFAULT_PREF_WIDTH         = 440;
+    const int DEFAULT_PREF_WIDTH         = 530;
     const int DEFAULT_PREF_HEIGHT        = 290;
 
 
 
     /*************************************************/
     // Shortcuts
-    const string[] ACCELS_ZOOM_DEFAULT  = { "<control>0", "<Control>KP_0" };
-    const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>equal", "<Control>KP_Add" };
+    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal", "<control>0", "<Control>KP_0" };
+    const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>KP_Add" };
     const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
 
     const string ACTION_PREFIX   = "app.";
@@ -77,7 +77,7 @@ namespace jorts.Constants {
     const string[] ACCELS_SAVE =     {"<Control>s"};
     const string[] ACCELS_QUIT =     {"<Control>q"};
     const string[] ACCELS_SCRIBBLY =     {"<Control>h"};
-    const string[] ACCELS_EMOTE =     {"<Control>."};
+    const string[] ACCELS_EMOTE =     {"<Control>period"};
 
 
     /*************************************************/

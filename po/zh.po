@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 19:29+0100\n"
+"POT-Creation-Date: 2025-04-03 19:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,67 +13,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:45
+#: src/Widgets/ColorBox.vala:40
 msgid "Blueberry"
 msgstr "蓝莓"
 
-#: src/Widgets/ColorBox.vala:46
+#: src/Widgets/ColorBox.vala:41
 msgid "Lime"
 msgstr "石灰"
 
-#: src/Widgets/ColorBox.vala:47
+#: src/Widgets/ColorBox.vala:42
 msgid "Mint"
 msgstr "薄荷糖"
 
-#: src/Widgets/ColorBox.vala:48
+#: src/Widgets/ColorBox.vala:43
 msgid "Banana"
 msgstr "香蕉"
 
-#: src/Widgets/ColorBox.vala:49
+#: src/Widgets/ColorBox.vala:44
 msgid "Strawberry"
 msgstr "草莓"
 
-#: src/Widgets/ColorBox.vala:50
+#: src/Widgets/ColorBox.vala:45
 msgid "Orange"
 msgstr "橙色"
 
-#: src/Widgets/ColorBox.vala:51
+#: src/Widgets/ColorBox.vala:46
 msgid "Bubblegum"
 msgstr "泡泡糖"
 
-#: src/Widgets/ColorBox.vala:52
+#: src/Widgets/ColorBox.vala:47
 msgid "Grape"
 msgstr "葡萄"
 
-#: src/Widgets/ColorBox.vala:53
+#: src/Widgets/ColorBox.vala:48
 msgid "Cocoa"
 msgstr "可可"
 
-#: src/Widgets/ColorBox.vala:54
+#: src/Widgets/ColorBox.vala:49
 msgid "Slate"
 msgstr "石板"
 
-#.
-#. THEME SELECTION
-#.
-#. TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-#: src/Widgets/SettingsPopover.vala:70
-msgid "Sticky Note Colour"
-msgstr "便笺颜色"
-
-#: src/Widgets/SettingsPopover.vala:72
-msgid "Choose a colour for this sticky note"
-msgstr "为该便笺选择一种颜色"
-
-#: src/Widgets/SettingsPopover.vala:94
+#: src/Widgets/SettingsPopover.vala:97
 msgid "Zoom out"
 msgstr "放大"
 
-#: src/Widgets/SettingsPopover.vala:100
+#: src/Widgets/SettingsPopover.vala:103
 msgid "Default zoom level"
 msgstr "默认缩放级别"
 
-#: src/Widgets/SettingsPopover.vala:107
+#: src/Widgets/SettingsPopover.vala:110
 msgid "Zoom in"
 msgstr "放大"
 
@@ -81,7 +69,7 @@ msgstr "放大"
 #. Mainwindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:156
+#: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
 msgstr ""
@@ -89,217 +77,268 @@ msgstr ""
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
+#: src/Preferences.vala:59
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Preferences.vala:107
-msgid "Activate scribbly mode"
-msgstr "激活涂鸦模式"
-
 #: src/Preferences.vala:109
+msgid "Make unfocused notes unreadable"
+msgstr ""
+
+#: src/Preferences.vala:111
+#, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes"
+"content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
-#: src/Preferences.vala:132
+#: src/Preferences.vala:140
+msgid "Hide button bar"
+msgstr ""
+
+#: src/Preferences.vala:142
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+
+#: src/Preferences.vala:166
+msgid "Permissions"
+msgstr ""
+
+#: src/Preferences.vala:173
+msgid "Allow to start at login"
+msgstr ""
+
+#: src/Preferences.vala:175
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+
+#: src/Preferences.vala:193
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Preferences.vala:139
+#: src/Preferences.vala:200
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:201
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
 
-#: src/MainWindow.vala:137
+#: src/Preferences.vala:206
+msgid "Close"
+msgstr ""
+
+#: src/MainWindow.vala:147
 msgid "Edit title"
 msgstr "编辑标题"
 
-#: src/MainWindow.vala:168
+#: src/MainWindow.vala:178
 msgid "New sticky note"
 msgstr "新便笺"
 
-#: src/MainWindow.vala:181
+#: src/MainWindow.vala:191
 msgid "Delete sticky note"
 msgstr "删除便笺"
 
-#: src/MainWindow.vala:201
+#: src/MainWindow.vala:211
 msgid "Insert emoji"
 msgstr "插入表情符号"
 
-#: src/MainWindow.vala:239
+#: src/MainWindow.vala:249
 msgid "Preferences for this sticky note"
 msgstr "该便笺的首选项"
 
-#: src/MainWindow.vala:306
-msgid "Always show content of sticky notes"
-msgstr "始终显示便笺内容"
-
-#: src/MainWindow.vala:317
-msgid "Hide content of unfocused sticky notes"
-msgstr "隐藏无重点的便笺内容"
-
-#: src/Services/Utils.vala:78
+#: src/Services/Utils.vala:79
 msgid "All my very best friends"
 msgstr "我所有最好的朋友"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:80
 msgid "My super good secret recipe"
 msgstr "我的超级美味秘方"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:81
 msgid "My todo list"
 msgstr "我的待办事项清单"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:82
 msgid "Super secret to not tell anyone"
 msgstr "不告诉任何人的超级秘密"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:83
 msgid "My grocery list"
 msgstr "我的杂货清单"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:84
 msgid "Random shower thoughts"
 msgstr "淋浴时的随想"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:85
 msgid "My fav fanfics"
 msgstr "我最喜欢的同人小说"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:86
 msgid "My fav dinosaurs"
 msgstr "我最喜欢的恐龙"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:87
 msgid "My evil mastermind plan"
 msgstr "我的邪恶主谋计划"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:88
 msgid "What made me smile today"
 msgstr "今天让我微笑的事情"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:89
 msgid "Hello world!"
 msgstr "世界你好"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:90
 msgid "New sticky, new me"
 msgstr "新的粘性，新的我"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:91
 msgid "Hidden pirate treasure"
 msgstr "隐藏的海盗宝藏"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:92
 msgid "To not forget, ever"
 msgstr "永远不要忘记"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:93
 msgid "Dear Diary,"
 msgstr "亲爱的日记"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:94
 msgid "Hi im a square"
 msgstr "你好，我是方形人"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:95
 msgid "Have a nice day! :)"
 msgstr "祝您愉快:)"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:96
 msgid "My meds schedule"
 msgstr "我的服药时间表"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:97
 msgid "Household chores"
 msgstr "家务劳动"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:98
 msgid "Ode to my cat"
 msgstr "我的猫颂"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:99
 msgid "My dogs favourite toys"
 msgstr "我的狗狗最喜欢的玩具"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:100
 msgid "How cool my birds are"
 msgstr "我的小鸟多酷啊"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:101
 msgid "Suspects in the Last Cookie affair"
 msgstr "最后一块饼干事件的嫌疑人"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:102
 msgid "Words my parrots know"
 msgstr "我的鹦鹉会说的话"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:103
 msgid "Cool and funny compliments to give out"
 msgstr "酷炫有趣的赞美词"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:104
 msgid "Ok, listen here,"
 msgstr "好吧，听我说、"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:105
 msgid "My dream Pokemon team"
 msgstr "我梦想中的宠物小精灵团队"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:106
 msgid "My little notes"
 msgstr "我的小纸条"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:107
 msgid "Surprise gift list"
 msgstr "惊喜礼物清单"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:108
 msgid "Brainstorming notes"
 msgstr "集思广益说明"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:109
 msgid "To bring to the party"
 msgstr "带到派对上"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:110
 msgid "My amazing mixtape"
 msgstr "我的神奇混音带"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:111
 msgid "Napkin scribblys"
 msgstr "餐巾纸涂鸦"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:112
 msgid "My fav songs to sing along"
 msgstr "我最喜欢唱的歌"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:113
 msgid "When to water which plant"
 msgstr "何时给哪种植物浇水"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:114
 msgid "Top 10 anime betrayals"
 msgstr "十大动漫背叛事件"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:115
 msgid "Amazing ascii art!"
 msgstr "令人惊叹的 ascii 艺术！"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:116
 msgid "Now with more ligma!"
 msgstr "现在有了更多的灯具！"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:117
 msgid "I use arch btw"
 msgstr ""
+
+#: src/Services/Utils.vala:155
+msgid "🔥WOW Congratulations!🔥"
+msgstr ""
+
+#: src/Services/Utils.vala:157
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+
+#~ msgid "Sticky Note Colour"
+#~ msgstr "便笺颜色"
+
+#~ msgid "Choose a colour for this sticky note"
+#~ msgstr "为该便笺选择一种颜色"
+
+#~ msgid "Activate scribbly mode"
+#~ msgstr "激活涂鸦模式"
+
+#~ msgid "Always show content of sticky notes"
+#~ msgstr "始终显示便笺内容"
+
+#~ msgid "Hide content of unfocused sticky notes"
+#~ msgstr "隐藏无重点的便笺内容"
 
 #~ msgid "ZOOM%"
 #~ msgstr "ZOOM%"

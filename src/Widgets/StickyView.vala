@@ -60,10 +60,10 @@ public class jorts.StickyView : Granite.HyperTextView {
         public StickyView (string? content) {
 
                 this.buffer = new Gtk.TextBuffer (null);
-                this.bottom_margin = 10;
-                this.left_margin = 10;
-                this.right_margin = 10;
-                this.top_margin = 10;
+                this.bottom_margin = 12;
+                this.left_margin = 12;
+                this.right_margin = 12;
+                this.top_margin = 12;
 
                 this.set_hexpand (true);
                 this.set_vexpand (true);

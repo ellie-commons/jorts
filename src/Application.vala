@@ -126,11 +126,11 @@ namespace jorts {
             add_action (zoom_out);
 
             var zoom_default = new SimpleAction ("zoom_default", null);
-            set_accels_for_action ("app.zoom_default", { "<control>0", "<Control>KP_0", null });
+            set_accels_for_action ("app.zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0", null });
             add_action (zoom_default);
 
             var zoom_in = new SimpleAction ("zoom_in", null);
-            set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>equal", "<Control>KP_Add", null });
+            set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>KP_Add", null });
             add_action (zoom_in);
 
             var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);

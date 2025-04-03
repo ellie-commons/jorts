@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-24 19:29+0100\n"
+"POT-Creation-Date: 2025-04-03 19:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,10 +140,50 @@ msgid "The preferences dialog in dark mode"
 msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
+#, fuzzy
+msgid "2.4.0 The Jorts of Ice"
+msgstr "2.2.0 Šviesos šortai"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
+msgid "Fixed elements moving when a note title is hovered or selected"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
+msgid ""
+"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
+"feel more at home now"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
+msgid "Respect reduce animations settings"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
+msgid "New and delete accels were not working oops sorry it's fixed now"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+msgid "Bugfix where random components skipped the last possible choice"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:99
+msgid "Lil easter egg"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
+#, fuzzy
+msgid "Scribble mode exclusively in the preferences now"
+msgstr "\"scribbly\" režimas perkeltas į naująjį nustatymų dialogo langą"
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
+msgid "Add preference: now you can hide the bottom bar!"
+msgstr ""
+
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:107
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 Vidiniai šortai"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
 msgid ""
 "New feature: Preferences dialog! Right-click on the app icon to see the "
 "option"
@@ -151,11 +191,11 @@ msgstr ""
 "Nauja funkcija: Nustatymų dialogas! Dešiniuoju pelės klavišu spustelėkite "
 "programos piktogramą, kad pamatytumėte parinktį"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:110
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "\"scribbly\" režimas perkeltas į naująjį nustatymų dialogo langą"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 #, fuzzy
 msgid ""
 "For translators: Translations have been separated in 2: One for the UI one "
@@ -164,34 +204,34 @@ msgstr ""
 "Vertėjams skirtas patobulinimas: Vienas iš jų skirtas vartotojo sąsajai, "
 "kitas - papildomam turiniui."
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:97
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
 msgid "Comfort: Easier to grab and drag stickies"
 msgstr "Patogumas: Lengviau paimti ir vilkti lipdukus"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:98
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:113
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr "Klaidų taisymas: ekrano nuotraukos programėlėje buvo netvarkingos aaaa"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:104
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:119
 msgid "Updated translations"
 msgstr "Atnaujinti vertimai"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:109
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 Šviesos šortai"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:126
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:141
 msgid "Better translation coverage"
 msgstr "Geresnė vertimo aprėptis"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:127
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr ""
 "Nauja funkcija: \"scribbly\" režimas! Paslėpkite lipnių užrašų turinį, kai "
 "nesufokusuojama"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:113
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
@@ -199,13 +239,13 @@ msgstr ""
 "Nauja funkcija: Emocijų rinkimo mygtukas! Žinau, kad dešiniuoju pelės "
 "klavišu yra vienas, bet mygtukai yra labiau prieinami!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:114
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:129
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr ""
 "Įrankių juostoje esantis mygtukas kiekvieną kartą spustelėjus parodo "
 "atsitiktinę emociją!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:115
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
@@ -213,78 +253,78 @@ msgstr ""
 "Nauja funkcija: \"Jorts\" kas mėnesį daro atsarginę kopiją. Jei kiltų kokių "
 "nors problemų, galite atkurti duomenis!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:116
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr ""
 "Jei pagrindinė saugykla būtų sugadinta, \"Jorts\" bando įkelti iš atsarginės "
 "kopijos"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:117
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:132
 msgid "Some new fun/cute default titles"
 msgstr "Keletas naujų smagių / mielų numatytųjų pavadinimų"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:118
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:133
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Pakeitimai po gaubtu, kad kodas būtų švaresnis"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:124
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:139
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 Neišsipildantys šortai"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:127
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
 msgid "Add relief to actionbar buttons"
 msgstr "Veiksmų juostos mygtukų reljefo pridėjimas"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:143
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr ""
 "Klaidų taisymas: kraštinis atvejis, kai tema arba priartinimas nebuvo "
 "tinkamai išsaugoti"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:129
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:144
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr ""
 "Klaidų taisymas: neteisingai nustatytas daugiaprogramės programos pavadinimas"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:145
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "Klaidų taisymas: piktogramų nenuoseklumas įvairiose piktogramų temose"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:131
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Klaidų taisymas: Temos neatitikimai tarp lipdukų"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:137
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 Ką tik iš skalbyklos! (2: Electric Boogaloo)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:139
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
 msgid "Clearer appmenu description"
 msgstr "Aiškesnis programėlės meniu aprašymas"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:140
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
 msgid "More consistent theming"
 msgstr "Nuoseklesnė tematika"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:141
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "Klaidų taisymas: trinti nuorodą buvo neatsakinga"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:142
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:157
 msgid "Bugfix: screenshot not showing"
 msgstr "Klaidų taisymas: nerodoma ekrano nuotrauka"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:163
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 Ką tik iš skalbyklos!"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr ""
 "Įtrauktas kiekvienos natos priartinimas! Taigi galite gauti didesnį arba "
 "mažesnį tekstą"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:151
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -292,71 +332,71 @@ msgstr ""
 "Paskutinis nustatytas priartinimas, dar žinomas kaip jums patogiausias, "
 "išlieka numatytuoju naujiems užrašams."
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:152
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Geresnis skaitomumas (WCAG AA arba AAA, priklausomai nuo temos)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Taip pat šiek tiek geriau atrodanti tema. Taip, net daugiau :)"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:154
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Improved translations"
 msgstr "Patobulinti vertimai"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:155
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
 msgid "Better shortcut and tooltips"
 msgstr "Geresnės sparčiųjų klavišų ir įrankių nuorodos"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:156
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "Ištaisyta klaida, kai \"Jorts\" likdavo ant šviesos sistemos temos"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:162
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:177
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 \"Appcenter\" išleidimas"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:182
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 išleidimas: Šlaitas ir kramtomoji guma"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Senovinės, bet labai mėgstamos \"Notejot\" versijos atgaivinimas"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:185
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Dabar programėlė pavadinta \"Jorts\". Tačiau jūs negalite jos dėvėti"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:186
 msgid "10 lovely little colours"
 msgstr "10 gražių mažų spalvų"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:172
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:187
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr ""
 "Sukurta remiantis šiuolaikinėmis \"Linux\" technologijomis ir pakuočių "
 "formatais."
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:173
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:188
 msgid "Smooth transition when changing theme"
 msgstr "Sklandus perėjimas keičiant temą"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:174
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:189
 msgid "New stickies have a random fun little title and colour"
 msgstr "Nauji lipdukai turi atsitiktinį linksmą pavadinimą ir spalvą"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:175
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:190
 msgid "A few initial translations included, and more to come"
 msgstr "Keletas pradinių vertimų ir dar daugiau vertimų"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:176
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:191
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
 "El. paštą ir nuorodas galima spustelėti! Ctrl+paspauskite, jei norite "
 "atidaryti laišką arba naršyklę"
 
-#: data/io.github.ellie_commons.jorts.metainfo.xml.in:177
+#: data/io.github.ellie_commons.jorts.metainfo.xml.in:192
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 "Tekstas palaiko atšaukimo ir pakartotinio atšaukimo funkcijas, be to, galite "

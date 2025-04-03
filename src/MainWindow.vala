@@ -208,7 +208,7 @@ namespace jorts {
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
             var emoji_button = new Gtk.MenuButton();
-            emoji_button.tooltip_markup = Granite.markup_accel_tooltip (jorts.Constants.ACCELS_EMOTE,_("Insert emoji"));
+            emoji_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Control>period"},_("Insert emoji"));
             emoji_button.has_tooltip = true;
             emoji_button.set_icon_name(jorts.Utils.random_emote (null));
             emoji_button.add_css_class("themedbutton");

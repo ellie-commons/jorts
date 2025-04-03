@@ -40,6 +40,8 @@ namespace jorts {
 
             var gtk_settings = Gtk.Settings.get_default ();
 
+            this.set_resizable (false);
+
             // Since each sticky note adopts a different accent color
             // we have to revert to default when this one is focused
             this.notify["is-active"].connect(() => {
@@ -60,13 +62,13 @@ namespace jorts {
             
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
-                show_title_buttons = true,
+                show_title_buttons = false,
             };
 
             set_titlebar (headerbar);
             set_size_request (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
             set_default_size (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
-            resizable = true;
+
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
@@ -104,7 +106,7 @@ namespace jorts {
                     valign = Gtk.Align.CENTER,
                 };
 
-                var scribbly_label = new Granite.HeaderLabel (_("Activate scribbly mode")) {
+                var scribbly_label = new Granite.HeaderLabel (_("Make unfocused notes unreadable")) {
                     mnemonic_widget = scribbly_toggle,
                     secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)")
                 };
@@ -197,7 +199,7 @@ namespace jorts {
             var reset_button = new Gtk.Button();
             reset_button.set_label( _("Reset to Default"));
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
-            actionbar.pack_end (reset_button);
+            //actionbar.pack_end (reset_button);
 
             reset_button.clicked.connect(() => {
                 string[] keys = {"scribbly-mode-active","hide-bar"};
@@ -205,6 +207,14 @@ namespace jorts {
                     Application.gsettings.reset (key);
                 }
             });
+
+
+            var close_button = new Gtk.Button();
+            close_button.set_label( _("Close"));
+            close_button.clicked.connect(() => {this.close();});
+            actionbar.pack_end (close_button);
+
+
 
             mainbox.append (settingsbox);
             mainbox.append(actionbar);
