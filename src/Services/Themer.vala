@@ -74,8 +74,7 @@ namespace jorts.Themer {
             window.${accent_color} overshoot.left {
             background: linear-gradient(to left, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0) 80%, alpha(mix(@${accent_color}_500, @${accent_color}_700, 0.3), 0.25) 100%); }
 
-            window.${accent_color} textview text selection,
-            window.${accent_color} editablelabel text selection {
+            window.${accent_color} text selection {
                 color: shade(@${accent_color}_100, 1.88);
                 background-color: @${accent_color}_900;
             }
@@ -92,8 +91,7 @@ namespace jorts.Themer {
 
             window.${accent_color} titlebar,
             window.${accent_color} textview,
-            window.${accent_color} textview text,
-            window.${accent_color} editablelabel.editing text {
+            window.${accent_color} editablelabel.editing {
                 background-color: transparent;
                 border-bottom-color: @${accent_color}_100;
                 color: shade(@${accent_color}_900, 0.77);
@@ -120,7 +118,7 @@ namespace jorts.Themer {
             }
 
             window.${accent_color}:backdrop editablelabel {
-                color: alpha(@${accent_color}_900, 0.70);
+                color: alpha(@${accent_color}_900, 0.75);
             }
 
             window.${accent_color}:backdrop editablelabel,

@@ -18,28 +18,45 @@
 * Boston, MA 02110-1301 USA
 */
 
- /* workaround to headerlabel 
- .heading {
-    font-weight: 700;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
-}*/
-
 windowcontrols:backdrop button {
     background: none;
 }
 
-textview,
-textview text,
-headertitle {
-    background-image: none;
-    font-weight: 500;
-    font-size: 1.2em;
-    box-shadow: none;
+
+
+
+editablelabel {
+    font-weight: 800;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-shadow: 0px 1px rgba(255,255,255,0.5);
+/*     text-shadow: none; */
+    letter-spacing: .03em;
 }
 
+textview,
+editablelabel.editing {
+    background-image: none;
+    font-weight: 500;
+    box-shadow: none;
+    text-shadow: none;
+    line-height: 1.35em;
+    letter-spacing: .01em;
+}
+
+
+
+
+
+/* Fix buttons in popover inheriting the color */
+popover button image {
+    color: @fg_color;
+}
+
+
+
 actionbar {
-    box-shadow: none; /* Pondering. It looks good with, too */
+    box-shadow: none;  /*Pondering. It looks good with, too */
     background-color: transparent;
     background-image: none;
     padding: 3px;
@@ -57,28 +74,11 @@ actionbar .themedbutton:focus {
     border-radius: 6px;
 }
 
-editablelabel {
-    font-weight: 800;
-/*    font-size: 1.10em;*/
-    padding-left: 24px;
-    padding-right: 24px;
-/*     text-shadow: 0px 1px rgba(255,255,255,0.5); */
-    text-shadow: none;
-    letter-spacing: .02em;
-}
-
-/* Smaller text when editing */
-editablelabel.editing {
-    font-weight: 500;
-/*     font-size: 1em; */
-    letter-spacing: .0em;
-}
 
 
-/* Fix buttons in popover inheriting the color */
-popover button image {
-    color: @fg_color;
-}
+
+
+
 
 
 /* Obfuscate note */
@@ -90,8 +90,6 @@ window.scribbly editablelabel {
 
 
 /* Font zooms */
-
-
 window.antsized textview {font-size: 0.4em;}
 window.antsized editablelabel {font-size: 0.25em;}
 window.antsized editablelabel.editing {font-size: 0.20em;}

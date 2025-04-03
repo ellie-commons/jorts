@@ -91,14 +91,15 @@
             <description>
                 <p>2.4.0 The Jorts of Ice</p>
                 <ul>
-                    <li>Fixed elements moving when a note title is hovered or selected</li>
                     <li>Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now</li>
                     <li>Respect reduce animations settings</li>
-                    <li>New and delete accels were not working oops sorry it's fixed now</li>
-                    <li>Bugfix where random components skipped the last possible choice</li>
-                    <li>Lil easter egg</li>
                     <li>Scribble mode exclusively in the preferences now</li>
-                    <li>Add preference: now you can hide the bottom bar!</li>
+                    <li>Add preference: now you can hide the bottom bar! (Ctrl+t)</li>
+                    <li>Bugfix: Fixed elements moving when a note title is hovered or selected</li>
+                    <li>Bugfix: New and delete accels were not working oops sorry it's fixed now</li>
+                    <li>Bugfix where random components skipped the last possible choice</li>
+                    <li>Bugfix: shortcut for emotes did not show up properly</li>
+                    <li>Lil easter egg</li>
                 </ul>
             </description>
         </release>
