@@ -110,6 +110,9 @@ namespace jorts {
             var new_action = new SimpleAction ("new", null);
             set_accels_for_action ("app.action_new", {"<Control>n"});
             add_action (new_action);
+            new_action.activate.connect (() => {
+                this.create_note(null);
+            });
 
             var delete_action = new SimpleAction ("delete", null);
             set_accels_for_action ("app.action_delete", {"<Control>w"});

@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 19:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,69 +72,61 @@ msgstr "Acercar"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:59
+#: src/Preferences.vala:72
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Preferencias para esta nota pegajosa"
 
-#: src/Preferences.vala:109
+#: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Hacer ilegibles las notas desenfocadas"
 
-#: src/Preferences.vala:111
+#: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Si se activan, las notas adhesivas desenfocadas se vuelven ilegibles para "
-"proteger su contenido de miradas indiscretas"
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Si se activan, las notas adhesivas desenfocadas se vuelven ilegibles para proteger su contenido de miradas indiscretas"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Ocultar barra de botones"
 
-#: src/Preferences.vala:142
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+#: src/Preferences.vala:155
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Si está activada, oculta la barra inferior de las notas adhesivas. Los atajos de teclado seguirán funcionando (Ctrl+T)"
 
-#: src/Preferences.vala:166
+#: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Permisos"
 
-#: src/Preferences.vala:173
+#: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Permitir el inicio de sesión"
 
-#: src/Preferences.vala:175
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+#: src/Preferences.vala:188
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Puedes configurar las notas adhesivas para que aparezcan cuando te conectes añadiendo Jorts al inicio automático"
 
-#: src/Preferences.vala:193
+#: src/Preferences.vala:206
 msgid "Support us!"
 msgstr "¡Apóyenos!"
 
 #. Reset
-#: src/Preferences.vala:200
+#: src/Preferences.vala:213
 msgid "Reset to Default"
 msgstr "Restablecer valores por defecto"
 
-#: src/Preferences.vala:201
+#: src/Preferences.vala:214
 msgid "Reset all settings to defaults"
 msgstr "Restablecer todos los ajustes por defecto"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -310,11 +302,11 @@ msgstr "¡Ahora con más ligma!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Yo uso arch"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW ¡Felicidades!🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -325,7 +317,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Ha encontrado la nota adhesiva dorada.\n"
+"\n"
+"CRAZY BUT TRU: ¡Este mensaje aparece una de cada mil veces!\n"
+"Nadie te creerá jejeje ;)\n"
+"\n"
+"Espero que mi pequeña aplicación te traiga muchas alegrías\n"
+"Que tengáis un gran día!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Nota adhesiva color"

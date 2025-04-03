@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 19:36+0200\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "PO-Revision-Date: 2025-03-25 23:19+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -77,15 +77,15 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:59
+#: src/Preferences.vala:72
 msgid "Preferences for your Jorts"
 msgstr "Jorts を着こなす"
 
-#: src/Preferences.vala:109
+#: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
 msgstr ""
 
-#: src/Preferences.vala:111
+#: src/Preferences.vala:124
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
@@ -94,44 +94,44 @@ msgstr ""
 "有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容"
 "の覗き見防止になります"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:153
 msgid "Hide button bar"
 msgstr ""
 
-#: src/Preferences.vala:142
+#: src/Preferences.vala:155
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
 msgstr ""
 
-#: src/Preferences.vala:166
+#: src/Preferences.vala:179
 msgid "Permissions"
 msgstr ""
 
-#: src/Preferences.vala:173
+#: src/Preferences.vala:186
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Preferences.vala:175
+#: src/Preferences.vala:188
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
 msgstr ""
 
-#: src/Preferences.vala:193
+#: src/Preferences.vala:206
 msgid "Support us!"
 msgstr "ご支援をお願いいたします!"
 
 #. Reset
-#: src/Preferences.vala:200
+#: src/Preferences.vala:213
 msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
-#: src/Preferences.vala:201
+#: src/Preferences.vala:214
 msgid "Reset all settings to defaults"
 msgstr "すべての設定をデフォルトに戻す"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:226
 msgid "Close"
 msgstr ""
 

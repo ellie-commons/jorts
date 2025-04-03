@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fr\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 19:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fr\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,68 +72,60 @@ msgstr "Zoom avant"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:59
+#: src/Preferences.vala:72
 msgid "Preferences for your Jorts"
 msgstr "Préférences pour vos Jorts"
 
-#: src/Preferences.vala:109
+#: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Rendre illisibles les notes non ciblées"
 
-#: src/Preferences.vala:111
+#: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Si cette option est activée, les notes autocollantes non ciblées deviennent "
-"illisibles afin de protéger leur contenu des regards indiscrets."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets."
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Masquer la barre de boutons"
 
-#: src/Preferences.vala:142
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+#: src/Preferences.vala:155
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Si cette option est activée, elle masque la barre inférieure des notes autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)."
 
-#: src/Preferences.vala:166
+#: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Permissions"
 
-#: src/Preferences.vala:173
+#: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Autoriser le démarrage à l'ouverture de la session"
 
-#: src/Preferences.vala:175
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+#: src/Preferences.vala:188
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque vous vous connectez en ajoutant Jorts au démarrage automatique."
 
-#: src/Preferences.vala:193
+#: src/Preferences.vala:206
 msgid "Support us!"
 msgstr "Nous soutenir !"
 
 #. Reset
-#: src/Preferences.vala:200
+#: src/Preferences.vala:213
 msgid "Reset to Default"
 msgstr "Rétablissement des valeurs par défaut"
 
-#: src/Preferences.vala:201
+#: src/Preferences.vala:214
 msgid "Reset all settings to defaults"
 msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -309,11 +301,11 @@ msgstr "Maintenant avec plus de lumière !"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "J'utilise arch btw"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW Félicitations!🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -324,7 +316,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Vous avez trouvé le Golden Sticky Note !\n"
+"\n"
+"CRAZY BUT TRU : Ce message apparaît une fois sur mille !\n"
+"Personne ne vous croira héhéhé ;)\n"
+"\n"
+"J'espère que ma petite application vous apportera beaucoup de joie\n"
+"Bonne journée!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Note autocollante Couleur"

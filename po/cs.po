@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: cs\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-04-03 21:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-03 19:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: cs\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -72,69 +72,61 @@ msgstr "Přiblížení"
 #: src/Widgets/SettingsPopover.vala:157
 #, c-format
 msgid "%d%%"
-msgstr ""
+msgstr "%d%%"
 
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:59
+#: src/Preferences.vala:72
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
-#: src/Preferences.vala:109
+#: src/Preferences.vala:122
 msgid "Make unfocused notes unreadable"
-msgstr ""
+msgstr "Znepřehledněte poznámky"
 
-#: src/Preferences.vala:111
+#: src/Preferences.vala:124
 #, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Pokud je tato funkce povolena, stanou se nesoustředěné samolepicí poznámky "
-"nečitelnými, aby byl jejich obsah chráněn před pohledy zvědavců."
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Pokud je tato funkce povolena, stanou se nesoustředěné samolepicí poznámky nečitelnými, aby byl jejich obsah chráněn před pohledy zvědavců."
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:153
 msgid "Hide button bar"
-msgstr ""
+msgstr "Skrytí panelu tlačítek"
 
-#: src/Preferences.vala:142
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
+#: src/Preferences.vala:155
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Pokud je tato možnost povolena, skryje spodní lištu v samolepicích poznámkách. Klávesové zkratky budou stále funkční (Ctrl+T)."
 
-#: src/Preferences.vala:166
+#: src/Preferences.vala:179
 msgid "Permissions"
-msgstr ""
+msgstr "Oprávnění"
 
-#: src/Preferences.vala:173
+#: src/Preferences.vala:186
 msgid "Allow to start at login"
-msgstr ""
+msgstr "Povolit spuštění při přihlášení"
 
-#: src/Preferences.vala:175
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
+#: src/Preferences.vala:188
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Můžete nastavit, aby se samolepicí poznámky zobrazovaly při přihlášení, a to přidáním aplikace Jorts do autostartu."
 
-#: src/Preferences.vala:193
+#: src/Preferences.vala:206
 msgid "Support us!"
 msgstr "Podpořte nás!"
 
 #. Reset
-#: src/Preferences.vala:200
+#: src/Preferences.vala:213
 msgid "Reset to Default"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/Preferences.vala:201
+#: src/Preferences.vala:214
 msgid "Reset all settings to defaults"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:226
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -310,11 +302,11 @@ msgstr "Nyní s více ligmy!"
 
 #: src/Services/Utils.vala:117
 msgid "I use arch btw"
-msgstr ""
+msgstr "Používám arch btw"
 
 #: src/Services/Utils.vala:155
 msgid "🔥WOW Congratulations!🔥"
-msgstr ""
+msgstr "🔥WOW Gratulujeme!🔥"
 
 #: src/Services/Utils.vala:157
 msgid ""
@@ -325,7 +317,16 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
+"Našli jste zlatou samolepku!\n"
+"\n"
+"CRAZY BUT TRU: Tento vzkaz se objeví jednou za tisíc případů!\n"
+"Nikdo vám to neuvěří, hehehe ;)\n"
+"\n"
+"Doufám, že vám moje malá aplikace přinese spoustu radosti.\n"
+"Přeji krásný den!🎇\n"
+""
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Barva samolepicího bločku"

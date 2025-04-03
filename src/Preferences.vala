@@ -31,12 +31,25 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 namespace jorts {
     public class PreferenceWindow :  Gtk.Window {
 
+        public const string ACTION_PREFIX   = "app.";
+        public const string ACTION_NEW      = "action_new";
+
+        public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+
+        private const GLib.ActionEntry[] action_entries = {
+            { ACTION_NEW,               action_new      }
+        };
 
         public PreferenceWindow (Gtk.Application app) {
             debug("Showing preference window");
 
             Object (application: app);
             Intl.setlocale ();
+
+            var actions = new SimpleActionGroup ();
+            actions.add_action_entries (action_entries, this);
+            insert_action_group ("app", actions);
+
 
             var gtk_settings = Gtk.Settings.get_default ();
 
@@ -228,6 +241,11 @@ namespace jorts {
             this.show ();
             this.present ();
         }
+
+        private void action_new () {
+            ((Application)this.application).create_note(null);
+        }
+
 
     }
 }
