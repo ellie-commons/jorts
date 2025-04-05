@@ -53,8 +53,6 @@ namespace jorts {
 
             var gtk_settings = Gtk.Settings.get_default ();
 
-            this.set_resizable (false);
-
             // Since each sticky note adopts a different accent color
             // we have to revert to default when this one is focused
             this.notify["is-active"].connect(() => {
@@ -75,7 +73,8 @@ namespace jorts {
             
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
-                show_title_buttons = false,
+                show_title_buttons = true,
+                decoration_layout = "close:"
             };
 
             set_titlebar (headerbar);
@@ -150,7 +149,7 @@ namespace jorts {
                     valign = Gtk.Align.CENTER,
                 };
 
-                var hidebar_label = new Granite.HeaderLabel (_("Hide button bar")) {
+                var hidebar_label = new Granite.HeaderLabel (_("Hide buttons")) {
                     mnemonic_widget = hidebar_toggle,
                     secondary_text = _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)")
                 };
@@ -212,7 +211,7 @@ namespace jorts {
             var reset_button = new Gtk.Button();
             reset_button.set_label( _("Reset to Default"));
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
-            //actionbar.pack_end (reset_button);
+            actionbar.pack_end (reset_button);
 
             reset_button.clicked.connect(() => {
                 string[] keys = {"scribbly-mode-active","hide-bar"};
@@ -222,10 +221,10 @@ namespace jorts {
             });
 
 
-            var close_button = new Gtk.Button();
-            close_button.set_label( _("Close"));
-            close_button.clicked.connect(() => {this.close();});
-            actionbar.pack_end (close_button);
+            //  var close_button = new Gtk.Button();
+            //  close_button.set_label( _("Close"));
+            //  close_button.clicked.connect(() => {this.close();});
+            //  actionbar.pack_end (close_button);
 
 
 
