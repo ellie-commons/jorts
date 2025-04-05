@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,55 +77,50 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Préférences pour vos Jorts"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Rendre illisibles les notes non ciblées"
 
-#: src/Preferences.vala:124
-#, fuzzy
+#: src/Preferences.vala:123
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets."
+msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets (Ctrl+F)"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
-msgstr "Masquer la barre de boutons"
+#: src/Preferences.vala:152
+msgid "Hide buttons"
+msgstr "Masquer les boutons"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Si cette option est activée, elle masque la barre inférieure des notes autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)."
+msgstr "Si cette option est activée, elle masque la barre inférieure des notes autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Permissions"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Autoriser le démarrage à l'ouverture de la session"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque vous vous connectez en ajoutant Jorts au démarrage automatique."
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Nous soutenir !"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Rétablissement des valeurs par défaut"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Fermer"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -326,6 +321,9 @@ msgstr ""
 "J'espère que ma petite application vous apportera beaucoup de joie\n"
 "Bonne journée!🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Fermer"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Note autocollante Couleur"

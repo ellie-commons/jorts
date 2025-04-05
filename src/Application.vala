@@ -242,7 +242,7 @@ namespace jorts {
 
         // Load everything we have
         foreach (noteData data in loaded_data) {
-            print("Loaded: " + data.title + "\n");
+            debug("Loaded: " + data.title + "\n");
             this.create_note(data);
         }
 

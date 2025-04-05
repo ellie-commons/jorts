@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,55 +77,50 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Voreinstellungen für deine Jorts!"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Unscharfe Notizen unlesbar machen"
 
-#: src/Preferences.vala:124
-#, fuzzy
+#: src/Preferences.vala:123
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um ihren Inhalt vor neugierigen Blicken zu schützen."
+msgstr "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+msgid "Hide buttons"
 msgstr "Schaltflächenleiste ausblenden"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die Tastaturkürzel funktionieren weiterhin (Strg+T)"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Berechtigungen"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Starten bei der Anmeldung zulassen"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Uns unterstützen!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Auf Standard zurücksetzen"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Schließen Sie"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -326,6 +321,9 @@ msgstr ""
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Schließen Sie"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Haftnotiz Farbe"

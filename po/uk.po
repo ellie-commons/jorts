@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,56 +77,53 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Налаштування для всіх стікерів"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Зробіть розфокусовані нотатки нечитабельними"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Якщо увімкнено, розфокусовані стікери стають нечитабельними, щоб захистити їхній вміст від сторонніх очей"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "Приховати панель кнопок"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Якщо увімкнено, приховує нижній рядок у нотатках. Комбінації клавіш працюватимуть як і раніше (Ctrl+T)"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Дозволи"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Дозволити запуск при вході в систему"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Ви можете налаштувати появу стікерів при вході в систему, додавши Jorts до автозапуску"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Підтримайте нас!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Скидання до налаштувань за замовчуванням"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Скидання всіх налаштувань до значень за замовчуванням"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Закрити"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -327,6 +324,9 @@ msgstr ""
 "Сподіваюся, мій маленький додаток принесе вам багато радості\n"
 "Гарного дня! 🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Закрити"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Колір стікера Колір стікера"

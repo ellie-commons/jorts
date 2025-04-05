@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Leo <lenemter@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-02-17 22:17+0300\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -76,56 +76,53 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "предпочтения для этой липкой ноты"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Сделайте несфокусированные заметки нечитаемыми"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Если эта функция включена, то несфокусированные липкие заметки становятся нечитаемыми, чтобы защитить их содержимое от посторонних глаз"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "Скрыть панель кнопок"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Если эта опция включена, она скрывает нижнюю полосу в липких заметках. Клавиатурные сокращения по-прежнему будут работать (Ctrl+T)"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Разрешения"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Разрешить запуск при входе в систему"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Вы можете установить, чтобы липкие заметки появлялись при входе в систему, добавив Jorts в автозапуск"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Поддержите нас!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Сброс настроек по умолчанию"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Сброс всех настроек до значений по умолчанию"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Закрыть"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -326,6 +323,9 @@ msgstr ""
 "Надеюсь, мое маленькое приложение принесет вам много радости.\n"
 "Хорошего дня! 🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Цвет заметки"

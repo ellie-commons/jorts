@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,56 +77,53 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "让没有重点的笔记无法阅读"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "隐藏按钮栏"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "权限"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "允许在登录时启动"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "关闭"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -327,6 +324,9 @@ msgstr ""
 "希望我的小应用程序能给您带来无限欢乐\n"
 "祝您愉快！ 🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "关闭"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "便笺颜色"

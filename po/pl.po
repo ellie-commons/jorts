@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,55 +77,52 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Preferencje dotyczące spodenek Jorts"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Sprawiają, że nieostre notatki stają się nieczytelne"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "Ukryj pasek przycisków"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Jeśli jest włączona, ukrywa dolny pasek w notatkach samoprzylepnych. Skróty klawiaturowe będą nadal działać (Ctrl+T)."
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Uprawnienia"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Zezwalaj na uruchomienie przy logowaniu"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Można ustawić wyświetlanie notatek samoprzylepnych po zalogowaniu, dodając Jorts do autostartu"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Wesprzyj nas!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Przywróć ustawienia domyślne"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Resetowanie wszystkich ustawień do wartości domyślnych"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Zamknij"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -326,6 +323,9 @@ msgstr ""
 "Mam nadzieję, że moja mała aplikacja przyniesie Ci wiele radości\n"
 "Miłego dnia!🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Zamknij"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Kolor karteczki samoprzylepnej"

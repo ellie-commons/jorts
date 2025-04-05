@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-03-25 23:19+0900\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,55 +77,52 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Jorts を着こなす"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "焦点の定まらないメモを読めなくする"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容の覗き見防止になります"
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "ボタンバーを隠す"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "有効にすると、付箋のボトムバーが非表示になります。キーボードショートカットは機能します。"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "アクセス許可"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "ログイン時に開始できるようにする"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定できます。"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "ご支援をお願いいたします!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "すべての設定をデフォルトに戻す"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "閉じる"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -326,6 +323,9 @@ msgstr ""
 "私の小さなアプリがあなたにたくさんの喜びをもたらすことを願っています。\n"
 "素晴らしい一日をお過ごしください。\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "閉じる"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "付箋の色"

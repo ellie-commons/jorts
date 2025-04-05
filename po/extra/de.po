@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -122,9 +122,8 @@ msgid "The preferences dialog in dark mode"
 msgstr "Der Einstellungsdialog im dunklen Modus"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
-#, fuzzy
 msgid "2.4.0 The Jorts of Ice"
-msgstr "2.2.0 Die Jorts des Lichts"
+msgstr "2.4.0 Die Jorts des Eis"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
 msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
@@ -135,7 +134,6 @@ msgid "Respect reduce animations settings"
 msgstr "Einstellungen zur Reduzierung von Animationen respektieren"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:96
-#, fuzzy
 msgid "Scribble mode exclusively in the preferences now"
 msgstr "Der Schreibmodus wurde in den neuen Einstellungsdialog verschoben."
 
@@ -176,7 +174,6 @@ msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "Der Schreibmodus wurde in den neuen Einstellungsdialog verschoben."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
-#, fuzzy
 msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
 msgstr "Verbesserung für Übersetzer: Die Übersetzungen wurden in 2 aufgeteilt: Eine für die Benutzeroberfläche und eine für den zusätzlichen Inhalt"
 
@@ -189,7 +186,6 @@ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr "Bugfix: Screenshots im Appcenter waren unübersichtlich aaaa"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:120
-#, fuzzy
 msgid "Updated translations"
 msgstr "Aktualisierte Übersetzungen"
 
@@ -203,7 +199,6 @@ msgid "Better translation coverage"
 msgstr "Bessere Übersetzungsabdeckung"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
-#, fuzzy
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr "Neue Funktion: Scribbly-Modus! Inhalt von Haftnotizen ausblenden, wenn nicht fokussiert"
 
@@ -312,7 +307,6 @@ msgid "2.0.1 Appcenter release"
 msgstr "Version 2.0.1 Appcenter"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
-#, fuzzy
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 Veröffentlichung: Schiefer und Bubblegum"
 

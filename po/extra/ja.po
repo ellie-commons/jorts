@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-03-25 22:37+0900\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-03 21:06+0200\n"
+"POT-Creation-Date: 2025-04-05 17:50+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -77,54 +77,51 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:72
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Jūsų šortų pageidavimai"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:121
 msgid "Make unfocused notes unreadable"
 msgstr "Nesufokusuotas pastabas paverskite neįskaitomomis"
 
-#: src/Preferences.vala:124
+#: src/Preferences.vala:123
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Jei įjungta, nesufokusuoti lipnūs užrašai tampa neįskaitomi, kad jų turinys būtų apsaugotas nuo žvilgsnių (Ctrl+H)."
 
-#: src/Preferences.vala:153
-msgid "Hide button bar"
+#: src/Preferences.vala:152
+#, fuzzy
+msgid "Hide buttons"
 msgstr "Paslėpti mygtukų juostą"
 
-#: src/Preferences.vala:155
+#: src/Preferences.vala:154
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Jei įjungta, paslepiama lipnių užrašų apatinė juosta. Klaviatūros spartieji klavišai vis tiek veiks (Ctrl+T)"
 
-#: src/Preferences.vala:179
+#: src/Preferences.vala:178
 msgid "Permissions"
 msgstr "Leidimai"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:185
 msgid "Allow to start at login"
 msgstr "Leisti paleisti prisijungus"
 
-#: src/Preferences.vala:188
+#: src/Preferences.vala:187
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Galite nustatyti, kad lipnūs užrašai būtų rodomi, kai prisijungiate, pridėdami \"Jorts\" į automatinio paleidimo"
 
-#: src/Preferences.vala:206
+#: src/Preferences.vala:205
 msgid "Support us!"
 msgstr "Palaikykite mus!"
 
 #. Reset
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset to Default"
 msgstr "Iš naujo nustatyti numatytąjį nustatymą"
 
-#: src/Preferences.vala:214
+#: src/Preferences.vala:213
 msgid "Reset all settings to defaults"
 msgstr "Iš naujo nustatyti visus numatytuosius nustatymus"
-
-#: src/Preferences.vala:226
-msgid "Close"
-msgstr "Uždaryti"
 
 #: src/MainWindow.vala:147
 msgid "Edit title"
@@ -325,3 +322,6 @@ msgstr ""
 "Tikiuosi, kad mano maža programėlė suteiks jums daug džiaugsmo\n"
 "Geros dienos!🎇\n"
 ""
+
+#~ msgid "Close"
+#~ msgstr "Uždaryti"
