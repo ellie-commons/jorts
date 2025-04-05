@@ -63,7 +63,7 @@ public class jorts.StickyView : Granite.HyperTextView {
                 this.bottom_margin = 12;
                 this.left_margin = 12;
                 this.right_margin = 12;
-                this.top_margin = 12;
+                this.top_margin = 6;
 
                 this.set_hexpand (true);
                 this.set_vexpand (true);

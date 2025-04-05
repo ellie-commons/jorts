@@ -53,6 +53,28 @@ namespace jorts.Utils {
         }
     }
 
+    /*************************************************/
+    // We cannot use numbers in CSS, so we have to translate a number into a string
+    public int zoom_to_UIsize(int zoom) {
+        switch (zoom) {
+            case 20: return 24;
+            case 40: return 26;
+            case 60: return 28;
+            case 80: return 30;
+            case 100: return 32;
+            case 120: return 34;
+            case 140: return 38;
+            case 160: return 40;
+            case 180: return 44;
+            case 200: return 48;
+            case 220: return 52;
+            case 240: return 54;
+            case 260: return 56;
+            case 280: return 60;
+            case 300: return 64;
+            default: return 32;
+        }
+    }
 
     /*************************************************/
     // Spits out a random theme for a new note

@@ -106,6 +106,7 @@ namespace jorts {
             this.data = data;
             this.title_name = data.title;
             this.theme = data.theme;
+            this.zoom = data.zoom;
             this.content = data.content;
 
             this.set_title (this.title_name);
@@ -138,7 +139,7 @@ namespace jorts {
 
             //headerbar.decoration_layout = "close:";
             headerbar.set_show_title_buttons(false);
-            headerbar.height_request = 36;
+            headerbar.height_request = jorts.Utils.zoom_to_UIsize(this.zoom);
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
@@ -474,14 +475,18 @@ namespace jorts {
 
         // Switch zoom classes, then reflect in the UI and tell the application
         public void set_zoom(int zoom) {
+
+
             // Switches the classes that control font size
             this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
             this.zoom = zoom;
             this.add_css_class (jorts.Utils.zoom_to_class( this.zoom));
 
+            this.headerbar.height_request = jorts.Utils.zoom_to_UIsize(this.zoom);
+
             // Reflect the number in the popover
             this.popover.set_zoomlevel(zoom);
-
+            
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
         }
