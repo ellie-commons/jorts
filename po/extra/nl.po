@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-05 17:50+0200\n"
+"POT-Creation-Date: 2025-04-05 19:38+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 

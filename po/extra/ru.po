@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Leo <lenemter@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-02-17 22:17+0300\n"
-"POT-Creation-Date: 2025-04-05 17:50+0200\n"
+"POT-Creation-Date: 2025-04-05 19:38+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 

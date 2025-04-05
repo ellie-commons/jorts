@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-05 17:50+0200\n"
+"POT-Creation-Date: 2025-04-05 19:38+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -125,187 +125,187 @@ msgstr "Obnovení výchozího nastavení"
 msgid "Reset all settings to defaults"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/MainWindow.vala:147
+#: src/MainWindow.vala:148
 msgid "Edit title"
 msgstr "Upravit název"
 
-#: src/MainWindow.vala:178
+#: src/MainWindow.vala:179
 msgid "New sticky note"
 msgstr "Nová samolepicí poznámka"
 
-#: src/MainWindow.vala:191
+#: src/MainWindow.vala:192
 msgid "Delete sticky note"
 msgstr "Odstranění samolepicí poznámky"
 
-#: src/MainWindow.vala:211
+#: src/MainWindow.vala:212
 msgid "Insert emoji"
 msgstr "Vložte emoji"
 
-#: src/MainWindow.vala:249
+#: src/MainWindow.vala:250
 msgid "Preferences for this sticky note"
 msgstr "Předvolby pro tuto samolepicí poznámku"
 
-#: src/Services/Utils.vala:79
+#: src/Services/Utils.vala:101
 msgid "All my very best friends"
 msgstr "Všichni moji nejlepší přátelé"
 
-#: src/Services/Utils.vala:80
+#: src/Services/Utils.vala:102
 msgid "My super good secret recipe"
 msgstr "Můj super dobrý tajný recept"
 
-#: src/Services/Utils.vala:81
+#: src/Services/Utils.vala:103
 msgid "My todo list"
 msgstr "Můj seznam úkolů"
 
-#: src/Services/Utils.vala:82
+#: src/Services/Utils.vala:104
 msgid "Super secret to not tell anyone"
 msgstr "Super tajemství, které nesmíte nikomu říct"
 
-#: src/Services/Utils.vala:83
+#: src/Services/Utils.vala:105
 msgid "My grocery list"
 msgstr "Můj seznam potravin"
 
-#: src/Services/Utils.vala:84
+#: src/Services/Utils.vala:106
 msgid "Random shower thoughts"
 msgstr "Náhodné myšlenky ze sprchy"
 
-#: src/Services/Utils.vala:85
+#: src/Services/Utils.vala:107
 msgid "My fav fanfics"
 msgstr "Moje oblíbené fanouškovské texty"
 
-#: src/Services/Utils.vala:86
+#: src/Services/Utils.vala:108
 msgid "My fav dinosaurs"
 msgstr "Moji oblíbení dinosauři"
 
-#: src/Services/Utils.vala:87
+#: src/Services/Utils.vala:109
 msgid "My evil mastermind plan"
 msgstr "Můj ďábelský plán"
 
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:110
 msgid "What made me smile today"
 msgstr "Co mě dnes rozesmálo"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:111
 msgid "Hello world!"
 msgstr "Ahoj světe!"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:112
 msgid "New sticky, new me"
 msgstr "Nové lepidlo, nové já"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:113
 msgid "Hidden pirate treasure"
 msgstr "Skrytý pirátský poklad"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:114
 msgid "To not forget, ever"
 msgstr "Nezapomenout, nikdy"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:115
 msgid "Dear Diary,"
 msgstr "Milý deníčku,"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:116
 msgid "Hi im a square"
 msgstr "Ahoj, jsem čtverec"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Hezký den! :)"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:118
 msgid "My meds schedule"
 msgstr "Můj rozpis léků"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:119
 msgid "Household chores"
 msgstr "Domácí práce"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:120
 msgid "Ode to my cat"
 msgstr "Óda na mou kočku"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:121
 msgid "My dogs favourite toys"
 msgstr "Oblíbené hračky mých psů"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:122
 msgid "How cool my birds are"
 msgstr "Jak skvělí jsou moji ptáci"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:123
 msgid "Suspects in the Last Cookie affair"
 msgstr "Podezřelí v aféře Last Cookie"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:124
 msgid "Words my parrots know"
 msgstr "Slova, která moji papoušci znají"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:125
 msgid "Cool and funny compliments to give out"
 msgstr "Skvělé a vtipné komplimenty, které můžete rozdávat"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:126
 msgid "Ok, listen here,"
 msgstr "Dobře, poslouchejte,"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:127
 msgid "My dream Pokemon team"
 msgstr "Můj vysněný tým Pokémonů"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:128
 msgid "My little notes"
 msgstr "Moje malé poznámky"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:129
 msgid "Surprise gift list"
 msgstr "Seznam dárků s překvapením"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:130
 msgid "Brainstorming notes"
 msgstr "Poznámky k brainstormingu"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:131
 msgid "To bring to the party"
 msgstr "Přinést na večírek"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:132
 msgid "My amazing mixtape"
 msgstr "Můj úžasný mixtape"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:133
 msgid "Napkin scribblys"
 msgstr "Ubrousky scribblys"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:134
 msgid "My fav songs to sing along"
 msgstr "Moje oblíbené písničky, které si zpívám"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:135
 msgid "When to water which plant"
 msgstr "Kdy zalévat kterou rostlinu"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:136
 msgid "Top 10 anime betrayals"
 msgstr "10 nejlepších zrad v anime"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:137
 msgid "Amazing ascii art!"
 msgstr "Úžasné ascii umění!"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:138
 msgid "Now with more ligma!"
 msgstr "Nyní s více ligmy!"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:139
 msgid "I use arch btw"
 msgstr "Používám arch btw"
 
-#: src/Services/Utils.vala:155
+#: src/Services/Utils.vala:177
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Gratulujeme!🔥"
 
-#: src/Services/Utils.vala:157
+#: src/Services/Utils.vala:179
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
