@@ -121,15 +121,13 @@ namespace jorts.Stash {
 
 
         }
+        print(loaded_data.size.to_string());
 
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
             debug("nothing loaded");
             noteData blank_slate    = jorts.Utils.random_note(null);
-
-            if ((blank_slate.content != "") && (blank_slate.theme != "BANANA")) { 
-                blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
-            }
+            blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
 
             loaded_data.add(blank_slate);
         }
