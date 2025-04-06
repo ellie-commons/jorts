@@ -73,8 +73,7 @@ namespace jorts {
             
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
-                show_title_buttons = true,
-                decoration_layout = "close:"
+                show_title_buttons = true
             };
 
             set_titlebar (headerbar);

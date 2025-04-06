@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-05 19:38+0200\n"
+"POT-Creation-Date: 2025-04-06 12:41+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -82,45 +82,45 @@ msgstr "%d%%"
 msgid "Preferences for your Jorts"
 msgstr "Innstillinger for denne klistrelappen"
 
-#: src/Preferences.vala:121
+#: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
 msgstr "Gjør ufokuserte notater uleselige"
 
-#: src/Preferences.vala:123
+#: src/Preferences.vala:122
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Hvis denne funksjonen er aktivert, blir ufokuserte klistrelapper uleselige for å beskytte innholdet mot nysgjerrige blikk (Ctrl+H)"
 
-#: src/Preferences.vala:152
+#: src/Preferences.vala:151
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Skjul knappelinjen"
 
-#: src/Preferences.vala:154
+#: src/Preferences.vala:153
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Hvis denne funksjonen er aktivert, skjules den nederste linjen i klistrelapper. Tastatursnarveier vil fortsatt fungere (Ctrl+T)"
 
-#: src/Preferences.vala:178
+#: src/Preferences.vala:177
 msgid "Permissions"
 msgstr "Tillatelser"
 
-#: src/Preferences.vala:185
+#: src/Preferences.vala:184
 msgid "Allow to start at login"
 msgstr "Tillat å starte ved pålogging"
 
-#: src/Preferences.vala:187
+#: src/Preferences.vala:186
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Du kan angi at klistrelappene skal vises når du logger på ved å legge til Jorts i autostart"
 
-#: src/Preferences.vala:205
+#: src/Preferences.vala:204
 msgid "Support us!"
 msgstr "Støtt oss!"
 
 #. Reset
-#: src/Preferences.vala:212
+#: src/Preferences.vala:211
 msgid "Reset to Default"
 msgstr "Tilbakestill til standard"
 
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset all settings to defaults"
 msgstr "Tilbakestill alle innstillinger til standardinnstillingene"
 
