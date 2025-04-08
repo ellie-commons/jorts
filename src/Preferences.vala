@@ -169,7 +169,7 @@ namespace jorts {
                 /*************************************************/
                 /*               Autostart Link                  */
                 /*************************************************/
-
+#if FLATHUB_BUILD
                 var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
                 var permissions_link = new Gtk.LinkButton.with_label (
@@ -190,7 +190,7 @@ namespace jorts {
                 permissions_box.append (permissions_label);
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
-
+#endif
 
             /*************************************************/
             // Bar at the bottom
