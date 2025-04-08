@@ -169,7 +169,13 @@ namespace jorts {
                 /*************************************************/
                 /*               Autostart Link                  */
                 /*************************************************/
-#if FLATHUB_BUILD
+
+
+        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        
+        // Show only in Pantheon because others do not have an autostart panel
+        if (desktop_environment == "Pantheon") {
+
                 var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
                 var permissions_link = new Gtk.LinkButton.with_label (
@@ -190,7 +196,8 @@ namespace jorts {
                 permissions_box.append (permissions_label);
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
-#endif
+
+        }
 
             /*************************************************/
             // Bar at the bottom
