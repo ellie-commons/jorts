@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-05 19:38+0200\n"
+"POT-Creation-Date: 2025-04-06 12:41+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -82,46 +82,46 @@ msgstr "%d%%"
 msgid "Preferences for your Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
-#: src/Preferences.vala:121
+#: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
 msgstr "Znepřehledněte poznámky"
 
-#: src/Preferences.vala:123
+#: src/Preferences.vala:122
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Pokud je tato funkce povolena, stanou se nesoustředěné samolepicí poznámky nečitelnými, aby byl jejich obsah chráněn před pohledy zvědavců."
 
-#: src/Preferences.vala:152
+#: src/Preferences.vala:151
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Skrytí panelu tlačítek"
 
-#: src/Preferences.vala:154
+#: src/Preferences.vala:153
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Pokud je tato možnost povolena, skryje spodní lištu v samolepicích poznámkách. Klávesové zkratky budou stále funkční (Ctrl+T)."
 
-#: src/Preferences.vala:178
+#: src/Preferences.vala:177
 msgid "Permissions"
 msgstr "Oprávnění"
 
-#: src/Preferences.vala:185
+#: src/Preferences.vala:184
 msgid "Allow to start at login"
 msgstr "Povolit spuštění při přihlášení"
 
-#: src/Preferences.vala:187
+#: src/Preferences.vala:186
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Můžete nastavit, aby se samolepicí poznámky zobrazovaly při přihlášení, a to přidáním aplikace Jorts do autostartu."
 
-#: src/Preferences.vala:205
+#: src/Preferences.vala:204
 msgid "Support us!"
 msgstr "Podpořte nás!"
 
 #. Reset
-#: src/Preferences.vala:212
+#: src/Preferences.vala:211
 msgid "Reset to Default"
 msgstr "Obnovení výchozího nastavení"
 
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset all settings to defaults"
 msgstr "Obnovení výchozího nastavení"
 

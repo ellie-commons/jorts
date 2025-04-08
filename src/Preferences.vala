@@ -73,8 +73,7 @@ namespace jorts {
             
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
-                show_title_buttons = true,
-                decoration_layout = "close:"
+                show_title_buttons = true
             };
 
             set_titlebar (headerbar);
@@ -171,6 +170,12 @@ namespace jorts {
                 /*               Autostart Link                  */
                 /*************************************************/
 
+
+        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        
+        // Show only in Pantheon because others do not have an autostart panel
+        if (desktop_environment == "Pantheon") {
+
                 var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
                 var permissions_link = new Gtk.LinkButton.with_label (
@@ -192,6 +197,7 @@ namespace jorts {
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
 
+        }
 
             /*************************************************/
             // Bar at the bottom

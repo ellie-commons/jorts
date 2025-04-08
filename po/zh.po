@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-05 19:38+0200\n"
+"POT-Creation-Date: 2025-04-06 12:41+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -82,46 +82,46 @@ msgstr "%d%%"
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Preferences.vala:121
+#: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
 msgstr "让没有重点的笔记无法阅读"
 
-#: src/Preferences.vala:123
+#: src/Preferences.vala:122
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
-#: src/Preferences.vala:152
+#: src/Preferences.vala:151
 #, fuzzy
 msgid "Hide buttons"
 msgstr "隐藏按钮栏"
 
-#: src/Preferences.vala:154
+#: src/Preferences.vala:153
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
-#: src/Preferences.vala:178
+#: src/Preferences.vala:177
 msgid "Permissions"
 msgstr "权限"
 
-#: src/Preferences.vala:185
+#: src/Preferences.vala:184
 msgid "Allow to start at login"
 msgstr "允许在登录时启动"
 
-#: src/Preferences.vala:187
+#: src/Preferences.vala:186
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
 
-#: src/Preferences.vala:205
+#: src/Preferences.vala:204
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Preferences.vala:212
+#: src/Preferences.vala:211
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
 

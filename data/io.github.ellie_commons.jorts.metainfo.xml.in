@@ -87,7 +87,17 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="2.4.0" date="2025-05-04">
+        <release version="2.4.2" date="2025-04-06">
+            <description>
+                <p>Updated RU translations thanks to @camellan!</p>
+            </description>
+        </release>
+        <release version="2.4.1" date="2025-04-06">
+            <description>
+                <p>Updated screenshots</p>
+            </description>
+        </release>
+        <release version="2.4.0" date="2025-04-05">
             <description>
                 <p>2.4.0 The Jorts of Ice</p>
                 <ul>

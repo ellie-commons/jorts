@@ -1,7 +1,7 @@
 id: io.github.ellie_commons.jorts
-runtime: io.elementary.Platform
-runtime-version: '8'
-sdk: io.elementary.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
 command: io.github.ellie_commons.jorts
 finish-args:
   - '--share=ipc'
@@ -9,24 +9,25 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
 modules:
-  - name: jorts
-    buildsystem: meson
-    sources:
-      - type: dir
-        path: .
   - name: granite
     buildsystem: meson
     source:
       - type: git
         url: https://github.com/elementary/granite/
+        tag: 7.6.0
         commit: 065ba1f245b60ef867a6ca145e0891cf84eddcc7
   - name: stylesheet
     buildsystem: meson
     source:
       - type: git
         url: https://github.com/elementary/stylesheet/
+        tag: 8.2.0
         commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
-
+  - name: jorts
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
 
 
 

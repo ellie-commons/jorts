@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-03-25 23:19+0900\n"
-"POT-Creation-Date: 2025-04-05 19:38+0200\n"
+"POT-Creation-Date: 2025-04-06 12:41+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -81,46 +81,46 @@ msgstr "%d%%"
 msgid "Preferences for your Jorts"
 msgstr "Jorts を着こなす"
 
-#: src/Preferences.vala:121
+#: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
 msgstr "焦点の定まらないメモを読めなくする"
 
-#: src/Preferences.vala:123
+#: src/Preferences.vala:122
 #, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容の覗き見防止になります"
 
-#: src/Preferences.vala:152
+#: src/Preferences.vala:151
 #, fuzzy
 msgid "Hide buttons"
 msgstr "ボタンバーを隠す"
 
-#: src/Preferences.vala:154
+#: src/Preferences.vala:153
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "有効にすると、付箋のボトムバーが非表示になります。キーボードショートカットは機能します。"
 
-#: src/Preferences.vala:178
+#: src/Preferences.vala:177
 msgid "Permissions"
 msgstr "アクセス許可"
 
-#: src/Preferences.vala:185
+#: src/Preferences.vala:184
 msgid "Allow to start at login"
 msgstr "ログイン時に開始できるようにする"
 
-#: src/Preferences.vala:187
+#: src/Preferences.vala:186
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定できます。"
 
-#: src/Preferences.vala:205
+#: src/Preferences.vala:204
 msgid "Support us!"
 msgstr "ご支援をお願いいたします!"
 
 #. Reset
-#: src/Preferences.vala:212
+#: src/Preferences.vala:211
 msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
-#: src/Preferences.vala:213
+#: src/Preferences.vala:212
 msgid "Reset all settings to defaults"
 msgstr "すべての設定をデフォルトに戻す"
 
