@@ -36,6 +36,15 @@ Stella, current main dev:
   </a>
 </p>
 
+
+
+The icon is done by wpkelso! An otter with a turtleneck
+
+https://github.com/sponsors/wpkelso
+
+
+
+
 ## 🏗️ Building
 
 Please make sure you have these dependencies first before building Jorts.

@@ -1,4 +1,4 @@
-id: io.github.ellie_commons.jorts
+id: io.github.ellie_commons.jorts.flathubedition
 runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk

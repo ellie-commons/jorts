@@ -87,6 +87,15 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.0.0" date="2025-04-06">
+            <description>
+                <p>3.0.0 Jorts of Thunder</p>
+                <ul>
+                    <li>A lovely brand new icon thanks to @wpkelso</li>
+                    <li>Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.4.2" date="2025-04-06">
             <description>
                 <p>Updated RU translations thanks to @camellan!</p>
