@@ -11,6 +11,14 @@
 
 <br/>
 
+## Installation
+
+link to appcenter here
+
+link to add remote and install here
+
+
+
 ## 🛣️ Roadmap
 
 Jorts is a cute simple little notes app
@@ -67,11 +75,22 @@ As of the current date (16March2025), here are the package names to install:
 sudo apt install libgranite-7-common libjson-glib-dev libgee-0.8-2 meson valac libvala-0.56-0 flatpak-builder gettext
 ```
 
-Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory, and run the following command:
+Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory,
+and run the following command:
+
+On elementary OS or with its appcenter remote installed
 
 ```bash
 flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yml
 ```
+
+On other systems:
+
+```bash
+flatpak run org.flatpak.Builder --force-clean --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.ellie_commons.jorts-flathub.yml
+```
+
+
 
 ## 💾 Notes Storage
 
