@@ -87,7 +87,7 @@ flatpak-builder --force-clean --user --install-deps-from=appcenter --install bui
 On other systems:
 
 ```bash
-flatpak run org.flatpak.Builder --force-clean --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.ellie_commons.jorts-flathub.yml
+flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.ellie_commons.jorts-flathub.yml
 ```
 
 
