@@ -20,6 +20,20 @@
 
 /*
 
+load_node
+--> Json.Object representing a noteData, that we convert into one
+TODO: move this shit into Objects
+
+jsonify
+--> Convert an array of windows into a long json string
+Used by the main application to get everything in a convenient form for storage
+
+load_parser
+--> takes the loaded content from storage, spits an array with sticky notes data
+used by the stash upon loading a storage file, passed on to Application to start new windows
+
+
+
 
 
 */

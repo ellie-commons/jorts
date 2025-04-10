@@ -21,7 +21,10 @@
 /*
 
 generate_css(theme)
+--> On the fly generation of a whole stylesheet depending on a elementary OS accent color name
+
 init_all_themes()
+--> Loop through a list of defined accent colors to generate stylesheets and load them all
 
 */
 

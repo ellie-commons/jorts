@@ -1,7 +1,8 @@
 id: io.github.ellie_commons.jorts.flathubedition
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+# elementary SDK is not available on Flathub, so use GNOME SDK and install elementary stylesheet and granite as modules
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
 command: io.github.ellie_commons.jorts
 finish-args:
   - '--share=ipc'
@@ -9,7 +10,47 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
 modules:
-  # TODO Remove when https://github.com/flathub/io.elementary.BaseApp/pull/30 is merged
+
+
+  - name: sassc
+    cleanup:
+      - '*'
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/sass/sassc/archive/refs/tags/3.6.2.tar.gz
+        sha256: 608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - autoreconf -si
+    modules:
+      - name: libsass
+        cleanup:
+          - '*'
+        buildsystem: autotools
+        sources:
+          - type: archive
+            url: https://github.com/sass/libsass/archive/refs/tags/3.6.5.tar.gz
+            sha256: 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
+          - type: script
+            dest-filename: autogen.sh
+            commands:
+              - autoreconf -si
+
+  - name: elementary-stylesheet
+    buildsystem: meson
+    cleanup:
+      - /share/metainfo
+    sources:
+      - type: git
+        url: https://github.com/elementary/stylesheet.git
+        tag: 8.2.0
+        commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
+
   - name: granite
     buildsystem: meson
     config-opts:
@@ -26,5 +67,9 @@ modules:
           type: git
           tag-pattern: '^([\d.]+)$'
 
-
+  - name: jorts
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
 
