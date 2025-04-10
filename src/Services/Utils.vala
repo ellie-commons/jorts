@@ -201,7 +201,7 @@ Have a great day!🎇
         var randtitle = jorts.Utils.random_title();
         string randtheme = jorts.Utils.random_theme (skip_theme);
 
-        noteData randnote = new noteData( randtitle, randtheme, "", jorts.Constants.DEFAULT_ZOOM);
+        noteData randnote = new noteData( randtitle, randtheme, "", jorts.Constants.DEFAULT_ZOOM, jorts.Constants.DEFAULT_WIDTH, jorts.Constants.DEFAULT_HEIGHT);
 
 
         return randnote; 

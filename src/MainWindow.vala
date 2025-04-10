@@ -111,8 +111,8 @@ namespace jorts {
 
             this.set_title (this.title_name);
             this.set_default_size (
-                jorts.Constants.DEFAULT_WIDTH, 
-                jorts.Constants.DEFAULT_HEIGHT
+                data.width, 
+                data.height
             );
 
             // Rebuild the whole theming
@@ -402,11 +402,16 @@ namespace jorts {
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
 
+            int width ; int height;
+            this.get_default_size(out width, out height);
+
             var data = new noteData(
                 current_title,
                 this.theme,
                 this.content,
-                this.zoom);
+                this.zoom,
+                    width,
+                    height);
 
             return data;
         }

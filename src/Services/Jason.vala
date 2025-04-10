@@ -26,8 +26,6 @@
 
 namespace jorts.Jason {
 
-
-
     /*************************************************/
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
@@ -46,10 +44,12 @@ namespace jorts.Jason {
             zoom = jorts.Constants.ZOOM_MAX;
         }
 
-        jorts.noteData loaded_note = new jorts.noteData(title, theme, content, (int) zoom);
+        int64 width      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_WIDTH);
+        int64 height      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_HEIGHT);
+
+        jorts.noteData loaded_note = new jorts.noteData(title, theme, content, (int)zoom, (int)width, (int)height);
         return loaded_note;
     }
-
 
     /*************************************************/
     // Loop through the list of windows and convert it into a giant json string
@@ -70,6 +70,10 @@ namespace jorts.Jason {
             builder.add_string_value (data.content);
 			builder.set_member_name ("zoom");
             builder.add_int_value (data.zoom);
+            builder.set_member_name ("height");
+            builder.add_int_value (data.height);
+            builder.set_member_name ("width");
+            builder.add_int_value (data.width);
             builder.end_object ();
         };
         builder.end_array ();
@@ -80,11 +84,6 @@ namespace jorts.Jason {
         string str = generator.to_data (null);
         return str;
     }
-
-
-
-
-
 
     /*************************************************/    
     public Gee.ArrayList<jorts.noteData> load_parser(Json.Parser parser) {

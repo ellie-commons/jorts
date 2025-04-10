@@ -1,7 +1,9 @@
 id: io.github.ellie_commons.jorts.flathubedition
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+base: io.elementary.BaseApp
+base-version: 'circe-24.08'
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
 command: io.github.ellie_commons.jorts
 finish-args:
   - '--share=ipc'
@@ -25,6 +27,19 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
+  - name: stylesheet
+    buildsystem: meson
+    source:
+      - type: git
+        url: https://github.com/elementary/stylesheet/
+        tag: 8.2.0
+        commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
+  - name: jorts
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
+
 
 
 
