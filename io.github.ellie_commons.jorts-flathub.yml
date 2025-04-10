@@ -1,4 +1,4 @@
-id: io.github.ellie_commons.jorts.flathubedition
+id: io.github.ellie_commons.jorts
 # elementary SDK is not available on Flathub, so use GNOME SDK and install elementary stylesheet and granite as modules
 runtime: org.gnome.Platform
 runtime-version: '47'
