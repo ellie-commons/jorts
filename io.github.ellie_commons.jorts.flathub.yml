@@ -1,4 +1,4 @@
-id: io.github.ellie_commons.jorts.flathubedition
+id: io.github.ellie_commons.jorts
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
