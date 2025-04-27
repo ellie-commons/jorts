@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-06 12:41+0200\n"
+"POT-Creation-Date: 2025-04-27 13:51+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -100,28 +100,28 @@ msgstr "Skryť panel tlačidiel"
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Ak je táto možnosť zapnutá, skryje spodný pruh v samolepiacich poznámkach. Klávesové skratky budú stále funkčné (Ctrl+T)"
 
-#: src/Preferences.vala:177
+#: src/Preferences.vala:183
 msgid "Permissions"
 msgstr "Oprávnenia"
 
-#: src/Preferences.vala:184
+#: src/Preferences.vala:190
 msgid "Allow to start at login"
 msgstr "Umožniť spustenie pri prihlásení"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:192
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Môžete nastaviť, aby sa samolepiace poznámky zobrazovali pri prihlásení, a to pridaním aplikácie Jorts do funkcie autostart"
 
-#: src/Preferences.vala:204
+#: src/Preferences.vala:211
 msgid "Support us!"
 msgstr "Podporte nás!"
 
 #. Reset
-#: src/Preferences.vala:211
+#: src/Preferences.vala:218
 msgid "Reset to Default"
 msgstr "Obnovenie predvoleného nastavenia"
 
-#: src/Preferences.vala:212
+#: src/Preferences.vala:219
 msgid "Reset all settings to defaults"
 msgstr "Obnovenie všetkých predvolených nastavení"
 

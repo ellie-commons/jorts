@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-06 12:41+0200\n"
+"POT-Creation-Date: 2025-04-27 13:51+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -100,28 +100,28 @@ msgstr "Nascondere la barra dei pulsanti"
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie da tastiera continuano a funzionare (Ctrl+T)."
 
-#: src/Preferences.vala:177
+#: src/Preferences.vala:183
 msgid "Permissions"
 msgstr "Permessi"
 
-#: src/Preferences.vala:184
+#: src/Preferences.vala:190
 msgid "Allow to start at login"
 msgstr "Consentire l'avvio all'accesso"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:192
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "È possibile impostare la visualizzazione delle note adesive al momento dell'accesso aggiungendo Jorts all'avvio automatico"
 
-#: src/Preferences.vala:204
+#: src/Preferences.vala:211
 msgid "Support us!"
 msgstr "Sosteneteci!"
 
 #. Reset
-#: src/Preferences.vala:211
+#: src/Preferences.vala:218
 msgid "Reset to Default"
 msgstr "Ripristino delle impostazioni predefinite"
 
-#: src/Preferences.vala:212
+#: src/Preferences.vala:219
 msgid "Reset all settings to defaults"
 msgstr "Ripristinare tutte le impostazioni predefinite"
 

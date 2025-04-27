@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-06 12:41+0200\n"
+"POT-Creation-Date: 2025-04-27 13:51+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -99,28 +99,28 @@ msgstr "Düğme çubuğunu gizle"
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Etkinleştirilirse, yapışkan notlarda alt çubuğu gizler. Klavye kısayolları çalışmaya devam eder (Ctrl+T)"
 
-#: src/Preferences.vala:177
+#: src/Preferences.vala:183
 msgid "Permissions"
 msgstr "İzinler"
 
-#: src/Preferences.vala:184
+#: src/Preferences.vala:190
 msgid "Allow to start at login"
 msgstr "Girişte başlamasına izin ver"
 
-#: src/Preferences.vala:186
+#: src/Preferences.vala:192
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Otomatik başlatmaya Jorts ekleyerek yapışkan notları oturum açtığınızda görünecek şekilde ayarlayabilirsiniz"
 
-#: src/Preferences.vala:204
+#: src/Preferences.vala:211
 msgid "Support us!"
 msgstr "Bizi destekleyin!"
 
 #. Reset
-#: src/Preferences.vala:211
+#: src/Preferences.vala:218
 msgid "Reset to Default"
 msgstr "Varsayılana Sıfırla"
 
-#: src/Preferences.vala:212
+#: src/Preferences.vala:219
 msgid "Reset all settings to defaults"
 msgstr "Tüm ayarları varsayılanlara sıfırla"
 

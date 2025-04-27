@@ -93,7 +93,7 @@
                 <ul>
                     <li>A lovely brand new icon thanks to @wpkelso</li>
                     <li>Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3</li>
-                    <li>Make the app more univeral: Other DEs do not keep window dimensions, so reimplement save and restore</li>
+                    <li>Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore</li>
                 </ul>
             </description>
         </release>
