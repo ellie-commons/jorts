@@ -8,6 +8,10 @@ finish-args:
   - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
+build-options:
+  # Explicit libdir because some dependency libraries are installed under /app/lib64 on some amd64 build environments
+  # and we can't detect them when building our apps
+  libdir: /app/lib
 modules:
   - name: sassc
     cleanup:
