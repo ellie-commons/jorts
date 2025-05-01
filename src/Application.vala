@@ -59,7 +59,7 @@ namespace jorts {
             // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
-            gtk_settings.gtk_icon_theme_name = "elementary";
+            //gtk_settings.gtk_icon_theme_name = "elementary";
 
             gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
 
