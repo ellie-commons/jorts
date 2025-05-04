@@ -110,10 +110,6 @@ namespace jorts {
             this.content = data.content;
 
             this.set_title (this.title_name);
-            this.set_default_size (
-                data.width, 
-                data.height
-            );
 
             // Rebuild the whole theming
             this.update_theme(this.theme);
@@ -306,8 +302,17 @@ namespace jorts {
                 this.on_reduceanimation_changed();
             });
 
+            this.show();
 
-
+            // Other DE's do not auto restore size
+            // Do this once window is shown
+            string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+            if (desktop_environment != "Pantheon") {
+                this.set_default_size (
+                    data.width, 
+                    data.height
+                );
+            }
 
 
 

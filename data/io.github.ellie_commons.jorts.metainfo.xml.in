@@ -87,6 +87,14 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.1.0" date="2025-05-27">
+            <description>
+                <p>3.1.0 Jorts of song and Jorts of music</p>
+                <ul>
+                    <li>Prepare a flathub version</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.0.0" date="2025-04-27">
             <description>
                 <p>3.0.0 Jorts of Thunder</p>
