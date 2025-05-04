@@ -68,6 +68,23 @@ modules:
           type: git
           tag-pattern: '^([\d.]+)$'
 
+  - name: elementary-icon-theme
+    buildsystem: simple
+    build-commands:
+      # Skip cursors to avoid missing xcursorgen
+      - grep -v "subdir('cursors')" meson.build > meson.build.2
+      - cat meson.build.2 > meson.build
+      - meson setup builddir --prefix=/app 
+      - ninja -C builddir install
+    sources:
+      - type: git
+        url: https://github.com/elementary/icons.git
+        tag: 8.1.0
+        commit: 241be59c7f75ba186d0beba376ae44574f52372b
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
+
   - name: RedactedScript
     buildsystem: simple
     build-commands:
