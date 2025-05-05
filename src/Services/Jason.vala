@@ -58,8 +58,8 @@ namespace jorts.Jason {
             zoom = jorts.Constants.ZOOM_MAX;
         }
 
-        int64 width      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_WIDTH);
-        int64 height      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_HEIGHT);
+        int64 width      = node.get_int_member_with_default("width",jorts.Constants.DEFAULT_WIDTH);
+        int64 height      = node.get_int_member_with_default("height",jorts.Constants.DEFAULT_HEIGHT);
 
         jorts.noteData loaded_note = new jorts.noteData(title, theme, content, (int)zoom, (int)width, (int)height);
         return loaded_note;

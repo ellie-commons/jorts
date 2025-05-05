@@ -71,7 +71,7 @@
             <caption>The preferences dialog in light mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
         </screenshot>
-        <screenshot environment="pantheon">
+        <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>
@@ -87,6 +87,15 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.1.0" date="2025-05-27">
+            <description>
+                <p>3.1.0 Jorts of songs and Jorts of dance</p>
+                <ul>
+                    <li>Flathub version</li>
+                    <li>Windows version</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.0.0" date="2025-04-27">
             <description>
                 <p>3.0.0 Jorts of Thunder</p>
