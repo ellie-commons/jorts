@@ -71,7 +71,7 @@
             <caption>The preferences dialog in light mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-light.png</image>
         </screenshot>
-        <screenshot environment="pantheon">
+        <screenshot environment="pantheon:dark">
             <caption>The preferences dialog in dark mode</caption>
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>
@@ -89,9 +89,10 @@
     <releases>
         <release version="3.1.0" date="2025-05-27">
             <description>
-                <p>3.1.0 Jorts of song and Jorts of music</p>
+                <p>3.1.0 Jorts of songs and Jorts of dance</p>
                 <ul>
-                    <li>Prepare a flathub version</li>
+                    <li>Flathub version</li>
+                    <li>Windows version</li>
                 </ul>
             </description>
         </release>

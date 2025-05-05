@@ -55,7 +55,6 @@ namespace jorts {
 
         public Gtk.Settings gtk_settings;
 
-
         public string title_name;
         public string theme;
         public string content;
@@ -98,7 +97,6 @@ namespace jorts {
 
             this.gtk_settings = Gtk.Settings.get_default ();
 
-
             /*****************************************/
             /*              LOAD NOTE                */
             /*****************************************/
@@ -124,9 +122,6 @@ namespace jorts {
             if (gtk_settings.gtk_enable_animations) {
                 this.add_css_class ("animated");
             }
-
-            
-
 
             /**********************************************/
             /*              USER INTERFACE                */
@@ -244,7 +239,6 @@ namespace jorts {
                 this.on_zoom_changed(zoomkind);
             });
 
-
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
             app_button.tooltip_text = (_("Preferences for this sticky note"));
@@ -290,8 +284,6 @@ namespace jorts {
                 this.on_focus_changed();
             });
 
-
-
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (() => {
                 this.on_scribbly_changed();
@@ -305,11 +297,6 @@ namespace jorts {
             gtk_settings.notify["enable-animations"].connect (() => {
                 this.on_reduceanimation_changed();
             });
-
-
-
-
-
 
         } // END OF MAIN CONSTRUCT
 
