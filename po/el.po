@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-04-27 13:51+0200\n"
+"POT-Creation-Date: 2025-05-05 19:07+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -123,23 +123,23 @@ msgstr "Επαναφορά στην προεπιλογή"
 msgid "Reset all settings to defaults"
 msgstr "Επαναφορά όλων των ρυθμίσεων στις προεπιλογές"
 
-#: src/MainWindow.vala:148
+#: src/MainWindow.vala:143
 msgid "Edit title"
 msgstr "Επεξεργασία τίτλου"
 
-#: src/MainWindow.vala:179
+#: src/MainWindow.vala:174
 msgid "New sticky note"
 msgstr "Νέα αυτοκόλλητη σημείωση"
 
-#: src/MainWindow.vala:192
+#: src/MainWindow.vala:187
 msgid "Delete sticky note"
 msgstr "Διαγραφή αυτοκόλλητης σημείωσης"
 
-#: src/MainWindow.vala:212
+#: src/MainWindow.vala:207
 msgid "Insert emoji"
 msgstr "Εισαγωγή emoji"
 
-#: src/MainWindow.vala:250
+#: src/MainWindow.vala:244
 msgid "Preferences for this sticky note"
 msgstr "Προτιμήσεις για αυτό το αυτοκόλλητο σημείωμα"
 
