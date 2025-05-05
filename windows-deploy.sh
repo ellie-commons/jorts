@@ -156,7 +156,7 @@ Section "Install"
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
     
     ; Autostart
-    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
+    ; CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
     
     ; Preferences
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file}" 0
