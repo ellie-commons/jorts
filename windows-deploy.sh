@@ -7,6 +7,7 @@ build_dir="builddir"
 deploy_dir="deploy"
 theme_name="io.elementary.stylesheet.blueberry"
 icon_file="data\icons\jorts.ico"
+font_path="RedactedScript\"
 
 # Rebuild the exe as a release build
 rm -rfd ${build_dir}
@@ -32,6 +33,11 @@ cp /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
 cp -r /mingw64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
 cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
 cp -r /mingw64/etc/fonts ${deploy_dir}/etc/fonts
+
+# Redacted Script
+mkdir -p ${deploy_dir}/etc/fonts/RedactedScript
+cp -r ./RedactedScript/* ${deploy_dir}/etc/fonts/RedactedScript/
+
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
 cp -r share ${deploy_dir}
@@ -61,22 +67,18 @@ cat << EOF > ${app_name}Installer.nsi
 Name ${app_name}
 
 Outfile "${app_name}Installer.exe"
-InstallDir "\$PROGRAMFILES\\${app_name}"
-RequestExecutionLevel admin  ; Request administrative privileges
+InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
+#RequestExecutionLevel admin  ; Request administrative privileges
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
-!define MUI_WELCOMEPAGE_TEXT "This wizard will guide you through the installation of ${app_name}."
-
+!define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of ${app_name}."
 !define MUI_ABORTWARNING
 !define MUI_ABORTWARNING_TEXT "Are you sure you want to cancel ${app_name} setup?"
-
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
-
-
 !define MUI_ICON "\${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"
 !define MUI_UNICON "\${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
@@ -149,7 +151,18 @@ Section "Install"
     SetOutPath "\$INSTDIR"
     File /r "${deploy_dir}\\*"
     CreateDirectory \$SMPROGRAMS\\${app_name}
+
+    ; Start menu
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
+    
+    ; Autostart
+    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
+    
+    ; Preferences
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file}" 0
+
+
+    
     WriteRegStr HKCU "Software\\${app_name}" "" \$INSTDIR
     WriteUninstaller "\$INSTDIR\Uninstall.exe"
     
@@ -162,6 +175,7 @@ Section "Uninstall"
 
     ; Remove Start Menu shortcut
     Delete "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk"
+    Delete "\$SMPROGRAMS\\Startup\\${app_name}.lnk"
 
     ; Remove uninstaller
     Delete "\$INSTDIR\Uninstall.exe"
