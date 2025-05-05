@@ -1,21 +1,35 @@
 #!/bin/bash
 
 # Variables
+# Run app from base directory, not ./windows
+# Write path UNIX-style ("/"). Script will invert the slash where relevant.
 app_name="Jorts"
-exe_name="io.github.ellie_commons.jorts.exe"
 build_dir="builddir"
-deploy_dir="deploy"
 theme_name="io.elementary.stylesheet.blueberry"
-icon_file="data\icons\jorts.ico"
-font_path="RedactedScript\"
+font_path="RedactedScript"
+
+deploy_dir="windows/deploy"
+exe_name="io.github.ellie_commons.jorts.exe"
+icon_file="windows/jorts.ico"
+icon_file_install="windows/jorts.ico"
+icon_file_uninstall="windows/jorts.ico"
+
+#PRE MESON
+#Skip refresh package
+#Skip metainfo
 
 # Rebuild the exe as a release build
 rm -rfd ${build_dir}
 meson setup --buildtype release ${build_dir}
 ninja -C ${build_dir}
 
+#POST MESON
+#re-add refresh package
+#re-add metainfo
+
 # Copy DLLS
 echo "Copying DLLs..."
+mkdir -p "${deploy_dir}"
 mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
@@ -35,8 +49,7 @@ cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
 cp -r /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 # Redacted Script
-mkdir -p ${deploy_dir}/etc/fonts/RedactedScript
-cp -r ./RedactedScript/* ${deploy_dir}/etc/fonts/RedactedScript/
+cp -r ${font_path} ${deploy_dir}/etc/fonts/${font_path}
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
@@ -149,17 +162,17 @@ Caption "${app_name} Installer"
 
 Section "Install"
     SetOutPath "\$INSTDIR"
-    File /r "${deploy_dir}\\*"
+    File /r "${deploy_dir/\//\\}\\*"
     CreateDirectory \$SMPROGRAMS\\${app_name}
 
     ; Start menu
-    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file/\//\\}" 0
     
     ; Autostart
-    ; CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file}" 0
+    ; CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file/\//\\}" 0
     
     ; Preferences
-    CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file}" 0
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file/\//\\}" 0
 
 
     
