@@ -50,7 +50,7 @@ cp -r /mingw64/share/locale ${deploy_dir}/share/locale
 cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes/${theme_name}
 
 # Write the theme to gtk settings
-cat << EOF > ${deploy_dir}/etc/gtk-3.0/settings.ini
+cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
 gtk-xft-antialias=1
