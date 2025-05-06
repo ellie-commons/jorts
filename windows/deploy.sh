@@ -54,13 +54,13 @@ cp -r ${font_path} ${deploy_dir}/etc/fonts/${font_path}
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
 cp -r share ${deploy_dir}
-cp -r /mingw64/share/glib-2.0 ${deploy_dir}/share/glib-2.0
-cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/gtk-3.0
-cp -r /mingw64/share/gtk-4.0 ${deploy_dir}/share/gtk-4.0
-cp -r /mingw64/share/icons ${deploy_dir}/share/icons
-cp -r /mingw64/share/icu ${deploy_dir}/share/icu
-cp -r /mingw64/share/locale ${deploy_dir}/share/locale
-cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes/${theme_name}
+cp -r /mingw64/share/glib-2.0 ${deploy_dir}/share/
+cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/
+cp -r /mingw64/share/gtk-4.0 ${deploy_dir}/share/
+cp -r /mingw64/share/icons ${deploy_dir}/share/
+cp -r /mingw64/share/icu ${deploy_dir}/share/
+cp -r /mingw64/share/locale ${deploy_dir}/share/
+cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/
 
 # Write the theme to gtk settings
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
