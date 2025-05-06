@@ -30,6 +30,8 @@ ninja -C ${build_dir}
 # Copy DLLS
 echo "Copying DLLs..."
 mkdir -p "${deploy_dir}"
+cp "${icon_file}" "${deploy_dir}/${icon_file}"
+
 mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
@@ -193,9 +195,11 @@ Section "Uninstall"
 
     ; Remove Start Menu shortcut
     Delete "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk"
+    Delete "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk"
     Delete "\$SMPROGRAMS\\Startup\\${app_name}.lnk"
 
     ; Remove uninstaller
+    Delete "\$INSTDIR\${icon_name}"
     Delete "\$INSTDIR\Uninstall.exe"
     
     ; Remove files and folders
