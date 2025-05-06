@@ -171,23 +171,17 @@ namespace jorts {
                 /*************************************************/
 
 
-                string link = Granite.SettingsUri.PERMISSIONS ;
-                string linkname = _("Permissions") ;
+                var link = Granite.SettingsUri.PERMISSIONS ;
+                var linkname = _("Permissions") ;
 
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             print(desktop_environment + " detected!");
-
-            // Show only in Pantheon because others do not have an autostart panel
-            if (desktop_environment == "Pantheon") {
-    
-                string link = Granite.SettingsUri.PERMISSIONS ;
-                string linkname = _("Permissions") ;
     
             // Show only in Windows
-            } else if (desktop_environment == "Windows") {
+            if (desktop_environment == "Windows") {
 
-                string link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
-                string linkname = _("Microsoft support") ;
+                var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
+                var linkname = _("Microsoft support") ;
     
             // show in all other DE
             } else {
