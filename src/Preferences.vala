@@ -171,24 +171,61 @@ namespace jorts {
                 /*************************************************/
 
 
-                var link = Granite.SettingsUri.PERMISSIONS ;
-                var linkname = _("Permissions") ;
 
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             print(desktop_environment + " detected!");
 
-/*
             // Show only in Pantheon because others do not have an autostart panel
             if (desktop_environment == "Pantheon") {
-    
+        
                 var link = Granite.SettingsUri.PERMISSIONS ;
                 var linkname = _("Permissions") ;
+    
+                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var permissions_link = new Gtk.LinkButton.with_label (
+                                                    link,
+                                                    linkname
+                                                );
+        
+                // _("Applications → Permissions")
+                permissions_link.tooltip_text = link;
+                permissions_link.halign = Gtk.Align.END;
+        
+                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                    mnemonic_widget = permissions_link,
+                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
+                };
+                permissions_label.set_hexpand (true);
+        
+                permissions_box.append (permissions_label);
+                permissions_box.append (permissions_link);
+                settingsbox.append(permissions_box); 
     
             // Show only in Windows
             } else if (desktop_environment == "Windows") {
 
                 var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
                 var linkname = _("Microsoft support") ;
+
+                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var permissions_link = new Gtk.LinkButton.with_label (
+                                                    link,
+                                                    linkname
+                                                );
+        
+                // _("Applications → Permissions")
+                permissions_link.tooltip_text = link;
+                permissions_link.halign = Gtk.Align.END;
+        
+                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                    mnemonic_widget = permissions_link,
+                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
+                };
+                permissions_label.set_hexpand (true);
+        
+                permissions_box.append (permissions_label);
+                permissions_box.append (permissions_link);
+                settingsbox.append(permissions_box); 
     
             // show in all other DE
             } else {
@@ -196,27 +233,30 @@ namespace jorts {
                 var link = "https://flathub.org/apps/search?q=autostart" ;
                 var linkname = _("Autostart apps in flathub") ;
 
+                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var permissions_link = new Gtk.LinkButton.with_label (
+                                                    link,
+                                                    linkname
+                                                );
+        
+                // _("Applications → Permissions")
+                permissions_link.tooltip_text = link;
+                permissions_link.halign = Gtk.Align.END;
+        
+                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                    mnemonic_widget = permissions_link,
+                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
+                };
+                permissions_label.set_hexpand (true);
+        
+                permissions_box.append (permissions_label);
+                permissions_box.append (permissions_link);
+                settingsbox.append(permissions_box); 
+
             }
-*/
-            var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            var permissions_link = new Gtk.LinkButton.with_label (
-                                                link,
-                                                linkname
-                                            );
-    
-            // _("Applications → Permissions")
-            permissions_link.tooltip_text = link;
-            permissions_link.halign = Gtk.Align.END;
-    
-            var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
-                mnemonic_widget = permissions_link,
-                secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
-            };
-            permissions_label.set_hexpand (true);
-    
-            permissions_box.append (permissions_label);
-            permissions_box.append (permissions_link);
-            settingsbox.append(permissions_box); 
+
+
+
     
 
             /*************************************************/
