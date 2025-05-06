@@ -177,14 +177,14 @@ namespace jorts {
             // Show only in Pantheon because others do not have an autostart panel
             if (desktop_environment == "Pantheon") {
     
-                var link = Granite.SettingsUri.PERMISSIONS ;
-                var linkname = _("Permissions") ;
+                string link = Granite.SettingsUri.PERMISSIONS ;
+                string linkname = _("Permissions") ;
     
             // Show only in Windows
             } else if (desktop_environment == "Windows") {
 
-                var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
-                var linkname = _("Microsoft support") ;
+                string link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
+                string linkname = _("Microsoft support") ;
     
             // show in all other DE
             } else {
