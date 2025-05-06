@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -127,12 +127,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Laulujortsit ja tanssijortsit"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "Flathub-versio"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Flathub-versio, paljon apua @RyoNakano:lta."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Windows-versio"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Windows-versio, @supercamel opastuksella"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -391,6 +391,12 @@ msgstr "Sähköposti ja linkit ovat klikattavissa! Ctrl+Klikkaa avataksesi sähk
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Teksti tukee peruuttamista, uudelleen tekemistä ja voit käyttää hymiöitä :)"
+
+#~ msgid "Flathub version"
+#~ msgstr "Flathub-versio"
+
+#~ msgid "Windows version"
+#~ msgstr "Windows-versio"
 
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "Voit vaihtaa yksittäisen värin ja tekstin koon!"

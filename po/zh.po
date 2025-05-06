@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -100,28 +100,40 @@ msgstr "隐藏按钮栏"
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
-#: src/Preferences.vala:183
+#: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "权限"
 
-#: src/Preferences.vala:190
+#: src/Preferences.vala:194
+#: src/Preferences.vala:220
+#: src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "允许在登录时启动"
 
-#: src/Preferences.vala:192
+#: src/Preferences.vala:196
+#: src/Preferences.vala:222
+#: src/Preferences.vala:248
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
 
-#: src/Preferences.vala:211
+#: src/Preferences.vala:208
+msgid "Microsoft support"
+msgstr "微软支持"
+
+#: src/Preferences.vala:234
+msgid "Autostart apps in flathub"
+msgstr "在 flathub 中自动启动应用程序"
+
+#: src/Preferences.vala:271
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Preferences.vala:218
+#: src/Preferences.vala:278
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Preferences.vala:219
+#: src/Preferences.vala:279
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -125,12 +125,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Jorts τραγουδιών και Jorts χορού"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "Έκδοση Flathub"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Έκδοση Flathub, με μεγάλη βοήθεια από τον @RyoNakano"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Έκδοση Windows"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Έκδοση για Windows, με την καθοδήγηση από τον @supercamel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -385,3 +385,9 @@ msgstr "Τα email και οι σύνδεσμοι μπορούν να γίνου
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Το κείμενο υποστηρίζει αναίρεση, επανάληψη και μπορείτε να χρησιμοποιήσετε emojis :)"
+
+#~ msgid "Flathub version"
+#~ msgstr "Έκδοση Flathub"
+
+#~ msgid "Windows version"
+#~ msgstr "Έκδοση Windows"

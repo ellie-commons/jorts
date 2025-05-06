@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-03-25 22:37+0900\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -125,12 +125,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 歌のジョーツと踊りのジョーツ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "フラサブバージョン"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Flathubバージョン、@RyoNakanoの協力による"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Windows版"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Windows版、@supercamel氏の指導による"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -385,3 +385,9 @@ msgstr "メールやリンクはクリックできます！Ctrl+クリックで�
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "テキストは元に戻したり、やり直したりできる。）"
+
+#~ msgid "Flathub version"
+#~ msgstr "フラサブバージョン"
+
+#~ msgid "Windows version"
+#~ msgstr "Windows版"

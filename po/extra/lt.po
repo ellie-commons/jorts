@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -125,12 +125,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Dainų ir šokių šortai"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "\"Flathub\" versija"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Flathub versija, su didele @RyoNakano pagalba"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "\"Windows\" versija"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "\"Windows\" versija su @supercamel rekomendacijomis"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -386,6 +386,12 @@ msgstr "El. paštą ir nuorodas galima spustelėti! Ctrl+paspauskite, jei norite
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekstas palaiko atšaukimo ir pakartotinio atšaukimo funkcijas, be to, galite naudoti šypsenėles :)"
+
+#~ msgid "Flathub version"
+#~ msgstr "\"Flathub\" versija"
+
+#~ msgid "Windows version"
+#~ msgstr "\"Windows\" versija"
 
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "Galite keisti atskiras spalvas ir teksto dydį!"

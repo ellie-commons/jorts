@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: no\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: no\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -87,8 +87,12 @@ msgid "Make unfocused notes unreadable"
 msgstr "Gjør ufokuserte notater uleselige"
 
 #: src/Preferences.vala:122
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Hvis denne funksjonen er aktivert, blir ufokuserte klistrelapper uleselige for å beskytte innholdet mot nysgjerrige blikk (Ctrl+H)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Hvis denne funksjonen er aktivert, blir ufokuserte klistrelapper uleselige "
+"for å beskytte innholdet mot nysgjerrige blikk (Ctrl+H)"
 
 #: src/Preferences.vala:151
 #, fuzzy
@@ -96,31 +100,47 @@ msgid "Hide buttons"
 msgstr "Skjul knappelinjen"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Hvis denne funksjonen er aktivert, skjules den nederste linjen i klistrelapper. Tastatursnarveier vil fortsatt fungere (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Hvis denne funksjonen er aktivert, skjules den nederste linjen i "
+"klistrelapper. Tastatursnarveier vil fortsatt fungere (Ctrl+T)"
 
-#: src/Preferences.vala:183
+#: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Tillatelser"
 
-#: src/Preferences.vala:190
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Tillat å starte ved pålogging"
 
-#: src/Preferences.vala:192
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Du kan angi at klistrelappene skal vises når du logger på ved å legge til Jorts i autostart"
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Du kan angi at klistrelappene skal vises når du logger på ved å legge til "
+"Jorts i autostart"
 
-#: src/Preferences.vala:211
+#: src/Preferences.vala:208
+msgid "Microsoft support"
+msgstr ""
+
+#: src/Preferences.vala:234
+msgid "Autostart apps in flathub"
+msgstr ""
+
+#: src/Preferences.vala:271
 msgid "Support us!"
 msgstr "Støtt oss!"
 
 #. Reset
-#: src/Preferences.vala:218
+#: src/Preferences.vala:278
 msgid "Reset to Default"
 msgstr "Tilbakestill til standard"
 
-#: src/Preferences.vala:219
+#: src/Preferences.vala:279
 msgid "Reset all settings to defaults"
 msgstr "Tilbakestill alle innstillinger til standardinnstillingene"
 
@@ -313,7 +333,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Du har funnet den gylne klistrelappen!\n"
 "\n"
@@ -322,7 +341,6 @@ msgstr ""
 "\n"
 "Jeg håper min lille app gir deg mye glede\n"
 "Ha en flott dag 🎇\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Lukk"
@@ -348,8 +366,12 @@ msgstr ""
 #~ msgid "Sticky notes utility"
 #~ msgstr "Verktøy for klistrelapper"
 
-#~ msgid "Write down notes, reminders, random thoughts and other short-term informations"
-#~ msgstr "Skriv ned notater, påminnelser, tilfeldige tanker og annen kortsiktig informasjon"
+#~ msgid ""
+#~ "Write down notes, reminders, random thoughts and other short-term "
+#~ "informations"
+#~ msgstr ""
+#~ "Skriv ned notater, påminnelser, tilfeldige tanker og annen kortsiktig "
+#~ "informasjon"
 
 #~ msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 #~ msgstr "tekst;ren;rentekst;notisblokk;notater;klistrelapper;post-it;"
@@ -370,13 +392,20 @@ msgstr ""
 #~ msgstr "Adaptiv: Nye notater får den zoomen du sist valgte"
 
 #~ msgid "Cute: Each new note has a funny or cute random (editable) title"
-#~ msgstr "Søt: Hver nye lapp har en morsom eller søt tilfeldig (redigerbar) tittel"
+#~ msgstr ""
+#~ "Søt: Hver nye lapp har en morsom eller søt tilfeldig (redigerbar) tittel"
 
 #~ msgid "Handy: You can open links and emails with Ctrl+Click"
 #~ msgstr "Praktisk: Du kan åpne lenker og e-poster med Ctrl+Klikk"
 
-#~ msgid "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't exist without her work. The community liked it so much, we thought it would be great to revive it!"
-#~ msgstr "Dette er en gaffel av en gammel versjon av \"Notejot\" av lainsce og ville ikke eksistert uten hennes arbeid. Fellesskapet likte den så godt at vi tenkte det ville være flott å gjenopplive den!"
+#~ msgid ""
+#~ "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
+#~ "exist without her work. The community liked it so much, we thought it "
+#~ "would be great to revive it!"
+#~ msgstr ""
+#~ "Dette er en gaffel av en gammel versjon av \"Notejot\" av lainsce og "
+#~ "ville ikke eksistert uten hennes arbeid. Fellesskapet likte den så godt "
+#~ "at vi tenkte det ville være flott å gjenopplive den!"
 
 #~ msgid "Stella - Teamcons"
 #~ msgstr "Stella - Teamcons"
@@ -402,8 +431,12 @@ msgstr ""
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "Du kan endre farge og tekststørrelse individuelt!"
 
-#~ msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-#~ msgstr "Strømming? Er du redd for at noen skal se deg over skulderen? Prøv den skriblete modusen!"
+#~ msgid ""
+#~ "Streaming? Worried of someone looking above your shoulder? Try the "
+#~ "scribbly Mode!"
+#~ msgstr ""
+#~ "Strømming? Er du redd for at noen skal se deg over skulderen? Prøv den "
+#~ "skriblete modusen!"
 
 #~ msgid "Like emojis? Well there's an emoji picker!"
 #~ msgstr "Liker du emojier? Vel, det finnes en emoji-velger!"
@@ -418,19 +451,34 @@ msgstr ""
 #~ msgstr "Bedre dekning av oversettelser"
 
 #~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr "Ny funksjon: kladdemodus! Skjul innholdet på klistrelapper når du ikke fokuserer"
+#~ msgstr ""
+#~ "Ny funksjon: kladdemodus! Skjul innholdet på klistrelapper når du ikke "
+#~ "fokuserer"
 
-#~ msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-#~ msgstr "Ny funksjon: Emoji-velgerknapp! Jeg vet at det finnes en på høyreklikk, men knapper er mer tilgjengelige!"
+#~ msgid ""
+#~ "New feature: Emoji picker button! I know there is one on right-click, but "
+#~ "buttons are more accessible!"
+#~ msgstr ""
+#~ "Ny funksjon: Emoji-velgerknapp! Jeg vet at det finnes en på høyreklikk, "
+#~ "men knapper er mer tilgjengelige!"
 
-#~ msgid "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
+#~ msgid ""
+#~ "The button in the toolbar displays a random emote everytime you click!"
+#~ msgstr ""
+#~ "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
 
-#~ msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-#~ msgstr "Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå problemer, kan du gjenopprette data!"
+#~ msgid ""
+#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "can recover data!"
+#~ msgstr ""
+#~ "Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå "
+#~ "problemer, kan du gjenopprette data!"
 
-#~ msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr "Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra sikkerhetskopien"
+#~ msgid ""
+#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ msgstr ""
+#~ "Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra "
+#~ "sikkerhetskopien"
 
 #~ msgid "Some new fun/cute default titles"
 #~ msgstr "Noen nye morsomme/søte standardtitler"
@@ -445,7 +493,9 @@ msgstr ""
 #~ msgstr "Legg til relieff på knappene på handlingsfeltet"
 
 #~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr "Feilretting: Kanttilfelle der tema eller zoom ikke ble lagret på riktig måte"
+#~ msgstr ""
+#~ "Feilretting: Kanttilfelle der tema eller zoom ikke ble lagret på riktig "
+#~ "måte"
 
 #~ msgid "Bugfix: Title in multitasking not set correctly"
 #~ msgstr "Feilretting: Tittel i multitasking ble ikke satt riktig"
@@ -454,7 +504,8 @@ msgstr ""
 #~ msgstr "Feilretting: Inkonsistens mellom ikonetemaer"
 
 #~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "Feilretting: Uoverensstemmelser i tematikk på tvers av klistremerker"
+#~ msgstr ""
+#~ "Feilretting: Uoverensstemmelser i tematikk på tvers av klistremerker"
 
 #~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 #~ msgstr "2.1.1 Fersk fra klesvasken! (2: elektrisk boogaloo)"
@@ -477,8 +528,12 @@ msgstr ""
 #~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 #~ msgstr "Inkluderer zoom per note! Så du kan få større eller mindre tekst"
 
-#~ msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-#~ msgstr "Den siste innstilte zoomen, dvs. den som er mest komfortabel for deg, forblir standard for nye notater"
+#~ msgid ""
+#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
+#~ "for new notes"
+#~ msgstr ""
+#~ "Den siste innstilte zoomen, dvs. den som er mest komfortabel for deg, "
+#~ "forblir standard for nye notater"
 
 #~ msgid "Better readability (WCAG AA or AAA depending on theme)"
 #~ msgstr "Bedre lesbarhet (WCAG AA eller AAA avhengig av tema)"
@@ -523,7 +578,9 @@ msgstr ""
 #~ msgstr "Noen få innledende oversettelser er inkludert, og flere vil komme"
 
 #~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr "E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller nettleser"
+#~ msgstr ""
+#~ "E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller "
+#~ "nettleser"
 
 #~ msgid "Text supports undo, redo, and you can use emojis :)"
 #~ msgstr "Tekst støtter angre, gjøre om, og du kan bruke emojis :)"

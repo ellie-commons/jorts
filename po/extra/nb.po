@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -126,12 +126,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Jorts av sanger og Jorts av dans"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "Flathub-versjon"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Flathub-versjon, med mye hjelp fra @RyoNakano"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Windows-versjon"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Windows-versjon, med veiledning fra @supercamel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -388,6 +388,12 @@ msgstr "E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller ne
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekst støtter angre, gjøre om, og du kan bruke emojis :)"
+
+#~ msgid "Flathub version"
+#~ msgstr "Flathub-versjon"
+
+#~ msgid "Windows version"
+#~ msgstr "Windows-versjon"
 
 #~ msgid "Blueberry"
 #~ msgstr "Blåbær"

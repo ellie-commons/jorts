@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -100,28 +100,40 @@ msgstr "Ocultar a barra de botões"
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Se ativado, oculta a barra inferior das notas adesivas. Os atalhos de teclado continuarão a funcionar (Ctrl+T)"
 
-#: src/Preferences.vala:183
+#: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Permissões"
 
-#: src/Preferences.vala:190
+#: src/Preferences.vala:194
+#: src/Preferences.vala:220
+#: src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Permitir iniciar no login"
 
-#: src/Preferences.vala:192
+#: src/Preferences.vala:196
+#: src/Preferences.vala:222
+#: src/Preferences.vala:248
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Pode definir as notas autocolantes para aparecerem quando inicia sessão, adicionando o Jorts ao arranque automático"
 
-#: src/Preferences.vala:211
+#: src/Preferences.vala:208
+msgid "Microsoft support"
+msgstr "Suporte da Microsoft"
+
+#: src/Preferences.vala:234
+msgid "Autostart apps in flathub"
+msgstr "Aplicações de arranque automático no flathub"
+
+#: src/Preferences.vala:271
 msgid "Support us!"
 msgstr "Apoie-nos!"
 
 #. Reset
-#: src/Preferences.vala:218
+#: src/Preferences.vala:278
 msgid "Reset to Default"
 msgstr "Repor a predefinição"
 
-#: src/Preferences.vala:219
+#: src/Preferences.vala:279
 msgid "Reset all settings to defaults"
 msgstr "Repor todas as definições para as predefinições"
 

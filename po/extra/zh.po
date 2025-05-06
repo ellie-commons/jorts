@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -127,12 +127,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 歌曲短裤和舞蹈短裤"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "Flathub 版本"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Flathub 版本，得到 @RyoNakano 的大力协助"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Windows 版本"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Windows 版本，由 @supercamel 提供指导"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -391,6 +391,12 @@ msgstr "电子邮件和链接可点击！Ctrl+ 点击可在邮件或浏览器中
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "文本支持撤消、重做，还可以使用表情符号：)"
+
+#~ msgid "Flathub version"
+#~ msgstr "Flathub 版本"
+
+#~ msgid "Windows version"
+#~ msgstr "Windows 版本"
 
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "您可以更改个别颜色和文字大小！"

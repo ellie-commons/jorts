@@ -201,8 +201,8 @@ namespace jorts {
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
     
-            // Show only in Windows
-            } else if (desktop_environment == "Windows") {
+            // Not Pantheon... check if the windows port ?
+            } else if (Environment.get_variable ("OS") == "Windows_NT") {
 
                 var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
                 var linkname = _("Microsoft support") ;
@@ -227,7 +227,7 @@ namespace jorts {
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
     
-            // show in all other DE
+            // Not Pantheon, not the Windows port. Must be a rando DE
             } else {
 
                 var link = "https://flathub.org/apps/search?q=autostart" ;

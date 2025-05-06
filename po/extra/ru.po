@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-04-06 17:08+0400\n"
-"POT-Creation-Date: 2025-05-05 19:07+0200\n"
+"POT-Creation-Date: 2025-05-06 19:35+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Generator: Poedit 3.4.2\n"
@@ -125,12 +125,12 @@ msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Шорты с песнями и шорты с танцами"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:94
-msgid "Flathub version"
-msgstr "Версия Flathub"
+msgid "Flathub version, with a lot of help from @RyoNakano"
+msgstr "Версия для Flathub, с большой помощью от @RyoNakano"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:95
-msgid "Windows version"
-msgstr "Версия для Windows"
+msgid "Windows version, with the guidance from @supercamel"
+msgstr "Версия для Windows, с руководством от @supercamel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 #, fuzzy
@@ -382,6 +382,12 @@ msgstr "Электронная почта и ссылки кликируются
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:222
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Текст поддерживает отмену, повтор, и вы можете использовать эмодзи :)"
+
+#~ msgid "Flathub version"
+#~ msgstr "Версия Flathub"
+
+#~ msgid "Windows version"
+#~ msgstr "Версия для Windows"
 
 #~ msgid "You can change individual colour and text size!"
 #~ msgstr "Вы можете изменить отдельный цвет и размер текста!"
