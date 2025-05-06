@@ -10,8 +10,8 @@ font_path="RedactedScript"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
-icon_file="windows/jorts.ico"
-icon_file_install="windows/jorts.ico"
+icon_file="jorts.ico"
+icon_file_install="jorts.ico"
 icon_file_uninstall="jorts.ico"
 
 #PRE MESON
@@ -34,7 +34,7 @@ mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 cp "${build_dir}/${exe_name}" "${deploy_dir}/bin"
-dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
+dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/ucrt64" | awk '{print $3}')
 
 for dll in $dlls 
 do 
@@ -43,29 +43,29 @@ done
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
-cp /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
-cp -r /mingw64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
-cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
-cp -r /mingw64/etc/fonts ${deploy_dir}/etc/fonts
+cp /ucrt64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
+cp -r /ucrt64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
+cp -r /ucrt64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
+cp -r /ucrt64/etc/fonts ${deploy_dir}/etc/fonts
 
 # Redacted Script
 cp -r ${font_path} ${deploy_dir}/etc/fonts/${font_path}
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
-cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
+cp -r /ucrt64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
 
 # Fix for icons being broken THIS IS SO STUPID WHY
 cp -r ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dll
 gdk-pixbuf-query-loaders.exe --update-cache ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dll
 
-cp -r /mingw64/share ${deploy_dir}
-cp -r /mingw64/share/glib-2.0 ${deploy_dir}/share/
-cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/
-cp -r /mingw64/share/gtk-4.0 ${deploy_dir}/share/
-cp -r /mingw64/share/icons ${deploy_dir}/share/
-cp -r /mingw64/share/icu ${deploy_dir}/share/
-cp -r /mingw64/share/locale ${deploy_dir}/share/
-cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes
+cp -r /ucrt64/share ${deploy_dir}
+cp -r /ucrt64/share/glib-2.0 ${deploy_dir}/share/
+cp -r /ucrt64/share/gtk-3.0 ${deploy_dir}/share/
+cp -r /ucrt64/share/gtk-4.0 ${deploy_dir}/share/
+cp -r /ucrt64/share/icons ${deploy_dir}/share/
+cp -r /ucrt64/share/icu ${deploy_dir}/share/
+cp -r /ucrt64/share/locale ${deploy_dir}/share/
+cp -r /ucrt64/share/themes/${theme_name} ${deploy_dir}/share/themes
 
 # Write the theme to gtk settings
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
@@ -85,7 +85,7 @@ cat << EOF > ${app_name}Installer.nsi
 Name ${app_name}
 
 Outfile "${app_name}Installer.exe"
-InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
+InstallDir "\$PROGRAMFILES\\${app_name}"
 #RequestExecutionLevel admin  ; Request administrative privileges
 
 # Set the title of the installer window
