@@ -179,10 +179,9 @@ namespace jorts {
     
                 var link = Granite.SettingsUri.PERMISSIONS ;
                 var linkname = _("Permissions") ;
-                var text = "" ;
     
             // Show only in Windows
-            } else if {
+            } else if (desktop_environment == "Windows") {
 
                 var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
                 var linkname = _("Microsoft support") ;
@@ -202,7 +201,7 @@ namespace jorts {
                                             );
     
             // _("Applications → Permissions")
-            permissions_link.tooltip_text = Granite.SettingsUri.PERMISSIONS;
+            permissions_link.tooltip_text = link;
             permissions_link.halign = Gtk.Align.END;
     
             var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
