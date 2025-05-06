@@ -171,6 +171,9 @@ namespace jorts {
                 /*************************************************/
 
 
+                string link = Granite.SettingsUri.PERMISSIONS ;
+                string linkname = _("Permissions") ;
+
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             print(desktop_environment + " detected!");
 
