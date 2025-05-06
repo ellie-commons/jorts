@@ -12,10 +12,10 @@ deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
 icon_file="windows/jorts.ico"
 icon_file_install="windows/jorts.ico"
-icon_file_uninstall="windows/jorts.ico"
+icon_file_uninstall="jorts.ico"
 
 #PRE MESON
-#Skip refresh package
+#Add win subsystem gui
 #Skip metainfo
 
 # Rebuild the exe as a release build
@@ -24,7 +24,7 @@ meson setup --buildtype release ${build_dir}
 ninja -C ${build_dir}
 
 #POST MESON
-#re-add refresh package
+#remove win subsystem gui
 #re-add metainfo
 
 # Copy DLLS
@@ -53,14 +53,19 @@ cp -r ${font_path} ${deploy_dir}/etc/fonts/${font_path}
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
-cp -r share ${deploy_dir}
+
+# Fix for icons being broken THIS IS SO STUPID WHY
+cp -r ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dll
+gdk-pixbuf-query-loaders.exe --update-cache ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dll
+
+cp -r /mingw64/share ${deploy_dir}
 cp -r /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/
 cp -r /mingw64/share/gtk-4.0 ${deploy_dir}/share/
 cp -r /mingw64/share/icons ${deploy_dir}/share/
 cp -r /mingw64/share/icu ${deploy_dir}/share/
 cp -r /mingw64/share/locale ${deploy_dir}/share/
-cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/
+cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes
 
 # Write the theme to gtk settings
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini

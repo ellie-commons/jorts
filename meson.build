@@ -59,9 +59,11 @@ executable(
         dependency('gee-0.8'),
         dependency('gtk4')
     ],
+#   win_subsystem: 'windows',
     install : true
 )
-
+# ,
+#   win_subsystem: 'windows',
 
 #================================
 
@@ -72,6 +74,5 @@ subdir('po')
 
 gnome.post_install(
   glib_compile_schemas: true,
-  gtk_update_icon_cache: true,
-  update_desktop_database: true,
-)
+  gtk_update_icon_cache: true
+  )
