@@ -87,7 +87,15 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="3.1.0" date="2025-05-27">
+        <release version="3.1.1" date="2025-05-08">
+            <description>
+                <p>3.1.1 Woops</p>
+                <ul>
+                    <li>Minor screenshot amendments</li>
+                </ul>
+            </description>
+        </release>
+        <release version="3.1.0" date="2025-05-08">
             <description>
                 <p>3.1.0 Jorts of songs and Jorts of dance</p>
                 <ul>
