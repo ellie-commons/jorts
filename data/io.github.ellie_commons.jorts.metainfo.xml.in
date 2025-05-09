@@ -87,6 +87,14 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.1.2" date="2025-05-10">
+            <description>
+                <p>3.1.2 Amendments for flathub</p>
+                <ul>
+                    <li>Nothing interesting here</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.1.1" date="2025-05-08">
             <description>
                 <p>3.1.1 Woops</p>

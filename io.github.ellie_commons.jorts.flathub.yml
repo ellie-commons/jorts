@@ -57,7 +57,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/ellie-commons/jorts.git
-        tag: 3.1.1
+        tag: 3.1.2
         commit: f5c99a9637855d98b7ef714eb08b1f9b6aca9987
         x-checker-data:
           type: git
