@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -87,8 +87,12 @@ msgstr "Sprawiają, że nieostre notatki stają się nieczytelne"
 
 #: src/Preferences.vala:122
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Jeśli opcja ta jest włączona, nieostre karteczki samoprzylepne stają się "
+"nieczytelne, aby chronić ich zawartość przed podglądającymi oczami."
 
 #: src/Preferences.vala:151
 #, fuzzy
@@ -96,24 +100,28 @@ msgid "Hide buttons"
 msgstr "Ukryj pasek przycisków"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Jeśli jest włączona, ukrywa dolny pasek w notatkach samoprzylepnych. Skróty klawiaturowe będą nadal działać (Ctrl+T)."
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Jeśli jest włączona, ukrywa dolny pasek w notatkach samoprzylepnych. Skróty "
+"klawiaturowe będą nadal działać (Ctrl+T)."
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Uprawnienia"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
-#: src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Zezwalaj na uruchomienie przy logowaniu"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-#: src/Preferences.vala:248
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Można ustawić wyświetlanie notatek samoprzylepnych po zalogowaniu, dodając Jorts do autostartu"
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Można ustawić wyświetlanie notatek samoprzylepnych po zalogowaniu, dodając "
+"Jorts do autostartu"
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
@@ -325,7 +333,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Znalazłeś złotą karteczkę samoprzylepną!\n"
 "\n"
@@ -334,7 +341,6 @@ msgstr ""
 "\n"
 "Mam nadzieję, że moja mała aplikacja przyniesie Ci wiele radości\n"
 "Miłego dnia!🎇\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Zamknij"

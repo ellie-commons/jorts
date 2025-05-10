@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: fr\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -86,32 +86,40 @@ msgid "Make unfocused notes unreadable"
 msgstr "Rendre illisibles les notes non ciblées"
 
 #: src/Preferences.vala:122
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets (Ctrl+F)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Si cette option est activée, les notes autocollantes non ciblées deviennent "
+"illisibles afin de protéger leur contenu des regards indiscrets (Ctrl+F)"
 
 #: src/Preferences.vala:151
 msgid "Hide buttons"
 msgstr "Masquer les boutons"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Si cette option est activée, elle masque la barre inférieure des notes autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Si cette option est activée, elle masque la barre inférieure des notes "
+"autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Permissions"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
-#: src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Autoriser le démarrage à l'ouverture de la session"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-#: src/Preferences.vala:248
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque vous vous connectez en ajoutant Jorts au démarrage automatique."
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque "
+"vous vous connectez en ajoutant Jorts au démarrage automatique."
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
@@ -323,7 +331,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Vous avez trouvé le Golden Sticky Note !\n"
 "\n"
@@ -332,7 +339,6 @@ msgstr ""
 "\n"
 "J'espère que ma petite application vous apportera beaucoup de joie\n"
 "Bonne journée!🎇\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Fermer"

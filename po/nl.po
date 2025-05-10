@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -88,8 +88,12 @@ msgstr "Maak ongerichte notities onleesbaar"
 
 #: src/Preferences.vala:122
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Indien ingeschakeld worden onscherpe sticky notes onleesbaar om hun inhoud te beschermen tegen glurende ogen"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Indien ingeschakeld worden onscherpe sticky notes onleesbaar om hun inhoud "
+"te beschermen tegen glurende ogen"
 
 #: src/Preferences.vala:151
 #, fuzzy
@@ -97,24 +101,28 @@ msgid "Hide buttons"
 msgstr "Knoppenbalk verbergen"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Indien ingeschakeld, wordt de onderste balk in plaknotities verborgen. Sneltoetsen werken nog steeds (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Indien ingeschakeld, wordt de onderste balk in plaknotities verborgen. "
+"Sneltoetsen werken nog steeds (Ctrl+T)"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Rechten"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
-#: src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Toestaan om te starten bij aanmelden"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-#: src/Preferences.vala:248
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "U kunt instellen dat de sticky notes verschijnen wanneer u inlogt door Jorts toe te voegen aan autostart"
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"U kunt instellen dat de sticky notes verschijnen wanneer u inlogt door Jorts "
+"toe te voegen aan autostart"
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
@@ -326,7 +334,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Je hebt de Gouden Sticky Note gevonden!\n"
 "\n"
@@ -335,7 +342,6 @@ msgstr ""
 "\n"
 "Ik hoop dat mijn kleine app je veel plezier brengt\n"
 "Fijne dag!\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Sluit"

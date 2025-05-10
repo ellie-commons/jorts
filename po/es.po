@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: es\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -88,8 +88,12 @@ msgstr "Hacer ilegibles las notas desenfocadas"
 
 #: src/Preferences.vala:122
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Si se activan, las notas adhesivas desenfocadas se vuelven ilegibles para proteger su contenido de miradas indiscretas"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Si se activan, las notas adhesivas desenfocadas se vuelven ilegibles para "
+"proteger su contenido de miradas indiscretas"
 
 #: src/Preferences.vala:151
 #, fuzzy
@@ -97,24 +101,28 @@ msgid "Hide buttons"
 msgstr "Ocultar barra de botones"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Si está activada, oculta la barra inferior de las notas adhesivas. Los atajos de teclado seguirán funcionando (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Si está activada, oculta la barra inferior de las notas adhesivas. Los "
+"atajos de teclado seguirán funcionando (Ctrl+T)"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Permisos"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
-#: src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Permitir el inicio de sesión"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-#: src/Preferences.vala:248
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Puedes configurar las notas adhesivas para que aparezcan cuando te conectes añadiendo Jorts al inicio automático"
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Puedes configurar las notas adhesivas para que aparezcan cuando te conectes "
+"añadiendo Jorts al inicio automático"
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
@@ -326,7 +334,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Ha encontrado la nota adhesiva dorada.\n"
 "\n"
@@ -335,7 +342,6 @@ msgstr ""
 "\n"
 "Espero que mi pequeña aplicación te traiga muchas alegrías\n"
 "Que tengáis un gran día!🎇\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Cerrar"

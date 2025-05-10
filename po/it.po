@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: it\n"
-"Language-Team: Italian <LL@li.org>\n"
-"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2025-05-10 12:46+0100\n"
-"POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"PO-Revision-Date: 2025-05-10 12:46+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -78,7 +78,6 @@ msgstr "%d%%"
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Preferences.vala:70
-
 msgid "Preferences for your Jorts"
 msgstr "Preferenze per i tuoi Jorts"
 
@@ -87,32 +86,40 @@ msgid "Make unfocused notes unreadable"
 msgstr "Rendere illeggibili gli appunti non focalizzati"
 
 #: src/Preferences.vala:122
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
+"proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
 #: src/Preferences.vala:151
 msgid "Hide buttons"
 msgstr "Nascondi pulsanti"
 
 #: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie da tastiera continuano a funzionare (Ctrl+T)."
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie "
+"da tastiera continuano a funzionare (Ctrl+T)."
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Permessi"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
-#: src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
 msgid "Allow to start at login"
 msgstr "Consentire l'avvio all'accesso"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-#: src/Preferences.vala:248
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "È possibile impostare la visualizzazione delle note adesive al momento dell'accesso aggiungendo Jorts all'avvio automatico"
+#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"È possibile impostare la visualizzazione delle note adesive al momento "
+"dell'accesso aggiungendo Jorts all'avvio automatico"
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
@@ -324,7 +331,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Avete trovato la nota adesiva d'oro!\n"
 "\n"
@@ -333,7 +339,6 @@ msgstr ""
 "\n"
 "Spero che la mia piccola applicazione vi porti molta gioia.\n"
 "Buona giornata! 🎇\n"
-""
 
 #~ msgid "Close"
 #~ msgstr "Chiudere"
