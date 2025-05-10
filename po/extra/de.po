@@ -112,7 +112,7 @@ msgstr "Erinnerung"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:55
 msgid "A sticky note with the \"Blueberry\" theme"
-msgstr "Eine Haftnotiz mit dem Thema \"Blaubeere"
+msgstr "Eine Haftnotiz mit dem Thema \"Blaubeere\""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:59
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
