@@ -4,10 +4,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: it\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-05-10 12:46+0100\n"
 "POT-Creation-Date: 2025-05-10 00:34+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
@@ -19,7 +19,7 @@ msgstr "Mirtillo"
 
 #: src/Widgets/ColorBox.vala:41
 msgid "Lime"
-msgstr "Calce"
+msgstr "Lime"
 
 #: src/Widgets/ColorBox.vala:42
 msgid "Mint"
@@ -35,7 +35,7 @@ msgstr "Fragola"
 
 #: src/Widgets/ColorBox.vala:45
 msgid "Orange"
-msgstr "Arancione"
+msgstr "Arancia"
 
 #: src/Widgets/ColorBox.vala:46
 msgid "Bubblegum"
@@ -55,7 +55,7 @@ msgstr "Ardesia"
 
 #: src/Widgets/SettingsPopover.vala:97
 msgid "Zoom out"
-msgstr "Zoom out"
+msgstr "Rimpicciolisci"
 
 #: src/Widgets/SettingsPopover.vala:103
 msgid "Default zoom level"
@@ -63,7 +63,7 @@ msgstr "Livello di zoom predefinito"
 
 #: src/Widgets/SettingsPopover.vala:110
 msgid "Zoom in"
-msgstr "Ingrandimento"
+msgstr "Ingrandisci"
 
 #. Called by the Mainwindow when adjusting to new zoomlevel
 #. Mainwindow reacts to a signal by the popover
@@ -78,23 +78,21 @@ msgstr "%d%%"
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Preferences.vala:70
-#, fuzzy
+
 msgid "Preferences for your Jorts"
-msgstr "Preferenze per tutte le note adesive"
+msgstr "Preferenze per i tuoi Jorts"
 
 #: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
 msgstr "Rendere illeggibili gli appunti non focalizzati"
 
 #: src/Preferences.vala:122
-#, fuzzy
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Se attivata, le note adesive non focalizzate diventano illeggibili per proteggere il loro contenuto da occhi indiscreti."
+msgstr "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
 #: src/Preferences.vala:151
-#, fuzzy
 msgid "Hide buttons"
-msgstr "Nascondere la barra dei pulsanti"
+msgstr "Nascondi pulsanti"
 
 #: src/Preferences.vala:153
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
@@ -146,9 +144,8 @@ msgid "New sticky note"
 msgstr "Nuova nota adesiva"
 
 #: src/MainWindow.vala:187
-#, fuzzy
 msgid "Delete sticky note"
-msgstr "Cancellare la nota adesiva"
+msgstr "Cancella nota adesiva"
 
 #: src/MainWindow.vala:207
 msgid "Insert emoji"
