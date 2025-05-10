@@ -1,6 +1,6 @@
 # Name our project
 project('io.github.ellie_commons.jorts', ['vala', 'c'],
-    version: '3.1.2'
+    version: '3.1.3'
 )
 
 gnome = import('gnome')
