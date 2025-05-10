@@ -49,7 +49,7 @@ modules:
       - type: file
         url: https://raw.githubusercontent.com/christiannaths/redacted-font/284dfb0397d1911c3388f72389f08b3c13446134/README.md
         sha256: e594f7f6bf03f7b11897d219184e215466cdfb9a8268b54cb7d5a626482dd722
-            
+        
   - name: jorts
     buildsystem: meson
     sources:

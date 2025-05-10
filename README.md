@@ -24,7 +24,15 @@ It is also present in the elementary OS appcenter (the online version of it, app
 
 ## 🛣️ Roadmap
 
-Jorts is a cute simple little notes app
+Jorts is a cute simple little notes app, and i wanna keep it this way
+
+right now im working on:
+- Verify the app on flathub
+- a proper debounce for saving when user changes a note content
+- Maybe an option to show window title buttons, because now this is on flathub i may get flak from users about the lack of it
+- Probably some cleaner code if i come around to it
+- Maybe a toggle lists if i find how to do it without more UI noise
+
 Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
 
 ## 💝 Donations
