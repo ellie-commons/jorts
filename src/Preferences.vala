@@ -201,32 +201,6 @@ namespace jorts {
                 permissions_box.append (permissions_link);
                 settingsbox.append(permissions_box); 
     
-            // Not Pantheon... check if the windows port ?
-            } else if (Environment.get_variable ("OS") == "Windows_NT") {
-
-                var link = "https://support.microsoft.com/en-gb/windows/configure-startup-applications-in-windows-115a420a-0bff-4a6f-90e0-1934c844e473" ;
-                var linkname = _("Microsoft support") ;
-
-                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                var permissions_link = new Gtk.LinkButton.with_label (
-                                                    link,
-                                                    linkname
-                                                );
-        
-                // _("Applications → Permissions")
-                permissions_link.tooltip_text = link;
-                permissions_link.halign = Gtk.Align.END;
-        
-                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
-                    mnemonic_widget = permissions_link,
-                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
-                };
-                permissions_label.set_hexpand (true);
-        
-                permissions_box.append (permissions_label);
-                permissions_box.append (permissions_link);
-                settingsbox.append(permissions_box); 
-    
             // Not Pantheon, not the Windows port. Must be a rando DE
             } else {
 
