@@ -189,7 +189,7 @@ msgstr "Flathubバージョン、@RyoNakanoの協力による"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:128
 #, fuzzy
 msgid "3.0.0 Jorts of Thunder"
-msgstr "2.2.0 光のジョーツ"
+msgstr "3.0.0 光のジョーツ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:130
 msgid "A lovely brand new icon thanks to @wpkelso"
@@ -224,7 +224,7 @@ msgstr "翻訳の更新"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:148
 #, fuzzy
 msgid "2.4.0 The Jorts of Ice"
-msgstr "2.2.0 光のジョーツ"
+msgstr "2.4.0 光のジョーツ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:150
 msgid ""
