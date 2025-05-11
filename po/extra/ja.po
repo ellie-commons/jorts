@@ -4,14 +4,13 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-11 20:11+0900\n"
-"PO-Revision-Date: 2025-05-11 20:14+0900\n"
+"PO-Revision-Date: 2025-05-11 20:17+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -42,16 +41,12 @@ msgid "Preferences"
 msgstr "着こなす"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:8
-#, fuzzy
-#| msgid "Colourful and happy little sticky notes for all of your thoughts! :)"
 msgid "Colourful little sticky notes! :)"
-msgstr "どんな思いつきも書き留められる、カラフルでハッピーな付箋です! :)"
+msgstr "カラフルで小さな付箋です! :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-#, fuzzy
-#| msgid "Neither jeans nor shorts, just like jorts"
 msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "ジーンズでもショーツでもない、ジョーツのようなもの"
+msgstr "ジーンズでもショーツでもない、ジョーツのようなもの!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -81,18 +76,13 @@ msgid "Private: Try the scribble mode!"
 msgstr "プライベート: 走り書きモードをお試しください!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
-#, fuzzy
-#| msgid ""
-#| "This is a fork of an old version of \"Notejot\" by lainsce and wouldn't "
-#| "exist without her work. The community liked it so much, we thought it "
-#| "would be great to revive it!"
 msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce. The community "
 "liked it so much, we thought it would be great to revive it!"
 msgstr ""
-"これは lainsce が開発する \"Notejot\" の古いバージョンをフォークで、彼女の労"
-"力なしには存在しえませんでした。往時の \"Notejot\" はコミュニティーでもかなり"
-"人気があったので、ぜひとも復活させたいと思い、開発しました!"
+"これは lainsce が開発する \"Notejot\" の古いバージョンのフォークです。往時の "
+"\"Notejot\" はコミュニティーでもかなり人気があったので、ぜひとも復活させたい"
+"と思い、開発しました!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -103,20 +93,16 @@ msgid "Sticky notes"
 msgstr "付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
-#, fuzzy
-#| msgid "Sticky notes"
 msgid "Sticky note"
 msgstr "付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
-#, fuzzy
-#| msgid "Sticky notes"
 msgid "Stickies"
 msgstr "付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:46
 msgid "Colourful"
-msgstr ""
+msgstr "カラフル"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:47
 msgid "Notes"
