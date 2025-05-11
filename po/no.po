@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 17:15+0200\n"
+"POT-Creation-Date: 2025-05-11 17:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,11 +111,11 @@ msgstr ""
 msgid "Permissions"
 msgstr "Tillatelser"
 
-#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
+#: src/Preferences.vala:194 src/Preferences.vala:220
 msgid "Allow to start at login"
 msgstr "Tillat å starte ved pålogging"
 
-#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
+#: src/Preferences.vala:196 src/Preferences.vala:222
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
@@ -124,43 +124,39 @@ msgstr ""
 "Jorts i autostart"
 
 #: src/Preferences.vala:208
-msgid "Microsoft support"
-msgstr ""
-
-#: src/Preferences.vala:234
 msgid "Autostart apps in flathub"
 msgstr ""
 
-#: src/Preferences.vala:271
+#: src/Preferences.vala:245
 msgid "Support us!"
 msgstr "Støtt oss!"
 
 #. Reset
-#: src/Preferences.vala:278
+#: src/Preferences.vala:252
 msgid "Reset to Default"
 msgstr "Tilbakestill til standard"
 
-#: src/Preferences.vala:279
+#: src/Preferences.vala:253
 msgid "Reset all settings to defaults"
 msgstr "Tilbakestill alle innstillinger til standardinnstillingene"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:145
 msgid "Edit title"
 msgstr "Rediger tittel"
 
-#: src/MainWindow.vala:174
+#: src/MainWindow.vala:176
 msgid "New sticky note"
 msgstr "Ny klistrelapp"
 
-#: src/MainWindow.vala:187
+#: src/MainWindow.vala:189
 msgid "Delete sticky note"
 msgstr "Slett klistrelapp"
 
-#: src/MainWindow.vala:207
+#: src/MainWindow.vala:209
 msgid "Insert emoji"
 msgstr "Sett inn emoji"
 
-#: src/MainWindow.vala:244
+#: src/MainWindow.vala:246
 msgid "Preferences for this sticky note"
 msgstr "Innstillinger for denne klistrelappen"
 

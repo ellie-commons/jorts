@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-05-11 17:17+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 17:15+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -86,79 +86,65 @@ msgid "Make unfocused notes unreadable"
 msgstr "Unscharfe Notizen unlesbar machen"
 
 #: src/Preferences.vala:122
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um "
-"ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
 
 #: src/Preferences.vala:151
 msgid "Hide buttons"
 msgstr "Schaltflächenleiste ausblenden"
 
 #: src/Preferences.vala:153
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die "
-"Tastaturkürzel funktionieren weiterhin (Strg+T)"
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die Tastaturkürzel funktionieren weiterhin (Strg+T)"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Berechtigungen"
 
-#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
+#: src/Preferences.vala:194
+#: src/Preferences.vala:220
 msgid "Allow to start at login"
 msgstr "Starten bei der Anmeldung zulassen"
 
-#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-"Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung "
-"angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
+#: src/Preferences.vala:196
+#: src/Preferences.vala:222
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
 
 #: src/Preferences.vala:208
-msgid "Microsoft support"
-msgstr "Microsoft-Unterstützung"
-
-#: src/Preferences.vala:234
 msgid "Autostart apps in flathub"
 msgstr "Autostart von Anwendungen in Flathub"
 
-#: src/Preferences.vala:271
+#: src/Preferences.vala:245
 msgid "Support us!"
 msgstr "Uns unterstützen!"
 
 #. Reset
-#: src/Preferences.vala:278
+#: src/Preferences.vala:252
 msgid "Reset to Default"
 msgstr "Auf Standard zurücksetzen"
 
-#: src/Preferences.vala:279
+#: src/Preferences.vala:253
 msgid "Reset all settings to defaults"
 msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:145
 msgid "Edit title"
 msgstr "Titel bearbeiten"
 
-#: src/MainWindow.vala:174
+#: src/MainWindow.vala:176
 msgid "New sticky note"
 msgstr "Neue Haftnotiz"
 
-#: src/MainWindow.vala:187
+#: src/MainWindow.vala:189
 msgid "Delete sticky note"
 msgstr "Haftnotiz löschen"
 
-#: src/MainWindow.vala:207
+#: src/MainWindow.vala:209
 msgid "Insert emoji"
 msgstr "Emoji einfügen"
 
-#: src/MainWindow.vala:244
+#: src/MainWindow.vala:246
 msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diesen Haftnotizblock"
 
@@ -331,6 +317,7 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
 "Sie haben die Goldene Haftnotiz gefunden!\n"
 "\n"
@@ -339,6 +326,10 @@ msgstr ""
 "\n"
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
+""
+
+#~ msgid "Microsoft support"
+#~ msgstr "Microsoft-Unterstützung"
 
 #~ msgid "Close"
 #~ msgstr "Schließen Sie"

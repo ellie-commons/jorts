@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Language-Team: none\n"
+"Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: 2025-04-06 17:02+0400\n"
+"POT-Creation-Date: 2025-05-11 17:17+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 17:15+0200\n"
-"PO-Revision-Date: 2025-04-06 17:02+0400\n"
-"Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
-"Language-Team: none\n"
-"Language: ru\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
@@ -86,79 +86,65 @@ msgid "Make unfocused notes unreadable"
 msgstr "Сделайте несфокусированные заметки нечитаемыми"
 
 #: src/Preferences.vala:122
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Если эта функция включена, неактивные заметки становятся нечитаемыми, чтобы "
-"защитить их содержимое от посторонних глаз (Ctrl+H)"
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Если эта функция включена, неактивные заметки становятся нечитаемыми, чтобы защитить их содержимое от посторонних глаз (Ctrl+H)"
 
 #: src/Preferences.vala:151
 msgid "Hide buttons"
 msgstr "Скрыть панель кнопок"
 
 #: src/Preferences.vala:153
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Если включено, скрывает нижнюю панель в заметках. Сочетания клавиш (Ctrl+T) "
-"по-прежнему будут работать"
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Если включено, скрывает нижнюю панель в заметках. Сочетания клавиш (Ctrl+T) по-прежнему будут работать"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
 msgstr "Разрешения"
 
-#: src/Preferences.vala:194 src/Preferences.vala:220 src/Preferences.vala:246
+#: src/Preferences.vala:194
+#: src/Preferences.vala:220
 msgid "Allow to start at login"
 msgstr "Разрешить запуск при входе в систему"
 
-#: src/Preferences.vala:196 src/Preferences.vala:222 src/Preferences.vala:248
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-"Вы можете установить, чтобы липкие заметки появлялись при входе в систему, "
-"добавив Jorts в автозапуск"
+#: src/Preferences.vala:196
+#: src/Preferences.vala:222
+msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+msgstr "Вы можете установить, чтобы липкие заметки появлялись при входе в систему, добавив Jorts в автозапуск"
 
 #: src/Preferences.vala:208
-msgid "Microsoft support"
-msgstr "Поддержка Microsoft"
-
-#: src/Preferences.vala:234
 msgid "Autostart apps in flathub"
 msgstr "Автозапуск приложений в flathub"
 
-#: src/Preferences.vala:271
+#: src/Preferences.vala:245
 msgid "Support us!"
 msgstr "Поддержите нас!"
 
 #. Reset
-#: src/Preferences.vala:278
+#: src/Preferences.vala:252
 msgid "Reset to Default"
 msgstr "Сброс настроек по умолчанию"
 
-#: src/Preferences.vala:279
+#: src/Preferences.vala:253
 msgid "Reset all settings to defaults"
 msgstr "Сброс всех настроек до значений по умолчанию"
 
-#: src/MainWindow.vala:143
+#: src/MainWindow.vala:145
 msgid "Edit title"
 msgstr "Изменить название"
 
-#: src/MainWindow.vala:174
+#: src/MainWindow.vala:176
 msgid "New sticky note"
 msgstr "Новый стикер"
 
-#: src/MainWindow.vala:187
+#: src/MainWindow.vala:189
 msgid "Delete sticky note"
 msgstr "Удалить стикер (Ctrl+W)"
 
-#: src/MainWindow.vala:207
+#: src/MainWindow.vala:209
 msgid "Insert emoji"
 msgstr "Смайлики"
 
-#: src/MainWindow.vala:244
+#: src/MainWindow.vala:246
 msgid "Preferences for this sticky note"
 msgstr "Параметры стикера"
 
@@ -331,6 +317,7 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
 "Вы нашли Золотой стикер!\n"
 "\n"
@@ -339,6 +326,10 @@ msgstr ""
 "\n"
 "Я надеюсь, что моё маленькое приложение доставит вам много радости\n"
 "Хорошего дня!🎇\n"
+""
+
+#~ msgid "Microsoft support"
+#~ msgstr "Поддержка Microsoft"
 
 #~ msgid "Close"
 #~ msgstr "Закрыть"
