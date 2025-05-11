@@ -12,23 +12,6 @@ finish-args:
   - '--socket=fallback-x11'
   - '--socket=wayland'
 modules:
-  # TODO Remove when https://github.com/flathub/io.elementary.BaseApp/pull/30 is merged
-  - name: granite
-    buildsystem: meson
-    config-opts:
-      - -Ddemo=false
-    cleanup:
-      - /share/icons
-      - /share/metainfo
-    sources:
-      - type: git
-        url: https://github.com/elementary/granite.git
-        tag: 7.6.0
-        commit: 065ba1f245b60ef867a6ca145e0891cf84eddcc7
-        x-checker-data:
-          type: git
-          tag-pattern: '^([\d.]+)$'
-
   - name: RedactedScript
     buildsystem: simple
     build-commands:
@@ -49,7 +32,7 @@ modules:
       - type: file
         url: https://raw.githubusercontent.com/christiannaths/redacted-font/284dfb0397d1911c3388f72389f08b3c13446134/README.md
         sha256: e594f7f6bf03f7b11897d219184e215466cdfb9a8268b54cb7d5a626482dd722
-        
+
   - name: jorts
     buildsystem: meson
     sources:
