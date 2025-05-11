@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 17:15+0200\n"
-"PO-Revision-Date: 2025-03-25 22:37+0900\n"
+"PO-Revision-Date: 2025-05-11 19:38+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -28,7 +28,9 @@ msgstr "メモ、備忘録、思いつき、その他短期的な情報を書き
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "テキスト;プレーンテキスト;メモ帳;メモ;付箋;ポストイット;"
+msgstr ""
+"text;plain;plaintext;notepad;notes;sticky;post-it;テキスト;プレーンテキスト;"
+"メモ帳;メモ;付箋;ポストイット;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
@@ -44,11 +46,11 @@ msgstr "ジーンズでもショーツでもない、ジョーツのようなも
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Colourful and happy little sticky notes for all of your thoughts! :)"
-msgstr "カラフルでハッピーな付箋！:)"
+msgstr "どんな思いつきも書き留められる、カラフルでハッピーな付箋です! :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
-msgstr "特徴は以下の通り："
+msgstr "含まれる機能:"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
@@ -57,7 +59,7 @@ msgstr ""
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "適応：新しいノートには前回選択したズームが適用されます"
+msgstr "柔軟: 新しいメモには前回選択した拡大率が適用されます"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
@@ -71,7 +73,7 @@ msgstr "便利：Ctrl+クリックでリンクやメールを開くことがで�
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
-msgstr "プライベート落書きモードを試す！"
+msgstr "プライベート: 走り書きモードをお試しください!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 msgid ""
@@ -79,9 +81,9 @@ msgid ""
 "exist without her work. The community liked it so much, we thought it would "
 "be great to revive it!"
 msgstr ""
-"これはlainsceによる古いバージョンの \"Notejot \"のフォークで、彼女の仕事なし"
-"には存在しなかった。コミュニティがとても気に入ってくれたので、復活させるのは"
-"素晴らしいことだと思った！"
+"これは lainsce が開発する \"Notejot\" の古いバージョンをフォークで、彼女の労"
+"力なしには存在しえませんでした。往時の \"Notejot\" はコミュニティーでもかな"
+"り人気があったので、ぜひとも復活させたいと思い、開発しました!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -113,27 +115,27 @@ msgstr "\"ブルーベリー\" テーマの付箋"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:59
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
-msgstr "色を変えたり、拡大・縮小したり、絵文字ボタンもある！"
+msgstr "色を変えたり、拡大・縮小したり。絵文字ボタンだってあります!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:63
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
 msgstr ""
-"ストリーミング？誰かに肩越しに見られるのが心配？らくがきモードをお試しくださ"
-"い！"
+"ストリーミング? 誰かに肩越しに見られるのが心配? 走り書きモードをお試しくださ"
+"い!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:67
 msgid "Look! Ascii art in a sticky note!"
-msgstr "見て付箋のアスキーアート！"
+msgstr "ほら、付箋にアスキーアートだって書けちゃう!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:71
 msgid "The preferences dialog in light mode"
-msgstr "ライトモードの環境設定ダイアログ"
+msgstr "ライトモードの設定ダイアログ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:75
 msgid "The preferences dialog in dark mode"
-msgstr "ダークモードでの環境設定ダイアログ"
+msgstr "ダークモードでの設定ダイアログ"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:92
 #, fuzzy
