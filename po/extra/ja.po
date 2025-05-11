@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-11 20:11+0900\n"
-"PO-Revision-Date: 2025-05-11 20:17+0900\n"
+"PO-Revision-Date: 2025-05-11 20:29+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -46,7 +46,7 @@ msgstr "カラフルで小さな付箋です! :)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
 msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "ジーンズでもショーツでもない、ジョーツのようなもの!"
+msgstr "ジーンズでもショーツでもなく、ジョーツのようなものです!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:11
 msgid "Features include:"
@@ -55,7 +55,7 @@ msgstr "含まれる機能:"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 msgid "Colours: Ten pretty themes. Any new note gets a random one"
 msgstr ""
-"色：10種類のかわいいテーマ。新しいノートにはランダムなテーマが表示されます。"
+"色: 10 種類のかわいいテーマ。新しいメモにはランダムなテーマが適用されます"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
@@ -64,12 +64,12 @@ msgstr "柔軟: 新しいメモには前回選択した拡大率が適用され�
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
-"かわいい：それぞれの新しいノートには、面白いまたはかわいいランダムなタイトル"
-"（編集可能）が付いています。"
+"かわいい: それぞれの新しいメモには、面白いまたはかわいいランダムなタイトル "
+"(編集可能) が設定されます"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "便利：Ctrl+クリックでリンクやメールを開くことができます。"
+msgstr "便利: Ctrl+クリックでリンクやメールを開くことができます"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
