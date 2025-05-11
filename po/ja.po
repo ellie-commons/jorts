@@ -1,10 +1,9 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-10 17:15+0200\n"
-"PO-Revision-Date: 2025-03-25 23:19+0900\n"
+"PO-Revision-Date: 2025-05-11 19:52+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -83,29 +82,27 @@ msgstr "Jorts を着こなす"
 
 #: src/Preferences.vala:120
 msgid "Make unfocused notes unreadable"
-msgstr "焦点の定まらないメモを読めなくする"
+msgstr "フォーカスされていない付箋を読めなくする"
 
 #: src/Preferences.vala:122
-#, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
 msgstr ""
-"有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容"
-"の覗き見防止になります"
+"有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内"
+"容の覗き見防止になります (Ctrl+H)"
 
 #: src/Preferences.vala:151
-#, fuzzy
 msgid "Hide buttons"
-msgstr "ボタンバーを隠す"
+msgstr "ボタンを隠す"
 
 #: src/Preferences.vala:153
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
 msgstr ""
-"有効にすると、付箋のボトムバーが非表示になります。キーボードショートカットは"
-"機能します。"
+"有効にすると、付箋のボトムバーが非表示になります。この場合でもキーボード"
+"ショートカットは利用可能です (Ctrl+T)"
 
 #: src/Preferences.vala:182
 msgid "Permissions"
@@ -120,16 +117,16 @@ msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
 msgstr ""
-"Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定できま"
-"す。"
+"Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定でき"
+"ます"
 
 #: src/Preferences.vala:208
 msgid "Microsoft support"
-msgstr "マイクロソフトのサポート"
+msgstr "Microsoft サポート"
 
 #: src/Preferences.vala:234
 msgid "Autostart apps in flathub"
-msgstr "flathubでアプリを自動起動する"
+msgstr "自動起動を管理するアプリを Flathub で検索"
 
 #: src/Preferences.vala:271
 msgid "Support us!"
@@ -322,7 +319,7 @@ msgstr "I use arch btw"
 
 #: src/Services/Utils.vala:177
 msgid "🔥WOW Congratulations!🔥"
-msgstr "おめでとうございます🔥。"
+msgstr "🔥おめでとうございます!🔥"
 
 #: src/Services/Utils.vala:179
 msgid ""
@@ -334,10 +331,11 @@ msgid ""
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
 msgstr ""
-"黄金の付箋を見つけた！\n"
+"黄金の付箋を見つけました!\n"
 "\n"
-"CRAZY BUT TRU：このメッセージは1000回に1回表示されます！\n"
-"誰も信じてくれません。）\n"
+"突拍子もないことですが本当です。このメッセージは 1000 回に 1 回しか表示され"
+"ません!\n"
+"あなたがこれを見たと言っても、きっと誰も信じてはくれないでしょう ;)\n"
 "\n"
 "私の小さなアプリがあなたにたくさんの喜びをもたらすことを願っています。\n"
 "素晴らしい一日をお過ごしください。\n"
