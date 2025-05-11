@@ -39,6 +39,9 @@ namespace jorts.Constants {
     const string FILENAME_STASH          = "saved_state.json";
     const string FILENAME_BACKUP         = "backup_state.json";
 
+    // in ms
+    const int DEBOUNCE       = 1000;
+
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 240;

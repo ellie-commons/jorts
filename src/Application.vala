@@ -183,9 +183,6 @@ namespace jorts {
 
             random_data.zoom = this.latest_zoom;
             note = new MainWindow(this, random_data);
-
-
-
         }
         this.open_notes.add(note);
         this.save_to_stash ();
@@ -202,6 +199,7 @@ namespace jorts {
         jorts.Stash.check_if_stash ();
         string json_data = jorts.Jason.jsonify (open_notes);
         jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_STASH);
+        print("Saved " + open_notes.size.to_string() + "!\n");
     }
 
 

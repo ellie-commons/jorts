@@ -60,6 +60,8 @@ namespace jorts {
         public string content;
         public int zoom;
 
+        public uint debounce_timer_id;
+
         public SimpleActionGroup actions { get; construct; }
 
         public const string ACTION_PREFIX   = "app.";
@@ -146,7 +148,7 @@ namespace jorts {
             // Save when title has changed. And ALSO set the WM title so multitasking has the new one
             notetitle.changed.connect (() => {
                 this.set_title(notetitle.text);
-                ((Application)this.application).save_to_stash ();            
+                on_buffer_changed();         
             });
 
             headerbar.set_title_widget(notetitle);
@@ -158,7 +160,7 @@ namespace jorts {
             view = new jorts.StickyView (this.content);
 
             view.buffer.changed.connect (() => {
-                ((Application)this.application).save_to_stash ();            
+                on_buffer_changed();
             });
 
             scrolled.set_child (view);
@@ -308,6 +310,19 @@ namespace jorts {
         /********************************************/
         /*                  METHODS                 */
         /********************************************/
+
+        // Add a debounce so we aren't writing the entire buffer every character input
+        public void on_buffer_changed() {
+            if (debounce_timer_id != 0) {
+                GLib.Source.remove (debounce_timer_id);
+            }
+
+            debounce_timer_id = Timeout.add (jorts.Constants.DEBOUNCE, () => {
+                debounce_timer_id = 0;
+                ((Application)this.application).save_to_stash ();
+                return GLib.Source.REMOVE;
+            });
+        }
 
         // Called when a change in settings is detected
         public void on_scribbly_changed() {

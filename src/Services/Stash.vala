@@ -121,7 +121,7 @@ namespace jorts.Stash {
 
 
         }
-        print(loaded_data.size.to_string());
+        print("Loaded" + loaded_data.size.to_string() + "!\n");
 
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
