@@ -45,7 +45,6 @@ msgid "Neither jeans nor shorts, just like jorts"
 msgstr "Weder Jeans noch Shorts, genau wie Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:10
-#, fuzzy
 msgid "Colourful and happy little sticky notes for all of your thoughts! :)"
 msgstr "Bunte und fröhliche kleine Haftnotizen für alle deine Gedanken! :)"
 

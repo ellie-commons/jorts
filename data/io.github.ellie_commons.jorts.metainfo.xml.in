@@ -5,9 +5,9 @@
     <project_license>GPL-3.0+</project_license>
     
     <name translate="no">Jorts</name>
-    <summary>Neither jeans nor shorts, just like jorts</summary>
+    <summary>Colourful little sticky notes! :)</summary>
     <description>
-        <p>Colourful and happy little sticky notes for all of your thoughts! :)</p>
+        <p>Neither jeans nor shorts, just like jorts!</p>
         <p>Features include:</p>
         <ul>
             <li>Colours: Ten pretty themes. Any new note gets a random one</li>
@@ -16,7 +16,7 @@
             <li>Handy: You can open links and emails with Ctrl+Click</li>
             <li>Private: Try the scribble mode!</li>
         </ul>
-        <p>This is a fork of an old version of "Notejot" by lainsce and wouldn't exist without her work. The community liked it so much, we thought it would be great to revive it!</p>
+        <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
     </description>
     <provides>
         <binary>io.github.ellie_commons.jorts</binary>
@@ -40,11 +40,14 @@
     </suggests>
 
     <keywords>
-      <keyword>Sticky notes</keyword>
-      <keyword>Notes</keyword>
-      <keyword>Cute</keyword>
-      <keyword>Desktop</keyword>
-      <keyword>Reminder</keyword>
+        <keyword>Sticky notes</keyword>
+        <keyword>Sticky note</keyword>
+        <keyword>Stickies</keyword>
+        <keyword>Colourful</keyword>
+        <keyword>Notes</keyword>
+        <keyword>Cute</keyword>
+        <keyword>Desktop</keyword>
+        <keyword>Reminder</keyword>
     </keywords>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
