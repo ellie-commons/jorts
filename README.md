@@ -13,13 +13,11 @@
 
 ## Installation
 
-You can download and install Jorts from Flathub:
+You can download and install Jorts from various sources:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.jorts)
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
-
-
-It is also present in the elementary OS appcenter (the online version of it, appcenter.elementary.io, alas does not displays it)
-
 
 
 ## 🛣️ Roadmap
