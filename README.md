@@ -13,13 +13,11 @@
 
 ## Installation
 
-You can download and install Jorts from Flathub:
+You can download and install Jorts from various sources:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.jorts)
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
-
-
-It is also present in the elementary OS appcenter (the online version of it, appcenter.elementary.io, alas does not displays it)
-
 
 
 ## 🛣️ Roadmap
@@ -27,7 +25,6 @@ It is also present in the elementary OS appcenter (the online version of it, app
 Jorts is a cute simple little notes app, and i wanna keep it this way
 
 right now im working on:
-- a proper debounce for saving when user changes a note content
 - Maybe an option to show window title buttons, because now this is on flathub i may get flak from users about the lack of it
 - Probably some cleaner code if i come around to it
 - Maybe a toggle lists if i find how to do it without more UI noise
