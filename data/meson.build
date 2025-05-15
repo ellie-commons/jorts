@@ -17,7 +17,7 @@ i18n.merge_file(
     install_dir: get_option('datadir') / 'applications'
 )
 
-#Translate and install our .appdata file
+#Translate and install our .metainfo file
 i18n.merge_file(
     input: 'io.github.ellie_commons.jorts.metainfo.xml.in',
     output: meson.project_name() + '.metainfo.xml',
