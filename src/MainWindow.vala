@@ -159,9 +159,7 @@ namespace jorts {
 
             view = new jorts.StickyView (this.content);
 
-            view.buffer.changed.connect (() => {
-                on_buffer_changed();
-            });
+            view.buffer.changed.connect (on_buffer_changed);
 
             scrolled.set_child (view);
 
@@ -232,14 +230,10 @@ namespace jorts {
             this.set_zoom(data.zoom);
 
             // The settings popover tells us a new theme has been chosen!
-            this.popover.theme_changed.connect ((selected) => {
-                this.update_theme(selected);
-            });
+            this.popover.theme_changed.connect (update_theme);
 
             // The settings popover tells us a new zoom has been chosen!
-            this.popover.zoom_changed.connect ((zoomkind) => {
-                this.on_zoom_changed(zoomkind);
-            });
+            this.popover.zoom_changed.connect (on_zoom_changed);
 
             var app_button = new Gtk.MenuButton();
             app_button.has_tooltip = true;
@@ -282,23 +276,15 @@ namespace jorts {
             //});
 
             // Use the color theme of this sticky note when focused
-            this.notify["is-active"].connect(() => {
-                this.on_focus_changed();
-            });
+            this.notify["is-active"].connect(on_focus_changed);
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.changed["scribbly-mode-active"].connect (() => {
-                this.on_scribbly_changed();
-            });
+            Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.changed["hide-bar"].connect (() => {
-                this.on_hidebar_changed();
-            });            
+            Application.gsettings.changed["hide-bar"].connect (on_hidebar_changed);            
 
-            gtk_settings.notify["enable-animations"].connect (() => {
-                this.on_reduceanimation_changed();
-            });
+            gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
         } // END OF MAIN CONSTRUCT
 

@@ -253,12 +253,7 @@ namespace jorts {
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
             actionbar.pack_end (reset_button);
 
-            reset_button.clicked.connect(() => {
-                string[] keys = {"scribbly-mode-active","hide-bar"};
-                foreach (var key in keys) {
-                    Application.gsettings.reset (key);
-                }
-            });
+            reset_button.clicked.connect(on_reset);
 
 
             //  var close_button = new Gtk.Button();
@@ -283,6 +278,14 @@ namespace jorts {
 
         private void action_new () {
             ((Application)this.application).create_note(null);
+        }
+
+
+        private void on_reset() {
+            string[] keys = {"scribbly-mode-active","hide-bar"};
+            foreach (var key in keys) {
+                Application.gsettings.reset (key);
+            }
         }
 
 

@@ -18,7 +18,4 @@ gtk4-update-icon-cache -q -t -f "$PROJECT_DIR/builddir/AppDir/usr/share/icons/hi
 update-desktop-database -q "$PROJECT_DIR/builddir/AppDir/usr/share/applications"
 
 # Run appimage-builder to create the AppImage
-appimage-builder --recipe ../io.github.ellie_commons.jorts.appimage.yml 
-
-# Move the generated AppImage to the project directory
-mv Mingle-*-x86_64.AppImage "$PROJECT_DIR"
+appimage-builder --recipe ../io.github.ellie_commons.jorts.appimage.yml --appdir ./Jorts-x86_64.AppImage

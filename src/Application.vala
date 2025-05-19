@@ -119,9 +119,7 @@ namespace jorts {
             var save_action = new SimpleAction ("save", null);
             set_accels_for_action ("app.save", {"<Control>s"});
             add_action (save_action);
-            save_action.activate.connect (() => {
-                this.save_to_stash ();
-            });
+            save_action.activate.connect (save_to_stash);
             var zoom_out = new SimpleAction ("zoom_out", null);
             set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
             add_action (zoom_out);
@@ -143,9 +141,7 @@ namespace jorts {
             var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
             set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
             add_action (toggle_hidebar);
-            toggle_hidebar.activate.connect (() => {
-                this.toggle_hidebar();
-            });
+            toggle_hidebar.activate.connect (this.toggle_hidebar);
 
         }
 
