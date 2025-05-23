@@ -3,17 +3,10 @@ builddir/
 ~*
 *~
 .flatpak-builder/
-app-dir/
-obj-x86_64-linux-gnu/
 repo/
-.vscode/settings.json
-data/Application copy.css
-src/Widgets/SettingsPopover copy.vala
-src/MainWindow copy.vala
+.vscode/
 generate_stylesheets.sh
-src/Widgets/help/ActionBar.vala
 .gitignore
-src/Widgets/help/MainWindow.vala
 .flatpak/
-src/Widgets/help/dumped
 .potrans
+.editorconfig

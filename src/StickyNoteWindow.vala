@@ -90,7 +90,7 @@ namespace Jorts {
         /*************************************************/
 
         public StickyNoteWindow (Gtk.Application app, NoteData data) {
-            Object (application: app);
+
             Intl.setlocale ();
             debug ("New StickyNoteWindow instance: " + data.title);
 

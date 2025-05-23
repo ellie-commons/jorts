@@ -260,7 +260,7 @@ namespace Jorts {
 
                 case "--preferences":
                     activate ();
-                    preferences = new PreferenceWindow(this);
+                    preferences = new Jorts.PreferenceWindow();
                     break;
 
                 case "--dump":

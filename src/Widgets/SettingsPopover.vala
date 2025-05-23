@@ -63,24 +63,12 @@ public class Jorts.SettingsPopover : Gtk.Popover {
             THEME SELECTION
         */
 
-        //  //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
-        //  var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
-        //  color_button_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        //  color_button_label.tooltip_text = _("Choose a colour for this sticky note");
-        //  color_button_label.margin_top = 9;
-
-        //setting_grid.append (color_button_label);
-
-
-        //TODO: Multiline
         var color_button_box = new Jorts.ColorBox (theme) {
             margin_start = 12,
             margin_end = 12
         };
 
         color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
-
-
 
         /* 
             ZOOM SELECTION
@@ -111,7 +99,7 @@ public class Jorts.SettingsPopover : Gtk.Popover {
         this.zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
-        
+
         var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
             homogeneous = true,
             hexpand = true,
@@ -121,7 +109,7 @@ public class Jorts.SettingsPopover : Gtk.Popover {
 
         font_size_box.append (this.zoom_out_button);
         font_size_box.append (this.zoom_default_button);
-        font_size_box.append (this.zoom_in_button);       
+        font_size_box.append (this.zoom_in_button);
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
         /*
@@ -146,7 +134,7 @@ public class Jorts.SettingsPopover : Gtk.Popover {
         //TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
         //It must stay as "%d" in the translation so the app can replace it with the current zoom level.
         var label = _("%d%%").printf (zoom);
-        this.zoom_default_button.set_label (label);  
+        this.zoom_default_button.set_label (label);
     }
 
 

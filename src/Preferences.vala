@@ -40,10 +40,8 @@ namespace Jorts {
             { ACTION_NEW, action_new }
         };
 
-        public PreferenceWindow (Gtk.Application app) {
+        construct {
             debug ("Showing preference window");
-
-            Object (application: app);
             Intl.setlocale ();
 
             var actions = new SimpleActionGroup ();
