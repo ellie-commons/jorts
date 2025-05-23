@@ -32,11 +32,11 @@ save_to_stash(Note)
 --> Dump all it has in a saved_state.json
 
 load_from_stash()
---> loads the json file and parse it into a list of noteData
+--> loads the json file and parse it into a list of NoteData
 
 */
 
-namespace jorts.Stash {
+namespace Jorts.Stash {
 
     /*************************************************/
 	// Ok first check if we have a directory to store data
@@ -89,20 +89,20 @@ namespace jorts.Stash {
     // We first try from main storage
     // If that fails, we go for backup
     // Still failing ? Start anew
-    public Gee.ArrayList<noteData> load_from_stash() {
+    public Gee.ArrayList<NoteData> load_from_stash() {
         debug("loading from stash...");
 
-        Gee.ArrayList<noteData> loaded_data = new Gee.ArrayList<noteData>();
+        Gee.ArrayList<NoteData> loaded_data = new Gee.ArrayList<NoteData>();
         string data_directory = Environment.get_user_data_dir ();
-        string storage_path = data_directory + "/" + jorts.Constants.FILENAME_STASH;
-        string backup_path = data_directory + "/" + jorts.Constants.FILENAME_BACKUP;
+        string storage_path = data_directory + "/" + Jorts.Constants.FILENAME_STASH;
+        string backup_path = data_directory + "/" + Jorts.Constants.FILENAME_BACKUP;
 
         var parser = new Json.Parser();
 
         // Try standard storage
         try {
             parser.load_from_mapped_file (storage_path);
-            loaded_data = jorts.Jason.load_parser(parser);
+            loaded_data = Jorts.Jason.load_parser(parser);
 
         } catch (Error e) {
             print("[WARNING] Failed to load from main storage! " + e.message.to_string() + "\n");
@@ -110,7 +110,7 @@ namespace jorts.Stash {
             // Try backup file
             try {
                 parser.load_from_mapped_file (backup_path);
-                loaded_data = jorts.Jason.load_parser(parser);
+                loaded_data = Jorts.Jason.load_parser(parser);
 
             } catch (Error e) {
 
@@ -126,8 +126,8 @@ namespace jorts.Stash {
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
             debug("nothing loaded");
-            noteData blank_slate    = jorts.Utils.random_note(null);
-            blank_slate.theme       = jorts.Constants.DEFAULT_THEME ;
+            NoteData blank_slate    = Jorts.Utils.random_note(null);
+            blank_slate.theme       = Jorts.Constants.DEFAULT_THEME ;
 
             loaded_data.add(blank_slate);
         }
@@ -146,7 +146,7 @@ namespace jorts.Stash {
         debug("lets check if we need to backup");
 
         string data_directory = Environment.get_user_data_dir ();
-        string backup_path = data_directory + "/" + jorts.Constants.FILENAME_BACKUP;
+        string backup_path = data_directory + "/" + Jorts.Constants.FILENAME_BACKUP;
         var file = File.new_for_path (backup_path);
 
         if ((last_backup == "") || (file.query_exists() == false)) {
@@ -157,7 +157,7 @@ namespace jorts.Stash {
             var now = new DateTime.now_utc () ;
             var date_last_backup = new DateTime.from_iso8601 (last_backup, null);
             TimeSpan date_diff = now.difference(date_last_backup);
-            var days_in_micro = jorts.Constants.DAYS_BETWEEN_BACKUPS * TimeSpan.DAY;
+            var days_in_micro = Jorts.Constants.DAYS_BETWEEN_BACKUPS * TimeSpan.DAY;
             return (date_diff > days_in_micro);
         }
     }

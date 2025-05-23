@@ -23,7 +23,7 @@ I just dont wanna rewrite the same button over and over
 
 */
 
-public class jorts.ColorPill : Gtk.CheckButton {
+public class Jorts.ColorPill : Gtk.CheckButton {
         public ColorPill (string tooltip, string colorclass) {
                 add_css_class("colorpill");
                 add_css_class(colorclass);

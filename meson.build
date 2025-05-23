@@ -36,7 +36,7 @@ executable(
     meson.project_name(),
     gresource,
     config_file,
-    'src/Objects/noteData.vala', 
+    'src/Objects/NoteData.vala', 
 
     'src/Services/Constants.vala',
     'src/Services/Jason.vala',

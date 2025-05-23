@@ -25,7 +25,7 @@ Just Dump constants here
 
 */
 
-namespace jorts.Constants {
+namespace Jorts.Constants {
 
 
 

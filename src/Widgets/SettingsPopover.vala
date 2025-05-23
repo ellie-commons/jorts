@@ -30,7 +30,7 @@ So the whole settings popover is here, deal with it.
 */
 
 
-public class jorts.SettingsPopover : Gtk.Popover {
+public class Jorts.SettingsPopover : Gtk.Popover {
 
 
     /* THEME SELECTION */
@@ -59,13 +59,10 @@ public class jorts.SettingsPopover : Gtk.Popover {
             margin_bottom = 12
         };
 
-
-
         /* 
             THEME SELECTION
         */
 
-        
         //  //TRANSLATORS: The label is displayed above colored pills the user can click to choose a theme color
         //  var color_button_label = new Granite.HeaderLabel (_("Sticky Note Colour"));
         //  color_button_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
@@ -76,13 +73,12 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
         //TODO: Multiline
-        var color_button_box = new jorts.ColorBox(theme) {
+        var color_button_box = new Jorts.ColorBox (theme) {
             margin_start = 12,
             margin_end = 12
         };
 
-
-        color_button_box.theme_changed.connect ((selected) => {this.theme_changed(selected);});
+        color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
 
 
 
@@ -93,28 +89,28 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
-                jorts.Constants.ACCELS_ZOOM_OUT,
+                Jorts.Constants.ACCELS_ZOOM_OUT,
                 _("Zoom out")
                 )
             };
         this.zoom_default_button = new Gtk.Button () {
             tooltip_markup = Granite.markup_accel_tooltip (
-                jorts.Constants.ACCELS_ZOOM_DEFAULT,
+                Jorts.Constants.ACCELS_ZOOM_DEFAULT,
                 _("Default zoom level")
                 )
             };
 
             this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
-                jorts.Constants.ACCELS_ZOOM_IN,
+                Jorts.Constants.ACCELS_ZOOM_IN,
                 _("Zoom in")
                 )
             };
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        this.zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
-        this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
-        this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
+        this.zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
+        this.zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
+        this.zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
         
         var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
             homogeneous = true,
@@ -128,21 +124,16 @@ public class jorts.SettingsPopover : Gtk.Popover {
         font_size_box.append (this.zoom_in_button);       
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
-
-
-
         /*
             APPENDS
         */
-
 
         setting_grid.append (color_button_box);
         setting_grid.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         setting_grid.append (font_size_box);
 
         setting_grid.show ();
-        set_child(setting_grid);
-
+        set_child (setting_grid);
 
     }
 

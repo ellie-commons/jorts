@@ -28,7 +28,7 @@ random_note(skip_theme)
 
 */
 
-namespace jorts.Utils {
+namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
@@ -82,7 +82,7 @@ namespace jorts.Utils {
     // Having an gee.arraylist defined from the start only causes issues
     public string random_theme (string? skip_theme) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (jorts.Constants.THEMES);
+        themes.add_all_array (Jorts.Constants.THEMES);
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
@@ -146,7 +146,7 @@ namespace jorts.Utils {
     public string random_emote (string? skip_emote) {
 
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
-        allemotes.add_all_array (jorts.Constants.EMOTES);
+        allemotes.add_all_array (Jorts.Constants.EMOTES);
 
         if (skip_emote != null) {
             allemotes.remove(skip_emote);
@@ -166,7 +166,7 @@ namespace jorts.Utils {
     /*************************************************/
     // Hey! Looking in the source code is cheating!
 
-    public noteData golden_sticky(noteData blank_slate) {
+    public NoteData golden_sticky(NoteData blank_slate) {
 
         var random_in_range = Random.int_range (0,1000);
 
@@ -196,12 +196,12 @@ Have a great day!🎇
 
     /*************************************************/
     // Spits out a fresh new note
-    public noteData random_note (string? skip_theme) {
+    public NoteData random_note (string? skip_theme) {
         debug("Generating random note... Skip:" + skip_theme);
-        var randtitle = jorts.Utils.random_title();
-        string randtheme = jorts.Utils.random_theme (skip_theme);
+        var randtitle = Jorts.Utils.random_title();
+        string randtheme = Jorts.Utils.random_theme (skip_theme);
 
-        noteData randnote = new noteData( randtitle, randtheme, "", jorts.Constants.DEFAULT_ZOOM, jorts.Constants.DEFAULT_WIDTH, jorts.Constants.DEFAULT_HEIGHT);
+        NoteData randnote = new NoteData( randtitle, randtheme, "", Jorts.Constants.DEFAULT_ZOOM, Jorts.Constants.DEFAULT_WIDTH, Jorts.Constants.DEFAULT_HEIGHT);
 
 
         return randnote; 

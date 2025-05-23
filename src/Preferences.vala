@@ -28,36 +28,36 @@ the innerbox has widgets for settings.
 the actionbar has a donate me and a set back to defaults just like elementaryOS
 
 */
-namespace jorts {
-    public class PreferenceWindow :  Gtk.Window {
+namespace Jorts {
+    public class PreferenceWindow : Gtk.Window {
 
-        public const string ACTION_PREFIX   = "app.";
-        public const string ACTION_NEW      = "action_new";
+        public const string ACTION_PREFIX = "app.";
+        public const string ACTION_NEW = "action_new";
 
         public static Gee.MultiMap<string, string> action_accelerators;
 
-        private const GLib.ActionEntry[] action_entries = {
-            { ACTION_NEW,               action_new      }
+        private const GLib.ActionEntry[] ACTION_ENTRIES = {
+            { ACTION_NEW, action_new }
         };
 
         public PreferenceWindow (Gtk.Application app) {
-            debug("Showing preference window");
+            debug ("Showing preference window");
 
             Object (application: app);
             Intl.setlocale ();
 
             var actions = new SimpleActionGroup ();
-            actions.add_action_entries (action_entries, this);
+            actions.add_action_entries (ACTION_ENTRIES, this);
             insert_action_group ("app", actions);
 
             var gtk_settings = Gtk.Settings.get_default ();
 
             // Since each sticky note adopts a different accent color
             // we have to revert to default when this one is focused
-            this.notify["is-active"].connect(() => {
+            this.notify["is-active"].connect (() => {
                 if (this.is_active) {
                     //gtk_settings.gtk_theme_name = Application.system_accent;
-                    gtk_settings.gtk_theme_name = "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+                    gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
                 }
             });
 
@@ -68,15 +68,15 @@ namespace jorts {
             var titlelabel = new Gtk.Label (_("Preferences for your Jorts"));
             titlelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             set_title (titlelabel.get_text ());
-            
+
             var headerbar = new Gtk.HeaderBar () {
                 title_widget = titlelabel,
                 show_title_buttons = true
             };
 
             set_titlebar (headerbar);
-            set_size_request (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
-            set_default_size (jorts.Constants.DEFAULT_PREF_WIDTH, jorts.Constants.DEFAULT_PREF_HEIGHT);
+            set_size_request (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
+            set_default_size (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
 
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
@@ -119,7 +119,7 @@ namespace jorts {
 
                 scribbly_box.append (scribbly_label);
                 scribbly_box.append (scribbly_toggle);
-                settingsbox.append (scribbly_box); 
+                settingsbox.append (scribbly_box);
 
                 Application.gsettings.bind (
                     "scribbly-mode-active", 
@@ -149,7 +149,7 @@ namespace jorts {
                 settingsbox.append (hidebar_box); 
 
                 Application.gsettings.bind (
-                    "hide-bar", 
+                    "hide-bar",
                     hidebar_toggle, "active",
                     SettingsBindFlags.DEFAULT);
 
@@ -158,14 +158,14 @@ namespace jorts {
                 /*************************************************/
 
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-            print(desktop_environment + " detected!");
+            print (desktop_environment + " detected!");
 
             // Show only in Pantheon because others do not have an autostart panel
             if (desktop_environment == "Pantheon") {
-        
+
                 var link = Granite.SettingsUri.PERMISSIONS ;
                 var linkname = _("Permissions") ;
-    
+
                 var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 var permissions_link = new Gtk.LinkButton.with_label (
                                                     link,
@@ -175,17 +175,17 @@ namespace jorts {
                 // _("Applications → Permissions")
                 permissions_link.tooltip_text = link;
                 permissions_link.halign = Gtk.Align.END;
-        
+
                 var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = permissions_link,
                     secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
                 };
                 permissions_label.set_hexpand (true);
-        
+
                 permissions_box.append (permissions_label);
                 permissions_box.append (permissions_link);
-                settingsbox.append(permissions_box); 
-    
+                settingsbox.append (permissions_box);
+
             // Not Pantheon, not the Windows port. Must be a rando DE
             } else {
 
@@ -197,20 +197,20 @@ namespace jorts {
                                                     link,
                                                     linkname
                                                 );
-        
+
                 // _("Applications → Permissions")
                 permissions_link.tooltip_text = link;
                 permissions_link.halign = Gtk.Align.END;
-        
+
                 var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = permissions_link,
                     secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
                 };
                 permissions_label.set_hexpand (true);
-        
+
                 permissions_box.append (permissions_label);
                 permissions_box.append (permissions_link);
-                settingsbox.append(permissions_box); 
+                settingsbox.append (permissions_box);
 
             }
 
@@ -222,18 +222,18 @@ namespace jorts {
 
             // Monies?
             var support_button = new Gtk.LinkButton.with_label (
-                jorts.Constants.DONATE_LINK,
+                Jorts.Constants.DONATE_LINK,
                 _("Support us!")
             );
             actionbar.pack_start (support_button);
 
             // Reset
-            var reset_button = new Gtk.Button();
-            reset_button.set_label( _("Reset to Default"));
+            var reset_button = new Gtk.Button ();
+            reset_button.set_label ( _("Reset to Default"));
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
             actionbar.pack_end (reset_button);
 
-            reset_button.clicked.connect(on_reset);
+            reset_button.clicked.connect (on_reset);
 
             //  var close_button = new Gtk.Button();
             //  close_button.set_label( _("Close"));
@@ -241,7 +241,7 @@ namespace jorts {
             //  actionbar.pack_end (close_button);
 
             mainbox.append (settingsbox);
-            mainbox.append(actionbar);
+            mainbox.append (actionbar);
 
             // Make the whole window grabbable
             var handle = new Gtk.WindowHandle () {
@@ -254,17 +254,15 @@ namespace jorts {
         }
 
         private void action_new () {
-            ((Application)this.application).create_note(null);
+            ((Application)this.application).create_note (null);
         }
 
-        private void on_reset() {
-            string[] keys = {"scribbly-mode-active","hide-bar"};
+        private void on_reset () {
+            string[] keys = {"scribbly-mode-active", "hide-bar"};
             foreach (var key in keys) {
                 Application.gsettings.reset (key);
             }
         }
-
-
     }
 }
 

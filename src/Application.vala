@@ -26,14 +26,14 @@ At some point i may move this in its own file
 
 */
 
-namespace jorts {
+namespace Jorts {
     public class Application : Gtk.Application {
         public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow>();
         public static GLib.Settings gsettings;
 
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: jorts.Constants.RDNN);
+                    application_id: Jorts.Constants.RDNN);
         }
 
         // Changed whenever a note changes zoom
@@ -54,7 +54,7 @@ namespace jorts {
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
             gtk_settings.gtk_icon_theme_name = "elementary";
-            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
+            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.ascii_down();
 
             // Also follow dark if system is dark lIke mY sOul.
             gtk_settings.gtk_application_prefer_dark_theme = (
@@ -79,13 +79,13 @@ namespace jorts {
             //      null);
 
             // build all the stylesheets
-            jorts.Themer.init_all_themes();
+            Jorts.Themer.init_all_themes();
         }
 
 
         /*************************************************/        
         static construct {
-            gsettings = new GLib.Settings (jorts.Constants.RDNN);
+            gsettings = new GLib.Settings (Jorts.Constants.RDNN);
         }
 
         /*************************************************/
@@ -153,7 +153,7 @@ namespace jorts {
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
-	public void create_note(noteData? data) {
+	public void create_note(NoteData? data) {
         StickyNoteWindow note;
         if (data != null) {
             note = new StickyNoteWindow(this, data);
@@ -163,10 +163,10 @@ namespace jorts {
             // Skip theme from previous window, but use same text zoom
             StickyNoteWindow last_note = this.open_notes.last ();
             string skip_theme = last_note.theme;
-            var random_data = jorts.Utils.random_note(skip_theme);
+            var random_data = Jorts.Utils.random_note(skip_theme);
 
             // A chance at pulling the Golden Sticky
-            random_data = jorts.Utils.golden_sticky(random_data);
+            random_data = Jorts.Utils.golden_sticky(random_data);
 
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow(this, random_data);
@@ -183,9 +183,9 @@ namespace jorts {
 	}
 
     public void save_to_stash() {
-        jorts.Stash.check_if_stash ();
-        string json_data = jorts.Jason.jsonify (open_notes);
-        jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_STASH);
+        Jorts.Stash.check_if_stash ();
+        string json_data = Jorts.Jason.jsonify (open_notes);
+        Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
         print("Saved " + open_notes.size.to_string() + "!\n");
     }
 
@@ -221,21 +221,21 @@ namespace jorts {
 
     /*************************************************/
     public void init_all_notes() {
-        Gee.ArrayList<noteData> loaded_data = jorts.Stash.load_from_stash();
+        Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
 
         // Load everything we have
-        foreach (noteData data in loaded_data) {
+        foreach (NoteData data in loaded_data) {
             debug("Loaded: " + data.title + "\n");
             this.create_note(data);
         }
 
 
-        if (jorts.Stash.need_backup(gsettings.get_string("last-backup"))) {
+        if (Jorts.Stash.need_backup(gsettings.get_string("last-backup"))) {
             print("Doing a backup! :)");
 
-            jorts.Stash.check_if_stash ();
-            string json_data = jorts.Jason.jsonify (this.open_notes);
-            jorts.Stash.overwrite_stash (json_data, jorts.Constants.FILENAME_BACKUP);
+            Jorts.Stash.check_if_stash ();
+            string json_data = Jorts.Jason.jsonify (this.open_notes);
+            Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
 
             var now = new DateTime.now_utc ().to_string() ;
             gsettings.set_string("last-backup", now);
@@ -264,7 +264,7 @@ namespace jorts {
                     break;
 
                 case "--dump":
-                    print(jorts.Jason.jsonify (open_notes));
+                    print(Jorts.Jason.jsonify (open_notes));
                     break;
 
                 default:

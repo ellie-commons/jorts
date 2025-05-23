@@ -21,7 +21,7 @@
 /*
 
 load_node
---> Json.Object representing a noteData, that we convert into one
+--> Json.Object representing a NoteData, that we convert into one
 TODO: move this shit into Objects
 
 jsonify
@@ -38,40 +38,40 @@ used by the stash upon loading a storage file, passed on to Application to start
 
 */
 
-namespace jorts.Jason {
+namespace Jorts.Jason {
 
     /*************************************************/
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
-    public jorts.noteData load_node(Json.Object node) {
+    public Jorts.NoteData load_node(Json.Object node) {
 
         string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
-        string theme    = node.get_string_member_with_default("theme",jorts.Utils.random_theme(null));
+        string theme    = node.get_string_member_with_default("theme",Jorts.Utils.random_theme(null));
         string content  = node.get_string_member_with_default("content","");
 
         // TODO: If this one fails, whole note fails...
-        int64 zoom      = node.get_int_member_with_default("zoom",jorts.Constants.DEFAULT_ZOOM);
+        int64 zoom      = node.get_int_member_with_default("zoom",Jorts.Constants.DEFAULT_ZOOM);
 
-        if (zoom < jorts.Constants.ZOOM_MIN) {
-            zoom = jorts.Constants.ZOOM_MIN;
-        } else if (zoom > jorts.Constants.ZOOM_MAX) {
-            zoom = jorts.Constants.ZOOM_MAX;
+        if (zoom < Jorts.Constants.ZOOM_MIN) {
+            zoom = Jorts.Constants.ZOOM_MIN;
+        } else if (zoom > Jorts.Constants.ZOOM_MAX) {
+            zoom = Jorts.Constants.ZOOM_MAX;
         }
 
-        int64 width      = node.get_int_member_with_default("width",jorts.Constants.DEFAULT_WIDTH);
-        int64 height      = node.get_int_member_with_default("height",jorts.Constants.DEFAULT_HEIGHT);
+        int64 width      = node.get_int_member_with_default("width",Jorts.Constants.DEFAULT_WIDTH);
+        int64 height      = node.get_int_member_with_default("height",Jorts.Constants.DEFAULT_HEIGHT);
 
-        jorts.noteData loaded_note = new jorts.noteData(title, theme, content, (int)zoom, (int)width, (int)height);
+        Jorts.NoteData loaded_note = new Jorts.NoteData(title, theme, content, (int)zoom, (int)width, (int)height);
         return loaded_note;
     }
 
     /*************************************************/
     // Loop through the list of windows and convert it into a giant json string
-    public string jsonify (Gee.ArrayList<jorts.StickyNoteWindow> notes) {
+    public string jsonify (Gee.ArrayList<Jorts.StickyNoteWindow> notes) {
         Json.Builder builder = new Json.Builder ();
         builder.begin_array ();
-        foreach (jorts.StickyNoteWindow note in notes) {
-            jorts.noteData data = note.packaged ();
+        foreach (Jorts.StickyNoteWindow note in notes) {
+            Jorts.NoteData data = note.packaged ();
             //print("saving " + note.title_name + "\n");
 
 			// Lets fkin gooo
@@ -100,14 +100,14 @@ namespace jorts.Jason {
     }
 
     /*************************************************/    
-    public Gee.ArrayList<jorts.noteData> load_parser(Json.Parser parser) {
-        Gee.ArrayList<jorts.noteData> loaded_data = new Gee.ArrayList<jorts.noteData>();
+    public Gee.ArrayList<Jorts.NoteData> load_parser(Json.Parser parser) {
+        Gee.ArrayList<Jorts.NoteData> loaded_data = new Gee.ArrayList<Jorts.NoteData>();
 
         var root = parser.get_root();
         var array = root.get_array();
         
         foreach (var item in array.get_elements()) {
-            var stored_note = jorts.Jason.load_node(item.get_object());
+            var stored_note = Jorts.Jason.load_node(item.get_object());
             loaded_data.add(stored_note);
         }
 

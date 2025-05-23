@@ -18,10 +18,10 @@
 * Boston, MA 02110-1301 USA
 */
 
-// The noteData object is just packaging to pass off data from and to storage
-namespace jorts {
+// The NoteData object is just packaging to pass off data from and to storage
+namespace Jorts {
 
-    public class noteData : Object {
+    public class NoteData : Object {
         public string title;
         public string theme;
         public string content;
@@ -29,7 +29,7 @@ namespace jorts {
         public int width;
         public int height;
 
-        public noteData(string title, string theme, string content, int zoom, int width, int height )
+        public NoteData (string title, string theme, string content, int zoom, int width, int height)
         {
             this.title = title;
             this.theme = theme;

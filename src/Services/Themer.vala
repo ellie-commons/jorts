@@ -29,7 +29,7 @@ init_all_themes()
 */
 
 
-namespace jorts.Themer {
+namespace Jorts.Themer {
 
     /*************************************************/
     // Here we go
@@ -157,9 +157,9 @@ namespace jorts.Themer {
         );
 
         // Then generate all theme classes
-        foreach (unowned var theme in jorts.Constants.THEMES) {
+        foreach (unowned var theme in Jorts.Constants.THEMES) {
             var theme_provider = new Gtk.CssProvider ();
-            var style = jorts.Themer.generate_css (theme);
+            var style = Jorts.Themer.generate_css (theme);
 
             theme_provider.load_from_string (style);
 

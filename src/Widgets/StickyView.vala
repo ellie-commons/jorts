@@ -33,7 +33,7 @@ https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
 
 */
 
-public class jorts.StickyView : Granite.HyperTextView {
+public class Jorts.StickyView : Granite.HyperTextView {
 
         //private SimpleActionGroup actions;
         //private Gee.ArrayQueue<FormattingRequest?> formatting_queue = new Gee.ArrayQueue<FormattingRequest?> ();

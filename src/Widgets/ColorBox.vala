@@ -25,7 +25,7 @@ I just dont wanna rewrite the same button over and over
 
 
 
-public class jorts.ColorBox : Gtk.Box {
+public class Jorts.ColorBox : Gtk.Box {
 
     public signal void theme_changed (string selected);
 

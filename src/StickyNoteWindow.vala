@@ -21,7 +21,7 @@
 /* CONTENT
 
 Each StickyNoteWindow instance is a sticky note
-It takes a noteData, and creates the UI
+It takes a NoteData, and creates the UI
 
 It is connected to settings and reacts to changes
 
@@ -31,17 +31,17 @@ like creating a new note, or saving
 Notably, it interacts with popover - a SettingsPopover instant, where stuff is more hairy
 Both interact through signals and methods.
 
-A method packages the informations into one noteData
+A method packages the informations into one NoteData
 Theme and Zoom changing are just a matter of adding and removing classes
 
 
 */
-namespace jorts {
+namespace Jorts {
 
     public class StickyNoteWindow : Gtk.Window {
 
         public Gtk.EditableLabel notetitle;
-        private jorts.StickyView view;
+        private Jorts.StickyView view;
         private Gtk.HeaderBar headerbar;
         private Gtk.ActionBar actionbar;
         private Gtk.Revealer swoosh;
@@ -52,7 +52,7 @@ namespace jorts {
 
         private SettingsPopover popover;
 
-        public jorts.noteData data;
+        public Jorts.NoteData data;
 
         public Gtk.Settings gtk_settings;
 
@@ -65,9 +65,9 @@ namespace jorts {
 
         public SimpleActionGroup actions { get; construct; }
 
-        public const string ACTION_PREFIX   = "app.";
-        public const string ACTION_NEW      = "action_new";
-        public const string ACTION_DELETE   = "action_delete";
+        public const string ACTION_PREFIX = "app.";
+        public const string ACTION_NEW = "action_new";
+        public const string ACTION_DELETE = "action_delete";
 
         public const string ACTION_ZOOM_OUT = "zoom_out";
         public const string ACTION_ZOOM_DEFAULT = "zoom_default";
@@ -75,27 +75,25 @@ namespace jorts {
 
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
-        private const GLib.ActionEntry[] action_entries = {
-            { ACTION_NEW,               action_new      },
-            { ACTION_DELETE,            action_delete   },
-            { ACTION_ZOOM_OUT,          zoom_out        },
-            { ACTION_ZOOM_DEFAULT,      zoom_default    },
-            { ACTION_ZOOM_IN,           zoom_in         }
+        private const GLib.ActionEntry[] ACTION_ENTRIES = {
+            { ACTION_NEW, action_new },
+            { ACTION_DELETE, action_delete},
+            { ACTION_ZOOM_OUT, zoom_out},
+            { ACTION_ZOOM_DEFAULT, zoom_default},
+            { ACTION_ZOOM_IN, zoom_in}
         };
-
-
 
         /*************************************************/
         /*           Lets build a window                 */
         /*************************************************/
 
-        public StickyNoteWindow (Gtk.Application app, noteData data) {
+        public StickyNoteWindow (Gtk.Application app, NoteData data) {
             Object (application: app);
             Intl.setlocale ();
-            debug("New StickyNoteWindow instance: " + data.title);
+            debug ("New StickyNoteWindow instance: " + data.title);
 
             var actions = new SimpleActionGroup ();
-            actions.add_action_entries (action_entries, this);
+            actions.add_action_entries (ACTION_ENTRIES, this);
             insert_action_group ("app", actions);
 
             this.gtk_settings = Gtk.Settings.get_default ();
@@ -112,15 +110,15 @@ namespace jorts {
 
             this.set_title (this.title_name);
             this.set_default_size (
-                data.width, 
+                data.width,
                 data.height
             );
 
             // Rebuild the whole theming
-            this.update_theme(this.theme);
+            this.update_theme (this.theme);
 
             // add required base classes
-            this.add_css_class("rounded");
+            this.add_css_class ("rounded");
 
             if (gtk_settings.gtk_enable_animations) {
                 this.add_css_class ("animated");
@@ -130,14 +128,14 @@ namespace jorts {
             /*              USER INTERFACE                */
             /**********************************************/
 
-            this.headerbar = new Gtk.HeaderBar();
+            this.headerbar = new Gtk.HeaderBar ();
             headerbar.add_css_class ("flat");
-            headerbar.add_css_class("headertitle");
+            headerbar.add_css_class ("headertitle");
             //header.has_subtitle = false;
 
             //headerbar.decoration_layout = "close:";
-            headerbar.set_show_title_buttons(false);
-            headerbar.height_request = jorts.Utils.zoom_to_UIsize(this.zoom);
+            headerbar.set_show_title_buttons (false);
+            headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
             // Defime the label you can edit. Which is editable.
             notetitle = new Gtk.EditableLabel (this.title_name);
@@ -148,17 +146,17 @@ namespace jorts {
 
             // Save when title has changed. And ALSO set the WM title so multitasking has the new one
             notetitle.changed.connect (() => {
-                this.set_title(notetitle.text);
-                on_buffer_changed();         
+                this.set_title (notetitle.text);
+                on_buffer_changed ();
             });
 
-            headerbar.set_title_widget(notetitle);
-            this.set_titlebar(headerbar);
+            headerbar.set_title_widget (notetitle);
+            this.set_titlebar (headerbar);
 
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
 
-            view = new jorts.StickyView (this.content);
+            view = new Jorts.StickyView (this.content);
 
             view.buffer.changed.connect (on_buffer_changed);
 
@@ -168,7 +166,7 @@ namespace jorts {
             // Bar at the bottom
             actionbar = new Gtk.ActionBar ();
             actionbar.set_hexpand (true);
-            
+
             new_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
                     {"<Control>n"},
@@ -180,7 +178,7 @@ namespace jorts {
             new_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_NEW;
             new_item.width_request = 32;
             new_item.height_request = 32;
-            new_item.add_css_class("themedbutton");
+            new_item.add_css_class ("themedbutton");
 
             delete_item = new Gtk.Button () {
                 tooltip_markup = Granite.markup_accel_tooltip (
@@ -192,7 +190,7 @@ namespace jorts {
             delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
             delete_item.width_request = 32;
             delete_item.height_request = 32;
-            delete_item.add_css_class("themedbutton");
+            delete_item.add_css_class ("themedbutton");
 
 
 /*              this.hide_item = new Gtk.ToggleButton ();
@@ -201,14 +199,14 @@ namespace jorts {
             this.hide_item.height_request = 32;
             this.hide_item.add_css_class("themedbutton");  */
 
-            this.on_scribbly_changed();
+            this.on_scribbly_changed ();
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
-            var emoji_button = new Gtk.MenuButton();
-            emoji_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Control>period"},_("Insert emoji"));
+            var emoji_button = new Gtk.MenuButton ();
+            emoji_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Control>period"}, _("Insert emoji"));
             emoji_button.has_tooltip = true;
-            emoji_button.set_icon_name(jorts.Utils.random_emote (null));
-            emoji_button.add_css_class("themedbutton");
+            emoji_button.set_icon_name (Jorts.Utils.random_emote (null));
+            emoji_button.add_css_class ("themedbutton");
             emoji_button.popover = emojichooser_popover;
             emoji_button.width_request = 32;
             emoji_button.height_request = 32;
@@ -216,19 +214,19 @@ namespace jorts {
             // Display the current zoom level when the popover opens
             // Else it does not get set
             emojichooser_popover.show.connect (() => {
-                emoji_button.set_icon_name(
-                    jorts.Utils.random_emote (
+                emoji_button.set_icon_name (
+                    Jorts.Utils.random_emote (
                         emoji_button.get_icon_name ())
                 );
             });
 
             // User chose emoji, add it to buffer
             emojichooser_popover.emoji_picked.connect ((emoji) => {
-                view.buffer.insert_at_cursor (emoji,-1);
+                view.buffer.insert_at_cursor (emoji, -1);
             });
 
             this.popover = new SettingsPopover (this.theme);
-            this.set_zoom(data.zoom);
+            this.set_zoom (data.zoom);
 
             // The settings popover tells us a new theme has been chosen!
             this.popover.theme_changed.connect (update_theme);
@@ -236,12 +234,12 @@ namespace jorts {
             // The settings popover tells us a new zoom has been chosen!
             this.popover.zoom_changed.connect (on_zoom_changed);
 
-            var app_button = new Gtk.MenuButton();
+            var app_button = new Gtk.MenuButton ();
             app_button.has_tooltip = true;
             app_button.tooltip_text = (_("Preferences for this sticky note"));
-            app_button.set_icon_name("open-menu-symbolic");
+            app_button.set_icon_name ("open-menu-symbolic");
             app_button.direction = Gtk.ArrowType.UP;
-            app_button.add_css_class("themedbutton");
+            app_button.add_css_class ("themedbutton");
             app_button.popover = popover;
             app_button.width_request = 32;
             app_button.height_request = 32;
@@ -255,31 +253,28 @@ namespace jorts {
 
             // Define the grid 
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
-            mainbox.append(scrolled);
+            mainbox.append (scrolled);
 
-            var handle = new Gtk.WindowHandle () {
+            var swoosh = new Gtk.Revealer () {
                 child = actionbar
-            };
-
-
-            var swoosh = new Gtk.Revealer() {
-                child = handle
             };
             swoosh.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
 
+            var handle = new Gtk.WindowHandle () {
+                child = swoosh
+            };
 
             //on_hidebar_changed();
-    
-            mainbox.append(handle);
+            mainbox.append (handle);
             set_child (mainbox);
-            show();
+            show ();
 
             /*****************************************/
             /*              CONNECTS                 */
             /*****************************************/
 
             // Use the color theme of this sticky note when focused
-            this.notify["is-active"].connect(on_focus_changed);
+            this.notify["is-active"].connect (on_focus_changed);
 
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
@@ -302,12 +297,12 @@ namespace jorts {
         /********************************************/
 
         // Add a debounce so we aren't writing the entire buffer every character input
-        public void on_buffer_changed() {
+        public void on_buffer_changed () {
             if (debounce_timer_id != 0) {
                 GLib.Source.remove (debounce_timer_id);
             }
 
-            debounce_timer_id = Timeout.add (jorts.Constants.DEBOUNCE, () => {
+            debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
                 debounce_timer_id = 0;
                 ((Application)this.application).save_to_stash ();
                 return GLib.Source.REMOVE;
@@ -315,12 +310,12 @@ namespace jorts {
         }
 
         // Called when a change in settings is detected
-        public void on_scribbly_changed() {
+        public void on_scribbly_changed () {
             if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-                
+
                 //this.hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
                 //this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                //    jorts.Constants.ACCELS_SCRIBBLY,
+                //    Jorts.Constants.ACCELS_SCRIBBLY,
                 //    _("Always show content of sticky notes")
                 //);
 
@@ -331,7 +326,7 @@ namespace jorts {
             } else {
                 //this.hide_item.set_icon_name ("eye-not-looking-symbolic");
                 //this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                //    jorts.Constants.ACCELS_SCRIBBLY,
+                //    Jorts.Constants.ACCELS_SCRIBBLY,
                 //    _("Hide content of unfocused sticky notes")
                 //);
 
@@ -343,9 +338,9 @@ namespace jorts {
 
 
         // Called when the window is-active property changes
-        public void on_focus_changed() {
+        public void on_focus_changed () {
             if (this.is_active) {
-                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down();
+                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
                 gtk_settings.gtk_theme_name = stylesheet;
             }
 
@@ -361,12 +356,12 @@ namespace jorts {
         }
 
         // Called when the window is-active property changes
-        public void on_hidebar_changed() {
+        public void on_hidebar_changed () {
                 this.swoosh.reveal_child = (Application.gsettings.get_boolean ("hide-bar") == false);
         }
 
         // Called when the window is-active property changes
-        public void on_reduceanimation_changed() {
+        public void on_reduceanimation_changed () {
 
             if (gtk_settings.gtk_enable_animations) {
                 this.add_css_class ("animated");
@@ -380,17 +375,17 @@ namespace jorts {
             this.title = title;
         }
 
-        // Package the note into a noteData and pass it back
+        // Package the note into a NoteData and pass it back
         // NOTE: We cannot access the buffer if the window is closed, leading to content loss
         // Hence why we need to constantly save the buffer into this.content when changed
-        public noteData packaged() {
+        public NoteData packaged () {
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
 
             int width ; int height;
-            this.get_default_size(out width, out height);
+            this.get_default_size (out width, out height);
 
-            var data = new noteData(
+            var data = new NoteData (
                 current_title,
                 this.theme,
                 this.content,
@@ -402,30 +397,30 @@ namespace jorts {
         }
 
         private void action_new () {
-            ((Application)this.application).create_note(null);
+            ((Application)this.application).create_note (null);
         }
 
         private void action_delete () {
-            ((Application)this.application).remove_note(this);
+            ((Application)this.application).remove_note (this);
             this.close ();
         }
 
         private void zoom_default () {
-            this.set_zoom(jorts.Constants.DEFAULT_ZOOM);
+            this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
         }
 
         // Switches stylesheet
         // First use appropriate stylesheet, Then switch the theme classes
-        private void update_theme(string theme) {
+        private void update_theme (string theme) {
 
-            var stylesheet = "io.elementary.stylesheet." + theme.ascii_down();
+            var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
             this.gtk_settings.gtk_theme_name = stylesheet;
 
             remove_css_class (this.theme);
             this.theme = theme;
             add_css_class (this.theme);
 
-            ((Application)this.application).save_to_stash (); 
+            ((Application)this.application).save_to_stash ();
         }
 
 
@@ -437,46 +432,46 @@ namespace jorts {
         /*************************************************/
 
         // Called when a signal from the popover says stuff got changed
-        public void on_zoom_changed(string zoomkind) {
+        public void on_zoom_changed (string zoomkind) {
             if (zoomkind == "zoom_in") {
-                this.zoom_in();
+                this.zoom_in ();
             } else if (zoomkind == "zoom_out") {
-                this.zoom_out();
+                this.zoom_out ();
             } else if (zoomkind == "reset") {
-                this.set_zoom(100);
+                this.set_zoom (100);
             }
-            ((Application)this.application).save_to_stash (); 
+            ((Application)this.application).save_to_stash ();
         }
 
 
         // First check an increase doesnt go above limit
-        public void zoom_in() {
-            if ((this.zoom + 20) <= jorts.Constants.ZOOM_MAX) {
-                this.set_zoom((this.zoom + 20));
+        public void zoom_in () {
+            if ((this.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+                this.set_zoom ((this.zoom + 20));
             }
         }
 
         // First check an increase doesnt go below limit
-        public void zoom_out() {
-            if ((this.zoom - 20) >= jorts.Constants.ZOOM_MIN) {
-                this.set_zoom((this.zoom - 20));
+        public void zoom_out () {
+            if ((this.zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+                this.set_zoom ((this.zoom - 20));
             }
         }
 
         // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom(int zoom) {
+        public void set_zoom (int zoom) {
 
 
             // Switches the classes that control font size
-            this.remove_css_class (jorts.Utils.zoom_to_class( this.zoom));
+            this.remove_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
             this.zoom = zoom;
-            this.add_css_class (jorts.Utils.zoom_to_class( this.zoom));
+            this.add_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
 
-            this.headerbar.height_request = jorts.Utils.zoom_to_UIsize(this.zoom);
+            this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
             // Reflect the number in the popover
-            this.popover.set_zoomlevel(zoom);
-            
+            this.popover.set_zoomlevel (zoom);
+
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;
         }
