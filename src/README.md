@@ -1,8 +1,8 @@
 # Code Structure
-Each Note is an instance of MainWindow initiated by Application.
+Each Note is an instance of StickyNoteWindow initiated by Application.
 Components should be as stupidly simple as possible.
 
-### MainWindow
+### StickyNoteWindow
 Each Note has:
  - A Headerbar with an editable label
  - A Sourceview/Sourcebuffer, where all the text happen

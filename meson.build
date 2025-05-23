@@ -51,7 +51,7 @@ executable(
 
     'src/Application.vala',
     'src/Preferences.vala',    
-    'src/MainWindow.vala',
+    'src/StickyNoteWindow.vala',
     dependencies: [
         dependency('granite-7'),
         dependency('gobject-2.0'),

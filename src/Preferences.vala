@@ -34,7 +34,7 @@ namespace jorts {
         public const string ACTION_PREFIX   = "app.";
         public const string ACTION_NEW      = "action_new";
 
-        public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+        public static Gee.MultiMap<string, string> action_accelerators;
 
         private const GLib.ActionEntry[] action_entries = {
             { ACTION_NEW,               action_new      }
@@ -50,7 +50,6 @@ namespace jorts {
             actions.add_action_entries (action_entries, this);
             insert_action_group ("app", actions);
 
-
             var gtk_settings = Gtk.Settings.get_default ();
 
             // Since each sticky note adopts a different accent color
@@ -61,7 +60,6 @@ namespace jorts {
                     gtk_settings.gtk_theme_name = "io.elementary.stylesheet." + jorts.Constants.DEFAULT_THEME.ascii_down();
                 }
             });
-
 
             /*************************************************/
             // Headerbar bs
@@ -83,8 +81,6 @@ namespace jorts {
             add_css_class ("dialog");
             add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
-
-
             /*************************************************/
             // Box with settingsbox and then reset button
             var mainbox = new Gtk.Box (VERTICAL, 0) {
@@ -103,7 +99,6 @@ namespace jorts {
                 hexpand = true,
                 vexpand = true
             };
-
 
                 /*************************************************/
                 /*              scribbly Toggle                  */
@@ -124,16 +119,12 @@ namespace jorts {
 
                 scribbly_box.append (scribbly_label);
                 scribbly_box.append (scribbly_toggle);
-                settingsbox.append(scribbly_box); 
+                settingsbox.append (scribbly_box); 
 
                 Application.gsettings.bind (
                     "scribbly-mode-active", 
                     scribbly_toggle, "active",
                     SettingsBindFlags.DEFAULT);
-
-
-
-
 
 
                 /*************************************************/
@@ -155,22 +146,16 @@ namespace jorts {
 
                 hidebar_box.append (hidebar_label);
                 hidebar_box.append (hidebar_toggle);
-                settingsbox.append(hidebar_box); 
+                settingsbox.append (hidebar_box); 
 
                 Application.gsettings.bind (
                     "hide-bar", 
                     hidebar_toggle, "active",
                     SettingsBindFlags.DEFAULT);
 
-
-
-
-
                 /*************************************************/
                 /*               Autostart Link                  */
                 /*************************************************/
-
-
 
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             print(desktop_environment + " detected!");
@@ -186,7 +171,7 @@ namespace jorts {
                                                     link,
                                                     linkname
                                                 );
-        
+
                 // _("Applications → Permissions")
                 permissions_link.tooltip_text = link;
                 permissions_link.halign = Gtk.Align.END;
@@ -205,7 +190,7 @@ namespace jorts {
             } else {
 
                 var link = "https://flathub.org/apps/search?q=autostart" ;
-                var linkname = _("Autostart apps in flathub") ;
+                var linkname = _("Autostart apps") ;
 
                 var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
                 var permissions_link = new Gtk.LinkButton.with_label (
@@ -229,10 +214,6 @@ namespace jorts {
 
             }
 
-
-
-    
-
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.ActionBar ();
@@ -246,7 +227,6 @@ namespace jorts {
             );
             actionbar.pack_start (support_button);
 
-
             // Reset
             var reset_button = new Gtk.Button();
             reset_button.set_label( _("Reset to Default"));
@@ -255,13 +235,10 @@ namespace jorts {
 
             reset_button.clicked.connect(on_reset);
 
-
             //  var close_button = new Gtk.Button();
             //  close_button.set_label( _("Close"));
             //  close_button.clicked.connect(() => {this.close();});
             //  actionbar.pack_end (close_button);
-
-
 
             mainbox.append (settingsbox);
             mainbox.append(actionbar);
@@ -279,7 +256,6 @@ namespace jorts {
         private void action_new () {
             ((Application)this.application).create_note(null);
         }
-
 
         private void on_reset() {
             string[] keys = {"scribbly-mode-active","hide-bar"};

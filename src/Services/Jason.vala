@@ -67,10 +67,10 @@ namespace jorts.Jason {
 
     /*************************************************/
     // Loop through the list of windows and convert it into a giant json string
-    public string jsonify (Gee.ArrayList<jorts.MainWindow> notes) {
+    public string jsonify (Gee.ArrayList<jorts.StickyNoteWindow> notes) {
         Json.Builder builder = new Json.Builder ();
         builder.begin_array ();
-        foreach (jorts.MainWindow note in notes) {
+        foreach (jorts.StickyNoteWindow note in notes) {
             jorts.noteData data = note.packaged ();
             //print("saving " + note.title_name + "\n");
 

@@ -22,7 +22,7 @@
 check_if_stash()
 --> Check if we have a data directory. If not create one.
 
-jsonify(Gee.ArrayList<MainWindow>)
+jsonify(Gee.ArrayList<StickyNoteWindow>)
 --> take all note instances, and gulps back a giant json string
 
 overwrite_stash(json_string)

@@ -93,6 +93,16 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.2" date="2025-06-11">
+            <description>
+                <p>3.2.0 Jorts of Truth</p>
+                <ul>
+                    <li>Add a cool little animation when enabling/disabling actionbar</li>
+                    <li>Code cleaning</li>
+                    <li>Updated JA translations thanks to @RyoNakano!</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.1.3" date="2025-05-11">
             <description>
                 <p>3.1.3 Jorts of fire and lava</p>

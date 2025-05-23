@@ -20,7 +20,7 @@
 
 /* CONTENT
 
-Each MainWindow instance is a sticky note
+Each StickyNoteWindow instance is a sticky note
 It takes a noteData, and creates the UI
 
 It is connected to settings and reacts to changes
@@ -38,7 +38,7 @@ Theme and Zoom changing are just a matter of adding and removing classes
 */
 namespace jorts {
 
-    public class MainWindow : Gtk.Window {
+    public class StickyNoteWindow : Gtk.Window {
 
         public Gtk.EditableLabel notetitle;
         private jorts.StickyView view;
@@ -89,10 +89,10 @@ namespace jorts {
         /*           Lets build a window                 */
         /*************************************************/
 
-        public MainWindow (Gtk.Application app, noteData data) {
+        public StickyNoteWindow (Gtk.Application app, noteData data) {
             Object (application: app);
             Intl.setlocale ();
-            debug("New MainWindow instance: " + data.title);
+            debug("New StickyNoteWindow instance: " + data.title);
 
             var actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
@@ -177,7 +177,7 @@ namespace jorts {
             };
 
             new_item.set_icon_name ("list-add-symbolic");
-            new_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_NEW;
+            new_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_NEW;
             new_item.width_request = 32;
             new_item.height_request = 32;
             new_item.add_css_class("themedbutton");
@@ -189,7 +189,7 @@ namespace jorts {
                 )
             };
             delete_item.set_icon_name ("edit-delete-symbolic");
-            delete_item.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_DELETE;
+            delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
             delete_item.width_request = 32;
             delete_item.height_request = 32;
             delete_item.add_css_class("themedbutton");

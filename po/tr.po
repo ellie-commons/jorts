@@ -65,8 +65,8 @@ msgstr "Varsayılan yakınlaştırma düzeyi"
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
-#. Called by the Mainwindow when adjusting to new zoomlevel
-#. Mainwindow reacts to a signal by the popover
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
 #: src/Widgets/SettingsPopover.vala:157
@@ -130,23 +130,23 @@ msgstr "Varsayılana Sıfırla"
 msgid "Reset all settings to defaults"
 msgstr "Tüm ayarları varsayılanlara sıfırla"
 
-#: src/MainWindow.vala:145
+#: src/StickyNoteWindow.vala:145
 msgid "Edit title"
 msgstr "Başlığı düzenle"
 
-#: src/MainWindow.vala:176
+#: src/StickyNoteWindow.vala:176
 msgid "New sticky note"
 msgstr "Yeni yapışkan not"
 
-#: src/MainWindow.vala:189
+#: src/StickyNoteWindow.vala:189
 msgid "Delete sticky note"
 msgstr "Yapışkan notu sil"
 
-#: src/MainWindow.vala:209
+#: src/StickyNoteWindow.vala:209
 msgid "Insert emoji"
 msgstr "Emoji ekle"
 
-#: src/MainWindow.vala:246
+#: src/StickyNoteWindow.vala:246
 msgid "Preferences for this sticky note"
 msgstr "Bu yapışkan not için tercihler"
 

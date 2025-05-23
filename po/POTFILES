@@ -2,6 +2,6 @@ src/Widgets/ColorBox.vala
 src/Widgets/SettingsPopover.vala
 src/Widgets/StickyView.vala
 src/Preferences.vala
-src/MainWindow.vala
+src/StickyNoteWindow.vala
 src/Application.vala
 src/Services/Utils.vala

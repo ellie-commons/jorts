@@ -23,7 +23,7 @@ namespace jorts.Zoom {
 
 
         // Called when a signal from the popover says stuff got changed
-        public void on_zoom_changed(jorts.MainWindow note, string zoomkind) {
+        public void on_zoom_changed(jorts.StickyNoteWindow note, string zoomkind) {
             if (zoomkind == "zoom_in") {
                 jorts.Zoom.zoom_in(note);
             } else if (zoomkind == "zoom_out") {
@@ -35,27 +35,27 @@ namespace jorts.Zoom {
 
 
         // First check an increase doesnt go above limit
-        public void zoom_in(jorts.MainWindow note) {
+        public void zoom_in(jorts.StickyNoteWindow note) {
             if ((note.zoom + 20) <= jorts.Constants.ZOOM_MAX) {
                 jorts.Zoom.set_zoom(note, (note.zoom + 20));
             }
         }
 
         // First check an increase doesnt go below limit
-        public void zoom_out(jorts.MainWindow note) {
+        public void zoom_out(jorts.StickyNoteWindow note) {
             if ((note.zoom - 20) >= jorts.Constants.ZOOM_MIN) {
                 set_zoom(note, (note.zoom - 20));
             }
         }
 
         // First check an increase doesnt go below limit
-        public void zoom_default(jorts.MainWindow note) {
+        public void zoom_default(jorts.StickyNoteWindow note) {
             jorts.Zoom.set_zoom(note, jorts.Constants.DEFAULT_ZOOM);
         }
 
 
         // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom(jorts.MainWindow note, int zoom) {
+        public void set_zoom(jorts.StickyNoteWindow note, int zoom) {
             // Switches the classes that control font size
             note.remove_css_class (jorts.Utils.zoom_to_class( note.zoom));
             note.zoom = zoom;

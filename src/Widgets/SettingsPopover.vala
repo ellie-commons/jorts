@@ -18,7 +18,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-/* I just dont wanna clutter my mainwindow, damn.
+/* I just dont wanna clutter my StickyNoteWindow, damn.
 So the whole settings popover is here, deal with it.
 
 >Grid
@@ -111,7 +111,7 @@ public class jorts.SettingsPopover : Gtk.Popover {
                 )
             };
 
-        // Emit a signal when a button is toggled that will be picked by MainWindow
+        // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
         this.zoom_out_button.clicked.connect (() => {this.zoom_changed("zoom_out");});
         this.zoom_default_button.clicked.connect (() => {this.zoom_changed("reset");});
         this.zoom_in_button.clicked.connect (() => {this.zoom_changed("zoom_in");});
@@ -148,8 +148,8 @@ public class jorts.SettingsPopover : Gtk.Popover {
 
 
 
-    // Called by the Mainwindow when adjusting to new zoomlevel
-    // Mainwindow reacts to a signal by the popover
+    // Called by the StickyNoteWindow when adjusting to new zoomlevel
+    // StickyNoteWindow reacts to a signal by the popover
     public void set_zoomlevel (int zoom) {
 
         //TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%

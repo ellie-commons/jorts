@@ -24,15 +24,11 @@
 General oversight of loading and supporting functions
 At some point i may move this in its own file
 
-
-
 */
-
-
 
 namespace jorts {
     public class Application : Gtk.Application {
-        public Gee.ArrayList<MainWindow> open_notes = new Gee.ArrayList<MainWindow>();
+        public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow>();
         public static GLib.Settings gsettings;
 
         public Application () {
@@ -43,7 +39,6 @@ namespace jorts {
         // Changed whenever a note changes zoom
         // So we can adjust new notes to have whatever user feel is comfortable
 	    public int latest_zoom;
-
 
         /*************************************************/
         public override void startup () {
@@ -88,12 +83,10 @@ namespace jorts {
         }
 
 
-
         /*************************************************/        
         static construct {
             gsettings = new GLib.Settings (jorts.Constants.RDNN);
         }
-
 
         /*************************************************/
         construct {
@@ -157,20 +150,18 @@ namespace jorts {
             }     
 	    }
 
-
-    // Create new instances of MainWindow
+    // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
-
 	public void create_note(noteData? data) {
-        MainWindow note;
+        StickyNoteWindow note;
         if (data != null) {
-            note = new MainWindow(this, data);
+            note = new StickyNoteWindow(this, data);
         }
         else {
 
             // Skip theme from previous window, but use same text zoom
-            MainWindow last_note = this.open_notes.last ();
+            StickyNoteWindow last_note = this.open_notes.last ();
             string skip_theme = last_note.theme;
             var random_data = jorts.Utils.random_note(skip_theme);
 
@@ -178,14 +169,14 @@ namespace jorts {
             random_data = jorts.Utils.golden_sticky(random_data);
 
             random_data.zoom = this.latest_zoom;
-            note = new MainWindow(this, random_data);
+            note = new StickyNoteWindow(this, random_data);
         }
         this.open_notes.add(note);
         this.save_to_stash ();
 	}
 
     // Simply remove from the list of things to save, and close
-    public void remove_note(MainWindow note) {
+    public void remove_note(StickyNoteWindow note) {
             debug ("Removing a note…\n");
             this.open_notes.remove (note);
             this.save_to_stash ();
