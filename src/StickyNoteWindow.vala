@@ -50,6 +50,8 @@ namespace Jorts {
         private Gtk.Button delete_item;
         //private Gtk.ToggleButton hide_item;
 
+        private Gtk.MenuButton emoji_button;
+
         private SettingsPopover popover;
 
         public Jorts.NoteData data;
@@ -202,7 +204,7 @@ namespace Jorts {
             this.on_scribbly_changed ();
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
-            var emoji_button = new Gtk.MenuButton ();
+            emoji_button = new Gtk.MenuButton ();
             emoji_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Control>period"}, _("Insert emoji"));
             emoji_button.has_tooltip = true;
             emoji_button.set_icon_name (Jorts.Utils.random_emote (null));
@@ -213,12 +215,7 @@ namespace Jorts {
 
             // Display the current zoom level when the popover opens
             // Else it does not get set
-            emojichooser_popover.show.connect (() => {
-                emoji_button.set_icon_name (
-                    Jorts.Utils.random_emote (
-                        emoji_button.get_icon_name ())
-                );
-            });
+            emojichooser_popover.show.connect (on_emoji_popover);
 
             // User chose emoji, add it to buffer
             emojichooser_popover.emoji_picked.connect ((emoji) => {
@@ -280,8 +277,11 @@ namespace Jorts {
             Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.bind ("hide-bar", swoosh, "reveal_child", SettingsBindFlags.INVERT_BOOLEAN);
-            //Application.gsettings.changed["hide-bar"].connect (on_hidebar_changed);            
+            Application.gsettings.bind (
+                "hide-bar",
+                swoosh,
+                "reveal_child",
+                SettingsBindFlags.INVERT_BOOLEAN);
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
@@ -358,6 +358,14 @@ namespace Jorts {
         // Called when the window is-active property changes
         public void on_hidebar_changed () {
                 this.swoosh.reveal_child = (Application.gsettings.get_boolean ("hide-bar") == false);
+        }
+
+        public void on_emoji_popover () {
+            emoji_button.set_icon_name (
+                Jorts.Utils.random_emote (
+                    emoji_button.get_icon_name ()
+                )
+            );
         }
 
         // Called when the window is-active property changes

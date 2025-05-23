@@ -32,7 +32,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public string zoom_to_class(int zoom) {
+    public string zoom_to_class (int zoom) {
         switch (zoom) {
             case 20: return "antsized";
             case 40: return "muchsmaller";
@@ -55,7 +55,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public int zoom_to_UIsize(int zoom) {
+    public int zoom_to_UIsize (int zoom) {
         switch (zoom) {
             case 20: return 24;
             case 40: return 26;
@@ -191,18 +191,21 @@ Have a great day!🎇
     }
 
 
-
-
-
     /*************************************************/
     // Spits out a fresh new note
     public NoteData random_note (string? skip_theme) {
         debug("Generating random note... Skip:" + skip_theme);
-        var randtitle = Jorts.Utils.random_title();
+        var randtitle = Jorts.Utils.random_title ();
         string randtheme = Jorts.Utils.random_theme (skip_theme);
 
-        NoteData randnote = new NoteData( randtitle, randtheme, "", Jorts.Constants.DEFAULT_ZOOM, Jorts.Constants.DEFAULT_WIDTH, Jorts.Constants.DEFAULT_HEIGHT);
-
+        NoteData randnote = new NoteData ( 
+            randtitle,
+            randtheme,
+            "",
+            Jorts.Constants.DEFAULT_ZOOM,
+            Jorts.Constants.DEFAULT_WIDTH,
+            Jorts.Constants.DEFAULT_HEIGHT
+        );
 
         return randnote; 
     }

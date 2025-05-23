@@ -42,7 +42,6 @@ namespace Jorts.Constants {
     // in ms
     const int DEBOUNCE       = 1000;
 
-
     // We need to say stop at some point
     const int ZOOM_MAX                   = 240;
     const int DEFAULT_ZOOM               = 100;    
@@ -55,8 +54,6 @@ namespace Jorts.Constants {
     // New preference window
     const int DEFAULT_PREF_WIDTH         = 530;
     const int DEFAULT_PREF_HEIGHT        = 290;
-
-
 
     /*************************************************/
     // Shortcuts
@@ -122,8 +119,4 @@ namespace Jorts.Constants {
         "face-wink-symbolic",
         "face-worried-symbolic"
     };
-
-
-
-
 }

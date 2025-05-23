@@ -35,7 +35,7 @@ namespace Jorts.Themer {
     // Here we go
     // Take up a elementary OS color name and gurgle back a CSS string
     public static string generate_css (string theme) {
-        debug("Generating css");
+        debug ("Generating css");
         string style = "";
 
         style = (N_("""
@@ -134,7 +134,7 @@ namespace Jorts.Themer {
 
         """));
 
-        style = style.replace ("${accent_color}",theme);
+        style = style.replace ("${accent_color}", theme);
 
         return style;
     }
@@ -144,8 +144,8 @@ namespace Jorts.Themer {
     /*************************************************/    
     // Called once, at the start of the app
     // Loads the standard sheet, then do all the different themes
-    public static void init_all_themes() {
-        debug("Init all themes");
+    public static void init_all_themes () {
+        debug ("Init all themes");
 
         // Use standard sheet
         var app_provider = new Gtk.CssProvider ();

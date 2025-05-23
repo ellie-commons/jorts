@@ -96,13 +96,13 @@ namespace Jorts {
             add_action (quit_action);
             quit_action.activate.connect (() => {
                 this.save_to_stash ();
-                this.quit();
+                this.quit ();
             });
             var new_action = new SimpleAction ("new", null);
             set_accels_for_action ("app.action_new", {"<Control>n"});
             add_action (new_action);
             new_action.activate.connect (() => {
-                this.create_note(null);
+                this.create_note (null);
             });
 
             var delete_action = new SimpleAction ("delete", null);
@@ -129,7 +129,7 @@ namespace Jorts {
             set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
             add_action (toggle_scribbly);
             toggle_scribbly.activate.connect (() => {
-                this.toggle_scribbly();
+                this.toggle_scribbly ();
             });
             var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
             set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
@@ -144,7 +144,7 @@ namespace Jorts {
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
             if (get_windows ().length () > 0) {
-                show_all();
+                show_all ();
             } else {
                 this.init_all_notes ();
             }     
@@ -186,11 +186,11 @@ namespace Jorts {
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
         Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        print("Saved " + open_notes.size.to_string() + "!\n");
+        print ("Saved " + open_notes.size.to_string() + "!\n");
     }
 
 
-    public void toggle_scribbly() {
+    public void toggle_scribbly () {
         if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
             gsettings.set_boolean ("scribbly-mode-active",false);
         } else {
@@ -198,7 +198,7 @@ namespace Jorts {
         }
     }
 
-    public void toggle_hidebar() {
+    public void toggle_hidebar () {
         if (Application.gsettings.get_boolean ("hide-bar")) {
             gsettings.set_boolean ("hide-bar",false);
         } else {
@@ -220,13 +220,13 @@ namespace Jorts {
 
 
     /*************************************************/
-    public void init_all_notes() {
+    public void init_all_notes () {
         Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
 
         // Load everything we have
         foreach (NoteData data in loaded_data) {
-            debug("Loaded: " + data.title + "\n");
-            this.create_note(data);
+            debug ("Loaded: " + data.title + "\n");
+            this.create_note (data);
         }
 
 
@@ -238,7 +238,7 @@ namespace Jorts {
             Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
 
             var now = new DateTime.now_utc ().to_string() ;
-            gsettings.set_string("last-backup", now);
+            gsettings.set_string ("last-backup", now);
         }
 
     }
@@ -276,8 +276,8 @@ namespace Jorts {
         }
 
         public static int main (string[] args) {
-            var app = new Application();
-            return app.run(args);
+            var app = new Application ();
+            return app.run (args);
         }
     }
 }
