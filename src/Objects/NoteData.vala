@@ -29,7 +29,9 @@ namespace Jorts {
         public int width;
         public int height;
 
-        public NoteData (string title, string theme, string content, int zoom, int width, int height)
+        public NoteData (
+            string? title = null, string? theme = null, string? content = null,
+            int? zoom = null, int? width = null, int? height = null)
         {
             this.title = title;
             this.theme = theme;

@@ -28,7 +28,7 @@ At some point i may move this in its own file
 
 namespace Jorts {
     public class Application : Gtk.Application {
-        public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow>();
+        public static Gee.ArrayList<StickyNoteWindow> open_notes;
         public static GLib.Settings gsettings;
 
         public Application () {
@@ -66,17 +66,6 @@ namespace Jorts {
                         granite_settings.prefers_color_scheme == DARK
                     );
             }); 
-
-            //  var portal = new Xdp.Portal();
-            //  GenericArray<weak string> cmd = new GenericArray<weak string> ();
-            //  cmd.add ("io.github.ellie_commons.jorts");
-
-            //  portal.request_background(
-            //      null, 
-            //      "autostart", 
-            //      cmd, 
-            //      Xdp.BackgroundFlags.AUTOSTART, 
-            //      null);
 
             // build all the stylesheets
             Jorts.Themer.init_all_themes();
@@ -153,7 +142,7 @@ namespace Jorts {
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
-	public void create_note(NoteData? data) {
+	public void create_note(NoteData? data = null) {
         StickyNoteWindow note;
         if (data != null) {
             note = new StickyNoteWindow(this, data);
@@ -161,7 +150,7 @@ namespace Jorts {
         else {
 
             // Skip theme from previous window, but use same text zoom
-            StickyNoteWindow last_note = this.open_notes.last ();
+            StickyNoteWindow last_note = open_notes.last ();
             string skip_theme = last_note.theme;
             var random_data = Jorts.Utils.random_note(skip_theme);
 
@@ -171,14 +160,14 @@ namespace Jorts {
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow(this, random_data);
         }
-        this.open_notes.add(note);
+        open_notes.add(note);
         this.save_to_stash ();
 	}
 
     // Simply remove from the list of things to save, and close
     public void remove_note(StickyNoteWindow note) {
             debug ("Removing a note…\n");
-            this.open_notes.remove (note);
+            open_notes.remove (note);
             this.save_to_stash ();
 	}
 
@@ -206,8 +195,6 @@ namespace Jorts {
         }
     }
 
-
-
     public void show_all() {
         foreach (var window in open_notes) {
             if (window.visible) {
@@ -215,8 +202,6 @@ namespace Jorts {
             }
         }
     }
-
-
 
 
     /*************************************************/
@@ -234,7 +219,7 @@ namespace Jorts {
             print("Doing a backup! :)");
 
             Jorts.Stash.check_if_stash ();
-            string json_data = Jorts.Jason.jsonify (this.open_notes);
+            string json_data = Jorts.Jason.jsonify (open_notes);
             Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
 
             var now = new DateTime.now_utc ().to_string() ;
@@ -242,9 +227,6 @@ namespace Jorts {
         }
 
     }
-
-
-
 
         /*************************************************/
         protected override int command_line (ApplicationCommandLine command_line) {
@@ -254,17 +236,14 @@ namespace Jorts {
             switch (args[1]) {
 
                 case "--new-note":
-                    activate ();    
-                    create_note(null);
+                    activate ();
+                    
+                    create_note();
                     break;
 
                 case "--preferences":
                     activate ();
                     preferences = new Jorts.PreferenceWindow();
-                    break;
-
-                case "--dump":
-                    print(Jorts.Jason.jsonify (open_notes));
                     break;
 
                 default:

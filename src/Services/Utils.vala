@@ -80,7 +80,7 @@ namespace Jorts.Utils {
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
     // Having an gee.arraylist defined from the start only causes issues
-    public string random_theme (string? skip_theme) {
+    public string random_theme (string? skip_theme = null) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
         themes.add_all_array (Jorts.Constants.THEMES);
 
@@ -143,7 +143,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // Spits out a cute or funny random title for a new sticky note
-    public string random_emote (string? skip_emote) {
+    public string random_emote (string? skip_emote = null) {
 
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
         allemotes.add_all_array (Jorts.Constants.EMOTES);
@@ -193,7 +193,7 @@ Have a great day!🎇
 
     /*************************************************/
     // Spits out a fresh new note
-    public NoteData random_note (string? skip_theme) {
+    public NoteData random_note (string? skip_theme = null) {
         debug("Generating random note... Skip:" + skip_theme);
         var randtitle = Jorts.Utils.random_title ();
         string randtheme = Jorts.Utils.random_theme (skip_theme);

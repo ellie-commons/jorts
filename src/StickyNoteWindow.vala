@@ -43,15 +43,13 @@ namespace Jorts {
         public Gtk.EditableLabel notetitle;
         private Jorts.StickyView view;
         private Gtk.HeaderBar headerbar;
+
         private Gtk.ActionBar actionbar;
-        private Gtk.Revealer swoosh;
+
 
         private Gtk.Button new_item;
         private Gtk.Button delete_item;
-        //private Gtk.ToggleButton hide_item;
-
         private Gtk.MenuButton emoji_button;
-
         private SettingsPopover popover;
 
         public Jorts.NoteData data;
@@ -126,9 +124,9 @@ namespace Jorts {
                 this.add_css_class ("animated");
             }
 
-            /**********************************************/
-            /*              USER INTERFACE                */
-            /**********************************************/
+            /*****************************************/
+            /*              HEADERBAR                */
+            /*****************************************/
 
             this.headerbar = new Gtk.HeaderBar ();
             headerbar.add_css_class ("flat");
@@ -155,63 +153,68 @@ namespace Jorts {
             headerbar.set_title_widget (notetitle);
             this.set_titlebar (headerbar);
 
+
+
+            /**********************************************/
+            /*              USER INTERFACE                */
+            /**********************************************/
+
+
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
-
             view = new Jorts.StickyView (this.content);
-
             view.buffer.changed.connect (on_buffer_changed);
-
             scrolled.set_child (view);
 
 
-            // Bar at the bottom
-            actionbar = new Gtk.ActionBar ();
-            actionbar.set_hexpand (true);
+            /*****************************************/
+            /*              ACTIONBAR                */
+            /*****************************************/
+
+            actionbar = new Gtk.ActionBar () {
+                hexpand = true
+            };
 
             new_item = new Gtk.Button () {
+                icon_name = "list-add-symbolic",
+                width_request = 32,
+                height_request = 32,
                 tooltip_markup = Granite.markup_accel_tooltip (
                     {"<Control>n"},
                     _("New sticky note")
                 )
             };
-
-            new_item.set_icon_name ("list-add-symbolic");
             new_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_NEW;
-            new_item.width_request = 32;
-            new_item.height_request = 32;
             new_item.add_css_class ("themedbutton");
 
             delete_item = new Gtk.Button () {
+                icon_name = "edit-delete-symbolic",
+                width_request = 32,
+                height_request = 32,
                 tooltip_markup = Granite.markup_accel_tooltip (
                     {"<Control>w"},
                     _("Delete sticky note")
                 )
             };
-            delete_item.set_icon_name ("edit-delete-symbolic");
             delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
-            delete_item.width_request = 32;
-            delete_item.height_request = 32;
             delete_item.add_css_class ("themedbutton");
 
-
-/*              this.hide_item = new Gtk.ToggleButton ();
-            this.hide_item.action_name = "app.toggle_scribbly";
-            this.hide_item.width_request = 32;
-            this.hide_item.height_request = 32;
-            this.hide_item.add_css_class("themedbutton");  */
-
-            this.on_scribbly_changed ();
+            on_scribbly_changed ();
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
-            emoji_button = new Gtk.MenuButton ();
-            emoji_button.tooltip_markup = Granite.markup_accel_tooltip ({"<Control>period"}, _("Insert emoji"));
-            emoji_button.has_tooltip = true;
-            emoji_button.set_icon_name (Jorts.Utils.random_emote (null));
+
+            emoji_button = new Gtk.MenuButton () {
+                icon_name = Jorts.Utils.random_emote (),
+                width_request = 32,
+                height_request = 32,
+                tooltip_markup = Granite.markup_accel_tooltip (
+                    {"<Control>period"},
+                    _("Insert emoji")
+                )
+            };
             emoji_button.add_css_class ("themedbutton");
             emoji_button.popover = emojichooser_popover;
-            emoji_button.width_request = 32;
-            emoji_button.height_request = 32;
+
 
             // Display the current zoom level when the popover opens
             // Else it does not get set
@@ -222,7 +225,7 @@ namespace Jorts {
                 view.buffer.insert_at_cursor (emoji, -1);
             });
 
-            this.popover = new SettingsPopover (this.theme);
+            this.popover = new SettingsPopover (theme);
             this.set_zoom (data.zoom);
 
             // The settings popover tells us a new theme has been chosen!
@@ -231,20 +234,18 @@ namespace Jorts {
             // The settings popover tells us a new zoom has been chosen!
             this.popover.zoom_changed.connect (on_zoom_changed);
 
-            var app_button = new Gtk.MenuButton ();
-            app_button.has_tooltip = true;
-            app_button.tooltip_text = (_("Preferences for this sticky note"));
-            app_button.set_icon_name ("open-menu-symbolic");
+            var app_button = new Gtk.MenuButton () {
+                icon_name = "open-menu-symbolic",
+                width_request = 32,
+                height_request = 32,
+                tooltip_text = _("Preferences for this sticky note")
+            };
             app_button.direction = Gtk.ArrowType.UP;
             app_button.add_css_class ("themedbutton");
             app_button.popover = popover;
-            app_button.width_request = 32;
-            app_button.height_request = 32;
 
             actionbar.pack_start (new_item);
             actionbar.pack_start (delete_item);
-            //actionbar.pack_start (hide_item);
-
             actionbar.pack_end (app_button);
             actionbar.pack_end (emoji_button);
 
@@ -255,13 +256,12 @@ namespace Jorts {
             var swoosh = new Gtk.Revealer () {
                 child = actionbar
             };
-            swoosh.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+            swoosh.set_transition_type (Gtk.RevealerTransitionType.CROSSFADE);
 
             var handle = new Gtk.WindowHandle () {
                 child = swoosh
             };
 
-            //on_hidebar_changed();
             mainbox.append (handle);
             set_child (mainbox);
             show ();
@@ -313,22 +313,11 @@ namespace Jorts {
         public void on_scribbly_changed () {
             if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
 
-                //this.hide_item.set_icon_name ("eye-open-negative-filled-symbolic");
-                //this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                //    Jorts.Constants.ACCELS_SCRIBBLY,
-                //    _("Always show content of sticky notes")
-                //);
-
                 if (this.is_active == false) {
                     this.add_css_class ("scribbly");
                 }
 
             } else {
-                //this.hide_item.set_icon_name ("eye-not-looking-symbolic");
-                //this.hide_item.tooltip_markup = Granite.markup_accel_tooltip (
-                //    Jorts.Constants.ACCELS_SCRIBBLY,
-                //    _("Hide content of unfocused sticky notes")
-                //);
 
                 if (this.is_active == false) {
                     this.remove_css_class ("scribbly");
@@ -355,11 +344,7 @@ namespace Jorts {
             }
         }
 
-        // Called when the window is-active property changes
-        public void on_hidebar_changed () {
-                this.swoosh.reveal_child = (Application.gsettings.get_boolean ("hide-bar") == false);
-        }
-
+        // Randomize the button emoji when clicked
         public void on_emoji_popover () {
             emoji_button.set_icon_name (
                 Jorts.Utils.random_emote (
@@ -373,6 +358,7 @@ namespace Jorts {
 
             if (gtk_settings.gtk_enable_animations) {
                 this.add_css_class ("animated");
+
             } else {
                 this.remove_css_class ("animated");
             }
@@ -405,7 +391,7 @@ namespace Jorts {
         }
 
         private void action_new () {
-            ((Application)this.application).create_note (null);
+            ((Application)this.application).create_note ();
         }
 
         private void action_delete () {

@@ -30,8 +30,8 @@ namespace Jorts.Constants {
 
 
     /*************************************************/
-    const string RDNN               = "io.github.ellie_commons.jorts";
-    const string DONATE_LINK            = "https://ko-fi.com/teamcons";
+    const string RDNN                    = "io.github.ellie_commons.jorts";
+    const string DONATE_LINK             = "https://ko-fi.com/teamcons";
 
     // signature theme
     const string DEFAULT_THEME           = "BLUEBERRY";
@@ -40,7 +40,7 @@ namespace Jorts.Constants {
     const string FILENAME_BACKUP         = "backup_state.json";
 
     // in ms
-    const int DEBOUNCE       = 1000;
+    const int DEBOUNCE                   = 1000;
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 240;
