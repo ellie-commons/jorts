@@ -44,6 +44,7 @@ namespace jorts {
         private jorts.StickyView view;
         private Gtk.HeaderBar headerbar;
         private Gtk.ActionBar actionbar;
+        private Gtk.Revealer swoosh;
 
         private Gtk.Button new_item;
         private Gtk.Button delete_item;
@@ -251,7 +252,6 @@ namespace jorts {
 
             actionbar.pack_end (app_button);
             actionbar.pack_end (emoji_button);
-            on_hidebar_changed();
 
             // Define the grid 
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
@@ -260,6 +260,15 @@ namespace jorts {
             var handle = new Gtk.WindowHandle () {
                 child = actionbar
             };
+
+
+            var swoosh = new Gtk.Revealer() {
+                child = handle
+            };
+            swoosh.set_transition_type (Gtk.RevealerTransitionType.SLIDE_DOWN);
+
+
+            //on_hidebar_changed();
     
             mainbox.append(handle);
             set_child (mainbox);
@@ -269,12 +278,6 @@ namespace jorts {
             /*              CONNECTS                 */
             /*****************************************/
 
-            // Save when the window is closed
-            //this.close_request.connect (() => {
-            //    ((Application)this.application).save_to_stash (); 
-            //    return false;           
-            //});
-
             // Use the color theme of this sticky note when focused
             this.notify["is-active"].connect(on_focus_changed);
 
@@ -282,7 +285,8 @@ namespace jorts {
             Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.changed["hide-bar"].connect (on_hidebar_changed);            
+            Application.gsettings.bind ("hide-bar", swoosh, "reveal_child", SettingsBindFlags.INVERT_BOOLEAN);
+            //Application.gsettings.changed["hide-bar"].connect (on_hidebar_changed);            
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
@@ -358,14 +362,7 @@ namespace jorts {
 
         // Called when the window is-active property changes
         public void on_hidebar_changed() {
-
-            if (Application.gsettings.get_boolean ("hide-bar")) {
-                this.actionbar.hide();
-                //this.headerbar.set_show_title_buttons(false);
-            } else {
-                this.actionbar.show();
-                //this.headerbar.set_show_title_buttons(true);
-            }
+                this.swoosh.reveal_child = (Application.gsettings.get_boolean ("hide-bar") == false);
         }
 
         // Called when the window is-active property changes
