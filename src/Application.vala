@@ -28,7 +28,7 @@ At some point i may move this in its own file
 
 namespace Jorts {
     public class Application : Gtk.Application {
-        public static Gee.ArrayList<StickyNoteWindow> open_notes;
+        public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
         public static GLib.Settings gsettings;
 
         public Application () {
@@ -238,15 +238,17 @@ namespace Jorts {
                 case "--new-note":
                     activate ();
 
-                    var data = new Jorts.NoteData (
-                        args[2],
-                        args[3],
-                        args[4],
-                        (int)args[5],
-                        (int)args[6],
-                        (int)args[7]);
-                    
-                    create_note (data);
+                    /*var data = new Jorts.NoteData (
+                        args[2] ?? Jorts.Utils.random_title (),
+                        args[3] ?? Jorts.Utils.random_theme (),
+                        args[4] ?? "",
+                        (int?)args[5] ?? Jorts.Constants.DEFAULT_ZOOM,
+                        (int?)args[6] ?? Jorts.Constants.DEFAULT_WIDTH,
+                        (int?)args[7] ?? Jorts.Constants.DEFAULT_HEIGHT);
+                    */
+                    //create_note (data);
+
+                    create_note ();
                     break;
 
                 case "--preferences":
