@@ -237,8 +237,16 @@ namespace Jorts {
 
                 case "--new-note":
                     activate ();
+
+                    var data = new Jorts.NoteData (
+                        args[2],
+                        args[3],
+                        args[4],
+                        (int)args[5],
+                        (int)args[6],
+                        (int)args[7]);
                     
-                    create_note();
+                    create_note (data);
                     break;
 
                 case "--preferences":

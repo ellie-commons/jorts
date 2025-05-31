@@ -93,13 +93,13 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
-        <release version="3.2" date="2025-06-11">
+        <release version="3.2.0" date="2025-06-01">
             <description>
-                <p>3.2.0 Jorts of Truth</p>
+                <p>3.2.0 Jorts of Resilience and Love</p>
                 <ul>
                     <li>Add a cool little animation when enabling/disabling actionbar</li>
-                    <li>Code cleaning</li>
-                    <li>Updated JA translations thanks to @RyoNakano!</li>
+                    <li>Pride Edition: A lovely temporary icon by @wpkelso</li>
+                    <li>Commandline: You can now create custom notes from commandline</li>
                 </ul>
             </description>
         </release>
