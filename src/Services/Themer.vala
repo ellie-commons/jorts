@@ -139,9 +139,7 @@ namespace Jorts.Themer {
         return style;
     }
 
-
-
-    /*************************************************/    
+    /*************************************************/
     // Called once, at the start of the app
     // Loads the standard sheet, then do all the different themes
     public static void init_all_themes () {

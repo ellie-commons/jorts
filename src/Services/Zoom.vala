@@ -21,41 +21,40 @@
 
 namespace Jorts.Zoom {
 
-
         // Called when a signal from the popover says stuff got changed
-        public void on_zoom_changed(jorts.StickyNoteWindow note, string zoomkind) {
+        public void on_zoom_changed (Jorts.StickyNoteWindow note, string zoomkind) {
             if (zoomkind == "zoom_in") {
-                jorts.Zoom.zoom_in(note);
+                Jorts.Zoom.zoom_in (note);
             } else if (zoomkind == "zoom_out") {
-                jorts.Zoom.zoom_out(note);
+                Jorts.Zoom.zoom_out (note);
             } else if (zoomkind == "reset") {
-                jorts.Zoom.zoom_default(note);
+                Jorts.Zoom.zoom_default (note);
             }
         }
 
 
         // First check an increase doesnt go above limit
-        public void zoom_in(jorts.StickyNoteWindow note) {
+        public void zoom_in(Jorts.StickyNoteWindow note) {
             if ((note.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-                jorts.Zoom.set_zoom(note, (note.zoom + 20));
+                Jorts.Zoom.set_zoom (note, (note.zoom + 20));
             }
         }
 
         // First check an increase doesnt go below limit
-        public void zoom_out(jorts.StickyNoteWindow note) {
+        public void zoom_out (Jorts.StickyNoteWindow note) {
             if ((note.zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-                set_zoom(note, (note.zoom - 20));
+                set_zoom (note, (note.zoom - 20));
             }
         }
 
         // First check an increase doesnt go below limit
-        public void zoom_default(jorts.StickyNoteWindow note) {
-            jorts.Zoom.set_zoom(note, Jorts.Constants.DEFAULT_ZOOM);
+        public void zoom_default (Jorts.StickyNoteWindow note) {
+            Jorts.Zoom.set_zoom (note, Jorts.Constants.DEFAULT_ZOOM);
         }
 
 
         // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom(jorts.StickyNoteWindow note, int zoom) {
+        public void set_zoom (Jorts.StickyNoteWindow note, int zoom) {
             // Switches the classes that control font size
             note.remove_css_class (Jorts.Utils.zoom_to_class( note.zoom));
             note.zoom = zoom;
@@ -66,9 +65,5 @@ namespace Jorts.Zoom {
 
             // Keep it for next new notes
             //((Application)this.application).latest_zoom = zoom;
-
         }
-
-
-
 }

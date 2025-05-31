@@ -149,7 +149,7 @@ namespace Jorts.Utils {
         allemotes.add_all_array (Jorts.Constants.EMOTES);
 
         if (skip_emote != null) {
-            allemotes.remove(skip_emote);
+            allemotes.remove (skip_emote);
         }
     
         var random_in_range = Random.int_range (0,allemotes.size);
@@ -166,7 +166,7 @@ namespace Jorts.Utils {
     /*************************************************/
     // Hey! Looking in the source code is cheating!
 
-    public NoteData golden_sticky(NoteData blank_slate) {
+    public NoteData golden_sticky (NoteData blank_slate) {
 
         var random_in_range = Random.int_range (0,1000);
 
