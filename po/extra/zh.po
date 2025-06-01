@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -21,7 +21,9 @@ msgid "Sticky notes utility"
 msgstr "便条实用程序"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid "Write down notes, reminders, random thoughts and other short-term informations"
+msgid ""
+"Write down notes, reminders, random thoughts and other short-term "
+"informations"
 msgstr "写下笔记、提醒、随想和其他短期信息"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
@@ -72,8 +74,12 @@ msgstr "私人：尝试涂鸦模式！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 #, fuzzy
-msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
-msgstr "这是由 lainsce 制作的旧版本 \"Notejot \"的分叉版，如果没有她的工作，这个版本就不会存在。社区非常喜欢这个版本，我们认为将其恢复是件好事！"
+msgid ""
+"This is a fork of an old version of \"Notejot\" by lainsce. The community "
+"liked it so much, we thought it would be great to revive it!"
+msgstr ""
+"这是由 lainsce 制作的旧版本 \"Notejot \"的分叉版，如果没有她的工作，这个版本"
+"就不会存在。社区非常喜欢这个版本，我们认为将其恢复是件好事！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -135,7 +141,9 @@ msgstr "更改颜色、放大和缩小，甚至还有一个表情符号按钮！
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
 #, fuzzy
-msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
+"Mode!"
 msgstr "流媒体？担心有人在你肩膀上偷窥？试试涂鸦模式吧！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
@@ -224,12 +232,18 @@ msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "一个可爱的全新图标，感谢 @wpkelso"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
-msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
-msgstr "在这个版本和 GTK4 移植版本之间，旧版 Notejot 已经所剩无几...我们可以说它是 v3"
+msgid ""
+"Between this and the GTK4 port, there is very little left from old "
+"Notejot... We could say it is a v3"
+msgstr ""
+"在这个版本和 GTK4 移植版本之间，旧版 Notejot 已经所剩无几...我们可以说它是 v3"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
-msgstr "使应用程序更具通用性：其他 DE 不保留窗口尺寸，因此需要重新实现保存和还原功能"
+msgid ""
+"Make the app more universal: Other DEs do not keep window dimensions, so "
+"reimplement save and restore"
+msgstr ""
+"使应用程序更具通用性：其他 DE 不保留窗口尺寸，因此需要重新实现保存和还原功能"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 #, fuzzy
@@ -247,7 +261,9 @@ msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 光的 Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
-msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
+msgid ""
+"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
+"feel more at home now"
 msgstr "多亏了 RyoNakano 重新修订了日语翻译，日语使用者现在会感到更自在了"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
@@ -268,7 +284,8 @@ msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
 msgstr "修正: 当悬停或选择注释标题时元素移动的问题"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
-msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
+msgid ""
+"Bugfix: New and delete accels were not working oops sorry it's fixed now"
 msgstr "错误修正： 新建和删除密码不起作用。"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
@@ -289,7 +306,9 @@ msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 内胆短裤"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:181
-msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
 msgstr "新功能：首选项对话框！右键单击应用程序图标，查看选项"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:182
@@ -298,7 +317,9 @@ msgstr "涂鸦模式已移至新的首选项对话框中"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
 #, fuzzy
-msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
+msgid ""
+"For translators: Translations have been separated in 2: One for the UI one "
+"for the extra content"
 msgstr "对翻译人员的改进：翻译已分为两种：一种用于用户界面，一种用于额外内容"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
@@ -329,7 +350,9 @@ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr "新功能：涂鸦模式在不集中时隐藏便笺内容"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
-msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
+msgid ""
+"New feature: Emoji picker button! I know there is one on right-click, but "
+"buttons are more accessible!"
 msgstr "新功能：表情符号选择器按钮！我知道右键上有一个，但按钮更方便！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
@@ -337,7 +360,9 @@ msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr "工具栏上的按钮每次点击都会显示一个随机表情！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:202
-msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
+msgid ""
+"New feature: Jorts does a monthly backup. Should there be any issue you can "
+"recover data!"
 msgstr "新功能：Jorts 每月进行一次备份。如果出现任何问题，您可以恢复数据！"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:203
@@ -405,7 +430,9 @@ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "包括每个笔记的缩放功能！因此，您可以放大或缩小文本"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:238
-msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
+msgid ""
+"Latest set zoom, aka what is most comfortable to you, stays as default for "
+"new notes"
 msgstr "最新设置的缩放（也就是您最喜欢的缩放）将保留为新笔记的默认设置"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:239
@@ -491,5 +518,6 @@ msgstr "文本支持撤消、重做，还可以使用表情符号：)"
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr "你可以使劲取消缩放，这样你就可以创作 ascii 艺术了"
 
-#~ msgid "New feature: Default font. You can now set a specific font for Jorts."
+#~ msgid ""
+#~ "New feature: Default font. You can now set a specific font for Jorts."
 #~ msgstr "新功能：默认字体。现在您可以为 Jorts 设置特定的字体。"

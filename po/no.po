@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -221,106 +221,103 @@ msgid "Dear Diary,"
 msgstr "Kjære dagbok,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Hei, jeg er en firkant"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Ha en fin dag! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "Min medisinplan"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Huslige gjøremål"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Ode til katten min"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "Favorittlekene til hundene mine"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Så kule fuglene mine er"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Mistenkte i Last Cookie-saken"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Ord papegøyene mine kan"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Kule og morsomme komplimenter å gi ut"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Ok, hør her,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "Mitt drømme-Pokemon-team"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Mine små notater"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Overraskende gaveliste"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Notater fra idémyldringen"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "Å ta med til festen"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Min fantastiske mixtape"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Serviettskriblerier"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Mine favorittsanger å synge med på"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "Når du skal vanne hvilken plante"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "Topp 10 anime-svik"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Fantastisk ascii-kunst!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Nå med mer ligma!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Favorittlekene til hundene mine"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Jeg bruker forresten arch"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Gratulerer! 🔥"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -337,6 +334,15 @@ msgstr ""
 "\n"
 "Jeg håper min lille app gir deg mye glede\n"
 "Ha en flott dag 🎇\n"
+
+#~ msgid "Hi im a square"
+#~ msgstr "Hei, jeg er en firkant"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Nå med mer ligma!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Jeg bruker forresten arch"
 
 #~ msgid "Close"
 #~ msgstr "Lukk"

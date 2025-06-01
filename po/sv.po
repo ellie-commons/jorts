@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: sv\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -88,8 +88,12 @@ msgstr "Gör ofokuserade anteckningar oläsliga"
 
 #: src/Preferences.vala:115
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Om funktionen är aktiverad blir ofokuserade klisterlappar oläsliga för att skydda innehållet från nyfikna blickar"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Om funktionen är aktiverad blir ofokuserade klisterlappar oläsliga för att "
+"skydda innehållet från nyfikna blickar"
 
 #: src/Preferences.vala:140
 #, fuzzy
@@ -97,22 +101,28 @@ msgid "Hide buttons"
 msgstr "Dölj knappfältet"
 
 #: src/Preferences.vala:142
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Om den är aktiverad döljs det nedre fältet i anteckningar. Kortkommandon kommer fortfarande att fungera (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Om den är aktiverad döljs det nedre fältet i anteckningar. Kortkommandon "
+"kommer fortfarande att fungera (Ctrl+T)"
 
 #: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "Behörigheter"
 
-#: src/Preferences.vala:177
-#: src/Preferences.vala:203
+#: src/Preferences.vala:177 src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Tillåt att starta vid inloggning"
 
-#: src/Preferences.vala:179
-#: src/Preferences.vala:205
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Du kan ställa in att anteckningarna ska visas när du loggar in genom att lägga till Jorts i autostart"
+#: src/Preferences.vala:179 src/Preferences.vala:205
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Du kan ställa in att anteckningarna ska visas när du loggar in genom att "
+"lägga till Jorts i autostart"
 
 #: src/Preferences.vala:191
 #, fuzzy
@@ -213,106 +223,103 @@ msgid "Dear Diary,"
 msgstr "Kära dagbok,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Hej jag är en kvadrat"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Ha en trevlig dag! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "Mitt medicinschema"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Hushållssysslor"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Ode till min katt"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "Mina hundars favoritleksaker"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Så coola mina fåglar är"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Misstänkta i Last Cookie-härvan"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Ord som mina papegojor kan"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Coola och roliga komplimanger att ge ut"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Okej, lyssna här,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "Mitt drömteam för Pokemon"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Mina små anteckningar"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Lista med överraskningsgåvor"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Anteckningar från brainstorming"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "Att ta med till festen"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Min fantastiska mixtape"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Servett scribblys"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Mina favoritlåtar att sjunga med i"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "När ska du vattna vilken växt"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "Topp 10 förräderier i anime"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Fantastisk ascii-konst!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Nu med mer ligma!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Mina hundars favoritleksaker"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Jag använder arch btw"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Grattis!🔥"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -321,7 +328,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Du har hittat den gyllene klisterlappen!\n"
 "\n"
@@ -330,7 +336,15 @@ msgstr ""
 "\n"
 "Jag hoppas att min lilla app ger dig mycket glädje\n"
 "Ha en fantastisk dag!🎇\n"
-""
+
+#~ msgid "Hi im a square"
+#~ msgstr "Hej jag är en kvadrat"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Nu med mer ligma!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Jag använder arch btw"
 
 #~ msgid "Microsoft support"
 #~ msgstr "Stöd från Microsoft"

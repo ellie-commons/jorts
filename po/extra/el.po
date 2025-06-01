@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -21,12 +21,17 @@ msgid "Sticky notes utility"
 msgstr "Βοηθητικό πρόγραμμα αυτοκόλλητων σημειώσεων"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid "Write down notes, reminders, random thoughts and other short-term informations"
-msgstr "Σημειώσεις, υπενθυμίσεις, τυχαίες σκέψεις και άλλες βραχυπρόθεσμες πληροφορίες"
+msgid ""
+"Write down notes, reminders, random thoughts and other short-term "
+"informations"
+msgstr ""
+"Σημειώσεις, υπενθυμίσεις, τυχαίες σκέψεις και άλλες βραχυπρόθεσμες "
+"πληροφορίες"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "κείμενο;απλό;απλό κείμενο;σημειωματάριο;σημειώσεις;αυτοκόλλητο;post-it,"
+msgstr ""
+"κείμενο;απλό;απλό κείμενο;σημειωματάριο;σημειώσεις;αυτοκόλλητο;post-it,"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
@@ -52,19 +57,25 @@ msgstr "Τα χαρακτηριστικά περιλαμβάνουν:"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:13
 #, fuzzy
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
-msgstr "Χρώματα: Χρώματα: Δέκα όμορφα θέματα. Κάθε νέα σημείωση παίρνει ένα τυχαίο"
+msgstr ""
+"Χρώματα: Χρώματα: Δέκα όμορφα θέματα. Κάθε νέα σημείωση παίρνει ένα τυχαίο"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
-msgstr "Προσαρμοστικό: Οι νέες σημειώσεις παίρνουν το ζουμ που επιλέξατε τελευταία"
+msgstr ""
+"Προσαρμοστικό: Οι νέες σημειώσεις παίρνουν το ζουμ που επιλέξατε τελευταία"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Χαριτωμένο: Κάθε νέα σημείωση έχει έναν αστείο ή χαριτωμένο τυχαίο (επεξεργάσιμο) τίτλο."
+msgstr ""
+"Χαριτωμένο: Κάθε νέα σημείωση έχει έναν αστείο ή χαριτωμένο τυχαίο "
+"(επεξεργάσιμο) τίτλο."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "Πρακτικό: Μπορείτε να ανοίξετε συνδέσμους και μηνύματα ηλεκτρονικού ταχυδρομείου με Ctrl+Click"
+msgstr ""
+"Πρακτικό: Μπορείτε να ανοίξετε συνδέσμους και μηνύματα ηλεκτρονικού "
+"ταχυδρομείου με Ctrl+Click"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
@@ -72,8 +83,13 @@ msgstr "Ιδιωτικός: Δοκιμάστε τη λειτουργία μου�
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 #, fuzzy
-msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
-msgstr "Αυτό είναι ένα πιρούνι μιας παλιάς έκδοσης του \"Notejot\" από την lainsce και δεν θα υπήρχε χωρίς τη δουλειά της. Στην κοινότητα άρεσε τόσο πολύ, που σκεφτήκαμε ότι θα ήταν υπέροχο να το αναβιώσουμε!"
+msgid ""
+"This is a fork of an old version of \"Notejot\" by lainsce. The community "
+"liked it so much, we thought it would be great to revive it!"
+msgstr ""
+"Αυτό είναι ένα πιρούνι μιας παλιάς έκδοσης του \"Notejot\" από την lainsce "
+"και δεν θα υπήρχε χωρίς τη δουλειά της. Στην κοινότητα άρεσε τόσο πολύ, που "
+"σκεφτήκαμε ότι θα ήταν υπέροχο να το αναβιώσουμε!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -134,8 +150,12 @@ msgid "Change colours, zoom in and out, and there is even an emoji button!"
 msgstr "Αλλάξτε τα χρώματα, κάντε ζουμ, και υπάρχει ακόμη και κουμπί emoji!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
-msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-msgstr "Streaming; Ανησυχείτε μήπως κάποιος σας κοιτάζει από πάνω; Δοκιμάστε το scribbly Mode!"
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
+"Mode!"
+msgstr ""
+"Streaming; Ανησυχείτε μήπως κάποιος σας κοιτάζει από πάνω; Δοκιμάστε το "
+"scribbly Mode!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
 msgid "Look! Ascii art in a sticky note!"
@@ -156,7 +176,9 @@ msgstr "2.2.0 Οι Jorts του φωτός"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
 msgid "Add a cool little animation when enabling/disabling actionbar"
-msgstr "Προσθέστε ένα μικρό δροσερό animation όταν ενεργοποιείτε/απενεργοποιείτε τη γραμμή ενεργειών"
+msgstr ""
+"Προσθέστε ένα μικρό δροσερό animation όταν ενεργοποιείτε/απενεργοποιείτε τη "
+"γραμμή ενεργειών"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 msgid "Pride Edition: A lovely temporary icon by @wpkelso"
@@ -177,7 +199,9 @@ msgstr "2.2.0 Οι Jorts του φωτός"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Save memory and disk writes by adding a proper debounce"
-msgstr "Εξοικονομήστε μνήμη και εγγραφές στο δίσκο προσθέτοντας ένα κατάλληλο debounce"
+msgstr ""
+"Εξοικονομήστε μνήμη και εγγραφές στο δίσκο προσθέτοντας ένα κατάλληλο "
+"debounce"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
 #, fuzzy
@@ -223,12 +247,20 @@ msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Ένα υπέροχο ολοκαίνουργιο εικονίδιο χάρη στον @wpkelso"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
-msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
-msgstr "Μεταξύ αυτού και της μεταφοράς GTK4, έχουν μείνει πολύ λίγα από το παλιό Notejot... Θα μπορούσαμε να πούμε ότι είναι ένα v3"
+msgid ""
+"Between this and the GTK4 port, there is very little left from old "
+"Notejot... We could say it is a v3"
+msgstr ""
+"Μεταξύ αυτού και της μεταφοράς GTK4, έχουν μείνει πολύ λίγα από το παλιό "
+"Notejot... Θα μπορούσαμε να πούμε ότι είναι ένα v3"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
-msgstr "Κάντε την εφαρμογή πιο καθολική: οπότε υλοποιήστε εκ νέου την αποθήκευση και την επαναφορά."
+msgid ""
+"Make the app more universal: Other DEs do not keep window dimensions, so "
+"reimplement save and restore"
+msgstr ""
+"Κάντε την εφαρμογή πιο καθολική: οπότε υλοποιήστε εκ νέου την αποθήκευση και "
+"την επαναφορά."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 #, fuzzy
@@ -246,8 +278,12 @@ msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Οι Jorts του φωτός"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
-msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
-msgstr "Χάρη στον RyoNakano που επεξεργάζεται τις ιαπωνικές μεταφράσεις, οι ομιλητές της ιαπωνικής γλώσσας θα αισθάνονται τώρα πιο άνετα στο σπίτι τους"
+msgid ""
+"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
+"feel more at home now"
+msgstr ""
+"Χάρη στον RyoNakano που επεξεργάζεται τις ιαπωνικές μεταφράσεις, οι ομιλητές "
+"της ιαπωνικής γλώσσας θα αισθάνονται τώρα πιο άνετα στο σπίτι τους"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "Respect reduce animations settings"
@@ -260,19 +296,26 @@ msgstr "η λειτουργία scribbly έχει μεταφερθεί στο ν
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:168
 msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-msgstr "Προσθήκη προτίμησης: τώρα μπορείτε να αποκρύψετε την κάτω γραμμή! (Ctrl+t)"
+msgstr ""
+"Προσθήκη προτίμησης: τώρα μπορείτε να αποκρύψετε την κάτω γραμμή! (Ctrl+t)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr "Διόρθωση σφάλματος: Διορθώθηκε η μετακίνηση στοιχείων όταν ο τίτλος μιας σημείωσης περνάει από πάνω ή επιλέγεται"
+msgstr ""
+"Διόρθωση σφάλματος: Διορθώθηκε η μετακίνηση στοιχείων όταν ο τίτλος μιας "
+"σημείωσης περνάει από πάνω ή επιλέγεται"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
-msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr "Bugfix: Νέα και διαγραφή accels δεν λειτουργούσαν, συγγνώμη, διορθώθηκε τώρα."
+msgid ""
+"Bugfix: New and delete accels were not working oops sorry it's fixed now"
+msgstr ""
+"Bugfix: Νέα και διαγραφή accels δεν λειτουργούσαν, συγγνώμη, διορθώθηκε τώρα."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Bugfix where random components skipped the last possible choice"
-msgstr "Διόρθωση σφάλματος όπου τα τυχαία στοιχεία παρέλειπαν την τελευταία δυνατή επιλογή"
+msgstr ""
+"Διόρθωση σφάλματος όπου τα τυχαία στοιχεία παρέλειπαν την τελευταία δυνατή "
+"επιλογή"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:172
 msgid "Bugfix: shortcut for emotes did not show up properly"
@@ -287,15 +330,21 @@ msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 Το εσωτερικό σορτς"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:181
-msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
-msgstr "Νέο χαρακτηριστικό: Προτιμήσεις! Κάντε δεξί κλικ στο εικονίδιο της εφαρμογής για να δείτε την επιλογή"
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
+msgstr ""
+"Νέο χαρακτηριστικό: Προτιμήσεις! Κάντε δεξί κλικ στο εικονίδιο της εφαρμογής "
+"για να δείτε την επιλογή"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:182
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "η λειτουργία scribbly έχει μεταφερθεί στο νέο διάλογο προτιμήσεων"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
-msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
+msgid ""
+"For translators: Translations have been separated in 2: One for the UI one "
+"for the extra content"
 msgstr "Για μεταφραστές: Μία για το UI και μία για το επιπλέον περιεχόμενο."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
@@ -304,7 +353,8 @@ msgstr "Άνεση: Εύκολο να πιάσετε και να σύρετε τ
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:185
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-msgstr "Διόρθωση σφάλματος: Τα στιγμιότυπα οθόνης στο appcenter ήταν ένα χάος aaaa"
+msgstr ""
+"Διόρθωση σφάλματος: Τα στιγμιότυπα οθόνης στο appcenter ήταν ένα χάος aaaa"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:191
 msgid "Updated translations"
@@ -321,23 +371,38 @@ msgstr "Καλύτερη μεταφραστική κάλυψη"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:199
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Νέο χαρακτηριστικό: λειτουργία scribbly! Απόκρυψη του περιεχομένου των αυτοκόλλητων σημειώσεων όταν δεν είναι εστιασμένο"
+msgstr ""
+"Νέο χαρακτηριστικό: λειτουργία scribbly! Απόκρυψη του περιεχομένου των "
+"αυτοκόλλητων σημειώσεων όταν δεν είναι εστιασμένο"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
-msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-msgstr "Νέο χαρακτηριστικό: Emoji! Ξέρω ότι υπάρχει ένα στο δεξί κλικ, αλλά τα κουμπιά είναι πιο προσιτά!"
+msgid ""
+"New feature: Emoji picker button! I know there is one on right-click, but "
+"buttons are more accessible!"
+msgstr ""
+"Νέο χαρακτηριστικό: Emoji! Ξέρω ότι υπάρχει ένα στο δεξί κλικ, αλλά τα "
+"κουμπιά είναι πιο προσιτά!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Το κουμπί στη γραμμή εργαλείων εμφανίζει ένα τυχαίο emote κάθε φορά που κάνετε κλικ!"
+msgstr ""
+"Το κουμπί στη γραμμή εργαλείων εμφανίζει ένα τυχαίο emote κάθε φορά που "
+"κάνετε κλικ!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:202
-msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-msgstr "Νέο χαρακτηριστικό: Jorts κάνει ένα μηνιαίο αντίγραφο ασφαλείας. Σε περίπτωση που υπάρξει οποιοδήποτε πρόβλημα, μπορείτε να ανακτήσετε τα δεδομένα!"
+msgid ""
+"New feature: Jorts does a monthly backup. Should there be any issue you can "
+"recover data!"
+msgstr ""
+"Νέο χαρακτηριστικό: Jorts κάνει ένα μηνιαίο αντίγραφο ασφαλείας. Σε "
+"περίπτωση που υπάρξει οποιοδήποτε πρόβλημα, μπορείτε να ανακτήσετε τα "
+"δεδομένα!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:203
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Σε περίπτωση που ο κύριος αποθηκευτικός χώρος καταστραφεί, το Jorts προσπαθεί να φορτώσει από το εφεδρικό αντίγραφο"
+msgstr ""
+"Σε περίπτωση που ο κύριος αποθηκευτικός χώρος καταστραφεί, το Jorts "
+"προσπαθεί να φορτώσει από το εφεδρικό αντίγραφο"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:204
 msgid "Some new fun/cute default titles"
@@ -357,7 +422,9 @@ msgstr "Προσθήκη ανακούφισης στα κουμπιά της γ�
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:215
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Διόρθωση σφάλματος: Περίπτωση ακμής όπου το θέμα ή το ζουμ δεν αποθηκεύτηκαν σωστά"
+msgstr ""
+"Διόρθωση σφάλματος: Περίπτωση ακμής όπου το θέμα ή το ζουμ δεν αποθηκεύτηκαν "
+"σωστά"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:216
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -397,11 +464,17 @@ msgstr "2.1.0 Μόλις βγήκε από το πλυντήριο!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:237
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Περιλαμβάνει ζουμ ανά νότα! Έτσι μπορείτε να έχετε μεγαλύτερο ή μικρότερο κείμενο"
+msgstr ""
+"Περιλαμβάνει ζουμ ανά νότα! Έτσι μπορείτε να έχετε μεγαλύτερο ή μικρότερο "
+"κείμενο"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:238
-msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-msgstr "Το τελευταίο ρυθμισμένο ζουμ, ή αλλιώς αυτό που σας βολεύει περισσότερο, παραμένει ως προεπιλογή για νέες σημειώσεις."
+msgid ""
+"Latest set zoom, aka what is most comfortable to you, stays as default for "
+"new notes"
+msgstr ""
+"Το τελευταίο ρυθμισμένο ζουμ, ή αλλιώς αυτό που σας βολεύει περισσότερο, "
+"παραμένει ως προεπιλογή για νέες σημειώσεις."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:239
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -421,7 +494,8 @@ msgstr "Καλύτερη συντόμευση και συμβουλές εργα
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:243
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Διορθώθηκε ένα σφάλμα όπου το Jorts παρέμενε στο θέμα του φωτεινού συστήματος"
+msgstr ""
+"Διορθώθηκε ένα σφάλμα όπου το Jorts παρέμενε στο θέμα του φωτεινού συστήματος"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:249
 msgid "2.0.1 Appcenter release"
@@ -457,19 +531,26 @@ msgstr "Τα νέα αυτοκόλλητα έχουν έναν τυχαίο δι
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:262
 msgid "A few initial translations included, and more to come"
-msgstr "Περιλαμβάνονται μερικές αρχικές μεταφράσεις και θα ακολουθήσουν κι άλλες"
+msgstr ""
+"Περιλαμβάνονται μερικές αρχικές μεταφράσεις και θα ακολουθήσουν κι άλλες"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:263
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "Τα email και οι σύνδεσμοι μπορούν να γίνουν κλικ! Ctrl+Κλικ για να ανοίξετε στο mail ή στο πρόγραμμα περιήγησης"
+msgstr ""
+"Τα email και οι σύνδεσμοι μπορούν να γίνουν κλικ! Ctrl+Κλικ για να ανοίξετε "
+"στο mail ή στο πρόγραμμα περιήγησης"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:264
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "Το κείμενο υποστηρίζει αναίρεση, επανάληψη και μπορείτε να χρησιμοποιήσετε emojis :)"
+msgstr ""
+"Το κείμενο υποστηρίζει αναίρεση, επανάληψη και μπορείτε να χρησιμοποιήσετε "
+"emojis :)"
 
 #, fuzzy
 #~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "Πολύχρωμες και χαρούμενες μικρές αυτοκόλλητες σημειώσεις για όλες τις σκέψεις σας! :)"
+#~ msgstr ""
+#~ "Πολύχρωμες και χαρούμενες μικρές αυτοκόλλητες σημειώσεις για όλες τις "
+#~ "σκέψεις σας! :)"
 
 #~ msgid "Windows version, with the guidance from @supercamel"
 #~ msgstr "Έκδοση για Windows, με την καθοδήγηση από τον @supercamel"

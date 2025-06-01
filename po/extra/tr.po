@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -21,8 +21,12 @@ msgid "Sticky notes utility"
 msgstr "Yapışkan notlar yardımcı programı"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid "Write down notes, reminders, random thoughts and other short-term informations"
-msgstr "Notları, hatırlatmaları, rastgele düşünceleri ve diğer kısa vadeli bilgileri yazın"
+msgid ""
+"Write down notes, reminders, random thoughts and other short-term "
+"informations"
+msgstr ""
+"Notları, hatırlatmaları, rastgele düşünceleri ve diğer kısa vadeli bilgileri "
+"yazın"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -60,7 +64,9 @@ msgstr "Uyarlanabilir: Yeni notlar en son seçtiğiniz yakınlaştırmayı alır
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Sevimli: Her yeni notun komik veya sevimli rastgele (düzenlenebilir) bir başlığı vardır"
+msgstr ""
+"Sevimli: Her yeni notun komik veya sevimli rastgele (düzenlenebilir) bir "
+"başlığı vardır"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -72,8 +78,13 @@ msgstr "Özel: Karalama modunu deneyin!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 #, fuzzy
-msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
-msgstr "Bu, lainsce'nin \"Notejot\" adlı eski bir sürümünün çatallanmasıdır ve onun çalışması olmadan var olamazdı. Topluluk bunu çok sevdi, biz de yeniden canlandırmanın harika olacağını düşündük!"
+msgid ""
+"This is a fork of an old version of \"Notejot\" by lainsce. The community "
+"liked it so much, we thought it would be great to revive it!"
+msgstr ""
+"Bu, lainsce'nin \"Notejot\" adlı eski bir sürümünün çatallanmasıdır ve onun "
+"çalışması olmadan var olamazdı. Topluluk bunu çok sevdi, biz de yeniden "
+"canlandırmanın harika olacağını düşündük!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -131,11 +142,17 @@ msgstr "\"Blueberry\" temalı bir yapışkan not"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:65
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
-msgstr "Renkleri değiştirin, yakınlaştırın ve uzaklaştırın ve hatta bir emoji düğmesi bile var!"
+msgstr ""
+"Renkleri değiştirin, yakınlaştırın ve uzaklaştırın ve hatta bir emoji "
+"düğmesi bile var!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
-msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-msgstr "Yayın mı? Birinin omzunuzun üzerinden bakmasından mı endişeleniyorsunuz? Karalama Modunu deneyin!"
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
+"Mode!"
+msgstr ""
+"Yayın mı? Birinin omzunuzun üzerinden bakmasından mı endişeleniyorsunuz? "
+"Karalama Modunu deneyin!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
 msgid "Look! Ascii art in a sticky note!"
@@ -156,7 +173,9 @@ msgstr "2.2.0 Işığın Jorts'u"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:100
 msgid "Add a cool little animation when enabling/disabling actionbar"
-msgstr "Eylem çubuğunu etkinleştirirken/devre dışı bırakırken küçük bir animasyon ekleyin"
+msgstr ""
+"Eylem çubuğunu etkinleştirirken/devre dışı bırakırken küçük bir animasyon "
+"ekleyin"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:101
 msgid "Pride Edition: A lovely temporary icon by @wpkelso"
@@ -177,7 +196,8 @@ msgstr "2.2.0 Işığın Jorts'u"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:111
 msgid "Save memory and disk writes by adding a proper debounce"
-msgstr "Uygun bir debounce ekleyerek bellek ve disk yazımlarından tasarruf edin"
+msgstr ""
+"Uygun bir debounce ekleyerek bellek ve disk yazımlarından tasarruf edin"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:112
 #, fuzzy
@@ -223,12 +243,20 @@ msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Wpkelso sayesinde yepyeni ve sevimli bir simge"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
-msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
-msgstr "Bu ve GTK4 portu arasında, eski Notejot'tan geriye çok az şey kaldı... Bunun bir v3 olduğunu söyleyebiliriz"
+msgid ""
+"Between this and the GTK4 port, there is very little left from old "
+"Notejot... We could say it is a v3"
+msgstr ""
+"Bu ve GTK4 portu arasında, eski Notejot'tan geriye çok az şey kaldı... Bunun "
+"bir v3 olduğunu söyleyebiliriz"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
-msgstr "Uygulamayı daha evrensel hale getirin: Diğer DE'ler pencere boyutlarını tutmaz, bu nedenle kaydetme ve geri yüklemeyi yeniden uygulayın"
+msgid ""
+"Make the app more universal: Other DEs do not keep window dimensions, so "
+"reimplement save and restore"
+msgstr ""
+"Uygulamayı daha evrensel hale getirin: Diğer DE'ler pencere boyutlarını "
+"tutmaz, bu nedenle kaydetme ve geri yüklemeyi yeniden uygulayın"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 #, fuzzy
@@ -246,8 +274,12 @@ msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Işığın Jorts'u"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
-msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
-msgstr "RyoNakano'nun Japonca çevirileri elden geçirmesi sayesinde Japonca konuşanlar artık kendilerini daha rahat hissedecek"
+msgid ""
+"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
+"feel more at home now"
+msgstr ""
+"RyoNakano'nun Japonca çevirileri elden geçirmesi sayesinde Japonca "
+"konuşanlar artık kendilerini daha rahat hissedecek"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "Respect reduce animations settings"
@@ -264,15 +296,20 @@ msgstr "Tercih ekleyin: artık alt çubuğu gizleyebilirsiniz! (Ctrl+t)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr "Hata Düzeltmesi: Bir not başlığının üzerine gelindiğinde veya seçildiğinde öğelerin hareket etmesi düzeltildi"
+msgstr ""
+"Hata Düzeltmesi: Bir not başlığının üzerine gelindiğinde veya seçildiğinde "
+"öğelerin hareket etmesi düzeltildi"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
-msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr "Hata Düzeltme: Yeni ve silme akselleri çalışmıyordu, üzgünüm şimdi düzeltildi"
+msgid ""
+"Bugfix: New and delete accels were not working oops sorry it's fixed now"
+msgstr ""
+"Hata Düzeltme: Yeni ve silme akselleri çalışmıyordu, üzgünüm şimdi düzeltildi"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Bugfix where random components skipped the last possible choice"
-msgstr "Rastgele bileşenlerin son olası seçimi atlamasına neden olan hata düzeltmesi"
+msgstr ""
+"Rastgele bileşenlerin son olası seçimi atlamasına neden olan hata düzeltmesi"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:172
 msgid "Bugfix: shortcut for emotes did not show up properly"
@@ -287,16 +324,24 @@ msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 İç Şort"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:181
-msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
-msgstr "Yeni özellik: Tercihler iletişim kutusu! Seçeneği görmek için uygulama simgesine sağ tıklayın"
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
+msgstr ""
+"Yeni özellik: Tercihler iletişim kutusu! Seçeneği görmek için uygulama "
+"simgesine sağ tıklayın"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:182
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "scribbly modu yeni tercih iletişim kutusuna taşındı"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
-msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
-msgstr "Çevirmenler için: Çeviriler 2'ye ayrıldı: Biri kullanıcı arayüzü için diğeri ekstra içerik için"
+msgid ""
+"For translators: Translations have been separated in 2: One for the UI one "
+"for the extra content"
+msgstr ""
+"Çevirmenler için: Çeviriler 2'ye ayrıldı: Biri kullanıcı arayüzü için diğeri "
+"ekstra içerik için"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
 msgid "Comfort: Easier to grab and drag stickies"
@@ -321,23 +366,34 @@ msgstr "Daha iyi çeviri kapsamı"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:199
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Yeni özellik: karalama modu! Odaklanılmadığında yapışkan not içeriğini gizle"
+msgstr ""
+"Yeni özellik: karalama modu! Odaklanılmadığında yapışkan not içeriğini gizle"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
-msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-msgstr "Yeni özellik: Emoji seçici düğmesi! Sağ tıklamada bir tane olduğunu biliyorum, ancak düğmeler daha erişilebilir!"
+msgid ""
+"New feature: Emoji picker button! I know there is one on right-click, but "
+"buttons are more accessible!"
+msgstr ""
+"Yeni özellik: Emoji seçici düğmesi! Sağ tıklamada bir tane olduğunu "
+"biliyorum, ancak düğmeler daha erişilebilir!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Araç çubuğundaki düğmeye her tıkladığınızda rastgele bir ifade görüntülenir!"
+msgstr ""
+"Araç çubuğundaki düğmeye her tıkladığınızda rastgele bir ifade görüntülenir!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:202
-msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-msgstr "Yeni özellik: Jorts aylık yedekleme yapar. Herhangi bir sorun olması durumunda verileri kurtarabilirsiniz!"
+msgid ""
+"New feature: Jorts does a monthly backup. Should there be any issue you can "
+"recover data!"
+msgstr ""
+"Yeni özellik: Jorts aylık yedekleme yapar. Herhangi bir sorun olması "
+"durumunda verileri kurtarabilirsiniz!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:203
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Ana depolamanın bozulması durumunda, Jorts yedekten yükleme yapmaya çalışır"
+msgstr ""
+"Ana depolamanın bozulması durumunda, Jorts yedekten yükleme yapmaya çalışır"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:204
 msgid "Some new fun/cute default titles"
@@ -357,7 +413,8 @@ msgstr "Eylem çubuğu düğmelerine kabartma ekleme"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:215
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Hata Düzeltme: Tema veya yakınlaştırmanın düzgün kaydedilmediği uç durum"
+msgstr ""
+"Hata Düzeltme: Tema veya yakınlaştırmanın düzgün kaydedilmediği uç durum"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:216
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -397,11 +454,17 @@ msgstr "2.1.0 Çamaşırhaneden yeni çıktı!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:237
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Not başına yakınlaştırma içerir! Böylece daha büyük veya daha küçük metin elde edebilirsiniz"
+msgstr ""
+"Not başına yakınlaştırma içerir! Böylece daha büyük veya daha küçük metin "
+"elde edebilirsiniz"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:238
-msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-msgstr "En son ayarlanan yakınlaştırma, yani sizin için en rahat olanı, yeni notlar için varsayılan olarak kalır"
+msgid ""
+"Latest set zoom, aka what is most comfortable to you, stays as default for "
+"new notes"
+msgstr ""
+"En son ayarlanan yakınlaştırma, yani sizin için en rahat olanı, yeni notlar "
+"için varsayılan olarak kalır"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:239
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -421,7 +484,8 @@ msgstr "Daha iyi kısayol ve araç ipuçları"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:243
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Jorts'un açık sistem temasında kalmasına neden olan bir hata düzeltildi"
+msgstr ""
+"Jorts'un açık sistem temasında kalmasına neden olan bir hata düzeltildi"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:249
 msgid "2.0.1 Appcenter release"
@@ -433,7 +497,8 @@ msgstr "2.0.0 Sürüm: Arduvaz ve Balonlu Sakız"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:256
 msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "Notejot'un eski ama çok sevilen bir versiyonunun yeniden canlandırılması"
+msgstr ""
+"Notejot'un eski ama çok sevilen bir versiyonunun yeniden canlandırılması"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:257
 msgid "The app is now named Jorts. You however cannot wear it"
@@ -445,7 +510,8 @@ msgstr "10 sevimli küçük renk"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:259
 msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Modern Linux teknolojileri ve paketleme formatları üzerine inşa edilmiştir"
+msgstr ""
+"Modern Linux teknolojileri ve paketleme formatları üzerine inşa edilmiştir"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:260
 msgid "Smooth transition when changing theme"
@@ -461,11 +527,14 @@ msgstr "İlk birkaç çeviri dahil, daha fazlası da gelecek"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:263
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "E-posta ve bağlantılar tıklanabilir! Posta veya tarayıcıda açmak için Ctrl+Tıkla"
+msgstr ""
+"E-posta ve bağlantılar tıklanabilir! Posta veya tarayıcıda açmak için "
+"Ctrl+Tıkla"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:264
 msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "Metin geri almayı, yinelemeyi destekler ve emojileri kullanabilirsiniz :)"
+msgstr ""
+"Metin geri almayı, yinelemeyi destekler ve emojileri kullanabilirsiniz :)"
 
 #, fuzzy
 #~ msgid "Colourful little sticky notes! :)"

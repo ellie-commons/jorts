@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: it\n"
-"Language-Team: Italian <LL@li.org>\n"
-"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2025-05-10 12:46+0100\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: 2025-05-10 12:46+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -86,30 +86,40 @@ msgid "Make unfocused notes unreadable"
 msgstr "Rendere illeggibili gli appunti non focalizzati"
 
 #: src/Preferences.vala:115
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
+"proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
 #: src/Preferences.vala:140
 msgid "Hide buttons"
 msgstr "Nascondi pulsanti"
 
 #: src/Preferences.vala:142
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie da tastiera continuano a funzionare (Ctrl+T)."
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie "
+"da tastiera continuano a funzionare (Ctrl+T)."
 
 #: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "Permessi"
 
-#: src/Preferences.vala:177
-#: src/Preferences.vala:203
+#: src/Preferences.vala:177 src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Consentire l'avvio all'accesso"
 
-#: src/Preferences.vala:179
-#: src/Preferences.vala:205
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "È possibile impostare la visualizzazione delle note adesive al momento dell'accesso aggiungendo Jorts all'avvio automatico"
+#: src/Preferences.vala:179 src/Preferences.vala:205
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"È possibile impostare la visualizzazione delle note adesive al momento "
+"dell'accesso aggiungendo Jorts all'avvio automatico"
 
 #: src/Preferences.vala:191
 #, fuzzy
@@ -210,106 +220,103 @@ msgid "Dear Diary,"
 msgstr "Caro Diario,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Ciao, sono un quadrato"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Buona giornata! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "Il mio programma di farmaci"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Faccende domestiche"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Ode al mio gatto"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "I giocattoli preferiti dai miei cani"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Quanto sono belli i miei uccelli"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Sospetti nella vicenda dell'ultimo biscotto"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Le parole che i miei pappagalli conoscono"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Complimenti simpatici e divertenti da distribuire"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Ok, ascoltate qui,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "La squadra Pokemon dei miei sogni"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Le mie piccole note"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Lista di regali a sorpresa"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Note di brainstorming"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "Da portare alla festa"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Il mio fantastico mixtape"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Tovaglioli scribblys"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Le mie canzoni preferite da cantare insieme"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "Quando innaffiare quale pianta"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "I 10 migliori tradimenti degli anime"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Arte ascii sorprendente!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Ora con più legumi!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "I giocattoli preferiti dai miei cani"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Io uso arch btw"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Congratulazioni!🔥"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -318,7 +325,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Avete trovato la nota adesiva d'oro!\n"
 "\n"
@@ -327,7 +333,15 @@ msgstr ""
 "\n"
 "Spero che la mia piccola applicazione vi porti molta gioia.\n"
 "Buona giornata! 🎇\n"
-""
+
+#~ msgid "Hi im a square"
+#~ msgstr "Ciao, sono un quadrato"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Ora con più legumi!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Io uso arch btw"
 
 #~ msgid "Microsoft support"
 #~ msgstr "Supporto Microsoft"

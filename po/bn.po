@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,106 +219,103 @@ msgid "Dear Diary,"
 msgstr "প্রিয় ডায়েরি,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "হাই আমি একটি স্কোয়ার"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "একটি সুন্দর দিন দিন! "
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "আমার মেডস শিডিউল"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "গৃহস্থালী কাজ"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "আমার বিড়ালের কাছে ওড"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "আমার কুকুর প্রিয় খেলনা"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "আমার পাখি কত শীতল"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "শেষ কুকি সম্পর্কে সন্দেহভাজন"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "শব্দগুলি আমার তোতা জানে"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "দুর্দান্ত এবং মজার প্রশংসা"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "ঠিক আছে, এখানে শুনুন,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "আমার স্বপ্নের পোকেমন দল"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "আমার ছোট নোট"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "আশ্চর্য উপহারের তালিকা"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "বুদ্ধিদীপ্ত নোট"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "পার্টিতে আনতে"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "আমার আশ্চর্যজনক মিক্সটেপ"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "ন্যাপকিন স্ক্রিবলস"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "আমার ফেভ গানগুলি পাশাপাশি গান"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "কখন কোন উদ্ভিদ জল"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "শীর্ষ 10 এনিমে বিশ্বাসঘাতকতা"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr ""
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr ""
+#, fuzzy
+msgid "My favourite bands"
+msgstr "আমার কুকুর প্রিয় খেলনা"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr ""
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -328,6 +325,9 @@ msgid ""
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
 msgstr ""
+
+#~ msgid "Hi im a square"
+#~ msgstr "হাই আমি একটি স্কোয়ার"
 
 #~ msgid "Sticky Note Colour"
 #~ msgstr "স্টিকি নোট রঙ"

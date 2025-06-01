@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: no\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: no\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:3
 msgid "Jorts"
@@ -21,8 +21,12 @@ msgid "Sticky notes utility"
 msgstr "Verktøy for klistrelapper"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:5
-msgid "Write down notes, reminders, random thoughts and other short-term informations"
-msgstr "Skriv ned notater, påminnelser, tilfeldige tanker og annen kortsiktig informasjon"
+msgid ""
+"Write down notes, reminders, random thoughts and other short-term "
+"informations"
+msgstr ""
+"Skriv ned notater, påminnelser, tilfeldige tanker og annen kortsiktig "
+"informasjon"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
@@ -60,7 +64,8 @@ msgstr "Adaptiv: Nye notater får den zoomen du sist valgte"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Søt: Hver nye lapp har en morsom eller søt tilfeldig (redigerbar) tittel"
+msgstr ""
+"Søt: Hver nye lapp har en morsom eller søt tilfeldig (redigerbar) tittel"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -72,8 +77,13 @@ msgstr "Privat: Prøv skriblerimodus!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:19
 #, fuzzy
-msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
-msgstr "Dette er en gaffel av en gammel versjon av \"Notejot\" av lainsce og ville ikke eksistert uten hennes arbeid. Fellesskapet likte den så godt at vi tenkte det ville være flott å gjenopplive den!"
+msgid ""
+"This is a fork of an old version of \"Notejot\" by lainsce. The community "
+"liked it so much, we thought it would be great to revive it!"
+msgstr ""
+"Dette er en gaffel av en gammel versjon av \"Notejot\" av lainsce og ville "
+"ikke eksistert uten hennes arbeid. Fellesskapet likte den så godt at vi "
+"tenkte det ville være flott å gjenopplive den!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -131,11 +141,17 @@ msgstr "En klistrelapp med \"Blueberry\"-temaet"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:65
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
-msgstr "Du kan endre farger, zoome inn og ut, og det finnes til og med en emoji-knapp!"
+msgstr ""
+"Du kan endre farger, zoome inn og ut, og det finnes til og med en emoji-"
+"knapp!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:69
-msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-msgstr "Strømming? Er du redd for at noen skal se deg over skulderen? Prøv den skriblete modusen!"
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
+"Mode!"
+msgstr ""
+"Strømming? Er du redd for at noen skal se deg over skulderen? Prøv den "
+"skriblete modusen!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:73
 msgid "Look! Ascii art in a sticky note!"
@@ -223,12 +239,20 @@ msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Et nydelig nytt ikon takket være @wpkelso"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:146
-msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
-msgstr "Mellom denne og GTK4-porten er det svært lite igjen av gamle Notejot ... Vi kan si at det er en v3"
+msgid ""
+"Between this and the GTK4 port, there is very little left from old "
+"Notejot... We could say it is a v3"
+msgstr ""
+"Mellom denne og GTK4-porten er det svært lite igjen av gamle Notejot ... Vi "
+"kan si at det er en v3"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:147
-msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
-msgstr "Gjør appen mer universell: Andre DE-er beholder ikke vindusdimensjonene, så lagre og gjenopprett på nytt"
+msgid ""
+"Make the app more universal: Other DEs do not keep window dimensions, so "
+"reimplement save and restore"
+msgstr ""
+"Gjør appen mer universell: Andre DE-er beholder ikke vindusdimensjonene, så "
+"lagre og gjenopprett på nytt"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:153
 #, fuzzy
@@ -246,8 +270,12 @@ msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Lysets Jorts"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:165
-msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
-msgstr "Takket være RyoNakanos omarbeiding av japanske oversettelser vil japanskspråklige føle seg mer hjemme nå"
+msgid ""
+"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
+"feel more at home now"
+msgstr ""
+"Takket være RyoNakanos omarbeiding av japanske oversettelser vil "
+"japanskspråklige føle seg mer hjemme nå"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:166
 msgid "Respect reduce animations settings"
@@ -264,15 +292,21 @@ msgstr "Legg til preferanse: Nå kan du skjule den nederste linjen! (Ctrl+t)"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:169
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr "Feilretting: Fikset elementer som flytter seg når en notattittel holdes over eller velges"
+msgstr ""
+"Feilretting: Fikset elementer som flytter seg når en notattittel holdes over "
+"eller velges"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:170
-msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr "Feilretting: Nye og slettede akselerasjoner fungerte ikke, beklager, det er fikset nå"
+msgid ""
+"Bugfix: New and delete accels were not working oops sorry it's fixed now"
+msgstr ""
+"Feilretting: Nye og slettede akselerasjoner fungerte ikke, beklager, det er "
+"fikset nå"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:171
 msgid "Bugfix where random components skipped the last possible choice"
-msgstr "Feilretting der tilfeldige komponenter hoppet over det siste mulige valget"
+msgstr ""
+"Feilretting der tilfeldige komponenter hoppet over det siste mulige valget"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:172
 msgid "Bugfix: shortcut for emotes did not show up properly"
@@ -288,16 +322,24 @@ msgid "2.3.0 The Inner Jorts"
 msgstr "2.1.2 De uoppnåelige jortene"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:181
-msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
-msgstr "Ny funksjon: Dialogboksen Innstillinger! Høyreklikk på appikonet for å se alternativet"
+msgid ""
+"New feature: Preferences dialog! Right-click on the app icon to see the "
+"option"
+msgstr ""
+"Ny funksjon: Dialogboksen Innstillinger! Høyreklikk på appikonet for å se "
+"alternativet"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:182
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "Skriblerimodus er flyttet til den nye innstillingsdialogen"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
-msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
-msgstr "For oversettere: Oversettelsene har blitt delt i to: En for brukergrensesnittet og en for det ekstra innholdet"
+msgid ""
+"For translators: Translations have been separated in 2: One for the UI one "
+"for the extra content"
+msgstr ""
+"For oversettere: Oversettelsene har blitt delt i to: En for "
+"brukergrensesnittet og en for det ekstra innholdet"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:184
 msgid "Comfort: Easier to grab and drag stickies"
@@ -323,23 +365,34 @@ msgstr "Bedre dekning av oversettelser"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:199
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Ny funksjon: kladdemodus! Skjul innholdet på klistrelapper når du ikke fokuserer"
+msgstr ""
+"Ny funksjon: kladdemodus! Skjul innholdet på klistrelapper når du ikke "
+"fokuserer"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
-msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-msgstr "Ny funksjon: Emoji-velgerknapp! Jeg vet at det finnes en på høyreklikk, men knapper er mer tilgjengelige!"
+msgid ""
+"New feature: Emoji picker button! I know there is one on right-click, but "
+"buttons are more accessible!"
+msgstr ""
+"Ny funksjon: Emoji-velgerknapp! Jeg vet at det finnes en på høyreklikk, men "
+"knapper er mer tilgjengelige!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:202
-msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-msgstr "Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå problemer, kan du gjenopprette data!"
+msgid ""
+"New feature: Jorts does a monthly backup. Should there be any issue you can "
+"recover data!"
+msgstr ""
+"Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå "
+"problemer, kan du gjenopprette data!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:203
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra sikkerhetskopien"
+msgstr ""
+"Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra sikkerhetskopien"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:204
 msgid "Some new fun/cute default titles"
@@ -359,7 +412,8 @@ msgstr "Legg til relieff på knappene på handlingsfeltet"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:215
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Feilretting: Kanttilfelle der tema eller zoom ikke ble lagret på riktig måte"
+msgstr ""
+"Feilretting: Kanttilfelle der tema eller zoom ikke ble lagret på riktig måte"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:216
 msgid "Bugfix: Title in multitasking not set correctly"
@@ -402,8 +456,12 @@ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "Inkluderer zoom per note! Så du kan få større eller mindre tekst"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:238
-msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-msgstr "Den siste innstilte zoomen, dvs. den som er mest komfortabel for deg, forblir standard for nye notater"
+msgid ""
+"Latest set zoom, aka what is most comfortable to you, stays as default for "
+"new notes"
+msgstr ""
+"Den siste innstilte zoomen, dvs. den som er mest komfortabel for deg, "
+"forblir standard for nye notater"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:239
 msgid "Better readability (WCAG AA or AAA depending on theme)"
@@ -463,7 +521,8 @@ msgstr "Noen få innledende oversettelser er inkludert, og flere vil komme"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:263
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller nettleser"
+msgstr ""
+"E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller nettleser"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:264
 msgid "Text supports undo, redo, and you can use emojis :)"

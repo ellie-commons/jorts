@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:09+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -87,8 +87,12 @@ msgstr "Odaklanmamış notları okunamaz hale getirin"
 
 #: src/Preferences.vala:115
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Etkinleştirilirse, odaklanılmamış yapışkan notlar, içeriklerini gözetleyen gözlerden korumak için okunamaz hale gelir"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Etkinleştirilirse, odaklanılmamış yapışkan notlar, içeriklerini gözetleyen "
+"gözlerden korumak için okunamaz hale gelir"
 
 #: src/Preferences.vala:140
 #, fuzzy
@@ -96,22 +100,28 @@ msgid "Hide buttons"
 msgstr "Düğme çubuğunu gizle"
 
 #: src/Preferences.vala:142
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Etkinleştirilirse, yapışkan notlarda alt çubuğu gizler. Klavye kısayolları çalışmaya devam eder (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Etkinleştirilirse, yapışkan notlarda alt çubuğu gizler. Klavye kısayolları "
+"çalışmaya devam eder (Ctrl+T)"
 
 #: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "İzinler"
 
-#: src/Preferences.vala:177
-#: src/Preferences.vala:203
+#: src/Preferences.vala:177 src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Girişte başlamasına izin ver"
 
-#: src/Preferences.vala:179
-#: src/Preferences.vala:205
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Otomatik başlatmaya Jorts ekleyerek yapışkan notları oturum açtığınızda görünecek şekilde ayarlayabilirsiniz"
+#: src/Preferences.vala:179 src/Preferences.vala:205
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Otomatik başlatmaya Jorts ekleyerek yapışkan notları oturum açtığınızda "
+"görünecek şekilde ayarlayabilirsiniz"
 
 #: src/Preferences.vala:191
 #, fuzzy
@@ -212,106 +222,103 @@ msgid "Dear Diary,"
 msgstr "Sevgili günlük,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Merhaba ben bir kare"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "İyi günler dilerim! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "İlaç programım"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Ev işleri"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Kedime Övgü"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "Köpeklerimin en sevdiği oyuncaklar"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Kuşlarım ne kadar havalı"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Son Kurabiye olayının şüphelileri"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Papağanlarımın bildiği kelimeler"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Verilecek havalı ve komik iltifatlar"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Tamam, dinle,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "Hayalimdeki Pokemon takımı"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Benim küçük notlarım"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Sürpriz hediye listesi"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Beyin fırtınası notları"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "Partiye getirmek için"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Muhteşem mixtape'im"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Peçete karalamaları"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Birlikte söylemek için en sevdiğim şarkılar"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "Hangi bitki ne zaman sulanmalı"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "En iyi 10 anime ihaneti"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Muhteşem ascii sanatı!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Şimdi daha fazla ligma ile!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Köpeklerimin en sevdiği oyuncaklar"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Arch kullanıyorum btw"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "Tebrikler!"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -320,7 +327,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Altın Yapışkan Notu buldunuz!\n"
 "\n"
@@ -329,7 +335,15 @@ msgstr ""
 "\n"
 "Umarım benim küçük uygulamam size çok neşe getirir\n"
 "İyi günler!🎇\n"
-""
+
+#~ msgid "Hi im a square"
+#~ msgstr "Merhaba ben bir kare"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Şimdi daha fazla ligma ile!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Arch kullanıyorum btw"
 
 #~ msgid "Microsoft support"
 #~ msgstr "Microsoft desteği"
