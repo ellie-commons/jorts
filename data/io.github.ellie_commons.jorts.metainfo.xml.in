@@ -99,7 +99,8 @@
                 <ul>
                     <li>Add a cool little animation when enabling/disabling actionbar</li>
                     <li>Pride Edition: A lovely temporary icon by @wpkelso</li>
-                    <li>Commandline: You can now create custom notes from commandline</li>
+                    <li>Fixed blurrinness in high-scaled display due to Flathub BS</li>
+                    <li>Added high-resolution screenshots</li>
                 </ul>
             </description>
         </release>
