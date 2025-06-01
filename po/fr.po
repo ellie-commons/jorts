@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-11 17:17+0200\n"
+"POT-Creation-Date: 2025-06-01 14:44+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -53,15 +53,15 @@ msgstr "Cacao"
 msgid "Slate"
 msgstr "Ardoise"
 
-#: src/Widgets/SettingsPopover.vala:97
+#: src/Widgets/SettingsPopover.vala:80
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: src/Widgets/SettingsPopover.vala:103
+#: src/Widgets/SettingsPopover.vala:86
 msgid "Default zoom level"
 msgstr "Zoom par défaut"
 
-#: src/Widgets/SettingsPopover.vala:110
+#: src/Widgets/SettingsPopover.vala:93
 msgid "Zoom in"
 msgstr "Zoom avant"
 
@@ -69,7 +69,7 @@ msgstr "Zoom avant"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:157
+#: src/Widgets/SettingsPopover.vala:135
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -77,74 +77,75 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
+#: src/Preferences.vala:66
 msgid "Preferences for your Jorts"
 msgstr "Préférences pour vos Jorts"
 
-#: src/Preferences.vala:120
+#: src/Preferences.vala:113
 msgid "Make unfocused notes unreadable"
 msgstr "Rendre illisibles les notes non ciblées"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:115
 msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
 msgstr "Si cette option est activée, les notes autocollantes non ciblées deviennent illisibles afin de protéger leur contenu des regards indiscrets (Ctrl+F)"
 
-#: src/Preferences.vala:151
+#: src/Preferences.vala:140
 msgid "Hide buttons"
 msgstr "Masquer les boutons"
 
-#: src/Preferences.vala:153
+#: src/Preferences.vala:142
 msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
 msgstr "Si cette option est activée, elle masque la barre inférieure des notes autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)"
 
-#: src/Preferences.vala:182
+#: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "Permissions"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
+#: src/Preferences.vala:177
+#: src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Autoriser le démarrage à l'ouverture de la session"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
+#: src/Preferences.vala:179
+#: src/Preferences.vala:205
 msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
 msgstr "Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque vous vous connectez en ajoutant Jorts au démarrage automatique."
 
-#: src/Preferences.vala:208
-msgid "Autostart apps in flathub"
+#: src/Preferences.vala:191
+#, fuzzy
+msgid "Autostart apps"
 msgstr "Démarrage automatique des applications dans flathub"
 
-#: src/Preferences.vala:245
+#: src/Preferences.vala:224
 msgid "Support us!"
 msgstr "Nous soutenir !"
 
 #. Reset
-#: src/Preferences.vala:252
+#: src/Preferences.vala:230
 msgid "Reset to Default"
 msgstr "Rétablissement des valeurs par défaut"
 
-#: src/Preferences.vala:253
+#: src/Preferences.vala:231
 msgid "Reset all settings to defaults"
 msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
 
-#: src/StickyNoteWindow.vala:145
+#: src/StickyNoteWindow.vala:144
 msgid "Edit title"
 msgstr "Modifier le titre"
 
-#: src/StickyNoteWindow.vala:176
+#: src/StickyNoteWindow.vala:184
 msgid "New sticky note"
 msgstr "Nouvelle note autocollante"
 
-#: src/StickyNoteWindow.vala:189
+#: src/StickyNoteWindow.vala:196
 msgid "Delete sticky note"
 msgstr "Supprimer une note autocollante"
 
-#: src/StickyNoteWindow.vala:209
+#: src/StickyNoteWindow.vala:212
 msgid "Insert emoji"
 msgstr "Insérer un émoji"
 
-#: src/StickyNoteWindow.vala:246
+#: src/StickyNoteWindow.vala:241
 msgid "Preferences for this sticky note"
 msgstr "Préférences pour cette note autocollante"
 
