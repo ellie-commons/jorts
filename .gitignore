@@ -10,3 +10,4 @@ generate_stylesheets.sh
 .flatpak/
 .potrans
 .editorconfig
+oldpng/
