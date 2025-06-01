@@ -277,11 +277,16 @@ namespace Jorts {
             Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
             //The application tells us the squiffly state has changed!
-            Application.gsettings.bind (
-                "hide-bar",
-                swoosh,
-                "reveal_child",
-                SettingsBindFlags.INVERT_BOOLEAN);
+            //Application.gsettings.bind (
+            //    "hide-bar",
+            //    swoosh,
+            //    "reveal_child",
+            //    SettingsBindFlags.INVERT_BOOLEAN);
+            Application.gsettings.changed["hide-bar"].connect (() => {
+                var state = Application.gsettings.get_boolean ("hide-bar");
+                swoosh.reveal_child = state;
+                //handle.visible = state;
+            });
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
