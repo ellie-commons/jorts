@@ -36,7 +36,7 @@ msgstr ""
 #: data/io.github.ellie_commons.jorts.desktop.in:8
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
-"κείμενο;απλό;απλό κείμενο;σημειωματάριο;σημειώσεις;αυτοκόλλητο;post-it,"
+"κείμενο;απλό;απλό κείμενο;σημειωματάριο;σημειώσεις;αυτοκόλλητο;post-it;"
 
 #: data/io.github.ellie_commons.jorts.desktop.in:17
 msgid "New sticky note"
@@ -65,7 +65,7 @@ msgstr "Χρώματα: Δέκα όμορφα θέματα. Κάθε νέα ση
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
 msgstr ""
-"Έρχεται στα μέτρα σας: Οι νέες σημειώσεις παίρνουν την μεγέθυνση που ορίσατε "
+"Έρχεται στα μέτρα σας: Οι νέες σημειώσεις παίρνουν τη μεγέθυνση που ορίσατε "
 "τελευταία"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:15
@@ -88,8 +88,8 @@ msgid ""
 "liked it so much, we thought it would be great to revive it!"
 msgstr ""
 "Η εφαρμογή είναι ένα παρακλάδι μιας παλιάς έκδοσης του \"Notejot\" από την "
-"lainsce. Άρεσε τόσο πολύ στην κοινότητα, \n"
-"οπού σκεφτήκαμε ότι θα ήταν ωραίο να την αναβιώσουμε!"
+"lainsce. Άρεσε τόσο πολύ στην κοινότητα,\n"
+"οπότε σκεφτήκαμε ότι θα ήταν ωραίο να την αναβιώσουμε!"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:27
 msgid "Stella - Teamcons"
@@ -101,7 +101,7 @@ msgstr "Σημειώσεις"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:44
 msgid "Sticky note"
-msgstr "Σημειώση"
+msgstr "Σημείωση"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:45
 msgid "Stickies"
@@ -264,7 +264,7 @@ msgstr "Ενημερωμένες ρωσικές μεταφράσεις χάρη 
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:159
 msgid "Updated screenshots"
-msgstr "Ενημερωμένα στιγμιότυπα "
+msgstr "Ενημερωμένα στιγμιότυπα"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:164
 msgid "2.4.0 The Jorts of Ice"
@@ -275,8 +275,8 @@ msgid ""
 "Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
 "feel more at home now"
 msgstr ""
-"Ευχαριστούμε το RyoNakano για την επεξεργασία του στις ιαπωνικές "
-"μεταφράσεις, \n"
+"Ευχαριστούμε RyoNakano για την επεξεργασία των ιαπωνικών "
+"μεταφράσεων, \n"
 "οι ιαπωνόφωνοι θα αισθάνονται τώρα πιο άνετα"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:167
@@ -305,8 +305,8 @@ msgstr ""
 msgid ""
 "Bugfix: New and delete accels were not working oops sorry it's fixed now"
 msgstr ""
-"Διόρθωση: Η επιτάχυνσεις δημιουργίας και διαγραφής δεν λειτουργούσαν, \n"
-"χίλια συγνώμη, τώρα είναι διορθωμένο."
+"Διόρθωση: Οι επιτάχυνσεις δημιουργίας και διαγραφής δεν λειτουργούσαν, \n"
+"χίλια συγγνώμη, τώρα είναι διορθωμένο."
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:172
 msgid "Bugfix where random components skipped the last possible choice"
@@ -370,7 +370,7 @@ msgstr "Καλύτερη μεταφραστική κάλυψη"
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:200
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr ""
-"Νέα λειτουργία: Λειτουργία Μουτζούρας! Απόκρυψη του κείμενου των μη "
+"Νέα λειτουργία: Λειτουργία Μουτζούρας! Απόκρυψη του κειμένου των μη "
 "εστιασμένων σημειώσεων"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:201
@@ -453,7 +453,7 @@ msgstr "Διόρθωση: η συντόμευση διαγραφής δεν απ
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:230
 msgid "Bugfix: screenshot not showing"
-msgstr "Διόρθωση: δεν εμφανιζόταν τα στιγμιότυπα"
+msgstr "Διόρθωση: δεν εμφανίζονταν τα στιγμιότυπα"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:236
 msgid "2.1.0 Fresh out of the laundry!"
