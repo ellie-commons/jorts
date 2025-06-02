@@ -88,7 +88,7 @@ namespace Jorts.Utils {
             themes.remove(skip_theme);
         }
 
-        var random_in_range = Random.int_range (0,themes.size);
+        var random_in_range = Random.int_range (0, themes.size);
         return themes[random_in_range];
     }
 
@@ -137,7 +137,7 @@ namespace Jorts.Utils {
             _("For the barbecue"),
             _("My favourite bands")
         };
-        return alltitles[Random.int_range (0,alltitles.length)];
+        return alltitles[Random.int_range (0, alltitles.length)];
     }
 
     /*************************************************/
@@ -150,8 +150,8 @@ namespace Jorts.Utils {
         if (skip_emote != null) {
             allemotes.remove (skip_emote);
         }
-    
-        var random_in_range = Random.int_range (0,allemotes.size);
+
+        var random_in_range = Random.int_range (0, allemotes.size);
         return allemotes[random_in_range];
     }
 
@@ -167,13 +167,13 @@ namespace Jorts.Utils {
 
     public NoteData golden_sticky (NoteData blank_slate) {
 
-        var random_in_range = Random.int_range (0,1000);
+        var random_in_range = Random.int_range (0, 1000);
 
         // ONE IN THOUSAND
         if (random_in_range == 1) {
 
-            print("GOLDEN STICKY");
-            blank_slate.title = _("🔥WOW Congratulations!🔥");       
+            print ("GOLDEN STICKY");
+            blank_slate.title = _("🔥WOW Congratulations!🔥");
             blank_slate.content = _(
 """You have found the Golden Sticky Note!
 
@@ -185,7 +185,7 @@ Have a great day!🎇
 """);
             blank_slate.theme = "BANANA";
         }
-        
+
         return blank_slate;
     }
 
@@ -193,11 +193,11 @@ Have a great day!🎇
     /*************************************************/
     // Spits out a fresh new note
     public NoteData random_note (string? skip_theme = null) {
-        debug("Generating random note... Skip:" + skip_theme);
+        debug ("Generating random note... Skip:" + skip_theme);
         var randtitle = Jorts.Utils.random_title ();
         string randtheme = Jorts.Utils.random_theme (skip_theme);
 
-        NoteData randnote = new NoteData ( 
+        NoteData randnote = new NoteData (
             randtitle,
             randtheme,
             "",
@@ -206,6 +206,6 @@ Have a great day!🎇
             Jorts.Constants.DEFAULT_HEIGHT
         );
 
-        return randnote; 
+        return randnote;
     }
 }

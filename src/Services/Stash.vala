@@ -39,10 +39,10 @@ load_from_stash()
 namespace Jorts.Stash {
 
     /*************************************************/
-	// Ok first check if we have a directory to store data
-	public void check_if_stash () {
+    // Ok first check if we have a directory to store data
+    public void check_if_stash () {
         debug ("do we have a data directory?");
-		var data_directory  = File.new_for_path (Environment.get_user_data_dir ());	
+        var data_directory  = File.new_for_path (Environment.get_user_data_dir ());	
 		try {
 			if (!data_directory.query_exists ()) {
 				data_directory.make_directory ();
@@ -79,10 +79,7 @@ namespace Jorts.Stash {
         } catch (Error e) {
             warning ("Failed to save notes %s\n", e.message);
         }
-
     }
-
-
 
     /*************************************************/
     // Handles the whole loading. If there is nothing, just start with a blue one
@@ -161,7 +158,4 @@ namespace Jorts.Stash {
             return (date_diff > days_in_micro);
         }
     }
-
-
-
 }
