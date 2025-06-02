@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: ru\n"
-"Language-Team: none\n"
-"Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2025-04-06 17:02+0400\n"
-"POT-Creation-Date: 2025-05-11 17:17+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:15+0200\n"
+"PO-Revision-Date: 2025-04-06 17:02+0400\n"
+"Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
@@ -53,15 +53,15 @@ msgstr "Какао"
 msgid "Slate"
 msgstr "Каменно-серый"
 
-#: src/Widgets/SettingsPopover.vala:97
+#: src/Widgets/SettingsPopover.vala:80
 msgid "Zoom out"
 msgstr "Уменьшить"
 
-#: src/Widgets/SettingsPopover.vala:103
+#: src/Widgets/SettingsPopover.vala:86
 msgid "Default zoom level"
 msgstr "Масштаб по умолчанию"
 
-#: src/Widgets/SettingsPopover.vala:110
+#: src/Widgets/SettingsPopover.vala:93
 msgid "Zoom in"
 msgstr "Увеличить"
 
@@ -69,7 +69,7 @@ msgstr "Увеличить"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:157
+#: src/Widgets/SettingsPopover.vala:135
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -77,74 +77,85 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
+#: src/Preferences.vala:66
 msgid "Preferences for your Jorts"
 msgstr "Параметры для этого стикера"
 
-#: src/Preferences.vala:120
+#: src/Preferences.vala:113
 msgid "Make unfocused notes unreadable"
 msgstr "Сделайте несфокусированные заметки нечитаемыми"
 
-#: src/Preferences.vala:122
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Если эта функция включена, неактивные заметки становятся нечитаемыми, чтобы защитить их содержимое от посторонних глаз (Ctrl+H)"
+#: src/Preferences.vala:115
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Если эта функция включена, неактивные заметки становятся нечитаемыми, чтобы "
+"защитить их содержимое от посторонних глаз (Ctrl+H)"
 
-#: src/Preferences.vala:151
+#: src/Preferences.vala:140
 msgid "Hide buttons"
 msgstr "Скрыть панель кнопок"
 
-#: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Если включено, скрывает нижнюю панель в заметках. Сочетания клавиш (Ctrl+T) по-прежнему будут работать"
+#: src/Preferences.vala:142
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Если включено, скрывает нижнюю панель в заметках. Сочетания клавиш (Ctrl+T) "
+"по-прежнему будут работать"
 
-#: src/Preferences.vala:182
+#: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "Разрешения"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
+#: src/Preferences.vala:177 src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Разрешить запуск при входе в систему"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Вы можете установить, чтобы липкие заметки появлялись при входе в систему, добавив Jorts в автозапуск"
+#: src/Preferences.vala:179 src/Preferences.vala:205
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Вы можете установить, чтобы липкие заметки появлялись при входе в систему, "
+"добавив Jorts в автозапуск"
 
-#: src/Preferences.vala:208
-msgid "Autostart apps in flathub"
+#: src/Preferences.vala:191
+#, fuzzy
+msgid "Autostart apps"
 msgstr "Автозапуск приложений в flathub"
 
-#: src/Preferences.vala:245
+#: src/Preferences.vala:224
 msgid "Support us!"
 msgstr "Поддержите нас!"
 
 #. Reset
-#: src/Preferences.vala:252
+#: src/Preferences.vala:230
 msgid "Reset to Default"
 msgstr "Сброс настроек по умолчанию"
 
-#: src/Preferences.vala:253
+#: src/Preferences.vala:231
 msgid "Reset all settings to defaults"
 msgstr "Сброс всех настроек до значений по умолчанию"
 
-#: src/StickyNoteWindow.vala:145
+#: src/StickyNoteWindow.vala:144
 msgid "Edit title"
 msgstr "Изменить название"
 
-#: src/StickyNoteWindow.vala:176
+#: src/StickyNoteWindow.vala:184
 msgid "New sticky note"
 msgstr "Новый стикер"
 
-#: src/StickyNoteWindow.vala:189
+#: src/StickyNoteWindow.vala:196
 msgid "Delete sticky note"
 msgstr "Удалить стикер (Ctrl+W)"
 
-#: src/StickyNoteWindow.vala:209
+#: src/StickyNoteWindow.vala:212
 msgid "Insert emoji"
 msgstr "Смайлики"
 
-#: src/StickyNoteWindow.vala:246
+#: src/StickyNoteWindow.vala:241
 msgid "Preferences for this sticky note"
 msgstr "Параметры стикера"
 
@@ -209,106 +220,103 @@ msgid "Dear Diary,"
 msgstr "Дорогой дневник,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Привет, я квадратик"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Хорошего дня! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "Расписание приёма лекарств"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Домашние обязанности"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Ода моему коту"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "Любимые игрушки моей собаки"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Какие классные у меня птички"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Кто взял последнюю печеньку"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Слова, которые знают мои попугаи"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Список комплиментов"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Слушай сюда,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "Моя команда Покемонов"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Моя маленькая заметка"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Список подарков"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Заметки для мозгового штурма"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "Что я надену"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Мой микстейп"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Каракули на салфетках"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Мои любимые песни"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "Когда поливать какое растение"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "Топ-10 предательств в аниме"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Потрясающая графика в формате ascii!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Теперь с большей связью!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Любимые игрушки моей собаки"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Кстати, я использую arch"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥ВАУ, поздравляю!🔥"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -317,7 +325,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Вы нашли Золотой стикер!\n"
 "\n"
@@ -326,7 +333,15 @@ msgstr ""
 "\n"
 "Я надеюсь, что моё маленькое приложение доставит вам много радости\n"
 "Хорошего дня!🎇\n"
-""
+
+#~ msgid "Hi im a square"
+#~ msgstr "Привет, я квадратик"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Теперь с большей связью!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Кстати, я использую arch"
 
 #~ msgid "Microsoft support"
 #~ msgstr "Поддержка Microsoft"

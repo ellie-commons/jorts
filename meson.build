@@ -1,6 +1,6 @@
 # Name our project
 project('io.github.ellie_commons.jorts', ['vala', 'c'],
-    version: '3.1.3'
+    version: '3.2.0'
 )
 
 gnome = import('gnome')
@@ -29,41 +29,15 @@ gresource = gnome.compile_resources(
     source_dir: 'data'
 )
 
-
-#================================
-# Let's define our executable
-executable(
-    meson.project_name(),
-    gresource,
-    config_file,
-    'src/Objects/NoteData.vala', 
-
-    'src/Services/Constants.vala',
-    'src/Services/Jason.vala',
-    'src/Services/Stash.vala',
-    'src/Services/Themer.vala',
-    'src/Services/Utils.vala',
-
-    'src/Widgets/StickyView.vala',
-    'src/Widgets/ColorPill.vala',
-    'src/Widgets/ColorBox.vala',
-    'src/Widgets/SettingsPopover.vala',
-
-    'src/Application.vala',
-    'src/Preferences.vala',    
-    'src/StickyNoteWindow.vala',
-    dependencies: [
+dependencies = [
         dependency('granite-7'),
         dependency('gobject-2.0'),
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
         dependency('gtk4')
-    ],
-#   win_subsystem: 'windows',
-    install : true
-)
-# ,
-#   win_subsystem: 'windows',
+    ]
+
+
 
 #================================
 
@@ -71,6 +45,8 @@ executable(
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
+subdir('src')
+
 
 gnome.post_install(
   glib_compile_schemas: true,

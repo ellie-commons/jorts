@@ -276,7 +276,7 @@ namespace Jorts {
             //The application tells us the squiffly state has changed!
             Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
-            //The application tells us the squiffly state has changed!
+            //The application tells us the show/hide bar state has changed!
             Application.gsettings.bind (
                 "hide-bar",
                 swoosh,

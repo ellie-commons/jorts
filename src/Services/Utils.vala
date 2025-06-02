@@ -113,7 +113,6 @@ namespace Jorts.Utils {
             _("Hidden pirate treasure"),
             _("To not forget, ever"),
             _("Dear Diary,"),
-            _("Hi im a square"),
             _("Have a nice day! :)"),
             _("My meds schedule"),
             _("Household chores"),
@@ -135,8 +134,8 @@ namespace Jorts.Utils {
             _("When to water which plant"),
             _("Top 10 anime betrayals"),
             _("Amazing ascii art!"),
-            _("Now with more ligma!"),
-            _("I use arch btw")
+            _("For the barbecue"),
+            _("My favourite bands")
         };
         return alltitles[Random.int_range (0,alltitles.length)];
     }
@@ -149,7 +148,7 @@ namespace Jorts.Utils {
         allemotes.add_all_array (Jorts.Constants.EMOTES);
 
         if (skip_emote != null) {
-            allemotes.remove(skip_emote);
+            allemotes.remove (skip_emote);
         }
     
         var random_in_range = Random.int_range (0,allemotes.size);
@@ -166,7 +165,7 @@ namespace Jorts.Utils {
     /*************************************************/
     // Hey! Looking in the source code is cheating!
 
-    public NoteData golden_sticky(NoteData blank_slate) {
+    public NoteData golden_sticky (NoteData blank_slate) {
 
         var random_in_range = Random.int_range (0,1000);
 

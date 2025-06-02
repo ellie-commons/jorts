@@ -28,7 +28,7 @@ At some point i may move this in its own file
 
 namespace Jorts {
     public class Application : Gtk.Application {
-        public static Gee.ArrayList<StickyNoteWindow> open_notes;
+        public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
         public static GLib.Settings gsettings;
 
         public Application () {
@@ -68,7 +68,7 @@ namespace Jorts {
             }); 
 
             // build all the stylesheets
-            Jorts.Themer.init_all_themes();
+            Jorts.Themer.init_all_themes ();
         }
 
 
@@ -142,40 +142,40 @@ namespace Jorts {
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
-	public void create_note(NoteData? data = null) {
+	public void create_note (NoteData? data = null) {
         StickyNoteWindow note;
         if (data != null) {
-            note = new StickyNoteWindow(this, data);
+            note = new StickyNoteWindow (this, data);
         }
         else {
 
             // Skip theme from previous window, but use same text zoom
             StickyNoteWindow last_note = open_notes.last ();
             string skip_theme = last_note.theme;
-            var random_data = Jorts.Utils.random_note(skip_theme);
+            var random_data = Jorts.Utils.random_note (skip_theme);
 
             // A chance at pulling the Golden Sticky
-            random_data = Jorts.Utils.golden_sticky(random_data);
+            random_data = Jorts.Utils.golden_sticky (random_data);
 
             random_data.zoom = this.latest_zoom;
-            note = new StickyNoteWindow(this, random_data);
+            note = new StickyNoteWindow (this, random_data);
         }
         open_notes.add(note);
         this.save_to_stash ();
 	}
 
     // Simply remove from the list of things to save, and close
-    public void remove_note(StickyNoteWindow note) {
+    public void remove_note (StickyNoteWindow note) {
             debug ("Removing a note…\n");
             open_notes.remove (note);
             this.save_to_stash ();
 	}
 
-    public void save_to_stash() {
+    public void save_to_stash () {
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
         Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        print ("Saved " + open_notes.size.to_string() + "!\n");
+        print ("Saved " + open_notes.size.to_string () + "!\n");
     }
 
 
@@ -215,14 +215,14 @@ namespace Jorts {
         }
 
 
-        if (Jorts.Stash.need_backup(gsettings.get_string("last-backup"))) {
-            print("Doing a backup! :)");
+        if (Jorts.Stash.need_backup(gsettings.get_string ("last-backup"))) {
+            print ("Doing a backup! :)");
 
             Jorts.Stash.check_if_stash ();
             string json_data = Jorts.Jason.jsonify (open_notes);
             Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
 
-            var now = new DateTime.now_utc ().to_string() ;
+            var now = new DateTime.now_utc ().to_string () ;
             gsettings.set_string ("last-backup", now);
         }
 
@@ -237,13 +237,23 @@ namespace Jorts {
 
                 case "--new-note":
                     activate ();
-                    
-                    create_note();
+
+                    /*var data = new Jorts.NoteData (
+                        args[2] ?? Jorts.Utils.random_title (),
+                        args[3] ?? Jorts.Utils.random_theme (),
+                        args[4] ?? "",
+                        (int?)args[5] ?? Jorts.Constants.DEFAULT_ZOOM,
+                        (int?)args[6] ?? Jorts.Constants.DEFAULT_WIDTH,
+                        (int?)args[7] ?? Jorts.Constants.DEFAULT_HEIGHT);
+                    */
+                    //create_note (data);
+
+                    create_note ();
                     break;
 
                 case "--preferences":
                     activate ();
-                    preferences = new Jorts.PreferenceWindow();
+                    preferences = new Jorts.PreferenceWindow ();
                     break;
 
                 default:

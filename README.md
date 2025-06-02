@@ -1,4 +1,4 @@
-# ![icon](data/icons/64.svg) Jorts
+# ![icon](data/icons/hicolor/64.svg) Jorts
 
 ## Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS
 
@@ -7,7 +7,7 @@
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
 [![CI](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml/badge.svg)](https://github.com/ellie-commons/Jorts/actions/workflows/CI.yml)
 
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/default.png" alt="Screenshot of Elly's sticky note as an example"></span>
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/spread.png" alt="Spread of sticky notes"></span>
 
 <br/>
 

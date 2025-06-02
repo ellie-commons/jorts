@@ -43,14 +43,14 @@ namespace Jorts.Jason {
     /*************************************************/
     // Takes a single node, tries its best to get its content.
     // Does not fail if something is missing or unreadable, go to fallback for the element instead
-    public Jorts.NoteData load_node(Json.Object node) {
+    public Jorts.NoteData load_node (Json.Object node) {
 
-        string title    = node.get_string_member_with_default("title",(_("Forgot title!")));
-        string theme    = node.get_string_member_with_default("theme",Jorts.Utils.random_theme(null));
-        string content  = node.get_string_member_with_default("content","");
+        string title    = node.get_string_member_with_default ("title",(_("Forgot title!")));
+        string theme    = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
+        string content  = node.get_string_member_with_default ("content","");
 
         // TODO: If this one fails, whole note fails...
-        int64 zoom      = node.get_int_member_with_default("zoom",Jorts.Constants.DEFAULT_ZOOM);
+        int64 zoom      = node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
 
         if (zoom < Jorts.Constants.ZOOM_MIN) {
             zoom = Jorts.Constants.ZOOM_MIN;
@@ -58,10 +58,17 @@ namespace Jorts.Jason {
             zoom = Jorts.Constants.ZOOM_MAX;
         }
 
-        int64 width      = node.get_int_member_with_default("width",Jorts.Constants.DEFAULT_WIDTH);
-        int64 height      = node.get_int_member_with_default("height",Jorts.Constants.DEFAULT_HEIGHT);
+        int64 width      = node.get_int_member_with_default ("width",Jorts.Constants.DEFAULT_WIDTH);
+        int64 height      = node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
 
-        Jorts.NoteData loaded_note = new Jorts.NoteData(title, theme, content, (int)zoom, (int)width, (int)height);
+        Jorts.NoteData loaded_note = new Jorts.NoteData (
+            title,
+            theme,
+            content,
+            (int)zoom,
+            (int)width,
+            (int)height);
+
         return loaded_note;
     }
 
@@ -100,18 +107,17 @@ namespace Jorts.Jason {
     }
 
     /*************************************************/    
-    public Gee.ArrayList<Jorts.NoteData> load_parser(Json.Parser parser) {
+    public Gee.ArrayList<Jorts.NoteData> load_parser (Json.Parser parser) {
         Gee.ArrayList<Jorts.NoteData> loaded_data = new Gee.ArrayList<Jorts.NoteData>();
 
-        var root = parser.get_root();
-        var array = root.get_array();
-        
+        var root = parser.get_root ();
+        var array = root.get_array ();
+
         foreach (var item in array.get_elements()) {
             var stored_note = Jorts.Jason.load_node(item.get_object());
-            loaded_data.add(stored_note);
+            loaded_data.add (stored_note);
         }
 
         return loaded_data;
     }
-
 }

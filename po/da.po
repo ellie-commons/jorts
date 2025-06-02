@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-05-11 17:17+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 19:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: Shown as a tooltip when people hover a color theme
 #: src/Widgets/ColorBox.vala:40
@@ -53,15 +53,15 @@ msgstr "Kakao"
 msgid "Slate"
 msgstr "Skifer"
 
-#: src/Widgets/SettingsPopover.vala:97
+#: src/Widgets/SettingsPopover.vala:80
 msgid "Zoom out"
 msgstr "Zoom ud"
 
-#: src/Widgets/SettingsPopover.vala:103
+#: src/Widgets/SettingsPopover.vala:86
 msgid "Default zoom level"
 msgstr "Standard zoomniveau"
 
-#: src/Widgets/SettingsPopover.vala:110
+#: src/Widgets/SettingsPopover.vala:93
 msgid "Zoom in"
 msgstr "Zoom ind"
 
@@ -69,7 +69,7 @@ msgstr "Zoom ind"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:157
+#: src/Widgets/SettingsPopover.vala:135
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -77,76 +77,87 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
+#: src/Preferences.vala:66
 msgid "Preferences for your Jorts"
 msgstr "Præferencer for dine Jorts"
 
-#: src/Preferences.vala:120
+#: src/Preferences.vala:113
 msgid "Make unfocused notes unreadable"
 msgstr "Gør ufokuserede noter ulæselige"
 
-#: src/Preferences.vala:122
+#: src/Preferences.vala:115
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at beskytte deres indhold mod nysgerrige blikke."
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at "
+"beskytte deres indhold mod nysgerrige blikke."
 
-#: src/Preferences.vala:151
+#: src/Preferences.vala:140
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Skjul knapbjælke"
 
-#: src/Preferences.vala:153
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. Tastaturgenveje vil stadig fungere (Ctrl+T)"
+#: src/Preferences.vala:142
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. "
+"Tastaturgenveje vil stadig fungere (Ctrl+T)"
 
-#: src/Preferences.vala:182
+#: src/Preferences.vala:165
 msgid "Permissions"
 msgstr "Tilladelser"
 
-#: src/Preferences.vala:194
-#: src/Preferences.vala:220
+#: src/Preferences.vala:177 src/Preferences.vala:203
 msgid "Allow to start at login"
 msgstr "Tillad at starte ved login"
 
-#: src/Preferences.vala:196
-#: src/Preferences.vala:222
-msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-msgstr "Du kan indstille klistermærkerne til at blive vist, når du logger ind, ved at tilføje Jorts til autostart"
+#: src/Preferences.vala:179 src/Preferences.vala:205
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Du kan indstille klistermærkerne til at blive vist, når du logger ind, ved "
+"at tilføje Jorts til autostart"
 
-#: src/Preferences.vala:208
-msgid "Autostart apps in flathub"
+#: src/Preferences.vala:191
+#, fuzzy
+msgid "Autostart apps"
 msgstr "Autostart af apps i flathub"
 
-#: src/Preferences.vala:245
+#: src/Preferences.vala:224
 msgid "Support us!"
 msgstr "Støt os!"
 
 #. Reset
-#: src/Preferences.vala:252
+#: src/Preferences.vala:230
 msgid "Reset to Default"
 msgstr "Nulstil til standard"
 
-#: src/Preferences.vala:253
+#: src/Preferences.vala:231
 msgid "Reset all settings to defaults"
 msgstr "Nulstil alle indstillinger til standard"
 
-#: src/StickyNoteWindow.vala:145
+#: src/StickyNoteWindow.vala:144
 msgid "Edit title"
 msgstr "Rediger titel"
 
-#: src/StickyNoteWindow.vala:176
+#: src/StickyNoteWindow.vala:184
 msgid "New sticky note"
 msgstr "Ny sticky note"
 
-#: src/StickyNoteWindow.vala:189
+#: src/StickyNoteWindow.vala:196
 msgid "Delete sticky note"
 msgstr "Slet klistermærke"
 
-#: src/StickyNoteWindow.vala:209
+#: src/StickyNoteWindow.vala:212
 msgid "Insert emoji"
 msgstr "Indsæt emoji"
 
-#: src/StickyNoteWindow.vala:246
+#: src/StickyNoteWindow.vala:241
 msgid "Preferences for this sticky note"
 msgstr "Indstillinger for denne huskeseddel"
 
@@ -211,106 +222,103 @@ msgid "Dear Diary,"
 msgstr "Kære dagbog,"
 
 #: src/Services/Utils.vala:116
-msgid "Hi im a square"
-msgstr "Hej, jeg er firkantet"
-
-#: src/Services/Utils.vala:117
 msgid "Have a nice day! :)"
 msgstr "Hav en god dag! :)"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:117
 msgid "My meds schedule"
 msgstr "Min medicinplan"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:118
 msgid "Household chores"
 msgstr "Huslige pligter"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:119
 msgid "Ode to my cat"
 msgstr "Ode til min kat"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:120
 msgid "My dogs favourite toys"
 msgstr "Mine hundes yndlingslegetøj"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:121
 msgid "How cool my birds are"
 msgstr "Hvor seje mine fugle er"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:122
 msgid "Suspects in the Last Cookie affair"
 msgstr "Mistænkte i sagen om den sidste cookie"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:123
 msgid "Words my parrots know"
 msgstr "Ord, som mine papegøjer kender"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:124
 msgid "Cool and funny compliments to give out"
 msgstr "Seje og sjove komplimenter at give"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:125
 msgid "Ok, listen here,"
 msgstr "Okay, hør her,"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
 msgstr "Mit drømme-Pokemon-hold"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:127
 msgid "My little notes"
 msgstr "Mine små noter"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:128
 msgid "Surprise gift list"
 msgstr "Overraskende gaveliste"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:129
 msgid "Brainstorming notes"
 msgstr "Noter til brainstorming"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:130
 msgid "To bring to the party"
 msgstr "At tage med til festen"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
 msgstr "Mit fantastiske mixtape"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:132
 msgid "Napkin scribblys"
 msgstr "Servietskriblerier"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:133
 msgid "My fav songs to sing along"
 msgstr "Mine yndlingssange til at synge med på"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:134
 msgid "When to water which plant"
 msgstr "Hvornår skal hvilken plante vandes?"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 over forræderi i anime"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:136
 msgid "Amazing ascii art!"
 msgstr "Fantastisk ascii-kunst!"
 
+#: src/Services/Utils.vala:137
+msgid "For the barbecue"
+msgstr ""
+
 #: src/Services/Utils.vala:138
-msgid "Now with more ligma!"
-msgstr "Nu med mere ligma!"
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Mine hundes yndlingslegetøj"
 
-#: src/Services/Utils.vala:139
-msgid "I use arch btw"
-msgstr "Jeg bruger i øvrigt arch"
-
-#: src/Services/Utils.vala:177
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Tillykke! 🔥"
 
-#: src/Services/Utils.vala:179
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -319,7 +327,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Du har fundet den gyldne sticky note!\n"
 "\n"
@@ -328,7 +335,15 @@ msgstr ""
 "\n"
 "Jeg håber, at min lille app bringer dig en masse glæde\n"
 "Hav en god dag!🎇\n"
-""
+
+#~ msgid "Hi im a square"
+#~ msgstr "Hej, jeg er firkantet"
+
+#~ msgid "Now with more ligma!"
+#~ msgstr "Nu med mere ligma!"
+
+#~ msgid "I use arch btw"
+#~ msgstr "Jeg bruger i øvrigt arch"
 
 #~ msgid "Microsoft support"
 #~ msgstr "Support fra Microsoft"

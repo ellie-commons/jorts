@@ -33,12 +33,14 @@ namespace Jorts {
             string? title = null, string? theme = null, string? content = null,
             int? zoom = null, int? width = null, int? height = null)
         {
-            this.title = title;
-            this.theme = theme;
-            this.content = content;
-            this.zoom = zoom;
-            this.width = width;
-            this.height = height;
+
+            // We assign defaults in case theres args missing
+            this.title = title ?? Jorts.Utils.random_title ();
+            this.theme = theme ?? Jorts.Utils.random_theme ();
+            this.content = content ?? "";
+            this.zoom = zoom ?? Jorts.Constants.DEFAULT_ZOOM;
+            this.width = width ?? Jorts.Constants.DEFAULT_WIDTH;
+            this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
         }
     }
 }

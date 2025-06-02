@@ -34,7 +34,6 @@ public class Jorts.SettingsPopover : Gtk.Popover {
 
 
     /* THEME SELECTION */
-
     public string selected;
     public signal void theme_changed (string selected);
 

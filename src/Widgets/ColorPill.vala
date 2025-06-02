@@ -26,8 +26,8 @@ I just dont wanna rewrite the same button over and over
 public class Jorts.ColorPill : Gtk.CheckButton {
         public ColorPill (string tooltip, string colorclass) {
 
-                add_css_class("colorpill");
-                add_css_class(colorclass);
+                add_css_class ("colorpill");
+                add_css_class (colorclass);
                 set_size_request (24, 24);
                 set_tooltip_text (tooltip);
                 add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
@@ -38,4 +38,3 @@ public class Jorts.ColorPill : Gtk.CheckButton {
                 margin_end = 0;
         }
 }
-
