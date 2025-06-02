@@ -96,8 +96,7 @@ msgid ""
 "content from peeking eyes (Ctrl+H)"
 msgstr ""
 "Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες "
-"για να \n"
-"προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
+"για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
 
 #: src/Preferences.vala:140
 msgid "Hide buttons"
@@ -124,7 +123,7 @@ msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
 msgstr ""
-"Μπορείτε να ρυθμίσετε τις σημειώσεις να εμφανίζονται κατά την σύνδεση, \n"
+"Μπορείτε να ρυθμίσετε τις σημειώσεις να εμφανίζονται κατά τη σύνδεση, \n"
 "εάν προσθέσετε το Jorts στην αυτόματη εκκίνηση"
 
 #: src/Preferences.vala:191
@@ -174,7 +173,7 @@ msgstr "Η φανταστική μυστική μου συνταγή"
 
 #: src/Services/Utils.vala:103
 msgid "My todo list"
-msgstr "Η λίστα υποχρεώσεων μου"
+msgstr "Η λίστα υποχρεώσεών μου"
 
 #: src/Services/Utils.vala:104
 msgid "Super secret to not tell anyone"
@@ -266,7 +265,7 @@ msgstr "Ακούσατε, Ακούσατε!"
 
 #: src/Services/Utils.vala:126
 msgid "My dream Pokemon team"
-msgstr "Ομάδες που ονειρεύομαι να Φτάσουν A' Εθνική"
+msgstr "Ομάδες που ονειρεύομαι να φτάσουν Α' Εθνική"
 
 #: src/Services/Utils.vala:127
 msgid "My little notes"
@@ -282,7 +281,7 @@ msgstr "Καταιγισμός ιδεών"
 
 #: src/Services/Utils.vala:130
 msgid "To bring to the party"
-msgstr "Τι να φέρω στο πάρτυ"
+msgstr "Τι να φέρω στο πάρτι"
 
 #: src/Services/Utils.vala:131
 msgid "My amazing mixtape"
@@ -298,7 +297,7 @@ msgstr "Τα αγαπημένα μου τραγούδια για να τραγο
 
 #: src/Services/Utils.vala:134
 msgid "When to water which plant"
-msgstr "Πότε να Ποτίζω τα Φυτά μου"
+msgstr "Πότε να ποτίζω τα φυτά μου"
 
 #: src/Services/Utils.vala:135
 msgid "Top 10 anime betrayals"
