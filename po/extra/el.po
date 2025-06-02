@@ -332,7 +332,7 @@ msgid ""
 "option"
 msgstr ""
 "Νέα λειτουργία: Ρυθμίσεις! Κάντε δεξί κλικ στο εικονίδιο της εφαρμογής για "
-"να δείτε τις προτιμήσεις "
+"να δείτε τις προτιμήσεις"
 
 #: data/io.github.ellie_commons.jorts.metainfo.xml.in:183
 msgid "scribbly mode has been moved to the new preference dialog"
