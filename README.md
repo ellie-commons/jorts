@@ -1,4 +1,4 @@
-# ![icon](data/icons/64.svg) Jorts
+# ![icon](data/icons/hicolor/64.svg) Jorts
 
 ## Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS
 
