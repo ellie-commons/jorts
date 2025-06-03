@@ -32,7 +32,6 @@ So the whole settings popover is here, deal with it.
 
 public class Jorts.SettingsPopover : Gtk.Popover {
 
-
     /* THEME SELECTION */
     public string selected;
     public signal void theme_changed (string selected);
@@ -135,8 +134,4 @@ public class Jorts.SettingsPopover : Gtk.Popover {
         var label = _("%d%%").printf (zoom);
         this.zoom_default_button.set_label (label);
     }
-
-
-
-
 }
