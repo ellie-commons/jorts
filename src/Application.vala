@@ -30,6 +30,7 @@ namespace Jorts {
     public class Application : Gtk.Application {
         public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
         public static GLib.Settings gsettings;
+        private static Jorts.PreferenceWindow preferences;
 
         public Application () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
@@ -230,7 +231,6 @@ namespace Jorts {
 
         /*************************************************/
         protected override int command_line (ApplicationCommandLine command_line) {
-            PreferenceWindow preferences;
             string[] args = command_line.get_arguments ();
 
             switch (args[1]) {
@@ -254,6 +254,8 @@ namespace Jorts {
                 case "--preferences":
                     activate ();
                     preferences = new Jorts.PreferenceWindow ();
+                    preferences.show ();
+                    preferences.present ();
                     break;
 
                 default:
