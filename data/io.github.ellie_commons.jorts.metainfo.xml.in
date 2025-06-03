@@ -95,12 +95,18 @@
     <releases>
         <release version="3.2.0" date="2025-06-03">
             <description>
-                <p>3.2.0 Jorts of Resilience and Love</p>
+                <p>🌈 3.2.0 Jorts of Resilience and Love</p>
                 <ul>
                     <li>Add a cool little animation when enabling/disabling actionbar</li>
-                    <li>Pride Edition: A lovely temporary icon by @wpkelso</li>
-                    <li>Fixed blurrinness in high-scaled display due to Flathub BS</li>
+                    <li>Fixed blurrinness in high-scaled display</li>
                     <li>Added high-resolution screenshots</li>
+                    <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
+                    <li>Last minute bugfix, somehow accels did not work when the Preferences were focused</li>
+                    <li>A bit of housekeeping while at it</li>
+                </ul>
+                <p>😎 Guests stars:</p>
+                <ul>
+                    <li>A lovely temporary icon by @wpkelso</li>
                     <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
                 </ul>
             </description>
