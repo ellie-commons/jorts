@@ -100,7 +100,6 @@
                     <li>Add a cool little animation when enabling/disabling actionbar</li>
                     <li>Fixed blurrinness in high-scaled display</li>
                     <li>Added high-resolution screenshots</li>
-                    <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
                     <li>Last minute bugfix, somehow accels did not work when the Preferences were focused</li>
                     <li>A bit of housekeeping while at it</li>
                 </ul>
