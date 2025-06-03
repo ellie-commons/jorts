@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 19:15+0200\n"
+"POT-Creation-Date: 2025-06-03 21:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,15 +53,15 @@ msgstr "可可"
 msgid "Slate"
 msgstr "石板"
 
-#: src/Widgets/SettingsPopover.vala:80
+#: src/Widgets/SettingsPopover.vala:79
 msgid "Zoom out"
 msgstr "放大"
 
-#: src/Widgets/SettingsPopover.vala:86
+#: src/Widgets/SettingsPopover.vala:85
 msgid "Default zoom level"
 msgstr "默认缩放级别"
 
-#: src/Widgets/SettingsPopover.vala:93
+#: src/Widgets/SettingsPopover.vala:92
 msgid "Zoom in"
 msgstr "放大"
 
@@ -69,7 +69,7 @@ msgstr "放大"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:135
+#: src/Widgets/SettingsPopover.vala:134
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -77,62 +77,62 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:66
+#: src/Preferences.vala:70
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Preferences.vala:113
+#: src/Preferences.vala:117
 msgid "Make unfocused notes unreadable"
 msgstr "让没有重点的笔记无法阅读"
 
-#: src/Preferences.vala:115
+#: src/Preferences.vala:119
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:144
 #, fuzzy
 msgid "Hide buttons"
 msgstr "隐藏按钮栏"
 
-#: src/Preferences.vala:142
+#: src/Preferences.vala:146
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
-#: src/Preferences.vala:165
+#: src/Preferences.vala:169
 msgid "Permissions"
 msgstr "权限"
 
-#: src/Preferences.vala:177 src/Preferences.vala:203
+#: src/Preferences.vala:181 src/Preferences.vala:207
 msgid "Allow to start at login"
 msgstr "允许在登录时启动"
 
-#: src/Preferences.vala:179 src/Preferences.vala:205
+#: src/Preferences.vala:183 src/Preferences.vala:209
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
 msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
 
-#: src/Preferences.vala:191
+#: src/Preferences.vala:195
 #, fuzzy
 msgid "Autostart apps"
 msgstr "在 flathub 中自动启动应用程序"
 
-#: src/Preferences.vala:224
+#: src/Preferences.vala:228
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Preferences.vala:230
+#: src/Preferences.vala:234
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Preferences.vala:231
+#: src/Preferences.vala:235
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 19:15+0200\n"
+"POT-Creation-Date: 2025-06-03 21:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,15 +53,15 @@ msgstr "Kakao"
 msgid "Slate"
 msgstr "Schiefer"
 
-#: src/Widgets/SettingsPopover.vala:80
+#: src/Widgets/SettingsPopover.vala:79
 msgid "Zoom out"
 msgstr "Verkleinern"
 
-#: src/Widgets/SettingsPopover.vala:86
+#: src/Widgets/SettingsPopover.vala:85
 msgid "Default zoom level"
 msgstr "Standard-Zoomstufe"
 
-#: src/Widgets/SettingsPopover.vala:93
+#: src/Widgets/SettingsPopover.vala:92
 msgid "Zoom in"
 msgstr "Vergrößern"
 
@@ -69,7 +69,7 @@ msgstr "Vergrößern"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:135
+#: src/Widgets/SettingsPopover.vala:134
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -77,15 +77,15 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:66
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Voreinstellungen für deine Jorts!"
 
-#: src/Preferences.vala:113
+#: src/Preferences.vala:117
 msgid "Make unfocused notes unreadable"
 msgstr "Unscharfe Notizen unlesbar machen"
 
-#: src/Preferences.vala:115
+#: src/Preferences.vala:119
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
@@ -93,11 +93,11 @@ msgstr ""
 "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um "
 "ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:144
 msgid "Hide buttons"
 msgstr "Schaltflächenleiste ausblenden"
 
-#: src/Preferences.vala:142
+#: src/Preferences.vala:146
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -105,15 +105,15 @@ msgstr ""
 "Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die "
 "Tastaturkürzel funktionieren weiterhin (Strg+T)"
 
-#: src/Preferences.vala:165
+#: src/Preferences.vala:169
 msgid "Permissions"
 msgstr "Berechtigungen"
 
-#: src/Preferences.vala:177 src/Preferences.vala:203
+#: src/Preferences.vala:181 src/Preferences.vala:207
 msgid "Allow to start at login"
 msgstr "Starten bei der Anmeldung zulassen"
 
-#: src/Preferences.vala:179 src/Preferences.vala:205
+#: src/Preferences.vala:183 src/Preferences.vala:209
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
@@ -121,21 +121,21 @@ msgstr ""
 "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung "
 "angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
 
-#: src/Preferences.vala:191
+#: src/Preferences.vala:195
 #, fuzzy
 msgid "Autostart apps"
-msgstr "Autostart von Anwendungen in Flathub"
+msgstr "AnwendungenAutostarter"
 
-#: src/Preferences.vala:224
+#: src/Preferences.vala:228
 msgid "Support us!"
 msgstr "Uns unterstützen!"
 
 #. Reset
-#: src/Preferences.vala:230
+#: src/Preferences.vala:234
 msgid "Reset to Default"
 msgstr "Auf Standard zurücksetzen"
 
-#: src/Preferences.vala:231
+#: src/Preferences.vala:235
 msgid "Reset all settings to defaults"
 msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 
@@ -305,12 +305,11 @@ msgstr "Erstaunliche Ascii-Kunst!"
 
 #: src/Services/Utils.vala:137
 msgid "For the barbecue"
-msgstr ""
+msgstr "Für den Grill"
 
 #: src/Services/Utils.vala:138
-#, fuzzy
 msgid "My favourite bands"
-msgstr "Lieblingsspielzeug meiner Hunde"
+msgstr "Meine Lieblingsbands"
 
 #: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
@@ -328,41 +327,8 @@ msgid ""
 msgstr ""
 "Sie haben die Goldene Haftnotiz gefunden!\n"
 "\n"
-"CRAZY BUT TRU: Diese Nachricht erscheint einmal in tausend Malen!\n"
+"UNGLAUBLICH ABER WAHR: Diese Nachricht erscheint einmal in tausend Malen!\n"
 "Niemand wird dir glauben, hehehe ;)\n"
 "\n"
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Hallo, ich bin ein Quadrat"
-
-#~ msgid "Now with more ligma!"
-#~ msgstr "Jetzt mit mehr Ligma!"
-
-#~ msgid "I use arch btw"
-#~ msgstr "Ich benutze übrigens Arch"
-
-#~ msgid "Microsoft support"
-#~ msgstr "Microsoft-Unterstützung"
-
-#~ msgid "Close"
-#~ msgstr "Schließen Sie"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Haftnotiz Farbe"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Wählen Sie eine Farbe für diesen Haftnotizblock"
-
-#~ msgid "Activate scribbly mode"
-#~ msgstr "Aktivieren des Scribbly-Modus"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Inhalt von Haftnotizen immer anzeigen"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Inhalt von unscharfen Haftnotizen ausblenden"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%"

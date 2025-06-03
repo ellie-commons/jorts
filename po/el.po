@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-01 19:15+0200\n"
+"POT-Creation-Date: 2025-06-03 21:21+0200\n"
 "PO-Revision-Date: 2025-06-02 19:29+0300\n"
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
 "noreply.github.com>\n"
@@ -58,15 +58,15 @@ msgstr "Κακάο"
 msgid "Slate"
 msgstr "Γρανίτης"
 
-#: src/Widgets/SettingsPopover.vala:80
+#: src/Widgets/SettingsPopover.vala:79
 msgid "Zoom out"
 msgstr "Σμίκρυνση"
 
-#: src/Widgets/SettingsPopover.vala:86
+#: src/Widgets/SettingsPopover.vala:85
 msgid "Default zoom level"
 msgstr "Προεπιλεγμένο επίπεδο μεγέθυνσης"
 
-#: src/Widgets/SettingsPopover.vala:93
+#: src/Widgets/SettingsPopover.vala:92
 msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
@@ -74,7 +74,7 @@ msgstr "Μεγέθυνση"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:135
+#: src/Widgets/SettingsPopover.vala:134
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
@@ -82,15 +82,15 @@ msgstr "%d%%"
 #. ***********************************************
 #. Headerbar bs
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:66
+#: src/Preferences.vala:70
 msgid "Preferences for your Jorts"
 msgstr "Ρυθμίσεις του Jorts"
 
-#: src/Preferences.vala:113
+#: src/Preferences.vala:117
 msgid "Make unfocused notes unreadable"
 msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
 
-#: src/Preferences.vala:115
+#: src/Preferences.vala:119
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
@@ -98,11 +98,11 @@ msgstr ""
 "Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες "
 "για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
 
-#: src/Preferences.vala:140
+#: src/Preferences.vala:144
 msgid "Hide buttons"
 msgstr "Απόκρυψη κουμπιών"
 
-#: src/Preferences.vala:142
+#: src/Preferences.vala:146
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -110,15 +110,15 @@ msgstr ""
 "Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο σημειώσεων. \n"
 "Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά (Ctrl+T)"
 
-#: src/Preferences.vala:165
+#: src/Preferences.vala:169
 msgid "Permissions"
 msgstr "Άδειες"
 
-#: src/Preferences.vala:177 src/Preferences.vala:203
+#: src/Preferences.vala:181 src/Preferences.vala:207
 msgid "Allow to start at login"
 msgstr "Επιτρέψτε το άνοιγμα κατά την εκκίνηση"
 
-#: src/Preferences.vala:179 src/Preferences.vala:205
+#: src/Preferences.vala:183 src/Preferences.vala:209
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
@@ -126,20 +126,20 @@ msgstr ""
 "Μπορείτε να ρυθμίσετε τις σημειώσεις να εμφανίζονται κατά τη σύνδεση, \n"
 "εάν προσθέσετε το Jorts στην αυτόματη εκκίνηση"
 
-#: src/Preferences.vala:191
+#: src/Preferences.vala:195
 msgid "Autostart apps"
 msgstr "Εφαρμογές Εκκίνησης"
 
-#: src/Preferences.vala:224
+#: src/Preferences.vala:228
 msgid "Support us!"
 msgstr "Υποστηρίξτε μας!"
 
 #. Reset
-#: src/Preferences.vala:230
+#: src/Preferences.vala:234
 msgid "Reset to Default"
 msgstr "Επαναφορά στις προεπιλεγμένες ρυθμίσεις"
 
-#: src/Preferences.vala:231
+#: src/Preferences.vala:235
 msgid "Reset all settings to defaults"
 msgstr "Επαναφορά όλων των ρυθμίσεων στις προεπιλεγμένες"
 
