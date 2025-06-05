@@ -259,11 +259,11 @@ namespace Jorts {
             swoosh.set_transition_type (Gtk.RevealerTransitionType.CROSSFADE);
 
             var handle = new Gtk.WindowHandle () {
-                child = swoosh
+                child = mainbox
             };
 
-            mainbox.append (handle);
-            set_child (mainbox);
+            mainbox.append (swoosh);
+            set_child (handle);
             show ();
 
             /*****************************************/
