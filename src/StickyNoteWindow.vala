@@ -253,16 +253,18 @@ namespace Jorts {
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
             mainbox.append (scrolled);
 
-            var swoosh = new Gtk.Revealer () {
+            // Revealer keep an empty space where the actionbar was. Idk how to fix
+            /*var swoosh = new Gtk.Revealer () {
                 child = actionbar
             };
-            swoosh.set_transition_type (Gtk.RevealerTransitionType.CROSSFADE);
+            swoosh.set_transition_type (Gtk.RevealerTransitionType.CROSSFADE);*/
+
+            mainbox.append (actionbar);
 
             var handle = new Gtk.WindowHandle () {
                 child = mainbox
             };
 
-            mainbox.append (swoosh);
             set_child (handle);
             show ();
 
@@ -279,8 +281,8 @@ namespace Jorts {
             //The application tells us the show/hide bar state has changed!
             Application.gsettings.bind (
                 "hide-bar",
-                swoosh,
-                "reveal_child",
+                actionbar,
+                "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
