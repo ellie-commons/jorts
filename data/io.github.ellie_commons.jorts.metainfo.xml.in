@@ -93,6 +93,11 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.2.2" date="2025-06-05">
+            <description>
+                <p>Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot.</p>
+            </description>
+        </release>
         <release version="3.2.0" date="2025-06-03">
             <description>
                 <p>🌈 3.2.0 Jorts of Resilience and Love</p>
