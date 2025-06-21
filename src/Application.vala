@@ -254,8 +254,7 @@ namespace Jorts {
                 case "--preferences":
                     activate ();
                     preferences = new Jorts.PreferenceWindow (this);
-                    preferences.show ();
-                    preferences.present ();
+                    add_window (preferences);
                     break;
 
                 default:

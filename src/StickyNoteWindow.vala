@@ -98,6 +98,7 @@ namespace Jorts {
 
             this.gtk_settings = Gtk.Settings.get_default ();
 
+
             /*****************************************/
             /*              LOAD NOTE                */
             /*****************************************/
@@ -252,12 +253,6 @@ namespace Jorts {
             // Define the grid 
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
             mainbox.append (scrolled);
-
-            // Revealer keep an empty space where the actionbar was. Idk how to fix
-            /*var swoosh = new Gtk.Revealer () {
-                child = actionbar
-            };
-            swoosh.set_transition_type (Gtk.RevealerTransitionType.CROSSFADE);*/
 
             mainbox.append (actionbar);
 

@@ -251,8 +251,8 @@ namespace Jorts {
             };
 
             this.child = handle;
-            this.show ();
-            this.present ();
+            show ();
+            present ();
         }
 
         private void action_new () {
