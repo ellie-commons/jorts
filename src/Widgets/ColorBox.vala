@@ -15,7 +15,7 @@ public class Jorts.ColorBox : Gtk.Box {
 
     public signal void theme_changed (string selected);
 
-    public string theme;
+    public string theme {get; set;}
 
     private Jorts.ColorPill color_button_blueberry;
     private Jorts.ColorPill color_button_lime;
@@ -27,7 +27,6 @@ public class Jorts.ColorBox : Gtk.Box {
     private Jorts.ColorPill color_button_grape;
     private Jorts.ColorPill color_button_cocoa;
     private Jorts.ColorPill color_button_slate;
-
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
@@ -82,16 +81,10 @@ public class Jorts.ColorBox : Gtk.Box {
             append (color_button_cocoa);
             append (color_button_slate);
 
-        //color_button_blueberry.activate.connect (on_theme_changed);
-
-        //this.notify["theme"].connect (on_theme_changed);
-        on_theme_changed ();
-
     }
 
 
-    public void on_theme_changed () {
-        print ("theme changed!");
+    public void set_toggles (string theme) {
         color_button_blueberry.set_active ((theme == "BLUEBERRY"));
         color_button_lime.set_active ((theme == "LIME"));
         color_button_mint.set_active ((theme == "MINT"));

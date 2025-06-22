@@ -101,7 +101,7 @@ namespace Jorts {
             );
 
             // Rebuild the whole theming
-            this.update_theme (this.theme);
+            this.on_theme_updated (this.theme);
 
             // add required base classes
             this.add_css_class ("rounded");
@@ -197,7 +197,12 @@ namespace Jorts {
 
 
 
-            this.popover = new PopoverView ();
+            this.popover = new PopoverView () {
+                theme = theme,
+                zoom = zoom
+            };
+            popover.color_button_box.set_toggles (theme);
+
             this.set_zoom (data.zoom);
 
 
@@ -257,7 +262,7 @@ namespace Jorts {
 
 
             // The settings popover tells us a new theme has been chosen!
-            this.popover.theme_changed.connect (update_theme);
+            this.popover.theme_changed.connect (on_theme_updated);
 
             // The settings popover tells us a new zoom has been chosen!
             this.popover.zoom_changed.connect (on_zoom_changed);
@@ -418,7 +423,7 @@ namespace Jorts {
 
         // Switches stylesheet
         // First use appropriate stylesheet, Then switch the theme classes
-        private void update_theme (string theme) {
+        private void on_theme_updated (string theme) {
             debug ("Updating theme!");
 
             var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();

@@ -10,8 +10,8 @@
     public Gtk.Button zoom_default_button;
     public Gtk.Button zoom_out_button;
 
-    public string theme;
-    public int zoom;
+    public string theme {get; set;}
+    public int zoom {get; set;}
 
 
         /* THEME SELECTION */
