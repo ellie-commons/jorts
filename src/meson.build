@@ -13,6 +13,7 @@ sources = [
     'Widgets/ColorBox.vala',
     'Widgets/SettingsPopover.vala',
 
+    'Views/PopoverView.vala',
     'Views/PreferencesView.vala',
 
     'Application.vala',

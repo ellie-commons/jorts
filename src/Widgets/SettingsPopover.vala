@@ -1,22 +1,7 @@
 /*
-* Copyright (c) 2017-2024 Lains
-* Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 2 of the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
-*/
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2025 Stella (teamcons.carrd.co) and the Ellie_Commons community (github.com/ellie-commons/)
+ */
 
 /* I just dont wanna clutter my StickyNoteWindow, damn.
 So the whole settings popover is here, deal with it.
@@ -51,75 +36,23 @@ public class Jorts.SettingsPopover : Gtk.Popover {
         this.set_position (Gtk.PositionType.TOP);
         this.set_halign (Gtk.Align.END);
 
-        // Everything is in this
-        var setting_grid = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
-            margin_top = 12,
-            margin_bottom = 12
+        var popview = new Jorts.PopoverView () {
+            theme = theme
         };
 
-        /* 
-            THEME SELECTION
-        */
+        set_child (popview);
 
-        var color_button_box = new Jorts.ColorBox (theme) {
-            margin_start = 12,
-            margin_end = 12
-        };
+        /***************************************************/
+        /*              CONNECTS AND BINDS                 */
+        /***************************************************/
 
-        color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
-
-        /* 
-            ZOOM SELECTION
-        */
-
-
-        zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_OUT,
-                _("Zoom out")
-                )
-            };
-        this.zoom_default_button = new Gtk.Button () {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_DEFAULT,
-                _("Default zoom level")
-                )
-            };
-
-            this.zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_IN,
-                _("Zoom in")
-                )
-            };
+        popview.color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        this.zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
-        this.zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
-        this.zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
+        popview.zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
+        popview.zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
+        popview.zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
 
-        var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
-            homogeneous = true,
-            hexpand = true,
-            margin_start = 12,
-            margin_end = 12
-        };
-
-        font_size_box.append (this.zoom_out_button);
-        font_size_box.append (this.zoom_default_button);
-        font_size_box.append (this.zoom_in_button);
-        font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
-
-        /*
-            APPENDS
-        */
-
-        setting_grid.append (color_button_box);
-        setting_grid.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        setting_grid.append (font_size_box);
-
-        setting_grid.show ();
-        set_child (setting_grid);
 
     }
 
@@ -134,4 +67,8 @@ public class Jorts.SettingsPopover : Gtk.Popover {
         var label = _("%d%%").printf (zoom);
         this.zoom_default_button.set_label (label);
     }
+
+
+
+
 }
