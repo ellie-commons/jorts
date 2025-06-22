@@ -42,6 +42,7 @@ namespace Jorts.Stash {
     // Ok first check if we have a directory to store data
     public void check_if_stash () {
         debug ("do we have a data directory?");
+
         var data_directory  = File.new_for_path (Environment.get_user_data_dir ());	
 		try {
 			if (!data_directory.query_exists ()) {
@@ -87,7 +88,7 @@ namespace Jorts.Stash {
     // If that fails, we go for backup
     // Still failing ? Start anew
     public Gee.ArrayList<NoteData> load_from_stash () {
-        debug("loading from stash...");
+        debug("loading from stash…");
 
         Gee.ArrayList<NoteData> loaded_data = new Gee.ArrayList<NoteData>();
         string data_directory = Environment.get_user_data_dir ();
@@ -129,6 +130,7 @@ namespace Jorts.Stash {
             loaded_data.add (blank_slate);
         }
 
+        debug("I used the Json to destroy the Json");
         return loaded_data;
 
     }
@@ -151,6 +153,8 @@ namespace Jorts.Stash {
             return true;
 
         } else {
+            debug ("We need backup!");
+
             var now = new DateTime.now_utc () ;
             var date_last_backup = new DateTime.from_iso8601 (last_backup, null);
             TimeSpan date_diff = now.difference (date_last_backup);

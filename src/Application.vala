@@ -43,6 +43,7 @@ namespace Jorts {
 
         /*************************************************/
         public override void startup () {
+            debug ("Jorts startup sequence…");
             base.startup ();
 
             // The localization thingamabob
@@ -130,7 +131,8 @@ namespace Jorts {
 
         // Clicked: Either show all windows, or rebuild from storage
         protected override void activate () {
-            
+            debug ("Jorts, activate!");
+
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
             if (get_windows ().length () > 0) {
@@ -144,6 +146,8 @@ namespace Jorts {
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
 	public void create_note (NoteData? data = null) {
+        debug ("Lets do a note");
+
         StickyNoteWindow note;
         if (data != null) {
             note = new StickyNoteWindow (this, data);
@@ -173,6 +177,8 @@ namespace Jorts {
 	}
 
     public void save_to_stash () {
+        debug ("Save the stickies!");
+
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
         Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
@@ -207,6 +213,7 @@ namespace Jorts {
 
     /*************************************************/
     public void init_all_notes () {
+        debug ("Opening all sticky notes now!");
         Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
 
         // Load everything we have

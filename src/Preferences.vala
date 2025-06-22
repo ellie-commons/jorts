@@ -260,6 +260,8 @@ namespace Jorts {
         }
 
         private void on_reset () {
+            debug ("Resetting settings…");
+
             string[] keys = {"scribbly-mode-active", "hide-bar"};
             foreach (var key in keys) {
                 Application.gsettings.reset (key);

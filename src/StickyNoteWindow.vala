@@ -313,6 +313,8 @@ namespace Jorts {
 
         // Add a debounce so we aren't writing the entire buffer every character input
         public void on_buffer_changed () {
+            debug ("Buffer changed!");
+
             if (debounce_timer_id != 0) {
                 GLib.Source.remove (debounce_timer_id);
             }
@@ -326,6 +328,8 @@ namespace Jorts {
 
         // Called when a change in settings is detected
         public void on_scribbly_changed () {
+            debug ("Scribbly mode changed!");
+
             if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
 
                 if (this.is_active == false) {
@@ -343,6 +347,8 @@ namespace Jorts {
 
         // Called when the window is-active property changes
         public void on_focus_changed () {
+            debug ("Focus changed!");
+
             if (this.is_active) {
                 var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
                 gtk_settings.gtk_theme_name = stylesheet;
@@ -361,6 +367,8 @@ namespace Jorts {
 
         // Randomize the button emoji when clicked
         public void on_emoji_popover () {
+            debug ("Emote requested!");
+
             emoji_button.set_icon_name (
                 Jorts.Utils.random_emote (
                     emoji_button.get_icon_name ()
@@ -370,6 +378,7 @@ namespace Jorts {
 
         // Called when the window is-active property changes
         public void on_reduceanimation_changed () {
+            debug ("Reduce animation changed!");
 
             if (gtk_settings.gtk_enable_animations) {
                 this.add_css_class ("animated");
@@ -388,6 +397,8 @@ namespace Jorts {
         // NOTE: We cannot access the buffer if the window is closed, leading to content loss
         // Hence why we need to constantly save the buffer into this.content when changed
         public NoteData packaged () {
+            debug ("Packaging into a noteData…");
+
             var current_title = notetitle.get_text ();
             this.content = this.view.get_content ();
 
@@ -421,6 +432,7 @@ namespace Jorts {
         // Switches stylesheet
         // First use appropriate stylesheet, Then switch the theme classes
         private void update_theme (string theme) {
+            debug ("Updating theme!");
 
             var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
             this.gtk_settings.gtk_theme_name = stylesheet;
@@ -442,6 +454,8 @@ namespace Jorts {
 
         // Called when a signal from the popover says stuff got changed
         public void on_zoom_changed (string zoomkind) {
+            debug ("Zoom changed!");
+
             if (zoomkind == "zoom_in") {
                 this.zoom_in ();
             } else if (zoomkind == "zoom_out") {
@@ -469,7 +483,7 @@ namespace Jorts {
 
         // Switch zoom classes, then reflect in the UI and tell the application
         public void set_zoom (int zoom) {
-
+            debug ("Setting zoom: " + zoom.to_string ());
 
             // Switches the classes that control font size
             this.remove_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
