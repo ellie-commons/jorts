@@ -35,7 +35,7 @@ namespace Jorts {
         private Gtk.Button new_item;
         private Gtk.Button delete_item;
         private Gtk.MenuButton emoji_button;
-        private SettingsPopover popover;
+        private PopoverView popover;
 
         public Jorts.NoteData data;
 
@@ -197,7 +197,7 @@ namespace Jorts {
 
 
 
-            this.popover = new SettingsPopover (theme);
+            this.popover = new PopoverView ();
             this.set_zoom (data.zoom);
 
 
@@ -480,7 +480,7 @@ namespace Jorts {
             this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
             // Reflect the number in the popover
-            this.popover.set_zoomlevel (zoom);
+            this.popover.on_zoom_changed (zoom);
 
             // Keep it for next new notes
             ((Application)this.application).latest_zoom = zoom;

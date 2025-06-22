@@ -3,27 +3,41 @@
  * SPDX-FileCopyrightText: 2025 Stella (teamcons.carrd.co) and the Ellie_Commons community (github.com/ellie-commons/)
  */
 
- public class Jorts.PopoverView : Gtk.Box {
+ public class Jorts.PopoverView : Gtk.Popover {
 
-    public Gtk.Button zoom_out_button;
+    public Jorts.ColorBox color_button_box;
     public Gtk.Button zoom_in_button;
     public Gtk.Button zoom_default_button;
-    public Jorts.ColorBox color_button_box;
-    public string theme {get; set;}
+    public Gtk.Button zoom_out_button;
+
+    public string theme;
+    public int zoom;
+
+
+        /* THEME SELECTION */
+    public string selected;
+    public signal void theme_changed (string selected);
+
+
+    /* FONT SELECTION */
+    public signal void zoom_changed (string zoomkind);
+
+
 
     construct {
 
-        orientation = VERTICAL;
-        spacing = 12;
-        margin_top = 12;
-        margin_bottom = 12;
+        set_position (Gtk.PositionType.TOP);
+        set_halign (Gtk.Align.END);
 
-        color_button_box = new Jorts.ColorBox () {
-            theme = theme,
-            margin_start = 12,
-            margin_end = 12
+        var everything = new Gtk.Box (VERTICAL, 12) {
+            margin_top = 12,
+            margin_bottom = 12
         };
 
+
+        color_button_box = new Jorts.ColorBox ();
+
+        ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
                 Jorts.Constants.ACCELS_ZOOM_OUT,
@@ -53,20 +67,46 @@
             margin_end = 12
         };
 
-        font_size_box.append (this.zoom_out_button);
-        font_size_box.append (this.zoom_default_button);
-        font_size_box.append (this.zoom_in_button);
+        font_size_box.append (zoom_out_button);
+        font_size_box.append (zoom_default_button);
+        font_size_box.append (zoom_in_button);
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
-        /*
-            APPENDS
-        */
+        /* APPENDS */
 
-        append (color_button_box);
-        append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        append (font_size_box);
+        everything.append (color_button_box);
+        everything.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        everything.append (font_size_box);
 
-        show ();
+        set_child (everything);
+
+
+
+        /***************************************************/
+        /*              CONNECTS AND BINDS                 */
+        /***************************************************/
+
+        color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
+
+        // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
+        zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
+        zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
+        zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
+
 
     }
+
+
+    // Called by the StickyNoteWindow when adjusting to new zoomlevel
+    // StickyNoteWindow reacts to a signal by the popover
+    public void on_zoom_changed (int zoom) {
+
+        //TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+        //It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+        var label = _("%d%%").printf (zoom);
+        zoom_default_button.set_label (label);
+    }
+
+
+
 }

@@ -11,7 +11,6 @@ sources = [
     'Widgets/StickyView.vala',
     'Widgets/ColorPill.vala',
     'Widgets/ColorBox.vala',
-    'Widgets/SettingsPopover.vala',
 
     'Views/PopoverView.vala',
     'Views/PreferencesView.vala',
