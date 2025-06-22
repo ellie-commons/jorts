@@ -145,15 +145,8 @@ namespace Jorts {
             notetitle.set_tooltip_text (_("Edit title"));
             notetitle.xalign = 0.5f;
 
-            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
-            notetitle.changed.connect (() => {
-                this.set_title (notetitle.text);
-                on_buffer_changed ();
-            });
-
             headerbar.set_title_widget (notetitle);
             this.set_titlebar (headerbar);
-
 
 
             /**********************************************/
@@ -164,7 +157,7 @@ namespace Jorts {
             // Define the text thingy
             var scrolled = new Gtk.ScrolledWindow ();
             view = new Jorts.StickyView (this.content);
-            view.buffer.changed.connect (on_buffer_changed);
+
             scrolled.set_child (view);
 
 
@@ -200,7 +193,7 @@ namespace Jorts {
             delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
             delete_item.add_css_class ("themedbutton");
 
-            on_scribbly_changed ();
+
 
             var emojichooser_popover = new Gtk.EmojiChooser ();
 
@@ -217,23 +210,11 @@ namespace Jorts {
             emoji_button.popover = emojichooser_popover;
 
 
-            // Display the current zoom level when the popover opens
-            // Else it does not get set
-            emojichooser_popover.show.connect (on_emoji_popover);
 
-            // User chose emoji, add it to buffer
-            emojichooser_popover.emoji_picked.connect ((emoji) => {
-                view.buffer.insert_at_cursor (emoji, -1);
-            });
 
             this.popover = new SettingsPopover (theme);
             this.set_zoom (data.zoom);
 
-            // The settings popover tells us a new theme has been chosen!
-            this.popover.theme_changed.connect (update_theme);
-
-            // The settings popover tells us a new zoom has been chosen!
-            this.popover.zoom_changed.connect (on_zoom_changed);
 
             var app_button = new Gtk.MenuButton () {
                 icon_name = "open-menu-symbolic",
@@ -261,11 +242,38 @@ namespace Jorts {
             };
 
             set_child (handle);
-            show ();
+            on_scribbly_changed ();
+
 
             /*****************************************/
             /*              CONNECTS                 */
             /*****************************************/
+
+            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
+            notetitle.changed.connect (() => {
+                this.set_title (notetitle.text);
+                on_buffer_changed ();
+            });
+
+            //
+            view.buffer.changed.connect (on_buffer_changed);
+
+            // Display the current zoom level when the popover opens
+            // Else it does not get set
+            emojichooser_popover.show.connect (on_emoji_popover);
+
+
+            // User chose emoji, add it to buffer
+            emojichooser_popover.emoji_picked.connect ((emoji) => {
+                view.buffer.insert_at_cursor (emoji, -1);
+            });
+
+
+            // The settings popover tells us a new theme has been chosen!
+            this.popover.theme_changed.connect (update_theme);
+
+            // The settings popover tells us a new zoom has been chosen!
+            this.popover.zoom_changed.connect (on_zoom_changed);
 
             // Use the color theme of this sticky note when focused
             this.notify["is-active"].connect (on_focus_changed);
@@ -281,6 +289,16 @@ namespace Jorts {
                 SettingsBindFlags.INVERT_BOOLEAN);
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
+
+
+
+
+
+            /* LETS GO */
+            show ();
+
+
+
 
         } // END OF MAIN CONSTRUCT
 
