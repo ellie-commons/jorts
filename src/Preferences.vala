@@ -13,8 +13,7 @@ the innerbox has widgets for settings.
 the actionbar has a donate me and a set back to defaults just like elementaryOS
 
 */
-namespace Jorts {
-    public class PreferenceWindow : Gtk.Window {
+public class Jorts.PreferenceWindow : Gtk.Window {
 
         Jorts.PreferencesView prefview;
 
@@ -50,8 +49,9 @@ namespace Jorts {
                 }
             });
 
-            /*************************************************/
-            // Headerbar bs
+            /********************************************/
+            /*              HEADERBAR BS                */
+            /********************************************/
 
             /// TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
             var titlelabel = new Gtk.Label (_("Preferences for your Jorts"));
@@ -79,11 +79,9 @@ namespace Jorts {
 
             this.child = handle;
 
-
             /***************************************************/
             /*              CONNECTS AND BINDS                 */
             /***************************************************/
-
 
             Application.gsettings.bind (
                 "scribbly-mode-active",
@@ -98,11 +96,9 @@ namespace Jorts {
 
             prefview.reset_button.clicked.connect (on_reset);
 
-
             /* LETS GO */
             show ();
             present ();
-
         }
 
         private void action_new () {
@@ -117,7 +113,6 @@ namespace Jorts {
                 Application.gsettings.reset (key);
             }
         }
-    }
 }
 
 
