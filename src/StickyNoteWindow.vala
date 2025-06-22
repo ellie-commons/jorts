@@ -245,9 +245,11 @@ namespace Jorts {
             on_scribbly_changed ();
 
 
-            /*****************************************/
-            /*              CONNECTS                 */
-            /*****************************************/
+            /***************************************************/
+            /*              CONNECTS AND BINDS                 */
+            /***************************************************/
+
+            debug ("Built UI. Lets do connects and binds");
 
             // Save when title has changed. And ALSO set the WM title so multitasking has the new one
             notetitle.changed.connect (() => {

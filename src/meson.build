@@ -7,10 +7,13 @@ sources = [
     'Services/Stash.vala',
     'Services/Themer.vala',
     'Services/Utils.vala',
+
     'Widgets/StickyView.vala',
     'Widgets/ColorPill.vala',
     'Widgets/ColorBox.vala',
     'Widgets/SettingsPopover.vala',
+
+    'Views/PreferencesView.vala',
 
     'Application.vala',
     'Preferences.vala',    
