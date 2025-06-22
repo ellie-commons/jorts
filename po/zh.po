@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 20:07+0200\n"
+"POT-Creation-Date: 2025-06-22 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,15 +53,69 @@ msgstr "可可"
 msgid "Slate"
 msgstr "石板"
 
-#: src/Widgets/SettingsPopover.vala:79
+#: src/Views/PreferencesView.vala:44
+msgid "Make unfocused notes unreadable"
+msgstr "让没有重点的笔记无法阅读"
+
+#: src/Views/PreferencesView.vala:46
+#, fuzzy
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
+
+#: src/Views/PreferencesView.vala:66
+#, fuzzy
+msgid "Hide buttons"
+msgstr "隐藏按钮栏"
+
+#: src/Views/PreferencesView.vala:68
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
+
+#: src/Views/PreferencesView.vala:88
+msgid "Permissions"
+msgstr "权限"
+
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+msgid "Allow to start at login"
+msgstr "允许在登录时启动"
+
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
+
+#: src/Views/PreferencesView.vala:114
+#, fuzzy
+msgid "Autostart apps"
+msgstr "在 flathub 中自动启动应用程序"
+
+#: src/Views/PreferencesView.vala:147
+msgid "Support us!"
+msgstr "支持我们"
+
+#. Reset
+#: src/Views/PreferencesView.vala:153
+msgid "Reset to Default"
+msgstr "重置为默认值"
+
+#: src/Views/PreferencesView.vala:154
+msgid "Reset all settings to defaults"
+msgstr "将所有设置重置为默认值"
+
+#: src/Views/PopoverView.vala:44
 msgid "Zoom out"
 msgstr "放大"
 
-#: src/Widgets/SettingsPopover.vala:85
+#: src/Views/PopoverView.vala:51
 msgid "Default zoom level"
 msgstr "默认缩放级别"
 
-#: src/Widgets/SettingsPopover.vala:92
+#: src/Views/PopoverView.vala:58
 msgid "Zoom in"
 msgstr "放大"
 
@@ -69,90 +123,37 @@ msgstr "放大"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:134
+#: src/Views/PopoverView.vala:106
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
 
-#. ***********************************************
-#. Headerbar bs
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
+#: src/Preferences.vala:57
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "所有便笺的首选项"
 
-#: src/Preferences.vala:117
-msgid "Make unfocused notes unreadable"
-msgstr "让没有重点的笔记无法阅读"
+#: src/StickyNoteWindow.vala:130
+msgid "Click to edit the title"
+msgstr ""
 
-#: src/Preferences.vala:119
-#, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
-
-#: src/Preferences.vala:144
-#, fuzzy
-msgid "Hide buttons"
-msgstr "隐藏按钮栏"
-
-#: src/Preferences.vala:146
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
-
-#: src/Preferences.vala:169
-msgid "Permissions"
-msgstr "权限"
-
-#: src/Preferences.vala:181 src/Preferences.vala:207
-msgid "Allow to start at login"
-msgstr "允许在登录时启动"
-
-#: src/Preferences.vala:183 src/Preferences.vala:209
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
-
-#: src/Preferences.vala:195
-#, fuzzy
-msgid "Autostart apps"
-msgstr "在 flathub 中自动启动应用程序"
-
-#: src/Preferences.vala:228
-msgid "Support us!"
-msgstr "支持我们"
-
-#. Reset
-#: src/Preferences.vala:234
-msgid "Reset to Default"
-msgstr "重置为默认值"
-
-#: src/Preferences.vala:235
-msgid "Reset all settings to defaults"
-msgstr "将所有设置重置为默认值"
-
-#: src/StickyNoteWindow.vala:144
-msgid "Edit title"
-msgstr "编辑标题"
-
-#: src/StickyNoteWindow.vala:184
+#: src/StickyNoteWindow.vala:163
 msgid "New sticky note"
 msgstr "新便笺"
 
-#: src/StickyNoteWindow.vala:196
+#: src/StickyNoteWindow.vala:175
 msgid "Delete sticky note"
 msgstr "删除便笺"
 
-#: src/StickyNoteWindow.vala:212
+#: src/StickyNoteWindow.vala:191
 msgid "Insert emoji"
 msgstr "插入表情符号"
 
-#: src/StickyNoteWindow.vala:241
+#: src/StickyNoteWindow.vala:213
 msgid "Preferences for this sticky note"
 msgstr "该便笺的首选项"
 
@@ -330,6 +331,9 @@ msgstr ""
 "\n"
 "希望我的小应用程序能给您带来无限欢乐\n"
 "祝您愉快！ 🎇\n"
+
+#~ msgid "Edit title"
+#~ msgstr "编辑标题"
 
 #~ msgid "Hi im a square"
 #~ msgstr "你好，我是方形人"

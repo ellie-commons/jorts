@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 20:07+0200\n"
+"POT-Creation-Date: 2025-06-22 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,39 +53,11 @@ msgstr "Kakao"
 msgid "Slate"
 msgstr "Schiefer"
 
-#: src/Widgets/SettingsPopover.vala:79
-msgid "Zoom out"
-msgstr "Verkleinern"
-
-#: src/Widgets/SettingsPopover.vala:85
-msgid "Default zoom level"
-msgstr "Standard-Zoomstufe"
-
-#: src/Widgets/SettingsPopover.vala:92
-msgid "Zoom in"
-msgstr "Vergrößern"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:134
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ***********************************************
-#. Headerbar bs
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
-msgid "Preferences for your Jorts"
-msgstr "Voreinstellungen für deine Jorts!"
-
-#: src/Preferences.vala:117
+#: src/Views/PreferencesView.vala:44
 msgid "Make unfocused notes unreadable"
 msgstr "Unscharfe Notizen unlesbar machen"
 
-#: src/Preferences.vala:119
+#: src/Views/PreferencesView.vala:46
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
@@ -93,11 +65,11 @@ msgstr ""
 "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um "
 "ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
 
-#: src/Preferences.vala:144
+#: src/Views/PreferencesView.vala:66
 msgid "Hide buttons"
 msgstr "Schaltflächenleiste ausblenden"
 
-#: src/Preferences.vala:146
+#: src/Views/PreferencesView.vala:68
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -105,15 +77,15 @@ msgstr ""
 "Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die "
 "Tastaturkürzel funktionieren weiterhin (Strg+T)"
 
-#: src/Preferences.vala:169
+#: src/Views/PreferencesView.vala:88
 msgid "Permissions"
 msgstr "Berechtigungen"
 
-#: src/Preferences.vala:181 src/Preferences.vala:207
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
 msgid "Allow to start at login"
 msgstr "Starten bei der Anmeldung zulassen"
 
-#: src/Preferences.vala:183 src/Preferences.vala:209
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
@@ -121,41 +93,70 @@ msgstr ""
 "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung "
 "angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
 
-#: src/Preferences.vala:195
+#: src/Views/PreferencesView.vala:114
 #, fuzzy
 msgid "Autostart apps"
 msgstr "AnwendungenAutostarter"
 
-#: src/Preferences.vala:228
+#: src/Views/PreferencesView.vala:147
 msgid "Support us!"
 msgstr "Uns unterstützen!"
 
 #. Reset
-#: src/Preferences.vala:234
+#: src/Views/PreferencesView.vala:153
 msgid "Reset to Default"
 msgstr "Auf Standard zurücksetzen"
 
-#: src/Preferences.vala:235
+#: src/Views/PreferencesView.vala:154
 msgid "Reset all settings to defaults"
 msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 
-#: src/StickyNoteWindow.vala:144
-msgid "Edit title"
-msgstr "Titel bearbeiten"
+#: src/Views/PopoverView.vala:44
+msgid "Zoom out"
+msgstr "Verkleinern"
 
-#: src/StickyNoteWindow.vala:184
+#: src/Views/PopoverView.vala:51
+msgid "Default zoom level"
+msgstr "Standard-Zoomstufe"
+
+#: src/Views/PopoverView.vala:58
+msgid "Zoom in"
+msgstr "Vergrößern"
+
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Views/PopoverView.vala:106
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Preferences.vala:57
+msgid "Preferences for your Jorts"
+msgstr "Voreinstellungen für deine Jorts!"
+
+#: src/StickyNoteWindow.vala:130
+msgid "Click to edit the title"
+msgstr ""
+
+#: src/StickyNoteWindow.vala:163
 msgid "New sticky note"
 msgstr "Neue Haftnotiz"
 
-#: src/StickyNoteWindow.vala:196
+#: src/StickyNoteWindow.vala:175
 msgid "Delete sticky note"
 msgstr "Haftnotiz löschen"
 
-#: src/StickyNoteWindow.vala:212
+#: src/StickyNoteWindow.vala:191
 msgid "Insert emoji"
 msgstr "Emoji einfügen"
 
-#: src/StickyNoteWindow.vala:241
+#: src/StickyNoteWindow.vala:213
 msgid "Preferences for this sticky note"
 msgstr "Einstellungen für diesen Haftnotizblock"
 
@@ -332,3 +333,6 @@ msgstr ""
 "\n"
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
+
+#~ msgid "Edit title"
+#~ msgstr "Titel bearbeiten"

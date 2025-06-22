@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 20:07+0200\n"
+"POT-Creation-Date: 2025-06-22 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,40 +53,11 @@ msgstr "Kaakao"
 msgid "Slate"
 msgstr "Liuskekivi"
 
-#: src/Widgets/SettingsPopover.vala:79
-msgid "Zoom out"
-msgstr "Pienennä"
-
-#: src/Widgets/SettingsPopover.vala:85
-msgid "Default zoom level"
-msgstr "Oletusarvoinen zoomaustaso"
-
-#: src/Widgets/SettingsPopover.vala:92
-msgid "Zoom in"
-msgstr "Suurenna"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:134
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ***********************************************
-#. Headerbar bs
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
-#, fuzzy
-msgid "Preferences for your Jorts"
-msgstr "Kaikkien muistilappujen asetukset"
-
-#: src/Preferences.vala:117
+#: src/Views/PreferencesView.vala:44
 msgid "Make unfocused notes unreadable"
 msgstr "Tee keskittymättömistä muistiinpanoista lukukelvottomia"
 
-#: src/Preferences.vala:119
+#: src/Views/PreferencesView.vala:46
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
@@ -96,12 +67,12 @@ msgstr ""
 "lukukelvottomiksi, jotta niiden sisältö voidaan suojata tirkisteleviltä "
 "katseilta."
 
-#: src/Preferences.vala:144
+#: src/Views/PreferencesView.vala:66
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Piilota painikepalkki"
 
-#: src/Preferences.vala:146
+#: src/Views/PreferencesView.vala:68
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -109,15 +80,15 @@ msgstr ""
 "Jos tämä on käytössä, piilottaa muistilappujen alapalkin. Näppäimistön "
 "pikanäppäimet toimivat edelleen (Ctrl+T)."
 
-#: src/Preferences.vala:169
+#: src/Views/PreferencesView.vala:88
 msgid "Permissions"
 msgstr "Luvat"
 
-#: src/Preferences.vala:181 src/Preferences.vala:207
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
 msgid "Allow to start at login"
 msgstr "Salli aloittaa kirjautumisen yhteydessä"
 
-#: src/Preferences.vala:183 src/Preferences.vala:209
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
 msgid ""
 "You can set the sticky notes to appear when you log in by adding Jorts to "
 "autostart"
@@ -125,41 +96,71 @@ msgstr ""
 "Voit asettaa muistilaput näkymään, kun kirjaudut sisään, lisäämällä Jortsin "
 "automaattiseen käynnistykseen."
 
-#: src/Preferences.vala:195
+#: src/Views/PreferencesView.vala:114
 #, fuzzy
 msgid "Autostart apps"
 msgstr "Autostart-sovellukset flathubissa"
 
-#: src/Preferences.vala:228
+#: src/Views/PreferencesView.vala:147
 msgid "Support us!"
 msgstr "Tue meitä!"
 
 #. Reset
-#: src/Preferences.vala:234
+#: src/Views/PreferencesView.vala:153
 msgid "Reset to Default"
 msgstr "Palauta oletusasetuksiin"
 
-#: src/Preferences.vala:235
+#: src/Views/PreferencesView.vala:154
 msgid "Reset all settings to defaults"
 msgstr "Nollaa kaikki asetukset oletusasetuksiin"
 
-#: src/StickyNoteWindow.vala:144
-msgid "Edit title"
-msgstr "Muokkaa otsikkoa"
+#: src/Views/PopoverView.vala:44
+msgid "Zoom out"
+msgstr "Pienennä"
 
-#: src/StickyNoteWindow.vala:184
+#: src/Views/PopoverView.vala:51
+msgid "Default zoom level"
+msgstr "Oletusarvoinen zoomaustaso"
+
+#: src/Views/PopoverView.vala:58
+msgid "Zoom in"
+msgstr "Suurenna"
+
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Views/PopoverView.vala:106
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Preferences.vala:57
+#, fuzzy
+msgid "Preferences for your Jorts"
+msgstr "Kaikkien muistilappujen asetukset"
+
+#: src/StickyNoteWindow.vala:130
+msgid "Click to edit the title"
+msgstr ""
+
+#: src/StickyNoteWindow.vala:163
 msgid "New sticky note"
 msgstr "Uusi muistilappu"
 
-#: src/StickyNoteWindow.vala:196
+#: src/StickyNoteWindow.vala:175
 msgid "Delete sticky note"
 msgstr "Poista muistilappu"
 
-#: src/StickyNoteWindow.vala:212
+#: src/StickyNoteWindow.vala:191
 msgid "Insert emoji"
 msgstr "Lisää hymiö"
 
-#: src/StickyNoteWindow.vala:241
+#: src/StickyNoteWindow.vala:213
 msgid "Preferences for this sticky note"
 msgstr "Tämän muistilapun asetukset"
 
@@ -337,6 +338,9 @@ msgstr ""
 "\n"
 "Toivottavasti pieni sovellukseni tuo sinulle paljon iloa.\n"
 "Hyvää päivänjatkoa!🎇\n"
+
+#~ msgid "Edit title"
+#~ msgstr "Muokkaa otsikkoa"
 
 #~ msgid "Hi im a square"
 #~ msgstr "Hei im neliö"

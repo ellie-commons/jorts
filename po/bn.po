@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 20:07+0200\n"
+"POT-Creation-Date: 2025-06-22 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,15 +58,66 @@ msgstr "কোকো"
 msgid "Slate"
 msgstr "স্লেট"
 
-#: src/Widgets/SettingsPopover.vala:79
+#: src/Views/PreferencesView.vala:44
+msgid "Make unfocused notes unreadable"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:46
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:66
+msgid "Hide buttons"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:68
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:88
+msgid "Permissions"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+msgid "Allow to start at login"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:114
+msgid "Autostart apps"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:147
+msgid "Support us!"
+msgstr ""
+
+#. Reset
+#: src/Views/PreferencesView.vala:153
+msgid "Reset to Default"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:154
+msgid "Reset all settings to defaults"
+msgstr ""
+
+#: src/Views/PopoverView.vala:44
 msgid "Zoom out"
 msgstr "জুম আউট"
 
-#: src/Widgets/SettingsPopover.vala:85
+#: src/Views/PopoverView.vala:51
 msgid "Default zoom level"
 msgstr "ডিফল্ট জুম স্তর"
 
-#: src/Widgets/SettingsPopover.vala:92
+#: src/Views/PopoverView.vala:58
 msgid "Zoom in"
 msgstr "জুম ইন"
 
@@ -74,87 +125,37 @@ msgstr "জুম ইন"
 #. StickyNoteWindow reacts to a signal by the popover
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/SettingsPopover.vala:134
+#: src/Views/PopoverView.vala:106
 #, c-format
 msgid "%d%%"
 msgstr ""
 
-#. ***********************************************
-#. Headerbar bs
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:70
+#: src/Preferences.vala:57
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "এই স্টিকি নোটের জন্য পছন্দগুলি"
 
-#: src/Preferences.vala:117
-msgid "Make unfocused notes unreadable"
+#: src/StickyNoteWindow.vala:130
+msgid "Click to edit the title"
 msgstr ""
 
-#: src/Preferences.vala:119
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-
-#: src/Preferences.vala:144
-msgid "Hide buttons"
-msgstr ""
-
-#: src/Preferences.vala:146
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-
-#: src/Preferences.vala:169
-msgid "Permissions"
-msgstr ""
-
-#: src/Preferences.vala:181 src/Preferences.vala:207
-msgid "Allow to start at login"
-msgstr ""
-
-#: src/Preferences.vala:183 src/Preferences.vala:209
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-
-#: src/Preferences.vala:195
-msgid "Autostart apps"
-msgstr ""
-
-#: src/Preferences.vala:228
-msgid "Support us!"
-msgstr ""
-
-#. Reset
-#: src/Preferences.vala:234
-msgid "Reset to Default"
-msgstr ""
-
-#: src/Preferences.vala:235
-msgid "Reset all settings to defaults"
-msgstr ""
-
-#: src/StickyNoteWindow.vala:144
-msgid "Edit title"
-msgstr "শিরোনাম সম্পাদনা করুন"
-
-#: src/StickyNoteWindow.vala:184
+#: src/StickyNoteWindow.vala:163
 msgid "New sticky note"
 msgstr "নতুন স্টিকি নোট"
 
-#: src/StickyNoteWindow.vala:196
+#: src/StickyNoteWindow.vala:175
 msgid "Delete sticky note"
 msgstr "স্টিকি নোট মুছুন"
 
-#: src/StickyNoteWindow.vala:212
+#: src/StickyNoteWindow.vala:191
 msgid "Insert emoji"
 msgstr "ইমোজি sert োকান"
 
-#: src/StickyNoteWindow.vala:241
+#: src/StickyNoteWindow.vala:213
 msgid "Preferences for this sticky note"
 msgstr "এই স্টিকি নোটের জন্য পছন্দগুলি"
 
@@ -325,6 +326,9 @@ msgid ""
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
 msgstr ""
+
+#~ msgid "Edit title"
+#~ msgstr "শিরোনাম সম্পাদনা করুন"
 
 #~ msgid "Hi im a square"
 #~ msgstr "হাই আমি একটি স্কোয়ার"

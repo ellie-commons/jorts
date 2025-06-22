@@ -127,7 +127,7 @@ namespace Jorts {
             notetitle = new Gtk.EditableLabel (this.title_name);
             notetitle.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
             notetitle.halign = Gtk.Align.CENTER;
-            notetitle.set_tooltip_text (_("Edit title"));
+            notetitle.set_tooltip_text (_("Click to edit the title"));
             notetitle.xalign = 0.5f;
 
             headerbar.set_title_widget (notetitle);
