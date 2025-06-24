@@ -67,7 +67,16 @@ namespace Jorts {
                 gtk_settings.gtk_application_prefer_dark_theme = (
                         granite_settings.prefers_color_scheme == DARK
                     );
-            }); 
+            });
+
+            preferences = new Jorts.PreferenceWindow (this);
+            add_window (preferences);
+
+            preferences.close_request.connect (() => { 
+                preferences.hide ();
+                return true;
+            });
+
 
             // build all the stylesheets
             Jorts.Themer.init_all_themes ();
@@ -135,7 +144,7 @@ namespace Jorts {
 
             // Test Lang
             //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
-            if (get_windows ().length () > 0) {
+            if (open_notes.size > 0) {
                 show_all ();
             } else {
                 this.init_all_notes ();
@@ -182,7 +191,7 @@ namespace Jorts {
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
         Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        print ("Saved " + open_notes.size.to_string () + "!\n");
+        print ("\nSaved " + open_notes.size.to_string () + "!");
     }
 
 
@@ -202,7 +211,7 @@ namespace Jorts {
         }
     }
 
-    public void show_all() {
+    public void show_all () {
         foreach (var window in open_notes) {
             if (window.visible) {
                 window.present ();
@@ -260,8 +269,9 @@ namespace Jorts {
 
                 case "--preferences":
                     activate ();
-                    preferences = new Jorts.PreferenceWindow (this);
-                    add_window (preferences);
+                    print ("\nShowing preferences!");
+                    preferences.show ();
+                    preferences.present ();
                     break;
 
                 default:

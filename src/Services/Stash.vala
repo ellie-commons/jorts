@@ -130,7 +130,7 @@ namespace Jorts.Stash {
             loaded_data.add (blank_slate);
         }
 
-        debug("I used the Json to destroy the Json");
+        debug ("I used the Json to destroy the Json");
         return loaded_data;
 
     }

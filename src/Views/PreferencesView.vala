@@ -79,7 +79,7 @@
                 /*************************************************/
 
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-            print (desktop_environment + " detected!");
+            print ("\nEnvironment: " + desktop_environment + " detected!");
 
             // Show only in Pantheon because others do not have an autostart panel
             if (desktop_environment == "Pantheon") {

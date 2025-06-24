@@ -95,10 +95,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
                 SettingsBindFlags.DEFAULT);
 
             prefview.reset_button.clicked.connect (on_reset);
-
-            /* LETS GO */
-            show ();
-            present ();
         }
 
         private void action_new () {
