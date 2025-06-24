@@ -90,6 +90,8 @@ namespace Jorts {
             this.zoom = data.zoom;
             this.content = data.content;
 
+            title = data.title;
+
             this.set_default_size (
                 data.width,
                 data.height
