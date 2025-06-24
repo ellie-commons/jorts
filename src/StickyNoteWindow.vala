@@ -94,7 +94,6 @@ namespace Jorts {
             this.zoom = data.zoom;
             this.content = data.content;
 
-            this.set_title (this.title_name);
             this.set_default_size (
                 data.width,
                 data.height
@@ -241,25 +240,25 @@ namespace Jorts {
 
             debug ("Built UI. Lets do connects and binds");
 
-            // Save when title has changed. And ALSO set the WM title so multitasking has the new one
-            notetitle.changed.connect (() => {
-                this.set_title (notetitle.text);
-                on_buffer_changed ();
-            });
+            // Reflect title changes in overview
+            notetitle.bind_property (
+                "text",
+                this,
+                "title", GLib.BindingFlags.DEFAULT
+            );
 
-            //
+            // Save when title or text have changed
+            notetitle.changed.connect (on_buffer_changed);
             view.buffer.changed.connect (on_buffer_changed);
 
             // Display the current zoom level when the popover opens
             // Else it does not get set
             emojichooser_popover.show.connect (on_emoji_popover);
 
-
             // User chose emoji, add it to buffer
             emojichooser_popover.emoji_picked.connect ((emoji) => {
                 view.buffer.insert_at_cursor (emoji, -1);
             });
-
 
             // The settings popover tells us a new theme has been chosen!
             this.popover.theme_changed.connect (on_theme_updated);
@@ -282,15 +281,8 @@ namespace Jorts {
 
             gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
-
-
-
-
             /* LETS GO */
             show ();
-
-
-
 
         } // END OF MAIN CONSTRUCT
 
@@ -378,11 +370,6 @@ namespace Jorts {
             } else {
                 this.remove_css_class ("animated");
             }
-        }
-
-        // TITLE IS TITLE
-        public new void set_title (string title) {
-            this.title = title;
         }
 
         // Package the note into a NoteData and pass it back
