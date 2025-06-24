@@ -119,7 +119,7 @@ namespace Jorts.Stash {
 
 
         }
-        print("Loaded" + loaded_data.size.to_string() + "!\n");
+        print("\nLoaded" + loaded_data.size.to_string() + "!");
 
         // If we load nothing: Fallback to a random with blue theme as first
         if (loaded_data.size == 0 ) {
