@@ -1,7 +1,7 @@
 
 #======== SETTINGS ========
 install_data (
-    'io.github.ellie_commons.jorts.gschema.xml',
+    'jorts.gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
     rename: meson.project_name() + '.gschema.xml'
 )
@@ -9,7 +9,7 @@ install_data (
 #======== Internationalization ========
 #Translate and install our .desktop file
 i18n.merge_file(
-    input: 'io.github.ellie_commons.jorts.desktop.in',
+    input: 'jorts.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: meson.project_source_root() / 'po' / 'extra',
     type: 'desktop',
@@ -19,7 +19,7 @@ i18n.merge_file(
 
 #Translate and install our .metainfo file
 i18n.merge_file(
-    input: 'io.github.ellie_commons.jorts.metainfo.xml.in',
+    input: 'jorts.metainfo.xml.in',
     output: meson.project_name() + '.metainfo.xml',
     po_dir: meson.project_source_root() / 'po' / 'extra',
     install: true,
