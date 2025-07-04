@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 16:41+0200\n"
+"POT-Creation-Date: 2025-07-04 18:58+0200\n"
 "PO-Revision-Date: 2025-05-11 19:52+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -10,154 +10,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:40
-msgid "Blueberry"
-msgstr "ブルーベリー"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Lime"
-msgstr "ライム"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Mint"
-msgstr "ミント"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Banana"
-msgstr "バナナ"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Strawberry"
-msgstr "ストロベリー"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Orange"
-msgstr "オレンジ"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Bubblegum"
-msgstr "バブルガム"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Grape"
-msgstr "グレープ"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Cocoa"
-msgstr "ココア"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Slate"
-msgstr "スレート"
-
-#: src/Views/PreferencesView.vala:44
-msgid "Make unfocused notes unreadable"
-msgstr "フォーカスされていない付箋を読めなくする"
-
-#: src/Views/PreferencesView.vala:46
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容"
-"の覗き見防止になります (Ctrl+H)"
-
-#: src/Views/PreferencesView.vala:66
-msgid "Hide buttons"
-msgstr "ボタンを隠す"
-
-#: src/Views/PreferencesView.vala:68
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"有効にすると、付箋のボトムバーが非表示になります。この場合でもキーボード"
-"ショートカットは利用可能です (Ctrl+T)"
-
-#: src/Views/PreferencesView.vala:88
-msgid "Permissions"
-msgstr "アクセス許可"
-
-#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
-msgid "Allow to start at login"
-msgstr "ログイン時に開始できるようにする"
-
-#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-"Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定できま"
-"す"
-
-#: src/Views/PreferencesView.vala:114
-#, fuzzy
-msgid "Autostart apps"
-msgstr "自動起動を管理するアプリを Flathub で検索"
-
-#: src/Views/PreferencesView.vala:147
-msgid "Support us!"
-msgstr "ご支援をお願いいたします!"
-
-#. Reset
-#: src/Views/PreferencesView.vala:153
-msgid "Reset to Default"
-msgstr "デフォルトにリセット"
-
-#: src/Views/PreferencesView.vala:154
-msgid "Reset all settings to defaults"
-msgstr "すべての設定をデフォルトに戻す"
-
-#: src/Views/PopoverView.vala:44
-msgid "Zoom out"
-msgstr "縮小"
-
-#: src/Views/PopoverView.vala:51
-msgid "Default zoom level"
-msgstr "デフォルトのズームレベル"
-
-#: src/Views/PopoverView.vala:58
-msgid "Zoom in"
-msgstr "拡大"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Views/PopoverView.vala:106
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
-msgid "Preferences for your Jorts"
-msgstr "Jorts を着こなす"
-
-#: src/StickyNoteWindow.vala:130
-msgid "Click to edit the title"
-msgstr ""
-
-#: src/StickyNoteWindow.vala:163
-msgid "New sticky note"
-msgstr "新しい付箋"
-
-#: src/StickyNoteWindow.vala:175
-msgid "Delete sticky note"
-msgstr "付箋を削除"
-
-#: src/StickyNoteWindow.vala:191
-msgid "Insert emoji"
-msgstr "絵文字を挿入"
-
-#: src/StickyNoteWindow.vala:213
-msgid "Preferences for this sticky note"
-msgstr "この付箋の設定"
 
 #: src/Services/Utils.vala:101
 msgid "All my very best friends"
@@ -334,6 +186,154 @@ msgstr ""
 "\n"
 "私の小さなアプリがあなたにたくさんの喜びをもたらすことを願っています。\n"
 "素晴らしい一日をお過ごしください。\n"
+
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/ColorBox.vala:40
+msgid "Blueberry"
+msgstr "ブルーベリー"
+
+#: src/Widgets/ColorBox.vala:41
+msgid "Lime"
+msgstr "ライム"
+
+#: src/Widgets/ColorBox.vala:42
+msgid "Mint"
+msgstr "ミント"
+
+#: src/Widgets/ColorBox.vala:43
+msgid "Banana"
+msgstr "バナナ"
+
+#: src/Widgets/ColorBox.vala:44
+msgid "Strawberry"
+msgstr "ストロベリー"
+
+#: src/Widgets/ColorBox.vala:45
+msgid "Orange"
+msgstr "オレンジ"
+
+#: src/Widgets/ColorBox.vala:46
+msgid "Bubblegum"
+msgstr "バブルガム"
+
+#: src/Widgets/ColorBox.vala:47
+msgid "Grape"
+msgstr "グレープ"
+
+#: src/Widgets/ColorBox.vala:48
+msgid "Cocoa"
+msgstr "ココア"
+
+#: src/Widgets/ColorBox.vala:49
+msgid "Slate"
+msgstr "スレート"
+
+#: src/Views/PreferencesView.vala:44
+msgid "Make unfocused notes unreadable"
+msgstr "フォーカスされていない付箋を読めなくする"
+
+#: src/Views/PreferencesView.vala:46
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"有効にすると、フォーカスされていない付箋は走り書きのように読めなくなり、内容"
+"の覗き見防止になります (Ctrl+H)"
+
+#: src/Views/PreferencesView.vala:66
+msgid "Hide buttons"
+msgstr "ボタンを隠す"
+
+#: src/Views/PreferencesView.vala:68
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"有効にすると、付箋のボトムバーが非表示になります。この場合でもキーボード"
+"ショートカットは利用可能です (Ctrl+T)"
+
+#: src/Views/PreferencesView.vala:88
+msgid "Permissions"
+msgstr "アクセス許可"
+
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+msgid "Allow to start at login"
+msgstr "ログイン時に開始できるようにする"
+
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Jortsを自動起動に追加することで、ログイン時に付箋が表示されるように設定できま"
+"す"
+
+#: src/Views/PreferencesView.vala:114
+#, fuzzy
+msgid "Autostart apps"
+msgstr "自動起動を管理するアプリを Flathub で検索"
+
+#: src/Views/PreferencesView.vala:147
+msgid "Support us!"
+msgstr "ご支援をお願いいたします!"
+
+#. Reset
+#: src/Views/PreferencesView.vala:153
+msgid "Reset to Default"
+msgstr "デフォルトにリセット"
+
+#: src/Views/PreferencesView.vala:154
+msgid "Reset all settings to defaults"
+msgstr "すべての設定をデフォルトに戻す"
+
+#: src/Views/PopoverView.vala:44
+msgid "Zoom out"
+msgstr "縮小"
+
+#: src/Views/PopoverView.vala:51
+msgid "Default zoom level"
+msgstr "デフォルトのズームレベル"
+
+#: src/Views/PopoverView.vala:58
+msgid "Zoom in"
+msgstr "拡大"
+
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Views/PopoverView.vala:106
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:57
+msgid "Preferences for your Jorts"
+msgstr "Jorts を着こなす"
+
+#: src/Windows/StickyNoteWindow.vala:127
+msgid "Click to edit the title"
+msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:160
+msgid "New sticky note"
+msgstr "新しい付箋"
+
+#: src/Windows/StickyNoteWindow.vala:172
+msgid "Delete sticky note"
+msgstr "付箋を削除"
+
+#: src/Windows/StickyNoteWindow.vala:188
+msgid "Insert emoji"
+msgstr "絵文字を挿入"
+
+#: src/Windows/StickyNoteWindow.vala:210
+msgid "Preferences for this sticky note"
+msgstr "この付箋の設定"
 
 #~ msgid "Edit title"
 #~ msgstr "タイトルを編集"

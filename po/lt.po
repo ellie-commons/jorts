@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 16:41+0200\n"
+"POT-Creation-Date: 2025-07-04 18:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,155 +11,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:40
-msgid "Blueberry"
-msgstr "Mėlynių"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Lime"
-msgstr "Lime"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Mint"
-msgstr "Mėtos"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Banana"
-msgstr "Bananai"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Strawberry"
-msgstr "Braškių"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Orange"
-msgstr "Oranžinė"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Bubblegum"
-msgstr "Bubblegum"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Grape"
-msgstr "Vynuogės"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Cocoa"
-msgstr "Kakava"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Slate"
-msgstr "Šiferis"
-
-#: src/Views/PreferencesView.vala:44
-msgid "Make unfocused notes unreadable"
-msgstr "Nesufokusuotas pastabas paverskite neįskaitomomis"
-
-#: src/Views/PreferencesView.vala:46
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Jei įjungta, nesufokusuoti lipnūs užrašai tampa neįskaitomi, kad jų turinys "
-"būtų apsaugotas nuo žvilgsnių (Ctrl+H)."
-
-#: src/Views/PreferencesView.vala:66
-#, fuzzy
-msgid "Hide buttons"
-msgstr "Paslėpti mygtukų juostą"
-
-#: src/Views/PreferencesView.vala:68
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Jei įjungta, paslepiama lipnių užrašų apatinė juosta. Klaviatūros spartieji "
-"klavišai vis tiek veiks (Ctrl+T)"
-
-#: src/Views/PreferencesView.vala:88
-msgid "Permissions"
-msgstr "Leidimai"
-
-#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
-msgid "Allow to start at login"
-msgstr "Leisti paleisti prisijungus"
-
-#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-"Galite nustatyti, kad lipnūs užrašai būtų rodomi, kai prisijungiate, "
-"pridėdami \"Jorts\" į automatinio paleidimo"
-
-#: src/Views/PreferencesView.vala:114
-#, fuzzy
-msgid "Autostart apps"
-msgstr "Automatinis programų paleidimas programoje flathub"
-
-#: src/Views/PreferencesView.vala:147
-msgid "Support us!"
-msgstr "Palaikykite mus!"
-
-#. Reset
-#: src/Views/PreferencesView.vala:153
-msgid "Reset to Default"
-msgstr "Iš naujo nustatyti numatytąjį nustatymą"
-
-#: src/Views/PreferencesView.vala:154
-msgid "Reset all settings to defaults"
-msgstr "Iš naujo nustatyti visus numatytuosius nustatymus"
-
-#: src/Views/PopoverView.vala:44
-msgid "Zoom out"
-msgstr "Padidinti mastelį"
-
-#: src/Views/PopoverView.vala:51
-msgid "Default zoom level"
-msgstr "Numatytasis priartinimo lygis"
-
-#: src/Views/PopoverView.vala:58
-msgid "Zoom in"
-msgstr "Priartinti vaizdą"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Views/PopoverView.vala:106
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
-msgid "Preferences for your Jorts"
-msgstr "Jūsų šortų pageidavimai"
-
-#: src/StickyNoteWindow.vala:130
-msgid "Click to edit the title"
-msgstr ""
-
-#: src/StickyNoteWindow.vala:163
-msgid "New sticky note"
-msgstr "Naujas lipnus lapelis"
-
-#: src/StickyNoteWindow.vala:175
-msgid "Delete sticky note"
-msgstr "Ištrinti lipnią pastabą"
-
-#: src/StickyNoteWindow.vala:191
-msgid "Insert emoji"
-msgstr "Įterpti šypsenėlę"
-
-#: src/StickyNoteWindow.vala:213
-msgid "Preferences for this sticky note"
-msgstr "Šio lipnaus lapelio nuostatos"
 
 #: src/Services/Utils.vala:101
 msgid "All my very best friends"
@@ -335,6 +186,155 @@ msgstr ""
 "\n"
 "Tikiuosi, kad mano maža programėlė suteiks jums daug džiaugsmo\n"
 "Geros dienos!🎇\n"
+
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/ColorBox.vala:40
+msgid "Blueberry"
+msgstr "Mėlynių"
+
+#: src/Widgets/ColorBox.vala:41
+msgid "Lime"
+msgstr "Lime"
+
+#: src/Widgets/ColorBox.vala:42
+msgid "Mint"
+msgstr "Mėtos"
+
+#: src/Widgets/ColorBox.vala:43
+msgid "Banana"
+msgstr "Bananai"
+
+#: src/Widgets/ColorBox.vala:44
+msgid "Strawberry"
+msgstr "Braškių"
+
+#: src/Widgets/ColorBox.vala:45
+msgid "Orange"
+msgstr "Oranžinė"
+
+#: src/Widgets/ColorBox.vala:46
+msgid "Bubblegum"
+msgstr "Bubblegum"
+
+#: src/Widgets/ColorBox.vala:47
+msgid "Grape"
+msgstr "Vynuogės"
+
+#: src/Widgets/ColorBox.vala:48
+msgid "Cocoa"
+msgstr "Kakava"
+
+#: src/Widgets/ColorBox.vala:49
+msgid "Slate"
+msgstr "Šiferis"
+
+#: src/Views/PreferencesView.vala:44
+msgid "Make unfocused notes unreadable"
+msgstr "Nesufokusuotas pastabas paverskite neįskaitomomis"
+
+#: src/Views/PreferencesView.vala:46
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Jei įjungta, nesufokusuoti lipnūs užrašai tampa neįskaitomi, kad jų turinys "
+"būtų apsaugotas nuo žvilgsnių (Ctrl+H)."
+
+#: src/Views/PreferencesView.vala:66
+#, fuzzy
+msgid "Hide buttons"
+msgstr "Paslėpti mygtukų juostą"
+
+#: src/Views/PreferencesView.vala:68
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Jei įjungta, paslepiama lipnių užrašų apatinė juosta. Klaviatūros spartieji "
+"klavišai vis tiek veiks (Ctrl+T)"
+
+#: src/Views/PreferencesView.vala:88
+msgid "Permissions"
+msgstr "Leidimai"
+
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+msgid "Allow to start at login"
+msgstr "Leisti paleisti prisijungus"
+
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Galite nustatyti, kad lipnūs užrašai būtų rodomi, kai prisijungiate, "
+"pridėdami \"Jorts\" į automatinio paleidimo"
+
+#: src/Views/PreferencesView.vala:114
+#, fuzzy
+msgid "Autostart apps"
+msgstr "Automatinis programų paleidimas programoje flathub"
+
+#: src/Views/PreferencesView.vala:147
+msgid "Support us!"
+msgstr "Palaikykite mus!"
+
+#. Reset
+#: src/Views/PreferencesView.vala:153
+msgid "Reset to Default"
+msgstr "Iš naujo nustatyti numatytąjį nustatymą"
+
+#: src/Views/PreferencesView.vala:154
+msgid "Reset all settings to defaults"
+msgstr "Iš naujo nustatyti visus numatytuosius nustatymus"
+
+#: src/Views/PopoverView.vala:44
+msgid "Zoom out"
+msgstr "Padidinti mastelį"
+
+#: src/Views/PopoverView.vala:51
+msgid "Default zoom level"
+msgstr "Numatytasis priartinimo lygis"
+
+#: src/Views/PopoverView.vala:58
+msgid "Zoom in"
+msgstr "Priartinti vaizdą"
+
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Views/PopoverView.vala:106
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:57
+msgid "Preferences for your Jorts"
+msgstr "Jūsų šortų pageidavimai"
+
+#: src/Windows/StickyNoteWindow.vala:127
+msgid "Click to edit the title"
+msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:160
+msgid "New sticky note"
+msgstr "Naujas lipnus lapelis"
+
+#: src/Windows/StickyNoteWindow.vala:172
+msgid "Delete sticky note"
+msgstr "Ištrinti lipnią pastabą"
+
+#: src/Windows/StickyNoteWindow.vala:188
+msgid "Insert emoji"
+msgstr "Įterpti šypsenėlę"
+
+#: src/Windows/StickyNoteWindow.vala:210
+msgid "Preferences for this sticky note"
+msgstr "Šio lipnaus lapelio nuostatos"
 
 #~ msgid "Edit title"
 #~ msgstr "Redaguoti pavadinimą"

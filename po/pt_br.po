@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-22 16:41+0200\n"
+"POT-Creation-Date: 2025-07-04 18:58+0200\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,157 +11,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:40
-msgid "Blueberry"
-msgstr "Mirtilo"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Lime"
-msgstr "Lima"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Mint"
-msgstr "Hortelã"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Banana"
-msgstr "Banana"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Strawberry"
-msgstr "Morango"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Orange"
-msgstr "Laranja"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Bubblegum"
-msgstr "Chiclete"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Grape"
-msgstr "Uva"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Cocoa"
-msgstr "Cacau"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Slate"
-msgstr "Ardósia"
-
-#: src/Views/PreferencesView.vala:44
-msgid "Make unfocused notes unreadable"
-msgstr "Tornar ilegíveis as anotações sem foco"
-
-#: src/Views/PreferencesView.vala:46
-#, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Se ativadas, as notas adesivas sem foco se tornam ilegíveis para proteger "
-"seu conteúdo de olhares curiosos"
-
-#: src/Views/PreferencesView.vala:66
-#, fuzzy
-msgid "Hide buttons"
-msgstr "Ocultar a barra de botões"
-
-#: src/Views/PreferencesView.vala:68
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Se ativado, oculta a barra inferior das notas adesivas. Os atalhos de "
-"teclado continuarão funcionando (Ctrl+T)"
-
-#: src/Views/PreferencesView.vala:88
-msgid "Permissions"
-msgstr "Permissões"
-
-#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
-msgid "Allow to start at login"
-msgstr "Permitir iniciar no login"
-
-#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-"Você pode definir que as notas adesivas apareçam quando você fizer login, "
-"adicionando o Jorts à inicialização automática"
-
-#: src/Views/PreferencesView.vala:114
-#, fuzzy
-msgid "Autostart apps"
-msgstr "Inicialização automática de aplicativos no flathub"
-
-#: src/Views/PreferencesView.vala:147
-msgid "Support us!"
-msgstr "Apoie-nos!"
-
-#. Reset
-#: src/Views/PreferencesView.vala:153
-msgid "Reset to Default"
-msgstr "Redefinir para o padrão"
-
-#: src/Views/PreferencesView.vala:154
-msgid "Reset all settings to defaults"
-msgstr "Redefinir todas as configurações para os padrões"
-
-#: src/Views/PopoverView.vala:44
-msgid "Zoom out"
-msgstr "Reduzir o zoom"
-
-#: src/Views/PopoverView.vala:51
-msgid "Default zoom level"
-msgstr "Nível de zoom padrão"
-
-#: src/Views/PopoverView.vala:58
-msgid "Zoom in"
-msgstr "Aumentar o zoom"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Views/PopoverView.vala:106
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Preferences.vala:57
-#, fuzzy
-msgid "Preferences for your Jorts"
-msgstr "Preferências para esta nota pegajosa"
-
-#: src/StickyNoteWindow.vala:130
-msgid "Click to edit the title"
-msgstr ""
-
-#: src/StickyNoteWindow.vala:163
-msgid "New sticky note"
-msgstr "Nova nota adesiva"
-
-#: src/StickyNoteWindow.vala:175
-msgid "Delete sticky note"
-msgstr "Excluir nota adesiva"
-
-#: src/StickyNoteWindow.vala:191
-msgid "Insert emoji"
-msgstr "Insira emoji"
-
-#: src/StickyNoteWindow.vala:213
-msgid "Preferences for this sticky note"
-msgstr "Preferências para esta nota pegajosa"
 
 #: src/Services/Utils.vala:101
 msgid "All my very best friends"
@@ -337,6 +186,157 @@ msgstr ""
 "\n"
 "Espero que meu pequeno aplicativo lhe traga muita alegria\n"
 "Tenha um ótimo dia!\n"
+
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/ColorBox.vala:40
+msgid "Blueberry"
+msgstr "Mirtilo"
+
+#: src/Widgets/ColorBox.vala:41
+msgid "Lime"
+msgstr "Lima"
+
+#: src/Widgets/ColorBox.vala:42
+msgid "Mint"
+msgstr "Hortelã"
+
+#: src/Widgets/ColorBox.vala:43
+msgid "Banana"
+msgstr "Banana"
+
+#: src/Widgets/ColorBox.vala:44
+msgid "Strawberry"
+msgstr "Morango"
+
+#: src/Widgets/ColorBox.vala:45
+msgid "Orange"
+msgstr "Laranja"
+
+#: src/Widgets/ColorBox.vala:46
+msgid "Bubblegum"
+msgstr "Chiclete"
+
+#: src/Widgets/ColorBox.vala:47
+msgid "Grape"
+msgstr "Uva"
+
+#: src/Widgets/ColorBox.vala:48
+msgid "Cocoa"
+msgstr "Cacau"
+
+#: src/Widgets/ColorBox.vala:49
+msgid "Slate"
+msgstr "Ardósia"
+
+#: src/Views/PreferencesView.vala:44
+msgid "Make unfocused notes unreadable"
+msgstr "Tornar ilegíveis as anotações sem foco"
+
+#: src/Views/PreferencesView.vala:46
+#, fuzzy
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Se ativadas, as notas adesivas sem foco se tornam ilegíveis para proteger "
+"seu conteúdo de olhares curiosos"
+
+#: src/Views/PreferencesView.vala:66
+#, fuzzy
+msgid "Hide buttons"
+msgstr "Ocultar a barra de botões"
+
+#: src/Views/PreferencesView.vala:68
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Se ativado, oculta a barra inferior das notas adesivas. Os atalhos de "
+"teclado continuarão funcionando (Ctrl+T)"
+
+#: src/Views/PreferencesView.vala:88
+msgid "Permissions"
+msgstr "Permissões"
+
+#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+msgid "Allow to start at login"
+msgstr "Permitir iniciar no login"
+
+#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
+msgid ""
+"You can set the sticky notes to appear when you log in by adding Jorts to "
+"autostart"
+msgstr ""
+"Você pode definir que as notas adesivas apareçam quando você fizer login, "
+"adicionando o Jorts à inicialização automática"
+
+#: src/Views/PreferencesView.vala:114
+#, fuzzy
+msgid "Autostart apps"
+msgstr "Inicialização automática de aplicativos no flathub"
+
+#: src/Views/PreferencesView.vala:147
+msgid "Support us!"
+msgstr "Apoie-nos!"
+
+#. Reset
+#: src/Views/PreferencesView.vala:153
+msgid "Reset to Default"
+msgstr "Redefinir para o padrão"
+
+#: src/Views/PreferencesView.vala:154
+msgid "Reset all settings to defaults"
+msgstr "Redefinir todas as configurações para os padrões"
+
+#: src/Views/PopoverView.vala:44
+msgid "Zoom out"
+msgstr "Reduzir o zoom"
+
+#: src/Views/PopoverView.vala:51
+msgid "Default zoom level"
+msgstr "Nível de zoom padrão"
+
+#: src/Views/PopoverView.vala:58
+msgid "Zoom in"
+msgstr "Aumentar o zoom"
+
+#. Called by the StickyNoteWindow when adjusting to new zoomlevel
+#. StickyNoteWindow reacts to a signal by the popover
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Views/PopoverView.vala:106
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:57
+#, fuzzy
+msgid "Preferences for your Jorts"
+msgstr "Preferências para esta nota pegajosa"
+
+#: src/Windows/StickyNoteWindow.vala:127
+msgid "Click to edit the title"
+msgstr ""
+
+#: src/Windows/StickyNoteWindow.vala:160
+msgid "New sticky note"
+msgstr "Nova nota adesiva"
+
+#: src/Windows/StickyNoteWindow.vala:172
+msgid "Delete sticky note"
+msgstr "Excluir nota adesiva"
+
+#: src/Windows/StickyNoteWindow.vala:188
+msgid "Insert emoji"
+msgstr "Insira emoji"
+
+#: src/Windows/StickyNoteWindow.vala:210
+msgid "Preferences for this sticky note"
+msgstr "Preferências para esta nota pegajosa"
 
 #~ msgid "Edit title"
 #~ msgstr "Editar título"
