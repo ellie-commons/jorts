@@ -50,8 +50,6 @@ public class Jorts.StickyView : Granite.HyperTextView {
         }
 
         public string get_content () {
-                Gtk.TextIter start,end;
-                this.buffer.get_bounds (out start, out end);
-                return this.buffer.get_text (start, end, true);
+                return this.buffer.text;
         }
 }
