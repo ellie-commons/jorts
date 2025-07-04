@@ -34,19 +34,19 @@ icon_sizes = ['16', '24', '32', '48', '64', '128']
 
 foreach i : icon_sizes
     install_data(
-        'icons' / 'pride' / 'hicolor' / i + '.png',
+        'icons' / 'hicolor' / i + '.png',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
         rename: meson.project_name() + '.png'
     )
     install_data(
-        'icons' / 'pride' / 'hicolor@2' / i + '@2.png',
+        'icons' / 'hicolor@2' / i + '@2.png',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
         rename: meson.project_name() + '.png'
     )
 endforeach
 
 install_data(
-    'icons' / 'pride' / 'scalable.svg',
+    'icons' / 'scalable.svg',
     install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
     rename: meson.project_name() + '.svg'
 )
