@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 19:18+0200\n"
+"POT-Creation-Date: 2025-07-04 20:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,112 +168,129 @@ msgid "The preferences dialog in dark mode"
 msgstr "Діалогове вікно налаштувань у темному режимі"
 
 #: data/jorts.metainfo.xml.in:98
+msgid "3.3.0 Star Platinum Jorts"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:100
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now"
 msgstr ""
 
+#: data/jorts.metainfo.xml.in:101
+msgid "Added more random titles"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Buttons for add/remove autostart"
+msgstr ""
+
 #: data/jorts.metainfo.xml.in:103
+#, fuzzy
+msgid "Under the hood is a bit cleaner now"
+msgstr "Під капотом зміни тут і там для більш чистого коду"
+
+#: data/jorts.metainfo.xml.in:109
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:114
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:116
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Додайте класну анімацію під час увімкнення/вимкнення панелі дій"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:117
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "Виправлено розмитість на високомасштабованому дисплеї через Flathub BS"
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:118
 msgid "Added high-resolution screenshots"
 msgstr "Додано скріншоти з високою роздільною здатністю"
 
-#: data/jorts.metainfo.xml.in:113
+#: data/jorts.metainfo.xml.in:119
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:114
+#: data/jorts.metainfo.xml.in:120
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:122
 msgid "😎 Guests stars:"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:118
+#: data/jorts.metainfo.xml.in:124
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride Edition: Чудова тимчасова іконка від @wpkelso"
 
-#: data/jorts.metainfo.xml.in:119
+#: data/jorts.metainfo.xml.in:125
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:125
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "3.1.3 Jorts of fire and lava"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:127
+#: data/jorts.metainfo.xml.in:133
 msgid "Save memory and disk writes by adding a proper debounce"
 msgstr "Заощаджуйте пам'ять і записи на диск, додаючи правильний дебаунд"
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:134
 #, fuzzy
 msgid "Updated IT translations thanks to @albanobattistella!"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Updated JA translations thanks to @RyoNakano!"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:141
 msgid "3.1.2 Amendments for flathub"
 msgstr "3.1.2 Зміни для flathub"
 
-#: data/jorts.metainfo.xml.in:137
+#: data/jorts.metainfo.xml.in:143
 msgid "Nothing interesting here"
 msgstr "Тут немає нічого цікавого"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:149
 msgid "3.1.1 Woops"
 msgstr "3.1.1 Вупси"
 
-#: data/jorts.metainfo.xml.in:145
+#: data/jorts.metainfo.xml.in:151
 msgid "Minor screenshot amendments"
 msgstr "Незначні зміни скріншотів"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:157
 msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Пісенні та танцювальні джорти"
 
-#: data/jorts.metainfo.xml.in:153
+#: data/jorts.metainfo.xml.in:159
 msgid "Flathub version, with a lot of help from @RyoNakano"
 msgstr "Версія для Flathub, з великою допомогою від @RyoNakano"
 
-#: data/jorts.metainfo.xml.in:159
+#: data/jorts.metainfo.xml.in:165
 #, fuzzy
 msgid "3.0.0 Jorts of Thunder"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:161
+#: data/jorts.metainfo.xml.in:167
 msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Чудова нова ікона завдяки @wpkelso"
 
-#: data/jorts.metainfo.xml.in:162
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Between this and the GTK4 port, there is very little left from old "
 "Notejot... We could say it is a v3"
@@ -281,7 +298,7 @@ msgstr ""
 "Між ним і портом GTK4 від старого Notejot залишилося дуже мало... Можна "
 "сказати, що це v3"
 
-#: data/jorts.metainfo.xml.in:163
+#: data/jorts.metainfo.xml.in:169
 msgid ""
 "Make the app more universal: Other DEs do not keep window dimensions, so "
 "reimplement save and restore"
@@ -289,22 +306,22 @@ msgstr ""
 "Зробити додаток більш універсальним: Інші DE не зберігають розміри вікон, "
 "тому переробіть збереження та відновлення"
 
-#: data/jorts.metainfo.xml.in:169
+#: data/jorts.metainfo.xml.in:175
 #, fuzzy
 msgid "Updated RU translations thanks to @camellan!"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:174
+#: data/jorts.metainfo.xml.in:180
 #, fuzzy
 msgid "Updated screenshots"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:179
+#: data/jorts.metainfo.xml.in:185
 #, fuzzy
 msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:181
+#: data/jorts.metainfo.xml.in:187
 msgid ""
 "Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
 "feel more at home now"
@@ -312,49 +329,49 @@ msgstr ""
 "Завдяки RyoNakano, що переробляє японські переклади, носії японської мови "
 "тепер почуватимуться як вдома"
 
-#: data/jorts.metainfo.xml.in:182
+#: data/jorts.metainfo.xml.in:188
 msgid "Respect reduce animations settings"
 msgstr "Поважайте налаштування зменшення анімації"
 
-#: data/jorts.metainfo.xml.in:183
+#: data/jorts.metainfo.xml.in:189
 #, fuzzy
 msgid "Scribble mode exclusively in the preferences now"
 msgstr "режим каракулів перенесено до нового діалогового вікна налаштувань"
 
-#: data/jorts.metainfo.xml.in:184
+#: data/jorts.metainfo.xml.in:190
 msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
 msgstr "Додайте налаштування: тепер ви можете приховати нижню панель! (Ctrl+t)"
 
-#: data/jorts.metainfo.xml.in:185
+#: data/jorts.metainfo.xml.in:191
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
 msgstr "Виправлено рух елементів при наведенні або виборі заголовка нотатки"
 
-#: data/jorts.metainfo.xml.in:186
+#: data/jorts.metainfo.xml.in:192
 msgid ""
 "Bugfix: New and delete accels were not working oops sorry it's fixed now"
 msgstr ""
 "Виправлено: не працювали прискорення створення та видалення, ой, вибачте, "
 "вже виправлено"
 
-#: data/jorts.metainfo.xml.in:187
+#: data/jorts.metainfo.xml.in:193
 msgid "Bugfix where random components skipped the last possible choice"
 msgstr ""
 "Виправлено помилку, коли випадкові компоненти пропускали останній можливий "
 "вибір"
 
-#: data/jorts.metainfo.xml.in:188
+#: data/jorts.metainfo.xml.in:194
 msgid "Bugfix: shortcut for emotes did not show up properly"
 msgstr "Виправлено: ярлик для емоцій не відображався належним чином"
 
-#: data/jorts.metainfo.xml.in:189
+#: data/jorts.metainfo.xml.in:195
 msgid "Lil easter egg"
 msgstr "Маленька писанка"
 
-#: data/jorts.metainfo.xml.in:195
+#: data/jorts.metainfo.xml.in:201
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 Внутрішні штани"
 
-#: data/jorts.metainfo.xml.in:197
+#: data/jorts.metainfo.xml.in:203
 msgid ""
 "New feature: Preferences dialog! Right-click on the app icon to see the "
 "option"
@@ -362,11 +379,11 @@ msgstr ""
 "Нова функція: Діалогове вікно налаштувань! Клацніть правою кнопкою миші на "
 "іконці програми, щоб побачити опцію"
 
-#: data/jorts.metainfo.xml.in:198
+#: data/jorts.metainfo.xml.in:204
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "режим каракулів перенесено до нового діалогового вікна налаштувань"
 
-#: data/jorts.metainfo.xml.in:199
+#: data/jorts.metainfo.xml.in:205
 #, fuzzy
 msgid ""
 "For translators: Translations have been separated in 2: One for the UI one "
@@ -375,33 +392,33 @@ msgstr ""
 "Покращення для перекладачів: Переклади розділено на 2: один для інтерфейсу, "
 "інший для додаткового контенту"
 
-#: data/jorts.metainfo.xml.in:200
+#: data/jorts.metainfo.xml.in:206
 msgid "Comfort: Easier to grab and drag stickies"
 msgstr "Зручність: Легше захоплювати та перетягувати наклейки"
 
-#: data/jorts.metainfo.xml.in:201
+#: data/jorts.metainfo.xml.in:207
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr "Виправлено: скріншоти в апцентрі були безладними аааа"
 
-#: data/jorts.metainfo.xml.in:207
+#: data/jorts.metainfo.xml.in:213
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/jorts.metainfo.xml.in:212
+#: data/jorts.metainfo.xml.in:218
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:214 data/jorts.metainfo.xml.in:229
+#: data/jorts.metainfo.xml.in:220 data/jorts.metainfo.xml.in:235
 msgid "Better translation coverage"
 msgstr "Краще охоплення перекладу"
 
-#: data/jorts.metainfo.xml.in:215
+#: data/jorts.metainfo.xml.in:221
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr ""
 "Нова функція: режим каракулів! Приховуйте вміст стікерів, коли ви не "
 "сфокусовані"
 
-#: data/jorts.metainfo.xml.in:216
+#: data/jorts.metainfo.xml.in:222
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
@@ -409,13 +426,13 @@ msgstr ""
 "Нова функція: Кнопка вибору емодзі! Я знаю, що вона є на правій кнопці миші, "
 "але кнопки більш доступні!"
 
-#: data/jorts.metainfo.xml.in:217
+#: data/jorts.metainfo.xml.in:223
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr ""
 "Кнопка на панелі інструментів відображає випадковий смайл при кожному "
 "натисканні!"
 
-#: data/jorts.metainfo.xml.in:218
+#: data/jorts.metainfo.xml.in:224
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
@@ -423,78 +440,78 @@ msgstr ""
 "Нова функція: Jorts робить щомісячне резервне копіювання. Якщо виникне якась "
 "проблема, ви зможете відновити дані!"
 
-#: data/jorts.metainfo.xml.in:219
+#: data/jorts.metainfo.xml.in:225
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr ""
 "Якщо основне сховище пошкоджено, Jorts намагається завантажитися з резервної "
 "копії"
 
-#: data/jorts.metainfo.xml.in:220
+#: data/jorts.metainfo.xml.in:226
 msgid "Some new fun/cute default titles"
 msgstr "Кілька нових веселих/милих назв за замовчуванням"
 
-#: data/jorts.metainfo.xml.in:221
+#: data/jorts.metainfo.xml.in:227
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Під капотом зміни тут і там для більш чистого коду"
 
-#: data/jorts.metainfo.xml.in:227
+#: data/jorts.metainfo.xml.in:233
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 Нерозбірні джорти"
 
-#: data/jorts.metainfo.xml.in:230
+#: data/jorts.metainfo.xml.in:236
 msgid "Add relief to actionbar buttons"
 msgstr "Додайте рельєф до кнопок панелі дій"
 
-#: data/jorts.metainfo.xml.in:231
+#: data/jorts.metainfo.xml.in:237
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr ""
 "Виправлення: крайній випадок, коли тема або масштабування не зберігалися "
 "належним чином"
 
-#: data/jorts.metainfo.xml.in:232
+#: data/jorts.metainfo.xml.in:238
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr ""
 "Виправлення: неправильно встановлювався заголовок у багатозадачному режимі"
 
-#: data/jorts.metainfo.xml.in:233
+#: data/jorts.metainfo.xml.in:239
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "Виправлено: неузгодженість іконок у різних темах іконок"
 
-#: data/jorts.metainfo.xml.in:234
+#: data/jorts.metainfo.xml.in:240
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Виправлено: неузгодженість тем у різних стікерах"
 
-#: data/jorts.metainfo.xml.in:240
+#: data/jorts.metainfo.xml.in:246
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 Щойно з пральні! (2: електричний бугай)"
 
-#: data/jorts.metainfo.xml.in:242
+#: data/jorts.metainfo.xml.in:248
 msgid "Clearer appmenu description"
 msgstr "Чіткіший опис меню"
 
-#: data/jorts.metainfo.xml.in:243
+#: data/jorts.metainfo.xml.in:249
 msgid "More consistent theming"
 msgstr "Більш послідовна тематика"
 
-#: data/jorts.metainfo.xml.in:244
+#: data/jorts.metainfo.xml.in:250
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "Виправлення: ярлик видалення був безвідповідальним"
 
-#: data/jorts.metainfo.xml.in:245
+#: data/jorts.metainfo.xml.in:251
 msgid "Bugfix: screenshot not showing"
 msgstr "Виправлення: не показувався скріншот"
 
-#: data/jorts.metainfo.xml.in:251
+#: data/jorts.metainfo.xml.in:257
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 Щойно з пральні!"
 
-#: data/jorts.metainfo.xml.in:253
+#: data/jorts.metainfo.xml.in:259
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr ""
 "Включає масштабування для кожної нотатки! Тож ви можете збільшити або "
 "зменшити текст"
 
-#: data/jorts.metainfo.xml.in:254
+#: data/jorts.metainfo.xml.in:260
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -502,69 +519,69 @@ msgstr ""
 "Для нових нотаток за замовчуванням використовується найзручніший для вас "
 "масштаб"
 
-#: data/jorts.metainfo.xml.in:255
+#: data/jorts.metainfo.xml.in:261
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Краща читабельність (WCAG AA або AAA залежно від теми)"
 
-#: data/jorts.metainfo.xml.in:256
+#: data/jorts.metainfo.xml.in:262
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Також трохи краще виглядає тема. Так, навіть більше :)"
 
-#: data/jorts.metainfo.xml.in:257
+#: data/jorts.metainfo.xml.in:263
 msgid "Improved translations"
 msgstr "Покращені переклади"
 
-#: data/jorts.metainfo.xml.in:258
+#: data/jorts.metainfo.xml.in:264
 msgid "Better shortcut and tooltips"
 msgstr "Кращий ярлик та підказки"
 
-#: data/jorts.metainfo.xml.in:259
+#: data/jorts.metainfo.xml.in:265
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "Виправлено помилку, коли джорти залишалися на темі легкої системи"
 
-#: data/jorts.metainfo.xml.in:265
+#: data/jorts.metainfo.xml.in:271
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 Випуск Appcenter"
 
-#: data/jorts.metainfo.xml.in:270
+#: data/jorts.metainfo.xml.in:276
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 Release: Slate and Bubblegum"
 
-#: data/jorts.metainfo.xml.in:272
+#: data/jorts.metainfo.xml.in:278
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Відродження давньої, але улюбленої версії Нотатника"
 
-#: data/jorts.metainfo.xml.in:273
+#: data/jorts.metainfo.xml.in:279
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Додаток тепер називається Jorts. Однак ви не можете його носити"
 
-#: data/jorts.metainfo.xml.in:274
+#: data/jorts.metainfo.xml.in:280
 msgid "10 lovely little colours"
 msgstr "10 чудових маленьких кольорів"
 
-#: data/jorts.metainfo.xml.in:275
+#: data/jorts.metainfo.xml.in:281
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "Створено на основі сучасних технологій Linux та форматів пакунків"
 
-#: data/jorts.metainfo.xml.in:276
+#: data/jorts.metainfo.xml.in:282
 msgid "Smooth transition when changing theme"
 msgstr "Плавний перехід при зміні теми"
 
-#: data/jorts.metainfo.xml.in:277
+#: data/jorts.metainfo.xml.in:283
 msgid "New stickies have a random fun little title and colour"
 msgstr "Нові наліпки мають випадкову веселу назву та колір"
 
-#: data/jorts.metainfo.xml.in:278
+#: data/jorts.metainfo.xml.in:284
 msgid "A few initial translations included, and more to come"
 msgstr "Кілька початкових перекладів вже є, і ще більше попереду"
 
-#: data/jorts.metainfo.xml.in:279
+#: data/jorts.metainfo.xml.in:285
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr ""
 "Електронні листи та посилання клікабельні! Ctrl+Клікнути, щоб відкрити в "
 "пошті або браузері"
 
-#: data/jorts.metainfo.xml.in:280
+#: data/jorts.metainfo.xml.in:286
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 "Текст підтримує скасування, повтор, і ви можете використовувати смайлики :)"
