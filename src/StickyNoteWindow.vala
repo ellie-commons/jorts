@@ -221,13 +221,13 @@ namespace Jorts {
             // Define the grid 
             var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
             mainbox.append (scrolled);
-            mainbox.append (actionbar);
 
             var handle = new Gtk.WindowHandle () {
-                child = mainbox
+                child = actionbar
             };
+            mainbox.append (handle);
 
-            set_child (handle);
+            set_child (mainbox);
             on_scribbly_changed ();
 
 
