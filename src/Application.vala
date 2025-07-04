@@ -136,6 +136,13 @@ namespace Jorts {
             add_action (toggle_hidebar);
             toggle_hidebar.activate.connect (this.toggle_hidebar);
 
+            var show_pref = new SimpleAction ("show_preferences", null);
+            set_accels_for_action ("app.show_preferences", { "<Control>p", null });
+            add_action (show_pref);
+            show_pref.activate.connect (on_show_pref);
+
+
+
         }
 
         // Clicked: Either show all windows, or rebuild from storage
@@ -219,6 +226,12 @@ namespace Jorts {
         }
     }
 
+    public void on_show_pref () {
+        debug ("\nShowing preferences!");
+        preferences.show ();
+        preferences.present ();
+    }
+
 
     /*************************************************/
     public void init_all_notes () {
@@ -269,9 +282,7 @@ namespace Jorts {
 
                 case "--preferences":
                     activate ();
-                    print ("\nShowing preferences!");
-                    preferences.show ();
-                    preferences.present ();
+                    on_show_pref ();
                     break;
 
                 default:
