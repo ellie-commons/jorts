@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 18:58+0200\n"
+"POT-Creation-Date: 2025-07-04 19:18+0200\n"
 "PO-Revision-Date: 2025-04-06 17:02+0400\n"
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "Language-Team: none\n"
@@ -314,6 +314,15 @@ msgstr "%d%%"
 #: src/Windows/PreferenceWindow.vala:57
 msgid "Preferences for your Jorts"
 msgstr "Параметры для этого стикера"
+
+#: src/Windows/PreferenceWindow.vala:59
+msgid "Preferences"
+msgstr ""
+
+#: src/Windows/PreferenceWindow.vala:59 src/Windows/StickyNoteWindow.vala:93
+#: src/Windows/StickyNoteWindow.vala:304
+msgid " - Jorts"
+msgstr ""
 
 #: src/Windows/StickyNoteWindow.vala:127
 msgid "Click to edit the title"

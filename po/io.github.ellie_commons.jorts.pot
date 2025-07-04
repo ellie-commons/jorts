@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 18:58+0200\n"
+"POT-Creation-Date: 2025-07-04 19:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,6 +303,15 @@ msgstr ""
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:57
 msgid "Preferences for your Jorts"
+msgstr ""
+
+#: src/Windows/PreferenceWindow.vala:59
+msgid "Preferences"
+msgstr ""
+
+#: src/Windows/PreferenceWindow.vala:59 src/Windows/StickyNoteWindow.vala:93
+#: src/Windows/StickyNoteWindow.vala:304
+msgid " - Jorts"
 msgstr ""
 
 #: src/Windows/StickyNoteWindow.vala:127
