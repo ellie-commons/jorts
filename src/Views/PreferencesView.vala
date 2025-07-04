@@ -74,10 +74,73 @@
 
 
 
+                /****************************************************/
+                /*               Autostart Request                  */
+                /****************************************************/
+
+                                    Xdp.Portal portal = new Xdp.Portal ();
+                GenericArray<weak string> cmd = new GenericArray<weak string> ();
+                cmd.add ("io.github.ellie_commons.jorts");
+
+
+                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                    halign = Gtk.Align.END
+                };
+
+                ///TRANSLATORS: Button to autostart the application
+                var set_autostart = new Gtk.Button () {
+                    label = _("Set autostart")
+                };
+                set_autostart.add_css_class (Granite.STYLE_CLASS_ACCENT);
+
+                set_autostart.clicked.connect (() => {
+                    debug ("Setting autostart");
+
+                    portal.request_background.begin (
+                    null,
+                    _("Set Jorts to start with the computer"),
+                    cmd,
+                    Xdp.BackgroundFlags.AUTOSTART,
+                    null);
+                });
+
+                ///TRANSLATORS: Button to remove the autostart for the application
+                var remove_autostart = new Gtk.Button () {
+                    label = _("Remove autostart")
+                };
+                remove_autostart.add_css_class (Granite.STYLE_CLASS_WARNING);
+
+                remove_autostart.clicked.connect (() => {
+                    debug ("Removing autostart");
+
+                    portal.request_background.begin (
+                    null,
+                    _("Remove Jorts from system autostart"),
+                    cmd,
+                    Xdp.BackgroundFlags.NONE,
+                    null);
+                });
+
+                both_buttons.append (set_autostart);
+                both_buttons.append (remove_autostart);
+
+                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+
+                var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                    mnemonic_widget = both_buttons,
+                    secondary_text = _("You can set the sticky notes to appear when you log in")
+                };
+                autostart_label.set_hexpand (true);
+
+                autostart_box.append (autostart_label);
+                autostart_box.append (both_buttons);
+                settingsbox.append (autostart_box);
+
+
                 /*************************************************/
                 /*               Autostart Link                  */
                 /*************************************************/
-
+/*  
             string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             print ("\nEnvironment: " + desktop_environment + " detected!");
 
@@ -134,7 +197,7 @@
                 settingsbox.append (permissions_box);
 
             }
-
+  */
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.ActionBar ();
@@ -162,8 +225,6 @@
 
             append (settingsbox);
             append (actionbar);
-
-
     }
 
 }
