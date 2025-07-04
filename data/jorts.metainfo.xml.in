@@ -93,6 +93,11 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.2.3" date="2025-07-05">
+            <description>
+                <p>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now</p>
+            </description>
+        </release>
         <release version="3.2.2" date="2025-06-05">
             <description>
                 <p>Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot.</p>
