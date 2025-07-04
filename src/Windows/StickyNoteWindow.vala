@@ -228,6 +228,7 @@ namespace Jorts {
             mainbox.append (handle);
 
             set_child (mainbox);
+            set_focus (view);
             on_scribbly_changed ();
 
 
