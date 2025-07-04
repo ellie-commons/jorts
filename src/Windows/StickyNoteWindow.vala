@@ -90,7 +90,7 @@ namespace Jorts {
             this.zoom = data.zoom;
             this.content = data.content;
 
-            title = data.title;
+            title = data.title + _(" - Jorts");
 
             this.set_default_size (
                 data.width,
@@ -237,15 +237,8 @@ namespace Jorts {
 
             debug ("Built UI. Lets do connects and binds");
 
-            // Reflect title changes in overview
-            editableheader.bind_property (
-                "text",
-                this,
-                "title", GLib.BindingFlags.DEFAULT
-            );
-
             // Save when title or text have changed
-            editableheader.changed.connect (on_buffer_changed);
+            editableheader.changed.connect (on_editable_changed);
             view.buffer.changed.connect (on_buffer_changed);
 
             // Display the current zoom level when the popover opens
@@ -305,6 +298,11 @@ namespace Jorts {
                 ((Application)this.application).save_to_stash ();
                 return GLib.Source.REMOVE;
             });
+        }
+
+        public void on_editable_changed () {
+            title = editableheader.text + _(" - Jorts");
+            on_buffer_changed ();
         }
 
         // Called when a change in settings is detected
@@ -372,14 +370,13 @@ namespace Jorts {
         public NoteData packaged () {
             debug ("Packaging into a noteData…");
 
-            var current_title = editableheader.get_text ();
             this.content = this.view.get_content ();
 
             int width ; int height;
             this.get_default_size (out width, out height);
 
             var data = new NoteData (
-                current_title,
+                editableheader.text,
                 this.theme,
                 this.content,
                 this.zoom,
