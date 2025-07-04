@@ -120,7 +120,16 @@ namespace Jorts.Utils {
             _("Top 10 anime betrayals"),
             _("Amazing ascii art!"),
             _("For the barbecue"),
-            _("My favourite bands")
+            _("My favourite bands"),
+            _("All the genders"),
+            _("Best ingredients for salad"),
+            _("Books to read"),
+            _("Places to visit"),
+            _("Hobbies to try out"),
+            _("Who would win against Goku"),
+            _("To plant in the garden"),
+            _("Meals this week"),
+            _("Everyone's pizza order")
         };
         return alltitles[Random.int_range (0, alltitles.length)];
     }
@@ -139,13 +148,6 @@ namespace Jorts.Utils {
         var random_in_range = Random.int_range (0, allemotes.size);
         return allemotes[random_in_range];
     }
-
-
-    /*************************************************/
-    // Hey! Looking in the source code is cheating!
-
-
-
 
     /*************************************************/
     // Hey! Looking in the source code is cheating!
