@@ -129,7 +129,11 @@ namespace Jorts.Utils {
             _("Who would win against Goku"),
             _("To plant in the garden"),
             _("Meals this week"),
-            _("Everyone's pizza order")
+            _("Everyone's pizza order"),
+            _("Today selfcare to do"),
+            _("Important affirmations to remember"),
+            _("The coolest linux apps"),
+            _("My favourite dishes")
         };
         return alltitles[Random.int_range (0, alltitles.length)];
     }
