@@ -7,6 +7,7 @@
     public Gtk.Switch scribbly_toggle;
     public Gtk.Switch hidebar_toggle;
     public Gtk.Button reset_button;
+    private Granite.Toast toast;
 
     construct {
 
@@ -17,6 +18,13 @@
         margin_start = 12;
         margin_end = 12;
 
+
+        var overlay = new Gtk.Overlay ();
+        append (overlay);
+
+            toast = new Granite.Toast (_("Request to system sent"));
+            overlay.add_overlay (toast);
+
             // the box with all the settings
             var settingsbox = new Gtk.Box (VERTICAL, 24) {
                 margin_bottom = 6,
@@ -26,6 +34,7 @@
                 hexpand = true,
                 vexpand = true
             };
+
 
                 /*************************************************/
                 /*              scribbly Toggle                  */
@@ -102,6 +111,8 @@
                     cmd,
                     Xdp.BackgroundFlags.AUTOSTART,
                     null);
+
+                    toast.send_notification ();
                 });
 
                 ///TRANSLATORS: Button to remove the autostart for the application
@@ -119,18 +130,23 @@
                     cmd,
                     Xdp.BackgroundFlags.NONE,
                     null);
+
+                    toast.send_notification ();
                 });
 
                 both_buttons.append (set_autostart);
                 both_buttons.append (remove_autostart);
 
+
+
+
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
                 var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = both_buttons,
-                    secondary_text = _("You can set the sticky notes to appear when you log in")
+                    secondary_text = _("You can request the system to start this application automatically"),
+                    hexpand = true
                 };
-                autostart_label.set_hexpand (true);
 
                 autostart_box.append (autostart_label);
                 autostart_box.append (both_buttons);
