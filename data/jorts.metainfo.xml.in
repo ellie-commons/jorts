@@ -100,6 +100,7 @@
                     <li>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now</li>
                     <li>Added more random titles</li>
                     <li>Buttons for add/remove autostart</li>
+                    <li>Some more title placeholders</li>
                     <li>Under the hood is a bit cleaner now</li>
                 </ul>
             </description>
