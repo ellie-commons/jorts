@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 20:11+0200\n"
+"POT-Creation-Date: 2025-07-06 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,11 +201,32 @@ msgstr ""
 msgid "Everyone's pizza order"
 msgstr ""
 
-#: src/Services/Utils.vala:163
+#: src/Services/Utils.vala:133
+msgid "Today selfcare to do"
+msgstr ""
+
+#: src/Services/Utils.vala:134
+msgid "Important affirmations to remember"
+msgstr ""
+
+#: src/Services/Utils.vala:135
+msgid "The coolest linux apps"
+msgstr ""
+
+#: src/Services/Utils.vala:136
+#, fuzzy
+msgid "My favourite dishes"
+msgstr "我的狗狗最喜欢的玩具"
+
+#: src/Services/Utils.vala:137
+msgid "My funniest jokes"
+msgstr ""
+
+#: src/Services/Utils.vala:168
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW 恭喜！ 🔥"
 
-#: src/Services/Utils.vala:165
+#: src/Services/Utils.vala:170
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -264,57 +285,68 @@ msgstr "可可"
 msgid "Slate"
 msgstr "石板"
 
-#: src/Views/PreferencesView.vala:44
+#: src/Views/PreferencesView.vala:25
+msgid "Request to system sent"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:53
 msgid "Make unfocused notes unreadable"
 msgstr "让没有重点的笔记无法阅读"
 
-#: src/Views/PreferencesView.vala:46
+#: src/Views/PreferencesView.vala:55
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
-#: src/Views/PreferencesView.vala:66
+#: src/Views/PreferencesView.vala:75
 #, fuzzy
 msgid "Hide buttons"
 msgstr "隐藏按钮栏"
 
-#: src/Views/PreferencesView.vala:68
+#: src/Views/PreferencesView.vala:77
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
-#: src/Views/PreferencesView.vala:88
-msgid "Permissions"
-msgstr "权限"
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:101
+msgid "Set autostart"
+msgstr ""
 
-#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+#: src/Views/PreferencesView.vala:110
+msgid "Set Jorts to start with the computer"
+msgstr ""
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:120
+msgid "Remove autostart"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:129
+msgid "Remove Jorts from system autostart"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:145
 msgid "Allow to start at login"
 msgstr "允许在登录时启动"
 
-#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
-
-#: src/Views/PreferencesView.vala:114
-#, fuzzy
-msgid "Autostart apps"
-msgstr "在 flathub 中自动启动应用程序"
-
 #: src/Views/PreferencesView.vala:147
+msgid "You can request the system to start this application automatically"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:226
 msgid "Support us!"
 msgstr "支持我们"
 
 #. Reset
-#: src/Views/PreferencesView.vala:153
+#: src/Views/PreferencesView.vala:232
 msgid "Reset to Default"
 msgstr "重置为默认值"
 
-#: src/Views/PreferencesView.vala:154
+#: src/Views/PreferencesView.vala:233
 msgid "Reset all settings to defaults"
 msgstr "将所有设置重置为默认值"
 
@@ -376,6 +408,18 @@ msgstr "插入表情符号"
 #: src/Windows/StickyNoteWindow.vala:210
 msgid "Preferences for this sticky note"
 msgstr "该便笺的首选项"
+
+#~ msgid "Permissions"
+#~ msgstr "权限"
+
+#~ msgid ""
+#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "autostart"
+#~ msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
+
+#, fuzzy
+#~ msgid "Autostart apps"
+#~ msgstr "在 flathub 中自动启动应用程序"
 
 #~ msgid "Edit title"
 #~ msgstr "编辑标题"

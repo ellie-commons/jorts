@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-04 20:11+0200\n"
+"POT-Creation-Date: 2025-07-06 11:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -206,11 +206,32 @@ msgstr ""
 msgid "Everyone's pizza order"
 msgstr ""
 
-#: src/Services/Utils.vala:163
+#: src/Services/Utils.vala:133
+msgid "Today selfcare to do"
+msgstr ""
+
+#: src/Services/Utils.vala:134
+msgid "Important affirmations to remember"
+msgstr ""
+
+#: src/Services/Utils.vala:135
+msgid "The coolest linux apps"
+msgstr ""
+
+#: src/Services/Utils.vala:136
+#, fuzzy
+msgid "My favourite dishes"
+msgstr "Ang aking mga aso paboritong laruan"
+
+#: src/Services/Utils.vala:137
+msgid "My funniest jokes"
+msgstr ""
+
+#: src/Services/Utils.vala:168
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Services/Utils.vala:165
+#: src/Services/Utils.vala:170
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -262,54 +283,66 @@ msgstr ""
 msgid "Slate"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:44
+#: src/Views/PreferencesView.vala:25
+msgid "Request to system sent"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:53
 msgid "Make unfocused notes unreadable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:46
+#: src/Views/PreferencesView.vala:55
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:66
+#: src/Views/PreferencesView.vala:75
 msgid "Hide buttons"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:68
+#: src/Views/PreferencesView.vala:77
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:88
-msgid "Permissions"
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:101
+msgid "Set autostart"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:100 src/Views/PreferencesView.vala:126
+#: src/Views/PreferencesView.vala:110
+msgid "Set Jorts to start with the computer"
+msgstr ""
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:120
+msgid "Remove autostart"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:129
+msgid "Remove Jorts from system autostart"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:145
 msgid "Allow to start at login"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:102 src/Views/PreferencesView.vala:128
-msgid ""
-"You can set the sticky notes to appear when you log in by adding Jorts to "
-"autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:114
-msgid "Autostart apps"
-msgstr ""
-
 #: src/Views/PreferencesView.vala:147
+msgid "You can request the system to start this application automatically"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:226
 msgid "Support us!"
 msgstr ""
 
 #. Reset
-#: src/Views/PreferencesView.vala:153
+#: src/Views/PreferencesView.vala:232
 msgid "Reset to Default"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:154
+#: src/Views/PreferencesView.vala:233
 msgid "Reset all settings to defaults"
 msgstr ""
 
