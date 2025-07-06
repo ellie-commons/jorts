@@ -100,7 +100,7 @@
                 var set_autostart = new Gtk.Button () {
                     label = _("Set autostart")
                 };
-                set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+                //set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
                 set_autostart.clicked.connect (() => {
                     debug ("Setting autostart");
@@ -119,7 +119,7 @@
                 var remove_autostart = new Gtk.Button () {
                     label = _("Remove autostart")
                 };
-                remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
                 remove_autostart.clicked.connect (() => {
                     debug ("Removing autostart");
