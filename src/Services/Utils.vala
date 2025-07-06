@@ -133,7 +133,8 @@ namespace Jorts.Utils {
             _("Today selfcare to do"),
             _("Important affirmations to remember"),
             _("The coolest linux apps"),
-            _("My favourite dishes")
+            _("My favourite dishes"),
+            _("My funniest jokes")
         };
         return alltitles[Random.int_range (0, alltitles.length)];
     }
