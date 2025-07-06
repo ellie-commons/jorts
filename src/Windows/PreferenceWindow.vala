@@ -110,6 +110,3 @@ public class Jorts.PreferenceWindow : Gtk.Window {
             }
         }
 }
-
-
-
