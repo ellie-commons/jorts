@@ -136,7 +136,8 @@ namespace Jorts.Utils {
             _("Important affirmations to remember"),
             _("The coolest linux apps"),
             _("My favourite dishes"),
-            _("My funniest jokes")
+            _("My funniest jokes"),
+            _("The perfect breakfast has...")
         };
         return alltitles[Random.int_range (0, alltitles.length)];
     }
