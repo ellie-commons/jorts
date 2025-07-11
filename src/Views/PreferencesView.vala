@@ -101,7 +101,8 @@
 
                 ///TRANSLATORS: Button to autostart the application
                 var set_autostart = new Gtk.Button () {
-                    label = _("Set autostart")
+                    label = _("Set autostart"),
+                    valign = Gtk.Align.CENTER
                 };
                 //set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
@@ -120,7 +121,8 @@
 
                 ///TRANSLATORS: Button to remove the autostart for the application
                 var remove_autostart = new Gtk.Button () {
-                    label = _("Remove autostart")
+                    label = _("Remove autostart"),
+                    valign = Gtk.Align.CENTER
                 };
                 //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
