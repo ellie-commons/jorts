@@ -1,4 +1,3 @@
-
 #======== SETTINGS ========
 install_data (
     'jorts.gschema.xml',

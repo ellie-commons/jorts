@@ -22,9 +22,6 @@ windowcontrols:backdrop button {
     background: none;
 }
 
-
-
-
 editablelabel {
     font-weight: 800;
     padding-left: 24px;
@@ -44,16 +41,10 @@ editablelabel.editing {
     letter-spacing: .02em;
 }
 
-
-
-
-
 /* Fix buttons in popover inheriting the color */
 popover button image {
     color: @fg_color;
 }
-
-
 
 actionbar {
     box-shadow: none;  /*Pondering. It looks good with, too */
@@ -74,20 +65,11 @@ actionbar .themedbutton:focus {
     border-radius: 6px;
 }
 
-
-
-
-
-
-
-
 /* Obfuscate note */
 window.scribbly textview,
 window.scribbly editablelabel {
     font-family: "Redacted Script";
 }
-
-
 
 /* Font zooms */
 window.antsized textview {font-size: 0.4em;}
@@ -189,8 +171,6 @@ colorpill.slate:hover {border: 1px solid @SLATE_900;}
 
 
 /* ANIMATION */
-
-
 window.animated,
 window.animated overshoot,
 window.animated undershoot {
@@ -216,14 +196,3 @@ window.animated editablelabel,
 window.animated actionbar image {
     transition: color 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-
-/* Hide action bar when unfocused */
-
-/* window.hidebar:backdrop actionbar,
-window.hidebar:backdrop actionbar image,
-window.hidebar:backdrop windowcontrols,
-window.hidebar:backdrop windowcontrols image {
-    opacity: 0;
-} */

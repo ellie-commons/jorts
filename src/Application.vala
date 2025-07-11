@@ -20,135 +20,133 @@
 
 
 /*
-
 General oversight of loading and supporting functions
-At some point i may move this in its own file
-
+At some point i may move lots of this in its own file
 */
 
-namespace Jorts {
-    public class Application : Gtk.Application {
-        public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
-        public static GLib.Settings gsettings;
-        private static Jorts.PreferenceWindow preferences;
+public class Jorts.Application : Gtk.Application {
+    public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
+    public static GLib.Settings gsettings;
+    private static Jorts.PreferenceWindow preferences;
 
-        public Application () {
-            Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                    application_id: Jorts.Constants.RDNN);
-        }
+    public Application () {
+        Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
+                application_id: Jorts.Constants.RDNN);
+    }
 
-        // Changed whenever a note changes zoom
-        // So we can adjust new notes to have whatever user feel is comfortable
-	    public int latest_zoom;
+    // Changed whenever a note changes zoom
+    // So we can adjust new notes to have whatever user feel is comfortable
+	public int latest_zoom;
 
-        /*************************************************/
-        public override void startup () {
-            debug ("Jorts startup sequence…");
-            base.startup ();
+    /*************************************************/
+    public override void startup () {
+        debug ("Jorts startup sequence…");
+        base.startup ();
 
-            // The localization thingamabob
-            Intl.setlocale (LocaleCategory.ALL, "");
-            Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-            Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-            Intl.textdomain (GETTEXT_PACKAGE);
+        // The localization thingamabob
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
             
-            // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
-            var granite_settings = Granite.Settings.get_default ();
-            var gtk_settings = Gtk.Settings.get_default ();
-            gtk_settings.gtk_icon_theme_name = "elementary";
-            gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.ascii_down();
+        // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.gtk_icon_theme_name = "elementary";
+        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.ascii_down();
 
-            // Also follow dark if system is dark lIke mY sOul.
-            gtk_settings.gtk_application_prefer_dark_theme = (
-	                granite_settings.prefers_color_scheme == DARK
-                );
+        // Also follow dark if system is dark lIke mY sOul.
+        gtk_settings.gtk_application_prefer_dark_theme = (
+	            granite_settings.prefers_color_scheme == DARK
+            );
 	
-            granite_settings.notify["prefers-color-scheme"].connect (() => {
-                gtk_settings.gtk_application_prefer_dark_theme = (
-                        granite_settings.prefers_color_scheme == DARK
-                    );
-            });
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = (
+                    granite_settings.prefers_color_scheme == DARK
+                );
+        });
 
 
-            // build all the stylesheets
-            Jorts.Themer.init_all_themes ();
-        }
+        // build all the stylesheets
+        Jorts.Themer.init_all_themes ();
+    }
+
+    /*************************************************/        
+    static construct {
+        gsettings = new GLib.Settings (Jorts.Constants.RDNN);
+    }
+
+    /*************************************************/
+    construct {
+
+        var quit_action = new SimpleAction ("quit", null);
+        add_action (quit_action);
+        set_accels_for_action ("app.quit", {"<Control>q"});
+        quit_action.activate.connect (() => {
+            this.save_to_stash ();
+            this.quit ();
+        });
+        var new_action = new SimpleAction ("new", null);
+        add_action (new_action);
+        set_accels_for_action ("app.action_new", {"<Control>n"});
+        new_action.activate.connect (() => {
+            this.create_note (null);
+        });
+
+        var delete_action = new SimpleAction ("delete", null);
+        add_action (delete_action);
+        set_accels_for_action ("app.action_delete", {"<Control>w"});
+
+        var save_action = new SimpleAction ("save", null);
+        add_action (save_action);
+        set_accels_for_action ("app.save", {"<Control>s"});
+        save_action.activate.connect (save_to_stash);
+
+        var zoom_out = new SimpleAction ("zoom_out", null);
+        add_action (zoom_out);
+        set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
+
+        var zoom_default = new SimpleAction ("zoom_default", null);
+        add_action (zoom_default);
+        set_accels_for_action ("app.zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0", null });
+
+        var zoom_in = new SimpleAction ("zoom_in", null);
+        add_action (zoom_in);
+        set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>KP_Add", null });
+
+        var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
+        add_action (toggle_scribbly);
+        set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
+        toggle_scribbly.activate.connect (() => {
+            this.toggle_scribbly ();
+        });
+
+        var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
+        add_action (toggle_hidebar);
+        set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
+        toggle_hidebar.activate.connect (this.toggle_hidebar);
+
+        var show_pref = new SimpleAction ("show_preferences", null);
+        add_action (show_pref);
+        set_accels_for_action ("app.show_preferences", { "<Control>p", null });
+        show_pref.activate.connect (on_show_pref);
 
 
-        /*************************************************/        
-        static construct {
-            gsettings = new GLib.Settings (Jorts.Constants.RDNN);
-        }
 
-        /*************************************************/
-        construct {
+    }
 
-            var quit_action = new SimpleAction ("quit", null);
-            set_accels_for_action ("app.quit", {"<Control>q"});
-            add_action (quit_action);
-            quit_action.activate.connect (() => {
-                this.save_to_stash ();
-                this.quit ();
-            });
-            var new_action = new SimpleAction ("new", null);
-            set_accels_for_action ("app.action_new", {"<Control>n"});
-            add_action (new_action);
-            new_action.activate.connect (() => {
-                this.create_note (null);
-            });
+    // Clicked: Either show all windows, or rebuild from storage
+    protected override void activate () {
+        debug ("Jorts, activate!");
 
-            var delete_action = new SimpleAction ("delete", null);
-            set_accels_for_action ("app.action_delete", {"<Control>w"});
-            add_action (delete_action);
-
-            var save_action = new SimpleAction ("save", null);
-            set_accels_for_action ("app.save", {"<Control>s"});
-            add_action (save_action);
-            save_action.activate.connect (save_to_stash);
-            var zoom_out = new SimpleAction ("zoom_out", null);
-            set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
-            add_action (zoom_out);
-
-            var zoom_default = new SimpleAction ("zoom_default", null);
-            set_accels_for_action ("app.zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0", null });
-            add_action (zoom_default);
-
-            var zoom_in = new SimpleAction ("zoom_in", null);
-            set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>KP_Add", null });
-            add_action (zoom_in);
-
-            var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
-            set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
-            add_action (toggle_scribbly);
-            toggle_scribbly.activate.connect (() => {
-                this.toggle_scribbly ();
-            });
-            var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
-            set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
-            add_action (toggle_hidebar);
-            toggle_hidebar.activate.connect (this.toggle_hidebar);
-
-            var show_pref = new SimpleAction ("show_preferences", null);
-            set_accels_for_action ("app.show_preferences", { "<Control>p", null });
-            add_action (show_pref);
-            show_pref.activate.connect (on_show_pref);
-
-
-
-        }
-
-        // Clicked: Either show all windows, or rebuild from storage
-        protected override void activate () {
-            debug ("Jorts, activate!");
-
-            // Test Lang
-            //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
-            if (open_notes.size > 0) {
-                show_all ();
-            } else {
-                this.init_all_notes ();
-            }     
-	    }
+        // Test Lang
+        //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
+        if (open_notes.size > 0) {
+            show_all ();
+        } else {
+            this.init_all_notes ();
+        }     
+	}
 
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
@@ -249,17 +247,15 @@ namespace Jorts {
             var now = new DateTime.now_utc ().to_string () ;
             gsettings.set_string ("last-backup", now);
         }
-
     }
 
-        /*************************************************/
-        protected override int command_line (ApplicationCommandLine command_line) {
-            string[] args = command_line.get_arguments ();
+    /*************************************************/
+    protected override int command_line (ApplicationCommandLine command_line) {
+        string[] args = command_line.get_arguments ();
 
-            switch (args[1]) {
-
-                case "--new-note":
-                    activate ();
+        switch (args[1]) {
+            case "--new-note":
+                activate ();
 
                     /*var data = new Jorts.NoteData (
                         args[2] ?? Jorts.Utils.random_title (),
@@ -271,25 +267,23 @@ namespace Jorts {
                     */
                     //create_note (data);
 
-                    create_note ();
-                    break;
+                create_note ();
+                break;
 
-                case "--preferences":
-                    activate ();
-                    on_show_pref ();
-                    break;
+            case "--preferences":
+                activate ();
+                on_show_pref ();
+                break;
 
-                default:
-                    activate ();
-                    break;
-            }
-            return 0;
-
+            default:
+                activate ();
+                break;
         }
+    return 0;
+    }
 
-        public static int main (string[] args) {
-            var app = new Application ();
-            return app.run (args);
-        }
+    public static int main (string[] args) {
+        var app = new Application ();
+        return app.run (args);
     }
 }
