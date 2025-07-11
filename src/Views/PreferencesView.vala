@@ -157,68 +157,6 @@
                 autostart_box.append (both_buttons);
                 settingsbox.append (autostart_box);
 
-
-                /*************************************************/
-                /*               Autostart Link                  */
-                /*************************************************/
-/*  
-            string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-            print ("\nEnvironment: " + desktop_environment + " detected!");
-
-            // Show only in Pantheon because others do not have an autostart panel
-            if (desktop_environment == "Pantheon") {
-
-                var link = Granite.SettingsUri.PERMISSIONS ;
-                var linkname = _("Permissions") ;
-
-                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                var permissions_link = new Gtk.LinkButton.with_label (
-                                                    link,
-                                                    linkname
-                                                );
-
-                // _("Applications → Permissions")
-                permissions_link.tooltip_text = link;
-                permissions_link.halign = Gtk.Align.END;
-
-                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
-                    mnemonic_widget = permissions_link,
-                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
-                };
-                permissions_label.set_hexpand (true);
-
-                permissions_box.append (permissions_label);
-                permissions_box.append (permissions_link);
-                settingsbox.append (permissions_box);
-
-            // Not Pantheon, not the Windows port. Must be a rando DE
-            } else {
-
-                var link = "https://flathub.org/apps/search?q=autostart" ;
-                var linkname = _("Autostart apps") ;
-
-                var permissions_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                var permissions_link = new Gtk.LinkButton.with_label (
-                                                    link,
-                                                    linkname
-                                                );
-
-                // _("Applications → Permissions")
-                permissions_link.tooltip_text = link;
-                permissions_link.halign = Gtk.Align.END;
-
-                var permissions_label = new Granite.HeaderLabel (_("Allow to start at login")) {
-                    mnemonic_widget = permissions_link,
-                    secondary_text = _("You can set the sticky notes to appear when you log in by adding Jorts to autostart")
-                };
-                permissions_label.set_hexpand (true);
-
-                permissions_box.append (permissions_label);
-                permissions_box.append (permissions_link);
-                settingsbox.append (permissions_box);
-
-            }
-  */
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.ActionBar ();
