@@ -123,7 +123,6 @@ namespace Jorts.Utils {
             _("Amazing ascii art!"),
             _("For the barbecue"),
             _("My favourite bands"),
-            _("All the genders"),
             _("Best ingredients for salad"),
             _("Books to read"),
             _("Places to visit"),

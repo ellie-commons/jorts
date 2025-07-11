@@ -93,11 +93,18 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
     <releases>
+        <release version="3.3.1" date="2025-07-12">
+            <description>
+                <ul>
+                    <li>Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.3.0" date="2025-07-06">
             <description>
                 <p>3.3.0 Star Platinum Jorts</p>
                 <ul>
-                    <li>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now</li>
+                    <li>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)</li>
                     <li>Added more random titles</li>
                     <li>Buttons for add/remove autostart</li>
                     <li>Some more title placeholders</li>

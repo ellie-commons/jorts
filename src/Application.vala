@@ -69,14 +69,6 @@ namespace Jorts {
                     );
             });
 
-            preferences = new Jorts.PreferenceWindow (this);
-            add_window (preferences);
-
-            preferences.close_request.connect (() => { 
-                preferences.hide ();
-                return true;
-            });
-
 
             // build all the stylesheets
             Jorts.Themer.init_all_themes ();
@@ -228,6 +220,8 @@ namespace Jorts {
 
     public void on_show_pref () {
         debug ("\nShowing preferences!");
+        preferences = new Jorts.PreferenceWindow (this);
+        add_window (preferences);
         preferences.show ();
         preferences.present ();
     }
