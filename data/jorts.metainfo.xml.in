@@ -34,7 +34,7 @@
     <url type="donation">https://ko-fi.com/teamcons</url>
 
     <suggests>
-        <id>com.github.matfantinel.reminduck</id>
+        <id>io.github.ellie_commons.reminduck</id>
         <id>com.github.elfenware.badger</id>
         <id>io.github.xchan14.larawan</id>
     </suggests>
