@@ -280,184 +280,183 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         /*                  METHODS                 */
         /********************************************/
 
-        // Add a debounce so we aren't writing the entire buffer every character input
-        public void on_buffer_changed () {
-            debug ("Buffer changed!");
+    // Add a debounce so we aren't writing the entire buffer every character input
+    public void on_buffer_changed () {
+        debug ("Buffer changed!");
 
-            if (debounce_timer_id != 0) {
-                GLib.Source.remove (debounce_timer_id);
-            }
-
-            debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
-                debounce_timer_id = 0;
-                ((Application)this.application).save_to_stash ();
-                return GLib.Source.REMOVE;
-            });
+        if (debounce_timer_id != 0) {
+            GLib.Source.remove (debounce_timer_id);
         }
 
-        public void on_editable_changed () {
-            title = editableheader.text + _(" - Jorts");
-            on_buffer_changed ();
-        }
+        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
+            debounce_timer_id = 0;
+            ((Application)this.application).save_to_stash ();
+            return GLib.Source.REMOVE;
+        });
+    }
 
-        // Called when a change in settings is detected
-        public void on_scribbly_changed () {
-            debug ("Scribbly mode changed!");
+    public void on_editable_changed () {
+        title = editableheader.text + _(" - Jorts");
+        on_buffer_changed ();
+    }
 
-            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-                if (this.is_active == false) {
-                    this.add_css_class ("scribbly");
-                }
+    // Called when a change in settings is detected
+    public void on_scribbly_changed () {
+        debug ("Scribbly mode changed!");
 
-            } else {
-                if (this.is_active == false) {
-                    this.remove_css_class ("scribbly");
-                }
-            }
-        }
-
-
-        // Called when the window is-active property changes
-        public void on_focus_changed () {
-            debug ("Focus changed!");
-
-            if (this.is_active) {
-                var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
-                gtk_settings.gtk_theme_name = stylesheet;
+        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+            if (this.is_active == false) {
+                this.add_css_class ("scribbly");
             }
 
-            if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-                if (this.is_active) {
-                    this.remove_css_class ("scribbly");
-                } else {
-                    this.add_css_class ("scribbly");
-                }
-            } else {
+        } else {
+            if (this.is_active == false) {
                 this.remove_css_class ("scribbly");
             }
         }
+    }
 
-        // Randomize the button emoji when clicked
-        public void on_emoji_popover () {
-            debug ("Emote requested!");
 
-            emoji_button.set_icon_name (
-                Jorts.Utils.random_emote (
-                    emoji_button.get_icon_name ()
-                )
-            );
+    // Called when the window is-active property changes
+    public void on_focus_changed () {
+        debug ("Focus changed!");
+
+        if (this.is_active) {
+            var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
+            gtk_settings.gtk_theme_name = stylesheet;
         }
 
-        // Called when the window is-active property changes
-        public void on_reduceanimation_changed () {
-            debug ("Reduce animation changed!");
-
-            if (gtk_settings.gtk_enable_animations) {
-                this.add_css_class ("animated");
+        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+            if (this.is_active) {
+                this.remove_css_class ("scribbly");
             } else {
-                this.remove_css_class ("animated");
+                this.add_css_class ("scribbly");
             }
+        } else {
+            this.remove_css_class ("scribbly");
         }
+    }
 
-        // Package the note into a NoteData and pass it back
-        // NOTE: We cannot access the buffer if the window is closed, leading to content loss
-        // Hence why we need to constantly save the buffer into this.content when changed
-        public NoteData packaged () {
-            debug ("Packaging into a noteData…");
+    // Randomize the button emoji when clicked
+    public void on_emoji_popover () {
+        debug ("Emote requested!");
 
-            this.content = this.view.get_content ();
+        emoji_button.set_icon_name (
+            Jorts.Utils.random_emote (
+                emoji_button.get_icon_name ()
+            )
+        );
+    }
 
-            int width ; int height;
-            this.get_default_size (out width, out height);
+    // Called when the window is-active property changes
+    public void on_reduceanimation_changed () {
+        debug ("Reduce animation changed!");
 
-            var data = new NoteData (
+        if (gtk_settings.gtk_enable_animations) {
+            this.add_css_class ("animated");
+        } else {
+            this.remove_css_class ("animated");
+        }
+    }
+
+    // Package the note into a NoteData and pass it back
+    // NOTE: We cannot access the buffer if the window is closed, leading to content loss
+    // Hence why we need to constantly save the buffer into this.content when changed
+    public NoteData packaged () {
+        debug ("Packaging into a noteData…");
+
+        this.content = this.view.get_content ();
+
+        int width ; int height;
+        this.get_default_size (out width, out height);
+
+        var data = new NoteData (
                 editableheader.text,
-                this.theme,
-                this.content,
-                this.zoom,
-                    width,
-                    height);
+            this.theme,
+            this.content,
+            this.zoom,
+                width,
+                height);
 
-            return data;
+        return data;
+    }
+
+    private void action_new () {
+        ((Application)this.application).create_note ();
+    }
+
+    private void action_delete () {
+        ((Application)this.application).remove_note (this);
+        this.close ();
+    }
+
+    private void zoom_default () {
+        this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
+    }
+
+    // Switches stylesheet
+    // First use appropriate stylesheet, Then switch the theme classes
+    private void on_theme_updated (string theme) {
+        debug ("Updating theme!");
+
+        var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
+        this.gtk_settings.gtk_theme_name = stylesheet;
+
+        remove_css_class (this.theme);
+        this.theme = theme;
+        add_css_class (this.theme);
+
+        ((Application)this.application).save_to_stash ();
+    }
+
+
+    /*********************************************/
+    /*              ZOOM feature                 */
+    /*********************************************/
+
+    // Called when a signal from the popover says stuff got changed
+    public void on_zoom_changed (string zoomkind) {
+        debug ("Zoom changed!");
+
+        if (zoomkind == "zoom_in") {
+            this.zoom_in ();
+        } else if (zoomkind == "zoom_out") {
+            this.zoom_out ();
+        } else if (zoomkind == "reset") {
+            this.set_zoom (100);
         }
+        ((Application)this.application).save_to_stash ();
+    }
 
-        private void action_new () {
-            ((Application)this.application).create_note ();
+    // First check an increase doesnt go above limit
+    public void zoom_in () {
+        if ((this.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+            this.set_zoom ((this.zoom + 20));
         }
+    }
 
-        private void action_delete () {
-            ((Application)this.application).remove_note (this);
-            this.close ();
+    // First check an increase doesnt go below limit
+    public void zoom_out () {
+        if ((this.zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+            this.set_zoom ((this.zoom - 20));
         }
+    }
 
-        private void zoom_default () {
-            this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
-        }
+    // Switch zoom classes, then reflect in the UI and tell the application
+    public void set_zoom (int zoom) {
+        debug ("Setting zoom: " + zoom.to_string ());
 
-        // Switches stylesheet
-        // First use appropriate stylesheet, Then switch the theme classes
-        private void on_theme_updated (string theme) {
-            debug ("Updating theme!");
+        // Switches the classes that control font size
+        this.remove_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
+        this.zoom = zoom;
+        this.add_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
 
-            var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
-            this.gtk_settings.gtk_theme_name = stylesheet;
+        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
-            remove_css_class (this.theme);
-            this.theme = theme;
-            add_css_class (this.theme);
+        // Reflect the number in the popover
+        this.popover.on_zoom_changed (zoom);
 
-            ((Application)this.application).save_to_stash ();
-        }
-
-
-        /*************************************************/
-        /*              ZOOM feature                 */
-        /*************************************************/
-
-        // Called when a signal from the popover says stuff got changed
-        public void on_zoom_changed (string zoomkind) {
-            debug ("Zoom changed!");
-
-            if (zoomkind == "zoom_in") {
-                this.zoom_in ();
-            } else if (zoomkind == "zoom_out") {
-                this.zoom_out ();
-            } else if (zoomkind == "reset") {
-                this.set_zoom (100);
-            }
-            ((Application)this.application).save_to_stash ();
-        }
-
-
-        // First check an increase doesnt go above limit
-        public void zoom_in () {
-            if ((this.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-                this.set_zoom ((this.zoom + 20));
-            }
-        }
-
-        // First check an increase doesnt go below limit
-        public void zoom_out () {
-            if ((this.zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-                this.set_zoom ((this.zoom - 20));
-            }
-        }
-
-        // Switch zoom classes, then reflect in the UI and tell the application
-        public void set_zoom (int zoom) {
-            debug ("Setting zoom: " + zoom.to_string ());
-
-            // Switches the classes that control font size
-            this.remove_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
-            this.zoom = zoom;
-            this.add_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
-
-            this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
-
-            // Reflect the number in the popover
-            this.popover.on_zoom_changed (zoom);
-
-            // Keep it for next new notes
-            ((Application)this.application).latest_zoom = zoom;
-        }
+        // Keep it for next new notes
+        ((Application)this.application).latest_zoom = zoom;
+    }
 }
