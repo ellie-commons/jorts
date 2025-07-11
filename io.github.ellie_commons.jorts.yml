@@ -3,11 +3,13 @@ runtime: io.elementary.Platform
 runtime-version: '8'
 sdk: io.elementary.Sdk
 command: io.github.ellie_commons.jorts
+
 finish-args:
   - '--share=ipc'
   - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
+
 cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
@@ -19,6 +21,7 @@ cleanup:
   -  '/share/installed-tests'
   -  '*.la'
   -  '*.a'
+
 modules:
   - name: jorts
     buildsystem: meson

@@ -5,11 +5,13 @@ runtime: io.elementary.Platform
 runtime-version: '8'
 sdk: io.elementary.Sdk
 command: com.github.lainsce.notejot
+
 finish-args:
 # Back then, people used x11
   - '--share=ipc'
   - '--device=dri'
   - '--socket=x11'
+
 cleanup:
   -  '/include'
   -  '/lib/pkgconfig'
@@ -21,6 +23,7 @@ cleanup:
   -  '/share/installed-tests'
   -  '*.la'
   -  '*.a'
+
 modules:
 # Back then, it had this
   - name: gtksourceview3
@@ -29,6 +32,7 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz
         sha256: 691b074a37b2a307f7f48edc5b8c7afa7301709be56378ccf9cc9735909077fd
+
 # Go back enough in time
   - name: notejot
     buildsystem: meson
