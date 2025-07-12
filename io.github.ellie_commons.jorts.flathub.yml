@@ -26,6 +26,23 @@ cleanup:
   -  '*.a'
 
 modules:
+# Only till https://github.com/flathub/io.elementary.BaseApp/pull/32 gets merged
+  - name: libportal
+    buildsystem: meson
+    config-opts:
+      - -Dbackend-qt5=disabled
+      - -Dbackend-qt6=disabled
+      - -Ddocs=false
+      - -Dtests=false
+    sources:
+      - type: git
+        url: https://github.com/flatpak/libportal.git
+        tag: 0.9.1
+        commit: 8f5dc8d192f6e31dafe69e35219e3b707bde71ce
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
+
 # Needed for the Scribbly mode
   - name: RedactedScript
     buildsystem: simple
@@ -47,23 +64,6 @@ modules:
       - type: file
         url: https://raw.githubusercontent.com/christiannaths/redacted-font/284dfb0397d1911c3388f72389f08b3c13446134/README.md
         sha256: e594f7f6bf03f7b11897d219184e215466cdfb9a8268b54cb7d5a626482dd722
-
-# Only till https://github.com/flathub/io.elementary.BaseApp/pull/32 gets merged
-  - name: libportal
-    buildsystem: meson
-    config-opts:
-      - -Dbackend-qt5=disabled
-      - -Dbackend-qt6=disabled
-      - -Ddocs=false
-      - -Dtests=false
-    sources:
-      - type: git
-        url: https://github.com/flatpak/libportal.git
-        tag: 0.9.1
-        commit: 8f5dc8d192f6e31dafe69e35219e3b707bde71ce
-        x-checker-data:
-          type: git
-          tag-pattern: '^([\d.]+)$'
 
   - name: jorts
     buildsystem: meson
