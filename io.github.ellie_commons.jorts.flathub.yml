@@ -57,9 +57,13 @@ modules:
       - -Ddocs=false
       - -Dtests=false
     sources:
-      - type: archive
-        url: https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz
-        sha256: de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f
+      - type: git
+        url: https://github.com/flatpak/libportal.git
+        tag: 0.9.1
+        commit: 8f5dc8d192f6e31dafe69e35219e3b707bde71ce
+        x-checker-data:
+          type: git
+          tag-pattern: '^([\d.]+)$'
 
   - name: jorts
     buildsystem: meson
