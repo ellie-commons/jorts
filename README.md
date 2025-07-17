@@ -33,32 +33,10 @@ Feel free to check [the project board](https://github.com/orgs/ellie-commons/pro
 
 ## 💝 Donations
 
-Some of the code (and the aesthetic) was from original work by Lainsce because this is a fork of an older version of Notejot from a time before new additions broke NoteJot for elementary OS 8.
-Currently the real, official NoteJot is something different, more fully-featured and no longer focused on elementary OS.
-Some people liked the simplicity of the old version, and thus we created this fork of it.
-
-If you want to thank the original creator:
-
-[Be a backer on Lainsce on Patreon](https://www.patreon.com/lainsce)
-
-Currently actively trying to revive this project is me - Stella
-Support is always welcome and shows us that people want this work to continue.
-
-Stella, current main dev:
-<p align="left">
-  <a href="https://ko-fi.com/teamcons">
-    <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" width="150">
-  </a>
-</p>
-
-
-
-The icon is done by wpkelso! An otter with a turtleneck
-
-https://github.com/sponsors/wpkelso
-
-
-
+On the right you can donate to various contributors:
+ - teamcons, the main devs and maintainers behind jorts
+ - wpkelso, the author of the modern icon and its Pride variant
+ - lains, the initial creator of the app (It was Notejot, now something very different)
 
 ## 🏗️ Building
 
