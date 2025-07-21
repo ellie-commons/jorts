@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img alt="An icon representing a stack of little squared blue sticky notes. The first one, and the second one hinted below, have scribbles over them" src="data/icons/hicolor/64.png" />
+  <img alt="An icon representing a stack of little squared blue sticky notes. The first one, and the second one hinted below, have scribbles over them" src="data/icons/hicolor/128.png" />
   <h1>Jorts</h1>
   <h3>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
 <span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/default.png" alt="A blue sticky note"></span>
