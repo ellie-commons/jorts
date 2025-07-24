@@ -14,9 +14,11 @@ Categories=Office;GTK;
 Actions=NewNote;Preferences;
 
 [Desktop Action NewNote]
-Exec=io.github.ellie_commons.jorts --new-note
 Name=New sticky note
+Icon=list-add
+Exec=io.github.ellie_commons.jorts --new-note
 
 [Desktop Action Preferences]
-Exec=io.github.ellie_commons.jorts --preferences
 Name=Preferences
+Icon=open-menu
+Exec=io.github.ellie_commons.jorts --preferences
