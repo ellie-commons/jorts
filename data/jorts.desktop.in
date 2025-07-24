@@ -2,15 +2,14 @@
 Name=Jorts
 GenericName=Sticky notes
 Comment=Write down notes, reminders, random thoughts and other short-term informations
-Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts
-SingleMainWindow=false
-
+Exec=io.github.ellie_commons.jorts
+Type=Application
+Categories=Office;GTK;
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;
 Terminal=false
-Type=Application
 StartupNotify=true
-Categories=Office;GTK;
+SingleMainWindow=false
 Actions=NewNote;Preferences;
 
 [Desktop Action NewNote]
