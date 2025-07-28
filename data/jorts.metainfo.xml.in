@@ -23,8 +23,8 @@
     </provides>
     <launchable type="desktop-id">io.github.ellie_commons.jorts.desktop</launchable>
 
-    <developer id="io.github.teamcons">
-        <name>Stella - Teamcons</name>
+    <developer id="io.github.ellie-commons">
+        <name>Lainsce + Stella</name>
     </developer>
     <project_group>ellie-commons</project_group>
     <url type="homepage">https://github.com/ellie-commons/jorts</url>
@@ -33,12 +33,12 @@
     <url type="translate">https://github.com/ellie-commons/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
-    <suggests>
-        <id>io.github.ellie_commons.reminduck</id>
-        <id>com.github.elfenware.badger</id>
-        <id>io.github.xchan14.larawan</id>
-    </suggests>
-
+    <content_rating type="oars-1.1"/>
+    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
+    <branding>
+      <color type="primary" scheme_preference="light">#64baff</color>
+      <color type="primary" scheme_preference="dark">#002e99</color>
+    </branding>
     <keywords>
         <keyword>Sticky notes</keyword>
         <keyword>Sticky note</keyword>
@@ -52,10 +52,20 @@
         <keyword>Pantheon</keyword>
         <keyword>elementary OS</keyword>
     </keywords>
-    <branding>
-      <color type="primary" scheme_preference="light">#64baff</color>
-      <color type="primary" scheme_preference="dark">#002e99</color>
-    </branding>
+    <suggests>
+        <id>io.github.ellie_commons.reminduck</id>
+        <id>com.github.elfenware.badger</id>
+        <id>io.github.xchan14.larawan</id>
+    </suggests>
+    <recommends>
+      <control>keyboard</control>
+      <control>pointing</control>
+      <control>touch</control>
+    </recommends>
+    <custom>
+        <value key="x-appcenter-suggested-price">1</value>
+    </custom>
+
     <screenshots>
         <screenshot type="default">
             <caption>A sticky note with the "Blueberry" theme</caption>
@@ -82,16 +92,7 @@
             <image>https://raw.githubusercontent.com/ellie-commons/Jorts/main/data/screenshots/preferences-dark.png</image>
         </screenshot>
     </screenshots>
-    <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.ellie_commons.jorts</translation>
-    <recommends>
-      <control>keyboard</control>
-      <control>pointing</control>
-      <control>touch</control>
-    </recommends>
-    <custom>
-        <value key="x-appcenter-suggested-price">1</value>
-    </custom>
+
     <releases>
         <release version="3.3.1" date="2025-07-12">
             <description>

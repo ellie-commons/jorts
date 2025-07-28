@@ -1,21 +1,23 @@
 [Desktop Entry]
 Name=Jorts
-GenericName=Sticky notes utility
+GenericName=Sticky notes
 Comment=Write down notes, reminders, random thoughts and other short-term informations
-Exec=io.github.ellie_commons.jorts
 Icon=io.github.ellie_commons.jorts
-
+Exec=io.github.ellie_commons.jorts
+Type=Application
+Categories=Office;GTK;
 Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;
 Terminal=false
-Type=Application
 StartupNotify=true
-Categories=GTK;Office;
+SingleMainWindow=false
 Actions=NewNote;Preferences;
 
 [Desktop Action NewNote]
-Exec=io.github.ellie_commons.jorts --new-note
 Name=New sticky note
+Icon=list-add
+Exec=io.github.ellie_commons.jorts --new-note
 
 [Desktop Action Preferences]
-Exec=io.github.ellie_commons.jorts --preferences
 Name=Preferences
+Icon=open-menu
+Exec=io.github.ellie_commons.jorts --preferences
