@@ -64,8 +64,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_NEW, action_new },
         { ACTION_DELETE, action_delete},
-        { ACTION_MENU, action_new },
-        { ACTION_EMOTE, action_delete},
         { ACTION_ZOOM_OUT, zoom_out},
         { ACTION_ZOOM_DEFAULT, zoom_default},
         { ACTION_ZOOM_IN, zoom_in}
