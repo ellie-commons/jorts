@@ -27,4 +27,26 @@ public class Jorts.NoteData : Object {
         this.width = width ?? Jorts.Constants.DEFAULT_WIDTH;
         this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
     }
+
+    public Json.Object to_json () {
+        var builder = new Json.Builder ();
+
+		// Lets fkin gooo
+        builder.begin_object ();
+        builder.set_member_name ("title");
+        builder.add_string_value (title);
+        builder.set_member_name ("theme");
+        builder.add_string_value (theme);
+        builder.set_member_name ("content");
+        builder.add_string_value (content);
+		builder.set_member_name ("zoom");
+        builder.add_int_value (zoom);
+        builder.set_member_name ("height");
+        builder.add_int_value (height);
+        builder.set_member_name ("width");
+        builder.add_int_value (width);
+        builder.end_object ();
+
+        return builder.get_root ().get_object ();
+    }
 }
