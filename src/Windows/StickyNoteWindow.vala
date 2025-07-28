@@ -51,6 +51,10 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public const string ACTION_NEW = "action_new";
     public const string ACTION_DELETE = "action_delete";
 
+    public const string ACTION_MENU = "action_menu";
+    public const string ACTION_EMOTE = "action_emote";
+
+
     public const string ACTION_ZOOM_OUT = "zoom_out";
     public const string ACTION_ZOOM_DEFAULT = "zoom_default";
     public const string ACTION_ZOOM_IN = "zoom_in";
@@ -60,6 +64,8 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_NEW, action_new },
         { ACTION_DELETE, action_delete},
+        { ACTION_MENU, action_new },
+        { ACTION_EMOTE, action_delete},
         { ACTION_ZOOM_OUT, zoom_out},
         { ACTION_ZOOM_DEFAULT, zoom_default},
         { ACTION_ZOOM_IN, zoom_in}
