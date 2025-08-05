@@ -7,6 +7,7 @@
 
 // The NoteData object is just packaging to pass off data from and to storage
 public class Jorts.NoteData : Object {
+
     public string title;
     public string theme;
     public string content;
@@ -15,10 +16,12 @@ public class Jorts.NoteData : Object {
     public int height;
 
     public NoteData (
-        string? title = null, string? theme = null, string? content = null,
-        int? zoom = null, int? width = null, int? height = null)
+        string? title = null,
+        string? theme = null,
+        string? content = null,
+        int? zoom = null,
+        int? width = null, int? height = null)
     {
-
         // We assign defaults in case theres args missing
         this.title = title ?? Jorts.Utils.random_title ();
         this.theme = theme ?? Jorts.Utils.random_theme ();
