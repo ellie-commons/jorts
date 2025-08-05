@@ -22,6 +22,11 @@
 /*
 General oversight of loading and supporting functions
 At some point i may move lots of this in its own file
+
+
+Application creates a NoteManager.
+
+
 */
 
 public class Jorts.Application : Gtk.Application {

@@ -1,7 +1,7 @@
 sources = files (
     'Objects' / 'NoteData.vala',
-    'Objects' / 'NoteManager.vala',
 
+    'Services' / 'NoteManager.vala',
     'Services' / 'Constants.vala',
     'Services' / 'Jason.vala',
     'Services' / 'Stash.vala',
