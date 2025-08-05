@@ -25,8 +25,11 @@ At some point i may move lots of this in its own file
 */
 
 public class Jorts.Application : Gtk.Application {
-    public static Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
+
     public static GLib.Settings gsettings;
+    public static Jorts.NoteManager manager;
+
+
     private static Jorts.PreferenceWindow preferences;
 
     public Application () {
@@ -34,9 +37,7 @@ public class Jorts.Application : Gtk.Application {
                 application_id: Jorts.Constants.RDNN);
     }
 
-    // Changed whenever a note changes zoom
-    // So we can adjust new notes to have whatever user feel is comfortable
-	public int latest_zoom;
+
 
     /*************************************************/
     public override void startup () {
@@ -66,7 +67,6 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
-
         // build all the stylesheets
         Jorts.Themer.init_all_themes ();
     }
@@ -74,6 +74,7 @@ public class Jorts.Application : Gtk.Application {
     /*************************************************/        
     static construct {
         gsettings = new GLib.Settings (Jorts.Constants.RDNN);
+        manager = new Jorts.NoteManager ();
     }
 
     /*************************************************/
@@ -83,14 +84,14 @@ public class Jorts.Application : Gtk.Application {
         add_action (quit_action);
         set_accels_for_action ("app.quit", {"<Control>q"});
         quit_action.activate.connect (() => {
-            this.save_to_stash ();
+            Application.manager.save_to_stash ();
             this.quit ();
         });
         var new_action = new SimpleAction ("new", null);
         add_action (new_action);
         set_accels_for_action ("app.action_new", {"<Control>n"});
         new_action.activate.connect (() => {
-            this.create_note (null);
+            Application.manager.create_note (null);
         });
 
         var delete_action = new SimpleAction ("delete", null);
@@ -100,7 +101,7 @@ public class Jorts.Application : Gtk.Application {
         var save_action = new SimpleAction ("save", null);
         add_action (save_action);
         set_accels_for_action ("app.save", {"<Control>s"});
-        save_action.activate.connect (save_to_stash);
+        save_action.activate.connect (Application.manager.save_to_stash);
 
         var zoom_out = new SimpleAction ("zoom_out", null);
         add_action (zoom_out);
@@ -130,9 +131,6 @@ public class Jorts.Application : Gtk.Application {
         add_action (show_pref);
         set_accels_for_action ("app.show_preferences", { "<Control>p", null });
         show_pref.activate.connect (on_show_pref);
-
-
-
     }
 
     // Clicked: Either show all windows, or rebuild from storage
@@ -141,56 +139,12 @@ public class Jorts.Application : Gtk.Application {
 
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
-        if (open_notes.size > 0) {
+        if (Application.manager.open_notes.size > 0) {
             show_all ();
         } else {
-            this.init_all_notes ();
+            Application.manager.init_all_notes ();
         }     
 	}
-
-    // Create new instances of StickyNoteWindow
-    // If we have data, nice, just load it into a new instance
-    // Else we do a lil new note
-	public void create_note (NoteData? data = null) {
-        debug ("Lets do a note");
-
-        StickyNoteWindow note;
-        if (data != null) {
-            note = new StickyNoteWindow (this, data);
-        }
-        else {
-
-            // Skip theme from previous window, but use same text zoom
-            StickyNoteWindow last_note = open_notes.last ();
-            string skip_theme = last_note.theme;
-            var random_data = Jorts.Utils.random_note (skip_theme);
-
-            // A chance at pulling the Golden Sticky
-            random_data = Jorts.Utils.golden_sticky (random_data);
-
-            random_data.zoom = this.latest_zoom;
-            note = new StickyNoteWindow (this, random_data);
-        }
-        open_notes.add(note);
-        this.save_to_stash ();
-	}
-
-    // Simply remove from the list of things to save, and close
-    public void remove_note (StickyNoteWindow note) {
-            debug ("Removing a note…\n");
-            open_notes.remove (note);
-            this.save_to_stash ();
-	}
-
-    public void save_to_stash () {
-        debug ("Save the stickies!");
-
-        Jorts.Stash.check_if_stash ();
-        string json_data = Jorts.Jason.jsonify (open_notes);
-        Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        print ("\nSaved " + open_notes.size.to_string () + "!");
-    }
-
 
     public void toggle_scribbly () {
         if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
@@ -209,7 +163,7 @@ public class Jorts.Application : Gtk.Application {
     }
 
     public void show_all () {
-        foreach (var window in open_notes) {
+        foreach (var window in Application.manager.open_notes) {
             if (window.visible) {
                 window.present ();
             }
@@ -222,31 +176,6 @@ public class Jorts.Application : Gtk.Application {
         add_window (preferences);
         preferences.show ();
         preferences.present ();
-    }
-
-
-    /*************************************************/
-    public void init_all_notes () {
-        debug ("Opening all sticky notes now!");
-        Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
-
-        // Load everything we have
-        foreach (NoteData data in loaded_data) {
-            debug ("Loaded: " + data.title + "\n");
-            this.create_note (data);
-        }
-
-
-        if (Jorts.Stash.need_backup(gsettings.get_string ("last-backup"))) {
-            print ("Doing a backup! :)");
-
-            Jorts.Stash.check_if_stash ();
-            string json_data = Jorts.Jason.jsonify (open_notes);
-            Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
-
-            var now = new DateTime.now_utc ().to_string () ;
-            gsettings.set_string ("last-backup", now);
-        }
     }
 
     /*************************************************/
@@ -267,7 +196,7 @@ public class Jorts.Application : Gtk.Application {
                     */
                     //create_note (data);
 
-                create_note ();
+                Application.manager.create_note ();
                 break;
 
             case "--preferences":

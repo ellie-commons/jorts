@@ -1,0 +1,90 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText:  2017-2024 Lains
+ *                          2025 Stella & Charlie (teamcons.carrd.co)
+ *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ */
+
+// The NoteData object is just packaging to pass off data from and to storage
+public class Jorts.NoteManager : Object {
+
+    public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
+
+
+    // Changed whenever a note changes zoom
+    // So we can adjust new notes to have whatever user feel is comfortable
+	public int latest_zoom;
+
+
+    public void init_all_notes () {
+        debug ("Opening all sticky notes now!");
+        Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
+
+        // Load everything we have
+        foreach (NoteData data in loaded_data) {
+            debug ("Loaded: " + data.title + "\n");
+            this.create_note (data);
+        }
+
+
+        if (Jorts.Stash.need_backup(Application.gsettings.get_string ("last-backup"))) {
+            print ("Doing a backup! :)");
+
+            Jorts.Stash.check_if_stash ();
+            string json_data = Jorts.Jason.jsonify (open_notes);
+            Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
+
+            var now = new DateTime.now_utc ().to_string () ;
+            Application.gsettings.set_string ("last-backup", now);
+        }
+    }
+
+
+
+    // Create new instances of StickyNoteWindow
+    // If we have data, nice, just load it into a new instance
+    // Else we do a lil new note
+	public void create_note (NoteData? data = null) {
+        debug ("Lets do a note");
+
+        StickyNoteWindow note;
+        if (data != null) {
+            note = new StickyNoteWindow (data);
+        }
+        else {
+
+            // Skip theme from previous window, but use same text zoom
+            StickyNoteWindow last_note = open_notes.last ();
+            string skip_theme = last_note.theme;
+            var random_data = Jorts.Utils.random_note (skip_theme);
+
+            // A chance at pulling the Golden Sticky
+            random_data = Jorts.Utils.golden_sticky (random_data);
+
+            random_data.zoom = this.latest_zoom;
+            note = new StickyNoteWindow (random_data);
+        }
+        open_notes.add(note);
+        this.save_to_stash ();
+	}
+
+
+
+    // Simply remove from the list of things to save, and close
+    public void remove_note (StickyNoteWindow note) {
+            debug ("Removing a note…\n");
+            open_notes.remove (note);
+            this.save_to_stash ();
+	}
+
+    public void save_to_stash () {
+        debug ("Save the stickies!");
+
+        Jorts.Stash.check_if_stash ();
+        string json_data = Jorts.Jason.jsonify (open_notes);
+        Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
+        print ("\nSaved " + open_notes.size.to_string () + "!");
+    }
+
+
+}
