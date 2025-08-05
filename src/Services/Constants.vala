@@ -7,7 +7,6 @@
 
 /* CONTENT
 Just Dump constants here
-
 */
 
 namespace Jorts.Constants {

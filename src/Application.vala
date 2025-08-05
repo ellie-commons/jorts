@@ -20,20 +20,28 @@
 
 
 /*
-General oversight of loading and supporting functions
-At some point i may move lots of this in its own file
+Application creates a NoteManager, which is the OG thing that does the heavy lifting.
+NoteManager retrieves a list of NoteData from the Stash
+Then it untangles it and creates a list of windows it can keep track of.
 
+When a note get deleted, the window signals to the manager to remove it from the list
+When a new note is requested, the manager creates a new window and adds it
+When saving is requested, the manager goes though the whole list requesting every window to package itself, then slams all onto disk.
 
-Application creates a NoteManager.
+The Preferences window is supposed to be a static window.
 
-
+NoteData is a convenience object to pass around sticky notes
+Stash deals with writing/loading from the disk
+Themer spits the different themes upon startup
+Utils spits all the random
+Jason deals with all the hassle in between all saving/loading steps
+Constants is because i am lazy
 */
 
 public class Jorts.Application : Gtk.Application {
 
     public static GLib.Settings gsettings;
     public Jorts.NoteManager manager;
-
 
     private static Jorts.PreferenceWindow preferences;
 
@@ -178,7 +186,6 @@ public class Jorts.Application : Gtk.Application {
     public void on_show_pref () {
         debug ("\nShowing preferences!");
         preferences = new Jorts.PreferenceWindow (this);
-        add_window (preferences);
         preferences.show ();
         preferences.present ();
     }

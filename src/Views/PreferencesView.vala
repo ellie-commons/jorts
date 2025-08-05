@@ -5,7 +5,6 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
  public class Jorts.PreferencesView : Gtk.Box {
     public Gtk.Switch scribbly_toggle;
     public Gtk.Switch hidebar_toggle;
@@ -13,14 +12,11 @@
     private Granite.Toast toast;
 
     construct {
-
         orientation = VERTICAL;
-
         margin_bottom = 6;
         margin_top = 6;
         margin_start = 12;
         margin_end = 12;
-
 
         var overlay = new Gtk.Overlay ();
         append (overlay);
@@ -37,7 +33,6 @@
                 hexpand = true,
                 vexpand = true
             };
-
 
                 /*************************************************/
                 /*              scribbly Toggle                  */
@@ -83,7 +78,6 @@
                 hidebar_box.append (hidebar_label);
                 hidebar_box.append (hidebar_toggle);
                 settingsbox.append (hidebar_box);
-
 
 
                 /****************************************************/
@@ -142,9 +136,6 @@
                 both_buttons.append (set_autostart);
                 both_buttons.append (remove_autostart);
 
-
-
-
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
 
                 var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
@@ -176,7 +167,6 @@
             reset_button.tooltip_markup = (_("Reset all settings to defaults"));
             actionbar.pack_end (reset_button);
 
-
             //  var close_button = new Gtk.Button();
             //  close_button.set_label( _("Close"));
             //  close_button.clicked.connect(() => {this.close();});
@@ -185,5 +175,4 @@
             append (settingsbox);
             append (actionbar);
     }
-
 }

@@ -5,10 +5,8 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
 /*
 I just dont wanna rewrite the same button over and over
-
 */
 
 public class Jorts.ColorPill : Gtk.CheckButton {

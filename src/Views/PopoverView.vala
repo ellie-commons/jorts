@@ -21,14 +21,10 @@
     public string selected;
     public signal void theme_changed (string selected);
 
-
     /* FONT SELECTION */
     public signal void zoom_changed (string zoomkind);
 
-
-
     construct {
-
         set_position (Gtk.PositionType.TOP);
         set_halign (Gtk.Align.END);
 

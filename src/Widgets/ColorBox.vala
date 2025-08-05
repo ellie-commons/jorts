@@ -5,19 +5,15 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
 /*
 I just dont wanna rewrite the same button over and over
 
 */
 
-
-
 public class Jorts.ColorBox : Gtk.Box {
 
     public signal void theme_changed (string selected);
-
-    public string theme {get; set;}
+    public string theme;
 
     private Jorts.ColorPill color_button_blueberry;
     private Jorts.ColorPill color_button_lime;
@@ -82,9 +78,7 @@ public class Jorts.ColorBox : Gtk.Box {
             append (color_button_grape);
             append (color_button_cocoa);
             append (color_button_slate);
-
     }
-
 
     public void set_toggles (string theme) {
         color_button_blueberry.set_active ((theme == "BLUEBERRY"));
@@ -98,7 +92,4 @@ public class Jorts.ColorBox : Gtk.Box {
         color_button_cocoa.set_active ((theme == "COCOA"));
         color_button_slate.set_active ((theme == "SLATE"));
     }
-
-
-
 }
