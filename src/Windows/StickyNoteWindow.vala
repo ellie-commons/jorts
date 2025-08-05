@@ -73,9 +73,11 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     /*           Lets build a window                 */
     /*************************************************/
 
-    public StickyNoteWindow (NoteData data) {
+    public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("New StickyNoteWindow instance: " + data.title);
+
+        application = app;
 
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
@@ -293,7 +295,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
             debounce_timer_id = 0;
-            Application.manager.save_to_stash ();
+            ((Application)this.application).manager.save_to_stash ();
             return GLib.Source.REMOVE;
         });
     }
@@ -385,11 +387,11 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     }
 
     private void action_new () {
-        Application.manager.create_note ();
+        ((Application)this.application).manager.create_note ();
     }
 
     private void action_delete () {
-        Application.manager.remove_note (this);
+        ((Application)this.application).manager.remove_note (this);
         this.close ();
     }
 
@@ -409,7 +411,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         this.theme = theme;
         add_css_class (this.theme);
 
-        Application.manager.save_to_stash ();
+        ((Application)this.application).manager.save_to_stash ();
     }
 
 
@@ -428,7 +430,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         } else if (zoomkind == "reset") {
             this.set_zoom (100);
         }
-        Application.manager.save_to_stash ();
+        ((Application)this.application).manager.save_to_stash ();
     }
 
     // First check an increase doesnt go above limit
@@ -461,6 +463,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
-        Application.manager.latest_zoom = zoom;
+        ((Application)this.application).manager.latest_zoom = zoom;
     }
 }

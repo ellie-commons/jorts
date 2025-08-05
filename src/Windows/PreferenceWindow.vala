@@ -101,7 +101,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
     }
 
     private void action_new () {
-        Application.manager.create_note (null);
+        ((Application)this.application).manager.create_note (null);
     }
 
     private void on_reset () {

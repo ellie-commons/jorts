@@ -9,12 +9,13 @@
 public class Jorts.NoteManager : Object {
 
     public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
-
-
-    // Changed whenever a note changes zoom
-    // So we can adjust new notes to have whatever user feel is comfortable
 	public int latest_zoom;
 
+    public Gtk.Application application;
+
+    public NoteManager (Gtk.Application app) {
+        this.application = app;
+    }
 
     public void init_all_notes () {
         debug ("Opening all sticky notes now!");
@@ -26,8 +27,7 @@ public class Jorts.NoteManager : Object {
             this.create_note (data);
         }
 
-
-        if (Jorts.Stash.need_backup(Application.gsettings.get_string ("last-backup"))) {
+        if (Jorts.Stash.need_backup (Application.gsettings.get_string ("last-backup"))) {
             print ("Doing a backup! :)");
 
             Jorts.Stash.check_if_stash ();
@@ -49,7 +49,7 @@ public class Jorts.NoteManager : Object {
 
         StickyNoteWindow note;
         if (data != null) {
-            note = new StickyNoteWindow (data);
+            note = new StickyNoteWindow (application, data);
         }
         else {
 
@@ -62,7 +62,7 @@ public class Jorts.NoteManager : Object {
             random_data = Jorts.Utils.golden_sticky (random_data);
 
             random_data.zoom = this.latest_zoom;
-            note = new StickyNoteWindow (random_data);
+            note = new StickyNoteWindow (application, random_data);
         }
         open_notes.add(note);
         this.save_to_stash ();

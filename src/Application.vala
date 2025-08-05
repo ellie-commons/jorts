@@ -27,7 +27,7 @@ At some point i may move lots of this in its own file
 public class Jorts.Application : Gtk.Application {
 
     public static GLib.Settings gsettings;
-    public static Jorts.NoteManager manager;
+    public Jorts.NoteManager manager;
 
 
     private static Jorts.PreferenceWindow preferences;
@@ -74,24 +74,24 @@ public class Jorts.Application : Gtk.Application {
     /*************************************************/        
     static construct {
         gsettings = new GLib.Settings (Jorts.Constants.RDNN);
-        manager = new Jorts.NoteManager ();
     }
 
     /*************************************************/
     construct {
+        manager = new Jorts.NoteManager (this);
 
         var quit_action = new SimpleAction ("quit", null);
         add_action (quit_action);
         set_accels_for_action ("app.quit", {"<Control>q"});
         quit_action.activate.connect (() => {
-            Application.manager.save_to_stash ();
+            manager.save_to_stash ();
             this.quit ();
         });
         var new_action = new SimpleAction ("new", null);
         add_action (new_action);
         set_accels_for_action ("app.action_new", {"<Control>n"});
         new_action.activate.connect (() => {
-            Application.manager.create_note (null);
+            manager.create_note (null);
         });
 
         var delete_action = new SimpleAction ("delete", null);
@@ -101,7 +101,7 @@ public class Jorts.Application : Gtk.Application {
         var save_action = new SimpleAction ("save", null);
         add_action (save_action);
         set_accels_for_action ("app.save", {"<Control>s"});
-        save_action.activate.connect (Application.manager.save_to_stash);
+        save_action.activate.connect (manager.save_to_stash);
 
         var zoom_out = new SimpleAction ("zoom_out", null);
         add_action (zoom_out);
@@ -139,10 +139,10 @@ public class Jorts.Application : Gtk.Application {
 
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
-        if (Application.manager.open_notes.size > 0) {
+        if (manager.open_notes.size > 0) {
             show_all ();
         } else {
-            Application.manager.init_all_notes ();
+            manager.init_all_notes ();
         }     
 	}
 
@@ -163,7 +163,7 @@ public class Jorts.Application : Gtk.Application {
     }
 
     public void show_all () {
-        foreach (var window in Application.manager.open_notes) {
+        foreach (var window in manager.open_notes) {
             if (window.visible) {
                 window.present ();
             }
@@ -196,7 +196,7 @@ public class Jorts.Application : Gtk.Application {
                     */
                     //create_note (data);
 
-                Application.manager.create_note ();
+                manager.create_note ();
                 break;
 
             case "--preferences":
