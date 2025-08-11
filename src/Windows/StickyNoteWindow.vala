@@ -34,6 +34,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private Gtk.Button new_item;
     private Gtk.Button delete_item;
     private Gtk.MenuButton emoji_button;
+    private Gtk.MenuButton menu_button;
     private PopoverView popover;
 
     public Jorts.NoteData data;
@@ -99,12 +100,15 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
         // Defime the label you can edit. Which is editable.
-        editableheader = new Gtk.EditableLabel (this.title_name);
+        editableheader = new Gtk.EditableLabel (this.title_name) {
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>L"},
+                _("Click to edit the title")
+            ),
+            halign = Gtk.Align.CENTER,
+            xalign = 0.5f
+        };
         editableheader.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        editableheader.halign = Gtk.Align.CENTER;
-        editableheader.set_tooltip_text (_("Click to edit the title"));
-        editableheader.xalign = 0.5f;
-
         headerbar.set_title_widget (editableheader);
         this.set_titlebar (headerbar);
 
@@ -178,11 +182,14 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         set_zoom (data.zoom);
 
 
-        var menu_button = new Gtk.MenuButton () {
+        menu_button = new Gtk.MenuButton () {
             icon_name = "open-menu-symbolic",
             width_request = 32,
             height_request = 32,
-            tooltip_text = _("Preferences for this sticky note")
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>M"},
+                _("Preferences for this sticky note")
+            )
         };
         menu_button.direction = Gtk.ArrowType.UP;
         menu_button.add_css_class ("themedbutton");
@@ -432,5 +439,13 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public void action_focus_title () {
         set_focus (editableheader);
         editableheader.editing = true;
+    }
+
+    public void action_show_emoji () {
+        emoji_button.activate ();
+    }
+
+    public void action_show_menu () {
+        menu_button.activate ();
     }
 }

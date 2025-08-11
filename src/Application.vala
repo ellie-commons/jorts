@@ -61,8 +61,8 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
     public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
     public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";
-    public const string ACTION_SHOW_MENU = "action_menu";
-    public const string ACTION_SHOW_EMOTE = "action_emote";
+    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
+    public const string ACTION_SHOW_MENU = "action_show_menu";
     public const string ACTION_SAVE = "action_save";
     public const string ACTION_FOCUS_TITLE = "action_focus_title";
 
@@ -78,8 +78,8 @@ public class Jorts.Application : Gtk.Application {
         { ACTION_TOGGLE_SCRIBBLY, action_toggle_scribbly},
         { ACTION_TOGGLE_ACTIONBAR, action_toggle_actionbar},
         { ACTION_SHOW_PREFERENCES, action_show_preferences},
-        { ACTION_SHOW_MENU, quit},
-        { ACTION_SHOW_EMOTE, quit},
+        { ACTION_SHOW_EMOJI, action_show_emoji},
+        { ACTION_SHOW_MENU, action_show_menu},
         { ACTION_SAVE, action_save},
         { ACTION_FOCUS_TITLE, action_focus_title}
     };
@@ -107,6 +107,8 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
         set_accels_for_action ("app.action_show_preferences", {"<Control>P"});
         set_accels_for_action ("app.action_focus_title", {"<Control>L"});
+        set_accels_for_action ("app.action_show_emoji", {"<Control>period"});
+        set_accels_for_action ("app.action_show_menu", {"<Control>M"});
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
@@ -268,5 +270,13 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_focus_title () {
         ((StickyNoteWindow)active_window).action_focus_title ();
+    }
+
+    private void action_show_emoji () {
+        ((StickyNoteWindow)active_window).action_show_emoji ();
+    }
+
+    private void action_show_menu () {
+        ((StickyNoteWindow)active_window).action_show_menu ();
     }
 }
