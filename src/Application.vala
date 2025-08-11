@@ -193,8 +193,7 @@ public class Jorts.Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        var app = new Application ();
-        return app.run (args);
+        return new Application ().run (args);
     }
 
     private void action_new () {
