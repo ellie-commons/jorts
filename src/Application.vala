@@ -40,10 +40,16 @@ Constants is because i am lazy
 
 public class Jorts.Application : Gtk.Application {
 
+    // Needed by all windows
     public static GLib.Settings gsettings;
     public Jorts.NoteManager manager;
 
+    // There can be only one
     private static Jorts.PreferenceWindow preferences;
+
+    // Used for commandline option handling
+    private bool new_note = false;
+    private bool show_pref = false;
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
@@ -80,8 +86,6 @@ public class Jorts.Application : Gtk.Application {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                 application_id: Jorts.Constants.RDNN);
     }
-
-
 
     /*************************************************/
     public override void startup () {
@@ -148,7 +152,17 @@ public class Jorts.Application : Gtk.Application {
             show_all ();
         } else {
             manager.init_all_notes ();
-        }     
+        }
+
+        if (new_note) {
+            manager.create_note ();
+            new_note = false;
+        }
+
+        if (show_pref) {
+            action_show_preferences ();
+            show_pref = false;
+        }
 	}
 
     public void show_all () {
@@ -159,37 +173,42 @@ public class Jorts.Application : Gtk.Application {
         }
     }
 
-    /*************************************************/
-    protected override int command_line (ApplicationCommandLine command_line) {
+
+    public override int command_line (ApplicationCommandLine command_line) {
+        debug ("Parsing commandline arguments...");
+
+        OptionEntry[] options = new OptionEntry[2];
+        options[0] = {
+            "new-note", 0, 0, OptionArg.NONE,
+            ref new_note, _("Create a new note"), null
+        };
+        options[1] = {
+            "preferences", 0, 0, OptionArg.NONE,
+            ref show_pref, _("Show preferences"), null
+        };
+
+        // We have to make an extra copy of the array, since .parse assumes
+        // that it can remove strings from the array without freeing them.
         string[] args = command_line.get_arguments ();
-
-        switch (args[1]) {
-            case "--new-note":
-                activate ();
-
-                    /*var data = new Jorts.NoteData (
-                        args[2] ?? Jorts.Utils.random_title (),
-                        args[3] ?? Jorts.Utils.random_theme (),
-                        args[4] ?? "",
-                        (int?)args[5] ?? Jorts.Constants.DEFAULT_ZOOM,
-                        (int?)args[6] ?? Jorts.Constants.DEFAULT_WIDTH,
-                        (int?)args[7] ?? Jorts.Constants.DEFAULT_HEIGHT);
-                    */
-                    //create_note (data);
-
-                manager.create_note ();
-                break;
-
-            case "--preferences":
-                activate ();
-                action_show_preferences ();
-                break;
-
-            default:
-                activate ();
-                break;
+        string[] _args = new string[args.length];
+        for (int i = 0; i < args.length; i++) {
+            _args[i] = args[i];
         }
-    return 0;
+
+        try {
+            var ctx = new OptionContext ();
+            ctx.set_help_enabled (true);
+            ctx.add_main_entries (options, null);
+            unowned string[] tmp = _args;
+            ctx.parse (ref tmp);
+        } catch (OptionError e) {
+            command_line.print ("error: %s\n", e.message);
+            return 0;
+        }
+
+        hold ();
+        activate ();
+        return 0;
     }
 
     public static int main (string[] args) {
