@@ -45,6 +45,37 @@ public class Jorts.Application : Gtk.Application {
 
     private static Jorts.PreferenceWindow preferences;
 
+    public const string ACTION_PREFIX = "app.";
+    public const string ACTION_QUIT = "action_quit";
+    public const string ACTION_NEW = "action_new";
+    public const string ACTION_DELETE = "action_delete";
+    public const string ACTION_ZOOM_OUT = "action_zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    public const string ACTION_ZOOM_IN = "action_zoom_in";
+    public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
+    public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
+    public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";
+    public const string ACTION_SHOW_MENU = "action_menu";
+    public const string ACTION_SHOW_EMOTE = "action_emote";
+    public const string ACTION_SAVE = "action_save";
+
+    public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+
+    private const GLib.ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_QUIT, quit},
+        { ACTION_NEW, action_new },
+        { ACTION_DELETE, action_delete},
+        { ACTION_ZOOM_OUT, action_zoom_out},
+        { ACTION_ZOOM_DEFAULT, action_zoom_default},
+        { ACTION_ZOOM_IN, action_zoom_in},
+        { ACTION_TOGGLE_SCRIBBLY, action_toggle_scribbly},
+        { ACTION_TOGGLE_ACTIONBAR, action_toggle_actionbar},
+        { ACTION_SHOW_PREFERENCES, action_show_preferences},
+        { ACTION_SHOW_MENU, quit},
+        { ACTION_SHOW_EMOTE, quit},
+        { ACTION_SAVE, action_save}
+    };
+
     public Application () {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                 application_id: Jorts.Constants.RDNN);
@@ -56,13 +87,20 @@ public class Jorts.Application : Gtk.Application {
     public override void startup () {
         debug ("Jorts startup sequence…");
         base.startup ();
+        Granite.init ();
 
-        // The localization thingamabob
-        Intl.setlocale (LocaleCategory.ALL, "");
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        Intl.textdomain (GETTEXT_PACKAGE);
-            
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.action_quit", {"<Control>Q"});
+        set_accels_for_action ("app.action_new", {"<Control>N"});
+        set_accels_for_action ("app.action_delete", {"<Control>W"});
+        set_accels_for_action ("app.action_save", {"<Control>S"});
+        set_accels_for_action ("app.action_zoom_out", {"<Control>minus", "<Control>KP_Subtract"});
+        set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0"});
+        set_accels_for_action ("app.action_zoom_in", {"<Control>plus", "<Control>KP_Add"});
+        set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
+        set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
+        set_accels_for_action ("app.action_show_preferences", {"<Control>P"});
+
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
@@ -91,59 +129,13 @@ public class Jorts.Application : Gtk.Application {
 
     /*************************************************/
     construct {
+        // The localization thingamabob
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
+        
         manager = new Jorts.NoteManager (this);
-
-        var quit_action = new SimpleAction ("quit", null);
-        add_action (quit_action);
-        set_accels_for_action ("app.quit", {"<Control>q"});
-        quit_action.activate.connect (() => {
-            manager.save_to_stash ();
-            this.quit ();
-        });
-        var new_action = new SimpleAction ("new", null);
-        add_action (new_action);
-        set_accels_for_action ("app.action_new", {"<Control>n"});
-        new_action.activate.connect (() => {
-            manager.create_note (null);
-        });
-
-        var delete_action = new SimpleAction ("delete", null);
-        add_action (delete_action);
-        set_accels_for_action ("app.action_delete", {"<Control>w"});
-
-        var save_action = new SimpleAction ("save", null);
-        add_action (save_action);
-        set_accels_for_action ("app.save", {"<Control>s"});
-        save_action.activate.connect (manager.save_to_stash);
-
-        var zoom_out = new SimpleAction ("zoom_out", null);
-        add_action (zoom_out);
-        set_accels_for_action ("app.zoom_out", { "<Control>minus", "<Control>KP_Subtract", null });
-
-        var zoom_default = new SimpleAction ("zoom_default", null);
-        add_action (zoom_default);
-        set_accels_for_action ("app.zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0", null });
-
-        var zoom_in = new SimpleAction ("zoom_in", null);
-        add_action (zoom_in);
-        set_accels_for_action ("app.zoom_in", { "<Control>plus", "<Control>KP_Add", null });
-
-        var toggle_scribbly = new SimpleAction ("toggle_scribbly", null);
-        add_action (toggle_scribbly);
-        set_accels_for_action ("app.toggle_scribbly", { "<Control>h", null });
-        toggle_scribbly.activate.connect (() => {
-            this.toggle_scribbly ();
-        });
-
-        var toggle_hidebar = new SimpleAction ("toggle_hidebar", null);
-        add_action (toggle_hidebar);
-        set_accels_for_action ("app.toggle_hidebar", { "<Control>t", null });
-        toggle_hidebar.activate.connect (this.toggle_hidebar);
-
-        var show_pref = new SimpleAction ("show_preferences", null);
-        add_action (show_pref);
-        set_accels_for_action ("app.show_preferences", { "<Control>p", null });
-        show_pref.activate.connect (on_show_pref);
     }
 
     // Clicked: Either show all windows, or rebuild from storage
@@ -159,35 +151,12 @@ public class Jorts.Application : Gtk.Application {
         }     
 	}
 
-    public void toggle_scribbly () {
-        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            gsettings.set_boolean ("scribbly-mode-active",false);
-        } else {
-            gsettings.set_boolean ("scribbly-mode-active",true);
-        }
-    }
-
-    public void toggle_hidebar () {
-        if (Application.gsettings.get_boolean ("hide-bar")) {
-            gsettings.set_boolean ("hide-bar",false);
-        } else {
-            gsettings.set_boolean ("hide-bar",true);
-        }
-    }
-
     public void show_all () {
         foreach (var window in manager.open_notes) {
             if (window.visible) {
                 window.present ();
             }
         }
-    }
-
-    public void on_show_pref () {
-        debug ("\nShowing preferences!");
-        preferences = new Jorts.PreferenceWindow (this);
-        preferences.show ();
-        preferences.present ();
     }
 
     /*************************************************/
@@ -213,7 +182,7 @@ public class Jorts.Application : Gtk.Application {
 
             case "--preferences":
                 activate ();
-                on_show_pref ();
+                action_show_preferences ();
                 break;
 
             default:
@@ -226,5 +195,53 @@ public class Jorts.Application : Gtk.Application {
     public static int main (string[] args) {
         var app = new Application ();
         return app.run (args);
+    }
+
+    private void action_new () {
+        manager.create_note ();
+    }
+
+    private void action_delete () {
+        manager.delete_note ((StickyNoteWindow)active_window);
+
+    }
+
+    private void action_zoom_out () {
+        ((StickyNoteWindow)active_window).zoom_out ();
+    }
+
+    private void action_zoom_default () {
+        ((StickyNoteWindow)active_window).zoom_default ();
+    }
+
+    private void action_zoom_in () {
+        ((StickyNoteWindow)active_window).zoom_in ();
+    }
+
+    private void action_show_preferences () {
+        debug ("\nShowing preferences!");
+        preferences = new Jorts.PreferenceWindow (this);
+        preferences.show ();
+        preferences.present ();
+    }
+
+    private void action_toggle_scribbly () {
+        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+            gsettings.set_boolean ("scribbly-mode-active",false);
+        } else {
+            gsettings.set_boolean ("scribbly-mode-active",true);
+        }
+    }
+
+    private void action_toggle_actionbar () {
+        if (Application.gsettings.get_boolean ("hide-bar")) {
+            gsettings.set_boolean ("hide-bar",false);
+        } else {
+            gsettings.set_boolean ("hide-bar",true);
+        }
+    }
+
+    private void action_save () {
+        manager.save_to_stash ();
     }
 }

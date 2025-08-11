@@ -45,30 +45,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
     public uint debounce_timer_id;
 
-    public SimpleActionGroup actions { get; construct; }
-
-    public const string ACTION_PREFIX = "app.";
-    public const string ACTION_NEW = "action_new";
-    public const string ACTION_DELETE = "action_delete";
-
-    public const string ACTION_MENU = "action_menu";
-    public const string ACTION_EMOTE = "action_emote";
-
-
-    public const string ACTION_ZOOM_OUT = "zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "zoom_default";
-    public const string ACTION_ZOOM_IN = "zoom_in";
-
-    public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
-
-    private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_NEW, action_new },
-        { ACTION_DELETE, action_delete},
-        { ACTION_ZOOM_OUT, zoom_out},
-        { ACTION_ZOOM_DEFAULT, zoom_default},
-        { ACTION_ZOOM_IN, zoom_in}
-    };
-
     /*************************************************/
     /*           Lets build a window                 */
     /*************************************************/
@@ -78,10 +54,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         debug ("New StickyNoteWindow instance: " + data.title);
 
         application = app;
-
-        var actions = new SimpleActionGroup ();
-        actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("app", actions);
 
         this.gtk_settings = Gtk.Settings.get_default ();
 
@@ -166,7 +138,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
                 _("New sticky note")
             )
         };
-        new_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_NEW;
+        new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
         new_item.add_css_class ("themedbutton");
 
         delete_item = new Gtk.Button () {
@@ -178,7 +150,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
                 _("Delete sticky note")
             )
         };
-        delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
+        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
         delete_item.add_css_class ("themedbutton");
 
 
@@ -386,16 +358,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         return data;
     }
 
-    private void action_new () {
-        ((Application)this.application).manager.create_note ();
-    }
-
-    private void action_delete () {
-        ((Application)this.application).manager.remove_note (this);
-        this.close ();
-    }
-
-    private void zoom_default () {
+    public void zoom_default () {
         this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
     }
 

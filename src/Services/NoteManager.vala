@@ -71,9 +71,10 @@ public class Jorts.NoteManager : Object {
 
 
     // Simply remove from the list of things to save, and close
-    public void remove_note (StickyNoteWindow note) {
+    public void delete_note (StickyNoteWindow note) {
             debug ("Removing a note…\n");
             open_notes.remove (note);
+            note.close ();
             this.save_to_stash ();
 	}
 
