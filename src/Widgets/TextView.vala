@@ -21,8 +21,8 @@ https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
 
 */
 
-public class Jorts.StickyView : Granite.HyperTextView {
-        public StickyView (string? content) {
+public class Jorts.TextView : Granite.HyperTextView {
+        public TextView (string? content) {
 
                 this.buffer = new Gtk.TextBuffer (null);
                 this.bottom_margin = 12;

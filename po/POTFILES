@@ -1,6 +1,6 @@
 src/Services/Utils.vala
 src/Widgets/ColorBox.vala
-src/Widgets/StickyView.vala
+src/Widgets/TextView.vala
 src/Views/PreferencesView.vala
 src/Views/PopoverView.vala
 src/Windows/PreferenceWindow.vala

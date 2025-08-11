@@ -28,7 +28,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public Gtk.Settings gtk_settings;
 
     public Gtk.EditableLabel editableheader;
-    private Jorts.StickyView view;
+    private Jorts.TextView view;
     private Gtk.HeaderBar headerbar;
     private Gtk.ActionBar actionbar;
     private Gtk.Button new_item;
@@ -120,7 +120,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         // Define the text thingy
         var scrolled = new Gtk.ScrolledWindow ();
-        view = new Jorts.StickyView (this.content);
+        view = new Jorts.TextView (this.content);
 
         scrolled.set_child (view);
 

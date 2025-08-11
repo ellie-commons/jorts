@@ -8,7 +8,7 @@ sources = files (
     'Services' / 'Themer.vala',
     'Services' / 'Utils.vala',
 
-    'Widgets' / 'StickyView.vala',
+    'Widgets' / 'TextView.vala',
     'Widgets' / 'ColorPill.vala',
     'Widgets' / 'ColorBox.vala',
 
