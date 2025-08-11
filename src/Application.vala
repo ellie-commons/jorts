@@ -64,6 +64,7 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_SHOW_MENU = "action_menu";
     public const string ACTION_SHOW_EMOTE = "action_emote";
     public const string ACTION_SAVE = "action_save";
+    public const string ACTION_FOCUS_TITLE = "action_focus_title";
 
     public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
@@ -79,7 +80,8 @@ public class Jorts.Application : Gtk.Application {
         { ACTION_SHOW_PREFERENCES, action_show_preferences},
         { ACTION_SHOW_MENU, quit},
         { ACTION_SHOW_EMOTE, quit},
-        { ACTION_SAVE, action_save}
+        { ACTION_SAVE, action_save},
+        { ACTION_FOCUS_TITLE, action_focus_title}
     };
 
     public Application () {
@@ -104,6 +106,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
         set_accels_for_action ("app.action_show_preferences", {"<Control>P"});
+        set_accels_for_action ("app.action_focus_title", {"<Control>L"});
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
@@ -261,5 +264,9 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_save () {
         manager.save_to_stash ();
+    }
+
+    private void action_focus_title () {
+        ((StickyNoteWindow)active_window).action_focus_title ();
     }
 }

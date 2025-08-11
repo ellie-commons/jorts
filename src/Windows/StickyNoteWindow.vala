@@ -428,4 +428,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         //((Application)this.application).latest_zoom = zoom;
         ((Application)this.application).manager.latest_zoom = zoom;
     }
+
+    public void action_focus_title () {
+        set_focus (editableheader);
+        editableheader.editing = true;
+    }
 }
