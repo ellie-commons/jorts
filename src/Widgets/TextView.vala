@@ -22,7 +22,7 @@ https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
 */
 
 public class Jorts.TextView : Granite.HyperTextView {
-        public TextView (string? content) {
+        public TextView () {
 
                 this.buffer = new Gtk.TextBuffer (null);
                 this.bottom_margin = 12;
@@ -32,8 +32,6 @@ public class Jorts.TextView : Granite.HyperTextView {
 
                 this.set_hexpand (true);
                 this.set_vexpand (true);
-
-                this.buffer.text = content;
                 this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
         }
 

@@ -37,6 +37,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         debug ("Showing preference window");
         Intl.setlocale ();
 
+
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("app", actions);
@@ -69,8 +70,8 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         set_titlebar (headerbar);
         set_size_request (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
         set_default_size (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
+        resizable = false;
 
-        add_css_class ("dialog");
         add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
         prefview = new Jorts.PreferencesView ();

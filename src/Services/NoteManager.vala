@@ -49,7 +49,8 @@ public class Jorts.NoteManager : Object {
 
         StickyNoteWindow note;
         if (data != null) {
-            note = new StickyNoteWindow (application, data);
+            note = new StickyNoteWindow (application);
+            note.load_data (data);
         }
         else {
 
@@ -62,9 +63,10 @@ public class Jorts.NoteManager : Object {
             random_data = Jorts.Utils.golden_sticky (random_data);
 
             random_data.zoom = this.latest_zoom;
-            note = new StickyNoteWindow (application, random_data);
+            note = new StickyNoteWindow (application);
+            note.load_data (random_data);
         }
-        open_notes.add(note);
+        open_notes.add (note);
         this.save_to_stash ();
 	}
 

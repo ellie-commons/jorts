@@ -14,6 +14,7 @@ sources = files (
 
     'Views' / 'PopoverView.vala',
     'Views' / 'PreferencesView.vala',
+    'Views' / 'NoteView.vala',
 
     'Windows' / 'PreferenceWindow.vala',    
     'Windows' / 'StickyNoteWindow.vala',

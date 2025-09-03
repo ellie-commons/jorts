@@ -6,7 +6,7 @@
  */
 
 
- public class Jorts.PopoverView : Gtk.Popover {
+ public class Jorts.PopoverView : Gtk.Box {
 
     public Jorts.ColorBox color_button_box;
     public Gtk.Button zoom_in_button;
@@ -25,13 +25,10 @@
     public signal void zoom_changed (string zoomkind);
 
     construct {
-        set_position (Gtk.PositionType.TOP);
-        set_halign (Gtk.Align.END);
-
-        var everything = new Gtk.Box (VERTICAL, 12) {
-            margin_top = 12,
-            margin_bottom = 12
-        };
+        orientation = VERTICAL;
+        spacing = 12;
+        margin_top = 12;
+        margin_bottom = 12;
 
 
         color_button_box = new Jorts.ColorBox ();
@@ -73,12 +70,9 @@
 
         /* APPENDS */
 
-        everything.append (color_button_box);
-        everything.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        everything.append (font_size_box);
-
-        set_child (everything);
-
+        append (color_button_box);
+        append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        append (font_size_box);
 
 
         /***************************************************/

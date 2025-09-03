@@ -24,194 +24,73 @@ Theme and Zoom changing are just a matter of adding and removing classes
 
 
 */
-public class Jorts.StickyNoteWindow : Gtk.Window {
+public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
     public Gtk.EditableLabel editableheader;
-    private Jorts.TextView view;
+    private Jorts.NoteView view;
     private Gtk.HeaderBar headerbar;
     private Gtk.ActionBar actionbar;
-    private Gtk.Button new_item;
-    private Gtk.Button delete_item;
     private Gtk.MenuButton emoji_button;
     private Gtk.MenuButton menu_button;
     private PopoverView popover;
 
-    public Jorts.NoteData data;
-
-    public string title_name;
     public string theme;
-    public string content;
     public int zoom;
 
-    public uint debounce_timer_id;
+    public static uint debounce_timer_id;
 
-    /*************************************************/
-    /*           Lets build a window                 */
-    /*************************************************/
 
-    public StickyNoteWindow (Gtk.Application app, NoteData data) {
+
+    public StickyNoteWindow (Gtk.Application app) {
         Intl.setlocale ();
-        debug ("New StickyNoteWindow instance: " + data.title);
+        debug ("New StickyNoteWindow instance!");
 
         application = app;
+        gtk_settings = Gtk.Settings.get_default ();
 
-        this.gtk_settings = Gtk.Settings.get_default ();
-
-
-        /*****************************************/
-        /*              LOAD NOTE                */
-        /*****************************************/
-
-        this.data = data;
-        this.title_name = data.title;
-        this.theme = data.theme;
-        this.zoom = data.zoom;
-        this.content = data.content;
-
-        title = data.title + _(" - Jorts");
-
-        this.set_default_size (
-            data.width,
-            data.height
-        );
-
-        // Rebuild the whole theming
-        this.on_theme_updated (this.theme);
-
-        // add required base classes
-        this.add_css_class ("rounded");
+        add_css_class ("rounded");
 
         if (gtk_settings.gtk_enable_animations) {
-            this.add_css_class ("animated");
+            add_css_class ("animated");
         }
+        title = "" + _(" - Jorts");
+
 
         /*****************************************/
         /*              HEADERBAR                */
         /*****************************************/
 
-        this.headerbar = new Gtk.HeaderBar ();
-        headerbar.add_css_class ("flat");
+        this.headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = false
+        };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         headerbar.add_css_class ("headertitle");
-        //header.has_subtitle = false;
 
-        //headerbar.decoration_layout = "close:";
-        headerbar.set_show_title_buttons (false);
-        headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
         // Defime the label you can edit. Which is editable.
-        editableheader = new Gtk.EditableLabel (this.title_name) {
+        editableheader = new Gtk.EditableLabel ("") {
+            xalign = 0.5f,
+            halign = Gtk.Align.CENTER,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>L"},
                 _("Click to edit the title")
-            ),
-            halign = Gtk.Align.CENTER,
-            xalign = 0.5f
+            )
         };
         editableheader.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
         headerbar.set_title_widget (editableheader);
         this.set_titlebar (headerbar);
 
+        view = new NoteView ();
 
-        /**********************************************/
-        /*              USER INTERFACE                */
-        /**********************************************/
-
-
-        // Define the text thingy
-        var scrolled = new Gtk.ScrolledWindow ();
-        view = new Jorts.TextView (this.content);
-
-        scrolled.set_child (view);
-
-
-        /*****************************************/
-        /*              ACTIONBAR                */
-        /*****************************************/
-
-        actionbar = new Gtk.ActionBar () {
-            hexpand = true
-        };
-
-        new_item = new Gtk.Button () {
-            icon_name = "list-add-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>n"},
-                _("New sticky note")
-            )
-        };
-        new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
-        new_item.add_css_class ("themedbutton");
-
-        delete_item = new Gtk.Button () {
-            icon_name = "edit-delete-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>w"},
-                _("Delete sticky note")
-            )
-        };
-        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
-        delete_item.add_css_class ("themedbutton");
-
-
-
-        var emojichooser_popover = new Gtk.EmojiChooser ();
-
-        emoji_button = new Gtk.MenuButton () {
-            icon_name = Jorts.Utils.random_emote (),
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>period"},
-                _("Insert emoji")
-            )
-        };
-        emoji_button.add_css_class ("themedbutton");
-        emoji_button.popover = emojichooser_popover;
-
-        popover = new PopoverView () {
-            theme = theme,
-            zoom = zoom
-        };
-        popover.color_button_box.set_toggles (theme);
-
-        set_zoom (data.zoom);
-
-
-        menu_button = new Gtk.MenuButton () {
-            icon_name = "open-menu-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>M"},
-                _("Preferences for this sticky note")
-            )
-        };
-        menu_button.direction = Gtk.ArrowType.UP;
-        menu_button.add_css_class ("themedbutton");
-        menu_button.popover = popover;
-
-        actionbar.pack_start (new_item);
-        actionbar.pack_start (delete_item);
-        actionbar.pack_end (menu_button);
-        actionbar.pack_end (emoji_button);
-
-        // Define the grid 
-        var mainbox = new Gtk.Box (Gtk.Orientation.VERTICAL,0);
-        mainbox.append (scrolled);
-
-        var handle = new Gtk.WindowHandle () {
-            child = actionbar
-        };
-        mainbox.append (handle);
-
-        set_child (mainbox);
+        set_child (view);
         set_focus (view);
+
+
+
+
         on_scribbly_changed ();
+
 
 
         /***************************************************/
@@ -222,22 +101,16 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         // Save when title or text have changed
         editableheader.changed.connect (on_editable_changed);
-        view.buffer.changed.connect (on_buffer_changed);
+        view.textview.buffer.changed.connect (on_buffer_changed);
 
-        // Display the current zoom level when the popover opens
-        // Else it does not get set
-        emojichooser_popover.show.connect (on_emoji_popover);
-
-        // User chose emoji, add it to buffer
-        emojichooser_popover.emoji_picked.connect ((emoji) => {
-            view.buffer.insert_at_cursor (emoji, -1);
-        });
+        /* LETS GO */
+        show ();
 
         // The settings popover tells us a new theme has been chosen!
-        this.popover.theme_changed.connect (on_theme_updated);
+        //this.popover.theme_changed.connect (on_theme_updated);
 
         // The settings popover tells us a new zoom has been chosen!
-        this.popover.zoom_changed.connect (on_zoom_changed);
+        //this.popover.zoom_changed.connect (on_zoom_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -245,17 +118,8 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         //The application tells us the squiffly state has changed!
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
-        //The application tells us the show/hide bar state has changed!
-        Application.gsettings.bind (
-            "hide-bar",
-            actionbar,
-            "revealed",
-            SettingsBindFlags.INVERT_BOOLEAN);
-
         gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
 
-        /* LETS GO */
-        show ();
 
     } // END OF MAIN CONSTRUCT
 
@@ -316,20 +180,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
             } else {
                 this.add_css_class ("scribbly");
             }
-        } else {
+        } else if ("scribbly" in this.css_classes) {
             this.remove_css_class ("scribbly");
         }
-    }
-
-    // Randomize the button emoji when clicked
-    public void on_emoji_popover () {
-        debug ("Emote requested!");
-
-        emoji_button.set_icon_name (
-            Jorts.Utils.random_emote (
-                emoji_button.get_icon_name ()
-            )
-        );
     }
 
     // Called when the window is-active property changes
@@ -349,7 +202,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
 
-        this.content = this.view.get_content ();
+        var content = this.view.textview.buffer.text;
 
         int width ; int height;
         this.get_default_size (out width, out height);
@@ -357,12 +210,20 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         var data = new NoteData (
                 editableheader.text,
             this.theme,
-            this.content,
+            content,
             this.zoom,
                 width,
                 height);
 
         return data;
+    }
+
+    public void load_data (NoteData data) {
+        set_default_size (data.width, data.height);
+        editableheader.text = data.title;
+        view.textview.buffer.text = data.content;
+        set_zoom (data.zoom);
+        on_theme_updated (data.theme);
     }
 
     public void zoom_default () {
@@ -377,7 +238,10 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
         this.gtk_settings.gtk_theme_name = stylesheet;
 
-        remove_css_class (this.theme);
+        //  if (theme in css_classes) {
+        //  remove_css_class (this.theme);
+        //  }
+
         this.theme = theme;
         add_css_class (this.theme);
 
@@ -429,7 +293,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
         // Reflect the number in the popover
-        this.popover.on_zoom_changed (zoom);
+        //this.popover.on_zoom_changed (zoom);
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
