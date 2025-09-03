@@ -26,7 +26,7 @@ public class Jorts.ColorBox : Gtk.Box {
     private Jorts.ColorPill color_button_cocoa;
     private Jorts.ColorPill color_button_slate;
 
-    construct {
+    public ColorBox (string? theme) {
         orientation = Gtk.Orientation.HORIZONTAL;
 
         accessible_role = Gtk.AccessibleRole.LIST;
@@ -57,16 +57,16 @@ public class Jorts.ColorBox : Gtk.Box {
             color_button_slate.set_group (color_button_blueberry);
 
             // Emit a signal when a button is toggled
-            color_button_blueberry.toggled.connect (() => {this.theme_changed ("BLUEBERRY");});
-            color_button_orange.toggled.connect (() => {this.theme_changed ("ORANGE");});
-            color_button_mint.toggled.connect (() => {this.theme_changed ("MINT");});
-            color_button_banana.toggled.connect (() => {this.theme_changed ("BANANA");});
-            color_button_lime.toggled.connect (() => {this.theme_changed ("LIME");});
-            color_button_strawberry.toggled.connect (() => {this.theme_changed ("STRAWBERRY");});
-            color_button_bubblegum.toggled.connect (() => {this.theme_changed ("BUBBLEGUM");});
-            color_button_grape.toggled.connect (() => {this.theme_changed ("GRAPE");});
-            color_button_cocoa.toggled.connect (() => {this.theme_changed ("COCOA");});
-            color_button_slate.toggled.connect (() => {this.theme_changed ("SLATE");});
+            color_button_blueberry.toggled.connect (() => {theme_changed ("BLUEBERRY");});
+            color_button_orange.toggled.connect (() => {theme_changed ("ORANGE");});
+            color_button_mint.toggled.connect (() => {theme_changed ("MINT");});
+            color_button_banana.toggled.connect (() => {theme_changed ("BANANA");});
+            color_button_lime.toggled.connect (() => {theme_changed ("LIME");});
+            color_button_strawberry.toggled.connect (() => {theme_changed ("STRAWBERRY");});
+            color_button_bubblegum.toggled.connect (() => {theme_changed ("BUBBLEGUM");});
+            color_button_grape.toggled.connect (() => {theme_changed ("GRAPE");});
+            color_button_cocoa.toggled.connect (() => {theme_changed ("COCOA");});
+            color_button_slate.toggled.connect (() => {theme_changed ("SLATE");});
 
             append (color_button_blueberry);
             append (color_button_mint);

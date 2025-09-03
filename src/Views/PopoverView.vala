@@ -6,16 +6,15 @@
  */
 
 
- public class Jorts.PopoverView : Gtk.Box {
+ public class Jorts.PopoverView : Gtk.Popover {
 
     public Jorts.ColorBox color_button_box;
     public Gtk.Button zoom_in_button;
     public Gtk.Button zoom_default_button;
     public Gtk.Button zoom_out_button;
 
-    public string theme {get; set;}
-    public int zoom {get; set;}
-
+    public string theme;
+    public int zoom;
 
         /* THEME SELECTION */
     public string selected;
@@ -24,14 +23,16 @@
     /* FONT SELECTION */
     public signal void zoom_changed (string zoomkind);
 
-    construct {
-        orientation = VERTICAL;
-        spacing = 12;
-        margin_top = 12;
-        margin_bottom = 12;
+    public PopoverView (string? theme, int? zoom) {
+        position = Gtk.PositionType.TOP;
+        halign = Gtk.Align.END;
 
+        var view = new Gtk.Box (VERTICAL, 12) {
+            margin_top = 12,
+            margin_bottom = 12
+        };
 
-        color_button_box = new Jorts.ColorBox ();
+        color_button_box = new Jorts.ColorBox (theme);
 
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
@@ -55,7 +56,6 @@
                 )
             };
 
-
         var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
             homogeneous = true,
             hexpand = true,
@@ -70,23 +70,22 @@
 
         /* APPENDS */
 
-        append (color_button_box);
-        append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        append (font_size_box);
+        view.append (color_button_box);
+        view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        view.append (font_size_box);
 
+        child = view;
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        color_button_box.theme_changed.connect ((selected) => {this.theme_changed (selected);});
+        color_button_box.theme_changed.connect ((selected) => {theme_changed (selected);});
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
         zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
         zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
         zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
-
-
     }
 
 

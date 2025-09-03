@@ -14,7 +14,6 @@
         public Gtk.EmojiChooser emojichooser_popover;
 
         public Gtk.MenuButton menu_button;
-        public Jorts.PopoverView popover;
 
     construct {
         orientation = VERTICAL;
@@ -66,13 +65,9 @@
         emoji_button.add_css_class ("themedbutton");
         emoji_button.popover = emojichooser_popover;
 
-        var popoverview = new PopoverView ();
-        //popover.color_button_box.set_toggles (this.theme);
-        var popover = new Gtk.Popover () {
-            child = popoverview,
-            position = Gtk.PositionType.TOP,
-            halign = Gtk.Align.END
-        };
+
+
+
 
         menu_button = new Gtk.MenuButton () {
             icon_name = "open-menu-symbolic",
@@ -85,8 +80,6 @@
         };
         menu_button.direction = Gtk.ArrowType.UP;
         menu_button.add_css_class ("themedbutton");
-        //menu_button.popover = popover;
-
 
         actionbar = new Gtk.ActionBar () {
             hexpand = true

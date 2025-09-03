@@ -39,8 +39,6 @@ public class Jorts.NoteManager : Object {
         }
     }
 
-
-
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
@@ -49,8 +47,7 @@ public class Jorts.NoteManager : Object {
 
         StickyNoteWindow note;
         if (data != null) {
-            note = new StickyNoteWindow (application);
-            note.load_data (data);
+            note = new StickyNoteWindow (application, data);
         }
         else {
 
@@ -63,8 +60,7 @@ public class Jorts.NoteManager : Object {
             random_data = Jorts.Utils.golden_sticky (random_data);
 
             random_data.zoom = this.latest_zoom;
-            note = new StickyNoteWindow (application);
-            note.load_data (random_data);
+            note = new StickyNoteWindow (application, random_data);
         }
         open_notes.add (note);
         this.save_to_stash ();

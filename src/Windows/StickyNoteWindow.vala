@@ -30,7 +30,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.EditableLabel editableheader;
     private Jorts.NoteView view;
     private Gtk.HeaderBar headerbar;
-    private Gtk.ActionBar actionbar;
+
     private Gtk.MenuButton emoji_button;
     private Gtk.MenuButton menu_button;
     private PopoverView popover;
@@ -42,7 +42,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
 
 
-    public StickyNoteWindow (Gtk.Application app) {
+    public StickyNoteWindow (Gtk.Application app, NoteData? data = null) {
         Intl.setlocale ();
         debug ("New StickyNoteWindow instance!");
 
@@ -83,14 +83,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         view = new NoteView ();
 
+        popover = new Jorts.PopoverView (theme, zoom);
+        view.menu_button.popover = popover;
+
         set_child (view);
         set_focus (view);
 
-
-
-
         on_scribbly_changed ();
 
+        if (data != (null)) {
+            load_data (data);
+        };
 
 
         /***************************************************/
@@ -107,10 +110,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         show ();
 
         // The settings popover tells us a new theme has been chosen!
-        //this.popover.theme_changed.connect (on_theme_updated);
+        popover.theme_changed.connect (on_theme_updated);
 
         // The settings popover tells us a new zoom has been chosen!
-        //this.popover.zoom_changed.connect (on_zoom_changed);
+        popover.zoom_changed.connect (on_zoom_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -119,8 +122,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
         gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
-
-
     } // END OF MAIN CONSTRUCT
 
 
@@ -221,6 +222,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public void load_data (NoteData data) {
         set_default_size (data.width, data.height);
         editableheader.text = data.title;
+        title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
         set_zoom (data.zoom);
         on_theme_updated (data.theme);
@@ -237,10 +239,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
         this.gtk_settings.gtk_theme_name = stylesheet;
+        print (stylesheet);
 
-        //  if (theme in css_classes) {
-        //  remove_css_class (this.theme);
-        //  }
+        if (this.theme in css_classes) {
+            remove_css_class (this.theme);
+        }
 
         this.theme = theme;
         add_css_class (this.theme);
@@ -264,7 +267,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         } else if (zoomkind == "reset") {
             this.set_zoom (100);
         }
-        ((Application)this.application).manager.save_to_stash ();
+        ((Jorts.Application)this.application).manager.save_to_stash ();
     }
 
     // First check an increase doesnt go above limit
@@ -293,11 +296,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
         // Reflect the number in the popover
-        //this.popover.on_zoom_changed (zoom);
+        popover.on_zoom_changed (zoom);
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
-        ((Application)this.application).manager.latest_zoom = zoom;
+        ((Jorts.Application)this.application).manager.latest_zoom = zoom;
     }
 
     public void action_focus_title () {
