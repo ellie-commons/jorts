@@ -42,7 +42,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
 
 
-    public StickyNoteWindow (Gtk.Application app, NoteData? data = null) {
+    public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("New StickyNoteWindow instance!");
 
@@ -83,17 +83,25 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         view = new NoteView ();
 
-        popover = new Jorts.PopoverView (theme, zoom);
+        popover = new Jorts.PopoverView ();
         view.menu_button.popover = popover;
 
         set_child (view);
         set_focus (view);
 
-        on_scribbly_changed ();
 
-        if (data != (null)) {
-            load_data (data);
-        };
+        /****************************************/
+        /*              LOADING                 */
+        /****************************************/
+        on_scribbly_changed ();
+ 
+        set_default_size (data.width, data.height);
+        editableheader.text = data.title;
+        title = editableheader.text + _(" - Jorts");
+        view.textview.buffer.text = data.content;
+        set_zoom (data.zoom);
+        on_theme_updated (data.theme);
+        popover.color_button_box.set_toggles (data.theme);
 
 
         /***************************************************/
@@ -217,15 +225,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 height);
 
         return data;
-    }
-
-    public void load_data (NoteData data) {
-        set_default_size (data.width, data.height);
-        editableheader.text = data.title;
-        title = editableheader.text + _(" - Jorts");
-        view.textview.buffer.text = data.content;
-        set_zoom (data.zoom);
-        on_theme_updated (data.theme);
     }
 
     public void zoom_default () {

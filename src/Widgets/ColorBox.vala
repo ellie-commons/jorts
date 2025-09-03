@@ -26,7 +26,7 @@ public class Jorts.ColorBox : Gtk.Box {
     private Jorts.ColorPill color_button_cocoa;
     private Jorts.ColorPill color_button_slate;
 
-    public ColorBox (string? theme) {
+    public ColorBox () {
         orientation = Gtk.Orientation.HORIZONTAL;
 
         accessible_role = Gtk.AccessibleRole.LIST;

@@ -23,7 +23,7 @@
     /* FONT SELECTION */
     public signal void zoom_changed (string zoomkind);
 
-    public PopoverView (string? theme, int? zoom) {
+    construct {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
 
@@ -32,7 +32,7 @@
             margin_bottom = 12
         };
 
-        color_button_box = new Jorts.ColorBox (theme);
+        color_button_box = new Jorts.ColorBox ();
 
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
