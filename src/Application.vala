@@ -45,7 +45,7 @@ public class Jorts.Application : Gtk.Application {
     public Jorts.NoteManager manager;
 
     // There can be only one
-    private static Jorts.PreferenceWindow preferences;
+    private static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
     private bool new_note = false;
