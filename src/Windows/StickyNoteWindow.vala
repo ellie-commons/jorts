@@ -27,12 +27,9 @@ Theme and Zoom changing are just a matter of adding and removing classes
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
+    private Gtk.HeaderBar headerbar;
     public Gtk.EditableLabel editableheader;
     private Jorts.NoteView view;
-    private Gtk.HeaderBar headerbar;
-
-    private Gtk.MenuButton emoji_button;
-    private Gtk.MenuButton menu_button;
     private PopoverView popover;
 
     public string theme;
@@ -40,13 +37,37 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     public static uint debounce_timer_id;
 
+    public const string ACTION_PREFIX = "app.";
+    public const string ACTION_DELETE = "action_delete";
+    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
+    public const string ACTION_SHOW_MENU = "action_show_menu";
+    public const string ACTION_FOCUS_TITLE = "action_focus_title";
+    public const string ACTION_ZOOM_OUT = "action_zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    public const string ACTION_ZOOM_IN = "action_zoom_in";
 
+    public static Gee.MultiMap<string, string> action_accelerators;
+
+    private const GLib.ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_DELETE, action_delete},
+        { ACTION_SHOW_EMOJI, action_show_emoji},
+        { ACTION_SHOW_MENU, action_show_menu},
+        { ACTION_FOCUS_TITLE, action_focus_title},
+        { ACTION_ZOOM_OUT, action_zoom_out},
+        { ACTION_ZOOM_DEFAULT, action_zoom_default},
+        { ACTION_ZOOM_IN, action_zoom_in},
+    };
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("New StickyNoteWindow instance!");
 
         application = app;
+
+        var actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+        insert_action_group ("app", actions);
+
         gtk_settings = Gtk.Settings.get_default ();
 
         add_css_class ("rounded");
@@ -82,6 +103,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.set_titlebar (headerbar);
 
         view = new NoteView ();
+        view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
 
         popover = new Jorts.PopoverView ();
         view.menu_button.popover = popover;
@@ -296,10 +318,26 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     public void action_show_emoji () {
-        emoji_button.activate ();
+        view.emoji_button.activate ();
     }
 
     public void action_show_menu () {
-        menu_button.activate ();
+        view.menu_button.activate ();
+    }
+
+    private void action_delete () {
+        ((Jorts.Application)this.application).manager.delete_note (this);
+    }
+
+    private void action_zoom_out () {
+        zoom_out ();
+    }
+
+    private void action_zoom_default () {
+        zoom_default ();
+    }
+
+    private void action_zoom_in () {
+        zoom_in ();
     }
 }

@@ -54,34 +54,22 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
     public const string ACTION_NEW = "action_new";
-    public const string ACTION_DELETE = "action_delete";
-    public const string ACTION_ZOOM_OUT = "action_zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    public const string ACTION_ZOOM_IN = "action_zoom_in";
     public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
     public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
     public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";
-    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    public const string ACTION_SHOW_MENU = "action_show_menu";
     public const string ACTION_SAVE = "action_save";
-    public const string ACTION_FOCUS_TITLE = "action_focus_title";
 
     public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_QUIT, quit},
         { ACTION_NEW, action_new },
-        { ACTION_DELETE, action_delete},
-        { ACTION_ZOOM_OUT, action_zoom_out},
-        { ACTION_ZOOM_DEFAULT, action_zoom_default},
-        { ACTION_ZOOM_IN, action_zoom_in},
         { ACTION_TOGGLE_SCRIBBLY, action_toggle_scribbly},
         { ACTION_TOGGLE_ACTIONBAR, action_toggle_actionbar},
         { ACTION_SHOW_PREFERENCES, action_show_preferences},
-        { ACTION_SHOW_EMOJI, action_show_emoji},
-        { ACTION_SHOW_MENU, action_show_menu},
+
         { ACTION_SAVE, action_save},
-        { ACTION_FOCUS_TITLE, action_focus_title}
+
     };
 
     public Application () {
@@ -224,23 +212,6 @@ public class Jorts.Application : Gtk.Application {
         manager.create_note ();
     }
 
-    private void action_delete () {
-        manager.delete_note ((StickyNoteWindow)active_window);
-
-    }
-
-    private void action_zoom_out () {
-        ((StickyNoteWindow)active_window).zoom_out ();
-    }
-
-    private void action_zoom_default () {
-        ((StickyNoteWindow)active_window).zoom_default ();
-    }
-
-    private void action_zoom_in () {
-        ((StickyNoteWindow)active_window).zoom_in ();
-    }
-
     private void action_show_preferences () {
         debug ("\nShowing preferences!");
         preferences = new Jorts.PreferenceWindow (this);
@@ -266,17 +237,5 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_save () {
         manager.save_to_stash ();
-    }
-
-    private void action_focus_title () {
-        ((StickyNoteWindow)active_window).action_focus_title ();
-    }
-
-    private void action_show_emoji () {
-        ((StickyNoteWindow)active_window).action_show_emoji ();
-    }
-
-    private void action_show_menu () {
-        ((StickyNoteWindow)active_window).action_show_menu ();
     }
 }

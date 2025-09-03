@@ -20,15 +20,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
     Jorts.PreferencesView prefview;
 
-    public const string ACTION_PREFIX = "app.";
-    public const string ACTION_NEW = "action_new";
-
-    public static Gee.MultiMap<string, string> action_accelerators;
-
-    private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_NEW, action_new }
-    };
-
     public PreferenceWindow (Gtk.Application app) {
         Object (application: app);
     }
@@ -36,11 +27,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
     construct {
         debug ("Showing preference window");
         Intl.setlocale ();
-
-
-        var actions = new SimpleActionGroup ();
-        actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("app", actions);
 
         var gtk_settings = Gtk.Settings.get_default ();
 
@@ -99,10 +85,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
             SettingsBindFlags.DEFAULT);
 
         prefview.reset_button.clicked.connect (on_reset);
-    }
-
-    private void action_new () {
-        ((Application)this.application).manager.create_note (null);
     }
 
     private void on_reset () {

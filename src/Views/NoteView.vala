@@ -10,6 +10,8 @@
         public Jorts.TextView textview;
         public Gtk.ActionBar actionbar;
 
+        public Gtk.Button delete_item;
+
         public Gtk.MenuButton emoji_button;
         public Gtk.EmojiChooser emojichooser_popover;
 
@@ -37,7 +39,7 @@
         new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
         new_item.add_css_class ("themedbutton");
 
-        var delete_item = new Gtk.Button () {
+        delete_item = new Gtk.Button () {
             icon_name = "edit-delete-symbolic",
             width_request = 32,
             height_request = 32,
@@ -46,7 +48,6 @@
                 _("Delete sticky note")
             )
         };
-        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
         delete_item.add_css_class ("themedbutton");
 
 
