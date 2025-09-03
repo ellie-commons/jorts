@@ -244,11 +244,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     // Switches stylesheet
     // First use appropriate stylesheet, Then switch the theme classes
     private void on_theme_updated (string theme) {
-        debug ("Updating theme!");
+        debug ("Updating theme to %s".printf (theme));
 
         var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
         this.gtk_settings.gtk_theme_name = stylesheet;
-        print (stylesheet);
 
         if (this.theme in css_classes) {
             remove_css_class (this.theme);

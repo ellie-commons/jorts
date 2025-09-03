@@ -34,7 +34,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         // we have to revert to default when this one is focused
         this.notify["is-active"].connect (() => {
             if (this.is_active) {
-                //gtk_settings.gtk_theme_name = Application.system_accent;
                 gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
             }
         });
@@ -50,8 +49,9 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         var headerbar = new Gtk.HeaderBar () {
             title_widget = titlelabel,
-            show_title_buttons = true
+            show_title_buttons = false
         };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
 
         set_titlebar (headerbar);
         set_size_request (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
@@ -84,15 +84,16 @@ public class Jorts.PreferenceWindow : Gtk.Window {
             prefview.hidebar_toggle, "active",
             SettingsBindFlags.DEFAULT);
 
-        prefview.reset_button.clicked.connect (on_reset);
+        //prefview.reset_button.clicked.connect (on_reset);
+        prefview.close_button.clicked.connect (() => {this.close ();});
     }
 
-    private void on_reset () {
+/*      private void on_reset () {
         debug ("Resetting settings…");
 
         string[] keys = {"scribbly-mode-active", "hide-bar"};
         foreach (var key in keys) {
             Application.gsettings.reset (key);
         }
-    }
+    }  */
 }

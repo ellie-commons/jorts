@@ -8,13 +8,14 @@
  public class Jorts.PreferencesView : Gtk.Box {
     public Gtk.Switch scribbly_toggle;
     public Gtk.Switch hidebar_toggle;
-    public Gtk.Button reset_button;
+    //public Gtk.Button reset_button;
     private Granite.Toast toast;
+    public Gtk.Button close_button;
 
     construct {
         orientation = VERTICAL;
-        margin_bottom = 6;
-        margin_top = 6;
+        margin_top = 12;
+        margin_bottom = 12;
         margin_start = 12;
         margin_end = 12;
 
@@ -26,12 +27,12 @@
 
             // the box with all the settings
             var settingsbox = new Gtk.Box (VERTICAL, 24) {
-                margin_bottom = 6,
                 margin_top = 6,
                 margin_start = 6,
                 margin_end = 6,
                 hexpand = true,
-                vexpand = true
+                vexpand = true,
+                valign = Gtk.Align.START
             };
 
                 /*************************************************/
@@ -150,7 +151,11 @@
 
             /*************************************************/
             // Bar at the bottom
-            var actionbar = new Gtk.ActionBar ();
+            var actionbar = new Gtk.CenterBox () {
+                margin_start = 6,
+                margin_end = 6,
+                valign = Gtk.Align.END
+            };
             actionbar.set_hexpand (true);
             actionbar.set_vexpand (false);
 
@@ -159,18 +164,23 @@
                 Jorts.Constants.DONATE_LINK,
                 _("Support us!")
             );
-            actionbar.pack_start (support_button);
+            actionbar.start_widget = support_button;
 
             // Reset
-            reset_button = new Gtk.Button ();
-            reset_button.set_label ( _("Reset to Default"));
-            reset_button.tooltip_markup = (_("Reset all settings to defaults"));
-            actionbar.pack_end (reset_button);
+            //reset_button = new Gtk.Button ();
+            //reset_button.set_label ( _("Reset to Default"));
+            //reset_button.tooltip_markup = (_("Reset all settings to defaults"));
+            //actionbar.pack_end (reset_button);
 
-            //  var close_button = new Gtk.Button();
-            //  close_button.set_label( _("Close"));
-            //  close_button.clicked.connect(() => {this.close();});
-            //  actionbar.pack_end (close_button);
+            close_button = new Gtk.Button () {
+                width_request = 96,
+                label = _("Close"),
+                tooltip_markup = Granite.markup_accel_tooltip (
+                    {"<Alt>F4"},
+                    _("Close preferences")
+                )
+            };
+            actionbar.end_widget = close_button;
 
             append (settingsbox);
             append (actionbar);
