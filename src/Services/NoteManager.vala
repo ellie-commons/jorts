@@ -10,10 +10,9 @@ public class Jorts.NoteManager : Object {
 
     public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
 	public int latest_zoom;
-
     public Gtk.Application application;
 
-    public NoteManager (Gtk.Application app) {
+    public NoteManager (Jorts.Application app) {
         this.application = app;
     }
 
@@ -37,6 +36,8 @@ public class Jorts.NoteManager : Object {
             var now = new DateTime.now_utc ().to_string () ;
             Application.gsettings.set_string ("last-backup", now);
         }
+
+        Gtk.Settings.get_default ().notify["enable-animations"].connect (on_reduceanimation_changed);
     }
 
     // Create new instances of StickyNoteWindow
@@ -66,8 +67,6 @@ public class Jorts.NoteManager : Object {
         this.save_to_stash ();
 	}
 
-
-
     // Simply remove from the list of things to save, and close
     public void delete_note (StickyNoteWindow note) {
             debug ("Removing a note…\n");
@@ -85,5 +84,23 @@ public class Jorts.NoteManager : Object {
         print ("\nSaved " + open_notes.size.to_string () + "!");
     }
 
+      // Called when the window is-active property changes
+    public void on_reduceanimation_changed () {
+        debug ("Reduce animation changed!");
+
+        if (Gtk.Settings.get_default ().gtk_enable_animations) {
+            foreach (var window in open_notes) {
+                window.add_css_class ("animated");
+            }
+
+        } else {
+            foreach (var window in open_notes) {
+                // If we remove without checking we get a critical
+                if ("animated" in window.css_classes) {
+                    window.remove_css_class ("animated");
+                }
+            }
+        }
+    }
 
 }

@@ -129,7 +129,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         //The application tells us the squiffly state has changed!
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
-        gtk_settings.notify["enable-animations"].connect (on_reduceanimation_changed);
     } // END OF MAIN CONSTRUCT
 
 
@@ -191,17 +190,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             }
         } else if ("scribbly" in this.css_classes) {
             this.remove_css_class ("scribbly");
-        }
-    }
-
-    // Called when the window is-active property changes
-    public void on_reduceanimation_changed () {
-        debug ("Reduce animation changed!");
-
-        if (gtk_settings.gtk_enable_animations) {
-            this.add_css_class ("animated");
-        } else {
-            this.remove_css_class ("animated");
         }
     }
 
