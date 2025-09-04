@@ -115,6 +115,10 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
+        preferences = new Jorts.PreferenceWindow () {
+            hide_on_close = true
+        };
+
         // build all the stylesheets
         Jorts.Themer.init_all_themes ();
     }
@@ -142,7 +146,11 @@ public class Jorts.Application : Gtk.Application {
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
         if (manager.open_notes.size > 0) {
-            show_all ();
+            foreach (var window in manager.open_notes) {
+                if (window.visible) {
+                    window.present ();
+                }
+            }
         } else {
             manager.init_all_notes ();
         }
@@ -156,16 +164,14 @@ public class Jorts.Application : Gtk.Application {
             action_show_preferences ();
             show_pref = false;
         }
-	}
 
-    public void show_all () {
-        foreach (var window in manager.open_notes) {
-            if (window.visible) {
-                window.present ();
+        this.window_removed.connect (() => {
+            if (get_windows ().length () == 0) {
+                print ("No sticky note open, quitting");
+                quit ();
             }
-        }
-    }
-
+        });
+	}
 
     public override int command_line (ApplicationCommandLine command_line) {
         debug ("Parsing commandline arguments...");
@@ -214,7 +220,6 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_show_preferences () {
         debug ("\nShowing preferences!");
-        preferences = new Jorts.PreferenceWindow (this);
         preferences.show ();
         preferences.present ();
     }

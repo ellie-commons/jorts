@@ -20,10 +20,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
     Jorts.PreferencesView prefview;
 
-    public PreferenceWindow (Gtk.Application app) {
-        Object (application: app);
-    }
-
     construct {
         debug ("Showing preference window");
         Intl.setlocale ();
@@ -85,7 +81,7 @@ public class Jorts.PreferenceWindow : Gtk.Window {
             SettingsBindFlags.DEFAULT);
 
         //prefview.reset_button.clicked.connect (on_reset);
-        prefview.close_button.clicked.connect (() => {this.close ();});
+        prefview.close_button.clicked.connect (() => {close ();});
     }
 
 /*      private void on_reset () {
