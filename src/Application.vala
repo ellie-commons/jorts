@@ -229,19 +229,13 @@ public class Jorts.Application : Gtk.Application {
     }
 
     private void action_toggle_scribbly () {
-        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            gsettings.set_boolean ("scribbly-mode-active",false);
-        } else {
-            gsettings.set_boolean ("scribbly-mode-active",true);
-        }
+        var current = Application.gsettings.get_boolean ("scribbly-mode-active")
+        gsettings.set_boolean ("scribbly-mode-active", !current);
     }
 
     private void action_toggle_actionbar () {
-        if (Application.gsettings.get_boolean ("hide-bar")) {
-            gsettings.set_boolean ("hide-bar",false);
-        } else {
-            gsettings.set_boolean ("hide-bar",true);
-        }
+        var current = Application.gsettings.get_boolean ("hide-bar");
+        gsettings.set_boolean ("hide-bar", !current);
     }
 
     private void action_save () {
