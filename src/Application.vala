@@ -50,6 +50,7 @@ public class Jorts.Application : Gtk.Application {
     // Used for commandline option handling
     private bool new_note = false;
     private bool show_pref = false;
+    private bool reset_settings = false;
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
@@ -167,6 +168,11 @@ public class Jorts.Application : Gtk.Application {
             show_pref = false;
         }
 
+        if (reset_settings) {
+            action_reset_settings ();
+            reset_settings = false;
+        }
+
         /* Quit if all sticky notes are closed and preferences arent shown */
         this.window_removed.connect (() => {
             if ((get_windows ().length () <= 1) && (preferences.hidden)) {
@@ -179,7 +185,7 @@ public class Jorts.Application : Gtk.Application {
     public override int command_line (ApplicationCommandLine command_line) {
         debug ("Parsing commandline arguments...");
 
-        OptionEntry[] options = new OptionEntry[2];
+        OptionEntry[] options = new OptionEntry[3];
         options[0] = {
             "new-note", 0, 0, OptionArg.NONE,
             ref new_note, _("Create a new note"), null
@@ -187,6 +193,11 @@ public class Jorts.Application : Gtk.Application {
         options[1] = {
             "preferences", 0, 0, OptionArg.NONE,
             ref show_pref, _("Show preferences"), null
+        };
+
+        options[2] = {
+            "reset-settings", 0, 0, OptionArg.NONE,
+            ref reset_settings, _("Reset all settings"), null
         };
 
         // We have to make an extra copy of the array, since .parse assumes
@@ -240,5 +251,13 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_save () {
         manager.save_to_stash ();
+    }
+
+    private void action_reset_settings () {
+        debug ("Resetting settings…");
+        string[] keys = {"scribbly-mode-active", "hide-bar"};
+        foreach (var key in keys) {
+            gsettings.reset (key);
+        }
     }
 }
