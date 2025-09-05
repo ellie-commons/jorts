@@ -69,7 +69,6 @@
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
         /* APPENDS */
-
         view.append (color_button_box);
         view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         view.append (font_size_box);
@@ -98,7 +97,4 @@
         var label = _("%d%%").printf (zoom);
         zoom_default_button.set_label (label);
     }
-
-
-
 }

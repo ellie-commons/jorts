@@ -1,8 +1,9 @@
-src/Services/Utils.vala
-src/Widgets/ColorBox.vala
+src/Views/NoteView.vala
 src/Widgets/TextView.vala
-src/Views/PreferencesView.vala
 src/Views/PopoverView.vala
-src/Windows/PreferenceWindow.vala
+src/Widgets/ColorBox.vala
+src/Views/PreferencesView.vala
 src/Windows/StickyNoteWindow.vala
+src/Windows/PreferenceWindow.vala
 src/Application.vala
+src/Services/Utils.vala
