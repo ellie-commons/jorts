@@ -44,8 +44,8 @@ public class Jorts.Application : Gtk.Application {
     public static GLib.Settings gsettings;
     public Jorts.NoteManager manager;
 
-    // There can be only one
-    private static Jorts.PreferenceWindow? preferences;
+    // There can be only one. It is never closed, only hidden.
+    private static Jorts.PreferenceWindow preferences;
 
     // Used for commandline option handling
     private bool new_note = false;
@@ -68,9 +68,7 @@ public class Jorts.Application : Gtk.Application {
         { ACTION_TOGGLE_SCRIBBLY, action_toggle_scribbly},
         { ACTION_TOGGLE_ACTIONBAR, action_toggle_actionbar},
         { ACTION_SHOW_PREFERENCES, action_show_preferences},
-
         { ACTION_SAVE, action_save},
-
     };
 
     public Application () {
@@ -116,6 +114,7 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
+        // ONLY ONE.
         preferences = new Jorts.PreferenceWindow () {
             hide_on_close = true
         };
@@ -158,20 +157,9 @@ public class Jorts.Application : Gtk.Application {
             manager.init_all_notes ();
         }
 
-        if (new_note) {
-            manager.create_note ();
-            new_note = false;
-        }
-
-        if (show_pref) {
-            action_show_preferences ();
-            show_pref = false;
-        }
-
-        if (reset_settings) {
-            action_reset_settings ();
-            reset_settings = false;
-        }
+        if (new_note) {manager.create_note (); new_note = false;}
+        if (show_pref) {action_show_preferences (); show_pref = false;}
+        if (reset_settings) {action_reset_settings (); reset_settings = false;}
 
         /* Quit if all sticky notes are closed and preferences arent shown */
         this.window_removed.connect (() => {
@@ -186,19 +174,9 @@ public class Jorts.Application : Gtk.Application {
         debug ("Parsing commandline arguments...");
 
         OptionEntry[] options = new OptionEntry[3];
-        options[0] = {
-            "new-note", 0, 0, OptionArg.NONE,
-            ref new_note, _("Create a new note"), null
-        };
-        options[1] = {
-            "preferences", 0, 0, OptionArg.NONE,
-            ref show_pref, _("Show preferences"), null
-        };
-
-        options[2] = {
-            "reset-settings", 0, 0, OptionArg.NONE,
-            ref reset_settings, _("Reset all settings"), null
-        };
+        options[0] = {"new-note", 0, 0, OptionArg.NONE, ref new_note, _("Create a new note"), null};
+        options[1] = {"preferences", 0, 0, OptionArg.NONE, ref show_pref, _("Show preferences"), null};
+        options[2] = {"reset-settings", 0, 0, OptionArg.NONE, ref reset_settings, _("Reset all settings"), null};
 
         // We have to make an extra copy of the array, since .parse assumes
         // that it can remove strings from the array without freeing them.
@@ -214,6 +192,7 @@ public class Jorts.Application : Gtk.Application {
             ctx.add_main_entries (options, null);
             unowned string[] tmp = _args;
             ctx.parse (ref tmp);
+
         } catch (OptionError e) {
             command_line.print ("error: %s\n", e.message);
             return 0;
