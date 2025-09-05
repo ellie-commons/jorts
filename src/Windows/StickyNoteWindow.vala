@@ -71,10 +71,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         gtk_settings = Gtk.Settings.get_default ();
 
         add_css_class ("rounded");
-
-        if (gtk_settings.gtk_enable_animations) {
-            add_css_class ("animated");
-        }
         title = "" + _(" - Jorts");
 
 

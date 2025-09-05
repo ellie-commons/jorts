@@ -10,14 +10,19 @@ Keywords=text;plain;plaintext;notepad;notes;sticky;post-it;
 Terminal=false
 StartupNotify=true
 SingleMainWindow=false
-Actions=NewNote;Preferences;
+Actions=NewNote;NewFromClipboard;Preferences;
 
 [Desktop Action NewNote]
 Name=New sticky note
 Icon=list-add
 Exec=io.github.ellie_commons.jorts --new-note
 
+[Desktop Action NewFromClipboard]
+Name=New note from clipboard
+Icon=edit-paste
+Exec=io.github.ellie_commons.jorts --new-from-clipboard
+
 [Desktop Action Preferences]
-Name=Preferences
+Name=Show Preferences
 Icon=open-menu
 Exec=io.github.ellie_commons.jorts --preferences

@@ -37,6 +37,7 @@ public class Jorts.NoteManager : Object {
             Application.gsettings.set_string ("last-backup", now);
         }
 
+        on_reduceanimation_changed ();
         Gtk.Settings.get_default ().notify["enable-animations"].connect (on_reduceanimation_changed);
     }
 
@@ -57,8 +58,19 @@ public class Jorts.NoteManager : Object {
             string skip_theme = last_note.theme;
             var random_data = Jorts.Utils.random_note (skip_theme);
 
-            // A chance at pulling the Golden Sticky
-            random_data = Jorts.Utils.golden_sticky (random_data);
+            // If the user requested from clipboard, then we gotta grab content from there
+            if (application.new_from_clipboard)
+            {
+                // Overwrite random title to say "Clipboard content?..."
+                random_data.content = application.clipboard_content;
+                application.clipboard_content = "";
+
+            } else {
+
+                // A chance at pulling the Golden Sticky
+                // No chocolate factory involved
+                random_data = Jorts.Utils.golden_sticky (random_data);
+            }
 
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow (application, random_data);
@@ -102,5 +114,4 @@ public class Jorts.NoteManager : Object {
             }
         }
     }
-
 }

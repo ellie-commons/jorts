@@ -49,6 +49,8 @@ public class Jorts.Application : Gtk.Application {
 
     // Used for commandline option handling
     private bool new_note = false;
+    private bool new_from_clipboard = false;
+    public string clipboard_content = "";
     private bool show_pref = false;
     private bool reset_settings = false;
 
@@ -158,6 +160,7 @@ public class Jorts.Application : Gtk.Application {
         }
 
         if (new_note) {manager.create_note (); new_note = false;}
+        if (new_from_clipboard) {action_new_from_clipboard (); new_from_clipboard = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
         if (reset_settings) {action_reset_settings (); reset_settings = false;}
 
@@ -173,10 +176,11 @@ public class Jorts.Application : Gtk.Application {
     public override int command_line (ApplicationCommandLine command_line) {
         debug ("Parsing commandline arguments...");
 
-        OptionEntry[] options = new OptionEntry[3];
+        OptionEntry[] options = new OptionEntry[4];
         options[0] = {"new-note", 0, 0, OptionArg.NONE, ref new_note, _("Create a new note"), null};
-        options[1] = {"preferences", 0, 0, OptionArg.NONE, ref show_pref, _("Show preferences"), null};
-        options[2] = {"reset-settings", 0, 0, OptionArg.NONE, ref reset_settings, _("Reset all settings"), null};
+        options[1] = {"new-from-clipboard", 0, 0, OptionArg.NONE, ref reset_settings, _("Create a note then paste from clipboard"), null};
+        options[2] = {"preferences", 0, 0, OptionArg.NONE, ref show_pref, _("Show preferences"), null};
+        options[3] = {"reset-settings", 0, 0, OptionArg.NONE, ref reset_settings, _("Reset all settings"), null};
 
         // We have to make an extra copy of the array, since .parse assumes
         // that it can remove strings from the array without freeing them.
@@ -238,5 +242,18 @@ public class Jorts.Application : Gtk.Application {
         foreach (var key in keys) {
             gsettings.reset (key);
         }
+    }
+
+    private void action_new_from_clipboard () {
+        var clipboard = Gdk.Display.get_default ().get_clipboard ();
+        clipboard.read_text_async.begin ((null), (obj, res) => {
+            try {
+                this.clipboard_content = clipboard.read_text_async.end (res);
+                manager.create_note ();
+
+            } catch (Error e) {
+                print ("Cannot access clipboard: " + e.message);
+            }
+        )
     }
 }

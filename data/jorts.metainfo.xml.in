@@ -99,6 +99,7 @@
                 <p>3.4.0 Jorts of Autumn</p>
                 <ul>
                     <li>I struggled with some shenanigans to have only one preference window... Should be done for good now</li>
+                    <li>Added a desktop action to create a note from clipboard content</li>
                     <li>Added a reset-settings commandline option. Could be handy.</li>
                     <li>Ctrl+L to focus note title</li>
                     <li>Ctrl+M to open note settings now</li>
