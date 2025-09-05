@@ -132,9 +132,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         editableheader.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (on_buffer_changed);
 
-        /* LETS GO */
-        show ();
-
         // The settings popover tells us a new theme has been chosen!
         popover.theme_changed.connect (on_theme_updated);
 

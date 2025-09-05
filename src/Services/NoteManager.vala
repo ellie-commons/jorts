@@ -75,13 +75,36 @@ public class Jorts.NoteManager : Object {
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow (application, random_data);
         }
+
+        /* LETSGO */
         open_notes.add (note);
-        this.save_to_stash ();
+        note.present ();
+        save_to_stash ();
 	}
 
     // Simply remove from the list of things to save, and close
+    public void from_clipboard () {
+        debug ("Creating and loading from clipboard…");
+
+        // Skip theme from previous window, but use same text zoom
+        StickyNoteWindow last_note = open_notes.last ();
+        string skip_theme = last_note.theme;
+        var random_data = Jorts.Utils.random_note (skip_theme);
+        random_data.zoom = this.latest_zoom;
+        note = new StickyNoteWindow (application, random_data);
+
+        // Use building function
+        note.view.textview.paste ();
+
+        open_notes.add (note);
+        note.present ();
+        save_to_stash ();
+	}
+
+
+    // Simply remove from the list of things to save, and close
     public void delete_note (StickyNoteWindow note) {
-            debug ("Removing a note…\n");
+            debug ("Removing a note…");
             open_notes.remove (note);
             note.close ();
             this.save_to_stash ();
@@ -93,7 +116,7 @@ public class Jorts.NoteManager : Object {
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
         Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        print ("\nSaved " + open_notes.size.to_string () + "!");
+        //print ("\nSaved " + open_notes.size.to_string () + "!");
     }
 
       // Called when the window is-active property changes

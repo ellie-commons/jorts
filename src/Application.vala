@@ -50,7 +50,6 @@ public class Jorts.Application : Gtk.Application {
     // Used for commandline option handling
     private bool new_note = false;
     private bool new_from_clipboard = false;
-    public string clipboard_content = "";
     private bool show_pref = false;
     private bool reset_settings = false;
 
@@ -160,7 +159,7 @@ public class Jorts.Application : Gtk.Application {
         }
 
         if (new_note) {manager.create_note (); new_note = false;}
-        if (new_from_clipboard) {action_new_from_clipboard (); new_from_clipboard = false;}
+        if (new_from_clipboard) {manager.from_clipboard (); new_from_clipboard = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
         if (reset_settings) {action_reset_settings (); reset_settings = false;}
 
@@ -242,18 +241,5 @@ public class Jorts.Application : Gtk.Application {
         foreach (var key in keys) {
             gsettings.reset (key);
         }
-    }
-
-    private void action_new_from_clipboard () {
-        var clipboard = Gdk.Display.get_default ().get_clipboard ();
-        clipboard.read_text_async.begin ((null), (obj, res) => {
-            try {
-                this.clipboard_content = clipboard.read_text_async.end (res);
-                manager.create_note ();
-
-            } catch (Error e) {
-                print ("Cannot access clipboard: " + e.message);
-            }
-        )
     }
 }
