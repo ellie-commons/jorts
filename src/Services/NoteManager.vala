@@ -82,21 +82,26 @@ public class Jorts.NoteManager : Object {
         save_to_stash ();
 	}
 
-    // Simply remove from the list of things to save, and close
+    // When user asked for a new note and for it to be pasted in
     public void from_clipboard () {
         debug ("Creating and loading from clipboard…");
 
-        // Skip theme from previous window, but use same text zoom
-        StickyNoteWindow last_note = open_notes.last ();
-        string skip_theme = last_note.theme;
-        var random_data = Jorts.Utils.random_note (skip_theme);
-        random_data.zoom = this.latest_zoom;
-        note = new StickyNoteWindow (application, random_data);
+        // If the app has only one empty note (or no note but just created one),
+        // Then paste in it.
+        if ((open_notes.length > 1) && open_notes[0].textview.text == "") {
+            var note = open_notes[0];
 
-        // Use building function
-        note.view.textview.paste ();
+        } else {
+            // Skip theme from previous window, but use same text zoom
+            StickyNoteWindow last_note = open_notes.last ();
+            string skip_theme = last_note.theme;
+            var random_data = Jorts.Utils.random_note (skip_theme);
+            random_data.zoom = this.latest_zoom;
+            note = new StickyNoteWindow (application, random_data);
+            open_notes.add (note);
+        }
 
-        open_notes.add (note);
+        note.textview.paste ();
         note.present ();
         save_to_stash ();
 	}
