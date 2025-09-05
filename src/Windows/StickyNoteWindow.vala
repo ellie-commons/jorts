@@ -237,10 +237,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         return data;
     }
 
-    public void zoom_default () {
-        this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
-    }
-
     // Switches stylesheet
     // First use appropriate stylesheet, Then switch the theme classes
     private void on_theme_updated (string theme) {
@@ -268,12 +264,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public void on_zoom_changed (string zoomkind) {
         debug ("Zoom changed!");
 
-        if (zoomkind == "zoom_in") {
-            this.zoom_in ();
-        } else if (zoomkind == "zoom_out") {
-            this.zoom_out ();
-        } else if (zoomkind == "reset") {
-            this.set_zoom (100);
+        switch (zoomkind) {
+            case "zoom_in":     zoom_in (); break;
+            case "zoom_out":    zoom_out (); break;
+            case "reset":       set_zoom (100); break;
+            default:            set_zoom (100); break;
         }
         ((Jorts.Application)this.application).manager.save_to_stash ();
     }
@@ -283,6 +278,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         if ((this.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
             this.set_zoom ((this.zoom + 20));
         }
+    }
+
+    public void zoom_default () {
+        this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
     }
 
     // First check an increase doesnt go below limit
@@ -311,32 +310,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Jorts.Application)this.application).manager.latest_zoom = zoom;
     }
 
-    public void action_focus_title () {
-        set_focus (editableheader);
-        editableheader.editing = true;
-    }
+    public void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
+    public void action_show_emoji () {view.emoji_button.activate ();}
+    public void action_show_menu () {view.menu_button.activate ();}
+    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
 
-    public void action_show_emoji () {
-        view.emoji_button.activate ();
-    }
-
-    public void action_show_menu () {
-        view.menu_button.activate ();
-    }
-
-    private void action_delete () {
-        ((Jorts.Application)this.application).manager.delete_note (this);
-    }
-
-    private void action_zoom_out () {
-        zoom_out ();
-    }
-
-    private void action_zoom_default () {
-        zoom_default ();
-    }
-
-    private void action_zoom_in () {
-        zoom_in ();
-    }
+    private void action_zoom_out () {zoom_out ();}
+    private void action_zoom_default () {zoom_default ();}
+    private void action_zoom_in () {zoom_in ();}
 }
