@@ -145,6 +145,8 @@ public class Jorts.Application : Gtk.Application {
 
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
+
+        /* Either we show all sticky notes, or we load everything lol */
         if (manager.open_notes.size > 0) {
             foreach (var window in manager.open_notes) {
                 if (window.visible) {
@@ -165,8 +167,9 @@ public class Jorts.Application : Gtk.Application {
             show_pref = false;
         }
 
+        /* Quit if all sticky notes are closed and preferences arent shown */
         this.window_removed.connect (() => {
-            if (get_windows ().length () == 0) {
+            if ((get_windows ().length () <= 1) && (preferences.hidden)) {
                 print ("No sticky note open, quitting");
                 quit ();
             }
@@ -220,6 +223,7 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_show_preferences () {
         debug ("\nShowing preferences!");
+        preferencs.hidden = false;
         preferences.show ();
         preferences.present ();
     }

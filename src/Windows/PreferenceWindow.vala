@@ -19,6 +19,7 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 public class Jorts.PreferenceWindow : Gtk.Window {
 
     Jorts.PreferencesView prefview;
+    public bool hidden = true;
 
     construct {
         debug ("Showing preference window");
@@ -82,6 +83,10 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
+
+        close_request.connect (e => {
+            hidden = true; return false;
+        });
     }
 
 /*      private void on_reset () {
