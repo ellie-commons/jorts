@@ -167,7 +167,7 @@ public class Jorts.Application : Gtk.Application {
         }
 
         if (new_note) {manager.create_note (); new_note = false;}
-        if (new_from_clipboard) {manager.from_clipboard ();         print ("clipboard!"); new_from_clipboard = false;}
+        if (new_from_clipboard) {manager.from_clipboard (); new_from_clipboard = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
         if (reset_settings) {action_reset_settings (); reset_settings = false;}
     }

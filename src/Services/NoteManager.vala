@@ -78,7 +78,7 @@ public class Jorts.NoteManager : Object {
 
         // If the app has only one empty note (or no note but just created one),
         // Then paste in it.
-        if ((open_notes.size > 1) && open_notes[0].textview.buffer.text == "") {
+        if ((open_notes.size == 1) && open_notes[0].textview.buffer.text == "") {
             note = open_notes[0];
             print ("first one");
 
@@ -91,13 +91,14 @@ public class Jorts.NoteManager : Object {
             note = new StickyNoteWindow (application, random_data);
             open_notes.add (note);
                     print ("new");
-
-
         }
 
-        note.textview.paste_clipboard ();
+
+
         note.show ();
         note.present ();
+        note.textview.paste ();          
+
         save_to_stash ();
 	}
 
