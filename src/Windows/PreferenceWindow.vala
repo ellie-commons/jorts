@@ -18,13 +18,20 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 */
 public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
-    Jorts.PreferencesView prefview;
+    private static GLib.Once<Jorts.PreferenceWindow> _instance;
+    public static unowned Jorts.PreferenceWindow instance () {
+            return _instance.once (() => { return new Jorts.PreferenceWindow (); });
+        }
 
-    public PreferenceWindow (Gtk.Application app) {
+    Jorts.PreferencesView prefview;
+    public bool is_shown = false;
+
+    public static PreferenceWindow () {
         debug ("Showing preference window");
         Intl.setlocale ();
 
-        application = app;
+        hide_on_close = true;
+
         var gtk_settings = Gtk.Settings.get_default ();
 
         // Since each sticky note adopts a different accent color
@@ -83,6 +90,16 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
+
+        show.connect (() => {
+            is_shown = true;
+        });
+
+        close_request.connect (() => {
+            is_shown = false;
+            return false;
+        });
+
     }
 
 /*      private void on_reset () {

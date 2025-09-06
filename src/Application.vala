@@ -116,17 +116,15 @@ public class Jorts.Application : Gtk.Application {
         });
 
         // ONLY ONE.
-        preferences = new Jorts.PreferenceWindow (this) {
-            hide_on_close = true
-        };
+        preferences = Jorts.PreferenceWindow.instance ();
 
         /* Quit if all sticky notes are closed and preferences arent shown */
         this.window_removed.connect (() => {
-            print (get_windows ().length ().to_string ());
-            if (get_windows ().length () <= 1) {
-                print ("No sticky note open, quitting");
-                quit ();
-            }
+              print (get_windows ().length ().to_string ());
+              if ((get_windows ().length () == 0) && (preferences.is_shown == false)) {
+                  print ("No sticky note open, quitting");
+                  quit ();
+              }
         });
 
 
