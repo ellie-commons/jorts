@@ -31,6 +31,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.EditableLabel editableheader;
     private Jorts.NoteView view;
     private PopoverView popover;
+    public TextView textview;
 
     public string theme;
     public int zoom;
@@ -100,6 +101,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         view = new NoteView ();
         view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
+        textview = view.textview;
 
         popover = new Jorts.PopoverView ();
         view.menu_button.popover = popover;

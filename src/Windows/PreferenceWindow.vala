@@ -16,15 +16,15 @@ the innerbox has widgets for settings.
 the actionbar has a donate me and a set back to defaults just like elementaryOS
 
 */
-public class Jorts.PreferenceWindow : Gtk.Window {
+public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
     Jorts.PreferencesView prefview;
-    public bool hidden = true;
 
-    construct {
+    public PreferenceWindow (Gtk.Application app) {
         debug ("Showing preference window");
         Intl.setlocale ();
 
+        application = app;
         var gtk_settings = Gtk.Settings.get_default ();
 
         // Since each sticky note adopts a different accent color
@@ -83,10 +83,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
-
-        close_request.connect (e => {
-            hidden = true; return false;
-        });
     }
 
 /*      private void on_reset () {

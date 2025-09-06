@@ -116,9 +116,19 @@ public class Jorts.Application : Gtk.Application {
         });
 
         // ONLY ONE.
-        preferences = new Jorts.PreferenceWindow () {
+        preferences = new Jorts.PreferenceWindow (this) {
             hide_on_close = true
         };
+
+        /* Quit if all sticky notes are closed and preferences arent shown */
+        this.window_removed.connect (() => {
+            print (get_windows ().length ().to_string ());
+            if (get_windows ().length () <= 1) {
+                print ("No sticky note open, quitting");
+                quit ();
+            }
+        });
+
 
         // build all the stylesheets
         Jorts.Themer.init_all_themes ();
@@ -159,25 +169,17 @@ public class Jorts.Application : Gtk.Application {
         }
 
         if (new_note) {manager.create_note (); new_note = false;}
-        if (new_from_clipboard) {manager.from_clipboard (); new_from_clipboard = false;}
+        if (new_from_clipboard) {manager.from_clipboard ();         print ("clipboard!"); new_from_clipboard = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
         if (reset_settings) {action_reset_settings (); reset_settings = false;}
-
-        /* Quit if all sticky notes are closed and preferences arent shown */
-        this.window_removed.connect (() => {
-            if ((get_windows ().length () <= 1) && (preferences.hidden)) {
-                print ("No sticky note open, quitting");
-                quit ();
-            }
-        });
-	}
+    }
 
     public override int command_line (ApplicationCommandLine command_line) {
         debug ("Parsing commandline arguments...");
 
         OptionEntry[] options = new OptionEntry[4];
         options[0] = {"new-note", 0, 0, OptionArg.NONE, ref new_note, _("Create a new note"), null};
-        options[1] = {"new-from-clipboard", 0, 0, OptionArg.NONE, ref reset_settings, _("Create a note then paste from clipboard"), null};
+        options[1] = {"new-from-clipboard", 0, 0, OptionArg.NONE, ref new_from_clipboard, _("Create a note then paste from clipboard"), null};
         options[2] = {"preferences", 0, 0, OptionArg.NONE, ref show_pref, _("Show preferences"), null};
         options[3] = {"reset-settings", 0, 0, OptionArg.NONE, ref reset_settings, _("Reset all settings"), null};
 
@@ -216,13 +218,12 @@ public class Jorts.Application : Gtk.Application {
 
     private void action_show_preferences () {
         debug ("\nShowing preferences!");
-        preferencs.hidden = false;
         preferences.show ();
         preferences.present ();
     }
 
     private void action_toggle_scribbly () {
-        var current = Application.gsettings.get_boolean ("scribbly-mode-active")
+        var current = Application.gsettings.get_boolean ("scribbly-mode-active");
         gsettings.set_boolean ("scribbly-mode-active", !current);
     }
 

@@ -58,19 +58,7 @@ public class Jorts.NoteManager : Object {
             string skip_theme = last_note.theme;
             var random_data = Jorts.Utils.random_note (skip_theme);
 
-            // If the user requested from clipboard, then we gotta grab content from there
-            if (application.new_from_clipboard)
-            {
-                // Overwrite random title to say "Clipboard content?..."
-                random_data.content = application.clipboard_content;
-                application.clipboard_content = "";
-
-            } else {
-
-                // A chance at pulling the Golden Sticky
-                // No chocolate factory involved
-                random_data = Jorts.Utils.golden_sticky (random_data);
-            }
+            random_data = Jorts.Utils.golden_sticky (random_data);
 
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow (application, random_data);
@@ -85,11 +73,14 @@ public class Jorts.NoteManager : Object {
     // When user asked for a new note and for it to be pasted in
     public void from_clipboard () {
         debug ("Creating and loading from clipboard…");
+        print ("clipboard!");
+        Jorts.StickyNoteWindow note;
 
         // If the app has only one empty note (or no note but just created one),
         // Then paste in it.
-        if ((open_notes.length > 1) && open_notes[0].textview.text == "") {
-            var note = open_notes[0];
+        if ((open_notes.size > 1) && open_notes[0].textview.buffer.text == "") {
+            note = open_notes[0];
+            print ("first one");
 
         } else {
             // Skip theme from previous window, but use same text zoom
@@ -99,9 +90,13 @@ public class Jorts.NoteManager : Object {
             random_data.zoom = this.latest_zoom;
             note = new StickyNoteWindow (application, random_data);
             open_notes.add (note);
+                    print ("new");
+
+
         }
 
-        note.textview.paste ();
+        note.textview.paste_clipboard ();
+        note.show ();
         note.present ();
         save_to_stash ();
 	}
