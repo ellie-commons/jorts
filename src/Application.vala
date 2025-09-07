@@ -117,15 +117,10 @@ public class Jorts.Application : Gtk.Application {
 
         // ONLY ONE.
         preferences = Jorts.PreferenceWindow.instance ();
+        add_window (preferences);
 
         /* Quit if all sticky notes are closed and preferences arent shown */
-        this.window_removed.connect (() => {
-              print (get_windows ().length ().to_string ());
-              if ((get_windows ().length () == 0) && (preferences.is_shown == false)) {
-                  print ("No sticky note open, quitting");
-                  quit ();
-              }
-        });
+        this.window_removed.connect (check_if_quit);
 
 
         // build all the stylesheets
@@ -221,11 +216,13 @@ public class Jorts.Application : Gtk.Application {
     }
 
     private void action_toggle_scribbly () {
+        debug ("Toggling scribbly");
         var current = Application.gsettings.get_boolean ("scribbly-mode-active");
         gsettings.set_boolean ("scribbly-mode-active", !current);
     }
 
     private void action_toggle_actionbar () {
+        debug ("Toggling actionbar");
         var current = Application.gsettings.get_boolean ("hide-bar");
         gsettings.set_boolean ("hide-bar", !current);
     }
@@ -239,6 +236,16 @@ public class Jorts.Application : Gtk.Application {
         string[] keys = {"scribbly-mode-active", "hide-bar"};
         foreach (var key in keys) {
             gsettings.reset (key);
+        }
+    }
+
+    public void check_if_quit () {
+        debug ("Windows open: %s".printf (get_windows ().length ().to_string ()));
+        debug ("Preferences shown: %s".printf (preferences.is_shown.to_string ()));
+
+        if ((get_windows ().length () == 1) && (preferences.is_shown == false)) {
+            print ("No sticky note open, quitting");
+            quit ();
         }
     }
 }

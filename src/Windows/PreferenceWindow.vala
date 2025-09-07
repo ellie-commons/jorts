@@ -97,6 +97,7 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
         close_request.connect (() => {
             is_shown = false;
+            ((Jorts.Application)application).check_if_quit ();
             return false;
         });
 
