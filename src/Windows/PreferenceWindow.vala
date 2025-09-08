@@ -73,6 +73,8 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
         this.child = handle;
 
+        set_focus (prefview.close_button);
+
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
