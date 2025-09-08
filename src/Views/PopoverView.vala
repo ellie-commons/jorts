@@ -23,6 +23,8 @@
     /* FONT SELECTION */
     public signal void zoom_changed (string zoomkind);
 
+    public signal void monospace_changed (bool if_monospace);
+
     construct {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
@@ -33,6 +35,9 @@
         };
 
         color_button_box = new Jorts.ColorBox ();
+
+        var monospace_box = new Jorts.MonospaceBox ();
+        monospace_box.monospace = false;
 
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
@@ -69,7 +74,9 @@
         font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
 
         /* APPENDS */
+
         view.append (color_button_box);
+        view.append (monospace_box);
         view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         view.append (font_size_box);
 
