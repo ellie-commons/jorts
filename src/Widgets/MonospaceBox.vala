@@ -17,6 +17,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
     public signal void monospace_changed (bool monospace);
 
     construct {
+        orientation = Gtk.Orientation.HORIZONTAL;
         homogeneous = true;
         hexpand = true;
         margin_start = 12;
