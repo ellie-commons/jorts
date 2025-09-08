@@ -53,16 +53,16 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
 
-    public static uint debounce_timer_id;
+    private static uint debounce_timer_id;
 
-    public const string ACTION_PREFIX = "app.";
-    public const string ACTION_DELETE = "action_delete";
-    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    public const string ACTION_SHOW_MENU = "action_show_menu";
-    public const string ACTION_FOCUS_TITLE = "action_focus_title";
-    public const string ACTION_ZOOM_OUT = "action_zoom_out";
-    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    public const string ACTION_ZOOM_IN = "action_zoom_in";
+    private const string ACTION_PREFIX = "app.";
+    private const string ACTION_DELETE = "action_delete";
+    private const string ACTION_SHOW_EMOJI = "action_show_emoji";
+    private const string ACTION_SHOW_MENU = "action_show_menu";
+    private const string ACTION_FOCUS_TITLE = "action_focus_title";
+    private const string ACTION_ZOOM_OUT = "action_zoom_out";
+    private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    private const string ACTION_ZOOM_IN = "action_zoom_in";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
@@ -178,7 +178,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /********************************************/
 
     // Add a debounce so we aren't writing the entire buffer every character input
-    public void on_buffer_changed () {
+    private void on_buffer_changed () {
         debug ("Buffer changed!");
 
         if (debounce_timer_id != 0) {
@@ -192,13 +192,13 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         });
     }
 
-    public void on_editable_changed () {
+    private void on_editable_changed () {
         title = editableheader.text + _(" - Jorts");
         on_buffer_changed ();
     }
 
     // Called when a change in settings is detected
-    public void on_scribbly_changed () {
+    private void on_scribbly_changed () {
         debug ("Scribbly mode changed!");
 
         if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
@@ -215,7 +215,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
 
     // Called when the window is-active property changes
-    public void on_focus_changed () {
+    private void on_focus_changed () {
         debug ("Focus changed!");
 
         if (this.is_active) {
@@ -300,7 +300,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     /*********************************************/
 
     // Called when a signal from the popover says stuff got changed
-    public void on_zoom_changed (string zoomkind) {
+    private void on_zoom_changed (string zoomkind) {
         debug ("Zoom changed!");
 
         switch (zoomkind) {
@@ -331,7 +331,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     // Switch zoom classes, then reflect in the UI and tell the application
-    public void do_set_zoom (int zoom) {
+    private void do_set_zoom (int zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
@@ -349,9 +349,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Jorts.Application)this.application).manager.latest_zoom = zoom;
     }
 
-    public void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
-    public void action_show_emoji () {view.emoji_button.activate ();}
-    public void action_show_menu () {view.menu_button.activate ();}
+    private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
+    private void action_show_emoji () {view.emoji_button.activate ();}
+    private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
 
     private void action_zoom_out () {zoom_out ();}
