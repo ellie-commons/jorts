@@ -34,7 +34,18 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public TextView textview;
 
     public string theme;
-    public int zoom;
+    private int _zoom;
+
+    public bool monospace {
+        get { return view.textview.monospace;}
+        set {on_monospace_changed (value);}
+    }
+
+    public int zoom {
+        get { return _zoom;}
+        set {do_set_zoom (value);}
+    }
+
 
     public static uint debounce_timer_id;
 
@@ -120,12 +131,13 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        set_zoom (data.zoom);
-        on_theme_updated (data.theme);
+        this.zoom = data.zoom;
+        this.monospace = data.monospace;
 
+        on_theme_updated (data.theme);
         popover.color_button_box.set_toggles (data.theme);
 
-        on_monospace_changed (data.monospace);
+
 
 
         /***************************************************/
@@ -289,40 +301,40 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         switch (zoomkind) {
             case "zoom_in":     zoom_in (); break;
             case "zoom_out":    zoom_out (); break;
-            case "reset":       set_zoom (100); break;
-            default:            set_zoom (100); break;
+            case "reset":       zoom = 100; break;
+            default:            zoom = 100; break;
         }
         ((Jorts.Application)this.application).manager.save_to_stash ();
     }
 
     // First check an increase doesnt go above limit
     public void zoom_in () {
-        if ((this.zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-            this.set_zoom ((this.zoom + 20));
+        if ((_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+            zoom = _zoom + 20;
         }
     }
 
     public void zoom_default () {
-        this.set_zoom (Jorts.Constants.DEFAULT_ZOOM);
+        zoom = Jorts.Constants.DEFAULT_ZOOM;
     }
 
     // First check an increase doesnt go below limit
     public void zoom_out () {
-        if ((this.zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-            this.set_zoom ((this.zoom - 20));
+        if ((_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+            zoom = _zoom - 20;
         }
     }
 
     // Switch zoom classes, then reflect in the UI and tell the application
-    public void set_zoom (int zoom) {
+    public void do_set_zoom (int zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
-        this.remove_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
-        this.zoom = zoom;
-        this.add_css_class (Jorts.Utils.zoom_to_class ( this.zoom));
+        this.remove_css_class (Jorts.Utils.zoom_to_class ( _zoom));
+        _zoom = zoom;
+        this.add_css_class (Jorts.Utils.zoom_to_class ( _zoom));
 
-        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
+        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_zoom);
 
         // Reflect the number in the popover
         popover.font_size_box.zoom = zoom;
