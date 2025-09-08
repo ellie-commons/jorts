@@ -52,15 +52,7 @@
         /***************************************************/
 
         color_button_box.theme_changed.connect ((selected) => {theme_changed (selected);});
-
-        // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        font_size_box.zoom_changed.connect (on_zoom_changed);
-    }
-
-
-    // Called by the StickyNoteWindow when adjusting to new zoomlevel
-    // StickyNoteWindow reacts to a signal by the popover
-    public void on_zoom_changed (string zoomkind) {
-        zoom_changed (zoomkind);
+        monospace_box.monospace_changed.connect ((monospace) => {monospace_changed (monospace);});
+        font_size_box.zoom_changed.connect ((zoomkind) => {zoom_changed (zoomkind);});
     }
 }

@@ -195,6 +195,7 @@ Have a great day!🎇
             randtitle,
             randtheme,
             "",
+            false,
             Jorts.Constants.DEFAULT_ZOOM,
             Jorts.Constants.DEFAULT_WIDTH,
             Jorts.Constants.DEFAULT_HEIGHT

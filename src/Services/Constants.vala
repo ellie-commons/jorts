@@ -28,8 +28,9 @@ namespace Jorts.Constants {
 
     // We need to say stop at some point
     const int ZOOM_MAX                   = 240;
-    const int DEFAULT_ZOOM               = 100;    
+    const int DEFAULT_ZOOM               = 100;
     const int ZOOM_MIN                   = 40;
+    const bool DEFAULT_MONO               = false;
 
     // For new stickies
     const int DEFAULT_WIDTH              = 290;

@@ -25,7 +25,8 @@ public class Jorts.MonospaceBox : Gtk.Box {
 
         var mono_default_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Default")),
-            tooltip_text = _("Click to use default text font")
+            tooltip_text = _("Click to use default text font"),
+            active = true
         };
 
         mono_monospace_toggle = new Gtk.ToggleButton () {
@@ -44,14 +45,13 @@ public class Jorts.MonospaceBox : Gtk.Box {
             "active",
             GLib.BindingFlags.BIDIRECTIONAL | GLib.BindingFlags.INVERT_BOOLEAN
         );
-    
+
         mono_monospace_toggle.notify["active"].connect (on_monospace_changed);
     }
 
 
     public void on_monospace_changed () {
         monospace_changed (mono_monospace_toggle.active);
-        print (mono_monospace_toggle.active.to_string());
     }
 
 }

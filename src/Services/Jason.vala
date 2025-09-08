@@ -30,6 +30,7 @@ namespace Jorts.Jason {
         string title    = node.get_string_member_with_default ("title",(_("Forgot title!")));
         string theme    = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
         string content  = node.get_string_member_with_default ("content","");
+        bool monospace  = node.get_boolean_member_with_default ("monospace",Jorts.Constants.DEFAULT_MONO);
 
         // TODO: If this one fails, whole note fails...
         int64 zoom      = node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
@@ -47,6 +48,7 @@ namespace Jorts.Jason {
             title,
             theme,
             content,
+            monospace,
             (int)zoom,
             (int)width,
             (int)height);
@@ -71,6 +73,8 @@ namespace Jorts.Jason {
             builder.add_string_value (data.theme);
             builder.set_member_name ("content");
             builder.add_string_value (data.content);
+            builder.set_member_name ("monospace");
+            builder.add_boolean_value (data.monospace);
 			builder.set_member_name ("zoom");
             builder.add_int_value (data.zoom);
             builder.set_member_name ("height");

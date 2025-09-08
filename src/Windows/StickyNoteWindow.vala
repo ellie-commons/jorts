@@ -119,9 +119,13 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         editableheader.text = data.title;
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
+
         set_zoom (data.zoom);
         on_theme_updated (data.theme);
+
         popover.color_button_box.set_toggles (data.theme);
+
+        on_monospace_changed (data.monospace);
 
 
         /***************************************************/
@@ -136,6 +140,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // The settings popover tells us a new theme has been chosen!
         popover.theme_changed.connect (on_theme_updated);
+
+        // The settings popover tells us a new zoom has been chosen!
+        popover.monospace_changed.connect (on_monospace_changed);
 
         // The settings popover tells us a new zoom has been chosen!
         popover.zoom_changed.connect (on_zoom_changed);
@@ -225,6 +232,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 editableheader.text,
             this.theme,
             content,
+            view.textview.monospace,
             this.zoom,
                 width,
                 height);
@@ -247,6 +255,25 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.theme = theme;
         add_css_class (this.theme);
 
+        ((Application)this.application).manager.save_to_stash ();
+    }
+
+
+    // Switches stylesheet
+    private void on_monospace_changed (bool monospace) {
+        debug ("Updating monospace to %s".printf (monospace.to_string ()));
+
+        if (monospace) {
+            editableheader.add_css_class ("monospace");
+
+        } else {
+            if ("monospace" in editableheader.css_classes) {
+                editableheader.remove_css_class ("monospace");
+            }
+
+        }
+        view.textview.monospace = monospace;
+        popover.monospace_box.monospace = monospace;
         ((Application)this.application).manager.save_to_stash ();
     }
 

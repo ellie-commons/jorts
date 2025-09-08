@@ -11,6 +11,7 @@ public class Jorts.NoteData : Object {
     public string title;
     public string theme;
     public string content;
+    public bool monospace;
     public int zoom;
     public int width;
     public int height;
@@ -19,6 +20,7 @@ public class Jorts.NoteData : Object {
         string? title = null,
         string? theme = null,
         string? content = null,
+        bool? monospace = null,
         int? zoom = null,
         int? width = null, int? height = null)
     {
@@ -26,6 +28,7 @@ public class Jorts.NoteData : Object {
         this.title = title ?? Jorts.Utils.random_title ();
         this.theme = theme ?? Jorts.Utils.random_theme ();
         this.content = content ?? "";
+        this.monospace = monospace ?? Jorts.Constants.DEFAULT_MONO;
         this.zoom = zoom ?? Jorts.Constants.DEFAULT_ZOOM;
         this.width = width ?? Jorts.Constants.DEFAULT_WIDTH;
         this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
@@ -42,6 +45,8 @@ public class Jorts.NoteData : Object {
         builder.add_string_value (theme);
         builder.set_member_name ("content");
         builder.add_string_value (content);
+        builder.set_member_name ("monospace");
+        builder.add_boolean_value (monospace);
 		builder.set_member_name ("zoom");
         builder.add_int_value (zoom);
         builder.set_member_name ("height");
