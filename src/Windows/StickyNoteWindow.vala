@@ -298,7 +298,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (this.zoom);
 
         // Reflect the number in the popover
-        popover.on_zoom_changed (zoom);
+        popover.font_size_box.zoom = zoom;
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;

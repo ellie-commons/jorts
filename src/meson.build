@@ -11,6 +11,7 @@ sources = files (
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ColorPill.vala',
     'Widgets' / 'ColorBox.vala',
+    'Widgets' / 'ZoomBox.vala',
     'Widgets' / 'MonospaceBox.vala',
 
     'Views' / 'PopoverView.vala',

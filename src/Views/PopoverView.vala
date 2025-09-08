@@ -9,20 +9,17 @@
  public class Jorts.PopoverView : Gtk.Popover {
 
     public Jorts.ColorBox color_button_box;
-    public Gtk.Button zoom_in_button;
-    public Gtk.Button zoom_default_button;
-    public Gtk.Button zoom_out_button;
+    public Jorts.MonospaceBox monospace_box;
+    public Jorts.ZoomBox font_size_box;
 
     public string theme;
     public int zoom;
 
         /* THEME SELECTION */
     public string selected;
+
     public signal void theme_changed (string selected);
-
-    /* FONT SELECTION */
     public signal void zoom_changed (string zoomkind);
-
     public signal void monospace_changed (bool if_monospace);
 
     construct {
@@ -36,48 +33,16 @@
 
         color_button_box = new Jorts.ColorBox ();
 
-        var monospace_box = new Jorts.MonospaceBox ();
-        monospace_box.monospace = false;
 
-        ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
-        zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_OUT,
-                _("Zoom out")
-                )
-            };
+        monospace_box = new Jorts.MonospaceBox ();
 
-        zoom_default_button = new Gtk.Button () {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_DEFAULT,
-                _("Default zoom level")
-                )
-            };
-
-        zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
-            tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_IN,
-                _("Zoom in")
-                )
-            };
-
-        var font_size_box = new Gtk.Box (HORIZONTAL, 0) {
-            homogeneous = true,
-            hexpand = true,
-            margin_start = 12,
-            margin_end = 12
-        };
-
-        font_size_box.append (zoom_out_button);
-        font_size_box.append (zoom_default_button);
-        font_size_box.append (zoom_in_button);
-        font_size_box.add_css_class (Granite.STYLE_CLASS_LINKED);
+        font_size_box = new Jorts.ZoomBox ();
 
         /* APPENDS */
 
         view.append (color_button_box);
         view.append (monospace_box);
-        view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+        //view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         view.append (font_size_box);
 
         child = view;
@@ -89,19 +54,13 @@
         color_button_box.theme_changed.connect ((selected) => {theme_changed (selected);});
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
-        zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
-        zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
+        font_size_box.zoom_changed.connect (on_zoom_changed);
     }
 
 
     // Called by the StickyNoteWindow when adjusting to new zoomlevel
     // StickyNoteWindow reacts to a signal by the popover
-    public void on_zoom_changed (int zoom) {
-
-        //TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-        //It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-        var label = _("%d%%").printf (zoom);
-        zoom_default_button.set_label (label);
+    public void on_zoom_changed (string zoomkind) {
+        zoom_changed (zoomkind);
     }
 }
