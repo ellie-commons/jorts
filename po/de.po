@@ -70,9 +70,8 @@ msgid "Slate"
 msgstr "Schiefer"
 
 #: src/Widgets/MonospaceBox.vala:27
-#, fuzzy
 msgid "Default"
-msgstr "Auf Standard zurücksetzen"
+msgstr "Standard"
 
 #: src/Widgets/MonospaceBox.vala:28
 msgid "Click to use default text font"
@@ -172,7 +171,7 @@ msgstr " - Jorts"
 
 #: src/Windows/StickyNoteWindow.vala:112
 msgid "Click to edit the title"
-msgstr "Klicken Sie, um den Titel zu bearbeiten"
+msgstr "Klicken, um den Titel zu bearbeiten"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -198,7 +197,6 @@ msgid "Show preferences"
 msgstr "Einstellungen anzeigen"
 
 #: src/Application.vala:177
-#, fuzzy
 msgid "Reset all settings"
 msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 
@@ -434,16 +432,3 @@ msgstr ""
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
 ""
-
-#~ msgid "Permissions"
-#~ msgstr "Berechtigungen"
-
-#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-#~ msgstr "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "AnwendungenAutostarter"
-
-#~ msgid "Edit title"
-#~ msgstr "Titel bearbeiten"

@@ -70,9 +70,8 @@ msgid "Slate"
 msgstr "Ardoise"
 
 #: src/Widgets/MonospaceBox.vala:27
-#, fuzzy
 msgid "Default"
-msgstr "Rétablissement des valeurs par défaut"
+msgstr "Standard"
 
 #: src/Widgets/MonospaceBox.vala:28
 msgid "Click to use default text font"
@@ -198,9 +197,8 @@ msgid "Show preferences"
 msgstr "Afficher les préférences"
 
 #: src/Application.vala:177
-#, fuzzy
 msgid "Reset all settings"
-msgstr "Réinitialiser tous les paramètres aux valeurs par défaut"
+msgstr "Réinitialiser les paramètres"
 
 #: src/Services/Utils.vala:88
 msgid "All my very best friends"
@@ -399,9 +397,8 @@ msgid "The coolest linux apps"
 msgstr "Les applications linux les plus cool"
 
 #: src/Services/Utils.vala:137
-#, fuzzy
 msgid "My favourite dishes"
-msgstr "Mes groupes préférés"
+msgstr "Mes plats préférés"
 
 #: src/Services/Utils.vala:138
 msgid "My funniest jokes"
@@ -434,16 +431,3 @@ msgstr ""
 "J'espère que ma petite application vous apportera beaucoup de joie\n"
 "Bonne journée!🎇\n"
 ""
-
-#~ msgid "Permissions"
-#~ msgstr "Permissions"
-
-#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-#~ msgstr "Vous pouvez faire en sorte que les notes autocollantes s'affichent lorsque vous vous connectez en ajoutant Jorts au démarrage automatique."
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "Applications d'autodémarrage"
-
-#~ msgid "Edit title"
-#~ msgstr "Modifier le titre"
