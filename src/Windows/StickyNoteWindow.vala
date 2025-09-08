@@ -33,14 +33,20 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private PopoverView popover;
     public TextView textview;
 
-    public string theme;
-    private int _zoom;
+    private string _theme;
+
+    public string theme {
+        get { return _theme;}
+        set {on_theme_changed (value);}
+    }
+
 
     public bool monospace {
         get { return view.textview.monospace;}
         set {on_monospace_changed (value);}
     }
 
+    private int _zoom;
     public int zoom {
         get { return _zoom;}
         set {do_set_zoom (value);}
@@ -131,11 +137,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
+
+        popover.color_button_box.set_toggles (data.theme);
+
         this.zoom = data.zoom;
         this.monospace = data.monospace;
+        this.theme = data.theme;
 
-        on_theme_updated (data.theme);
-        popover.color_button_box.set_toggles (data.theme);
+
 
 
 
@@ -151,7 +160,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.textview.buffer.changed.connect (on_buffer_changed);
 
         // The settings popover tells us a new theme has been chosen!
-        popover.theme_changed.connect (on_theme_updated);
+        popover.theme_changed.connect (on_theme_changed);
 
         // The settings popover tells us a new zoom has been chosen!
         popover.monospace_changed.connect (on_monospace_changed);
@@ -254,18 +263,18 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     // Switches stylesheet
     // First use appropriate stylesheet, Then switch the theme classes
-    private void on_theme_updated (string theme) {
-        debug ("Updating theme to %s".printf (theme));
+    private void on_theme_changed (string new_theme) {
+        debug ("Updating theme to %s".printf (new_theme));
 
-        var stylesheet = "io.elementary.stylesheet." + theme.ascii_down ();
+        var stylesheet = "io.elementary.stylesheet." + new_theme.ascii_down ();
         this.gtk_settings.gtk_theme_name = stylesheet;
 
-        if (this.theme in css_classes) {
-            remove_css_class (this.theme);
+        if (_theme in css_classes) {
+            remove_css_class (_theme);
         }
 
-        this.theme = theme;
-        add_css_class (this.theme);
+        _theme = new_theme;
+        add_css_class (new_theme);
 
         ((Application)this.application).manager.save_to_stash ();
     }
