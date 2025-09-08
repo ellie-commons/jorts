@@ -145,10 +145,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.theme = data.theme;
 
 
-
-
-
-
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/

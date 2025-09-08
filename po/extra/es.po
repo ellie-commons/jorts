@@ -1,34 +1,31 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-09-08 23:37+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 18:07+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #: data/jorts.desktop.in:3
 msgid "Jorts"
 msgstr "Pantalones cortos"
 
 #: data/jorts.desktop.in:4
-msgid "Sticky notes utility"
-msgstr "Utilidad de notas adhesivas"
+#: data/jorts.metainfo.xml.in:43
+msgid "Sticky notes"
+msgstr "Notas adhesivas"
 
 #: data/jorts.desktop.in:5
-msgid ""
-"Write down notes, reminders, random thoughts and other short-term "
-"informations"
-msgstr ""
-"Anotar notas, recordatorios, pensamientos aleatorios y otras informaciones a "
-"corto plazo."
+msgid "Write down notes, reminders, random thoughts and other short-term informations"
+msgstr "Anotar notas, recordatorios, pensamientos aleatorios y otras informaciones a corto plazo."
 
-#: data/jorts.desktop.in:8
+#: data/jorts.desktop.in:10
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr "texto;sin formato;texto sin formato;bloc;notas;adhesivo;post-it;"
 
@@ -36,8 +33,9 @@ msgstr "texto;sin formato;texto sin formato;bloc;notas;adhesivo;post-it;"
 msgid "New sticky note"
 msgstr "Nueva nota adhesiva"
 
-#: data/jorts.desktop.in:21
-msgid "Preferences"
+#: data/jorts.desktop.in:22
+#, fuzzy
+msgid "Show Preferences"
 msgstr "Preferencias"
 
 #: data/jorts.metainfo.xml.in:8
@@ -64,9 +62,7 @@ msgstr "Adaptable: Las notas nuevas tienen el zoom que elegiste la última vez"
 
 #: data/jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr ""
-"Bonito: Cada nueva nota tiene un título gracioso o simpático aleatorio "
-"(editable)"
+msgstr "Bonito: Cada nueva nota tiene un título gracioso o simpático aleatorio (editable)"
 
 #: data/jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -78,21 +74,12 @@ msgstr "Privado: ¡Prueba el modo garabato!"
 
 #: data/jorts.metainfo.xml.in:19
 #, fuzzy
-msgid ""
-"This is a fork of an old version of \"Notejot\" by lainsce. The community "
-"liked it so much, we thought it would be great to revive it!"
-msgstr ""
-"Este es un fork de una antigua versión de \"Notejot\" por lainsce y no "
-"existiría sin su trabajo. A la comunidad le gustó tanto que pensamos que "
-"sería genial revivirlo."
+msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
+msgstr "Este es un fork de una antigua versión de \"Notejot\" por lainsce y no existiría sin su trabajo. A la comunidad le gustó tanto que pensamos que sería genial revivirlo."
 
 #: data/jorts.metainfo.xml.in:27
-msgid "Stella - Teamcons"
-msgstr "Stella - Teamcons"
-
-#: data/jorts.metainfo.xml.in:43
-msgid "Sticky notes"
-msgstr "Notas adhesivas"
+msgid "Lainsce + Stella"
+msgstr "Lainsce + Stella"
 
 #: data/jorts.metainfo.xml.in:44
 #, fuzzy
@@ -136,472 +123,451 @@ msgstr "Panteón"
 msgid "elementary OS"
 msgstr "SO elemental"
 
-#: data/jorts.metainfo.xml.in:61
+#: data/jorts.metainfo.xml.in:71
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "Una nota adhesiva con el tema \"Blueberry"
 
-#: data/jorts.metainfo.xml.in:65
+#: data/jorts.metainfo.xml.in:75
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
-msgstr ""
-"Cambia los colores, acerca y aleja la imagen, ¡e incluso hay un botón emoji!"
+msgstr "Cambia los colores, acerca y aleja la imagen, ¡e incluso hay un botón emoji!"
 
-#: data/jorts.metainfo.xml.in:69
+#: data/jorts.metainfo.xml.in:79
 #, fuzzy
-msgid ""
-"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
-"Mode!"
-msgstr ""
-"¿Vas en streaming? ¿Te preocupa que alguien mire por encima de tu hombro? "
-"¡Prueba el Modo garabatos!"
+msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
+msgstr "¿Vas en streaming? ¿Te preocupa que alguien mire por encima de tu hombro? ¡Prueba el Modo garabatos!"
 
-#: data/jorts.metainfo.xml.in:73
+#: data/jorts.metainfo.xml.in:83
 msgid "Look! Ascii art in a sticky note!"
 msgstr "¡Mira! ¡Arte Ascii en una nota adhesiva!"
 
-#: data/jorts.metainfo.xml.in:77
+#: data/jorts.metainfo.xml.in:87
 msgid "The preferences dialog in light mode"
 msgstr "El diálogo de preferencias en modo luz"
 
-#: data/jorts.metainfo.xml.in:81
+#: data/jorts.metainfo.xml.in:91
 msgid "The preferences dialog in dark mode"
 msgstr "El diálogo de preferencias en modo oscuro"
 
 #: data/jorts.metainfo.xml.in:99
-msgid ""
-"Bugfix: Fix Jorts lingering in the background not opening anymore if all "
-"windows were closed (#77)"
-msgstr ""
+#, fuzzy
+msgid "3.4.0 Jorts of Autumn"
+msgstr "2.2.0 Los Jorts de luz"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "I struggled with some shenanigans to have only one preference window... Should be done for good now"
+msgstr "Luché con algunas travesuras para tener sólo una ventana de preferencias... Debería estar hecho para siempre ahora"
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Added a desktop action to create a note from clipboard content"
+msgstr "Se ha añadido una acción de escritorio para crear una nota a partir del contenido del portapapeles."
+
+#: data/jorts.metainfo.xml.in:103
+msgid "Added a reset-settings commandline option. Could be handy."
+msgstr "Se ha añadido una opción de línea de comandos para restablecer la configuración. Puede ser útil."
+
+#: data/jorts.metainfo.xml.in:104
+msgid "Ctrl+L to focus note title"
+msgstr "Ctrl+L para enfocar el título de la nota"
 
 #: data/jorts.metainfo.xml.in:105
-msgid "3.3.0 Star Platinum Jorts"
-msgstr ""
+msgid "Ctrl+M to open note settings now"
+msgstr "Ctrl+M para abrir la configuración de notas ahora"
+
+#: data/jorts.metainfo.xml.in:106
+msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+msgstr "Nueva configuración: fuentes OpenDyslexia. elementary OS tiene que OOTB, pero no otros DEs"
 
 #: data/jorts.metainfo.xml.in:107
-msgid ""
-"Bugfix: Whole window being grabbable interfered with text editing. Only "
-"actionbar and header are, now (#75, #76)"
-msgstr ""
+msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
+msgstr "Nuevo ajuste de nota: Monospace. Podría ser para la accesibilidad, podría ser para garabatos ascii"
 
 #: data/jorts.metainfo.xml.in:108
-msgid "Added more random titles"
-msgstr ""
+msgid "Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs"
+msgstr "Código más limpio y agradable bajo el capó. Probablemente un rendimiento marginalmente mejorado o menos bugs en los bordes."
 
 #: data/jorts.metainfo.xml.in:109
+msgid "Better commented text and code, for translators and eventual contributors"
+msgstr "Texto y código mejor comentados, para traductores y eventuales colaboradores."
+
+#: data/jorts.metainfo.xml.in:116
+msgid "Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)"
+msgstr "Corrección de errores: Corrección de Jorts que permanecían en segundo plano y ya no se abrían si se cerraban todas las ventanas (#77)"
+
+#: data/jorts.metainfo.xml.in:122
+msgid "3.3.0 Star Platinum Jorts"
+msgstr "3.3.0 Pantalones cortos Star Platinum"
+
+#: data/jorts.metainfo.xml.in:124
+msgid "Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)"
+msgstr "Bugfix: Que toda la ventana fuera agarrable interfería con la edición de texto. Ahora sólo lo son la barra de acciones y la cabecera (#75, #76)"
+
+#: data/jorts.metainfo.xml.in:125
+msgid "Added more random titles"
+msgstr "Añadidos más títulos aleatorios"
+
+#: data/jorts.metainfo.xml.in:126
 msgid "Buttons for add/remove autostart"
-msgstr ""
+msgstr "Botones para añadir/eliminar el arranque automático"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:127
 msgid "Some more title placeholders"
-msgstr ""
+msgstr "Algunos títulos más"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:128
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Cambios aquí y allá para un código más limpio"
 
-#: data/jorts.metainfo.xml.in:117
-msgid ""
-"Bugfix: When toggled off, the actionbar would leave an empty space. It is "
-"now fixed - With now a flashier animation to boot."
-msgstr ""
+#: data/jorts.metainfo.xml.in:134
+msgid "Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot."
+msgstr "Corrección de errores: Cuando se desactivaba, la barra de acciones dejaba un espacio vacío. Ya está solucionado, con una animación más llamativa."
 
-#: data/jorts.metainfo.xml.in:122
+#: data/jorts.metainfo.xml.in:139
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Los Jorts de luz"
 
-#: data/jorts.metainfo.xml.in:124
+#: data/jorts.metainfo.xml.in:141
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Añadir una pequeña animación al activar/desactivar la barra de acción"
 
-#: data/jorts.metainfo.xml.in:125
+#: data/jorts.metainfo.xml.in:142
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
-msgstr ""
-"Corregido el desenfoque en la visualización a gran escala debido a Flathub BS"
+msgstr "Corregido el desenfoque en la visualización a gran escala debido a Flathub BS"
 
-#: data/jorts.metainfo.xml.in:126
+#: data/jorts.metainfo.xml.in:143
 msgid "Added high-resolution screenshots"
 msgstr "Añadidas capturas de pantalla de alta resolución"
 
-#: data/jorts.metainfo.xml.in:127
-msgid ""
-"Last minute bugfix, somehow accels did not work when the Preferences were "
-"focused"
-msgstr ""
+#: data/jorts.metainfo.xml.in:144
+msgid "Last minute bugfix, somehow accels did not work when the Preferences were focused"
+msgstr "Corrección de errores de última hora, de alguna manera los accels no funcionaban cuando las Preferencias estaban enfocadas."
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:145
 msgid "A bit of housekeeping for FR and DE while at it"
-msgstr ""
+msgstr "De paso, un poco de orden para FR y DE"
 
-#: data/jorts.metainfo.xml.in:130
+#: data/jorts.metainfo.xml.in:147
 msgid "😎 Guests stars:"
-msgstr ""
+msgstr "😎 Estrellas invitadas:"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:149
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Edición Pride: Un precioso icono temporal de @wpkelso"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:150
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:139
+#: data/jorts.metainfo.xml.in:156
 #, fuzzy
 msgid "3.1.3 Jorts of fire and lava"
 msgstr "2.2.0 Los Jorts de luz"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:158
 msgid "Save memory and disk writes by adding a proper debounce"
 msgstr "Ahorre memoria y escrituras en disco añadiendo un rebote adecuado"
 
-#: data/jorts.metainfo.xml.in:142
+#: data/jorts.metainfo.xml.in:159
 #, fuzzy
 msgid "Updated IT translations thanks to @albanobattistella!"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:160
 #, fuzzy
 msgid "Updated JA translations thanks to @RyoNakano!"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:166
 msgid "3.1.2 Amendments for flathub"
 msgstr "3.1.2 Enmiendas para el flathub"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:168
 msgid "Nothing interesting here"
 msgstr "Nada interesante aquí"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:174
 msgid "3.1.1 Woops"
 msgstr "3.1.1 Vaya"
 
-#: data/jorts.metainfo.xml.in:159
+#: data/jorts.metainfo.xml.in:176
 msgid "Minor screenshot amendments"
 msgstr "Pequeñas modificaciones en las capturas de pantalla"
 
-#: data/jorts.metainfo.xml.in:165
+#: data/jorts.metainfo.xml.in:182
 msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Jorts de canciones y Jorts de baile"
 
-#: data/jorts.metainfo.xml.in:167
+#: data/jorts.metainfo.xml.in:184
 msgid "Flathub version, with a lot of help from @RyoNakano"
 msgstr "Versión Flathub, con mucha ayuda de @RyoNakano"
 
-#: data/jorts.metainfo.xml.in:173
+#: data/jorts.metainfo.xml.in:190
 #, fuzzy
 msgid "3.0.0 Jorts of Thunder"
 msgstr "2.2.0 Los Jorts de luz"
 
-#: data/jorts.metainfo.xml.in:175
+#: data/jorts.metainfo.xml.in:192
 msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Un precioso icono nuevo gracias a @wpkelso"
 
-#: data/jorts.metainfo.xml.in:176
-msgid ""
-"Between this and the GTK4 port, there is very little left from old "
-"Notejot... We could say it is a v3"
-msgstr ""
-"Entre esto y el port de GTK4, queda muy poco del viejo Notejot... Podríamos "
-"decir que es una v3"
+#: data/jorts.metainfo.xml.in:193
+msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
+msgstr "Entre esto y el port de GTK4, queda muy poco del viejo Notejot... Podríamos decir que es una v3"
 
-#: data/jorts.metainfo.xml.in:177
-msgid ""
-"Make the app more universal: Other DEs do not keep window dimensions, so "
-"reimplement save and restore"
-msgstr ""
-"Hacer la aplicación más universal: Otros DEs no mantienen las dimensiones de "
-"las ventanas, así que reimplementa guardar y restaurar."
+#: data/jorts.metainfo.xml.in:194
+msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
+msgstr "Hacer la aplicación más universal: Otros DEs no mantienen las dimensiones de las ventanas, así que reimplementa guardar y restaurar."
 
-#: data/jorts.metainfo.xml.in:183
+#: data/jorts.metainfo.xml.in:200
 #, fuzzy
 msgid "Updated RU translations thanks to @camellan!"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:188
+#: data/jorts.metainfo.xml.in:205
 #, fuzzy
 msgid "Updated screenshots"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:193
+#: data/jorts.metainfo.xml.in:210
 #, fuzzy
 msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Los Jorts de luz"
 
-#: data/jorts.metainfo.xml.in:195
-msgid ""
-"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
-"feel more at home now"
-msgstr ""
-"Gracias a RyoNakano, que ha revisado las traducciones al japonés, los "
-"japoneses se sentirán más a gusto."
+#: data/jorts.metainfo.xml.in:212
+msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
+msgstr "Gracias a RyoNakano, que ha revisado las traducciones al japonés, los japoneses se sentirán más a gusto."
 
-#: data/jorts.metainfo.xml.in:196
+#: data/jorts.metainfo.xml.in:213
 msgid "Respect reduce animations settings"
 msgstr "Respetar los ajustes de reducción de animaciones"
 
-#: data/jorts.metainfo.xml.in:197
+#: data/jorts.metainfo.xml.in:214
 #, fuzzy
 msgid "Scribble mode exclusively in the preferences now"
 msgstr "el modo scribbly se ha trasladado al nuevo diálogo de preferencias"
 
-#: data/jorts.metainfo.xml.in:198
+#: data/jorts.metainfo.xml.in:215
 msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
 msgstr "Añadir preferencia: ¡ahora puedes ocultar la barra inferior! (Ctrl+t)"
 
-#: data/jorts.metainfo.xml.in:199
+#: data/jorts.metainfo.xml.in:216
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr ""
-"Corrección de errores: Se ha corregido el desplazamiento de elementos al "
-"pasar el ratón por encima o seleccionar el título de una nota."
+msgstr "Corrección de errores: Se ha corregido el desplazamiento de elementos al pasar el ratón por encima o seleccionar el título de una nota."
 
-#: data/jorts.metainfo.xml.in:200
-msgid ""
-"Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr ""
-"Corrección de errores: No funcionaban las funciones de crear y eliminar "
-"cuentas, lo siento, ya está solucionado."
+#: data/jorts.metainfo.xml.in:217
+msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
+msgstr "Corrección de errores: No funcionaban las funciones de crear y eliminar cuentas, lo siento, ya está solucionado."
 
-#: data/jorts.metainfo.xml.in:201
+#: data/jorts.metainfo.xml.in:218
 msgid "Bugfix where random components skipped the last possible choice"
-msgstr ""
-"Corrección de errores por la que los componentes aleatorios se saltaban la "
-"última opción posible"
+msgstr "Corrección de errores por la que los componentes aleatorios se saltaban la última opción posible"
 
-#: data/jorts.metainfo.xml.in:202
+#: data/jorts.metainfo.xml.in:219
 msgid "Bugfix: shortcut for emotes did not show up properly"
-msgstr ""
-"Corrección de errores: el acceso directo a los emotes no aparecía "
-"correctamente."
+msgstr "Corrección de errores: el acceso directo a los emotes no aparecía correctamente."
 
-#: data/jorts.metainfo.xml.in:203
+#: data/jorts.metainfo.xml.in:220
 msgid "Lil easter egg"
 msgstr "Huevo de Pascua"
 
-#: data/jorts.metainfo.xml.in:209
+#: data/jorts.metainfo.xml.in:226
 #, fuzzy
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 Los pantalones cortos interiores"
 
-#: data/jorts.metainfo.xml.in:211
-msgid ""
-"New feature: Preferences dialog! Right-click on the app icon to see the "
-"option"
-msgstr ""
-"Nueva función: Diálogo de preferencias Haga clic con el botón derecho en el "
-"icono de la aplicación para ver la opción"
+#: data/jorts.metainfo.xml.in:228
+msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
+msgstr "Nueva función: Diálogo de preferencias Haga clic con el botón derecho en el icono de la aplicación para ver la opción"
 
-#: data/jorts.metainfo.xml.in:212
+#: data/jorts.metainfo.xml.in:229
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "el modo scribbly se ha trasladado al nuevo diálogo de preferencias"
 
-#: data/jorts.metainfo.xml.in:213
+#: data/jorts.metainfo.xml.in:230
 #, fuzzy
-msgid ""
-"For translators: Translations have been separated in 2: One for the UI one "
-"for the extra content"
-msgstr ""
-"Mejora para los traductores: Las traducciones se han separado en 2: Una para "
-"la interfaz de usuario y otra para el contenido extra."
+msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
+msgstr "Mejora para los traductores: Las traducciones se han separado en 2: Una para la interfaz de usuario y otra para el contenido extra."
 
-#: data/jorts.metainfo.xml.in:214
+#: data/jorts.metainfo.xml.in:231
 msgid "Comfort: Easier to grab and drag stickies"
 msgstr "Comodidad: Más fácil de agarrar y arrastrar los stickies"
 
-#: data/jorts.metainfo.xml.in:215
+#: data/jorts.metainfo.xml.in:232
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr "Bugfix: Las capturas de pantalla en el appcenter eran un desastre aaaa"
 
-#: data/jorts.metainfo.xml.in:221
+#: data/jorts.metainfo.xml.in:238
 #, fuzzy
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/jorts.metainfo.xml.in:226
+#: data/jorts.metainfo.xml.in:243
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 Los Jorts de luz"
 
-#: data/jorts.metainfo.xml.in:228 data/jorts.metainfo.xml.in:243
+#: data/jorts.metainfo.xml.in:245
+#: data/jorts.metainfo.xml.in:260
 msgid "Better translation coverage"
 msgstr "Mejor cobertura de traducción"
 
-#: data/jorts.metainfo.xml.in:229
+#: data/jorts.metainfo.xml.in:246
 #, fuzzy
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr ""
-"Nueva función: ¡modo garabato! Oculte el contenido de las notas adhesivas "
-"cuando esté desenfocado"
+msgstr "Nueva función: ¡modo garabato! Oculte el contenido de las notas adhesivas cuando esté desenfocado"
 
-#: data/jorts.metainfo.xml.in:230
-msgid ""
-"New feature: Emoji picker button! I know there is one on right-click, but "
-"buttons are more accessible!"
-msgstr ""
-"Nueva función: Botón para elegir emoji. Sé que hay uno en el botón derecho "
-"del ratón, ¡pero los botones son más accesibles!"
+#: data/jorts.metainfo.xml.in:247
+msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
+msgstr "Nueva función: Botón para elegir emoji. Sé que hay uno en el botón derecho del ratón, ¡pero los botones son más accesibles!"
 
-#: data/jorts.metainfo.xml.in:231
+#: data/jorts.metainfo.xml.in:248
 msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr ""
-"El botón de la barra de herramientas muestra un emote aleatorio cada vez que "
-"haces clic."
+msgstr "El botón de la barra de herramientas muestra un emote aleatorio cada vez que haces clic."
 
-#: data/jorts.metainfo.xml.in:232
-msgid ""
-"New feature: Jorts does a monthly backup. Should there be any issue you can "
-"recover data!"
-msgstr ""
-"Nueva función: Jorts hace una copia de seguridad mensual. Si hay algún "
-"problema, ¡puedes recuperar los datos!"
+#: data/jorts.metainfo.xml.in:249
+msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
+msgstr "Nueva función: Jorts hace una copia de seguridad mensual. Si hay algún problema, ¡puedes recuperar los datos!"
 
-#: data/jorts.metainfo.xml.in:233
+#: data/jorts.metainfo.xml.in:250
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr ""
-"Si el almacenamiento principal se corrompe, Jorts intenta cargar desde la "
-"copia de seguridad"
+msgstr "Si el almacenamiento principal se corrompe, Jorts intenta cargar desde la copia de seguridad"
 
-#: data/jorts.metainfo.xml.in:234
+#: data/jorts.metainfo.xml.in:251
 msgid "Some new fun/cute default titles"
 msgstr "Algunos nuevos y divertidos títulos por defecto"
 
-#: data/jorts.metainfo.xml.in:235
+#: data/jorts.metainfo.xml.in:252
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Cambios aquí y allá para un código más limpio"
 
-#: data/jorts.metainfo.xml.in:241
+#: data/jorts.metainfo.xml.in:258
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 Los pantalones cortos impenetrables"
 
-#: data/jorts.metainfo.xml.in:244
+#: data/jorts.metainfo.xml.in:261
 msgid "Add relief to actionbar buttons"
 msgstr "Añadir relieve a los botones de la barra de acción"
 
-#: data/jorts.metainfo.xml.in:245
+#: data/jorts.metainfo.xml.in:262
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "Bugfix: Caso en el que el tema o el zoom no se guardaban correctamente"
 
-#: data/jorts.metainfo.xml.in:246
+#: data/jorts.metainfo.xml.in:263
 msgid "Bugfix: Title in multitasking not set correctly"
-msgstr ""
-"Corrección de errores: El título en la multitarea no se establecía "
-"correctamente"
+msgstr "Corrección de errores: El título en la multitarea no se establecía correctamente"
 
-#: data/jorts.metainfo.xml.in:247
+#: data/jorts.metainfo.xml.in:264
 msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr ""
-"Corrección de errores: Incoherencia en los iconos de los distintos temas."
+msgstr "Corrección de errores: Incoherencia en los iconos de los distintos temas."
 
-#: data/jorts.metainfo.xml.in:248
+#: data/jorts.metainfo.xml.in:265
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Corrección de errores: Incoherencias temáticas en las etiquetas"
 
-#: data/jorts.metainfo.xml.in:254
+#: data/jorts.metainfo.xml.in:271
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 ¡Recién salido de la lavandería! (2: boogaloo eléctrico)"
 
-#: data/jorts.metainfo.xml.in:256
+#: data/jorts.metainfo.xml.in:273
 msgid "Clearer appmenu description"
 msgstr "Descripción más clara del menú de aplicaciones"
 
-#: data/jorts.metainfo.xml.in:257
+#: data/jorts.metainfo.xml.in:274
 msgid "More consistent theming"
 msgstr "Tematización más coherente"
 
-#: data/jorts.metainfo.xml.in:258
+#: data/jorts.metainfo.xml.in:275
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "Corrección de errores: el atajo de supresión no era responsable"
 
-#: data/jorts.metainfo.xml.in:259
+#: data/jorts.metainfo.xml.in:276
 msgid "Bugfix: screenshot not showing"
 msgstr "Corrección de errores: no se mostraban las capturas de pantalla"
 
-#: data/jorts.metainfo.xml.in:265
+#: data/jorts.metainfo.xml.in:282
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 ¡Recién salido de la lavandería!"
 
-#: data/jorts.metainfo.xml.in:267
+#: data/jorts.metainfo.xml.in:284
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "Incluye un zoom por nota Para que puedas ampliar o reducir el texto"
 
-#: data/jorts.metainfo.xml.in:268
-msgid ""
-"Latest set zoom, aka what is most comfortable to you, stays as default for "
-"new notes"
-msgstr ""
-"El último zoom configurado, es decir, el que le resulte más cómodo, se "
-"mantiene como predeterminado para las notas nuevas"
+#: data/jorts.metainfo.xml.in:285
+msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
+msgstr "El último zoom configurado, es decir, el que le resulte más cómodo, se mantiene como predeterminado para las notas nuevas"
 
-#: data/jorts.metainfo.xml.in:269
+#: data/jorts.metainfo.xml.in:286
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Mejor legibilidad (WCAG AA o AAA según el tema)"
 
-#: data/jorts.metainfo.xml.in:270
+#: data/jorts.metainfo.xml.in:287
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "También un poco mejor aspecto del tema. Sí, incluso más :)"
 
-#: data/jorts.metainfo.xml.in:271
+#: data/jorts.metainfo.xml.in:288
 msgid "Improved translations"
 msgstr "Traducciones mejoradas"
 
-#: data/jorts.metainfo.xml.in:272
+#: data/jorts.metainfo.xml.in:289
 msgid "Better shortcut and tooltips"
 msgstr "Mejores accesos directos e información sobre herramientas"
 
-#: data/jorts.metainfo.xml.in:273
+#: data/jorts.metainfo.xml.in:290
 msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr ""
-"Se ha corregido un error por el que Jorts permanecía en el tema del sistema "
-"de luz"
+msgstr "Se ha corregido un error por el que Jorts permanecía en el tema del sistema de luz"
 
-#: data/jorts.metainfo.xml.in:279
+#: data/jorts.metainfo.xml.in:296
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 Lanzamiento de Appcenter"
 
-#: data/jorts.metainfo.xml.in:284
+#: data/jorts.metainfo.xml.in:301
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "Versión 2.0.0: Pizarra y chicle"
 
-#: data/jorts.metainfo.xml.in:286
+#: data/jorts.metainfo.xml.in:303
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Recuperación de una versión antigua pero muy apreciada de Notejot"
 
-#: data/jorts.metainfo.xml.in:287
+#: data/jorts.metainfo.xml.in:304
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "La aplicación se llama ahora Jorts. Sin embargo, no puedes usarla"
 
-#: data/jorts.metainfo.xml.in:288
+#: data/jorts.metainfo.xml.in:305
 msgid "10 lovely little colours"
 msgstr "10 pequeños colores encantadores"
 
-#: data/jorts.metainfo.xml.in:289
+#: data/jorts.metainfo.xml.in:306
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "Construido sobre modernas tecnologías Linux y formatos de empaquetado"
 
-#: data/jorts.metainfo.xml.in:290
+#: data/jorts.metainfo.xml.in:307
 msgid "Smooth transition when changing theme"
 msgstr "Transición suave al cambiar de tema"
 
-#: data/jorts.metainfo.xml.in:291
+#: data/jorts.metainfo.xml.in:308
 msgid "New stickies have a random fun little title and colour"
-msgstr ""
-"Los nuevos stickies tienen un título y un color divertidos y aleatorios"
+msgstr "Los nuevos stickies tienen un título y un color divertidos y aleatorios"
 
-#: data/jorts.metainfo.xml.in:292
+#: data/jorts.metainfo.xml.in:309
 msgid "A few initial translations included, and more to come"
 msgstr "Algunas traducciones iniciales incluidas, y más por venir"
 
-#: data/jorts.metainfo.xml.in:293
+#: data/jorts.metainfo.xml.in:310
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr ""
-"Correo electrónico y enlaces clicables Ctrl+Clic para abrir en el correo o "
-"en el navegador"
+msgstr "Correo electrónico y enlaces clicables Ctrl+Clic para abrir en el correo o en el navegador"
 
-#: data/jorts.metainfo.xml.in:294
+#: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "El texto permite deshacer, rehacer y utilizar emojis :)"
+
+#~ msgid "Sticky notes utility"
+#~ msgstr "Utilidad de notas adhesivas"
+
+#~ msgid "Stella - Teamcons"
+#~ msgstr "Stella - Teamcons"
 
 #, fuzzy
 #~ msgid "Colourful little sticky notes! :)"
@@ -622,8 +588,5 @@ msgstr "El texto permite deshacer, rehacer y utilizar emojis :)"
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr "Puedes hacer unzoom tan fuerte que podrías hacer arte ascii"
 
-#~ msgid ""
-#~ "New feature: Default font. You can now set a specific font for Jorts."
-#~ msgstr ""
-#~ "Nueva función: Fuente por defecto. Ahora puede establecer una fuente "
-#~ "específica para Jorts."
+#~ msgid "New feature: Default font. You can now set a specific font for Jorts."
+#~ msgstr "Nueva función: Fuente por defecto. Ahora puede establecer una fuente específica para Jorts."

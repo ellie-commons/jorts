@@ -1,16 +1,206 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: de\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-09-08 23:37+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 18:07+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: de\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/NoteView.vala:36
+msgid "New sticky note"
+msgstr "Neue Haftnotiz"
+
+#: src/Views/NoteView.vala:48
+msgid "Delete sticky note"
+msgstr "Haftnotiz löschen"
+
+#: src/Views/NoteView.vala:63
+msgid "Insert emoji"
+msgstr "Emoji einfügen"
+
+#: src/Views/NoteView.vala:79
+msgid "Preferences for this sticky note"
+msgstr "Einstellungen für diesen Haftnotizblock"
+
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/ColorBox.vala:38
+msgid "Blueberry"
+msgstr "Blaubeere"
+
+#: src/Widgets/ColorBox.vala:39
+msgid "Lime"
+msgstr "Limette"
+
+#: src/Widgets/ColorBox.vala:40
+msgid "Mint"
+msgstr "Minze"
+
+#: src/Widgets/ColorBox.vala:41
+msgid "Banana"
+msgstr "Banane"
+
+#: src/Widgets/ColorBox.vala:42
+msgid "Strawberry"
+msgstr "Erdbeere"
+
+#: src/Widgets/ColorBox.vala:43
+msgid "Orange"
+msgstr "Orange"
+
+#: src/Widgets/ColorBox.vala:44
+msgid "Bubblegum"
+msgstr "Kaugummi"
+
+#: src/Widgets/ColorBox.vala:45
+msgid "Grape"
+msgstr "Weintrauben"
+
+#: src/Widgets/ColorBox.vala:46
+msgid "Cocoa"
+msgstr "Kakao"
+
+#: src/Widgets/ColorBox.vala:47
+msgid "Slate"
+msgstr "Schiefer"
+
+#: src/Widgets/MonospaceBox.vala:27
+#, fuzzy
+msgid "Default"
+msgstr "Auf Standard zurücksetzen"
+
+#: src/Widgets/MonospaceBox.vala:28
+msgid "Click to use default text font"
+msgstr "Klicken Sie auf , um die Standardschriftart zu verwenden"
+
+#: src/Widgets/MonospaceBox.vala:33
+msgid "Monospace"
+msgstr "Monospace"
+
+#: src/Widgets/MonospaceBox.vala:34
+msgid "Click to use monospaced font"
+msgstr "Klicken Sie hier, um die Schriftart Monospaced zu verwenden"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/ZoomBox.vala:20
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/ZoomBox.vala:38
+msgid "Zoom out"
+msgstr "Verkleinern"
+
+#: src/Widgets/ZoomBox.vala:45
+msgid "Default zoom level"
+msgstr "Standard-Zoomstufe"
+
+#: src/Widgets/ZoomBox.vala:52
+msgid "Zoom in"
+msgstr "Vergrößern"
+
+#: src/Views/PreferencesView.vala:25
+msgid "Request to system sent"
+msgstr "Anfrage an das System gesendet"
+
+#: src/Views/PreferencesView.vala:52
+msgid "Make unfocused notes unreadable"
+msgstr "Unscharfe Notizen unlesbar machen"
+
+#: src/Views/PreferencesView.vala:54
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
+
+#: src/Views/PreferencesView.vala:74
+msgid "Hide buttons"
+msgstr "Schaltflächenleiste ausblenden"
+
+#: src/Views/PreferencesView.vala:76
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die Tastaturkürzel funktionieren weiterhin (Strg+T)"
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:99
+msgid "Set autostart"
+msgstr "Autostart einstellen"
+
+#: src/Views/PreferencesView.vala:109
+msgid "Set Jorts to start with the computer"
+msgstr "Jorts so einstellen, dass er mit dem Computer startet"
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:119
+msgid "Remove autostart"
+msgstr "Autostart entfernen"
+
+#: src/Views/PreferencesView.vala:129
+msgid "Remove Jorts from system autostart"
+msgstr "Jorts aus dem System-Autostart entfernen"
+
+#: src/Views/PreferencesView.vala:142
+msgid "Allow to start at login"
+msgstr "Starten bei der Anmeldung zulassen"
+
+#: src/Views/PreferencesView.vala:144
+msgid "You can request the system to start this application automatically"
+msgstr "Sie können das System auffordern, diese Anwendung automatisch zu starten"
+
+#: src/Views/PreferencesView.vala:165
+msgid "Support us!"
+msgstr "Uns unterstützen!"
+
+#: src/Views/PreferencesView.vala:177
+msgid "Close"
+msgstr "Schließen Sie"
+
+#: src/Views/PreferencesView.vala:180
+msgid "Close preferences"
+msgstr "Einstellungen schließen"
+
+#: src/Windows/StickyNoteWindow.vala:92
+#: src/Windows/StickyNoteWindow.vala:137
+#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/PreferenceWindow.vala:52
+msgid " - Jorts"
+msgstr " - Jorts"
+
+#: src/Windows/StickyNoteWindow.vala:112
+msgid "Click to edit the title"
+msgstr "Klicken Sie, um den Titel zu bearbeiten"
+
+#. ******************************************
+#. HEADERBAR BS
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:50
+msgid "Preferences for your Jorts"
+msgstr "Voreinstellungen für deine Jorts!"
+
+#: src/Windows/PreferenceWindow.vala:52
+msgid "Preferences"
+msgstr "Präferenzen"
+
+#: src/Application.vala:174
+msgid "Create a new note"
+msgstr "Eine neue Notiz erstellen"
+
+#: src/Application.vala:175
+msgid "Create a note then paste from clipboard"
+msgstr "Eine Notiz erstellen und dann aus der Zwischenablage einfügen"
+
+#: src/Application.vala:176
+msgid "Show preferences"
+msgstr "Einstellungen anzeigen"
+
+#: src/Application.vala:177
+#, fuzzy
+msgid "Reset all settings"
+msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
 
 #: src/Services/Utils.vala:88
 msgid "All my very best friends"
@@ -166,47 +356,47 @@ msgstr "Meine Lieblingsbands"
 
 #: src/Services/Utils.vala:126
 msgid "Best ingredients for salad"
-msgstr ""
+msgstr "Beste Zutaten für Salat"
 
 #: src/Services/Utils.vala:127
 msgid "Books to read"
-msgstr ""
+msgstr "Bücher zum Lesen"
 
 #: src/Services/Utils.vala:128
 msgid "Places to visit"
-msgstr ""
+msgstr "Zu besuchende Orte"
 
 #: src/Services/Utils.vala:129
 msgid "Hobbies to try out"
-msgstr ""
+msgstr "Hobbys zum Ausprobieren"
 
 #: src/Services/Utils.vala:130
 msgid "Who would win against Goku"
-msgstr ""
+msgstr "Wer würde gegen Goku gewinnen?"
 
 #: src/Services/Utils.vala:131
 msgid "To plant in the garden"
-msgstr ""
+msgstr "Zum Einpflanzen in den Garten"
 
 #: src/Services/Utils.vala:132
 msgid "Meals this week"
-msgstr ""
+msgstr "Mahlzeiten diese Woche"
 
 #: src/Services/Utils.vala:133
 msgid "Everyone's pizza order"
-msgstr ""
+msgstr "Die Pizzabestellung für alle"
 
 #: src/Services/Utils.vala:134
 msgid "Today selfcare to do"
-msgstr ""
+msgstr "Heute Selbstfürsorge zu tun"
 
 #: src/Services/Utils.vala:135
 msgid "Important affirmations to remember"
-msgstr ""
+msgstr "Wichtige Affirmationen zum Merken"
 
 #: src/Services/Utils.vala:136
 msgid "The coolest linux apps"
-msgstr ""
+msgstr "Die coolsten Linux-Anwendungen"
 
 #: src/Services/Utils.vala:137
 #, fuzzy
@@ -215,11 +405,11 @@ msgstr "Meine Lieblingsbands"
 
 #: src/Services/Utils.vala:138
 msgid "My funniest jokes"
-msgstr ""
+msgstr "Meine lustigsten Witze"
 
 #: src/Services/Utils.vala:139
 msgid "The perfect breakfast has..."
-msgstr ""
+msgstr "Das perfekte Frühstück hat..."
 
 #: src/Services/Utils.vala:170
 msgid "🔥WOW Congratulations!🔥"
@@ -234,6 +424,7 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
 "Sie haben die Goldene Haftnotiz gefunden!\n"
 "\n"
@@ -242,182 +433,13 @@ msgstr ""
 "\n"
 "Ich hoffe, meine kleine App bringt dir viel Freude\n"
 "Habt einen tollen Tag!🎇\n"
-
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:42
-msgid "Blueberry"
-msgstr "Blaubeere"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Lime"
-msgstr "Limette"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Mint"
-msgstr "Minze"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Banana"
-msgstr "Banane"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Strawberry"
-msgstr "Erdbeere"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Orange"
-msgstr "Orange"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Bubblegum"
-msgstr "Kaugummi"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Grape"
-msgstr "Weintrauben"
-
-#: src/Widgets/ColorBox.vala:50
-msgid "Cocoa"
-msgstr "Kakao"
-
-#: src/Widgets/ColorBox.vala:51
-msgid "Slate"
-msgstr "Schiefer"
-
-#: src/Views/PreferencesView.vala:28
-msgid "Request to system sent"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:56
-msgid "Make unfocused notes unreadable"
-msgstr "Unscharfe Notizen unlesbar machen"
-
-#: src/Views/PreferencesView.vala:58
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, um "
-"ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
-
-#: src/Views/PreferencesView.vala:78
-msgid "Hide buttons"
-msgstr "Schaltflächenleiste ausblenden"
-
-#: src/Views/PreferencesView.vala:80
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die "
-"Tastaturkürzel funktionieren weiterhin (Strg+T)"
-
-#. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:104
-msgid "Set autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:113
-msgid "Set Jorts to start with the computer"
-msgstr ""
-
-#. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:123
-msgid "Remove autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:132
-msgid "Remove Jorts from system autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:148
-msgid "Allow to start at login"
-msgstr "Starten bei der Anmeldung zulassen"
-
-#: src/Views/PreferencesView.vala:150
-msgid "You can request the system to start this application automatically"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:229
-msgid "Support us!"
-msgstr "Uns unterstützen!"
-
-#. Reset
-#: src/Views/PreferencesView.vala:235
-msgid "Reset to Default"
-msgstr "Auf Standard zurücksetzen"
-
-#: src/Views/PreferencesView.vala:236
-msgid "Reset all settings to defaults"
-msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
-
-#: src/Views/PopoverView.vala:47
-msgid "Zoom out"
-msgstr "Verkleinern"
-
-#: src/Views/PopoverView.vala:54
-msgid "Default zoom level"
-msgstr "Standard-Zoomstufe"
-
-#: src/Views/PopoverView.vala:61
-msgid "Zoom in"
-msgstr "Vergrößern"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Views/PopoverView.vala:109
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:60
-msgid "Preferences for your Jorts"
-msgstr "Voreinstellungen für deine Jorts!"
-
-#: src/Windows/PreferenceWindow.vala:62
-msgid "Preferences"
-msgstr ""
-
-#: src/Windows/PreferenceWindow.vala:62 src/Windows/StickyNoteWindow.vala:96
-#: src/Windows/StickyNoteWindow.vala:308
-msgid " - Jorts"
-msgstr ""
-
-#: src/Windows/StickyNoteWindow.vala:130
-msgid "Click to edit the title"
-msgstr ""
-
-#: src/Windows/StickyNoteWindow.vala:163
-msgid "New sticky note"
-msgstr "Neue Haftnotiz"
-
-#: src/Windows/StickyNoteWindow.vala:175
-msgid "Delete sticky note"
-msgstr "Haftnotiz löschen"
-
-#: src/Windows/StickyNoteWindow.vala:191
-msgid "Insert emoji"
-msgstr "Emoji einfügen"
-
-#: src/Windows/StickyNoteWindow.vala:213
-msgid "Preferences for this sticky note"
-msgstr "Einstellungen für diesen Haftnotizblock"
+""
 
 #~ msgid "Permissions"
 #~ msgstr "Berechtigungen"
 
-#~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
-#~ "autostart"
-#~ msgstr ""
-#~ "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung "
-#~ "angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
+#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+#~ msgstr "Sie können die Haftnotizen so einstellen, dass sie bei der Anmeldung angezeigt werden, indem Sie Jorts zum Autostart hinzufügen"
 
 #, fuzzy
 #~ msgid "Autostart apps"

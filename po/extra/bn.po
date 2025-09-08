@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 18:07+0200\n"
+"POT-Creation-Date: 2025-09-08 23:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,9 +21,9 @@ msgstr ""
 msgid "Jorts"
 msgstr "জোর্টস"
 
-#: data/jorts.desktop.in:4
-msgid "Sticky notes utility"
-msgstr "স্টিকি নোট ইউটিলিটি"
+#: data/jorts.desktop.in:4 data/jorts.metainfo.xml.in:43
+msgid "Sticky notes"
+msgstr "স্টিকি নোট"
 
 #: data/jorts.desktop.in:5
 msgid ""
@@ -31,7 +31,7 @@ msgid ""
 "informations"
 msgstr "নোট, অনুস্মারক, এলোমেলো চিন্তাভাবনা এবং অন্যান্য স্বল্পমেয়াদী তথ্য লিখুন"
 
-#: data/jorts.desktop.in:8
+#: data/jorts.desktop.in:10
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr "পাঠ্য; সমতল; প্লেইনটেক্সট; নোটপ্যাড; নোটস; স্টিকি; পোস্ট-ইট;"
 
@@ -39,8 +39,8 @@ msgstr "পাঠ্য; সমতল; প্লেইনটেক্সট; ন
 msgid "New sticky note"
 msgstr "নতুন স্টিকি নোট"
 
-#: data/jorts.desktop.in:21
-msgid "Preferences"
+#: data/jorts.desktop.in:22
+msgid "Show Preferences"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:8
@@ -88,12 +88,8 @@ msgstr ""
 "অস্তিত্ব থাকবে না। "
 
 #: data/jorts.metainfo.xml.in:27
-msgid "Stella - Teamcons"
-msgstr "স্টেলা - টিমকনস"
-
-#: data/jorts.metainfo.xml.in:43
-msgid "Sticky notes"
-msgstr "স্টিকি নোট"
+msgid "Lainsce + Stella"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:44
 #, fuzzy
@@ -137,359 +133,409 @@ msgstr ""
 msgid "elementary OS"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:61
+#: data/jorts.metainfo.xml.in:71
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "\"ব্লুবেরি \" থিম সহ একটি স্টিকি নোট"
 
-#: data/jorts.metainfo.xml.in:65
+#: data/jorts.metainfo.xml.in:75
 msgid "Change colours, zoom in and out, and there is even an emoji button!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:69
+#: data/jorts.metainfo.xml.in:79
 #, fuzzy
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
 msgstr "স্ট্রিমিং? "
 
-#: data/jorts.metainfo.xml.in:73
+#: data/jorts.metainfo.xml.in:83
 msgid "Look! Ascii art in a sticky note!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:77
+#: data/jorts.metainfo.xml.in:87
 msgid "The preferences dialog in light mode"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:81
+#: data/jorts.metainfo.xml.in:91
 msgid "The preferences dialog in dark mode"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:99
+#, fuzzy
+msgid "3.4.0 Jorts of Autumn"
+msgstr "2.2.0 আলোর জোর্টস"
+
+#: data/jorts.metainfo.xml.in:101
+msgid ""
+"I struggled with some shenanigans to have only one preference window... "
+"Should be done for good now"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Added a desktop action to create a note from clipboard content"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "Added a reset-settings commandline option. Could be handy."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:104
+msgid "Ctrl+L to focus note title"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Ctrl+M to open note settings now"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:106
+msgid ""
+"New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other "
+"DEs"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107
+msgid ""
+"New note setting: Monospace. Could be for accessibility, could be for ascii "
+"doodles"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:108
+msgid ""
+"Cleaner, nicer code under the hood. Probably marginally enhanced "
+"performances or less edge bugs"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:109
+msgid ""
+"Better commented text and code, for translators and eventual contributors"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:116
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:105
+#: data/jorts.metainfo.xml.in:122
 msgid "3.3.0 Star Platinum Jorts"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:124
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:125
 msgid "Added more random titles"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:126
 msgid "Buttons for add/remove autostart"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:127
 msgid "Some more title placeholders"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:128
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "হুডের নীচে ক্লিনার কোডের জন্য এখানে এবং সেখানে পরিবর্তন হয়"
 
-#: data/jorts.metainfo.xml.in:117
+#: data/jorts.metainfo.xml.in:134
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:122
+#: data/jorts.metainfo.xml.in:139
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 আলোর জোর্টস"
 
-#: data/jorts.metainfo.xml.in:124
+#: data/jorts.metainfo.xml.in:141
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:125
+#: data/jorts.metainfo.xml.in:142
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:126
+#: data/jorts.metainfo.xml.in:143
 msgid "Added high-resolution screenshots"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:127
+#: data/jorts.metainfo.xml.in:144
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:145
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:130
+#: data/jorts.metainfo.xml.in:147
 msgid "😎 Guests stars:"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:149
 msgid "A lovely temporary icon by @wpkelso"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:150
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:139
+#: data/jorts.metainfo.xml.in:156
 #, fuzzy
 msgid "3.1.3 Jorts of fire and lava"
 msgstr "2.2.0 আলোর জোর্টস"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:158
 msgid "Save memory and disk writes by adding a proper debounce"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:142
+#: data/jorts.metainfo.xml.in:159
 #, fuzzy
 msgid "Updated IT translations thanks to @albanobattistella!"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:160
 #, fuzzy
 msgid "Updated JA translations thanks to @RyoNakano!"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:166
 msgid "3.1.2 Amendments for flathub"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:168
 msgid "Nothing interesting here"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:174
 msgid "3.1.1 Woops"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:159
+#: data/jorts.metainfo.xml.in:176
 msgid "Minor screenshot amendments"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:165
+#: data/jorts.metainfo.xml.in:182
 msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:167
+#: data/jorts.metainfo.xml.in:184
 msgid "Flathub version, with a lot of help from @RyoNakano"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:173
+#: data/jorts.metainfo.xml.in:190
 #, fuzzy
 msgid "3.0.0 Jorts of Thunder"
 msgstr "2.2.0 আলোর জোর্টস"
 
-#: data/jorts.metainfo.xml.in:175
+#: data/jorts.metainfo.xml.in:192
 msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:176
+#: data/jorts.metainfo.xml.in:193
 msgid ""
 "Between this and the GTK4 port, there is very little left from old "
 "Notejot... We could say it is a v3"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:177
+#: data/jorts.metainfo.xml.in:194
 msgid ""
 "Make the app more universal: Other DEs do not keep window dimensions, so "
 "reimplement save and restore"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:183
+#: data/jorts.metainfo.xml.in:200
 #, fuzzy
 msgid "Updated RU translations thanks to @camellan!"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:188
+#: data/jorts.metainfo.xml.in:205
 #, fuzzy
 msgid "Updated screenshots"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:193
+#: data/jorts.metainfo.xml.in:210
 #, fuzzy
 msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 আলোর জোর্টস"
 
-#: data/jorts.metainfo.xml.in:195
+#: data/jorts.metainfo.xml.in:212
 msgid ""
 "Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
 "feel more at home now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:196
+#: data/jorts.metainfo.xml.in:213
 msgid "Respect reduce animations settings"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:197
+#: data/jorts.metainfo.xml.in:214
 msgid "Scribble mode exclusively in the preferences now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:198
+#: data/jorts.metainfo.xml.in:215
 msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:199
+#: data/jorts.metainfo.xml.in:216
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:200
+#: data/jorts.metainfo.xml.in:217
 msgid ""
 "Bugfix: New and delete accels were not working oops sorry it's fixed now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:201
+#: data/jorts.metainfo.xml.in:218
 msgid "Bugfix where random components skipped the last possible choice"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:202
+#: data/jorts.metainfo.xml.in:219
 msgid "Bugfix: shortcut for emotes did not show up properly"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:203
+#: data/jorts.metainfo.xml.in:220
 msgid "Lil easter egg"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:209
+#: data/jorts.metainfo.xml.in:226
 #, fuzzy
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.1.2 অবিস্মরণীয় জোর্টস"
 
-#: data/jorts.metainfo.xml.in:211
+#: data/jorts.metainfo.xml.in:228
 msgid ""
 "New feature: Preferences dialog! Right-click on the app icon to see the "
 "option"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:212
+#: data/jorts.metainfo.xml.in:229
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:213
+#: data/jorts.metainfo.xml.in:230
 msgid ""
 "For translators: Translations have been separated in 2: One for the UI one "
 "for the extra content"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:214
+#: data/jorts.metainfo.xml.in:231
 msgid "Comfort: Easier to grab and drag stickies"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:215
+#: data/jorts.metainfo.xml.in:232
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:221
+#: data/jorts.metainfo.xml.in:238
 #, fuzzy
 msgid "Updated translations"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:226
+#: data/jorts.metainfo.xml.in:243
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 আলোর জোর্টস"
 
-#: data/jorts.metainfo.xml.in:228 data/jorts.metainfo.xml.in:243
+#: data/jorts.metainfo.xml.in:245 data/jorts.metainfo.xml.in:260
 msgid "Better translation coverage"
 msgstr "আরও ভাল অনুবাদ কভারেজ"
 
-#: data/jorts.metainfo.xml.in:229
+#: data/jorts.metainfo.xml.in:246
 #, fuzzy
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr "নতুন বৈশিষ্ট্য: স্কুইগলি মোড! "
 
-#: data/jorts.metainfo.xml.in:230
+#: data/jorts.metainfo.xml.in:247
 msgid ""
 "New feature: Emoji picker button! I know there is one on right-click, but "
 "buttons are more accessible!"
 msgstr "নতুন বৈশিষ্ট্য: ইমোজি পিকার বোতাম! "
 
-#: data/jorts.metainfo.xml.in:231
+#: data/jorts.metainfo.xml.in:248
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr ""
 "সরঞ্জামদণ্ডের বোতামটি আপনি যখনই ক্লিক করেন তখন একটি এলোমেলো ইমোট প্রদর্শন করে!"
 
-#: data/jorts.metainfo.xml.in:232
+#: data/jorts.metainfo.xml.in:249
 msgid ""
 "New feature: Jorts does a monthly backup. Should there be any issue you can "
 "recover data!"
 msgstr "নতুন বৈশিষ্ট্য: জোর্টস একটি মাসিক ব্যাকআপ করে। "
 
-#: data/jorts.metainfo.xml.in:233
+#: data/jorts.metainfo.xml.in:250
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr "মূল স্টোরেজটি দূষিত হওয়া উচিত, জোর্টস ব্যাকআপ থেকে লোড করার চেষ্টা করে"
 
-#: data/jorts.metainfo.xml.in:234
+#: data/jorts.metainfo.xml.in:251
 msgid "Some new fun/cute default titles"
 msgstr "কিছু নতুন মজাদার/বুদ্ধিমান ডিফল্ট শিরোনাম"
 
-#: data/jorts.metainfo.xml.in:235
+#: data/jorts.metainfo.xml.in:252
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "হুডের নীচে ক্লিনার কোডের জন্য এখানে এবং সেখানে পরিবর্তন হয়"
 
-#: data/jorts.metainfo.xml.in:241
+#: data/jorts.metainfo.xml.in:258
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 অবিস্মরণীয় জোর্টস"
 
-#: data/jorts.metainfo.xml.in:244
+#: data/jorts.metainfo.xml.in:261
 msgid "Add relief to actionbar buttons"
 msgstr "অ্যাকশনবার বোতামগুলিতে ত্রাণ যুক্ত করুন"
 
-#: data/jorts.metainfo.xml.in:245
+#: data/jorts.metainfo.xml.in:262
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "বাগফিক্স: এজ কেস যেখানে থিম বা জুম সঠিকভাবে সংরক্ষণ করা হয়েছে"
 
-#: data/jorts.metainfo.xml.in:246
+#: data/jorts.metainfo.xml.in:263
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr "বাগফিক্স: মাল্টিটাস্কিংয়ে শিরোনাম সঠিকভাবে সেট করা হয়নি"
 
-#: data/jorts.metainfo.xml.in:247
+#: data/jorts.metainfo.xml.in:264
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "বাগফিক্স: আইকন অসঙ্গতি আইকন থিমগুলি"
 
-#: data/jorts.metainfo.xml.in:248
+#: data/jorts.metainfo.xml.in:265
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "বাগফিক্স: থিমিং অসঙ্গতিগুলি অ্যাক্রোস স্টিকিগুলি"
 
-#: data/jorts.metainfo.xml.in:254
+#: data/jorts.metainfo.xml.in:271
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 লন্ড্রি থেকে টাটকা! "
 
-#: data/jorts.metainfo.xml.in:256
+#: data/jorts.metainfo.xml.in:273
 msgid "Clearer appmenu description"
 msgstr "ক্লিয়ারার অ্যাপমেনু বর্ণনা"
 
-#: data/jorts.metainfo.xml.in:257
+#: data/jorts.metainfo.xml.in:274
 msgid "More consistent theming"
 msgstr "আরও ধারাবাহিক তাদের"
 
-#: data/jorts.metainfo.xml.in:258
+#: data/jorts.metainfo.xml.in:275
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "বাগফিক্স: মুছুন শর্টকাটটি প্রতিক্রিয়াহীন ছিল"
 
-#: data/jorts.metainfo.xml.in:259
+#: data/jorts.metainfo.xml.in:276
 msgid "Bugfix: screenshot not showing"
 msgstr "বাগফিক্স: স্ক্রিনশট দেখাচ্ছে না"
 
-#: data/jorts.metainfo.xml.in:265
+#: data/jorts.metainfo.xml.in:282
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 লন্ড্রি থেকে টাটকা!"
 
-#: data/jorts.metainfo.xml.in:267
+#: data/jorts.metainfo.xml.in:284
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "প্রতি নোট জুম অন্তর্ভুক্ত! "
 
-#: data/jorts.metainfo.xml.in:268
+#: data/jorts.metainfo.xml.in:285
 msgid ""
 "Latest set zoom, aka what is most comfortable to you, stays as default for "
 "new notes"
@@ -497,70 +543,76 @@ msgstr ""
 "সর্বশেষ সেট জুম, ওরফে আপনার কাছে সবচেয়ে আরামদায়ক কী, নতুন নোটগুলির জন্য ডিফল্ট "
 "হিসাবে থাকে"
 
-#: data/jorts.metainfo.xml.in:269
+#: data/jorts.metainfo.xml.in:286
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "আরও ভাল পঠনযোগ্যতা (ডাব্লুসিএজি এএ বা এএএ থিমের উপর নির্ভর করে)"
 
-#: data/jorts.metainfo.xml.in:270
+#: data/jorts.metainfo.xml.in:287
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "এছাড়াও কিছুটা ভাল খুঁজছেন থিম। "
 
-#: data/jorts.metainfo.xml.in:271
+#: data/jorts.metainfo.xml.in:288
 msgid "Improved translations"
 msgstr "উন্নত অনুবাদ"
 
-#: data/jorts.metainfo.xml.in:272
+#: data/jorts.metainfo.xml.in:289
 msgid "Better shortcut and tooltips"
 msgstr "আরও ভাল শর্টকাট এবং সরঞ্জামগুলি"
 
-#: data/jorts.metainfo.xml.in:273
+#: data/jorts.metainfo.xml.in:290
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "একটি বাগ ঠিক করা হয়েছে যেখানে জোর্টস লাইট সিস্টেম থিমে থাকে"
 
-#: data/jorts.metainfo.xml.in:279
+#: data/jorts.metainfo.xml.in:296
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 অ্যাপসেন্টার রিলিজ"
 
-#: data/jorts.metainfo.xml.in:284
+#: data/jorts.metainfo.xml.in:301
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 রিলিজ: স্লেট এবং বুবলগাম"
 
-#: data/jorts.metainfo.xml.in:286
+#: data/jorts.metainfo.xml.in:303
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "নোটজোটের একটি প্রাচীন তবে ভাল প্রিয় সংস্করণটির পুনর্জীবন"
 
-#: data/jorts.metainfo.xml.in:287
+#: data/jorts.metainfo.xml.in:304
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "অ্যাপটির নাম এখন জোর্টস। "
 
-#: data/jorts.metainfo.xml.in:288
+#: data/jorts.metainfo.xml.in:305
 msgid "10 lovely little colours"
 msgstr "10 সুন্দর ছোট রঙ"
 
-#: data/jorts.metainfo.xml.in:289
+#: data/jorts.metainfo.xml.in:306
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "আধুনিক লিনাক্স টেকনোলজিস এবং প্যাকেজিং ফর্ম্যাটগুলির উপরে নির্মিত"
 
-#: data/jorts.metainfo.xml.in:290
+#: data/jorts.metainfo.xml.in:307
 msgid "Smooth transition when changing theme"
 msgstr "থিম পরিবর্তন করার সময় মসৃণ রূপান্তর"
 
-#: data/jorts.metainfo.xml.in:291
+#: data/jorts.metainfo.xml.in:308
 msgid "New stickies have a random fun little title and colour"
 msgstr "নতুন স্টিকি একটি এলোমেলো মজাদার ছোট শিরোনাম এবং রঙ"
 
-#: data/jorts.metainfo.xml.in:292
+#: data/jorts.metainfo.xml.in:309
 msgid "A few initial translations included, and more to come"
 msgstr "কয়েকটি প্রাথমিক অনুবাদ অন্তর্ভুক্ত, এবং আরও অনেক কিছু"
 
-#: data/jorts.metainfo.xml.in:293
+#: data/jorts.metainfo.xml.in:310
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr "ইমেল এবং লিঙ্কগুলি ক্লিকযোগ্য! "
 
-#: data/jorts.metainfo.xml.in:294
+#: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr ""
 "পাঠ্য পূর্বাবস্থায় ফিরে, পুনরায় সমর্থন করে এবং আপনি ইমোজিস ব্যবহার করতে পারেন :)"
+
+#~ msgid "Sticky notes utility"
+#~ msgstr "স্টিকি নোট ইউটিলিটি"
+
+#~ msgid "Stella - Teamcons"
+#~ msgstr "স্টেলা - টিমকনস"
 
 #, fuzzy
 #~ msgid "Colourful little sticky notes! :)"

@@ -1,16 +1,209 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2025-09-08 23:37+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-11 18:07+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Views/NoteView.vala:36
+msgid "New sticky note"
+msgstr "Nová lepiaca poznámka"
+
+#: src/Views/NoteView.vala:48
+msgid "Delete sticky note"
+msgstr "Odstránenie samolepiacej poznámky"
+
+#: src/Views/NoteView.vala:63
+msgid "Insert emoji"
+msgstr "Vložte emotikon"
+
+#: src/Views/NoteView.vala:79
+msgid "Preferences for this sticky note"
+msgstr "Predvoľby pre túto samolepiacu poznámku"
+
+#. TRANSLATORS: Shown as a tooltip when people hover a color theme
+#: src/Widgets/ColorBox.vala:38
+msgid "Blueberry"
+msgstr "Čučoriedky"
+
+#: src/Widgets/ColorBox.vala:39
+msgid "Lime"
+msgstr "Vápno"
+
+#: src/Widgets/ColorBox.vala:40
+msgid "Mint"
+msgstr "Mäta"
+
+#: src/Widgets/ColorBox.vala:41
+msgid "Banana"
+msgstr "Banán"
+
+#: src/Widgets/ColorBox.vala:42
+msgid "Strawberry"
+msgstr "Jahoda"
+
+#: src/Widgets/ColorBox.vala:43
+msgid "Orange"
+msgstr "Oranžová"
+
+#: src/Widgets/ColorBox.vala:44
+msgid "Bubblegum"
+msgstr "Žuvačka"
+
+#: src/Widgets/ColorBox.vala:45
+msgid "Grape"
+msgstr "Hrozno"
+
+#: src/Widgets/ColorBox.vala:46
+msgid "Cocoa"
+msgstr "Kakao"
+
+#: src/Widgets/ColorBox.vala:47
+msgid "Slate"
+msgstr "Bridlica"
+
+#: src/Widgets/MonospaceBox.vala:27
+#, fuzzy
+msgid "Default"
+msgstr "Predvolené písmo"
+
+#: src/Widgets/MonospaceBox.vala:28
+msgid "Click to use default text font"
+msgstr "Kliknutím použijete predvolené písmo textu"
+
+#: src/Widgets/MonospaceBox.vala:33
+msgid "Monospace"
+msgstr "Monospace"
+
+#: src/Widgets/MonospaceBox.vala:34
+msgid "Click to use monospaced font"
+msgstr "Kliknutím na položku použijete jednoliate písmo"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/ZoomBox.vala:20
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/ZoomBox.vala:38
+msgid "Zoom out"
+msgstr "Zväčšenie"
+
+#: src/Widgets/ZoomBox.vala:45
+msgid "Default zoom level"
+msgstr "Predvolená úroveň priblíženia"
+
+#: src/Widgets/ZoomBox.vala:52
+msgid "Zoom in"
+msgstr "Priblíženie"
+
+#: src/Views/PreferencesView.vala:25
+msgid "Request to system sent"
+msgstr "Odoslanie žiadosti do systému"
+
+#: src/Views/PreferencesView.vala:52
+msgid "Make unfocused notes unreadable"
+msgstr "Znemožnite čítanie nesústredených poznámok"
+
+#: src/Views/PreferencesView.vala:54
+#, fuzzy
+msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgstr "Ak je táto funkcia povolená, neostré samolepiace poznámky sa stanú nečitateľnými, aby sa ich obsah ochránil pred očami pozorovateľov."
+
+#: src/Views/PreferencesView.vala:74
+#, fuzzy
+msgid "Hide buttons"
+msgstr "Skryť panel tlačidiel"
+
+#: src/Views/PreferencesView.vala:76
+msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Ak je táto možnosť zapnutá, skryje spodný pruh v samolepiacich poznámkach. Klávesové skratky budú stále funkčné (Ctrl+T)"
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:99
+msgid "Set autostart"
+msgstr "Nastavenie automatického spustenia"
+
+#: src/Views/PreferencesView.vala:109
+msgid "Set Jorts to start with the computer"
+msgstr "Nastavenie Jorts na spustenie s počítačom"
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:119
+msgid "Remove autostart"
+msgstr "Odstránenie automatického spustenia"
+
+#: src/Views/PreferencesView.vala:129
+msgid "Remove Jorts from system autostart"
+msgstr "Odstrániť Jorts z automatického spúšťania systému"
+
+#: src/Views/PreferencesView.vala:142
+msgid "Allow to start at login"
+msgstr "Umožniť spustenie pri prihlásení"
+
+#: src/Views/PreferencesView.vala:144
+msgid "You can request the system to start this application automatically"
+msgstr "Môžete požiadať systém o automatické spustenie tejto aplikácie"
+
+#: src/Views/PreferencesView.vala:165
+msgid "Support us!"
+msgstr "Podporte nás!"
+
+#: src/Views/PreferencesView.vala:177
+msgid "Close"
+msgstr "Zatvoriť"
+
+#: src/Views/PreferencesView.vala:180
+msgid "Close preferences"
+msgstr "Zatvoriť preferencie"
+
+#: src/Windows/StickyNoteWindow.vala:92
+#: src/Windows/StickyNoteWindow.vala:137
+#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/PreferenceWindow.vala:52
+msgid " - Jorts"
+msgstr " - Šortky"
+
+#: src/Windows/StickyNoteWindow.vala:112
+msgid "Click to edit the title"
+msgstr "Kliknutím upravíte názov"
+
+#. ******************************************
+#. HEADERBAR BS
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:50
+#, fuzzy
+msgid "Preferences for your Jorts"
+msgstr "Predvoľby pre všetky samolepiace poznámky"
+
+#: src/Windows/PreferenceWindow.vala:52
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: src/Application.vala:174
+msgid "Create a new note"
+msgstr "Vytvorenie novej poznámky"
+
+#: src/Application.vala:175
+msgid "Create a note then paste from clipboard"
+msgstr "Vytvorenie poznámky a jej vloženie zo schránky"
+
+#: src/Application.vala:176
+msgid "Show preferences"
+msgstr "Zobraziť predvoľby"
+
+#: src/Application.vala:177
+#, fuzzy
+msgid "Reset all settings"
+msgstr "Obnovenie všetkých predvolených nastavení"
 
 #: src/Services/Utils.vala:88
 msgid "All my very best friends"
@@ -158,7 +351,7 @@ msgstr "Úžasné ascii umenie!"
 
 #: src/Services/Utils.vala:124
 msgid "For the barbecue"
-msgstr ""
+msgstr "Na grilovanie"
 
 #: src/Services/Utils.vala:125
 #, fuzzy
@@ -167,47 +360,47 @@ msgstr "Obľúbené hračky mojich psov"
 
 #: src/Services/Utils.vala:126
 msgid "Best ingredients for salad"
-msgstr ""
+msgstr "Najlepšie prísady do šalátu"
 
 #: src/Services/Utils.vala:127
 msgid "Books to read"
-msgstr ""
+msgstr "Knihy na čítanie"
 
 #: src/Services/Utils.vala:128
 msgid "Places to visit"
-msgstr ""
+msgstr "Miesta, ktoré môžete navštíviť"
 
 #: src/Services/Utils.vala:129
 msgid "Hobbies to try out"
-msgstr ""
+msgstr "Záľuby, ktoré si môžete vyskúšať"
 
 #: src/Services/Utils.vala:130
 msgid "Who would win against Goku"
-msgstr ""
+msgstr "Kto by vyhral proti Goku"
 
 #: src/Services/Utils.vala:131
 msgid "To plant in the garden"
-msgstr ""
+msgstr "Na výsadbu v záhrade"
 
 #: src/Services/Utils.vala:132
 msgid "Meals this week"
-msgstr ""
+msgstr "Jedlá tento týždeň"
 
 #: src/Services/Utils.vala:133
 msgid "Everyone's pizza order"
-msgstr ""
+msgstr "Objednávka pizze pre každého"
 
 #: src/Services/Utils.vala:134
 msgid "Today selfcare to do"
-msgstr ""
+msgstr "Dnes starostlivosť o seba"
 
 #: src/Services/Utils.vala:135
 msgid "Important affirmations to remember"
-msgstr ""
+msgstr "Dôležité afirmácie, ktoré si treba zapamätať"
 
 #: src/Services/Utils.vala:136
 msgid "The coolest linux apps"
-msgstr ""
+msgstr "Najzaujímavejšie aplikácie pre Linux"
 
 #: src/Services/Utils.vala:137
 #, fuzzy
@@ -216,11 +409,11 @@ msgstr "Obľúbené hračky mojich psov"
 
 #: src/Services/Utils.vala:138
 msgid "My funniest jokes"
-msgstr ""
+msgstr "Moje najvtipnejšie vtipy"
 
 #: src/Services/Utils.vala:139
 msgid "The perfect breakfast has..."
-msgstr ""
+msgstr "Dokonalé raňajky majú..."
 
 #: src/Services/Utils.vala:170
 msgid "🔥WOW Congratulations!🔥"
@@ -235,6 +428,7 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
+""
 msgstr ""
 "Našli ste zlatú lepiacu poznámku!\n"
 "\n"
@@ -243,185 +437,16 @@ msgstr ""
 "\n"
 "Dúfam, že vám moja malá aplikácia prinesie veľa radosti\n"
 "Prajem vám krásny deň!🎇\n"
+""
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:42
-msgid "Blueberry"
-msgstr "Čučoriedky"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Lime"
-msgstr "Vápno"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Mint"
-msgstr "Mäta"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Banana"
-msgstr "Banán"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Strawberry"
-msgstr "Jahoda"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Orange"
-msgstr "Oranžová"
-
-#: src/Widgets/ColorBox.vala:48
-msgid "Bubblegum"
-msgstr "Žuvačka"
-
-#: src/Widgets/ColorBox.vala:49
-msgid "Grape"
-msgstr "Hrozno"
-
-#: src/Widgets/ColorBox.vala:50
-msgid "Cocoa"
-msgstr "Kakao"
-
-#: src/Widgets/ColorBox.vala:51
-msgid "Slate"
-msgstr "Bridlica"
-
-#: src/Views/PreferencesView.vala:28
-msgid "Request to system sent"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:56
-msgid "Make unfocused notes unreadable"
-msgstr "Znemožnite čítanie nesústredených poznámok"
-
-#: src/Views/PreferencesView.vala:58
-#, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
-msgstr ""
-"Ak je táto funkcia povolená, neostré samolepiace poznámky sa stanú "
-"nečitateľnými, aby sa ich obsah ochránil pred očami pozorovateľov."
-
-#: src/Views/PreferencesView.vala:78
-#, fuzzy
-msgid "Hide buttons"
-msgstr "Skryť panel tlačidiel"
-
-#: src/Views/PreferencesView.vala:80
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
-msgstr ""
-"Ak je táto možnosť zapnutá, skryje spodný pruh v samolepiacich poznámkach. "
-"Klávesové skratky budú stále funkčné (Ctrl+T)"
-
-#. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:104
-msgid "Set autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:113
-msgid "Set Jorts to start with the computer"
-msgstr ""
-
-#. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:123
-msgid "Remove autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:132
-msgid "Remove Jorts from system autostart"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:148
-msgid "Allow to start at login"
-msgstr "Umožniť spustenie pri prihlásení"
-
-#: src/Views/PreferencesView.vala:150
-msgid "You can request the system to start this application automatically"
-msgstr ""
-
-#: src/Views/PreferencesView.vala:229
-msgid "Support us!"
-msgstr "Podporte nás!"
-
-#. Reset
-#: src/Views/PreferencesView.vala:235
-msgid "Reset to Default"
-msgstr "Obnovenie predvoleného nastavenia"
-
-#: src/Views/PreferencesView.vala:236
-msgid "Reset all settings to defaults"
-msgstr "Obnovenie všetkých predvolených nastavení"
-
-#: src/Views/PopoverView.vala:47
-msgid "Zoom out"
-msgstr "Zväčšenie"
-
-#: src/Views/PopoverView.vala:54
-msgid "Default zoom level"
-msgstr "Predvolená úroveň priblíženia"
-
-#: src/Views/PopoverView.vala:61
-msgid "Zoom in"
-msgstr "Priblíženie"
-
-#. Called by the StickyNoteWindow when adjusting to new zoomlevel
-#. StickyNoteWindow reacts to a signal by the popover
-#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
-#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Views/PopoverView.vala:109
-#, c-format
-msgid "%d%%"
-msgstr "%d%%"
-
-#. ******************************************
-#. HEADERBAR BS
-#. ******************************************
-#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:60
-#, fuzzy
-msgid "Preferences for your Jorts"
-msgstr "Predvoľby pre všetky samolepiace poznámky"
-
-#: src/Windows/PreferenceWindow.vala:62
-msgid "Preferences"
-msgstr ""
-
-#: src/Windows/PreferenceWindow.vala:62 src/Windows/StickyNoteWindow.vala:96
-#: src/Windows/StickyNoteWindow.vala:308
-msgid " - Jorts"
-msgstr ""
-
-#: src/Windows/StickyNoteWindow.vala:130
-msgid "Click to edit the title"
-msgstr ""
-
-#: src/Windows/StickyNoteWindow.vala:163
-msgid "New sticky note"
-msgstr "Nová lepiaca poznámka"
-
-#: src/Windows/StickyNoteWindow.vala:175
-msgid "Delete sticky note"
-msgstr "Odstránenie samolepiacej poznámky"
-
-#: src/Windows/StickyNoteWindow.vala:191
-msgid "Insert emoji"
-msgstr "Vložte emotikon"
-
-#: src/Windows/StickyNoteWindow.vala:213
-msgid "Preferences for this sticky note"
-msgstr "Predvoľby pre túto samolepiacu poznámku"
+#~ msgid "Reset to Default"
+#~ msgstr "Obnovenie predvoleného nastavenia"
 
 #~ msgid "Permissions"
 #~ msgstr "Oprávnenia"
 
-#~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
-#~ "autostart"
-#~ msgstr ""
-#~ "Môžete nastaviť, aby sa samolepiace poznámky zobrazovali pri prihlásení, "
-#~ "a to pridaním aplikácie Jorts do funkcie autostart"
+#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+#~ msgstr "Môžete nastaviť, aby sa samolepiace poznámky zobrazovali pri prihlásení, a to pridaním aplikácie Jorts do funkcie autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"
@@ -442,9 +467,6 @@ msgstr "Predvoľby pre túto samolepiacu poznámku"
 #~ msgid "Microsoft support"
 #~ msgstr "Podpora spoločnosti Microsoft"
 
-#~ msgid "Close"
-#~ msgstr "Zatvoriť"
-
 #~ msgid "Sticky Note Colour"
 #~ msgstr "Farba samolepiacich poznámok"
 
@@ -462,7 +484,3 @@ msgstr "Predvoľby pre túto samolepiacu poznámku"
 
 #~ msgid "ZOOM%"
 #~ msgstr "ZOOM%"
-
-#, fuzzy
-#~ msgid "Default Font"
-#~ msgstr "Predvolené písmo"
