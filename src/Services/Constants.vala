@@ -67,6 +67,20 @@ namespace Jorts.Constants {
 
     /*************************************************/
     // As seen on TV!
+    // Later adds: LATTE, BLACK, SILVER, AUTO
+    const string[] THEMES = {
+        "BLUEBERRY",
+        "MINT",
+        "LIME",
+        "BANANA",
+        "ORANGE",
+        "STRAWBERRY",
+        "BUBBLEGUM",
+        "GRAPE",
+        "COCOA",
+        "SLATE"
+    };
+
     const string[] EMOTES = {
         "face-angel-symbolic",
         "face-angry-symbolic",

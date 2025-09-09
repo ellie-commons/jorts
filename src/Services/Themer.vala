@@ -119,7 +119,7 @@ namespace Jorts.Themer {
 
         """));
 
-        style = style.replace ("${accent_color}", theme.ascii_up ());
+        style = style.replace ("${accent_color}", theme);
         return style;
     }
 

@@ -14,16 +14,16 @@ public enum Jorts.Themes {
 
     public string to_string () {
         switch (this) {
-            case BLUEBERRY:     return "blueberry";
-            case MINT:          return "mint";
-            case LIME:          return "lime";
-            case BANANA:        return "banana";
-            case ORANGE:        return "orange";
-            case STRAWBERRY:    return "strawberry";
-            case BUBBLEGUM:     return "bubblegum";
-            case GRAPE:         return "grape";
-            case COCOA:         return "cocoa";
-            case SLATE:         return "slate";
+            case BLUEBERRY:     return "BLUEBERRY";
+            case MINT:          return "MINT";
+            case LIME:          return "LIME";
+            case BANANA:        return "BANANA";
+            case ORANGE:        return "ORANGE";
+            case STRAWBERRY:    return "STRAWBERRY";
+            case BUBBLEGUM:     return "BUBBLEGUM";
+            case GRAPE:         return "GRAPE";
+            case COCOA:         return "COCOA";
+            case SLATE:         return "SLATE";
             default: assert_not_reached ();
         }
     }
@@ -33,6 +33,6 @@ public enum Jorts.Themes {
     }
 
     public static string[] all_string () {
-        return {"blueberry", "mint", "lime", "banana", "orange", "strawberry", "bubblegum", "grape", "cocoa", "slate"};
+        return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE"};
     }
 }
