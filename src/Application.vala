@@ -43,15 +43,20 @@ public class Jorts.Application : Gtk.Application {
     // Needed by all windows
     public static GLib.Settings gsettings;
     public Jorts.NoteManager manager;
-
-    // There can be only one. It is never closed, only hidden.
     private static Jorts.PreferenceWindow preferences;
 
     // Used for commandline option handling
-    private bool new_note = false;
-    private bool new_from_clipboard = false;
-    private bool show_pref = false;
-    private bool reset_settings = false;
+    public static bool new_note;
+    public static bool new_from_clipboard;
+    public static bool show_pref;
+    public static bool reset_settings;
+
+    public OptionEntry[] CMD_OPTION_ENTRIES = {
+            {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, "Create a new note", null},
+            {"new-from-clipboard", 'c', OptionFlags.NONE, OptionArg.NONE, ref new_from_clipboard, "Create a note then paste from clipboard", null},
+            {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null},
+            {"reset-settings", 'r', OptionFlags.NONE, OptionArg.NONE, ref reset_settings, "Reset all settings", null}
+    };
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
@@ -73,7 +78,7 @@ public class Jorts.Application : Gtk.Application {
     };
 
     public Application () {
-        Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
+        Object (flags: ApplicationFlags.DEFAULT_FLAGS,
                 application_id: Jorts.Constants.RDNN);
     }
 
@@ -152,6 +157,7 @@ Please wait while the app remembers all the things...
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
         
+        add_main_option_entries (CMD_OPTION_ENTRIES);
         manager = new Jorts.NoteManager (this);
     }
 
@@ -165,9 +171,7 @@ Please wait while the app remembers all the things...
         /* Either we show all sticky notes, or we load everything lol */
         if (manager.open_notes.size > 0) {
             foreach (var window in manager.open_notes) {
-                if (window.visible) {
-                    window.present ();
-                }
+                if (window.visible) { window.present ();}
             }
         } else {
             manager.init_all_notes ();
@@ -179,72 +183,40 @@ Please wait while the app remembers all the things...
         if (reset_settings) {action_reset_settings (); reset_settings = false;}
     }
 
-    public override int command_line (ApplicationCommandLine command_line) {
-        debug ("[JORTS] Parsing commandline arguments...");
-
-        OptionEntry[] options = new OptionEntry[4];
-        options[0] = {"new-note", 0, 0, OptionArg.NONE, ref new_note, _("Create a new note"), null};
-        options[1] = {"new-from-clipboard", 0, 0, OptionArg.NONE, ref new_from_clipboard, _("Create a note then paste from clipboard"), null};
-        options[2] = {"preferences", 0, 0, OptionArg.NONE, ref show_pref, _("Show preferences"), null};
-        options[3] = {"reset-settings", 0, 0, OptionArg.NONE, ref reset_settings, _("Reset all settings"), null};
-
-        // We have to make an extra copy of the array, since .parse assumes
-        // that it can remove strings from the array without freeing them.
-        string[] args = command_line.get_arguments ();
-        string[] _args = new string[args.length];
-        for (int i = 0; i < args.length; i++) {
-            _args[i] = args[i];
-        }
-
-        try {
-            var ctx = new OptionContext ();
-            ctx.set_help_enabled (true);
-            ctx.add_main_entries (options, null);
-            unowned string[] tmp = _args;
-            ctx.parse (ref tmp);
-
-        } catch (OptionError e) {
-            command_line.print ("error: %s\n", e.message);
-            return 0;
-        }
-
-        hold ();
-        activate ();
-        return 0;
-    }
-
     public static int main (string[] args) {
         return new Application ().run (args);
     }
 
     private void action_new () {
+        debug ("[ACTION] New Note");
         manager.create_note ();
     }
 
     private void action_show_preferences () {
-        debug ("\nShowing preferences!");
+        debug ("[ACTION] Showing preferences!");
         preferences.show ();
         preferences.present ();
     }
 
     private void action_toggle_scribbly () {
-        debug ("Toggling scribbly");
+        debug ("[ACTION] Toggling scribbly");
         var current = Application.gsettings.get_boolean ("scribbly-mode-active");
         gsettings.set_boolean ("scribbly-mode-active", !current);
     }
 
     private void action_toggle_actionbar () {
-        debug ("Toggling actionbar");
+        debug ("[ACTION] Toggling actionbar");
         var current = Application.gsettings.get_boolean ("hide-bar");
         gsettings.set_boolean ("hide-bar", !current);
     }
 
     private void action_save () {
+        debug ("[ACTION] Saving...");
         manager.save_to_stash ();
     }
 
     private void action_reset_settings () {
-        debug ("Resetting settings…");
+        debug ("[ACTION] Resetting settings…");
         string[] keys = {"scribbly-mode-active", "hide-bar"};
         foreach (var key in keys) {
             gsettings.reset (key);
