@@ -115,6 +115,17 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
+        print ("""✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
+        Your Notes are all belong to us!
+        Please wait while the app remembers all the things...
+
+         _       _
+       (\o/)   (\o/)    <--- Tiny electric angels working in the background
+        /_\     /_\
+        """);
+
+
+
         // ONLY ONE.
         preferences = Jorts.PreferenceWindow.instance ();
         add_window (preferences);
