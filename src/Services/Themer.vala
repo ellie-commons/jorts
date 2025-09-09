@@ -23,9 +23,7 @@ namespace Jorts.Themer {
     // Take up a elementary OS color name and gurgle back a CSS string
     public static string generate_css (string theme) {
         debug ("Generating css");
-        string style = "";
-
-        style = (N_("""
+        string style = (N_("""
             /* Accent color 
             mix(@${accent_color}_500, @${accent_color}_700, 0.3) */
             
@@ -121,8 +119,7 @@ namespace Jorts.Themer {
 
         """));
 
-        style = style.replace ("${accent_color}", theme);
-
+        style = style.replace ("${accent_color}", theme.ascii_up ());
         return style;
     }
 
@@ -142,7 +139,7 @@ namespace Jorts.Themer {
         );
 
         // Then generate all theme classes
-        foreach (unowned var theme in Jorts.Constants.THEMES) {
+        foreach (unowned var theme in Jorts.Themes.all_string ()) {
             var theme_provider = new Gtk.CssProvider ();
             var style = Jorts.Themer.generate_css (theme);
 

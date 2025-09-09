@@ -69,7 +69,7 @@ namespace Jorts.Utils {
     // Having an gee.arraylist defined from the start only causes issues
     public string random_theme (string? skip_theme = null) {
         Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (Jorts.Constants.THEMES);
+        themes.add_all_array (Jorts.Themes.all_string ());
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
