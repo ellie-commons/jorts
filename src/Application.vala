@@ -46,17 +46,10 @@ public class Jorts.Application : Gtk.Application {
     private static Jorts.PreferenceWindow preferences;
 
     // Used for commandline option handling
-    public static bool new_note;
-    public static bool new_from_clipboard;
-    public static bool show_pref;
-    public static bool reset_settings;
-
-    public OptionEntry[] CMD_OPTION_ENTRIES = {
-            {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, "Create a new note", null},
-            {"new-from-clipboard", 'c', OptionFlags.NONE, OptionArg.NONE, ref new_from_clipboard, "Create a note then paste from clipboard", null},
-            {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null},
-            {"reset-settings", 'r', OptionFlags.NONE, OptionArg.NONE, ref reset_settings, "Reset all settings", null}
-    };
+    public static bool new_note = false;
+    public static bool new_from_clipboard = false;
+    public static bool show_pref = false;
+    public static bool reset_settings = false;
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
@@ -78,7 +71,7 @@ public class Jorts.Application : Gtk.Application {
     };
 
     public Application () {
-        Object (flags: ApplicationFlags.DEFAULT_FLAGS,
+        Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
                 application_id: Jorts.Constants.RDNN);
     }
 
@@ -157,7 +150,7 @@ Please wait while the app remembers all the things...
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
         
-        add_main_option_entries (CMD_OPTION_ENTRIES);
+        //add_main_option_entries (CMD_OPTION_ENTRIES);
         manager = new Jorts.NoteManager (this);
     }
 
@@ -232,4 +225,40 @@ Please wait while the app remembers all the things...
             quit ();
         }
     }
+
+    public override int command_line (ApplicationCommandLine command_line) {
+        debug ("Parsing commandline arguments...");
+
+        OptionEntry[] CMD_OPTION_ENTRIES = {
+                {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, "Create a new note", null},
+                {"new-from-clipboard", 'c', OptionFlags.NONE, OptionArg.NONE, ref new_from_clipboard, "Create a note then paste from clipboard", null},
+                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null},
+                {"reset-settings", 'r', OptionFlags.NONE, OptionArg.NONE, ref reset_settings, "Reset all settings", null}
+        };
+
+        // We have to make an extra copy of the array, since .parse assumes
+        // that it can remove strings from the array without freeing them.
+        string[] args = command_line.get_arguments ();
+        string[] _args = new string[args.length];
+        for (int i = 0; i < args.length; i++) {
+            _args[i] = args[i];
+        }
+
+        try {
+            var ctx = new OptionContext ();
+            ctx.set_help_enabled (true);
+            ctx.add_main_entries (CMD_OPTION_ENTRIES, null);
+            unowned string[] tmp = _args;
+            ctx.parse (ref tmp);
+
+        } catch (OptionError e) {
+            command_line.print ("error: %s\n", e.message);
+            return 0;
+        }
+
+        hold ();
+        activate ();
+        return 0;
+    }
+
 }
