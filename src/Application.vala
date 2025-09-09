@@ -115,14 +115,15 @@ public class Jorts.Application : Gtk.Application {
                 );
         });
 
-        print ("""✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
-        Your Notes are all belong to us!
-        Please wait while the app remembers all the things...
+        print ("""
+🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
+Your Notes are all belong to us!
+      _       _
+    (\o/)   (\o/)    <--- Tiny electric angels working in the background
+     /_\     /_\
 
-         _       _
-       (\o/)   (\o/)    <--- Tiny electric angels working in the background
-        /_\     /_\
-        """);
+Please wait while the app remembers all the things...
+""");
 
 
 
