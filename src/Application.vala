@@ -79,7 +79,7 @@ public class Jorts.Application : Gtk.Application {
 
     /*************************************************/
     public override void startup () {
-        debug ("Jorts startup sequence…");
+        debug ("[JORTS] Jorts Startup…");
         base.startup ();
         Granite.init ();
 
@@ -157,7 +157,7 @@ Please wait while the app remembers all the things...
 
     // Clicked: Either show all windows, or rebuild from storage
     protected override void activate () {
-        debug ("Jorts, activate!");
+        debug ("[JORTS] Jorts, activate!");
 
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
@@ -180,7 +180,7 @@ Please wait while the app remembers all the things...
     }
 
     public override int command_line (ApplicationCommandLine command_line) {
-        debug ("Parsing commandline arguments...");
+        debug ("[JORTS] Parsing commandline arguments...");
 
         OptionEntry[] options = new OptionEntry[4];
         options[0] = {"new-note", 0, 0, OptionArg.NONE, ref new_note, _("Create a new note"), null};

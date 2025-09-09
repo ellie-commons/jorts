@@ -78,7 +78,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
-        debug ("New StickyNoteWindow instance!");
+        debug ("[STICKY NOTE] New StickyNoteWindow instance!");
 
         application = app;
 

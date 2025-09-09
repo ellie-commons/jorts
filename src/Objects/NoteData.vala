@@ -34,6 +34,23 @@ public class Jorts.NoteData : Object {
         this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
     }
 
+    public NoteData from_json (Json.Object node) {
+        title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
+        theme       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
+        content     = node.get_string_member_with_default ("content","");
+        monospace   = node.get_boolean_member_with_default ("monospace",Jorts.Constants.DEFAULT_MONO);
+        zoom        = (int)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
+
+        // Make sure the values are nothing crazy
+        if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
+        else if (zoom > Jorts.Constants.ZOOM_MAX) { zoom = Jorts.Constants.ZOOM_MAX;}
+
+        width       = (int)node.get_int_member_with_default ("width",Jorts.Constants.DEFAULT_WIDTH);
+        height      = (int)node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
+
+        return this;
+    }
+
     public Json.Object to_json () {
         var builder = new Json.Builder ();
 

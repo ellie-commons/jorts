@@ -27,7 +27,7 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
     public bool is_shown = false;
 
     public static PreferenceWindow () {
-        debug ("Showing preference window");
+        debug ("[PREFWINDOW] Creating preference window");
         Intl.setlocale ();
 
         hide_on_close = true;

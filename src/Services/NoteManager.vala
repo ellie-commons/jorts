@@ -9,25 +9,28 @@
 public class Jorts.NoteManager : Object {
 
     public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
-	public int latest_zoom;
     public Gtk.Application application;
+
+    public int latest_zoom;
+    public bool latest_mono;
+    public string latest_theme;
 
     public NoteManager (Jorts.Application app) {
         this.application = app;
     }
 
     public void init_all_notes () {
-        debug ("Opening all sticky notes now!");
+        debug ("[MANAGER] Opening all sticky notes now!");
         Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
 
         // Load everything we have
         foreach (NoteData data in loaded_data) {
-            debug ("Loaded: " + data.title + "\n");
+            debug ("[MANAGER] Loaded: " + data.title + "\n");
             this.create_note (data);
         }
 
         if (Jorts.Stash.need_backup (Application.gsettings.get_string ("last-backup"))) {
-            print ("Doing a backup! :)");
+            print ("[MANAGER] Doing a backup! :)");
 
             Jorts.Stash.check_if_stash ();
             string json_data = Jorts.Jason.jsonify (open_notes);
@@ -45,7 +48,7 @@ public class Jorts.NoteManager : Object {
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
 	public void create_note (NoteData? data = null) {
-        debug ("Lets do a note");
+        debug ("[MANAGER] Lets do a note");
 
         StickyNoteWindow note;
         if (data != null) {
@@ -72,7 +75,7 @@ public class Jorts.NoteManager : Object {
 
     // When user asked for a new note and for it to be pasted in
     public void from_clipboard () {
-        debug ("Creating and loading from clipboard…");
+        debug ("[MANAGER] Creating and loading from clipboard…");
         print ("clipboard!");
         Jorts.StickyNoteWindow note;
 
@@ -105,14 +108,14 @@ public class Jorts.NoteManager : Object {
 
     // Simply remove from the list of things to save, and close
     public void delete_note (StickyNoteWindow note) {
-            debug ("Removing a note…");
+            debug ("[MANAGER] Removing a note…");
             open_notes.remove (note);
             note.close ();
             this.save_to_stash ();
 	}
 
     public void save_to_stash () {
-        debug ("Save the stickies!");
+        debug ("[MANAGER] Save the stickies!");
 
         Jorts.Stash.check_if_stash ();
         string json_data = Jorts.Jason.jsonify (open_notes);
@@ -122,7 +125,7 @@ public class Jorts.NoteManager : Object {
 
       // Called when the window is-active property changes
     public void on_reduceanimation_changed () {
-        debug ("Reduce animation changed!");
+        debug ("[MANAGER] Reduce animation changed!");
 
         if (Gtk.Settings.get_default ().gtk_enable_animations) {
             foreach (var window in open_notes) {
