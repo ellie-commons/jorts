@@ -5,7 +5,17 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-// The NoteData object is just packaging to pass off data from and to storage
+
+ /* Creation methods:
+vanilla
+from_json ();
+from_random ();
+
+Helper:
+to_json ();
+
+ 
+ */
 public class Jorts.NoteData : Object {
 
     public string title;
@@ -16,13 +26,8 @@ public class Jorts.NoteData : Object {
     public int width;
     public int height;
 
-    public NoteData (
-        string? title = null,
-        string? theme = null,
-        string? content = null,
-        bool? monospace = null,
-        int? zoom = null,
-        int? width = null, int? height = null)
+    public NoteData (string? title = null, string? theme = null, string? content = null,
+                    bool? monospace = null, int? zoom = null, int? width = null, int? height = null)
     {
         // We assign defaults in case theres args missing
         this.title = title ?? Jorts.Utils.random_title ();
@@ -34,7 +39,7 @@ public class Jorts.NoteData : Object {
         this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
     }
 
-    public NoteData from_json (Json.Object node) {
+    public NoteData.from_json (Json.Object node) {
         title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
         theme       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
         content     = node.get_string_member_with_default ("content","");
@@ -47,8 +52,6 @@ public class Jorts.NoteData : Object {
 
         width       = (int)node.get_int_member_with_default ("width",Jorts.Constants.DEFAULT_WIDTH);
         height      = (int)node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
-
-        return this;
     }
 
     public Json.Object to_json () {
