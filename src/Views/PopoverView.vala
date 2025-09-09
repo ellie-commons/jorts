@@ -19,7 +19,7 @@
     public string selected;
 
     public signal void theme_changed (string selected);
-    public signal void zoom_changed (string zoomkind);
+    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
     public signal void monospace_changed (bool if_monospace);
 
     construct {

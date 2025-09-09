@@ -300,14 +300,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     /*********************************************/
 
     // Called when a signal from the popover says stuff got changed
-    private void on_zoom_changed (string zoomkind) {
+    private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
         debug ("Zoom changed!");
 
         switch (zoomkind) {
-            case "zoom_in":     zoom_in (); break;
-            case "zoom_out":    zoom_out (); break;
-            case "reset":       zoom = 100; break;
-            default:            zoom = 100; break;
+            case Zoomkind.ZOOM_IN:              zoom_in (); break;
+            case Zoomkind.DEFAULT_ZOOM:         zoom = 100; break;
+            case Zoomkind.ZOOM_OUT:             zoom_out (); break;
+            default:                            zoom = 100; break;
         }
         ((Jorts.Application)this.application).manager.save_to_stash ();
     }

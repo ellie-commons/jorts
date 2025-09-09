@@ -5,6 +5,13 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+public enum Jorts.Zoomkind {
+    ZOOM_OUT,
+    DEFAULT_ZOOM,
+    ZOOM_IN
+}
+
+
 public class Jorts.ZoomBox : Gtk.Box {
 
     private Gtk.Button zoom_default_button;
@@ -22,7 +29,7 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    public signal void zoom_changed (string zoomkind);
+    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;
@@ -59,8 +66,8 @@ public class Jorts.ZoomBox : Gtk.Box {
         add_css_class (Granite.STYLE_CLASS_LINKED);
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        zoom_out_button.clicked.connect (() => {this.zoom_changed ("zoom_out");});
-        zoom_default_button.clicked.connect (() => {this.zoom_changed ("reset");});
-        zoom_in_button.clicked.connect (() => {this.zoom_changed ("zoom_in");});
+        zoom_out_button.clicked.connect (() => {this.zoom_changed (Zoomkind.ZOOM_OUT);});
+        zoom_default_button.clicked.connect (() => {this.zoom_changed (Zoomkind.DEFAULT_ZOOM);});
+        zoom_in_button.clicked.connect (() => {this.zoom_changed (Zoomkind.ZOOM_IN);});
     }
 }
