@@ -1,5 +1,6 @@
 sources = files (
-    'Objects' / 'Enum.vala',
+    'Objects' / 'Zoomkind.vala',
+    'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
 
     'Services' / 'NoteManager.vala',

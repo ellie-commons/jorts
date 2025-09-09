@@ -5,12 +5,17 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-public enum Jorts.Zoomkind {
-    ZOOM_OUT, DEFAULT_ZOOM, ZOOM_IN
-}
-
 public enum Jorts.Themes {
-    BLUEBERRY, MINT, LIME, BANANA, ORANGE, STRAWBERRY, BUBBLEGUM, GRAPE, COCOA, SLATE;
+    BLUEBERRY,
+    MINT,
+    LIME,
+    BANANA,
+    ORANGE,
+    STRAWBERRY,
+    BUBBLEGUM,
+    GRAPE,
+    COCOA,
+    SLATE;
 
     public string to_string () {
         switch (this) {
