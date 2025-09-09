@@ -15,7 +15,7 @@ public class Jorts.Storage {
 
     private string data_directory;
     private string storage_path;
-    private string save_file;
+    private File save_file;
 
     construct {
         data_directory = Environment.get_user_data_dir ();
@@ -99,8 +99,7 @@ public class Jorts.Storage {
                     loaded_data = Jorts.Jason.load_parser(parser);
 
                 } catch (Error e) {
-                    print("[WARNING] Failed to load from storage (Attempt 3)!!! " + e.message.to_string() + "\n");
-                    quit ();
+                    critical ("[WARNING] Failed to load from storage (Attempt 3)!!! " + e.message.to_string() + "\n");
                 }
             }
 

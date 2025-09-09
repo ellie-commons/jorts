@@ -271,7 +271,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         _theme = new_theme;
         add_css_class (new_theme);
-
+        NoteManager.latest_theme = new_theme;
         ((Application)this.application).manager.save_to_stash ();
     }
 
@@ -291,6 +291,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
         view.textview.monospace = monospace;
         popover.monospace_box.monospace = monospace;
+        NoteManager.latest_mono = monospace;
         ((Application)this.application).manager.save_to_stash ();
     }
 
@@ -346,7 +347,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
-        ((Jorts.Application)this.application).manager.latest_zoom = zoom;
+        NoteManager.latest_zoom = zoom;
     }
 
     private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}

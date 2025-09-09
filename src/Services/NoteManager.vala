@@ -11,9 +11,9 @@ public class Jorts.NoteManager : Object {
     public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
     public Gtk.Application application;
 
-    public int latest_zoom;
-    public bool latest_mono;
-    public string latest_theme;
+    public static int latest_zoom;
+    public static bool latest_mono;
+    public static string latest_theme;
 
     public NoteManager (Jorts.Application app) {
         this.application = app;
@@ -63,7 +63,7 @@ public class Jorts.NoteManager : Object {
 
             random_data = Jorts.Utils.golden_sticky (random_data);
 
-            random_data.zoom = this.latest_zoom;
+            random_data.zoom = latest_zoom;
             note = new StickyNoteWindow (application, random_data);
         }
 
@@ -90,7 +90,7 @@ public class Jorts.NoteManager : Object {
             StickyNoteWindow last_note = open_notes.last ();
             string skip_theme = last_note.theme;
             var random_data = Jorts.Utils.random_note (skip_theme);
-            random_data.zoom = this.latest_zoom;
+            random_data.zoom = latest_zoom;
             note = new StickyNoteWindow (application, random_data);
             open_notes.add (note);
                     print ("new");
