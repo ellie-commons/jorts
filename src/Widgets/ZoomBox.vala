@@ -5,13 +5,6 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-public enum Jorts.Zoomkind {
-    ZOOM_OUT,
-    DEFAULT_ZOOM,
-    ZOOM_IN
-}
-
-
 public class Jorts.ZoomBox : Gtk.Box {
 
     private Gtk.Button zoom_default_button;

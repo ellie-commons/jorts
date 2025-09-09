@@ -1,4 +1,5 @@
 sources = files (
+    'Objects' / 'Enum.vala',
     'Objects' / 'NoteData.vala',
 
     'Services' / 'NoteManager.vala',
