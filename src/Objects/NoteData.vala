@@ -12,6 +12,11 @@
 */
 public class Jorts.NoteData : Object {
 
+    // Will determine properties (or lack thereof) for any new note
+    public static string? latest_theme = Jorts.Constants.DEFAULT_THEME;
+    public static int? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
+    public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
+
     public string title;
     public string theme;
     public string content;

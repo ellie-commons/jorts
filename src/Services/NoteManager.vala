@@ -15,12 +15,8 @@ public class Jorts.NoteManager : Object {
     private Gee.ArrayList<StickyNoteWindow> open_notes;
     private Jorts.Storage storage;
 
-    public static int latest_zoom;
-    public static bool latest_mono;
-    public static string latest_theme;
-
     public NoteManager (Jorts.Application app) {
-        this.application = app;
+        Object (application: app);
     }
 
     construct {
@@ -39,50 +35,46 @@ public class Jorts.NoteManager : Object {
         debug ("[MANAGER] Opening all sticky notes now!");
         Json.Array loaded_data = storage.load ();
 
-        // Load everything we have
-        foreach (Json.Object json_data in loaded_data) {
-            var note_data = new NoteData.from_json (json_data);
+        if (loaded_data.get_length () == 0) {
+            var note_data = new NoteData.from_random ();
+            note_data.theme = "BLUEBERRY";
             create_note (note_data);
+
+        } else {
+            foreach (Json.Object json_data in loaded_data.get_elements ()) {
+                var note_data = new NoteData.from_json (json_data);
+                create_note (note_data);
+            }
         }
 
         on_reduceanimation_changed ();
         Gtk.Settings.get_default ().notify["enable-animations"].connect (on_reduceanimation_changed);
     }
 
-    // Create new instances of StickyNoteWindow
-    // If we have data, nice, just load it into a new instance
-    // Else we do a lil new note
-
     /*************************************************/
     /**
-    * Responsible for creating new windows
+    * Create new instances of StickyNoteWindow
     * Should we have data, we can pass it off, else create from random data
-    * 
+    * If we have data, nice, just load it into a new instance. Else we do a lil new note
     */
     public void create_note (NoteData? data = null) {
         debug ("[MANAGER] Lets do a note");
+        Jorts.StickyNoteWindow note;
 
-        StickyNoteWindow note;
         if (data != null) {
-            note = new StickyNoteWindow (application, data);
+            var note = new StickyNoteWindow (application, data);
         }
         else {
-
-            // Skip theme from previous window, but use same text zoom
-            StickyNoteWindow last_note = open_notes.last ();
-            string skip_theme = last_note.theme;
-            var random_data = Jorts.Utils.random_note (skip_theme);
-
+            var random_data = new NoteData.from_random ();
+            
+            // One chance at the golden sticky
             random_data = Jorts.Utils.golden_sticky (random_data);
-
-            random_data.zoom = latest_zoom;
-            note = new StickyNoteWindow (application, random_data);
+            var note = new StickyNoteWindow (application, random_data);
         }
 
         /* LETSGO */
         open_notes.add (note);
         note.present ();
-        save_to_stash ();
 	}
 
     /*************************************************/
@@ -102,20 +94,15 @@ public class Jorts.NoteManager : Object {
 
         } else {
             // Skip theme from previous window, but use same text zoom
-            StickyNoteWindow last_note = open_notes.last ();
-            string skip_theme = last_note.theme;
-            var random_data = Jorts.Utils.random_note (skip_theme);
-            random_data.zoom = latest_zoom;
+            var random_data = new NoteData.from_random ();
             note = new StickyNoteWindow (application, random_data);
             open_notes.add (note);
-                    print ("new");
+            print ("new");
         }
 
         note.show ();
         note.present ();
         note.textview.paste ();          
-
-        save_to_stash ();
 	}
 
     /*************************************************/
@@ -123,23 +110,30 @@ public class Jorts.NoteManager : Object {
     * Delete a note by remove it from the active list and closing its window
     */
     public void delete_note (StickyNoteWindow note) {
-            debug ("[MANAGER] Removing a note…");
-            open_notes.remove (note);
-            note.close ();
-            this.save_to_stash ();
+        debug ("[MANAGER] Removing a note…");
+
+        open_notes.remove (note);
+        note.close ();
+        save_to_stash ();
 	}
 
     /*************************************************/
     /**
     * Cue to immediately write from the active list to the storage
     */
-    public void save_to_stash () {
+    public void save_all () {
         debug ("[MANAGER] Save the stickies!");
+        Json.Builder builder = new Json.Builder ();
 
-        Jorts.Stash.check_if_stash ();
-        string json_data = Jorts.Jason.jsonify (open_notes);
-        Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_STASH);
-        //print ("\nSaved " + open_notes.size.to_string () + "!");
+        builder.begin_array ();
+        foreach (Jorts.StickyNoteWindow note in open_notes) {
+            var data = note.packaged ();
+            builder.add_object_element (data.to_json ());
+        };
+        builder.end_array ();
+
+        Json.Array root = builder.get_root ();
+        storage.save (root);        
     }
 
     /*************************************************/

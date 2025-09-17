@@ -16,31 +16,27 @@
 */
 public class Jorts.Storage {
 
-    private const string FILENAME_STASH     = "saved_state.json";
+    private const string FILENAME           = "saved_state.json";
     private const string FILENAME_BACKUP    = "backup_state.json";
-    private const uint8 TRIES                = 3;
+    private const uint8 TRIES               = 3;
 
     private string data_directory;
     private string storage_path;
-    private File save_file;
 
     /**
     * Convenience property wrapping load() and save()
     */
     public Json.Array content {
-        get { return load ();}
-        set { save (value);}
+        get {return load ();}
+        set {save (value);}
     }
 
     /*************************************************/
     construct {
-        data_directory = Environment.get_user_data_dir ();
-        storage_path = data_directory + "/" + FILENAME_STASH;
-        save_file = File.new_for_path (storage_path);
-
+        data_directory      = Environment.get_user_data_dir ();
+        storage_path        = data_directory + "/" + FILENAME;
         check_if_stash ();
     }
-
 
     /*************************************************/
     /**
@@ -48,7 +44,7 @@ public class Jorts.Storage {
     */
     private void check_if_stash () {
         debug ("[STORAGE] do we have a data directory?");
-        var dir = File.new_for_path(data_directory);
+        var dir = File.new_for_path (data_directory);
 
         try {
 			if (!dir.query_exists ()) {
@@ -60,7 +56,6 @@ public class Jorts.Storage {
 		}
 	}
 
-
     /*************************************************/
     /**
     * Converts a Json.Node into a string and take care of saving it
@@ -70,19 +65,12 @@ public class Jorts.Storage {
         check_if_stash ();
 
         try {
-            if (save_file.query_exists ()) {
-                save_file.delete ();
-            }
             var generator = new Json.Generator ();
             generator.set_root (json_data);
-            string storage_content = generator.to_data (null);
-
-            var file_stream = save_file.create (FileCreateFlags.REPLACE_DESTINATION);
-            var data_stream = new DataOutputStream (file_stream);
-            data_stream.put_string (storage_content);
+            generator.to_file (storage_path);
             
         } catch (Error e) {
-            warning ("[STORAGE] Failed to save notes %s\n", e.message);
+            warning ("[STORAGE] Failed to save notes %s", e.message);
         }
     }
 
@@ -91,7 +79,7 @@ public class Jorts.Storage {
     * Grab from storage, into a Json.Node we can parse. Insist if necessary
     */
     public Json.Array load () {
-        debug("[STORAGE] Loadingstash…");
+        debug("[STORAGE] Loading from storage letsgo");
 
         Gee.ArrayList<NoteData> loaded_data = new Gee.ArrayList<NoteData>();
         var parser = new Json.Parser();
@@ -103,41 +91,27 @@ public class Jorts.Storage {
             loaded_data = Jorts.Jason.load_parser (parser);
 
         } catch (Error e) {
-            print("[WARNING] Failed to load from storage (Attempt 1)! " + e.message.to_string() + "\n");
-
-            // Try backup file
-            try {
-                check_if_stash ();
-                parser.load_from_mapped_file (storage_path);
-                loaded_data = Jorts.Jason.load_parser(parser);
-
-            } catch (Error e) {
-                print("[WARNING] Failed to load from storage (Attempt 2)!!! " + e.message.to_string() + "\n");
-
-                try {
-                    check_if_stash ();
-                    parser.load_from_mapped_file (storage_path);
-                    loaded_data = Jorts.Jason.load_parser(parser);
-
-                } catch (Error e) {
-                    critical ("[WARNING] Failed to load from storage (Attempt 3)!!! " + e.message.to_string() + "\n");
-                }
-            }
-
-
+            print ("[WARNING] Failed to load from storage (Attempt 1)! " + e.message.to_string() + "\n");
         }
-        print("\nLoaded " + loaded_data.size.to_string() + "!");
-
-        // If we load nothing: Fallback to a random with blue theme as first
-        if (loaded_data.size == 0 ) {
-            debug ("nothing loaded");
-            NoteData blank_slate    = Jorts.Utils.random_note (null);
-            blank_slate.theme       = Jorts.Constants.DEFAULT_THEME ;
-
-            loaded_data.add (blank_slate);
-        }
+        print ("\nLoaded " + loaded_data.size.to_string() + "!");
 
         debug ("I used the Json to destroy the Json");
         return loaded_data;
+    }
+
+    /*************************************************/
+    /**
+    * Like it says on the tin
+    */
+    public void dump () {
+        debug("[STORAGE] DROP TABLE Students;--");
+
+        var everything = load ();
+        var generator = new Json.Generator () {
+            pretty = true;
+        };
+        generator.set_root (everything);
+
+        print (generator.to_string ());
     }
 }

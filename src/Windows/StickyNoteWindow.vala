@@ -40,7 +40,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set {on_theme_changed (value);}
     }
 
-
     public bool monospace {
         get { return view.textview.monospace;}
         set {on_monospace_changed (value);}
@@ -55,25 +54,28 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     private static uint debounce_timer_id;
 
-    private const string ACTION_PREFIX = "app.";
-    private const string ACTION_DELETE = "action_delete";
-    private const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    private const string ACTION_SHOW_MENU = "action_show_menu";
-    private const string ACTION_FOCUS_TITLE = "action_focus_title";
-    private const string ACTION_ZOOM_OUT = "action_zoom_out";
-    private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    private const string ACTION_ZOOM_IN = "action_zoom_in";
+    // Connected to by the NoteManager to know it is time to save
+    public signal void changed ();
+
+    private const string ACTION_PREFIX          = "app.";
+    private const string ACTION_DELETE          = "action_delete";
+    private const string ACTION_SHOW_EMOJI      = "action_show_emoji";
+    private const string ACTION_SHOW_MENU       = "action_show_menu";
+    private const string ACTION_FOCUS_TITLE     = "action_focus_title";
+    private const string ACTION_ZOOM_OUT        = "action_zoom_out";
+    private const string ACTION_ZOOM_DEFAULT    = "action_zoom_default";
+    private const string ACTION_ZOOM_IN         = "action_zoom_in";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE, action_delete},
-        { ACTION_SHOW_EMOJI, action_show_emoji},
-        { ACTION_SHOW_MENU, action_show_menu},
-        { ACTION_FOCUS_TITLE, action_focus_title},
-        { ACTION_ZOOM_OUT, action_zoom_out},
-        { ACTION_ZOOM_DEFAULT, action_zoom_default},
-        { ACTION_ZOOM_IN, action_zoom_in},
+        { ACTION_DELETE,        action_delete},
+        { ACTION_SHOW_EMOJI,    action_show_emoji},
+        { ACTION_SHOW_MENU,     action_show_menu},
+        { ACTION_FOCUS_TITLE,   action_focus_title},
+        { ACTION_ZOOM_OUT,      action_zoom_out},
+        { ACTION_ZOOM_DEFAULT,  action_zoom_default},
+        { ACTION_ZOOM_IN,       action_zoom_in},
     };
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
@@ -180,16 +182,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     // Add a debounce so we aren't writing the entire buffer every character input
     private void on_buffer_changed () {
         debug ("Buffer changed!");
-
-        if (debounce_timer_id != 0) {
-            GLib.Source.remove (debounce_timer_id);
-        }
-
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
-            debounce_timer_id = 0;
-            ((Application)this.application).manager.save_to_stash ();
-            return GLib.Source.REMOVE;
-        });
+        changed ();
     }
 
     private void on_editable_changed () {
@@ -271,8 +264,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         _theme = new_theme;
         add_css_class (new_theme);
-        NoteManager.latest_theme = new_theme;
-        ((Application)this.application).manager.save_to_stash ();
+        NoteData.latest_theme = new_theme;
+        changed ();
     }
 
 
@@ -291,8 +284,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
         view.textview.monospace = monospace;
         popover.monospace_box.monospace = monospace;
-        NoteManager.latest_mono = monospace;
-        ((Application)this.application).manager.save_to_stash ();
+        NodeData.latest_mono = monospace;
+        changed ();
     }
 
 
@@ -347,7 +340,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
-        NoteManager.latest_zoom = zoom;
+        NoteData.latest_zoom = zoom;
     }
 
     private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
