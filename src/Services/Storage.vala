@@ -52,7 +52,7 @@ public class Jorts.Storage : Object {
 				debug ("[STORAGE] yes we do now");
 			}
 		} catch (Error e) {
-			warning ("[STORAGE] Failed to prepare target data directory %s\n", e.message);
+			warning ("[STORAGE] Failed to prepare target data directory: %s", e.message);
 		}
 	}
 
@@ -72,7 +72,7 @@ public class Jorts.Storage : Object {
             generator.to_file (storage_path);
             
         } catch (Error e) {
-            warning ("[STORAGE] Failed to save notes %s", e.message);
+            warning ("[STORAGE] Failed to save notes: %s", e.message);
         }
     }
 
@@ -92,7 +92,7 @@ public class Jorts.Storage : Object {
             array = node.get_array ();
 
         } catch (Error e) {
-            warning ("Failed to load from storage " + e.message.to_string());
+            warning ("Failed to load from storage: %s", e.message);
         }
         
         return array;
