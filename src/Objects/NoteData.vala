@@ -55,7 +55,7 @@ public class Jorts.NoteData : Object {
 
         // Make sure the values are nothing crazy
         if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
-        else if (zoom > Jorts.Constants.ZOOM_MAX) { zoom = Jorts.Constants.ZOOM_MAX;}
+        else if (zoom > Jorts.Constants.ZOOM_MAX)   { zoom = Jorts.Constants.ZOOM_MAX;}
 
         width       = (int)node.get_int_member_with_default ("width",Jorts.Constants.DEFAULT_WIDTH);
         height      = (int)node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
@@ -72,8 +72,8 @@ public class Jorts.NoteData : Object {
         content = content ?? "";
         monospace = latest_mono;
         zoom = latest_zoom;
-        width = width ?? Jorts.Constants.DEFAULT_WIDTH;
-        height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
+        width = Jorts.Constants.DEFAULT_WIDTH;
+        height = Jorts.Constants.DEFAULT_HEIGHT;
     }
 
     /*************************************************/

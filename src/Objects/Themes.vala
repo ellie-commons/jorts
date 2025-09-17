@@ -37,8 +37,8 @@ public enum Jorts.Themes {
         }
     }
 
-    public Themes.from_string (string wtf_is_this) {
-        switch (wtf_is_this.upper ()) {
+    public Themes from_string (string wtf_is_this) {
+        switch (wtf_is_this.ascii_up ()) {
             case "BLUEBERRY":     return BLUEBERRY;
             case "MINT":          return MINT;
             case "LIME":          return LIME;

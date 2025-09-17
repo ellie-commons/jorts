@@ -91,19 +91,4 @@ namespace Jorts.Jason {
         string str = generator.to_data (null);
         return str;
     }
-
-    /*************************************************/    
-    public Gee.ArrayList<Jorts.NoteData> load_parser (Json.Parser parser) {
-        Gee.ArrayList<Jorts.NoteData> loaded_data = new Gee.ArrayList<Jorts.NoteData>();
-
-        var root = parser.get_root ();
-        var array = root.get_array ();
-
-        foreach (var item in array.get_elements()) {
-            var stored_note = Jorts.Jason.load_node(item.get_object());
-            loaded_data.add (stored_note);
-        }
-
-        return loaded_data;
-    }
 }

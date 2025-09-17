@@ -57,25 +57,25 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     // Connected to by the NoteManager to know it is time to save
     public signal void changed ();
 
-    private const string ACTION_PREFIX          = "app.";
-    private const string ACTION_DELETE          = "action_delete";
-    private const string ACTION_SHOW_EMOJI      = "action_show_emoji";
-    private const string ACTION_SHOW_MENU       = "action_show_menu";
-    private const string ACTION_FOCUS_TITLE     = "action_focus_title";
-    private const string ACTION_ZOOM_OUT        = "action_zoom_out";
-    private const string ACTION_ZOOM_DEFAULT    = "action_zoom_default";
-    private const string ACTION_ZOOM_IN         = "action_zoom_in";
+    private const string ACTION_PREFIX = "app.";
+    private const string ACTION_DELETE = "action_delete";
+    private const string ACTION_SHOW_EMOJI = "action_show_emoji";
+    private const string ACTION_SHOW_MENU = "action_show_menu";
+    private const string ACTION_FOCUS_TITLE = "action_focus_title";
+    private const string ACTION_ZOOM_OUT = "action_zoom_out";
+    private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    private const string ACTION_ZOOM_IN = "action_zoom_in";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE,        action_delete},
-        { ACTION_SHOW_EMOJI,    action_show_emoji},
-        { ACTION_SHOW_MENU,     action_show_menu},
-        { ACTION_FOCUS_TITLE,   action_focus_title},
-        { ACTION_ZOOM_OUT,      action_zoom_out},
-        { ACTION_ZOOM_DEFAULT,  action_zoom_default},
-        { ACTION_ZOOM_IN,       action_zoom_in},
+        { ACTION_DELETE, action_delete},
+        { ACTION_SHOW_EMOJI, action_show_emoji},
+        { ACTION_SHOW_MENU, action_show_menu},
+        { ACTION_FOCUS_TITLE, action_focus_title},
+        { ACTION_ZOOM_OUT, action_zoom_out},
+        { ACTION_ZOOM_DEFAULT, action_zoom_default},
+        { ACTION_ZOOM_IN, action_zoom_in},
     };
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
@@ -155,7 +155,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Save when title or text have changed
         editableheader.changed.connect (on_editable_changed);
-        view.textview.buffer.changed.connect (on_buffer_changed);
+        view.textview.buffer.changed.connect (debounce_save);
 
         // The settings popover tells us a new theme has been chosen!
         popover.theme_changed.connect (on_theme_changed);
@@ -180,14 +180,23 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /********************************************/
 
     // Add a debounce so we aren't writing the entire buffer every character input
-    private void on_buffer_changed () {
-        debug ("Buffer changed!");
-        changed ();
+    private void debounce_save () {
+        debug ("Changed! Timer: %s".printf (debounce_timer_id.to_string ()));
+
+        if (debounce_timer_id != 0) {
+            GLib.Source.remove (debounce_timer_id);
+        }
+
+        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
+            debounce_timer_id = 0;
+            changed ();
+            return GLib.Source.REMOVE;
+        });
     }
 
     private void on_editable_changed () {
         title = editableheader.text + _(" - Jorts");
-        on_buffer_changed ();
+        debounce_save ();
     }
 
     // Called when a change in settings is detected
@@ -284,7 +293,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
         view.textview.monospace = monospace;
         popover.monospace_box.monospace = monospace;
-        NodeData.latest_mono = monospace;
+        Jorts.NoteData.latest_mono = monospace;
         changed ();
     }
 
@@ -303,7 +312,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             case Zoomkind.ZOOM_OUT:             zoom_out (); break;
             default:                            zoom = 100; break;
         }
-        ((Jorts.Application)this.application).manager.save_to_stash ();
+        ((Jorts.Application)this.application).manager.save_all ();
     }
 
     // First check an increase doesnt go above limit

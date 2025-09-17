@@ -27,7 +27,7 @@ public class Jorts.Storage {
     * Convenience property wrapping load() and save()
     */
     public Json.Array content {
-        get {return load ();}
+        owned get {return load ();}
         set {save (value);}
     }
 
@@ -66,7 +66,9 @@ public class Jorts.Storage {
 
         try {
             var generator = new Json.Generator ();
-            generator.set_root (json_data);
+            var node = new Json.Node (Json.NodeType.ARRAY);
+            node.set_array (json_data);
+            generator.set_root (node);
             generator.to_file (storage_path);
             
         } catch (Error e) {
@@ -78,25 +80,22 @@ public class Jorts.Storage {
     /**
     * Grab from storage, into a Json.Node we can parse. Insist if necessary
     */
-    public Json.Array load () {
+    public Json.Array? load () {
         debug("[STORAGE] Loading from storage letsgo");
+        check_if_stash ();
+        var parser = new Json.Parser ();
+        var array = new Json.Array ();
 
-        Gee.ArrayList<NoteData> loaded_data = new Gee.ArrayList<NoteData>();
-        var parser = new Json.Parser();
-
-        // Try standard storage
         try {
-            check_if_stash ();
             parser.load_from_mapped_file (storage_path);
-            loaded_data = Jorts.Jason.load_parser (parser);
+            var node = parser.get_root ();
+            array = node.get_array ();
 
         } catch (Error e) {
-            print ("[WARNING] Failed to load from storage (Attempt 1)! " + e.message.to_string() + "\n");
+            warning ("Failed to load from storage " + e.message.to_string());
         }
-        print ("\nLoaded " + loaded_data.size.to_string() + "!");
-
-        debug ("I used the Json to destroy the Json");
-        return loaded_data;
+        
+        return array;
     }
 
     /*************************************************/
@@ -108,10 +107,12 @@ public class Jorts.Storage {
 
         var everything = load ();
         var generator = new Json.Generator () {
-            pretty = true;
+            pretty = true
         };
-        generator.set_root (everything);
 
-        print (generator.to_string ());
+        var node = new Json.Node (Json.NodeType.ARRAY);
+        node.set_array (everything);
+        generator.set_root (node);
+        print (generator.to_data (null));
     }
 }

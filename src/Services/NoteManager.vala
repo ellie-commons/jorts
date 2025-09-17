@@ -12,8 +12,8 @@
 public class Jorts.NoteManager : Object {
 
     private Gtk.Application application;
-    private Gee.ArrayList<StickyNoteWindow> open_notes;
-    private Jorts.Storage storage;
+    public Gee.ArrayList<StickyNoteWindow> open_notes;
+    public Jorts.Storage storage;
 
     public NoteManager (Jorts.Application app) {
         Object (application: app);
@@ -41,8 +41,9 @@ public class Jorts.NoteManager : Object {
             create_note (note_data);
 
         } else {
-            foreach (Json.Object json_data in loaded_data.get_elements ()) {
-                var note_data = new NoteData.from_json (json_data);
+            foreach (Json.Node json_data in loaded_data.get_elements ()) {
+                var json_obj = json_data.dup_object ();
+                var note_data = new NoteData.from_json (json_obj);
                 create_note (note_data);
             }
         }
@@ -62,14 +63,14 @@ public class Jorts.NoteManager : Object {
         Jorts.StickyNoteWindow note;
 
         if (data != null) {
-            var note = new StickyNoteWindow (application, data);
+            note = new StickyNoteWindow (application, data);
         }
         else {
             var random_data = new NoteData.from_random ();
             
             // One chance at the golden sticky
             random_data = Jorts.Utils.golden_sticky (random_data);
-            var note = new StickyNoteWindow (application, random_data);
+            note = new StickyNoteWindow (application, random_data);
         }
 
         /* LETSGO */
@@ -114,7 +115,7 @@ public class Jorts.NoteManager : Object {
 
         open_notes.remove (note);
         note.close ();
-        save_to_stash ();
+        save_all ();
 	}
 
     /*************************************************/
@@ -123,17 +124,16 @@ public class Jorts.NoteManager : Object {
     */
     public void save_all () {
         debug ("[MANAGER] Save the stickies!");
-        Json.Builder builder = new Json.Builder ();
 
-        builder.begin_array ();
+        var array = new Json.Array ();
+
         foreach (Jorts.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
-            builder.add_object_element (data.to_json ());
+            var object = data.to_json ();
+            array.add_object_element (object);
         };
-        builder.end_array ();
 
-        Json.Array root = builder.get_root ();
-        storage.save (root);        
+        storage.save (array);        
     }
 
     /*************************************************/
@@ -157,4 +157,8 @@ public class Jorts.NoteManager : Object {
             }
         }
     }
+
+
+    /*************************************************/
+    public void dump () {storage.dump ();}
 }
