@@ -165,7 +165,7 @@ Please wait while the app remembers all the things...
         /* Either we show all sticky notes, or we load everything lol */
         if (manager.open_notes.size > 0) {
             foreach (var window in manager.open_notes) {
-                if (window.visible) { window.present ();}
+                if (window.visible) {window.present ();}
             }
         } else {
             manager.init ();

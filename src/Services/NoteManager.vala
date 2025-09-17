@@ -11,12 +11,12 @@
 */
 public class Jorts.NoteManager : Object {
 
-    private Gtk.Application application;
+    private Jorts.Application application;
     public Gee.ArrayList<StickyNoteWindow> open_notes;
     public Jorts.Storage storage;
 
     public NoteManager (Jorts.Application app) {
-        Object (application: app);
+        this.application = app;
     }
 
     construct {
@@ -41,9 +41,11 @@ public class Jorts.NoteManager : Object {
             create_note (note_data);
 
         } else {
-            foreach (Json.Node json_data in loaded_data.get_elements ()) {
+            foreach (var json_data in loaded_data.get_elements()) {
                 var json_obj = json_data.dup_object ();
                 var note_data = new NoteData.from_json (json_obj);
+
+                print ("\nLoaded: " + note_data.title);
                 create_note (note_data);
             }
         }
@@ -75,8 +77,10 @@ public class Jorts.NoteManager : Object {
 
         /* LETSGO */
         open_notes.add (note);
+        note.show ();
         note.present ();
-        note.changed.connect (save_all.begin);
+        note.changed.connect (save_all);
+
 	}
 
     /*************************************************/
