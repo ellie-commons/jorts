@@ -20,8 +20,8 @@ namespace Jorts.Constants {
     // signature theme
     const string DEFAULT_THEME           = "BLUEBERRY";
     const int DAYS_BETWEEN_BACKUPS       = 30;
-    const string FILENAME_STASH          = "saved_state.json";
-    const string FILENAME_BACKUP         = "backup_state.json";
+
+
 
     // in ms
     const int DEBOUNCE                   = 1000;

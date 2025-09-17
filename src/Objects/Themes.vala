@@ -5,6 +5,10 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/*************************************************/
+/**
+* A register of all themes we have
+*/
 public enum Jorts.Themes {
     BLUEBERRY,
     MINT,
@@ -29,6 +33,22 @@ public enum Jorts.Themes {
             case GRAPE:         return "GRAPE";
             case COCOA:         return "COCOA";
             case SLATE:         return "SLATE";
+            default: assert_not_reached ();
+        }
+    }
+
+    public Themes.from_string (string wtf_is_this) {
+        switch (wtf_is_this.upper ()) {
+            case "BLUEBERRY":     return BLUEBERRY;
+            case "MINT":          return MINT;
+            case "LIME":          return LIME;
+            case "BANANA":        return BANANA;
+            case "ORANGE":        return ORANGE;
+            case "STRAWBERRY":    return STRAWBERRY;
+            case "BUBBLEGUM":     return BUBBLEGUM;
+            case "GRAPE":         return GRAPE;
+            case "COCOA":         return COCOA;
+            case "SLATE":         return SLATE;
             default: assert_not_reached ();
         }
     }

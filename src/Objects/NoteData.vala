@@ -6,16 +6,10 @@
  */
 
 
- /* Creation methods:
-vanilla
-from_json ();
-from_random ();
-
-Helper:
-to_json ();
-
- 
- */
+/*************************************************/
+/**
+* An object used to package all data conveniently as needed.
+*/
 public class Jorts.NoteData : Object {
 
     public string title;
@@ -26,6 +20,10 @@ public class Jorts.NoteData : Object {
     public int width;
     public int height;
 
+    /*************************************************/
+    /**
+    * Convert into a Json.Object()
+    */
     public NoteData (string? title = null, string? theme = null, string? content = null,
                     bool? monospace = null, int? zoom = null, int? width = null, int? height = null)
     {
@@ -39,6 +37,10 @@ public class Jorts.NoteData : Object {
         this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
     }
 
+    /*************************************************/
+    /**
+    * Parse a node to create an associated NoteData object
+    */
     public NoteData.from_json (Json.Object node) {
         title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
         theme       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
@@ -54,6 +56,25 @@ public class Jorts.NoteData : Object {
         height      = (int)node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
     }
 
+    /*************************************************/
+    /**
+    * Parse a node to create an associated NoteData object
+    * We skip last chosen theme, and reuse latest set zoom and whether user prefers monospace
+    */
+    public NoteData.from_random () {
+        title = title ?? Jorts.Utils.random_title ();
+        theme = theme ?? Jorts.Utils.random_theme (latest_theme);
+        content = content ?? "";
+        monospace = latest_mono;
+        zoom = latest_zoom;
+        width = width ?? Jorts.Constants.DEFAULT_WIDTH;
+        height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
+    }
+
+    /*************************************************/
+    /**
+    * Used for storing NoteData inside disk storage
+    */
     public Json.Object to_json () {
         var builder = new Json.Builder ();
 

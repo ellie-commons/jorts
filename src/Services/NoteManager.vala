@@ -5,11 +5,15 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-// The NoteData object is just packaging to pass off data from and to storage
+/**
+* Responsible for keeping track of various Sticky Notes windows
+* It does its thing on its own. Make sure to call init() to summon all notes from storage
+*/
 public class Jorts.NoteManager : Object {
 
-    public Gee.ArrayList<StickyNoteWindow> open_notes = new Gee.ArrayList<StickyNoteWindow> ();
-    public Gtk.Application application;
+    private Gtk.Application application;
+    private Gee.ArrayList<StickyNoteWindow> open_notes;
+    private Jorts.Storage storage;
 
     public static int latest_zoom;
     public static bool latest_mono;
@@ -19,25 +23,26 @@ public class Jorts.NoteManager : Object {
         this.application = app;
     }
 
-    public void init_all_notes () {
+    construct {
+        open_notes = new Gee.ArrayList<StickyNoteWindow> ();
+        storage = new Jorts.Storage ();
+    }
+
+    /*************************************************/
+    /**
+    * Retrieve data from storage, and loop through it to create notes
+    * Keep an active list of Windows.
+    * We do not do this at construct time so we stay flexible whenever we want to init
+    * NoteManager is also created too early by the app for new windows
+    */    
+    public void init () {
         debug ("[MANAGER] Opening all sticky notes now!");
-        Gee.ArrayList<NoteData> loaded_data = Jorts.Stash.load_from_stash();
+        Json.Array loaded_data = storage.load ();
 
         // Load everything we have
-        foreach (NoteData data in loaded_data) {
-            debug ("[MANAGER] Loaded: " + data.title + "\n");
-            this.create_note (data);
-        }
-
-        if (Jorts.Stash.need_backup (Application.gsettings.get_string ("last-backup"))) {
-            print ("[MANAGER] Doing a backup! :)");
-
-            Jorts.Stash.check_if_stash ();
-            string json_data = Jorts.Jason.jsonify (open_notes);
-            Jorts.Stash.overwrite_stash (json_data, Jorts.Constants.FILENAME_BACKUP);
-
-            var now = new DateTime.now_utc ().to_string () ;
-            Application.gsettings.set_string ("last-backup", now);
+        foreach (Json.Object json_data in loaded_data) {
+            var note_data = new NoteData.from_json (json_data);
+            create_note (note_data);
         }
 
         on_reduceanimation_changed ();
@@ -47,7 +52,14 @@ public class Jorts.NoteManager : Object {
     // Create new instances of StickyNoteWindow
     // If we have data, nice, just load it into a new instance
     // Else we do a lil new note
-	public void create_note (NoteData? data = null) {
+
+    /*************************************************/
+    /**
+    * Responsible for creating new windows
+    * Should we have data, we can pass it off, else create from random data
+    * 
+    */
+    public void create_note (NoteData? data = null) {
         debug ("[MANAGER] Lets do a note");
 
         StickyNoteWindow note;
@@ -73,7 +85,10 @@ public class Jorts.NoteManager : Object {
         save_to_stash ();
 	}
 
-    // When user asked for a new note and for it to be pasted in
+    /*************************************************/
+    /**
+    * When user asked for a new note and for it to be pasted in
+    */
     public void from_clipboard () {
         debug ("[MANAGER] Creating and loading from clipboard…");
         print ("clipboard!");
@@ -96,8 +111,6 @@ public class Jorts.NoteManager : Object {
                     print ("new");
         }
 
-
-
         note.show ();
         note.present ();
         note.textview.paste ();          
@@ -105,8 +118,10 @@ public class Jorts.NoteManager : Object {
         save_to_stash ();
 	}
 
-
-    // Simply remove from the list of things to save, and close
+    /*************************************************/
+    /**
+    * Delete a note by remove it from the active list and closing its window
+    */
     public void delete_note (StickyNoteWindow note) {
             debug ("[MANAGER] Removing a note…");
             open_notes.remove (note);
@@ -114,6 +129,10 @@ public class Jorts.NoteManager : Object {
             this.save_to_stash ();
 	}
 
+    /*************************************************/
+    /**
+    * Cue to immediately write from the active list to the storage
+    */
     public void save_to_stash () {
         debug ("[MANAGER] Save the stickies!");
 
@@ -123,7 +142,10 @@ public class Jorts.NoteManager : Object {
         //print ("\nSaved " + open_notes.size.to_string () + "!");
     }
 
-      // Called when the window is-active property changes
+    /*************************************************/
+    /**
+    * Handler to add or remove CSS animations from all active notes
+    */
     public void on_reduceanimation_changed () {
         debug ("[MANAGER] Reduce animation changed!");
 

@@ -182,25 +182,4 @@ Have a great day!🎇
 
         return blank_slate;
     }
-
-
-    /*************************************************/
-    // Spits out a fresh new note
-    public NoteData random_note (string? skip_theme = null) {
-        debug ("Generating random note... Skip:" + skip_theme);
-        var randtitle = Jorts.Utils.random_title ();
-        string randtheme = Jorts.Utils.random_theme (skip_theme);
-
-        NoteData randnote = new NoteData (
-            randtitle,
-            randtheme,
-            "",
-            false,
-            Jorts.Constants.DEFAULT_ZOOM,
-            Jorts.Constants.DEFAULT_WIDTH,
-            Jorts.Constants.DEFAULT_HEIGHT
-        );
-
-        return randnote;
-    }
 }
