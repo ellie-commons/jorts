@@ -312,7 +312,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             case Zoomkind.ZOOM_OUT:             zoom_out (); break;
             default:                            zoom = 100; break;
         }
-        ((Jorts.Application)this.application).manager.save_all ();
+        ((Jorts.Application)this.application).manager.save_all.begin ();
     }
 
     // First check an increase doesnt go above limit

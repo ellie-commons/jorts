@@ -207,7 +207,7 @@ Please wait while the app remembers all the things...
 
     private void action_save () {
         debug ("[ACTION] Saving...");
-        manager.save_all ();
+        manager.save_all.begin ();
     }
 
     private void action_reset_settings () {

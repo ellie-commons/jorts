@@ -76,6 +76,7 @@ public class Jorts.NoteManager : Object {
         /* LETSGO */
         open_notes.add (note);
         note.present ();
+        note.changed.connect (save_all.begin);
 	}
 
     /*************************************************/
@@ -115,14 +116,14 @@ public class Jorts.NoteManager : Object {
 
         open_notes.remove (note);
         note.close ();
-        save_all ();
+        save_all.begin ();
 	}
 
     /*************************************************/
     /**
     * Cue to immediately write from the active list to the storage
     */
-    public void save_all () {
+    public async void save_all () {
         debug ("[MANAGER] Save the stickies!");
 
         var array = new Json.Array ();
