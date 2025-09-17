@@ -5,33 +5,46 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-/*
-void                        check_if_stash()        --> Make sure we can save
-Gee.ArrayList<NoteData>     load ()                 --> get
-void                        save (string json_data) --> slam in
+/**
+* Represents the file on-disk, and takes care of the annoying  
+* 
+* void          save (Json.Array)  --> Save to the storage file data
+* Json.Array   load ()           --> Load and return 
+*
+* save() takes a Json.Node instead of an NoteData[] so we avoid looping twice through all notes
+* It is agressively persistent in 
 */
+public class Jorts.Storage : Object {
 
-public class Jorts.Storage {
+    private const string FILENAME           = "saved_state.json";
+    private const string FILENAME_BACKUP    = "backup_state.json";
+    private const uint8 TRIES               = 3;
 
     private string data_directory;
     private string storage_path;
-    private File save_file;
 
+    /**
+    * Convenience property wrapping load() and save()
+    */
+    public Json.Array content {
+        owned get {return load ();}
+        set {save (value);}
+    }
+
+    /*************************************************/
     construct {
-        data_directory = Environment.get_user_data_dir ();
-        storage_path = data_directory + "/" + Jorts.Constants.FILENAME_STASH;
-        save_file = File.new_for_path (storage_path);
-
+        data_directory      = Environment.get_user_data_dir ();
+        storage_path        = data_directory + "/" + FILENAME;
         check_if_stash ();
     }
 
-
-
     /*************************************************/
-    // Ok first check if we have a directory to store data
+    /**
+    * Persistently check for the data directory and create if there is none 
+    */
     private void check_if_stash () {
         debug ("[STORAGE] do we have a data directory?");
-        var dir = File.new_for_path(data_directory);
+        var dir = File.new_for_path (data_directory);
 
         try {
 			if (!dir.query_exists ()) {
@@ -43,80 +56,63 @@ public class Jorts.Storage {
 		}
 	}
 
-
     /*************************************************/
-    // Just slams a json in the storage file
-    // TODO: Simplify this
-    public void save (string json_data) {
-        debug("writing to stash...");
+    /**
+    * Converts a Json.Node into a string and take care of saving it
+    */
+    public void save (Json.Array json_data) {
+        debug("[STORAGE] Writing...");
         check_if_stash ();
 
         try {
-            if (save_file.query_exists ()) {
-                save_file.delete ();
-            }
-            var file_stream = save_file.create (FileCreateFlags.REPLACE_DESTINATION);
-            var data_stream = new DataOutputStream (file_stream);
-            data_stream.put_string (json_data);
+            var generator = new Json.Generator ();
+            var node = new Json.Node (Json.NodeType.ARRAY);
+            node.set_array (json_data);
+            generator.set_root (node);
+            generator.to_file (storage_path);
             
         } catch (Error e) {
-            warning ("Failed to save notes %s\n", e.message);
+            warning ("[STORAGE] Failed to save notes %s", e.message);
         }
     }
 
     /*************************************************/
-    // Handles the whole loading. If there is nothing, just start with a blue one
-    // We first try from main storage
-    // If that fails, we go for backup
-    // Still failing ? Start anew
-    public Gee.ArrayList<NoteData> load () {
-        debug("loading from stash…");
+    /**
+    * Grab from storage, into a Json.Node we can parse. Insist if necessary
+    */
+    public Json.Array? load () {
+        debug("[STORAGE] Loading from storage letsgo");
+        check_if_stash ();
+        var parser = new Json.Parser ();
+        var array = new Json.Array ();
 
-        Gee.ArrayList<NoteData> loaded_data = new Gee.ArrayList<NoteData>();
-        var parser = new Json.Parser();
-
-        // Try standard storage
         try {
-            check_if_stash ();
             parser.load_from_mapped_file (storage_path);
-            loaded_data = Jorts.Jason.load_parser (parser);
+            var node = parser.get_root ();
+            array = node.get_array ();
 
         } catch (Error e) {
-            print("[WARNING] Failed to load from storage (Attempt 1)! " + e.message.to_string() + "\n");
-
-            // Try backup file
-            try {
-                check_if_stash ();
-                parser.load_from_mapped_file (storage_path);
-                loaded_data = Jorts.Jason.load_parser(parser);
-
-            } catch (Error e) {
-                print("[WARNING] Failed to load from storage (Attempt 2)!!! " + e.message.to_string() + "\n");
-
-                try {
-                    check_if_stash ();
-                    parser.load_from_mapped_file (storage_path);
-                    loaded_data = Jorts.Jason.load_parser(parser);
-
-                } catch (Error e) {
-                    critical ("[WARNING] Failed to load from storage (Attempt 3)!!! " + e.message.to_string() + "\n");
-                }
-            }
-
-
+            warning ("Failed to load from storage " + e.message.to_string());
         }
-        print("\nLoaded " + loaded_data.size.to_string() + "!");
+        
+        return array;
+    }
 
-        // If we load nothing: Fallback to a random with blue theme as first
-        if (loaded_data.size == 0 ) {
-            debug ("nothing loaded");
-            NoteData blank_slate    = Jorts.Utils.random_note (null);
-            blank_slate.theme       = Jorts.Constants.DEFAULT_THEME ;
+    /*************************************************/
+    /**
+    * Like it says on the tin
+    */
+    public void dump () {
+        debug("[STORAGE] DROP TABLE Students;--");
 
-            loaded_data.add (blank_slate);
-        }
+        var everything = load ();
+        var generator = new Json.Generator () {
+            pretty = true
+        };
 
-        debug ("I used the Json to destroy the Json");
-        return loaded_data;
+        var node = new Json.Node (Json.NodeType.ARRAY);
+        node.set_array (everything);
+        generator.set_root (node);
+        print (generator.to_data (null));
     }
 }

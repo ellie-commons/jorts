@@ -127,7 +127,7 @@ namespace Jorts.Themer {
     // Called once, at the start of the app
     // Loads the standard sheet, then do all the different themes
     public static void init_all_themes () {
-        debug ("Init all themes");
+        debug ("[THEMER] Init all themes");
 
         // Use standard sheet
         var app_provider = new Gtk.CssProvider ();

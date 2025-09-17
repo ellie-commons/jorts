@@ -40,7 +40,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set {on_theme_changed (value);}
     }
 
-
     public bool monospace {
         get { return view.textview.monospace;}
         set {on_monospace_changed (value);}
@@ -54,6 +53,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
 
     private static uint debounce_timer_id;
+
+    // Connected to by the NoteManager to know it is time to save
+    public signal void changed ();
 
     private const string ACTION_PREFIX = "app.";
     private const string ACTION_DELETE = "action_delete";
@@ -153,7 +155,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Save when title or text have changed
         editableheader.changed.connect (on_editable_changed);
-        view.textview.buffer.changed.connect (on_buffer_changed);
+        view.textview.buffer.changed.connect (debounce_save);
 
         // The settings popover tells us a new theme has been chosen!
         popover.theme_changed.connect (on_theme_changed);
@@ -178,8 +180,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /********************************************/
 
     // Add a debounce so we aren't writing the entire buffer every character input
-    private void on_buffer_changed () {
-        debug ("Buffer changed!");
+    private void debounce_save () {
+        debug ("Changed! Timer: %s".printf (debounce_timer_id.to_string ()));
 
         if (debounce_timer_id != 0) {
             GLib.Source.remove (debounce_timer_id);
@@ -187,14 +189,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
             debounce_timer_id = 0;
-            ((Application)this.application).manager.save_to_stash ();
+            changed ();
             return GLib.Source.REMOVE;
         });
     }
 
     private void on_editable_changed () {
         title = editableheader.text + _(" - Jorts");
-        on_buffer_changed ();
+        debounce_save ();
     }
 
     // Called when a change in settings is detected
@@ -271,8 +273,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         _theme = new_theme;
         add_css_class (new_theme);
-        NoteManager.latest_theme = new_theme;
-        ((Application)this.application).manager.save_to_stash ();
+        NoteData.latest_theme = new_theme;
+        changed ();
     }
 
 
@@ -291,8 +293,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
         view.textview.monospace = monospace;
         popover.monospace_box.monospace = monospace;
-        NoteManager.latest_mono = monospace;
-        ((Application)this.application).manager.save_to_stash ();
+        Jorts.NoteData.latest_mono = monospace;
+        changed ();
     }
 
 
@@ -310,7 +312,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             case Zoomkind.ZOOM_OUT:             zoom_out (); break;
             default:                            zoom = 100; break;
         }
-        ((Jorts.Application)this.application).manager.save_to_stash ();
+        ((Jorts.Application)this.application).manager.save_all.begin ();
     }
 
     // First check an increase doesnt go above limit
@@ -347,7 +349,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;
-        NoteManager.latest_zoom = zoom;
+        NoteData.latest_zoom = zoom;
     }
 
     private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
