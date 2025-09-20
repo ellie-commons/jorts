@@ -74,16 +74,6 @@ public class Jorts.Storage : Object {
         } catch (Error e) {
             warning ("[STORAGE] Failed to save notes %s", e.message);
 
-            // TODO add portal call so we can save somewhere else
-            var dialog = new Granite.MessageDialog (
-                    _("Could not save to storage!"),
-                    e.message,
-                    new ThemedIcon ("drive-harddisk")
-                ) {
-                    badge_icon = new ThemedIcon ("dialog-error"),
-                };
-            dialog.present ();
-            dialog.response.connect (dialog.destroy);
         }
     }
 
@@ -105,16 +95,6 @@ public class Jorts.Storage : Object {
         } catch (Error e) {
             warning ("Failed to load from storage " + e.message.to_string());
 
-            // TODO add portal call so we can save somewhere else
-            var dialog = new Granite.MessageDialog (
-                    _("Could not load from storage!"),
-                    e.message,
-                    new ThemedIcon ("drive-harddisk")
-                ) {
-                    badge_icon = new ThemedIcon ("dialog-error"),
-                };
-            dialog.present ();
-            dialog.response.connect (dialog.destroy);
         }
         
         return array;
