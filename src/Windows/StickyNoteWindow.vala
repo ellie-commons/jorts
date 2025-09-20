@@ -120,8 +120,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
         textview = view.textview;
 
-                print ("\npopover");
-
         popover = new Jorts.PopoverView ();
         view.menu_button.popover = popover;
 
@@ -259,12 +257,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void on_theme_changed (Jorts.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
-        var stylesheet = "io.elementary.stylesheet." + new_theme.to_string ().ascii_down ();
+        var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
         this.gtk_settings.gtk_theme_name = stylesheet;
 
-        var _theme_str = _theme.to_string ();
-        if (_theme_str in css_classes) {
-            remove_css_class (_theme_str);
+        if (_theme.to_string () in css_classes) {
+            remove_css_class (_theme.to_string ());
         }
 
         _theme = new_theme;

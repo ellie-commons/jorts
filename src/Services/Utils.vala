@@ -64,9 +64,10 @@ namespace Jorts.Utils {
     }
 
     /*************************************************/
-    // Spits out a random theme for a new note
-    // If there is the name of a string to skip, just skip it.
-    // Having an gee.arraylist defined from the start only causes issues
+    /**
+    * Used for new notes without data. Optionally allows to skip one
+    * This avoids generating notes "randomly" with the same themes, which would be boring
+    */
     public Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
         Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
         themes.add_all_array (Jorts.Themes.all ());
@@ -79,9 +80,10 @@ namespace Jorts.Utils {
         return themes[random_in_range];
     }
 
-
     /*************************************************/
-    // Spits out a cute or funny random title for a new sticky note
+    /**
+    * Placeholders for titles
+    */
     ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding 
     public string random_title () {
         string[] alltitles = {
@@ -142,9 +144,11 @@ namespace Jorts.Utils {
     }
 
     /*************************************************/
-    // Spits out a cute or funny random title for a new sticky note
+    /**
+    * Generates emotes for the emote menu button
+    * Optionally, skips one (typically the one to change from)
+    */
     public string random_emote (string? skip_emote = null) {
-
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
         allemotes.add_all_array (Jorts.Constants.EMOTES);
 
@@ -157,8 +161,10 @@ namespace Jorts.Utils {
     }
 
     /*************************************************/
-    // Hey! Looking in the source code is cheating!
-
+    /**
+    * Hey! Looking in the source code is cheating!
+    * Only for new notes which are not the first one
+    */
     public NoteData golden_sticky (NoteData blank_slate) {
 
         var random_in_range = Random.int_range (0, 1000);

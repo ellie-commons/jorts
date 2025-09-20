@@ -5,8 +5,7 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
- public class Jorts.PopoverView : Gtk.Popover {
+public class Jorts.PopoverView : Gtk.Popover {
 
     public Jorts.ColorBox color_button_box;
     public Jorts.MonospaceBox monospace_box;

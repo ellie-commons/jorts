@@ -6,9 +6,10 @@
  */
 
 /*
-I just dont wanna rewrite the same button over and over
-*/
 
+/**
+* I just dont wanna rewrite the same button over and over
+*/
 public class Jorts.ColorPill : Gtk.CheckButton {
         public Jorts.Themes color;
         public signal void selected (Jorts.Themes color);
@@ -17,7 +18,7 @@ public class Jorts.ColorPill : Gtk.CheckButton {
                 this.color = theme;
 
                 add_css_class ("colorpill");
-                add_css_class (theme.to_string ().ascii_down ());
+                add_css_class (theme.to_css_class ());
                 set_size_request (24, 24);
                 set_tooltip_text (theme.to_nicename ());
                 add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);

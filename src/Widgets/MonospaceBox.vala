@@ -5,6 +5,10 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+/**
+* Small horizontal box with two toggles
+* Allows user to switch between normal and monospace font
+*/
 public class Jorts.MonospaceBox : Gtk.Box {
 
     private Gtk.ToggleButton mono_monospace_toggle;
