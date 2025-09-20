@@ -8,7 +8,7 @@
     <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
   </a>
   
-<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/default.png" alt="A blue sticky note"></span>
+<span align="center"> <img class="center" src="https://github.com/ellie-commons/jorts/blob/main/data/screenshots/spread.png" alt="Several colourful sticky notes in a spread. Most are covered in scribbles. One in forefront is blue and has the text 'Lovely little colourful squares for all of your notes! 🥰'"></span>
 </div>
 
 <br/>
@@ -67,4 +67,4 @@ You can get it all by entering in a terminal:
 cp ~/.var/app/io.github.ellie_commons.jorts/data ~/
 ```
 
-"saved_state.json" contains all notes in JSON format. "backup_state.json" is a monthly backup of it.
+"saved_state.json" contains all notes in JSON format
