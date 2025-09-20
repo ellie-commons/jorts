@@ -5,6 +5,10 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
+ /*************************************************/
+/**
+* Used in a signal to tell windows in which way to change zoom
+*/
  public enum Jorts.Zoomkind {
     ZOOM_OUT,
     DEFAULT_ZOOM,
