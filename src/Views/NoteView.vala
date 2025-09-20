@@ -85,6 +85,7 @@
         actionbar = new Gtk.ActionBar () {
             hexpand = true
         };
+        actionbar.revealed = false;
         actionbar.pack_start (new_item);
         actionbar.pack_start (delete_item);
         actionbar.pack_end (menu_button);
@@ -113,7 +114,7 @@
         });
 
         //The application tells us the show/hide bar state has changed!
-        Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
+        //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
 

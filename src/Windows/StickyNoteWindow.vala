@@ -165,12 +165,41 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         //The application tells us the squiffly state has changed!
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
+        // Respect animation settings for showing ui elements
+        if (Gtk.Settings.get_default ().gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
+                show.connect_after (delayed_show);
+
+        } else {
+            Application.gsettings.bind (
+                "hide-bar",
+                view.actionbar,
+                "revealed",
+                SettingsBindFlags.INVERT_BOOLEAN);
+        }
+
+
+
+
     } // END OF MAIN CONSTRUCT
 
 
         /********************************************/
         /*                  METHODS                 */
         /********************************************/
+
+    /**
+    * Show UI elements shorty after the window is shown
+    */
+    private void delayed_show () {
+        Timeout.add_once (750, () => {    
+            Application.gsettings.bind (
+                "hide-bar",
+                view.actionbar,
+                "revealed",
+                SettingsBindFlags.INVERT_BOOLEAN);
+        });
+        show.disconnect (delayed_show);
+    }
 
     // Add a debounce so we aren't writing the entire buffer every character input
     private void debounce_save () {
