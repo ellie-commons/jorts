@@ -37,7 +37,7 @@ public class Jorts.NoteManager : Object {
 
         if (loaded_data.get_length () == 0) {
             var note_data = new NoteData.from_random ();
-            note_data.theme = "BLUEBERRY";
+            note_data.theme = Constants.DEFAULT_THEME;
             create_note (note_data);
 
         } else {

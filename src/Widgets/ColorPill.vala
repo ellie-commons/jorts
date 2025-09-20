@@ -10,17 +10,27 @@ I just dont wanna rewrite the same button over and over
 */
 
 public class Jorts.ColorPill : Gtk.CheckButton {
-        public ColorPill (string tooltip, string colorclass) {
+        public Jorts.Themes color;
+        public signal void selected (Jorts.Themes color);
+
+        public ColorPill (Jorts.Themes? theme = (null)) {
+                this.color = theme;
 
                 add_css_class ("colorpill");
-                add_css_class (colorclass);
+                add_css_class (theme.to_string ().ascii_down ());
                 set_size_request (24, 24);
-                set_tooltip_text (tooltip);
+                set_tooltip_text (theme.to_nicename ());
                 add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
 
                 margin_top = 0;
                 margin_bottom = 0;
                 margin_start = 0;
                 margin_end = 0;
+
+                this.toggled.connect (on_connect);
+        }
+
+        public void on_connect () {
+                selected (color);
         }
 }

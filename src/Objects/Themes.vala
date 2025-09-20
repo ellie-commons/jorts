@@ -37,7 +37,23 @@ public enum Jorts.Themes {
         }
     }
 
-    public Themes from_string (string wtf_is_this) {
+    public string to_nicename () {
+        switch (this) {
+            case BLUEBERRY:     return _("Blueberry");
+            case MINT:          return _("Mint");
+            case LIME:          return _("Lime");
+            case BANANA:        return _("Banana");
+            case ORANGE:        return _("Orange");
+            case STRAWBERRY:    return _("Strawberry");
+            case BUBBLEGUM:     return _("Slate");
+            case GRAPE:         return _("Grape");
+            case COCOA:         return _("Cocoa");
+            case SLATE:         return _("Slate");
+            default: assert_not_reached ();
+        }
+    }
+
+    public static Themes from_string (string wtf_is_this) {
         switch (wtf_is_this.ascii_up ()) {
             case "BLUEBERRY":     return BLUEBERRY;
             case "MINT":          return MINT;

@@ -18,7 +18,7 @@ namespace Jorts.Constants {
     const string DONATE_LINK             = "https://ko-fi.com/teamcons";
 
     // signature theme
-    const string DEFAULT_THEME           = "BLUEBERRY";
+    const Jorts.Themes DEFAULT_THEME           = Jorts.Themes.BLUEBERRY;
     const int DAYS_BETWEEN_BACKUPS       = 30;
 
 

@@ -12,8 +12,13 @@ I just dont wanna rewrite the same button over and over
 
 public class Jorts.ColorBox : Gtk.Box {
 
-    public signal void theme_changed (string selected);
-    public string theme;
+    private Themes _color = Constants.DEFAULT_THEME;
+    public Jorts.Themes color {
+        get {return _color;}
+        set {set_all_toggles (value);}
+    }
+    public signal void theme_changed (Themes selected);
+
 
     private Jorts.ColorPill color_button_blueberry;
     private Jorts.ColorPill color_button_lime;
@@ -35,16 +40,16 @@ public class Jorts.ColorBox : Gtk.Box {
         margin_end = 12;
 
             //TRANSLATORS: Shown as a tooltip when people hover a color theme
-            color_button_blueberry = new ColorPill (_("Blueberry"), "blueberry");
-            color_button_lime = new ColorPill (_("Lime"), "lime");
-            color_button_mint = new ColorPill (_("Mint"), "mint");
-            color_button_banana = new ColorPill (_("Banana"), "banana");
-            color_button_strawberry = new ColorPill (_("Strawberry"), "strawberry");
-            color_button_orange = new ColorPill (_("Orange"), "orange");
-            color_button_bubblegum = new ColorPill (_("Bubblegum"), "bubblegum");
-            color_button_grape = new ColorPill (_("Grape"),"grape");
-            color_button_cocoa = new ColorPill (_("Cocoa"), "cocoa");
-            color_button_slate = new ColorPill (_("Slate"),"slate");
+            color_button_blueberry = new ColorPill (Jorts.Themes.BLUEBERRY);
+            color_button_lime = new ColorPill (Jorts.Themes.LIME);
+            color_button_mint = new ColorPill (Jorts.Themes.MINT);
+            color_button_banana = new ColorPill (Jorts.Themes.BANANA);
+            color_button_strawberry = new ColorPill (Jorts.Themes.STRAWBERRY);
+            color_button_orange = new ColorPill (Jorts.Themes.ORANGE);
+            color_button_bubblegum = new ColorPill (Jorts.Themes.BUBBLEGUM);
+            color_button_grape = new ColorPill (Jorts.Themes.GRAPE);
+            color_button_cocoa = new ColorPill (Jorts.Themes.COCOA);
+            color_button_slate = new ColorPill (Jorts.Themes.SLATE);
 
             color_button_lime.set_group (color_button_blueberry);
             color_button_mint.set_group (color_button_blueberry);
@@ -57,16 +62,16 @@ public class Jorts.ColorBox : Gtk.Box {
             color_button_slate.set_group (color_button_blueberry);
 
             // Emit a signal when a button is toggled
-            color_button_blueberry.toggled.connect (() => {theme_changed ("BLUEBERRY");});
-            color_button_orange.toggled.connect (() => {theme_changed ("ORANGE");});
-            color_button_mint.toggled.connect (() => {theme_changed ("MINT");});
-            color_button_banana.toggled.connect (() => {theme_changed ("BANANA");});
-            color_button_lime.toggled.connect (() => {theme_changed ("LIME");});
-            color_button_strawberry.toggled.connect (() => {theme_changed ("STRAWBERRY");});
-            color_button_bubblegum.toggled.connect (() => {theme_changed ("BUBBLEGUM");});
-            color_button_grape.toggled.connect (() => {theme_changed ("GRAPE");});
-            color_button_cocoa.toggled.connect (() => {theme_changed ("COCOA");});
-            color_button_slate.toggled.connect (() => {theme_changed ("SLATE");});
+            color_button_blueberry.selected.connect (on_selected);
+            color_button_orange.selected.connect (on_selected);
+            color_button_mint.selected.connect (on_selected);
+            color_button_banana.selected.connect (on_selected);
+            color_button_lime.selected.connect (on_selected);
+            color_button_strawberry.selected.connect (on_selected);
+            color_button_bubblegum.selected.connect (on_selected);
+            color_button_grape.selected.connect (on_selected);
+            color_button_cocoa.selected.connect (on_selected);
+            color_button_slate.selected.connect (on_selected);
 
             append (color_button_blueberry);
             append (color_button_mint);
@@ -81,15 +86,28 @@ public class Jorts.ColorBox : Gtk.Box {
     }
 
     public void set_toggles (string theme) {
-        color_button_blueberry.set_active ((theme == "BLUEBERRY"));
-        color_button_lime.set_active ((theme == "LIME"));
-        color_button_mint.set_active ((theme == "MINT"));
-        color_button_banana.set_active ((theme == "BANANA"));
-        color_button_strawberry.set_active ((theme == "STRAWBERRY"));
-        color_button_orange.set_active ((theme == "ORANGE"));
-        color_button_bubblegum.set_active ((theme == "BUBBLEGUM"));
-        color_button_grape.set_active ((theme == "GRAPE"));
-        color_button_cocoa.set_active ((theme == "COCOA"));
-        color_button_slate.set_active ((theme == "SLATE"));
+
     }
+
+
+
+    private void on_selected (Jorts.Themes color) {
+        _color = color;
+        theme_changed (color);
+    }
+
+    private void set_all_toggles (Jorts.Themes color) {
+        _color = color;
+        color_button_blueberry.set_active ((color == color_button_blueberry.color));
+        color_button_lime.set_active ((color == color_button_blueberry.color));
+        color_button_mint.set_active ((color == color_button_blueberry.color));
+        color_button_banana.set_active ((color == color_button_blueberry.color));
+        color_button_strawberry.set_active ((color == color_button_blueberry.color));
+        color_button_orange.set_active ((color == color_button_blueberry.color));
+        color_button_bubblegum.set_active ((color == color_button_blueberry.color));
+        color_button_grape.set_active ((color == color_button_blueberry.color));
+        color_button_cocoa.set_active ((color == color_button_blueberry.color));
+        color_button_slate.set_active ((color == color_button_blueberry.color));
+    }
+
 }

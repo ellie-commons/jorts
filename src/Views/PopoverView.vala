@@ -12,13 +12,11 @@
     public Jorts.MonospaceBox monospace_box;
     public Jorts.ZoomBox font_size_box;
 
-    public string theme;
+    public Jorts.Themes theme;
     public int zoom;
 
         /* THEME SELECTION */
-    public string selected;
-
-    public signal void theme_changed (string selected);
+    public signal void theme_changed (Jorts.Themes selected);
     public signal void zoom_changed (Jorts.Zoomkind zoomkind);
     public signal void monospace_changed (bool if_monospace);
 
@@ -32,10 +30,7 @@
         };
 
         color_button_box = new Jorts.ColorBox ();
-
-
         monospace_box = new Jorts.MonospaceBox ();
-
         font_size_box = new Jorts.ZoomBox ();
 
         /* APPENDS */

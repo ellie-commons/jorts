@@ -67,9 +67,9 @@ namespace Jorts.Utils {
     // Spits out a random theme for a new note
     // If there is the name of a string to skip, just skip it.
     // Having an gee.arraylist defined from the start only causes issues
-    public string random_theme (string? skip_theme = null) {
-        Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (Jorts.Themes.all_string ());
+    public Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
+        Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
+        themes.add_all_array (Jorts.Themes.all ());
 
         if (skip_theme != null) {
             themes.remove(skip_theme);
@@ -177,7 +177,7 @@ Nobody will believe you hehehe ;)
 I hope my little app brings you a lot of joy
 Have a great day!🎇
 """);
-            blank_slate.theme = "BANANA";
+            blank_slate.theme = Jorts.Themes.BANANA;
         }
 
         return blank_slate;

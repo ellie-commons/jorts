@@ -33,9 +33,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private PopoverView popover;
     public TextView textview;
 
-    private string _theme;
-
-    public string theme {
+    private Jorts.Themes _theme;
+    public Jorts.Themes theme {
         get { return _theme;}
         set {on_theme_changed (value);}
     }
@@ -81,7 +80,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
-
         application = app;
 
         var actions = new SimpleActionGroup ();
@@ -122,6 +120,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
         textview = view.textview;
 
+                print ("\npopover");
+
         popover = new Jorts.PopoverView ();
         view.menu_button.popover = popover;
 
@@ -139,12 +139,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-
-        popover.color_button_box.set_toggles (data.theme);
+        popover.color_button_box.color = data.theme;
 
         this.zoom = data.zoom;
         this.monospace = data.monospace;
         this.theme = data.theme;
+
 
 
         /***************************************************/
@@ -157,13 +157,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         editableheader.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (debounce_save);
 
-        // The settings popover tells us a new theme has been chosen!
         popover.theme_changed.connect (on_theme_changed);
-
-        // The settings popover tells us a new zoom has been chosen!
         popover.monospace_changed.connect (on_monospace_changed);
-
-        // The settings popover tells us a new zoom has been chosen!
         popover.zoom_changed.connect (on_zoom_changed);
 
         // Use the color theme of this sticky note when focused
@@ -221,7 +216,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Focus changed!");
 
         if (this.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
+            var stylesheet = "io.elementary.stylesheet." + this.theme.to_string ().ascii_down ();
             gtk_settings.gtk_theme_name = stylesheet;
         }
 
@@ -261,18 +256,19 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     // Switches stylesheet
     // First use appropriate stylesheet, Then switch the theme classes
-    private void on_theme_changed (string new_theme) {
-        debug ("Updating theme to %s".printf (new_theme));
+    private void on_theme_changed (Jorts.Themes new_theme) {
+        debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
-        var stylesheet = "io.elementary.stylesheet." + new_theme.ascii_down ();
+        var stylesheet = "io.elementary.stylesheet." + new_theme.to_string ().ascii_down ();
         this.gtk_settings.gtk_theme_name = stylesheet;
 
-        if (_theme in css_classes) {
-            remove_css_class (_theme);
+        var _theme_str = _theme.to_string ();
+        if (_theme_str in css_classes) {
+            remove_css_class (_theme_str);
         }
 
         _theme = new_theme;
-        add_css_class (new_theme);
+        add_css_class (new_theme.to_string ());
         NoteData.latest_theme = new_theme;
         changed ();
     }

@@ -4,6 +4,7 @@ src/Views/PopoverView.vala
 src/Widgets/ColorBox.vala
 src/Widgets/MonospaceBox.vala
 src/Widgets/ZoomBox.vala
+src/Objects/Themes.vala
 src/Views/PreferencesView.vala
 src/Windows/StickyNoteWindow.vala
 src/Windows/PreferenceWindow.vala
