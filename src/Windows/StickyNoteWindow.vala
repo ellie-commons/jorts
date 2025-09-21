@@ -36,7 +36,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Themes _old_color;
     public Jorts.Themes color {
         get { return popover.color;}
-        set { on_theme_changed (value);}
+        set { popover.color = value; on_theme_changed (value);}
     }
 
     public bool monospace {
@@ -298,6 +298,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     */  
     private void on_theme_changed (Jorts.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
+
+        print (" - " + new_theme.to_nicename ());
 
         var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
         this.gtk_settings.gtk_theme_name = stylesheet;
