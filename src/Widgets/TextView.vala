@@ -5,38 +5,27 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
-/*
-This handles everything view
-
-Notably:
--recognize links to open in fav browser
--recognize local links to open in Files
--Allow a zoom unzoom
-
-Hypertextview is a Granite widget derived from TextView
-
-Formatting code courtesy of Colin Kiama
-https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
-
+/**
+* A textview incorporating detecting links and emails
+* Fairly vanilla but having a definition allows to easily extend it
 */
-
 public class Jorts.TextView : Granite.HyperTextView {
-        public TextView () {
 
-                this.buffer = new Gtk.TextBuffer (null);
-                this.bottom_margin = 12;
-                this.left_margin = 12;
-                this.right_margin = 12;
-                this.top_margin = 6;
-
-                this.set_hexpand (true);
-                this.set_vexpand (true);
-                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+        public string text {
+                owned get {return buffer.text;}
+                set {buffer.text = value;}
         }
 
-        public string get_content () {
-                return this.buffer.text;
+        construct {
+                buffer = new Gtk.TextBuffer (null);
+                bottom_margin = 12;
+                left_margin = 12;
+                right_margin = 12;
+                top_margin = 6;
+
+                set_hexpand (true);
+                set_vexpand (true);
+                set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
         }
 
         public void paste () {

@@ -36,18 +36,23 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private Themes _old_color;
     public Jorts.Themes color {
         get { return popover.color;}
-        set {on_theme_changed (value);}
+        set { on_theme_changed (value);}
     }
 
     public bool monospace {
         get { return popover.monospace;}
-        set {on_monospace_changed (value);}
+        set { on_monospace_changed (value);}
     }
 
     private int _old_zoom;
     public int zoom {
         get { return popover.zoom;}
-        set {do_set_zoom (value);}
+        set { do_set_zoom (value);}
+    }
+
+    public NoteData data {
+        owned get { return packaged ();}
+        set { load_data (value);}
     }
 
 
@@ -130,22 +135,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /****************************************/
         /*              LOADING                 */
         /****************************************/
-        on_scribbly_changed ();
  
-        set_default_size (data.width, data.height);
-        editableheader.text = data.title;
-        title = editableheader.text + _(" - Jorts");
-        view.textview.buffer.text = data.content;
 
-        popover.color = data.theme;
-
-        zoom = data.zoom;
-        _old_zoom = data.zoom;
-
-        monospace = data.monospace;
-
-        color = data.theme;
-        _old_color = data.theme;
+        on_scribbly_changed ();
+        load_data (data);
 
 
         /***************************************************/
@@ -179,10 +172,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
         }
-
-
-
-
     } // END OF MAIN CONSTRUCT
 
 
@@ -240,8 +229,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
     }
 
-
-    // Called when the window is-active property changes
+    // 
+    /**
+    * Changes the stylesheet accents to the notes color
+    * Add or remove the Redacted font if the setting is active
+    */
     private void on_focus_changed () {
         debug ("Focus changed!");
 
@@ -261,9 +253,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
     }
 
-    // Package the note into a NoteData and pass it back
-    // NOTE: We cannot access the buffer if the window is closed, leading to content loss
-    // Hence why we need to constantly save the buffer into this.content when changed
+    /**
+    * Package the note into a NoteData and pass it back
+    */
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
 
@@ -284,8 +276,26 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         return data;
     }
 
-    // Switches stylesheet
-    // First use appropriate stylesheet, Then switch the theme classes
+    /**
+    * Propagate the content of a NoteData into the various UI elements
+    */    
+    private void load_data (NoteData data) {
+        debug ("Loading noteData…");
+
+        set_default_size (data.width, data.height);
+        editableheader.text = data.title;
+        title = editableheader.text + _(" - Jorts");
+        view.textview.buffer.text = data.content;
+
+        zoom = data.zoom;
+        monospace = data.monospace;
+        color = data.theme;
+    }
+
+    /**
+    * Switches stylesheet
+    * First use appropriate stylesheet, Then switch the theme classes
+    */  
     private void on_theme_changed (Jorts.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
@@ -302,8 +312,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         changed ();
     }
 
-
-    // Switches stylesheet
+    /**
+    * Switches the .monospace class depending on the note setting
+    */  
     private void on_monospace_changed (bool monospace) {
         debug ("Updating monospace to %s".printf (monospace.to_string ()));
 
@@ -327,7 +338,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     /*              ZOOM feature                 */
     /*********************************************/
 
-    // Called when a signal from the popover says stuff got changed
+    /**
+    * Called when a signal from the popover says stuff got changed
+    */  
     private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
         debug ("Zoom changed!");
 
@@ -340,7 +353,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         ((Jorts.Application)this.application).manager.save_all.begin ();
     }
 
-    // First check an increase doesnt go above limit
+    /**
+    * Wrapper to check an increase doesnt go above limit
+    */  
     public void zoom_in () {
         if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
             zoom = _old_zoom + 20;
@@ -351,14 +366,18 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         zoom = Jorts.Constants.DEFAULT_ZOOM;
     }
 
-    // First check an increase doesnt go below limit
+    /**
+    * Wrapper to check an increase doesnt go below limit
+    */  
     public void zoom_out () {
         if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
             zoom = _old_zoom - 20;
         }
     }
 
-    // Switch zoom classes, then reflect in the UI and tell the application
+    /**
+    * Switch zoom classes, then reflect in the UI and tell the application
+    */  
     private void do_set_zoom (int zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
