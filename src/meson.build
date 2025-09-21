@@ -3,6 +3,9 @@ sources = files (
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
 
+    'Utils' / 'Random.vala',
+    'Utils' / 'Libportal.vala',
+
     'Services' / 'Constants.vala',
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',

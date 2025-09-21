@@ -23,7 +23,7 @@ public enum Jorts.Zoom {
     SUPERHUGE,
     MEGAHUGE,
     ULTRAHUGE,
-    MASSIVE
+    MASSIVE,
     URMOM;
 
     /*************************************************/
@@ -54,7 +54,7 @@ public enum Jorts.Zoom {
     /*************************************************/
     /**
     * We cannot save Enums in JSON, so this recovers the enum from stored int
-    */    
+    */
     public static Zoom from_int (int wtf_is_this) {
         switch (wtf_is_this) {
             case 20: return ANTSIZED;
