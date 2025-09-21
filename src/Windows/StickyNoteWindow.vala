@@ -33,20 +33,20 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private PopoverView popover;
     public TextView textview;
 
-    private Jorts.Themes _theme;
-    public Jorts.Themes theme {
-        get { return _theme;}
+    private Themes _old_color;
+    public Jorts.Themes color {
+        get { return popover.color;}
         set {on_theme_changed (value);}
     }
 
     public bool monospace {
-        get { return view.textview.monospace;}
+        get { return popover.monospace;}
         set {on_monospace_changed (value);}
     }
 
-    private int _zoom;
+    private int _old_zoom;
     public int zoom {
-        get { return _zoom;}
+        get { return popover.zoom;}
         set {do_set_zoom (value);}
     }
 
@@ -137,12 +137,15 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        popover.color_button_box.color = data.theme;
+        popover.color = data.theme;
 
-        this.zoom = data.zoom;
-        this.monospace = data.monospace;
-        this.theme = data.theme;
+        zoom = data.zoom;
+        _old_zoom = data.zoom;
 
+        monospace = data.monospace;
+
+        color = data.theme;
+        _old_color = data.theme;
 
 
         /***************************************************/
@@ -243,7 +246,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Focus changed!");
 
         if (this.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + this.theme.to_string ().ascii_down ();
+            var stylesheet = "io.elementary.stylesheet." + color.to_string ().ascii_down ();
             gtk_settings.gtk_theme_name = stylesheet;
         }
 
@@ -271,7 +274,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         var data = new NoteData (
                 editableheader.text,
-            this.theme,
+            color,
             content,
             view.textview.monospace,
             this.zoom,
@@ -289,11 +292,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
         this.gtk_settings.gtk_theme_name = stylesheet;
 
-        if (_theme.to_string () in css_classes) {
-            remove_css_class (_theme.to_string ());
+        if (_old_color.to_string () in css_classes) {
+            remove_css_class (_old_color.to_string ());
         }
 
-        _theme = new_theme;
+        _old_color = new_theme;
         add_css_class (new_theme.to_string ());
         NoteData.latest_theme = new_theme;
         changed ();
@@ -314,7 +317,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         }
         view.textview.monospace = monospace;
-        popover.monospace_box.monospace = monospace;
+        popover.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
         changed ();
     }
@@ -339,8 +342,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     // First check an increase doesnt go above limit
     public void zoom_in () {
-        if ((_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-            zoom = _zoom + 20;
+        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+            zoom = _old_zoom + 20;
         }
     }
 
@@ -350,8 +353,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     // First check an increase doesnt go below limit
     public void zoom_out () {
-        if ((_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-            zoom = _zoom - 20;
+        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+            zoom = _old_zoom - 20;
         }
     }
 
@@ -360,14 +363,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
-        this.remove_css_class (Jorts.Utils.zoom_to_class ( _zoom));
-        _zoom = zoom;
-        this.add_css_class (Jorts.Utils.zoom_to_class ( _zoom));
+        this.remove_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
+        _old_zoom = zoom;
+        this.add_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
 
-        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_zoom);
+        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_old_zoom);
 
         // Reflect the number in the popover
-        popover.font_size_box.zoom = zoom;
+        popover.zoom = zoom;
 
         // Keep it for next new notes
         //((Application)this.application).latest_zoom = zoom;

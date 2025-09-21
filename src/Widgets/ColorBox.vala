@@ -85,12 +85,6 @@ public class Jorts.ColorBox : Gtk.Box {
             append (color_button_slate);
     }
 
-    public void set_toggles (string theme) {
-
-    }
-
-
-
     private void on_selected (Jorts.Themes color) {
         _color = color;
         theme_changed (color);
@@ -99,15 +93,15 @@ public class Jorts.ColorBox : Gtk.Box {
     private void set_all_toggles (Jorts.Themes color) {
         _color = color;
         color_button_blueberry.set_active ((color == color_button_blueberry.color));
-        color_button_lime.set_active ((color == color_button_blueberry.color));
-        color_button_mint.set_active ((color == color_button_blueberry.color));
-        color_button_banana.set_active ((color == color_button_blueberry.color));
-        color_button_strawberry.set_active ((color == color_button_blueberry.color));
-        color_button_orange.set_active ((color == color_button_blueberry.color));
-        color_button_bubblegum.set_active ((color == color_button_blueberry.color));
-        color_button_grape.set_active ((color == color_button_blueberry.color));
-        color_button_cocoa.set_active ((color == color_button_blueberry.color));
-        color_button_slate.set_active ((color == color_button_blueberry.color));
+        color_button_lime.set_active ((color == color_button_lime.color));
+        color_button_mint.set_active ((color == color_button_mint.color));
+        color_button_banana.set_active ((color == color_button_banana.color));
+        color_button_strawberry.set_active ((color == color_button_strawberry.color));
+        color_button_orange.set_active ((color == color_button_orange.color));
+        color_button_bubblegum.set_active ((color == color_button_bubblegum.color));
+        color_button_grape.set_active ((color == color_button_grape.color));
+        color_button_cocoa.set_active ((color == color_button_cocoa.color));
+        color_button_slate.set_active ((color == color_button_slate.color));
     }
 
 }
