@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users.noreply.github.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-06-02 19:23+0300\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
@@ -170,8 +170,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M για να ανοίξετε τις ρυθμίσεις σημειώσεων τώρα"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Νέες ρυθμίσεις: Το στοιχειώδες λειτουργικό σύστημα το έχει αυτό OOTB, αλλά όχι άλλες DEs."
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Ορισμένα στοιχεία του UI εμφανίζονται αφού εμφανιστούν, για μια κομψή ατμόσφαιρα"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -558,6 +558,9 @@ msgstr "Τα email και οι σύνδεσμοι μπορούν να πατηθ
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Το κείμενο υποστηρίζει αναίρεση, επανάληψη και μπορείτε να χρησιμοποιήσετε emojis :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Νέες ρυθμίσεις: Το στοιχειώδες λειτουργικό σύστημα το έχει αυτό OOTB, αλλά όχι άλλες DEs."
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Βοήθημα αυτοκόλλητων σημειώσεων"

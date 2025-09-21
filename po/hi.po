@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,60 +33,19 @@ msgstr "इमोजी डालें"
 msgid "Preferences for this sticky note"
 msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr "ब्लूबेरी"
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "चूना"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "टकसाल"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr "केला"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr "स्ट्रॉबेरी"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr "नारंगी"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr "बबलगम"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "अंगूर"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr "कोको"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr "स्लेट"
-
-#: src/Widgets/MonospaceBox.vala:27
+#: src/Widgets/MonospaceBox.vala:31
 msgid "Default"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/MonospaceBox.vala:32
 msgid "Click to use default text font"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/MonospaceBox.vala:37
 msgid "Monospace"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/MonospaceBox.vala:38
 msgid "Click to use monospaced font"
 msgstr ""
 
@@ -108,6 +67,42 @@ msgstr "डिफ़ॉल्ट ज़ूम स्तर"
 #: src/Widgets/ZoomBox.vala:52
 msgid "Zoom in"
 msgstr "ज़ूम इन"
+
+#: src/Objects/Themes.vala:58 src/Objects/Themes.vala:68
+msgid "Blueberry"
+msgstr "ब्लूबेरी"
+
+#: src/Objects/Themes.vala:59
+msgid "Mint"
+msgstr "टकसाल"
+
+#: src/Objects/Themes.vala:60
+msgid "Lime"
+msgstr "चूना"
+
+#: src/Objects/Themes.vala:61
+msgid "Banana"
+msgstr "केला"
+
+#: src/Objects/Themes.vala:62
+msgid "Orange"
+msgstr "नारंगी"
+
+#: src/Objects/Themes.vala:63
+msgid "Strawberry"
+msgstr "स्ट्रॉबेरी"
+
+#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:67
+msgid "Slate"
+msgstr "स्लेट"
+
+#: src/Objects/Themes.vala:65
+msgid "Grape"
+msgstr "अंगूर"
+
+#: src/Objects/Themes.vala:66
+msgid "Cocoa"
+msgstr "कोको"
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -171,12 +166,12 @@ msgstr ""
 msgid "Close preferences"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:92 src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:97 src/Windows/StickyNoteWindow.vala:212
+#: src/Windows/StickyNoteWindow.vala:287 src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:112
+#: src/Windows/StickyNoteWindow.vala:117
 msgid "Click to edit the title"
 msgstr ""
 
@@ -193,237 +188,221 @@ msgstr "इस चिपचिपे नोट के लिए वरीयत�
 msgid "Preferences"
 msgstr ""
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr ""
-
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr ""
-
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr ""
-
-#: src/Application.vala:177
-msgid "Reset all settings"
-msgstr ""
-
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:90
 msgid "All my very best friends"
 msgstr "मेरे सभी सबसे अच्छे दोस्त"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:91
 msgid "My super good secret recipe"
 msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:92
 msgid "My todo list"
 msgstr "मेरी टोडो सूची"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:93
 msgid "Super secret to not tell anyone"
 msgstr "किसी को नहीं बताने के लिए सुपर सीक्रेट"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:94
 msgid "My grocery list"
 msgstr "मेरी किराने की सूची"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:95
 msgid "Random shower thoughts"
 msgstr "यादृच्छिक शावर विचार"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:96
 msgid "My fav fanfics"
 msgstr "मेरे फेव फैनफिक्स"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:97
 msgid "My fav dinosaurs"
 msgstr "मेरे फेव डायनासोर"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:98
 msgid "My evil mastermind plan"
 msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:99
 msgid "What made me smile today"
 msgstr "आज मुझे क्या मुस्कुरा दिया"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:100
 msgid "Hello world!"
 msgstr "हैलो वर्ल्ड!"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:101
 msgid "New sticky, new me"
 msgstr "नया चिपचिपा, नया मुझे"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:102
 msgid "Hidden pirate treasure"
 msgstr "छिपा हुआ समुद्री डाकू खजाना"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:103
 msgid "To not forget, ever"
 msgstr "कभी नहीं भूलना, कभी भी"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:104
 msgid "Dear Diary,"
 msgstr "प्रिय डायरी,"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:105
 msgid "Have a nice day! :)"
 msgstr "आपका दिन शुभ हो! "
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:106
 msgid "My meds schedule"
 msgstr "मेरे मेड्स शेड्यूल"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:107
 msgid "Household chores"
 msgstr "घरेलू काम"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:108
 msgid "Ode to my cat"
 msgstr "मेरी बिल्ली के लिए ode"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:109
 msgid "My dogs favourite toys"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:110
 msgid "How cool my birds are"
 msgstr "मेरे पक्षी कितने शांत हैं"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:111
 msgid "Suspects in the Last Cookie affair"
 msgstr "अंतिम कुकी चक्कर में संदिग्ध"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:112
 msgid "Words my parrots know"
 msgstr "शब्द मेरे तोते जानते हैं"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:113
 msgid "Cool and funny compliments to give out"
 msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:114
 msgid "Ok, listen here,"
 msgstr "ठीक है, यहाँ सुनो,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:115
 msgid "My dream Pokemon team"
 msgstr "मेरा ड्रीम पोकेमॉन टीम"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:116
 msgid "My little notes"
 msgstr "मेरे छोटे नोट"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:117
 msgid "Surprise gift list"
 msgstr "आश्चर्य उपहार सूची"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:118
 msgid "Brainstorming notes"
 msgstr "विचार मंथन नोट्स"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:119
 msgid "To bring to the party"
 msgstr "पार्टी में लाने के लिए"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:120
 msgid "My amazing mixtape"
 msgstr "मेरा अद्भुत मिक्सटेप"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:121
 msgid "Napkin scribblys"
 msgstr "नैपकिन स्क्रिबल्स"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:122
 msgid "My fav songs to sing along"
 msgstr "मेरे fav गाने के साथ गाने के लिए"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:123
 msgid "When to water which plant"
 msgstr "कब पानी के लिए पानी"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:124
 msgid "Top 10 anime betrayals"
 msgstr "शीर्ष 10 एनीमे विश्वासघात"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:125
 msgid "Amazing ascii art!"
 msgstr ""
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:126
 msgid "For the barbecue"
 msgstr ""
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:127
 #, fuzzy
 msgid "My favourite bands"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:128
 msgid "Best ingredients for salad"
 msgstr ""
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:129
 msgid "Books to read"
 msgstr ""
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:130
 msgid "Places to visit"
 msgstr ""
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:131
 msgid "Hobbies to try out"
 msgstr ""
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:132
 msgid "Who would win against Goku"
 msgstr ""
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:133
 msgid "To plant in the garden"
 msgstr ""
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:134
 msgid "Meals this week"
 msgstr ""
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:135
 msgid "Everyone's pizza order"
 msgstr ""
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:136
 msgid "Today selfcare to do"
 msgstr ""
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:137
 msgid "Important affirmations to remember"
 msgstr ""
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:138
 msgid "The coolest linux apps"
 msgstr ""
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:139
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Services/Utils.vala:138
+#: src/Services/Utils.vala:140
 msgid "My funniest jokes"
 msgstr ""
 
-#: src/Services/Utils.vala:139
+#: src/Services/Utils.vala:141
 msgid "The perfect breakfast has..."
 msgstr ""
 
-#: src/Services/Utils.vala:170
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Services/Utils.vala:172
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -433,6 +412,9 @@ msgid ""
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
 msgstr ""
+
+#~ msgid "Bubblegum"
+#~ msgstr "बबलगम"
 
 #~ msgid "Edit title"
 #~ msgstr "शीर्षक संपादित करें"

@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -168,8 +168,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M pour ouvrir les paramètres de la note maintenant"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Nouveaux paramètres : Polices OpenDyslexia. elementary OS dispose de ces polices OOTB, mais pas d'autres DE."
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Certains éléments de l'interface utilisateur s'affichent après avoir été montrés, ce qui donne une impression d'élégance."
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -545,6 +545,9 @@ msgstr "Les e-mails et les liens sont cliquables ! Ctrl+Clic pour ouvrir dans le
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Le texte permet d'annuler, de refaire et d'utiliser des émojis :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Nouveaux paramètres : Polices OpenDyslexia. elementary OS dispose de ces polices OOTB, mais pas d'autres DE."
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Utilitaire de notes autocollantes"

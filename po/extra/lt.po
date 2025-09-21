@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -173,8 +173,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M, kad atidarytumėte pastabų nustatymus dabar"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Nauji nustatymai: elementari OS turi tai OOTB, bet ne kiti DE"
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Kai kurie vartotojo sąsajos elementai rodomi po to, kai yra rodomi, kad būtų sukurta elegantiška atmosfera."
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -558,6 +558,9 @@ msgstr "El. paštą ir nuorodas galima spustelėti! Ctrl+paspauskite, jei norite
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekstas palaiko atšaukimo ir pakartotinio atšaukimo funkcijas, be to, galite naudoti šypsenėles :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Nauji nustatymai: elementari OS turi tai OOTB, bet ne kiti DE"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Lipnių užrašų įrankis"

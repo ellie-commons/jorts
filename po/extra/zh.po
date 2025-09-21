@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -174,8 +174,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M 立即打开音符设置"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "新设置：OpenDyslexia（开放式阅读障碍）字体。"
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "一些用户界面元素在显示后会显示出来，营造出时尚的氛围"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -562,6 +562,9 @@ msgstr "电子邮件和链接可点击！Ctrl+ 点击可在邮件或浏览器中
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "文本支持撤消、重做，还可以使用表情符号：)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "新设置：OpenDyslexia（开放式阅读障碍）字体。"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "便条实用程序"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,60 +33,19 @@ msgstr "Ipasok ang emoji"
 msgid "Preferences for this sticky note"
 msgstr "Mga kagustuhan para sa malagkit na tala na ito"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "dayap"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "mint"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "ubas"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr ""
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr ""
-
-#: src/Widgets/MonospaceBox.vala:27
+#: src/Widgets/MonospaceBox.vala:31
 msgid "Default"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/MonospaceBox.vala:32
 msgid "Click to use default text font"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/MonospaceBox.vala:37
 msgid "Monospace"
 msgstr ""
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/MonospaceBox.vala:38
 msgid "Click to use monospaced font"
 msgstr ""
 
@@ -108,6 +67,42 @@ msgstr "Default na antas ng zoom"
 #: src/Widgets/ZoomBox.vala:52
 msgid "Zoom in"
 msgstr "Mag -zoom in"
+
+#: src/Objects/Themes.vala:58 src/Objects/Themes.vala:68
+msgid "Blueberry"
+msgstr ""
+
+#: src/Objects/Themes.vala:59
+msgid "Mint"
+msgstr "mint"
+
+#: src/Objects/Themes.vala:60
+msgid "Lime"
+msgstr "dayap"
+
+#: src/Objects/Themes.vala:61
+msgid "Banana"
+msgstr ""
+
+#: src/Objects/Themes.vala:62
+msgid "Orange"
+msgstr ""
+
+#: src/Objects/Themes.vala:63
+msgid "Strawberry"
+msgstr ""
+
+#: src/Objects/Themes.vala:64 src/Objects/Themes.vala:67
+msgid "Slate"
+msgstr ""
+
+#: src/Objects/Themes.vala:65
+msgid "Grape"
+msgstr "ubas"
+
+#: src/Objects/Themes.vala:66
+msgid "Cocoa"
+msgstr ""
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -171,12 +166,12 @@ msgstr ""
 msgid "Close preferences"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:92 src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:97 src/Windows/StickyNoteWindow.vala:212
+#: src/Windows/StickyNoteWindow.vala:287 src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:112
+#: src/Windows/StickyNoteWindow.vala:117
 msgid "Click to edit the title"
 msgstr ""
 
@@ -193,237 +188,221 @@ msgstr "Mga kagustuhan para sa malagkit na tala na ito"
 msgid "Preferences"
 msgstr ""
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr ""
-
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr ""
-
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr ""
-
-#: src/Application.vala:177
-msgid "Reset all settings"
-msgstr ""
-
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:90
 msgid "All my very best friends"
 msgstr "Lahat ng aking matalik na kaibigan"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:91
 msgid "My super good secret recipe"
 msgstr "Ang aking sobrang magandang lihim na recipe"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:92
 msgid "My todo list"
 msgstr "Ang aking listahan ng todo"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:93
 msgid "Super secret to not tell anyone"
 msgstr "Super lihim upang hindi sabihin sa sinuman"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:94
 msgid "My grocery list"
 msgstr "Listahan ng aking grocery"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:95
 msgid "Random shower thoughts"
 msgstr "Mga saloobin sa random na shower"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:96
 msgid "My fav fanfics"
 msgstr "Ang aking fav fanfics"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:97
 msgid "My fav dinosaurs"
 msgstr "Ang aking mga fav dinosaur"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:98
 msgid "My evil mastermind plan"
 msgstr "Ang aking masamang plano sa mastermind"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:99
 msgid "What made me smile today"
 msgstr "Ano ang nagpangiti sa akin ngayon"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:100
 msgid "Hello world!"
 msgstr "Hello World!"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:101
 msgid "New sticky, new me"
 msgstr "Bagong malagkit, bago ako"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:102
 msgid "Hidden pirate treasure"
 msgstr "Nakatagong Kayamanan ng Pirate"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:103
 msgid "To not forget, ever"
 msgstr "Upang huwag kalimutan, kailanman"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:104
 msgid "Dear Diary,"
 msgstr "mahal na talaarawan,"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:105
 msgid "Have a nice day! :)"
 msgstr "Magandang araw! "
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:106
 msgid "My meds schedule"
 msgstr "Ang iskedyul ng aking meds"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:107
 msgid "Household chores"
 msgstr "Mga gawaing bahay"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:108
 msgid "Ode to my cat"
 msgstr "Ode sa aking pusa"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:109
 msgid "My dogs favourite toys"
 msgstr "Ang aking mga aso paboritong laruan"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:110
 msgid "How cool my birds are"
 msgstr "Gaano katindi ang aking mga ibon"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:111
 msgid "Suspects in the Last Cookie affair"
 msgstr "Ang mga suspek sa huling pag -iibigan ng cookie"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:112
 msgid "Words my parrots know"
 msgstr "Mga salitang alam ng aking mga loro"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:113
 msgid "Cool and funny compliments to give out"
 msgstr "Malamig at nakakatawang papuri na ibigay"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:114
 msgid "Ok, listen here,"
 msgstr "Ok, makinig dito,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:115
 msgid "My dream Pokemon team"
 msgstr "Ang Aking Pangarap na Pokemon Team"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:116
 msgid "My little notes"
 msgstr "Ang aking maliit na tala"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:117
 msgid "Surprise gift list"
 msgstr "Listahan ng Regalo ng Sorpresa"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:118
 msgid "Brainstorming notes"
 msgstr "Mga tala sa brainstorming"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:119
 msgid "To bring to the party"
 msgstr "Upang dalhin sa partido"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:120
 msgid "My amazing mixtape"
 msgstr "Ang aking kamangha -manghang mixtape"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:121
 msgid "Napkin scribblys"
 msgstr "Napkin scribblys"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:122
 msgid "My fav songs to sing along"
 msgstr "Ang aking mga kanta ng fav upang kumanta"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:123
 msgid "When to water which plant"
 msgstr "Kailan sa tubig na halaman"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:124
 msgid "Top 10 anime betrayals"
 msgstr "Nangungunang 10 Betrayals Betrayals"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:125
 msgid "Amazing ascii art!"
 msgstr ""
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:126
 msgid "For the barbecue"
 msgstr ""
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:127
 #, fuzzy
 msgid "My favourite bands"
 msgstr "Ang aking mga aso paboritong laruan"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:128
 msgid "Best ingredients for salad"
 msgstr ""
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:129
 msgid "Books to read"
 msgstr ""
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:130
 msgid "Places to visit"
 msgstr ""
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:131
 msgid "Hobbies to try out"
 msgstr ""
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:132
 msgid "Who would win against Goku"
 msgstr ""
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:133
 msgid "To plant in the garden"
 msgstr ""
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:134
 msgid "Meals this week"
 msgstr ""
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:135
 msgid "Everyone's pizza order"
 msgstr ""
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:136
 msgid "Today selfcare to do"
 msgstr ""
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:137
 msgid "Important affirmations to remember"
 msgstr ""
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:138
 msgid "The coolest linux apps"
 msgstr ""
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:139
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Ang aking mga aso paboritong laruan"
 
-#: src/Services/Utils.vala:138
+#: src/Services/Utils.vala:140
 msgid "My funniest jokes"
 msgstr ""
 
-#: src/Services/Utils.vala:139
+#: src/Services/Utils.vala:141
 msgid "The perfect breakfast has..."
 msgstr ""
 
-#: src/Services/Utils.vala:170
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Services/Utils.vala:172
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"

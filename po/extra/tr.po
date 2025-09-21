@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -173,8 +173,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Not ayarlarını şimdi açmak için Ctrl+M"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Yeni ayarlar: OpenDyslexia yazı tipleri. temel işletim sistemi OOTB'ye sahip, ancak diğer DE'ler değil"
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Şık bir hava için bazı kullanıcı arayüzü öğeleri gösterildikten sonra ortaya çıkıyor"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -557,6 +557,9 @@ msgstr "E-posta ve bağlantılar tıklanabilir! Posta veya tarayıcıda açmak i
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Metin geri almayı, yinelemeyi destekler ve emojileri kullanabilirsiniz :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Yeni ayarlar: OpenDyslexia yazı tipleri. temel işletim sistemi OOTB'ye sahip, ancak diğer DE'ler değil"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Yapışkan notlar yardımcı programı"

@@ -1,4 +1,3 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,7 +7,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:20+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -28,60 +27,19 @@ msgstr "Insérer un émoji"
 msgid "Preferences for this sticky note"
 msgstr "Préférences pour cette note autocollante"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr "Myrtille"
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "Citron vert"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "Menthe"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr "Banane"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr "Fraise"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr "Orange"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr "Chewing-gum"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "Raisin"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr "Cacao"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr "Ardoise"
-
-#: src/Widgets/MonospaceBox.vala:27
+#: src/Widgets/MonospaceBox.vala:31
 msgid "Default"
 msgstr "Standard"
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/MonospaceBox.vala:32
 msgid "Click to use default text font"
 msgstr "Cliquez pour utiliser la police de texte par défaut"
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/MonospaceBox.vala:37
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/MonospaceBox.vala:38
 msgid "Click to use monospaced font"
 msgstr "Cliquez pour utiliser une police monospaciale"
 
@@ -103,6 +61,44 @@ msgstr "Zoom par défaut"
 #: src/Widgets/ZoomBox.vala:52
 msgid "Zoom in"
 msgstr "Zoom avant"
+
+#: src/Objects/Themes.vala:58
+#: src/Objects/Themes.vala:68
+msgid "Blueberry"
+msgstr "Myrtille"
+
+#: src/Objects/Themes.vala:59
+msgid "Mint"
+msgstr "Menthe"
+
+#: src/Objects/Themes.vala:60
+msgid "Lime"
+msgstr "Citron vert"
+
+#: src/Objects/Themes.vala:61
+msgid "Banana"
+msgstr "Banane"
+
+#: src/Objects/Themes.vala:62
+msgid "Orange"
+msgstr "Orange"
+
+#: src/Objects/Themes.vala:63
+msgid "Strawberry"
+msgstr "Fraise"
+
+#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:67
+msgid "Slate"
+msgstr "Ardoise"
+
+#: src/Objects/Themes.vala:65
+msgid "Grape"
+msgstr "Raisin"
+
+#: src/Objects/Themes.vala:66
+msgid "Cocoa"
+msgstr "Cacao"
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -162,14 +158,14 @@ msgstr "Fermer"
 msgid "Close preferences"
 msgstr "Fermer les préférences"
 
-#: src/Windows/StickyNoteWindow.vala:92
-#: src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/StickyNoteWindow.vala:97
+#: src/Windows/StickyNoteWindow.vala:212
+#: src/Windows/StickyNoteWindow.vala:287
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Jorts"
 
-#: src/Windows/StickyNoteWindow.vala:112
+#: src/Windows/StickyNoteWindow.vala:117
 msgid "Click to edit the title"
 msgstr "Cliquez pour modifier le titre"
 
@@ -184,235 +180,219 @@ msgstr "Préférences pour vos Jorts"
 msgid "Preferences"
 msgstr "Préférences"
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr "Créer une nouvelle note"
-
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr "Créer une note puis la coller à partir du presse-papiers"
-
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr "Afficher les préférences"
-
-#: src/Application.vala:177
-msgid "Reset all settings"
-msgstr "Réinitialiser les paramètres"
-
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:90
 msgid "All my very best friends"
 msgstr "Tous mes meilleurs amis"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:91
 msgid "My super good secret recipe"
 msgstr "Ma super bonne recette secrète"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:92
 msgid "My todo list"
 msgstr "Ma liste de choses à faire"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:93
 msgid "Super secret to not tell anyone"
 msgstr "Un super secret à ne révéler à personne"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:94
 msgid "My grocery list"
 msgstr "Ma liste de courses"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:95
 msgid "Random shower thoughts"
 msgstr "Réflexions aléatoires sous la douche"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:96
 msgid "My fav fanfics"
 msgstr "Mes fanfics préférées"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:97
 msgid "My fav dinosaurs"
 msgstr "Mes dinosaures préférés"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:98
 msgid "My evil mastermind plan"
 msgstr "Mon plan diabolique"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:99
 msgid "What made me smile today"
 msgstr "Ce qui m'a fait sourire aujourd'hui"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:100
 msgid "Hello world!"
 msgstr "Bonjour à tous !"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:101
 msgid "New sticky, new me"
 msgstr "Nouveau collant, nouveau moi"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:102
 msgid "Hidden pirate treasure"
 msgstr "Trésor de pirates caché"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:103
 msgid "To not forget, ever"
 msgstr "Pour ne jamais oublier"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:104
 msgid "Dear Diary,"
 msgstr "Cher journal,"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:105
 msgid "Have a nice day! :)"
 msgstr "Bonne journée ! :)"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:106
 msgid "My meds schedule"
 msgstr "Mon calendrier de prise de médicaments"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:107
 msgid "Household chores"
 msgstr "Tâches ménagères"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:108
 msgid "Ode to my cat"
 msgstr "Ode à mon chat"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:109
 msgid "My dogs favourite toys"
 msgstr "Les jouets préférés de mes chiens"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:110
 msgid "How cool my birds are"
 msgstr "Comme mes oiseaux sont cool"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:111
 msgid "Suspects in the Last Cookie affair"
 msgstr "Suspects dans l'affaire du dernier biscuit"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:112
 msgid "Words my parrots know"
 msgstr "Des mots que mes perroquets connaissent"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:113
 msgid "Cool and funny compliments to give out"
 msgstr "Des compliments sympas et amusants à distribuer"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:114
 msgid "Ok, listen here,"
 msgstr "Ok, écoutez ici,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:115
 msgid "My dream Pokemon team"
 msgstr "L'équipe Pokemon de mes rêves"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:116
 msgid "My little notes"
 msgstr "Mes petites notes"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:117
 msgid "Surprise gift list"
 msgstr "Liste de cadeaux surprise"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:118
 msgid "Brainstorming notes"
 msgstr "Notes de brainstorming"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:119
 msgid "To bring to the party"
 msgstr "À apporter à la fête"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:120
 msgid "My amazing mixtape"
 msgstr "Mon incroyable mixtape"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:121
 msgid "Napkin scribblys"
 msgstr "Serviettes de table scribblys"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:122
 msgid "My fav songs to sing along"
 msgstr "Mes chansons préférées à chanter"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:123
 msgid "When to water which plant"
 msgstr "Quand arroser quelle plante"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:124
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 des trahisons dans les animes"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:125
 msgid "Amazing ascii art!"
 msgstr "Un art ascii étonnant !"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:126
 msgid "For the barbecue"
 msgstr "Pour le barbecue"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:127
 msgid "My favourite bands"
 msgstr "Mes groupes préférés"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:128
 msgid "Best ingredients for salad"
 msgstr "Les meilleurs ingrédients pour la salade"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:129
 msgid "Books to read"
 msgstr "Livres à lire"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:130
 msgid "Places to visit"
 msgstr "Lieux à visiter"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:131
 msgid "Hobbies to try out"
 msgstr "Passe-temps à essayer"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:132
 msgid "Who would win against Goku"
 msgstr "Qui gagnerait contre Goku"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:133
 msgid "To plant in the garden"
 msgstr "A planter dans le jardin"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:134
 msgid "Meals this week"
 msgstr "Repas de la semaine"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:135
 msgid "Everyone's pizza order"
 msgstr "La commande de pizza de chacun"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:136
 msgid "Today selfcare to do"
 msgstr "Aujourd'hui, prendre soin de soi"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:137
 msgid "Important affirmations to remember"
 msgstr "Affirmations importantes à retenir"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:138
 msgid "The coolest linux apps"
 msgstr "Les applications linux les plus cool"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:139
 msgid "My favourite dishes"
 msgstr "Mes plats préférés"
 
-#: src/Services/Utils.vala:138
+#: src/Services/Utils.vala:140
 msgid "My funniest jokes"
 msgstr "Mes blagues les plus drôles"
 
-#: src/Services/Utils.vala:139
+#: src/Services/Utils.vala:141
 msgid "The perfect breakfast has..."
 msgstr "Le petit déjeuner parfait a..."
 
-#: src/Services/Utils.vala:170
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Félicitations!🔥"
 
-#: src/Services/Utils.vala:172
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -431,3 +411,18 @@ msgstr ""
 "J'espère que ma petite application vous apportera beaucoup de joie\n"
 "Bonne journée!🎇\n"
 ""
+
+#~ msgid "Bubblegum"
+#~ msgstr "Chewing-gum"
+
+#~ msgid "Create a new note"
+#~ msgstr "Créer une nouvelle note"
+
+#~ msgid "Create a note then paste from clipboard"
+#~ msgstr "Créer une note puis la coller à partir du presse-papiers"
+
+#~ msgid "Show preferences"
+#~ msgstr "Afficher les préférences"
+
+#~ msgid "Reset all settings"
+#~ msgstr "Réinitialiser les paramètres"

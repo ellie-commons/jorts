@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-04-06 17:02+0400\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:20+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Generator: Poedit 3.4.2\n"
@@ -28,61 +28,20 @@ msgstr "Смайлики"
 msgid "Preferences for this sticky note"
 msgstr "Параметры стикера"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr "Черничный"
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "Лаймовый"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "Мятный"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr "Банановый"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr "Клубничный"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr "Апельсиновый"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr "Бубльгум"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "Виноградный"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr "Какао"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr "Каменно-серый"
-
-#: src/Widgets/MonospaceBox.vala:27
+#: src/Widgets/MonospaceBox.vala:31
 #, fuzzy
 msgid "Default"
 msgstr "Уровень масштабирования по умолчанию"
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/MonospaceBox.vala:32
 msgid "Click to use default text font"
 msgstr "Нажмите, чтобы использовать шрифт по умолчанию"
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/MonospaceBox.vala:37
 msgid "Monospace"
 msgstr "Моноспейс"
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/MonospaceBox.vala:38
 msgid "Click to use monospaced font"
 msgstr "Нажмите, чтобы использовать моношрифт"
 
@@ -104,6 +63,44 @@ msgstr "Масштаб по умолчанию"
 #: src/Widgets/ZoomBox.vala:52
 msgid "Zoom in"
 msgstr "Увеличить"
+
+#: src/Objects/Themes.vala:58
+#: src/Objects/Themes.vala:68
+msgid "Blueberry"
+msgstr "Черничный"
+
+#: src/Objects/Themes.vala:59
+msgid "Mint"
+msgstr "Мятный"
+
+#: src/Objects/Themes.vala:60
+msgid "Lime"
+msgstr "Лаймовый"
+
+#: src/Objects/Themes.vala:61
+msgid "Banana"
+msgstr "Банановый"
+
+#: src/Objects/Themes.vala:62
+msgid "Orange"
+msgstr "Апельсиновый"
+
+#: src/Objects/Themes.vala:63
+msgid "Strawberry"
+msgstr "Клубничный"
+
+#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:67
+msgid "Slate"
+msgstr "Каменно-серый"
+
+#: src/Objects/Themes.vala:65
+msgid "Grape"
+msgstr "Виноградный"
+
+#: src/Objects/Themes.vala:66
+msgid "Cocoa"
+msgstr "Какао"
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -163,14 +160,14 @@ msgstr "Закрыть"
 msgid "Close preferences"
 msgstr "Закрыть предпочтения"
 
-#: src/Windows/StickyNoteWindow.vala:92
-#: src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/StickyNoteWindow.vala:97
+#: src/Windows/StickyNoteWindow.vala:212
+#: src/Windows/StickyNoteWindow.vala:287
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Шорты"
 
-#: src/Windows/StickyNoteWindow.vala:112
+#: src/Windows/StickyNoteWindow.vala:117
 msgid "Click to edit the title"
 msgstr "Нажмите, чтобы отредактировать название"
 
@@ -185,238 +182,221 @@ msgstr "Параметры для этого стикера"
 msgid "Preferences"
 msgstr "Предпочтения"
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr "Создайте новую заметку"
-
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr "Создайте заметку, затем вставьте ее из буфера обмена"
-
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr "Показать предпочтения"
-
-#: src/Application.vala:177
-#, fuzzy
-msgid "Reset all settings"
-msgstr "Сброс всех настроек до значений по умолчанию"
-
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:90
 msgid "All my very best friends"
 msgstr "Мои лучшие друзья"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:91
 msgid "My super good secret recipe"
 msgstr "Мой супер вкусный секретный рецепт"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:92
 msgid "My todo list"
 msgstr "Список дел"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:93
 msgid "Super secret to not tell anyone"
 msgstr "Супер секрет, о котором никому нельзя рассказывать"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:94
 msgid "My grocery list"
 msgstr "Список покупок"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:95
 msgid "Random shower thoughts"
 msgstr "Что у меня на душе"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:96
 msgid "My fav fanfics"
 msgstr "Мой любимый фанфик"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:97
 msgid "My fav dinosaurs"
 msgstr "Мои любимые динозавры"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:98
 msgid "My evil mastermind plan"
 msgstr "Мой гениальный план"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:99
 msgid "What made me smile today"
 msgstr "Что меня сегодня порадовало"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:100
 msgid "Hello world!"
 msgstr "Привет, мир!"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:101
 msgid "New sticky, new me"
 msgstr "Новый стикер"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:102
 msgid "Hidden pirate treasure"
 msgstr "Спрятанные пиратские сокровища"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:103
 msgid "To not forget, ever"
 msgstr "Чтобы никогда не забывать"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:104
 msgid "Dear Diary,"
 msgstr "Дорогой дневник,"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:105
 msgid "Have a nice day! :)"
 msgstr "Хорошего дня! :)"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:106
 msgid "My meds schedule"
 msgstr "Расписание приёма лекарств"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:107
 msgid "Household chores"
 msgstr "Домашние обязанности"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:108
 msgid "Ode to my cat"
 msgstr "Ода моему коту"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:109
 msgid "My dogs favourite toys"
 msgstr "Любимые игрушки моей собаки"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:110
 msgid "How cool my birds are"
 msgstr "Какие классные у меня птички"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:111
 msgid "Suspects in the Last Cookie affair"
 msgstr "Кто взял последнюю печеньку"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:112
 msgid "Words my parrots know"
 msgstr "Слова, которые знают мои попугаи"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:113
 msgid "Cool and funny compliments to give out"
 msgstr "Список комплиментов"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:114
 msgid "Ok, listen here,"
 msgstr "Слушай сюда,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:115
 msgid "My dream Pokemon team"
 msgstr "Моя команда Покемонов"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:116
 msgid "My little notes"
 msgstr "Моя маленькая заметка"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:117
 msgid "Surprise gift list"
 msgstr "Список подарков"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:118
 msgid "Brainstorming notes"
 msgstr "Заметки для мозгового штурма"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:119
 msgid "To bring to the party"
 msgstr "Что я надену"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:120
 msgid "My amazing mixtape"
 msgstr "Мой микстейп"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:121
 msgid "Napkin scribblys"
 msgstr "Каракули на салфетках"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:122
 msgid "My fav songs to sing along"
 msgstr "Мои любимые песни"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:123
 msgid "When to water which plant"
 msgstr "Когда поливать какое растение"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:124
 msgid "Top 10 anime betrayals"
 msgstr "Топ-10 предательств в аниме"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:125
 msgid "Amazing ascii art!"
 msgstr "Потрясающая графика в формате ascii!"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:126
 msgid "For the barbecue"
 msgstr "Для барбекю"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:127
 #, fuzzy
 msgid "My favourite bands"
 msgstr "Любимые игрушки моей собаки"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:128
 msgid "Best ingredients for salad"
 msgstr "Лучшие ингредиенты для салата"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:129
 msgid "Books to read"
 msgstr "Книги для чтения"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:130
 msgid "Places to visit"
 msgstr "Места для посещения"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:131
 msgid "Hobbies to try out"
 msgstr "Хобби, которые нужно попробовать"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:132
 msgid "Who would win against Goku"
 msgstr "Кто бы выиграл у Гоку"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:133
 msgid "To plant in the garden"
 msgstr "Посадить в саду"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:134
 msgid "Meals this week"
 msgstr "Питание на этой неделе"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:135
 msgid "Everyone's pizza order"
 msgstr "Заказ пиццы для всех"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:136
 msgid "Today selfcare to do"
 msgstr "Сегодняшний уход за собой"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:137
 msgid "Important affirmations to remember"
 msgstr "Важные аффирмации для запоминания"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:138
 msgid "The coolest linux apps"
 msgstr "Самые крутые приложения для linux"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:139
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Любимые игрушки моей собаки"
 
-#: src/Services/Utils.vala:138
+#: src/Services/Utils.vala:140
 msgid "My funniest jokes"
 msgstr "Мои самые смешные шутки"
 
-#: src/Services/Utils.vala:139
+#: src/Services/Utils.vala:141
 msgid "The perfect breakfast has..."
 msgstr "Идеальный завтрак..."
 
-#: src/Services/Utils.vala:170
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥ВАУ, поздравляю!🔥"
 
-#: src/Services/Utils.vala:172
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -435,6 +415,22 @@ msgstr ""
 "Я надеюсь, что моё маленькое приложение доставит вам много радости\n"
 "Хорошего дня!🎇\n"
 ""
+
+#~ msgid "Bubblegum"
+#~ msgstr "Бубльгум"
+
+#~ msgid "Create a new note"
+#~ msgstr "Создайте новую заметку"
+
+#~ msgid "Create a note then paste from clipboard"
+#~ msgstr "Создайте заметку, затем вставьте ее из буфера обмена"
+
+#~ msgid "Show preferences"
+#~ msgstr "Показать предпочтения"
+
+#, fuzzy
+#~ msgid "Reset all settings"
+#~ msgstr "Сброс всех настроек до значений по умолчанию"
 
 #~ msgid "Reset to Default"
 #~ msgstr "Сброс настроек по умолчанию"

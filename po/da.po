@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:20+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -28,61 +28,20 @@ msgstr "Indsæt emoji"
 msgid "Preferences for this sticky note"
 msgstr "Indstillinger for denne huskeseddel"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr "Blåbær"
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "Kalk"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "Mynte"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr "Banan"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr "Jordbær"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr "Orange"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr "Bubblegum"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "Drue"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr "Kakao"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr "Skifer"
-
-#: src/Widgets/MonospaceBox.vala:27
+#: src/Widgets/MonospaceBox.vala:31
 #, fuzzy
 msgid "Default"
 msgstr "Nulstil til standard"
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/MonospaceBox.vala:32
 msgid "Click to use default text font"
 msgstr "Klik for at bruge standardskrifttype"
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/MonospaceBox.vala:37
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/MonospaceBox.vala:38
 msgid "Click to use monospaced font"
 msgstr "Klik for at bruge monospaced font"
 
@@ -104,6 +63,44 @@ msgstr "Standard zoomniveau"
 #: src/Widgets/ZoomBox.vala:52
 msgid "Zoom in"
 msgstr "Zoom ind"
+
+#: src/Objects/Themes.vala:58
+#: src/Objects/Themes.vala:68
+msgid "Blueberry"
+msgstr "Blåbær"
+
+#: src/Objects/Themes.vala:59
+msgid "Mint"
+msgstr "Mynte"
+
+#: src/Objects/Themes.vala:60
+msgid "Lime"
+msgstr "Kalk"
+
+#: src/Objects/Themes.vala:61
+msgid "Banana"
+msgstr "Banan"
+
+#: src/Objects/Themes.vala:62
+msgid "Orange"
+msgstr "Orange"
+
+#: src/Objects/Themes.vala:63
+msgid "Strawberry"
+msgstr "Jordbær"
+
+#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:67
+msgid "Slate"
+msgstr "Skifer"
+
+#: src/Objects/Themes.vala:65
+msgid "Grape"
+msgstr "Drue"
+
+#: src/Objects/Themes.vala:66
+msgid "Cocoa"
+msgstr "Kakao"
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -165,14 +162,14 @@ msgstr "Luk"
 msgid "Close preferences"
 msgstr "Luk indstillinger"
 
-#: src/Windows/StickyNoteWindow.vala:92
-#: src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/StickyNoteWindow.vala:97
+#: src/Windows/StickyNoteWindow.vala:212
+#: src/Windows/StickyNoteWindow.vala:287
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Jorts"
 
-#: src/Windows/StickyNoteWindow.vala:112
+#: src/Windows/StickyNoteWindow.vala:117
 msgid "Click to edit the title"
 msgstr "Klik for at redigere titlen"
 
@@ -187,238 +184,221 @@ msgstr "Præferencer for dine Jorts"
 msgid "Preferences"
 msgstr "Indstillinger"
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr "Opret en ny note"
-
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr "Opret en note, og indsæt den fra udklipsholderen"
-
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr "Vis præferencer"
-
-#: src/Application.vala:177
-#, fuzzy
-msgid "Reset all settings"
-msgstr "Nulstil alle indstillinger til standard"
-
-#: src/Services/Utils.vala:88
+#: src/Services/Utils.vala:90
 msgid "All my very best friends"
 msgstr "Alle mine allerbedste venner"
 
-#: src/Services/Utils.vala:89
+#: src/Services/Utils.vala:91
 msgid "My super good secret recipe"
 msgstr "Min supergode hemmelige opskrift"
 
-#: src/Services/Utils.vala:90
+#: src/Services/Utils.vala:92
 msgid "My todo list"
 msgstr "Min todo-liste"
 
-#: src/Services/Utils.vala:91
+#: src/Services/Utils.vala:93
 msgid "Super secret to not tell anyone"
 msgstr "Superhemmelighed, som du ikke må fortælle nogen"
 
-#: src/Services/Utils.vala:92
+#: src/Services/Utils.vala:94
 msgid "My grocery list"
 msgstr "Min indkøbsliste"
 
-#: src/Services/Utils.vala:93
+#: src/Services/Utils.vala:95
 msgid "Random shower thoughts"
 msgstr "Tilfældige tanker om brusebad"
 
-#: src/Services/Utils.vala:94
+#: src/Services/Utils.vala:96
 msgid "My fav fanfics"
 msgstr "Mine favorit-fanfics"
 
-#: src/Services/Utils.vala:95
+#: src/Services/Utils.vala:97
 msgid "My fav dinosaurs"
 msgstr "Mine yndlingsdinosaurer"
 
-#: src/Services/Utils.vala:96
+#: src/Services/Utils.vala:98
 msgid "My evil mastermind plan"
 msgstr "Min onde mastermind-plan"
 
-#: src/Services/Utils.vala:97
+#: src/Services/Utils.vala:99
 msgid "What made me smile today"
 msgstr "Hvad fik mig til at smile i dag"
 
-#: src/Services/Utils.vala:98
+#: src/Services/Utils.vala:100
 msgid "Hello world!"
 msgstr "Hej verden!"
 
-#: src/Services/Utils.vala:99
+#: src/Services/Utils.vala:101
 msgid "New sticky, new me"
 msgstr "Nyt klistermærke, ny mig"
 
-#: src/Services/Utils.vala:100
+#: src/Services/Utils.vala:102
 msgid "Hidden pirate treasure"
 msgstr "Skjult piratskat"
 
-#: src/Services/Utils.vala:101
+#: src/Services/Utils.vala:103
 msgid "To not forget, ever"
 msgstr "For ikke at glemme, nogensinde"
 
-#: src/Services/Utils.vala:102
+#: src/Services/Utils.vala:104
 msgid "Dear Diary,"
 msgstr "Kære dagbog,"
 
-#: src/Services/Utils.vala:103
+#: src/Services/Utils.vala:105
 msgid "Have a nice day! :)"
 msgstr "Hav en god dag! :)"
 
-#: src/Services/Utils.vala:104
+#: src/Services/Utils.vala:106
 msgid "My meds schedule"
 msgstr "Min medicinplan"
 
-#: src/Services/Utils.vala:105
+#: src/Services/Utils.vala:107
 msgid "Household chores"
 msgstr "Huslige pligter"
 
-#: src/Services/Utils.vala:106
+#: src/Services/Utils.vala:108
 msgid "Ode to my cat"
 msgstr "Ode til min kat"
 
-#: src/Services/Utils.vala:107
+#: src/Services/Utils.vala:109
 msgid "My dogs favourite toys"
 msgstr "Mine hundes yndlingslegetøj"
 
-#: src/Services/Utils.vala:108
+#: src/Services/Utils.vala:110
 msgid "How cool my birds are"
 msgstr "Hvor seje mine fugle er"
 
-#: src/Services/Utils.vala:109
+#: src/Services/Utils.vala:111
 msgid "Suspects in the Last Cookie affair"
 msgstr "Mistænkte i sagen om den sidste cookie"
 
-#: src/Services/Utils.vala:110
+#: src/Services/Utils.vala:112
 msgid "Words my parrots know"
 msgstr "Ord, som mine papegøjer kender"
 
-#: src/Services/Utils.vala:111
+#: src/Services/Utils.vala:113
 msgid "Cool and funny compliments to give out"
 msgstr "Seje og sjove komplimenter at give"
 
-#: src/Services/Utils.vala:112
+#: src/Services/Utils.vala:114
 msgid "Ok, listen here,"
 msgstr "Okay, hør her,"
 
-#: src/Services/Utils.vala:113
+#: src/Services/Utils.vala:115
 msgid "My dream Pokemon team"
 msgstr "Mit drømme-Pokemon-hold"
 
-#: src/Services/Utils.vala:114
+#: src/Services/Utils.vala:116
 msgid "My little notes"
 msgstr "Mine små noter"
 
-#: src/Services/Utils.vala:115
+#: src/Services/Utils.vala:117
 msgid "Surprise gift list"
 msgstr "Overraskende gaveliste"
 
-#: src/Services/Utils.vala:116
+#: src/Services/Utils.vala:118
 msgid "Brainstorming notes"
 msgstr "Noter til brainstorming"
 
-#: src/Services/Utils.vala:117
+#: src/Services/Utils.vala:119
 msgid "To bring to the party"
 msgstr "At tage med til festen"
 
-#: src/Services/Utils.vala:118
+#: src/Services/Utils.vala:120
 msgid "My amazing mixtape"
 msgstr "Mit fantastiske mixtape"
 
-#: src/Services/Utils.vala:119
+#: src/Services/Utils.vala:121
 msgid "Napkin scribblys"
 msgstr "Servietskriblerier"
 
-#: src/Services/Utils.vala:120
+#: src/Services/Utils.vala:122
 msgid "My fav songs to sing along"
 msgstr "Mine yndlingssange til at synge med på"
 
-#: src/Services/Utils.vala:121
+#: src/Services/Utils.vala:123
 msgid "When to water which plant"
 msgstr "Hvornår skal hvilken plante vandes?"
 
-#: src/Services/Utils.vala:122
+#: src/Services/Utils.vala:124
 msgid "Top 10 anime betrayals"
 msgstr "Top 10 over forræderi i anime"
 
-#: src/Services/Utils.vala:123
+#: src/Services/Utils.vala:125
 msgid "Amazing ascii art!"
 msgstr "Fantastisk ascii-kunst!"
 
-#: src/Services/Utils.vala:124
+#: src/Services/Utils.vala:126
 msgid "For the barbecue"
 msgstr "Til grillen"
 
-#: src/Services/Utils.vala:125
+#: src/Services/Utils.vala:127
 #, fuzzy
 msgid "My favourite bands"
 msgstr "Mine hundes yndlingslegetøj"
 
-#: src/Services/Utils.vala:126
+#: src/Services/Utils.vala:128
 msgid "Best ingredients for salad"
 msgstr "De bedste ingredienser til salat"
 
-#: src/Services/Utils.vala:127
+#: src/Services/Utils.vala:129
 msgid "Books to read"
 msgstr "Bøger at læse"
 
-#: src/Services/Utils.vala:128
+#: src/Services/Utils.vala:130
 msgid "Places to visit"
 msgstr "Steder at besøge"
 
-#: src/Services/Utils.vala:129
+#: src/Services/Utils.vala:131
 msgid "Hobbies to try out"
 msgstr "Hobbyer at prøve af"
 
-#: src/Services/Utils.vala:130
+#: src/Services/Utils.vala:132
 msgid "Who would win against Goku"
 msgstr "Hvem ville vinde over Goku?"
 
-#: src/Services/Utils.vala:131
+#: src/Services/Utils.vala:133
 msgid "To plant in the garden"
 msgstr "At plante i haven"
 
-#: src/Services/Utils.vala:132
+#: src/Services/Utils.vala:134
 msgid "Meals this week"
 msgstr "Måltider i denne uge"
 
-#: src/Services/Utils.vala:133
+#: src/Services/Utils.vala:135
 msgid "Everyone's pizza order"
 msgstr "Alles pizzabestilling"
 
-#: src/Services/Utils.vala:134
+#: src/Services/Utils.vala:136
 msgid "Today selfcare to do"
 msgstr "I dag skal du lave selvpleje"
 
-#: src/Services/Utils.vala:135
+#: src/Services/Utils.vala:137
 msgid "Important affirmations to remember"
 msgstr "Vigtige bekræftelser at huske"
 
-#: src/Services/Utils.vala:136
+#: src/Services/Utils.vala:138
 msgid "The coolest linux apps"
 msgstr "De fedeste linux-apps"
 
-#: src/Services/Utils.vala:137
+#: src/Services/Utils.vala:139
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Mine hundes yndlingslegetøj"
 
-#: src/Services/Utils.vala:138
+#: src/Services/Utils.vala:140
 msgid "My funniest jokes"
 msgstr "Mine sjoveste vittigheder"
 
-#: src/Services/Utils.vala:139
+#: src/Services/Utils.vala:141
 msgid "The perfect breakfast has..."
 msgstr "Den perfekte morgenmad har..."
 
-#: src/Services/Utils.vala:170
+#: src/Services/Utils.vala:176
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Tillykke! 🔥"
 
-#: src/Services/Utils.vala:172
+#: src/Services/Utils.vala:178
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -437,6 +417,22 @@ msgstr ""
 "Jeg håber, at min lille app bringer dig en masse glæde\n"
 "Hav en god dag!🎇\n"
 ""
+
+#~ msgid "Bubblegum"
+#~ msgstr "Bubblegum"
+
+#~ msgid "Create a new note"
+#~ msgstr "Opret en ny note"
+
+#~ msgid "Create a note then paste from clipboard"
+#~ msgstr "Opret en note, og indsæt den fra udklipsholderen"
+
+#~ msgid "Show preferences"
+#~ msgstr "Vis præferencer"
+
+#, fuzzy
+#~ msgid "Reset all settings"
+#~ msgstr "Nulstil alle indstillinger til standard"
 
 #~ msgid "Permissions"
 #~ msgstr "Tilladelser"

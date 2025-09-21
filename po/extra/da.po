@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -173,8 +173,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M for at åbne noteindstillinger nu"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Nye indstillinger: OpenDyslexia-skrifttyper. elementary OS har det OOTB, men ikke andre DE'er"
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Nogle UI-elementer dukker op, når de er blevet vist, for at give en elegant stemning"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -557,6 +557,9 @@ msgstr "E-mail og links er klikbare! Ctrl+Klik for at åbne i mail eller browser
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekst understøtter fortryd, gør om, og du kan bruge emojis :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Nye indstillinger: OpenDyslexia-skrifttyper. elementary OS har det OOTB, men ikke andre DE'er"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Værktøj til huskesedler"

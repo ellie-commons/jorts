@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: Rodolfo Sabino <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-02-18 11:43-03\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-21 19:21+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -175,8 +175,8 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M para abrir as configurações de notas agora"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Novas configurações: Fontes OpenDyslexia. O sistema operacional elementar tem essas fontes no OOTB, mas não em outros DEs"
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Alguns elementos da interface do usuário são exibidos depois de serem mostrados, para dar um toque de elegância"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
@@ -565,6 +565,9 @@ msgstr "E-mails e links são clicáveis! Ctrl+Clique para abrir no correio eletr
 #: data/jorts.metainfo.xml.in:311
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "O texto suporta desfazer, refazer e você pode usar emojis :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Novas configurações: Fontes OpenDyslexia. O sistema operacional elementar tem essas fontes no OOTB, mas não em outros DEs"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Utilitário de notas adesivas"
