@@ -55,6 +55,7 @@ public enum Jorts.Themes {
     */
     public string to_nicename () {
         switch (this) {
+            ///TRANSLATORS: These are the names of the elementary OS colours
             case BLUEBERRY:     return _("Blueberry");
             case MINT:          return _("Mint");
             case LIME:          return _("Lime");

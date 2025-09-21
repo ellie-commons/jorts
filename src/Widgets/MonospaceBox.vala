@@ -8,6 +8,7 @@
 /**
 * Small horizontal box with two toggles
 * Allows user to switch between normal and monospace font
+* Exposes bool monospace, also sends it via signal
 */
 public class Jorts.MonospaceBox : Gtk.Box {
 
@@ -27,6 +28,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
         margin_start = 12;
         margin_end = 12;
 
+        ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Default")),
             tooltip_text = _("Click to use default text font"),
