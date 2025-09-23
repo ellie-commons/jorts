@@ -183,7 +183,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * Show UI elements shorty after the window is shown
     */
     private void delayed_show () {
-        Timeout.add_once (750, () => {    
+        Timeout.add_once (1000, () => {    
             Application.gsettings.bind (
                 "hide-bar",
                 view.actionbar,

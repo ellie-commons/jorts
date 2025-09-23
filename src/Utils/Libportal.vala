@@ -5,16 +5,6 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-/* CONTENT
-randrange does not include upper bound.
-
-random_theme(skip_theme)
-random_title()
-random_emote(skip_emote)
-random_note(skip_theme)
-
-*/
-
 namespace Jorts.Utils {
     public void autostart_remove () {
         Xdp.Portal portal = new Xdp.Portal ();
