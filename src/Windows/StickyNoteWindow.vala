@@ -125,7 +125,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
         textview = view.textview;
 
-        popover = new Jorts.PopoverView ();
+        popover = new Jorts.PopoverView (this);
         view.menu_button.popover = popover;
 
         set_child (view);
