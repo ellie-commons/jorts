@@ -15,9 +15,10 @@ public class Jorts.PopoverView : Gtk.Popover {
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;
 
+    private Themes _old_color = Jorts.Constants.DEFAULT_THEME;
     public Themes color {
-        get {return color_button_box.color;}
-        set {color_button_box.color = value;}
+        get {return _old_color;}
+        set {on_color_changed (value);}
     }
 
     public bool monospace {
@@ -58,13 +59,42 @@ public class Jorts.PopoverView : Gtk.Popover {
 
         child = view;
 
-        color_button_box.theme_changed.connect ((selected) => {theme_changed (selected);});
+        color_button_box.theme_changed.connect (on_color_changed);
         monospace_box.monospace_changed.connect (on_monospace_changed);
         font_size_box.zoom_changed.connect (on_zoom_changed);
     }
 
 
 
+    /**
+    * Switches stylesheet
+    * First use appropriate stylesheet, Then switch the theme classes
+    */  
+    private void on_color_changed (Jorts.Themes new_theme) {
+        debug ("Updating theme to %s".printf (new_theme.to_string ()));
+
+        // Avoid deathloop where the handler calls itself
+        color_button_box.theme_changed.disconnect (on_color_changed);
+
+        // Accent
+        var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
+        parent_window.gtk_settings.gtk_theme_name = stylesheet;
+
+        // Add remove class
+        if (_old_color.to_string () in parent_window.css_classes) {
+            parent_window.remove_css_class (_old_color.to_string ());
+        }
+        parent_window.add_css_class (new_theme.to_string ());
+
+        // Propagate values
+        _old_color = new_theme;
+        color_button_box.color = new_theme;
+        NoteData.latest_theme = new_theme;
+
+        // Cleanup
+        ((Jorts.Application)parent_window.application).manager.save_all ();
+        color_button_box.theme_changed.connect (on_color_changed);
+    }
 
     /**
     * Switches the .monospace class depending on the note setting
@@ -84,7 +114,8 @@ public class Jorts.PopoverView : Gtk.Popover {
         parent_window.view.textview.monospace = monospace;
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
-        parent_window.changed ();
+
+                ((Jorts.Application)parent_window.application).manager.save_all ();
     }
 
 
@@ -104,7 +135,7 @@ public class Jorts.PopoverView : Gtk.Popover {
             case Zoomkind.ZOOM_OUT:             zoom_out (); break;
             default:                            zoom_default (); break;
         }
-        ((Jorts.Application)parent_window.application).manager.save_all.begin ();
+        ((Jorts.Application)parent_window.application).manager.save_all ();
     }
 
     /**

@@ -74,12 +74,12 @@ public class Jorts.NoteManager : Object {
             random_data = Jorts.Utils.golden_sticky (random_data);
             note = new StickyNoteWindow (application, random_data);
         }
-
+        
         /* LETSGO */
         open_notes.add (note);
         note.show ();
         note.present ();
-        note.changed.connect (save_all);
+        save_all ();
 
 	}
 
@@ -120,16 +120,15 @@ public class Jorts.NoteManager : Object {
 
         open_notes.remove (note);
         note.close ();
-        save_all.begin ();
+        save_all ();
 	}
 
     /*************************************************/
     /**
     * Cue to immediately write from the active list to the storage
     */
-    public async void save_all () {
+    public void save_all () {
         debug ("[MANAGER] Save the stickies!");
-
         var array = new Json.Array ();
 
         foreach (Jorts.StickyNoteWindow note in open_notes) {

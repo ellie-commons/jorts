@@ -33,12 +33,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private PopoverView popover;
     public TextView textview;
 
-    private Themes _old_color;
-    public Jorts.Themes color {
-        get { return popover.color;}
-        set { popover.color = value; on_theme_changed (value);}
-    }
-
     public NoteData data {
         owned get { return packaged ();}
         set { load_data (value);}
@@ -46,9 +40,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
 
     private static uint debounce_timer_id;
-
-    // Connected to by the NoteManager to know it is time to save
-    public signal void changed ();
 
     private const string ACTION_PREFIX = "app.";
     private const string ACTION_DELETE = "action_delete";
@@ -140,8 +131,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         editableheader.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (debounce_save);
 
-        popover.theme_changed.connect (on_theme_changed);
-
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
 
@@ -190,7 +179,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
             debounce_timer_id = 0;
-            changed ();
+            ((Jorts.Application)application).manager.save_all ();
             return GLib.Source.REMOVE;
         });
     }
@@ -225,7 +214,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Focus changed!");
 
         if (this.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + color.to_string ().ascii_down ();
+            var stylesheet = "io.elementary.stylesheet." + popover.color.to_string ().ascii_down ();
             gtk_settings.gtk_theme_name = stylesheet;
         }
 
@@ -253,12 +242,14 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         var data = new NoteData (
                 editableheader.text,
-            color,
+            popover.color,
             content,
-            view.textview.monospace,
+            popover.monospace,
             popover.zoom,
                 width,
                 height);
+
+                print (" " + popover.color.to_string ());
 
         return data;
     }
@@ -276,29 +267,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         popover.zoom = data.zoom;
         popover.monospace = data.monospace;
-        color = data.theme;
-    }
-
-    /**
-    * Switches stylesheet
-    * First use appropriate stylesheet, Then switch the theme classes
-    */  
-    private void on_theme_changed (Jorts.Themes new_theme) {
-        debug ("Updating theme to %s".printf (new_theme.to_string ()));
-
-        print (" - " + new_theme.to_nicename ());
-
-        var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
-        this.gtk_settings.gtk_theme_name = stylesheet;
-
-        if (_old_color.to_string () in css_classes) {
-            remove_css_class (_old_color.to_string ());
-        }
-
-        _old_color = new_theme;
-        add_css_class (new_theme.to_string ());
-        NoteData.latest_theme = new_theme;
-        changed ();
+        popover.color = data.theme;
     }
 
     private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
