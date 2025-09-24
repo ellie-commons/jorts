@@ -361,11 +361,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public void zoom_in () {
         if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
             zoom = _old_zoom + 20;
+        } else {
+            Gdk.Display.get_default ().beep ();
         }
     }
 
     public void zoom_default () {
-        zoom = Jorts.Constants.DEFAULT_ZOOM;
+        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
+            zoom = Jorts.Constants.DEFAULT_ZOOM;
+        } else {
+            Gdk.Display.get_default ().beep ();
+        }
     }
 
     /**
@@ -374,6 +380,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public void zoom_out () {
         if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
             zoom = _old_zoom - 20;
+        } else {
+            Gdk.Display.get_default ().beep ();
         }
     }
 
