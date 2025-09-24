@@ -348,9 +348,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         switch (zoomkind) {
             case Zoomkind.ZOOM_IN:              zoom_in (); break;
-            case Zoomkind.DEFAULT_ZOOM:         zoom = 100; break;
+            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;
             case Zoomkind.ZOOM_OUT:             zoom_out (); break;
-            default:                            zoom = 100; break;
+            default:                            zoom_default (); break;
         }
         ((Jorts.Application)this.application).manager.save_all.begin ();
     }
