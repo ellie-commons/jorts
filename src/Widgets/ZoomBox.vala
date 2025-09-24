@@ -13,9 +13,9 @@
 public class Jorts.ZoomBox : Gtk.Box {
 
     private Gtk.Button zoom_default_button;
-    private int _zoom = 100;
+    private uint8 _zoom = 100;
 
-    public int zoom {
+    public uint8 zoom {
         get { return _zoom;}
         set {
             _zoom = value;

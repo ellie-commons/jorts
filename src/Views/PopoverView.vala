@@ -25,7 +25,7 @@ public class Jorts.PopoverView : Gtk.Popover {
         set {monospace_box.monospace = value;}
     }
 
-    public int zoom {
+    public uint8 zoom {
         get {return font_size_box.zoom;}
         set {font_size_box.zoom = value;}
     }

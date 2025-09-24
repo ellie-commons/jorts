@@ -19,7 +19,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public string zoom_to_class (int zoom) {
+    public string zoom_to_class (uint8 zoom) {
         switch (zoom) {
             case 20: return "antsized";
             case 40: return "muchsmaller";
@@ -33,16 +33,16 @@ namespace Jorts.Utils {
             case 200: return "huge";
             case 220: return "superhuge";
             case 240: return "megahuge";
-            case 260: return "ultrahuge";
-            case 280: return "massive";
-            case 300: return "urmom";
+            //  case 260: return "ultrahuge";
+            //  case 280: return "massive";
+            //  case 300: return "urmom";
             default: return "normal_zoom";
         }
     }
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public int zoom_to_UIsize (int zoom) {
+    public uint8 zoom_to_UIsize (uint8 zoom) {
         switch (zoom) {
             case 20: return 24;
             case 40: return 26;
@@ -56,9 +56,9 @@ namespace Jorts.Utils {
             case 200: return 48;
             case 220: return 52;
             case 240: return 54;
-            case 260: return 56;
-            case 280: return 60;
-            case 300: return 64;
+            //  case 260: return 56;
+            //  case 280: return 60;
+            //  case 300: return 64;
             default: return 32;
         }
     }

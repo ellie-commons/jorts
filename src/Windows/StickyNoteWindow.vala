@@ -44,8 +44,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set { on_monospace_changed (value);}
     }
 
-    private int _old_zoom;
-    public int zoom {
+    private uint8 _old_zoom;
+    public uint8 zoom {
         get { return popover.zoom;}
         set { do_set_zoom (value);}
     }
@@ -269,7 +269,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             color,
             content,
             view.textview.monospace,
-            this.zoom,
+            (uint8)this.zoom,
                 width,
                 height);
 
@@ -380,7 +380,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     /**
     * Switch zoom classes, then reflect in the UI and tell the application
     */  
-    private void do_set_zoom (int zoom) {
+    private void do_set_zoom (uint8 zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size

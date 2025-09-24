@@ -14,14 +14,14 @@ public class Jorts.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
     public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static int? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
+    public static uint8? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
     public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
 
     public string title;
     public Jorts.Themes theme;
     public string content;
     public bool monospace;
-    public int zoom;
+    public uint8 zoom;
     public int width;
     public int height;
 
@@ -30,7 +30,7 @@ public class Jorts.NoteData : Object {
     * Convert into a Json.Object()
     */
     public NoteData (string? title = null, Jorts.Themes? theme = null, string? content = null,
-                    bool? monospace = null, int? zoom = null, int? width = null, int? height = null)
+                    bool? monospace = null, uint8? zoom = null, int? width = null, int? height = null)
     {
         // We assign defaults in case theres args missing
         this.title = title ?? Jorts.Utils.random_title ();
@@ -54,7 +54,7 @@ public class Jorts.NoteData : Object {
         theme = Jorts.Themes.from_string (themestring);
         content     = node.get_string_member_with_default ("content","");
         monospace   = node.get_boolean_member_with_default ("monospace",Jorts.Constants.DEFAULT_MONO);
-        zoom        = (int)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
+        zoom        = (uint8)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
         if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}

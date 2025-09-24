@@ -96,7 +96,7 @@
     <releases>
         <release version="3.4.0" date="2025-09-12">
             <description>
-                <p>3.4.0 Jorts of Autumn</p>
+                <p>3.4.0 Scary Jorts of Boo</p>
                 <ul>
                     <li>I struggled with some shenanigans to have only one preference window... Should be done for good now</li>
                     <li>Added a desktop action to create a note from clipboard content</li>

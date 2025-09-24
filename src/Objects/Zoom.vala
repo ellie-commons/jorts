@@ -30,7 +30,7 @@ public enum Jorts.Zoom {
     /**
     * Returns an Int representation we can use to display and store the value
     */
-    public int to_int () {
+    public uint8 to_int () {
         switch (this) {
             case ANTSIZED: return 20;
             case MUCHSMALLER: return 40;
@@ -44,9 +44,9 @@ public enum Jorts.Zoom {
             case HUGE: return 200;
             case SUPERHUGE: return 220;
             case MEGAHUGE: return 240;
-            case ULTRAHUGE: return 260;
-            case MASSIVE: return 280;
-            case URMOM: return 300;
+            //  case ULTRAHUGE: return 260;
+            //  case MASSIVE: return 280;
+            //  case URMOM: return 300;
             default: return 100;
         }
     }
@@ -55,7 +55,7 @@ public enum Jorts.Zoom {
     /**
     * We cannot save Enums in JSON, so this recovers the enum from stored int
     */
-    public static Zoom from_int (int wtf_is_this) {
+    public static Zoom from_int (uint8 wtf_is_this) {
         switch (wtf_is_this) {
             case 20: return ANTSIZED;
             case 40: return MUCHSMALLER;
@@ -69,9 +69,9 @@ public enum Jorts.Zoom {
             case 200: return HUGE;
             case 220: return SUPERHUGE;
             case 240: return MEGAHUGE;
-            case 260: return ULTRAHUGE;
-            case 280: return MASSIVE;
-            case 300: return URMOM;
+            //  case 260: return ULTRAHUGE;
+            //  case 280: return MASSIVE;
+            //  case 300: return URMOM;
             default: return NORMAL;
         }
     }
@@ -94,9 +94,9 @@ public enum Jorts.Zoom {
             case HUGE: return "huge";
             case SUPERHUGE: return "superhuge";
             case MEGAHUGE: return "megahuge";
-            case ULTRAHUGE: return "ultrahuge";
-            case MASSIVE: return "massive";
-            case URMOM: return "urmom";
+            //  case ULTRAHUGE: return "ultrahuge";
+            //  case MASSIVE: return "massive";
+            //  case URMOM: return "urmom";
             default: return "normal_zoom";
         }
     }
@@ -105,7 +105,7 @@ public enum Jorts.Zoom {
     /**
     * We have to scale some UI elements according to zoom
     */
-    public int to_size () {
+    public uint8 to_size () {
         switch (this) {
             case ANTSIZED: return 24;
             case MUCHSMALLER: return 26;
@@ -119,9 +119,9 @@ public enum Jorts.Zoom {
             case HUGE: return 48;
             case SUPERHUGE: return 52;
             case MEGAHUGE: return 54;
-            case ULTRAHUGE: return 56;
-            case MASSIVE: return 60;
-            case URMOM: return 64;
+            //  case ULTRAHUGE: return 56;
+            //  case MASSIVE: return 60;
+            //  case URMOM: return 64;
             default: return 32;
         }
     }
