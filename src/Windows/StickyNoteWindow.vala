@@ -27,9 +27,9 @@ Theme and Zoom changing are just a matter of adding and removing classes
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
-    private Gtk.HeaderBar headerbar;
+    public Gtk.HeaderBar headerbar;
     public Gtk.EditableLabel editableheader;
-    private Jorts.NoteView view;
+    public Jorts.NoteView view;
     private PopoverView popover;
     public TextView textview;
 
@@ -37,17 +37,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Jorts.Themes color {
         get { return popover.color;}
         set { popover.color = value; on_theme_changed (value);}
-    }
-
-    public bool monospace {
-        get { return popover.monospace;}
-        set { on_monospace_changed (value);}
-    }
-
-    private uint8 _old_zoom;
-    public uint8 zoom {
-        get { return popover.zoom;}
-        set { do_set_zoom (value);}
     }
 
     public NoteData data {
@@ -152,8 +141,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.textview.buffer.changed.connect (debounce_save);
 
         popover.theme_changed.connect (on_theme_changed);
-        popover.monospace_changed.connect (on_monospace_changed);
-        popover.zoom_changed.connect (on_zoom_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -269,7 +256,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             color,
             content,
             view.textview.monospace,
-            (uint8)this.zoom,
+            popover.zoom,
                 width,
                 height);
 
@@ -287,8 +274,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = editableheader.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        zoom = data.zoom;
-        monospace = data.monospace;
+        popover.zoom = data.zoom;
+        popover.monospace = data.monospace;
         color = data.theme;
     }
 
@@ -314,104 +301,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         changed ();
     }
 
-    /**
-    * Switches the .monospace class depending on the note setting
-    */  
-    private void on_monospace_changed (bool monospace) {
-        debug ("Updating monospace to %s".printf (monospace.to_string ()));
-
-        if (monospace) {
-            editableheader.add_css_class ("monospace");
-
-        } else {
-            if ("monospace" in editableheader.css_classes) {
-                editableheader.remove_css_class ("monospace");
-            }
-
-        }
-        view.textview.monospace = monospace;
-        popover.monospace = monospace;
-        Jorts.NoteData.latest_mono = monospace;
-        changed ();
-    }
-
-
-    /*********************************************/
-    /*              ZOOM feature                 */
-    /*********************************************/
-
-    /**
-    * Called when a signal from the popover says stuff got changed
-    */  
-    private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
-        debug ("Zoom changed!");
-
-        switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); break;
-            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;
-            case Zoomkind.ZOOM_OUT:             zoom_out (); break;
-            default:                            zoom_default (); break;
-        }
-        ((Jorts.Application)this.application).manager.save_all.begin ();
-    }
-
-    /**
-    * Wrapper to check an increase doesnt go above limit
-    */  
-    public void zoom_in () {
-        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-            zoom = _old_zoom + 20;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    public void zoom_default () {
-        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
-            zoom = Jorts.Constants.DEFAULT_ZOOM;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    /**
-    * Wrapper to check an increase doesnt go below limit
-    */  
-    public void zoom_out () {
-        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-            zoom = _old_zoom - 20;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    /**
-    * Switch zoom classes, then reflect in the UI and tell the application
-    */  
-    private void do_set_zoom (uint8 zoom) {
-        debug ("Setting zoom: " + zoom.to_string ());
-
-        // Switches the classes that control font size
-        this.remove_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
-        _old_zoom = zoom;
-        this.add_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
-
-        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_old_zoom);
-
-        // Reflect the number in the popover
-        popover.zoom = zoom;
-
-        // Keep it for next new notes
-        //((Application)this.application).latest_zoom = zoom;
-        NoteData.latest_zoom = zoom;
-    }
-
     private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
     private void action_show_emoji () {view.emoji_button.activate ();}
     private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
 
-    private void action_zoom_out () {zoom_out ();}
-    private void action_zoom_default () {zoom_default ();}
-    private void action_zoom_in () {zoom_in ();}
+    private void action_zoom_out () {popover.zoom_out ();}
+    private void action_zoom_default () {popover.zoom_default ();}
+    private void action_zoom_in () {popover.zoom_in ();}
 }
