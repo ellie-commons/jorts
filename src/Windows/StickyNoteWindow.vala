@@ -16,6 +16,7 @@
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
+    public Gtk.HeaderBar headerbar;
     public Gtk.EditableLabel editableheader;
     public Jorts.NoteView view;
     private PopoverView popover;
@@ -89,7 +90,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /*              HEADERBAR                */
         /*****************************************/
 
-        var headerbar = new Gtk.HeaderBar () {
+        headerbar = new Gtk.HeaderBar () {
             show_title_buttons = false
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
