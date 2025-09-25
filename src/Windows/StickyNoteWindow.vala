@@ -6,28 +6,16 @@
  */
 
 
-/* CONTENT
-
-Each StickyNoteWindow instance is a sticky note
-It takes a NoteData, and creates the UI
-
-It is connected to settings and reacts to changes
-
-It sometimes calls Application methods for actions that requires higher oversight level
-like creating a new note, or saving
-
-Notably, it interacts with popover - a SettingsPopover instant, where stuff is more hairy
-Both interact through signals and methods.
-
-A method packages the informations into one NoteData
-Theme and Zoom changing are just a matter of adding and removing classes
-
-
+/**
+* Represents a Sticky Note, with its own settings and content
+* There is a View, which contains the text
+* There is a Popover, which manages the per-window settings (Tail wagging the dog situation)
+* Can be packaged into a noteData file for convenient storage
+* Reports to the NoteManager for saving
 */
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
-    public Gtk.HeaderBar headerbar;
     public Gtk.EditableLabel editableheader;
     public Jorts.NoteView view;
     private PopoverView popover;
@@ -37,7 +25,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         owned get { return packaged ();}
         set { load_data (value);}
     }
-
 
     private static uint debounce_timer_id;
 
@@ -102,7 +89,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /*              HEADERBAR                */
         /*****************************************/
 
-        this.headerbar = new Gtk.HeaderBar () {
+        var headerbar = new Gtk.HeaderBar () {
             show_title_buttons = false
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
@@ -132,15 +119,12 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set_child (view);
         set_focus (view);
 
-
         /****************************************/
         /*              LOADING                 */
         /****************************************/
  
-
         on_scribbly_changed ();
         load_data (data);
-
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -169,7 +153,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
         }
-    } // END OF MAIN CONSTRUCT
+    } 
 
 
         /********************************************/
@@ -177,7 +161,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /********************************************/
 
     /**
-    * Show UI elements shorty after the window is shown
+    * Show Actionbar shortly after the window is shown
+    * This is more for the Aesthetic
     */
     private void delayed_show () {
         Timeout.add_once (1000, () => {    
@@ -190,7 +175,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         show.disconnect (delayed_show);
     }
 
-    // Add a debounce so we aren't writing the entire buffer every character input
+    /**
+    * Debouncer to avoid writing to disk all the time constantly
+    * Called when something has changed
+    */
     private void debounce_save () {
         debug ("Changed! Timer: %s".printf (debounce_timer_id.to_string ()));
 
@@ -205,12 +193,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         });
     }
 
+    /**
+    * Simple handler for the EditableLabel
+    */
     private void on_editable_changed () {
         title = editableheader.text + _(" - Jorts");
         debounce_save ();
     }
 
-    // Called when a change in settings is detected
+    /**
+    * Handler for scribbly mode settings changed
+    */
     private void on_scribbly_changed () {
         debug ("Scribbly mode changed!");
 
@@ -226,7 +219,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         }
     }
 
-    // 
     /**
     * Changes the stylesheet accents to the notes color
     * Add or remove the Redacted font if the setting is active
@@ -251,7 +243,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     /**
-    * Package the note into a NoteData and pass it back
+    * Package the note into a NoteData and pass it back.
+    * Used by NoteManager to pass all informations conveniently for storage
     */
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
@@ -263,10 +256,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         var data = new NoteData (
                 editableheader.text,
-            popover.color,
-            content,
-            popover.monospace,
-            popover.zoom,
+                popover.color,
+                content,
+                popover.monospace,
+                popover.zoom,
                 width,
                 height);
 
@@ -276,7 +269,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     /**
-    * Propagate the content of a NoteData into the various UI elements
+    * Propagate the content of a NoteData into the various UI elements. Used when creating a new window
     */    
     private void load_data (NoteData data) {
         debug ("Loading noteData…");
