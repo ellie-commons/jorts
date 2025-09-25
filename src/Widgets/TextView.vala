@@ -18,10 +18,10 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         construct {
                 buffer = new Gtk.TextBuffer (null);
-                bottom_margin = 12;
-                left_margin = 12;
-                right_margin = 12;
-                top_margin = 6;
+                bottom_margin = 10;
+                left_margin = 10;
+                right_margin = 10;
+                top_margin = 5;
 
                 set_hexpand (true);
                 set_vexpand (true);
