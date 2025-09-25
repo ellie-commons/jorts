@@ -97,6 +97,18 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_show_emoji", {"<Control>period"});
         set_accels_for_action ("app.action_show_menu", {"<Control>M"});
 
+        set_accels_for_action ("app.action_theme_1", {"<Control>1"});
+        set_accels_for_action ("app.action_theme_2", {"<Control>2"});
+        set_accels_for_action ("app.action_theme_3", {"<Control>3"});
+        set_accels_for_action ("app.action_theme_4", {"<Control>4"});
+        set_accels_for_action ("app.action_theme_5", {"<Control>5"});
+        set_accels_for_action ("app.action_theme_6", {"<Control>6"});
+        set_accels_for_action ("app.action_theme_7", {"<Control>7"});
+        set_accels_for_action ("app.action_theme_8", {"<Control>8"});
+        set_accels_for_action ("app.action_theme_9", {"<Control>9"});
+        set_accels_for_action ("app.action_theme_0", {"<Control>0"});
+
+
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();

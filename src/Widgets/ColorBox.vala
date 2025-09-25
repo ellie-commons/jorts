@@ -5,11 +5,10 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-/*
-I just dont wanna rewrite the same button over and over
-
+/**
+* A box mimicking the one in elementary OS Appearance settings page
+* It shows a row with all the colours
 */
-
 public class Jorts.ColorBox : Gtk.Box {
 
     private Themes _color = Constants.DEFAULT_THEME;
@@ -31,6 +30,7 @@ public class Jorts.ColorBox : Gtk.Box {
     private Jorts.ColorPill color_button_cocoa;
     private Jorts.ColorPill color_button_slate;
 
+    // TODO: We could loop instead of by-hand definition
     public ColorBox () {
         orientation = Gtk.Orientation.HORIZONTAL;
 
@@ -50,6 +50,37 @@ public class Jorts.ColorBox : Gtk.Box {
             color_button_grape = new ColorPill (Jorts.Themes.GRAPE);
             color_button_cocoa = new ColorPill (Jorts.Themes.COCOA);
             color_button_slate = new ColorPill (Jorts.Themes.SLATE);
+
+            color_button_blueberry.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>1"}, Jorts.Themes.BLUEBERRY.to_nicename ());
+
+            color_button_lime.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>2"}, Jorts.Themes.LIME.to_nicename ());
+
+            color_button_mint.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>3"}, Jorts.Themes.MINT.to_nicename ());
+
+            color_button_banana.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>4"}, Jorts.Themes.BANANA.to_nicename ());
+
+            color_button_strawberry.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>5"}, Jorts.Themes.STRAWBERRY.to_nicename ());
+
+            color_button_orange.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>6"}, Jorts.Themes.ORANGE.to_nicename ());
+
+            color_button_bubblegum.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>7"}, Jorts.Themes.BUBBLEGUM.to_nicename ());
+
+            color_button_grape.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>8"}, Jorts.Themes.GRAPE.to_nicename ());
+
+            color_button_cocoa.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>9"}, Jorts.Themes.COCOA.to_nicename ());
+
+            color_button_slate.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>0"}, Jorts.Themes.SLATE.to_nicename ());
+
 
             color_button_lime.set_group (color_button_blueberry);
             color_button_mint.set_group (color_button_blueberry);

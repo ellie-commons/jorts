@@ -50,6 +50,17 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
     private const string ACTION_ZOOM_IN = "action_zoom_in";
 
+    private const string ACTION_THEME_1 = "action_theme_1";
+    private const string ACTION_THEME_2 = "action_theme_2";
+    private const string ACTION_THEME_3 = "action_theme_3";
+    private const string ACTION_THEME_4 = "action_theme_4";
+    private const string ACTION_THEME_5 = "action_theme_5";
+    private const string ACTION_THEME_6 = "action_theme_6";
+    private const string ACTION_THEME_7 = "action_theme_7";
+    private const string ACTION_THEME_8 = "action_theme_8";
+    private const string ACTION_THEME_9 = "action_theme_9";
+    private const string ACTION_THEME_0 = "action_theme_0";
+    
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
@@ -60,6 +71,16 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         { ACTION_ZOOM_OUT, action_zoom_out},
         { ACTION_ZOOM_DEFAULT, action_zoom_default},
         { ACTION_ZOOM_IN, action_zoom_in},
+        { ACTION_THEME_1, action_theme_1},
+        { ACTION_THEME_2, action_theme_2},
+        { ACTION_THEME_3, action_theme_3},
+        { ACTION_THEME_4, action_theme_4},
+        { ACTION_THEME_5, action_theme_5},
+        { ACTION_THEME_6, action_theme_6},
+        { ACTION_THEME_7, action_theme_7},
+        { ACTION_THEME_8, action_theme_8},
+        { ACTION_THEME_9, action_theme_9},
+        { ACTION_THEME_0, action_theme_0},
     };
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
@@ -278,4 +299,15 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void action_zoom_out () {popover.zoom_out ();}
     private void action_zoom_default () {popover.zoom_default ();}
     private void action_zoom_in () {popover.zoom_in ();}
+
+    private void action_theme_1 () {popover.color = (Jorts.Themes.all ())[0];}
+    private void action_theme_2 () {popover.color = (Jorts.Themes.all ())[1];}
+    private void action_theme_3 () {popover.color = (Jorts.Themes.all ())[2];}
+    private void action_theme_4 () {popover.color = (Jorts.Themes.all ())[3];}
+    private void action_theme_5 () {popover.color = (Jorts.Themes.all ())[4];}
+    private void action_theme_6 () {popover.color = (Jorts.Themes.all ())[5];}
+    private void action_theme_7 () {popover.color = (Jorts.Themes.all ())[6];}
+    private void action_theme_8 () {popover.color = (Jorts.Themes.all ())[7];}
+    private void action_theme_9 () {popover.color = (Jorts.Themes.all ())[8];}
+    private void action_theme_0 () {popover.color = (Jorts.Themes.all ())[9];}
 }
