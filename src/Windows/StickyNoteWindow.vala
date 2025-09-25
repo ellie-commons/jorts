@@ -48,7 +48,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private const string ACTION_THEME_8 = "action_theme_8";
     private const string ACTION_THEME_9 = "action_theme_9";
     private const string ACTION_THEME_0 = "action_theme_0";
-    
+
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
@@ -154,7 +154,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
         }
-    } 
+    }
 
 
         /********************************************/
@@ -166,7 +166,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * This is more for the Aesthetic
     */
     private void delayed_show () {
-        Timeout.add_once (1000, () => {    
+        Timeout.add_once (1000, () => {
             Application.gsettings.bind (
                 "hide-bar",
                 view.actionbar,

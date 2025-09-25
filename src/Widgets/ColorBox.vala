@@ -41,11 +41,11 @@ public class Jorts.ColorBox : Gtk.Box {
 
             //TRANSLATORS: Shown as a tooltip when people hover a color theme
             color_button_blueberry = new ColorPill (Jorts.Themes.BLUEBERRY);
-            color_button_lime = new ColorPill (Jorts.Themes.LIME);
             color_button_mint = new ColorPill (Jorts.Themes.MINT);
+            color_button_lime = new ColorPill (Jorts.Themes.LIME);
             color_button_banana = new ColorPill (Jorts.Themes.BANANA);
-            color_button_strawberry = new ColorPill (Jorts.Themes.STRAWBERRY);
             color_button_orange = new ColorPill (Jorts.Themes.ORANGE);
+            color_button_strawberry = new ColorPill (Jorts.Themes.STRAWBERRY);
             color_button_bubblegum = new ColorPill (Jorts.Themes.BUBBLEGUM);
             color_button_grape = new ColorPill (Jorts.Themes.GRAPE);
             color_button_cocoa = new ColorPill (Jorts.Themes.COCOA);
@@ -54,20 +54,20 @@ public class Jorts.ColorBox : Gtk.Box {
             color_button_blueberry.tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>1"}, Jorts.Themes.BLUEBERRY.to_nicename ());
 
-            color_button_lime.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>2"}, Jorts.Themes.LIME.to_nicename ());
-
             color_button_mint.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>3"}, Jorts.Themes.MINT.to_nicename ());
+                {"<Control>2"}, Jorts.Themes.MINT.to_nicename ());
+
+            color_button_lime.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>3"}, Jorts.Themes.LIME.to_nicename ());
 
             color_button_banana.tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>4"}, Jorts.Themes.BANANA.to_nicename ());
 
-            color_button_strawberry.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>5"}, Jorts.Themes.STRAWBERRY.to_nicename ());
-
             color_button_orange.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>6"}, Jorts.Themes.ORANGE.to_nicename ());
+                {"<Control>5"}, Jorts.Themes.ORANGE.to_nicename ());
+
+            color_button_strawberry.tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>6"}, Jorts.Themes.STRAWBERRY.to_nicename ());
 
             color_button_bubblegum.tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>7"}, Jorts.Themes.BUBBLEGUM.to_nicename ());

@@ -88,7 +88,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_delete", {"<Control>W"});
         set_accels_for_action ("app.action_save", {"<Control>S"});
         set_accels_for_action ("app.action_zoom_out", {"<Control>minus", "<Control>KP_Subtract"});
-        set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0"});
+        set_accels_for_action ("app.action_zoom_default", {"<Control>equal"});
         set_accels_for_action ("app.action_zoom_in", {"<Control>plus", "<Control>KP_Add"});
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
@@ -106,7 +106,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_theme_7", {"<Control>7"});
         set_accels_for_action ("app.action_theme_8", {"<Control>8"});
         set_accels_for_action ("app.action_theme_9", {"<Control>9"});
-        set_accels_for_action ("app.action_theme_0", {"<Control>0"});
+        set_accels_for_action ("app.action_theme_0", {"<Control>0", "<Control>KP_0"});
 
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
