@@ -88,7 +88,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_delete", {"<Control>W"});
         set_accels_for_action ("app.action_save", {"<Control>S"});
         set_accels_for_action ("app.action_zoom_out", {"<Control>minus", "<Control>KP_Subtract"});
-        set_accels_for_action ("app.action_zoom_default", {"<Control>equal"});
+        set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<Control>0", "<Control>KP_0"});
         set_accels_for_action ("app.action_zoom_in", {"<Control>plus", "<Control>KP_Add"});
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
@@ -97,16 +97,16 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_show_emoji", {"<Control>period"});
         set_accels_for_action ("app.action_show_menu", {"<Control>M"});
 
-        set_accels_for_action ("app.action_theme_1", {"<Control>1"});
-        set_accels_for_action ("app.action_theme_2", {"<Control>2"});
-        set_accels_for_action ("app.action_theme_3", {"<Control>3"});
-        set_accels_for_action ("app.action_theme_4", {"<Control>4"});
-        set_accels_for_action ("app.action_theme_5", {"<Control>5"});
-        set_accels_for_action ("app.action_theme_6", {"<Control>6"});
-        set_accels_for_action ("app.action_theme_7", {"<Control>7"});
-        set_accels_for_action ("app.action_theme_8", {"<Control>8"});
-        set_accels_for_action ("app.action_theme_9", {"<Control>9"});
-        set_accels_for_action ("app.action_theme_0", {"<Control>0", "<Control>KP_0"});
+        set_accels_for_action ("app.action_theme_1", {"<Alt>1"});
+        set_accels_for_action ("app.action_theme_2", {"<Alt>2"});
+        set_accels_for_action ("app.action_theme_3", {"<Alt>3"});
+        set_accels_for_action ("app.action_theme_4", {"<Alt>4"});
+        set_accels_for_action ("app.action_theme_5", {"<Alt>5"});
+        set_accels_for_action ("app.action_theme_6", {"<Alt>6"});
+        set_accels_for_action ("app.action_theme_7", {"<Alt>7"});
+        set_accels_for_action ("app.action_theme_8", {"<Alt>8"});
+        set_accels_for_action ("app.action_theme_9", {"<Alt>9"});
+        set_accels_for_action ("app.action_theme_0", {"<Alt>0", "<Alt>KP_0"});
 
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes

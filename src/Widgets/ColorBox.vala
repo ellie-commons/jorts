@@ -52,34 +52,34 @@ public class Jorts.ColorBox : Gtk.Box {
             color_button_slate = new ColorPill (Jorts.Themes.SLATE);
 
             color_button_blueberry.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>1"}, Jorts.Themes.BLUEBERRY.to_nicename ());
+                {"<Alt>1"}, Jorts.Themes.BLUEBERRY.to_nicename ());
 
             color_button_mint.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>2"}, Jorts.Themes.MINT.to_nicename ());
+                {"<Alt>2"}, Jorts.Themes.MINT.to_nicename ());
 
             color_button_lime.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>3"}, Jorts.Themes.LIME.to_nicename ());
+                {"<Alt>3"}, Jorts.Themes.LIME.to_nicename ());
 
             color_button_banana.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>4"}, Jorts.Themes.BANANA.to_nicename ());
+                {"<Alt>4"}, Jorts.Themes.BANANA.to_nicename ());
 
             color_button_orange.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>5"}, Jorts.Themes.ORANGE.to_nicename ());
+                {"<Alt>5"}, Jorts.Themes.ORANGE.to_nicename ());
 
             color_button_strawberry.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>6"}, Jorts.Themes.STRAWBERRY.to_nicename ());
+                {"<Alt>6"}, Jorts.Themes.STRAWBERRY.to_nicename ());
 
             color_button_bubblegum.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>7"}, Jorts.Themes.BUBBLEGUM.to_nicename ());
+                {"<Alt>7"}, Jorts.Themes.BUBBLEGUM.to_nicename ());
 
             color_button_grape.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>8"}, Jorts.Themes.GRAPE.to_nicename ());
+                {"<Alt>8"}, Jorts.Themes.GRAPE.to_nicename ());
 
             color_button_cocoa.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>9"}, Jorts.Themes.COCOA.to_nicename ());
+                {"<Alt>9"}, Jorts.Themes.COCOA.to_nicename ());
 
             color_button_slate.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>0"}, Jorts.Themes.SLATE.to_nicename ());
+                {"<Alt>0"}, Jorts.Themes.SLATE.to_nicename ());
 
 
             color_button_lime.set_group (color_button_blueberry);

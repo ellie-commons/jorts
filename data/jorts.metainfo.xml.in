@@ -103,6 +103,7 @@
                     <li>Added a reset-settings commandline option. Could be handy.</li>
                     <li>Ctrl+L to focus note title</li>
                     <li>Ctrl+M to open note settings now</li>
+                    <li>Alt+Number to change theme quickly</li>
                     <li>Some UI elements show up after being shown, for a sleek vibe</li>
                     <li>New note setting: Monospace. Could be for accessibility, could be for ascii doodles</li>
                     <li>Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs</li>
