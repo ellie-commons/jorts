@@ -11,7 +11,6 @@ sources = files (
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
     'Services' / 'Themer.vala',
-    'Services' / 'Utils.vala',
 
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ColorPill.vala',
