@@ -5,16 +5,6 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-/* CONTENT
-randrange does not include upper bound.
-
-random_theme(skip_theme)
-random_title()
-random_emote(skip_emote)
-random_note(skip_theme)
-
-*/
-
 namespace Jorts.Utils {
 
     /*************************************************/
@@ -42,7 +32,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public uint8 zoom_to_UIsize (uint8 zoom) {
+    public uint8 zoom_to_ui_size (uint8 zoom) {
         switch (zoom) {
             case 20: return 24;
             case 40: return 26;

@@ -36,7 +36,7 @@ namespace Jorts.Constants {
 
     /*************************************************/
     // Shortcuts
-    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal" };
+    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal", "<Control>0", "<Control>KP_0" };
     const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>KP_Add" };
     const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
 

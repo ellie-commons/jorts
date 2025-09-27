@@ -55,9 +55,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
         mono_monospace_toggle.notify["active"].connect (on_monospace_changed);
     }
 
-
     public void on_monospace_changed () {
         monospace_changed (mono_monospace_toggle.active);
     }
-
 }

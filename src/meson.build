@@ -3,6 +3,7 @@ sources = files (
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
 
+    'Utils' / 'ZoomConvert.vala',
     'Utils' / 'Random.vala',
     'Utils' / 'Libportal.vala',
 

@@ -51,10 +51,8 @@ public class Jorts.PopoverView : Gtk.Popover {
         monospace_box = new Jorts.MonospaceBox ();
         font_size_box = new Jorts.ZoomBox ();
 
-        /* APPENDS */
         view.append (color_button_box);
         view.append (monospace_box);
-        //view.append (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         view.append (font_size_box);
 
         child = view;
@@ -69,7 +67,7 @@ public class Jorts.PopoverView : Gtk.Popover {
     /**
     * Switches stylesheet
     * First use appropriate stylesheet, Then switch the theme classes
-    */  
+    */
     private void on_color_changed (Jorts.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
@@ -125,7 +123,7 @@ public class Jorts.PopoverView : Gtk.Popover {
 
     /**
     * Called when a signal from the popover says stuff got changed
-    */  
+    */
     private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
         debug ("Zoom changed!");
 
@@ -159,7 +157,7 @@ public class Jorts.PopoverView : Gtk.Popover {
 
     /**
     * Wrapper to check an increase doesnt go below limit
-    */  
+    */
     public void zoom_out () {
         if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
             zoom = _old_zoom - 20;
@@ -170,7 +168,7 @@ public class Jorts.PopoverView : Gtk.Popover {
 
     /**
     * Switch zoom classes, then reflect in the UI and tell the application
-    */  
+    */
     private void do_set_zoom (uint8 new_zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
@@ -180,7 +178,7 @@ public class Jorts.PopoverView : Gtk.Popover {
         parent_window.add_css_class (Jorts.Utils.zoom_to_class ( new_zoom));
 
         // Adapt headerbar size to avoid weird flickering
-        parent_window.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_old_zoom);
+        parent_window.headerbar.height_request = Jorts.Utils.zoom_to_ui_size (_old_zoom);
 
         // Reflect the number in the popover
         font_size_box.zoom = new_zoom;

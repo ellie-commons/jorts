@@ -101,6 +101,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         editableheader = new Gtk.EditableLabel ("") {
             xalign = 0.5f,
             halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.CENTER,
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>L"},
                 _("Click to edit the title")
@@ -123,7 +124,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /****************************************/
         /*              LOADING                 */
         /****************************************/
- 
+
         on_scribbly_changed ();
         load_data (data);
 
@@ -271,7 +272,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
     /**
     * Propagate the content of a NoteData into the various UI elements. Used when creating a new window
-    */    
+    */
     private void load_data (NoteData data) {
         debug ("Loading noteData…");
 
