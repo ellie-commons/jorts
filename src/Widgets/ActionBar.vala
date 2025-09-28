@@ -15,6 +15,7 @@
     public Gtk.MenuButton emoji_button;
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
+    public Gtk.WindowHandle handle;
 
     construct {
 
@@ -31,7 +32,7 @@
         new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
         new_item.add_css_class ("themedbutton");
 
-        delete_item = new Gtk.Button () {
+        var delete_item = new Gtk.Button () {
             icon_name = "edit-delete-symbolic",
             width_request = 32,
             height_request = 32,
@@ -41,6 +42,7 @@
             )
         };
         delete_item.add_css_class ("themedbutton");
+        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
 
         /* **** RIGHT **** */
         emojichooser_popover = new Gtk.EmojiChooser ();
@@ -79,7 +81,7 @@
         actionbar.pack_end (menu_button);
         actionbar.pack_end (emoji_button);
 
-        var handle = new Gtk.WindowHandle () {
+        handle = new Gtk.WindowHandle () {
             child = actionbar
         };
 
@@ -94,7 +96,7 @@
     * StickyNoteWindow will decide itself whether to show immediately or not
     */
     public void reveal_bind () {
-        Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
+        Application.gsettings.bind ("hide-bar", this.actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
     // Skip the current icon to avoid picking it twice

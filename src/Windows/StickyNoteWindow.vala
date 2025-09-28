@@ -129,7 +129,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         } else {
             Application.gsettings.bind (
                 "hide-bar",
-                view.actionbar,
+                view.actionbar.actionbar,
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
         }
@@ -148,7 +148,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         Timeout.add_once (1000, () => {
             Application.gsettings.bind (
                 "hide-bar",
-                view.actionbar,
+                view.actionbar.actionbar,
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
         });

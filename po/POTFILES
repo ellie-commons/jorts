@@ -2,8 +2,9 @@ src/Views/NoteView.vala
 src/Widgets/TextView.vala
 src/Views/PopoverView.vala
 src/Widgets/ColorBox.vala
-src/Widgets/MonospaceBox.vala
 src/Widgets/ZoomBox.vala
+src/Widgets/MonospaceBox.vala
+src/Widgets/ActionBar.vala
 src/Objects/Themes.vala
 src/Utils/ZoomConvert.vala
 src/Utils/Random.vala
