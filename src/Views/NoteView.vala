@@ -6,22 +6,25 @@
  */
 
  public class Jorts.NoteView : Gtk.Box {
-        public Gtk.HeaderBar headerbar;
-        public Gtk.EditableLabel editablelabel;
-        public Jorts.TextView textview;
-        public Gtk.ActionBar actionbar;
+    public Gtk.HeaderBar headerbar;
+    public Gtk.EditableLabel editablelabel;
+    public Jorts.TextView textview;
+    public Gtk.ActionBar actionbar;
 
-        public Gtk.Button delete_item;
+    public Gtk.MenuButton emoji_button;
+    public Gtk.EmojiChooser emojichooser_popover;
 
-        public Gtk.MenuButton emoji_button;
-        public Gtk.EmojiChooser emojichooser_popover;
+    public Gtk.MenuButton menu_button;
 
-        public Gtk.MenuButton menu_button;
+
+    public bool monospace {
+        get { return textview.monospace;}
+        set { mono_set (value);}
+    }
 
     construct {
         orientation = VERTICAL;
         spacing = 0;
-
 
         headerbar = new Gtk.HeaderBar () {
             show_title_buttons = false
@@ -42,12 +45,10 @@
         editablelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
         headerbar.set_title_widget (editablelabel);
 
-
         textview = new Jorts.TextView ();
         var scrolled = new Gtk.ScrolledWindow () {
             child = textview
         };
-
 
         var new_item = new Gtk.Button () {
             icon_name = "list-add-symbolic",
@@ -61,7 +62,7 @@
         new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
         new_item.add_css_class ("themedbutton");
 
-        delete_item = new Gtk.Button () {
+        var delete_item = new Gtk.Button () {
             icon_name = "edit-delete-symbolic",
             width_request = 32,
             height_request = 32,
@@ -145,6 +146,17 @@
                 emoji_button.get_icon_name ()
             )
         );
+    }
+
+    private void mono_set (bool if_mono) {
+        if (if_mono) {
+            editablelabel.add_css_class ("monospace");
+        } else {
+            if ("monospace" in editablelabel.css_classes) {
+                editablelabel.remove_css_class ("monospace");
+            }
+        }
+        textview.monospace = if_mono;
     }
 
 }

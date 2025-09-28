@@ -100,20 +100,11 @@ public class Jorts.PopoverView : Gtk.Popover {
     private void on_monospace_changed (bool monospace) {
         debug ("Updating monospace to %s".printf (monospace.to_string ()));
 
-        if (monospace) {
-            parent_window.view.editablelabel.add_css_class ("monospace");
-
-        } else {
-            if ("monospace" in parent_window.view.editablelabel.css_classes) {
-                parent_window.view.editablelabel.remove_css_class ("monospace");
-            }
-
-        }
-        parent_window.view.textview.monospace = monospace;
+        parent_window.view.monospace = monospace;
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
 
-                ((Jorts.Application)parent_window.application).manager.save_all ();
+        ((Jorts.Application)parent_window.application).manager.save_all ();
     }
 
 
