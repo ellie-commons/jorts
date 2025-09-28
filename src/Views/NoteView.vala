@@ -6,7 +6,8 @@
  */
 
  public class Jorts.NoteView : Gtk.Box {
-
+        public Gtk.HeaderBar headerbar;
+        public Gtk.EditableLabel editablelabel;
         public Jorts.TextView textview;
         public Gtk.ActionBar actionbar;
 
@@ -21,11 +22,32 @@
         orientation = VERTICAL;
         spacing = 0;
 
-        // Define the text thingy
-        var scrolled = new Gtk.ScrolledWindow ();
-        textview = new Jorts.TextView ();
 
-        scrolled.set_child (textview);
+        headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = false
+        };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        headerbar.add_css_class ("headertitle");
+
+        // Defime the label you can edit. Which is editable.
+        editablelabel = new Gtk.EditableLabel ("") {
+            xalign = 0.5f,
+            halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.CENTER,
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>L"},
+                _("Click to edit the title")
+            )
+        };
+        editablelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+        headerbar.set_title_widget (editablelabel);
+
+
+        textview = new Jorts.TextView ();
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = textview
+        };
+
 
         var new_item = new Gtk.Button () {
             icon_name = "list-add-symbolic",
@@ -49,8 +71,7 @@
             )
         };
         delete_item.add_css_class ("themedbutton");
-
-
+        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
 
         var emojichooser_popover = new Gtk.EmojiChooser ();
 
@@ -65,10 +86,6 @@
         };
         emoji_button.add_css_class ("themedbutton");
         emoji_button.popover = emojichooser_popover;
-
-
-
-
 
         menu_button = new Gtk.MenuButton () {
             icon_name = "open-menu-symbolic",
@@ -95,6 +112,7 @@
             child = actionbar
         };
 
+        append (headerbar);
         append (scrolled);
         append (handle);
         //set_focus_child (textview);

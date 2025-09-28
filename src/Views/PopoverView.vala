@@ -96,16 +96,16 @@ public class Jorts.PopoverView : Gtk.Popover {
 
     /**
     * Switches the .monospace class depending on the note setting
-    */  
+    */
     private void on_monospace_changed (bool monospace) {
         debug ("Updating monospace to %s".printf (monospace.to_string ()));
 
         if (monospace) {
-            parent_window.editableheader.add_css_class ("monospace");
+            parent_window.view.editablelabel.add_css_class ("monospace");
 
         } else {
-            if ("monospace" in parent_window.editableheader.css_classes) {
-                parent_window.editableheader.remove_css_class ("monospace");
+            if ("monospace" in parent_window.view.editablelabel.css_classes) {
+                parent_window.view.editablelabel.remove_css_class ("monospace");
             }
 
         }
@@ -128,17 +128,17 @@ public class Jorts.PopoverView : Gtk.Popover {
         debug ("Zoom changed!");
 
         switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); break;
-            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;
-            case Zoomkind.ZOOM_OUT:             zoom_out (); break;
-            default:                            zoom_default (); break;
+            case Zoomkind.ZOOM_IN:              zoom_in (); break;          // vala-lint=double-spaces
+            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;     // vala-lint=double-spaces
+            case Zoomkind.ZOOM_OUT:             zoom_out (); break;         // vala-lint=double-spaces
+            default:                            zoom_default (); break;     // vala-lint=double-spaces
         }
         ((Jorts.Application)parent_window.application).manager.save_all ();
     }
 
     /**
     * Wrapper to check an increase doesnt go above limit
-    */  
+    */
     public void zoom_in () {
         if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
             zoom = _old_zoom + 20;
@@ -178,7 +178,7 @@ public class Jorts.PopoverView : Gtk.Popover {
         parent_window.add_css_class (Jorts.Utils.zoom_to_class ( new_zoom));
 
         // Adapt headerbar size to avoid weird flickering
-        parent_window.headerbar.height_request = Jorts.Utils.zoom_to_ui_size (_old_zoom);
+        parent_window.view.headerbar.height_request = Jorts.Utils.zoom_to_ui_size (_old_zoom);
 
         // Reflect the number in the popover
         font_size_box.zoom = new_zoom;

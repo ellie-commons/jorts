@@ -55,6 +55,7 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
     public const string ACTION_NEW = "action_new";
+    public const string ACTION_DELETE = "action_delete";
     public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
     public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
     public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";

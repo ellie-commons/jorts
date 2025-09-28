@@ -16,8 +16,6 @@
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
-    public Gtk.HeaderBar headerbar;
-    public Gtk.EditableLabel editableheader;
     public Jorts.NoteView view;
     private PopoverView popover;
     public TextView textview;
@@ -30,7 +28,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private static uint debounce_timer_id;
 
     private const string ACTION_PREFIX = "app.";
-    private const string ACTION_DELETE = "action_delete";
     private const string ACTION_SHOW_EMOJI = "action_show_emoji";
     private const string ACTION_SHOW_MENU = "action_show_menu";
     private const string ACTION_FOCUS_TITLE = "action_focus_title";
@@ -52,7 +49,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE, action_delete},
+        { Application.ACTION_DELETE, action_delete},
         { ACTION_SHOW_EMOJI, action_show_emoji},
         { ACTION_SHOW_MENU, action_show_menu},
         { ACTION_FOCUS_TITLE, action_focus_title},
@@ -90,29 +87,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /*              HEADERBAR                */
         /*****************************************/
 
-        headerbar = new Gtk.HeaderBar () {
-            show_title_buttons = false
-        };
-        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        headerbar.add_css_class ("headertitle");
-
-
-        // Defime the label you can edit. Which is editable.
-        editableheader = new Gtk.EditableLabel ("") {
-            xalign = 0.5f,
-            halign = Gtk.Align.CENTER,
-            valign = Gtk.Align.CENTER,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>L"},
-                _("Click to edit the title")
-            )
-        };
-        editableheader.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        headerbar.set_title_widget (editableheader);
-        this.set_titlebar (headerbar);
+        // No
+        titlebar = new Gtk.Grid () {visible = false};
 
         view = new NoteView ();
-        view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
         textview = view.textview;
 
         popover = new Jorts.PopoverView (this);
@@ -135,7 +113,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Built UI. Lets do connects and binds");
 
         // Save when title or text have changed
-        editableheader.changed.connect (on_editable_changed);
+        view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (debounce_save);
 
         // Use the color theme of this sticky note when focused
@@ -199,7 +177,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * Simple handler for the EditableLabel
     */
     private void on_editable_changed () {
-        title = editableheader.text + _(" - Jorts");
+        title = view.editablelabel.text + _(" - Jorts");
         debounce_save ();
     }
 
@@ -257,7 +235,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.get_default_size (out width, out height);
 
         var data = new NoteData (
-                editableheader.text,
+                view.editablelabel.text,
                 popover.color,
                 content,
                 popover.monospace,
@@ -277,8 +255,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Loading noteData…");
 
         set_default_size (data.width, data.height);
-        editableheader.text = data.title;
-        title = editableheader.text + _(" - Jorts");
+        view.editablelabel.text = data.title;
+        title = view.editablelabel.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
         popover.zoom = data.zoom;
@@ -286,7 +264,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         popover.color = data.theme;
     }
 
-    private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
+    private void action_focus_title () {set_focus (view.editablelabel); view.editablelabel.editing = true;}
     private void action_show_emoji () {view.emoji_button.activate ();}
     private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
