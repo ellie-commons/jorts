@@ -204,6 +204,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
             this.notify["is-active"].connect (focus_scribble_unscribble);
+            view.scribbly = true;
+
 
         } else {
             this.notify["is-active"].disconnect (focus_scribble_unscribble);
