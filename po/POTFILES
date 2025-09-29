@@ -14,4 +14,3 @@ src/Views/PreferencesView.vala
 src/Windows/StickyNoteWindow.vala
 src/Windows/PreferenceWindow.vala
 src/Application.vala
-src/Services/Utils.vala
