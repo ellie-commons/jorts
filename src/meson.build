@@ -12,6 +12,7 @@ sources = files (
     'Services' / 'NoteManager.vala',
     'Services' / 'Themer.vala',
 
+    'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',
     'Widgets' / 'ActionBar.vala',
 

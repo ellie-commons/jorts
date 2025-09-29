@@ -1,4 +1,5 @@
 src/Views/NoteView.vala
+src/Widgets/EditableLabel.vala
 src/Widgets/TextView.vala
 src/Views/PopoverView.vala
 src/Widgets/ActionBar.vala

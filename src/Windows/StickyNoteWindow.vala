@@ -120,7 +120,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         this.notify["is-active"].connect (on_focus_changed);
 
         //The application tells us the squiffly state has changed!
+        on_scribbly_changed ();
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
+
 
         // Respect animation settings for showing ui elements
         if (Gtk.Settings.get_default ().gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
@@ -182,24 +184,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     /**
-    * Handler for scribbly mode settings changed
-    */
-    private void on_scribbly_changed () {
-        debug ("Scribbly mode changed!");
-
-        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            if (this.is_active == false) {
-                this.add_css_class ("scribbly");
-            }
-
-        } else {
-            if (this.is_active == false) {
-                this.remove_css_class ("scribbly");
-            }
-        }
-    }
-
-    /**
     * Changes the stylesheet accents to the notes color
     * Add or remove the Redacted font if the setting is active
     */
@@ -210,15 +194,35 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             var stylesheet = "io.elementary.stylesheet." + popover.color.to_string ().ascii_down ();
             gtk_settings.gtk_theme_name = stylesheet;
         }
+    }
+
+    /**
+    * Connect-disconnect the whole manage text being scribbled
+    */
+    private void on_scribbly_changed () {
+        debug ("Scribbly mode changed!");
 
         if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            if (this.is_active) {
-                this.remove_css_class ("scribbly");
-            } else {
-                this.add_css_class ("scribbly");
-            }
-        } else if ("scribbly" in this.css_classes) {
-            this.remove_css_class ("scribbly");
+            this.notify["is-active"].connect (focus_scribble_unscribble);
+
+        } else {
+            this.notify["is-active"].disconnect (focus_scribble_unscribble);
+            view.scribbly = false;
+        }
+    }
+
+    /**
+    * Handler connected only when scribbly mode is active
+    * It just hides or show depending on focus
+    */
+    private void focus_scribble_unscribble () {
+        debug ("Scribbly mode changed!");
+
+        if (this.is_active) {
+            view.scribbly = false;
+
+        } else {
+            view.scribbly = true;
         }
     }
 
@@ -229,15 +233,13 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
 
-        var content = this.view.textview.buffer.text;
-
         int width ; int height;
         this.get_default_size (out width, out height);
 
         var data = new NoteData (
-                view.editablelabel.text,
+                view.title,
                 popover.color,
-                content,
+                view.content,
                 popover.monospace,
                 popover.zoom,
                 width,

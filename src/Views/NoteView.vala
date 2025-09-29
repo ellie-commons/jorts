@@ -7,7 +7,7 @@
 
  public class Jorts.NoteView : Gtk.Box {
     public Gtk.HeaderBar headerbar;
-    public Gtk.EditableLabel editablelabel;
+    public Jorts.EditableLabel editablelabel;
     public Jorts.TextView textview;
     public Jorts.ActionBar actionbar;
 
@@ -18,6 +18,21 @@
     public bool monospace {
         get { return textview.monospace;}
         set { mono_set (value);}
+    }
+
+    public bool scribbly {
+        get { return textview.scribbly;}
+        set { scribbly_set (value);}
+    }
+
+    public string title {
+        owned get { return editablelabel.text;}
+        set { editablelabel.text = value;}
+    }
+
+    public string content {
+        owned get { return textview.text;}
+        set { textview.text = value;}
     }
 
     construct {
@@ -31,16 +46,7 @@
         headerbar.add_css_class ("headertitle");
 
         // Defime the label you can edit. Which is editable.
-        editablelabel = new Gtk.EditableLabel ("") {
-            xalign = 0.5f,
-            halign = Gtk.Align.CENTER,
-            valign = Gtk.Align.CENTER,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>L"},
-                _("Click to edit the title")
-            )
-        };
-        editablelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+        editablelabel = new Jorts.EditableLabel ();
         headerbar.set_title_widget (editablelabel);
 
         textview = new Jorts.TextView ();
@@ -89,13 +95,12 @@
     }
 
     private void mono_set (bool if_mono) {
-        if (if_mono) {
-            editablelabel.add_css_class ("monospace");
-        } else {
-            if ("monospace" in editablelabel.css_classes) {
-                editablelabel.remove_css_class ("monospace");
-            }
-        }
+        editablelabel.monospace = if_mono;
         textview.monospace = if_mono;
+    }
+
+    private void scribbly_set (bool if_scribbly) {
+        editablelabel.scribbly = if_scribbly;
+        textview.scribbly = if_scribbly;
     }
 }
