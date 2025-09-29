@@ -55,6 +55,7 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
     public const string ACTION_NEW = "action_new";
+    public const string ACTION_DELETE = "action_delete";
     public const string ACTION_TOGGLE_SCRIBBLY = "action_toggle_scribbly";
     public const string ACTION_TOGGLE_ACTIONBAR = "action_toggle_actionbar";
     public const string ACTION_SHOW_PREFERENCES = "action_show_preferences";
@@ -88,7 +89,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_delete", {"<Control>W"});
         set_accels_for_action ("app.action_save", {"<Control>S"});
         set_accels_for_action ("app.action_zoom_out", {"<Control>minus", "<Control>KP_Subtract"});
-        set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<control>0", "<Control>KP_0"});
+        set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<Control>0", "<Control>KP_0"});
         set_accels_for_action ("app.action_zoom_in", {"<Control>plus", "<Control>KP_Add"});
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
@@ -97,11 +98,23 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_show_emoji", {"<Control>period"});
         set_accels_for_action ("app.action_show_menu", {"<Control>M"});
 
+        set_accels_for_action ("app.action_theme_1", {"<Alt>1"});
+        set_accels_for_action ("app.action_theme_2", {"<Alt>2"});
+        set_accels_for_action ("app.action_theme_3", {"<Alt>3"});
+        set_accels_for_action ("app.action_theme_4", {"<Alt>4"});
+        set_accels_for_action ("app.action_theme_5", {"<Alt>5"});
+        set_accels_for_action ("app.action_theme_6", {"<Alt>6"});
+        set_accels_for_action ("app.action_theme_7", {"<Alt>7"});
+        set_accels_for_action ("app.action_theme_8", {"<Alt>8"});
+        set_accels_for_action ("app.action_theme_9", {"<Alt>9"});
+        set_accels_for_action ("app.action_theme_0", {"<Alt>0", "<Alt>KP_0"});
+
+
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
         var gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
-        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.ascii_down();
+        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
 
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (
@@ -207,7 +220,7 @@ Please wait while the app remembers all the things...
 
     private void action_save () {
         debug ("[ACTION] Saving...");
-        manager.save_all.begin ();
+        manager.save_all ();
     }
 
     private void action_reset_settings () {

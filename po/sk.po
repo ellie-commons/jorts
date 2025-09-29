@@ -8,102 +8,349 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-29 21:23+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
-#: src/Views/NoteView.vala:36
+#: src/Widgets/EditableLabel.vala:43
+msgid "Click to edit the title"
+msgstr "Kliknutím upravíte názov"
+
+#: src/Widgets/ActionBar.vala:29
 msgid "New sticky note"
 msgstr "Nová lepiaca poznámka"
 
-#: src/Views/NoteView.vala:48
+#: src/Widgets/ActionBar.vala:41
 msgid "Delete sticky note"
 msgstr "Odstránenie samolepiacej poznámky"
 
-#: src/Views/NoteView.vala:63
+#: src/Widgets/ActionBar.vala:56
 msgid "Insert emoji"
 msgstr "Vložte emotikon"
 
-#: src/Views/NoteView.vala:79
+#: src/Widgets/ActionBar.vala:68
 msgid "Preferences for this sticky note"
 msgstr "Predvoľby pre túto samolepiacu poznámku"
 
-#. TRANSLATORS: Shown as a tooltip when people hover a color theme
-#: src/Widgets/ColorBox.vala:38
-msgid "Blueberry"
-msgstr "Čučoriedky"
-
-#: src/Widgets/ColorBox.vala:39
-msgid "Lime"
-msgstr "Vápno"
-
-#: src/Widgets/ColorBox.vala:40
-msgid "Mint"
-msgstr "Mäta"
-
-#: src/Widgets/ColorBox.vala:41
-msgid "Banana"
-msgstr "Banán"
-
-#: src/Widgets/ColorBox.vala:42
-msgid "Strawberry"
-msgstr "Jahoda"
-
-#: src/Widgets/ColorBox.vala:43
-msgid "Orange"
-msgstr "Oranžová"
-
-#: src/Widgets/ColorBox.vala:44
-msgid "Bubblegum"
-msgstr "Žuvačka"
-
-#: src/Widgets/ColorBox.vala:45
-msgid "Grape"
-msgstr "Hrozno"
-
-#: src/Widgets/ColorBox.vala:46
-msgid "Cocoa"
-msgstr "Kakao"
-
-#: src/Widgets/ColorBox.vala:47
-msgid "Slate"
-msgstr "Bridlica"
-
-#: src/Widgets/MonospaceBox.vala:27
+#. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
 #, fuzzy
 msgid "Default"
 msgstr "Predvolené písmo"
 
-#: src/Widgets/MonospaceBox.vala:28
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:34
 msgid "Click to use default text font"
 msgstr "Kliknutím použijete predvolené písmo textu"
 
-#: src/Widgets/MonospaceBox.vala:33
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/MonospaceBox.vala:34
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
 msgid "Click to use monospaced font"
 msgstr "Kliknutím na položku použijete jednoliate písmo"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
-#: src/Widgets/ZoomBox.vala:20
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
 #, c-format
 msgid "%d%%"
 msgstr "%d%%"
 
-#: src/Widgets/ZoomBox.vala:38
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:42
 msgid "Zoom out"
 msgstr "Zväčšenie"
 
-#: src/Widgets/ZoomBox.vala:45
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:49
 msgid "Default zoom level"
 msgstr "Predvolená úroveň priblíženia"
 
-#: src/Widgets/ZoomBox.vala:52
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Zoom in"
 msgstr "Priblíženie"
+
+#. /TRANSLATORS: These are the names of the elementary OS colours
+#: src/Objects/Themes.vala:59
+#: src/Objects/Themes.vala:69
+msgid "Blueberry"
+msgstr "Čučoriedky"
+
+#: src/Objects/Themes.vala:60
+msgid "Mint"
+msgstr "Mäta"
+
+#: src/Objects/Themes.vala:61
+msgid "Lime"
+msgstr "Vápno"
+
+#: src/Objects/Themes.vala:62
+msgid "Banana"
+msgstr "Banán"
+
+#: src/Objects/Themes.vala:63
+msgid "Orange"
+msgstr "Oranžová"
+
+#: src/Objects/Themes.vala:64
+msgid "Strawberry"
+msgstr "Jahoda"
+
+#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:68
+msgid "Slate"
+msgstr "Bridlica"
+
+#: src/Objects/Themes.vala:66
+msgid "Grape"
+msgstr "Hrozno"
+
+#: src/Objects/Themes.vala:67
+msgid "Cocoa"
+msgstr "Kakao"
+
+#: src/Utils/Random.vala:43
+msgid "All my very best friends"
+msgstr "Všetci moji najlepší priatelia"
+
+#: src/Utils/Random.vala:44
+msgid "My super good secret recipe"
+msgstr "Môj super dobrý tajný recept"
+
+#: src/Utils/Random.vala:45
+msgid "My todo list"
+msgstr "Môj zoznam úloh"
+
+#: src/Utils/Random.vala:46
+msgid "Super secret to not tell anyone"
+msgstr "Super tajomstvo, ktoré nikomu nepoviete"
+
+#: src/Utils/Random.vala:47
+msgid "My grocery list"
+msgstr "Môj zoznam potravín"
+
+#: src/Utils/Random.vala:48
+msgid "Random shower thoughts"
+msgstr "Náhodné myšlienky zo sprchy"
+
+#: src/Utils/Random.vala:49
+msgid "My fav fanfics"
+msgstr "Moje obľúbené fanfics"
+
+#: src/Utils/Random.vala:50
+msgid "My fav dinosaurs"
+msgstr "Moje obľúbené dinosaury"
+
+#: src/Utils/Random.vala:51
+msgid "My evil mastermind plan"
+msgstr "Môj zlý plán"
+
+#: src/Utils/Random.vala:52
+msgid "What made me smile today"
+msgstr "Čo ma dnes rozosmialo"
+
+#: src/Utils/Random.vala:53
+msgid "Hello world!"
+msgstr "Ahoj, svete!"
+
+#: src/Utils/Random.vala:54
+msgid "New sticky, new me"
+msgstr "Nové lepidlo, nové ja"
+
+#: src/Utils/Random.vala:55
+msgid "Hidden pirate treasure"
+msgstr "Skrytý pirátsky poklad"
+
+#: src/Utils/Random.vala:56
+msgid "To not forget, ever"
+msgstr "Nezabudnúť, nikdy"
+
+#: src/Utils/Random.vala:57
+msgid "Dear Diary,"
+msgstr "Drahý denník,"
+
+#: src/Utils/Random.vala:58
+msgid "Have a nice day! :)"
+msgstr "Prajem pekný deň! :)"
+
+#: src/Utils/Random.vala:59
+msgid "My meds schedule"
+msgstr "Môj rozpis liekov"
+
+#: src/Utils/Random.vala:60
+msgid "Household chores"
+msgstr "Domáce práce"
+
+#: src/Utils/Random.vala:61
+msgid "Ode to my cat"
+msgstr "Óda na moju mačku"
+
+#: src/Utils/Random.vala:62
+msgid "My dogs favourite toys"
+msgstr "Obľúbené hračky mojich psov"
+
+#: src/Utils/Random.vala:63
+msgid "How cool my birds are"
+msgstr "Aké sú moje vtáky cool"
+
+#: src/Utils/Random.vala:64
+msgid "Suspects in the Last Cookie affair"
+msgstr "Podozriví v kauze Last Cookie"
+
+#: src/Utils/Random.vala:65
+msgid "Words my parrots know"
+msgstr "Slová, ktoré moje papagáje poznajú"
+
+#: src/Utils/Random.vala:66
+msgid "Cool and funny compliments to give out"
+msgstr "Chladné a vtipné komplimenty na rozdávanie"
+
+#: src/Utils/Random.vala:67
+msgid "Ok, listen here,"
+msgstr "Dobre, počúvajte,"
+
+#: src/Utils/Random.vala:68
+msgid "My dream Pokemon team"
+msgstr "Môj vysnívaný tím Pokémonov"
+
+#: src/Utils/Random.vala:69
+msgid "My little notes"
+msgstr "Moje malé poznámky"
+
+#: src/Utils/Random.vala:70
+msgid "Surprise gift list"
+msgstr "Zoznam darčekov s prekvapením"
+
+#: src/Utils/Random.vala:71
+msgid "Brainstorming notes"
+msgstr "Poznámky k brainstormingu"
+
+#: src/Utils/Random.vala:72
+msgid "To bring to the party"
+msgstr "Prinesenie na večierok"
+
+#: src/Utils/Random.vala:73
+msgid "My amazing mixtape"
+msgstr "Môj úžasný mixtape"
+
+#: src/Utils/Random.vala:74
+msgid "Napkin scribblys"
+msgstr "Uteráčik scribblys"
+
+#: src/Utils/Random.vala:75
+msgid "My fav songs to sing along"
+msgstr "Moje obľúbené piesne na spievanie"
+
+#: src/Utils/Random.vala:76
+msgid "When to water which plant"
+msgstr "Kedy zalievať ktorú rastlinu"
+
+#: src/Utils/Random.vala:77
+msgid "Top 10 anime betrayals"
+msgstr "10 najlepších zrád v anime"
+
+#: src/Utils/Random.vala:78
+msgid "Amazing ascii art!"
+msgstr "Úžasné ascii umenie!"
+
+#: src/Utils/Random.vala:79
+msgid "For the barbecue"
+msgstr "Na grilovanie"
+
+#: src/Utils/Random.vala:80
+#, fuzzy
+msgid "My favourite bands"
+msgstr "Obľúbené hračky mojich psov"
+
+#: src/Utils/Random.vala:81
+msgid "Best ingredients for salad"
+msgstr "Najlepšie prísady do šalátu"
+
+#: src/Utils/Random.vala:82
+msgid "Books to read"
+msgstr "Knihy na čítanie"
+
+#: src/Utils/Random.vala:83
+msgid "Places to visit"
+msgstr "Miesta, ktoré môžete navštíviť"
+
+#: src/Utils/Random.vala:84
+msgid "Hobbies to try out"
+msgstr "Záľuby, ktoré si môžete vyskúšať"
+
+#: src/Utils/Random.vala:85
+msgid "Who would win against Goku"
+msgstr "Kto by vyhral proti Goku"
+
+#: src/Utils/Random.vala:86
+msgid "To plant in the garden"
+msgstr "Na výsadbu v záhrade"
+
+#: src/Utils/Random.vala:87
+msgid "Meals this week"
+msgstr "Jedlá tento týždeň"
+
+#: src/Utils/Random.vala:88
+msgid "Everyone's pizza order"
+msgstr "Objednávka pizze pre každého"
+
+#: src/Utils/Random.vala:89
+msgid "Today selfcare to do"
+msgstr "Dnes starostlivosť o seba"
+
+#: src/Utils/Random.vala:90
+msgid "Important affirmations to remember"
+msgstr "Dôležité afirmácie, ktoré si treba zapamätať"
+
+#: src/Utils/Random.vala:91
+msgid "The coolest linux apps"
+msgstr "Najzaujímavejšie aplikácie pre Linux"
+
+#: src/Utils/Random.vala:92
+#, fuzzy
+msgid "My favourite dishes"
+msgstr "Obľúbené hračky mojich psov"
+
+#: src/Utils/Random.vala:93
+msgid "My funniest jokes"
+msgstr "Moje najvtipnejšie vtipy"
+
+#: src/Utils/Random.vala:94
+msgid "The perfect breakfast has..."
+msgstr "Dokonalé raňajky majú..."
+
+#: src/Utils/Random.vala:129
+msgid "🔥WOW Congratulations!🔥"
+msgstr "🔥WOW Gratulujeme!🔥"
+
+#: src/Utils/Random.vala:131
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+""
+msgstr ""
+"Našli ste zlatú lepiacu poznámku!\n"
+"\n"
+"CRAZY BUT TRU: Táto správa sa objaví raz za tisíc krát!\n"
+"Nikto ti neuverí, hehehe ;)\n"
+"\n"
+"Dúfam, že vám moja malá aplikácia prinesie veľa radosti\n"
+"Prajem vám krásny deň!🎇\n"
+""
+
+#: src/Utils/Libportal.vala:16
+#: src/Views/PreferencesView.vala:129
+msgid "Remove Jorts from system autostart"
+msgstr "Odstrániť Jorts z automatického spúšťania systému"
+
+#: src/Utils/Libportal.vala:29
+#: src/Views/PreferencesView.vala:109
+msgid "Set Jorts to start with the computer"
+msgstr "Nastavenie Jorts na spustenie s počítačom"
 
 #: src/Views/PreferencesView.vala:25
 msgid "Request to system sent"
@@ -132,18 +379,10 @@ msgstr "Ak je táto možnosť zapnutá, skryje spodný pruh v samolepiacich pozn
 msgid "Set autostart"
 msgstr "Nastavenie automatického spustenia"
 
-#: src/Views/PreferencesView.vala:109
-msgid "Set Jorts to start with the computer"
-msgstr "Nastavenie Jorts na spustenie s počítačom"
-
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:119
 msgid "Remove autostart"
 msgstr "Odstránenie automatického spustenia"
-
-#: src/Views/PreferencesView.vala:129
-msgid "Remove Jorts from system autostart"
-msgstr "Odstrániť Jorts z automatického spúšťania systému"
 
 #: src/Views/PreferencesView.vala:142
 msgid "Allow to start at login"
@@ -165,16 +404,12 @@ msgstr "Zatvoriť"
 msgid "Close preferences"
 msgstr "Zatvoriť preferencie"
 
-#: src/Windows/StickyNoteWindow.vala:92
-#: src/Windows/StickyNoteWindow.vala:137
-#: src/Windows/StickyNoteWindow.vala:200
+#: src/Windows/StickyNoteWindow.vala:83
+#: src/Windows/StickyNoteWindow.vala:182
+#: src/Windows/StickyNoteWindow.vala:263
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Šortky"
-
-#: src/Windows/StickyNoteWindow.vala:112
-msgid "Click to edit the title"
-msgstr "Kliknutím upravíte názov"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -188,256 +423,21 @@ msgstr "Predvoľby pre všetky samolepiace poznámky"
 msgid "Preferences"
 msgstr "Predvoľby"
 
-#: src/Application.vala:174
-msgid "Create a new note"
-msgstr "Vytvorenie novej poznámky"
+#~ msgid "Bubblegum"
+#~ msgstr "Žuvačka"
 
-#: src/Application.vala:175
-msgid "Create a note then paste from clipboard"
-msgstr "Vytvorenie poznámky a jej vloženie zo schránky"
+#~ msgid "Create a new note"
+#~ msgstr "Vytvorenie novej poznámky"
 
-#: src/Application.vala:176
-msgid "Show preferences"
-msgstr "Zobraziť predvoľby"
+#~ msgid "Create a note then paste from clipboard"
+#~ msgstr "Vytvorenie poznámky a jej vloženie zo schránky"
 
-#: src/Application.vala:177
+#~ msgid "Show preferences"
+#~ msgstr "Zobraziť predvoľby"
+
 #, fuzzy
-msgid "Reset all settings"
-msgstr "Obnovenie všetkých predvolených nastavení"
-
-#: src/Services/Utils.vala:88
-msgid "All my very best friends"
-msgstr "Všetci moji najlepší priatelia"
-
-#: src/Services/Utils.vala:89
-msgid "My super good secret recipe"
-msgstr "Môj super dobrý tajný recept"
-
-#: src/Services/Utils.vala:90
-msgid "My todo list"
-msgstr "Môj zoznam úloh"
-
-#: src/Services/Utils.vala:91
-msgid "Super secret to not tell anyone"
-msgstr "Super tajomstvo, ktoré nikomu nepoviete"
-
-#: src/Services/Utils.vala:92
-msgid "My grocery list"
-msgstr "Môj zoznam potravín"
-
-#: src/Services/Utils.vala:93
-msgid "Random shower thoughts"
-msgstr "Náhodné myšlienky zo sprchy"
-
-#: src/Services/Utils.vala:94
-msgid "My fav fanfics"
-msgstr "Moje obľúbené fanfics"
-
-#: src/Services/Utils.vala:95
-msgid "My fav dinosaurs"
-msgstr "Moje obľúbené dinosaury"
-
-#: src/Services/Utils.vala:96
-msgid "My evil mastermind plan"
-msgstr "Môj zlý plán"
-
-#: src/Services/Utils.vala:97
-msgid "What made me smile today"
-msgstr "Čo ma dnes rozosmialo"
-
-#: src/Services/Utils.vala:98
-msgid "Hello world!"
-msgstr "Ahoj, svete!"
-
-#: src/Services/Utils.vala:99
-msgid "New sticky, new me"
-msgstr "Nové lepidlo, nové ja"
-
-#: src/Services/Utils.vala:100
-msgid "Hidden pirate treasure"
-msgstr "Skrytý pirátsky poklad"
-
-#: src/Services/Utils.vala:101
-msgid "To not forget, ever"
-msgstr "Nezabudnúť, nikdy"
-
-#: src/Services/Utils.vala:102
-msgid "Dear Diary,"
-msgstr "Drahý denník,"
-
-#: src/Services/Utils.vala:103
-msgid "Have a nice day! :)"
-msgstr "Prajem pekný deň! :)"
-
-#: src/Services/Utils.vala:104
-msgid "My meds schedule"
-msgstr "Môj rozpis liekov"
-
-#: src/Services/Utils.vala:105
-msgid "Household chores"
-msgstr "Domáce práce"
-
-#: src/Services/Utils.vala:106
-msgid "Ode to my cat"
-msgstr "Óda na moju mačku"
-
-#: src/Services/Utils.vala:107
-msgid "My dogs favourite toys"
-msgstr "Obľúbené hračky mojich psov"
-
-#: src/Services/Utils.vala:108
-msgid "How cool my birds are"
-msgstr "Aké sú moje vtáky cool"
-
-#: src/Services/Utils.vala:109
-msgid "Suspects in the Last Cookie affair"
-msgstr "Podozriví v kauze Last Cookie"
-
-#: src/Services/Utils.vala:110
-msgid "Words my parrots know"
-msgstr "Slová, ktoré moje papagáje poznajú"
-
-#: src/Services/Utils.vala:111
-msgid "Cool and funny compliments to give out"
-msgstr "Chladné a vtipné komplimenty na rozdávanie"
-
-#: src/Services/Utils.vala:112
-msgid "Ok, listen here,"
-msgstr "Dobre, počúvajte,"
-
-#: src/Services/Utils.vala:113
-msgid "My dream Pokemon team"
-msgstr "Môj vysnívaný tím Pokémonov"
-
-#: src/Services/Utils.vala:114
-msgid "My little notes"
-msgstr "Moje malé poznámky"
-
-#: src/Services/Utils.vala:115
-msgid "Surprise gift list"
-msgstr "Zoznam darčekov s prekvapením"
-
-#: src/Services/Utils.vala:116
-msgid "Brainstorming notes"
-msgstr "Poznámky k brainstormingu"
-
-#: src/Services/Utils.vala:117
-msgid "To bring to the party"
-msgstr "Prinesenie na večierok"
-
-#: src/Services/Utils.vala:118
-msgid "My amazing mixtape"
-msgstr "Môj úžasný mixtape"
-
-#: src/Services/Utils.vala:119
-msgid "Napkin scribblys"
-msgstr "Uteráčik scribblys"
-
-#: src/Services/Utils.vala:120
-msgid "My fav songs to sing along"
-msgstr "Moje obľúbené piesne na spievanie"
-
-#: src/Services/Utils.vala:121
-msgid "When to water which plant"
-msgstr "Kedy zalievať ktorú rastlinu"
-
-#: src/Services/Utils.vala:122
-msgid "Top 10 anime betrayals"
-msgstr "10 najlepších zrád v anime"
-
-#: src/Services/Utils.vala:123
-msgid "Amazing ascii art!"
-msgstr "Úžasné ascii umenie!"
-
-#: src/Services/Utils.vala:124
-msgid "For the barbecue"
-msgstr "Na grilovanie"
-
-#: src/Services/Utils.vala:125
-#, fuzzy
-msgid "My favourite bands"
-msgstr "Obľúbené hračky mojich psov"
-
-#: src/Services/Utils.vala:126
-msgid "Best ingredients for salad"
-msgstr "Najlepšie prísady do šalátu"
-
-#: src/Services/Utils.vala:127
-msgid "Books to read"
-msgstr "Knihy na čítanie"
-
-#: src/Services/Utils.vala:128
-msgid "Places to visit"
-msgstr "Miesta, ktoré môžete navštíviť"
-
-#: src/Services/Utils.vala:129
-msgid "Hobbies to try out"
-msgstr "Záľuby, ktoré si môžete vyskúšať"
-
-#: src/Services/Utils.vala:130
-msgid "Who would win against Goku"
-msgstr "Kto by vyhral proti Goku"
-
-#: src/Services/Utils.vala:131
-msgid "To plant in the garden"
-msgstr "Na výsadbu v záhrade"
-
-#: src/Services/Utils.vala:132
-msgid "Meals this week"
-msgstr "Jedlá tento týždeň"
-
-#: src/Services/Utils.vala:133
-msgid "Everyone's pizza order"
-msgstr "Objednávka pizze pre každého"
-
-#: src/Services/Utils.vala:134
-msgid "Today selfcare to do"
-msgstr "Dnes starostlivosť o seba"
-
-#: src/Services/Utils.vala:135
-msgid "Important affirmations to remember"
-msgstr "Dôležité afirmácie, ktoré si treba zapamätať"
-
-#: src/Services/Utils.vala:136
-msgid "The coolest linux apps"
-msgstr "Najzaujímavejšie aplikácie pre Linux"
-
-#: src/Services/Utils.vala:137
-#, fuzzy
-msgid "My favourite dishes"
-msgstr "Obľúbené hračky mojich psov"
-
-#: src/Services/Utils.vala:138
-msgid "My funniest jokes"
-msgstr "Moje najvtipnejšie vtipy"
-
-#: src/Services/Utils.vala:139
-msgid "The perfect breakfast has..."
-msgstr "Dokonalé raňajky majú..."
-
-#: src/Services/Utils.vala:170
-msgid "🔥WOW Congratulations!🔥"
-msgstr "🔥WOW Gratulujeme!🔥"
-
-#: src/Services/Utils.vala:172
-msgid ""
-"You have found the Golden Sticky Note!\n"
-"\n"
-"CRAZY BUT TRU: This message appears once in a thousand times!\n"
-"Nobody will believe you hehehe ;)\n"
-"\n"
-"I hope my little app brings you a lot of joy\n"
-"Have a great day!🎇\n"
-""
-msgstr ""
-"Našli ste zlatú lepiacu poznámku!\n"
-"\n"
-"CRAZY BUT TRU: Táto správa sa objaví raz za tisíc krát!\n"
-"Nikto ti neuverí, hehehe ;)\n"
-"\n"
-"Dúfam, že vám moja malá aplikácia prinesie veľa radosti\n"
-"Prajem vám krásny deň!🎇\n"
-""
+#~ msgid "Reset all settings"
+#~ msgstr "Obnovenie všetkých predvolených nastavení"
 
 #~ msgid "Reset to Default"
 #~ msgstr "Obnovenie predvoleného nastavenia"

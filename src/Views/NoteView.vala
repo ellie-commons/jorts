@@ -6,96 +6,62 @@
  */
 
  public class Jorts.NoteView : Gtk.Box {
+    public Gtk.HeaderBar headerbar;
+    public Jorts.EditableLabel editablelabel;
+    public Jorts.TextView textview;
+    public Jorts.ActionBar actionbar;
 
-        public Jorts.TextView textview;
-        public Gtk.ActionBar actionbar;
+    public Gtk.MenuButton emoji_button;
+    public Gtk.EmojiChooser emojichooser_popover;
+    public Gtk.MenuButton menu_button;
 
-        public Gtk.Button delete_item;
+    public bool monospace {
+        get { return textview.monospace;}
+        set { mono_set (value);}
+    }
 
-        public Gtk.MenuButton emoji_button;
-        public Gtk.EmojiChooser emojichooser_popover;
+    public bool scribbly {
+        get { return textview.scribbly;}
+        set { scribbly_set (value);}
+    }
 
-        public Gtk.MenuButton menu_button;
+    public string title {
+        owned get { return editablelabel.text;}
+        set { editablelabel.text = value;}
+    }
+
+    public string content {
+        owned get { return textview.text;}
+        set { textview.text = value;}
+    }
 
     construct {
         orientation = VERTICAL;
         spacing = 0;
 
-        // Define the text thingy
-        var scrolled = new Gtk.ScrolledWindow ();
+        headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = false
+        };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        headerbar.add_css_class ("headertitle");
+
+        // Defime the label you can edit. Which is editable.
+        editablelabel = new Jorts.EditableLabel ();
+        headerbar.set_title_widget (editablelabel);
+
         textview = new Jorts.TextView ();
-
-        scrolled.set_child (textview);
-
-        var new_item = new Gtk.Button () {
-            icon_name = "list-add-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>n"},
-                _("New sticky note")
-            )
-        };
-        new_item.action_name = Application.ACTION_PREFIX + Application.ACTION_NEW;
-        new_item.add_css_class ("themedbutton");
-
-        delete_item = new Gtk.Button () {
-            icon_name = "edit-delete-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>w"},
-                _("Delete sticky note")
-            )
-        };
-        delete_item.add_css_class ("themedbutton");
-
-
-
-        var emojichooser_popover = new Gtk.EmojiChooser ();
-
-        emoji_button = new Gtk.MenuButton () {
-            icon_name = Jorts.Utils.random_emote (),
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>period"},
-                _("Insert emoji")
-            )
-        };
-        emoji_button.add_css_class ("themedbutton");
-        emoji_button.popover = emojichooser_popover;
-
-
-
-
-
-        menu_button = new Gtk.MenuButton () {
-            icon_name = "open-menu-symbolic",
-            width_request = 32,
-            height_request = 32,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>M"},
-                _("Preferences for this sticky note")
-            )
-        };
-        menu_button.direction = Gtk.ArrowType.UP;
-        menu_button.add_css_class ("themedbutton");
-
-        actionbar = new Gtk.ActionBar () {
-            hexpand = true
-        };
-        actionbar.pack_start (new_item);
-        actionbar.pack_start (delete_item);
-        actionbar.pack_end (menu_button);
-        actionbar.pack_end (emoji_button);
-
-        var handle = new Gtk.WindowHandle () {
-            child = actionbar
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = textview
         };
 
+        actionbar = new Jorts.ActionBar ();
+        emoji_button = actionbar.emoji_button;
+        emojichooser_popover = actionbar.emojichooser_popover;
+        menu_button = actionbar.menu_button;
+
+        append (headerbar);
         append (scrolled);
-        append (handle);
+        append (actionbar);
         //set_focus_child (textview);
 
 
@@ -113,7 +79,7 @@
         });
 
         //The application tells us the show/hide bar state has changed!
-        Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
+        //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
 
@@ -128,4 +94,13 @@
         );
     }
 
+    private void mono_set (bool if_mono) {
+        editablelabel.monospace = if_mono;
+        textview.monospace = if_mono;
+    }
+
+    private void scribbly_set (bool if_scribbly) {
+        editablelabel.scribbly = if_scribbly;
+        textview.scribbly = if_scribbly;
+    }
 }

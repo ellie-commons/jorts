@@ -14,74 +14,29 @@ random_emote(skip_emote)
 random_note(skip_theme)
 
 */
-
 namespace Jorts.Utils {
 
     /*************************************************/
-    // We cannot use numbers in CSS, so we have to translate a number into a string
-    public string zoom_to_class (int zoom) {
-        switch (zoom) {
-            case 20: return "antsized";
-            case 40: return "muchsmaller";
-            case 60: return "smaller";
-            case 80: return "small";
-            case 100: return "normal_zoom";
-            case 120: return "big";
-            case 140: return "bigger";
-            case 160: return "muchbigger";
-            case 180: return "muchmuchbigger";
-            case 200: return "huge";
-            case 220: return "superhuge";
-            case 240: return "megahuge";
-            case 260: return "ultrahuge";
-            case 280: return "massive";
-            case 300: return "urmom";
-            default: return "normal_zoom";
-        }
-    }
-
-    /*************************************************/
-    // We cannot use numbers in CSS, so we have to translate a number into a string
-    public int zoom_to_UIsize (int zoom) {
-        switch (zoom) {
-            case 20: return 24;
-            case 40: return 26;
-            case 60: return 28;
-            case 80: return 30;
-            case 100: return 32;
-            case 120: return 34;
-            case 140: return 38;
-            case 160: return 40;
-            case 180: return 44;
-            case 200: return 48;
-            case 220: return 52;
-            case 240: return 54;
-            case 260: return 56;
-            case 280: return 60;
-            case 300: return 64;
-            default: return 32;
-        }
-    }
-
-    /*************************************************/
-    // Spits out a random theme for a new note
-    // If there is the name of a string to skip, just skip it.
-    // Having an gee.arraylist defined from the start only causes issues
-    public string random_theme (string? skip_theme = null) {
-        Gee.ArrayList<string> themes = new Gee.ArrayList<string> ();
-        themes.add_all_array (Jorts.Themes.all_string ());
+    /**
+    * Used for new notes without data. Optionally allows to skip one
+    * This avoids generating notes "randomly" with the same themes, which would be boring
+    */
+    public Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
+        Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
+        themes.add_all_array (Jorts.Themes.all ());
 
         if (skip_theme != null) {
-            themes.remove(skip_theme);
+            themes.remove (skip_theme);
         }
 
         var random_in_range = Random.int_range (0, themes.size);
         return themes[random_in_range];
     }
 
-
     /*************************************************/
-    // Spits out a cute or funny random title for a new sticky note
+    /**
+    * Placeholders for titles
+    */
     ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding 
     public string random_title () {
         string[] alltitles = {
@@ -142,9 +97,11 @@ namespace Jorts.Utils {
     }
 
     /*************************************************/
-    // Spits out a cute or funny random title for a new sticky note
+    /**
+    * Generates emotes for the emote menu button
+    * Optionally, skips one (typically the one to change from)
+    */
     public string random_emote (string? skip_emote = null) {
-
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
         allemotes.add_all_array (Jorts.Constants.EMOTES);
 
@@ -157,8 +114,10 @@ namespace Jorts.Utils {
     }
 
     /*************************************************/
-    // Hey! Looking in the source code is cheating!
-
+    /**
+    * Hey! Looking in the source code is cheating!
+    * Only for new notes which are not the first one
+    */
     public NoteData golden_sticky (NoteData blank_slate) {
 
         var random_in_range = Random.int_range (0, 1000);
@@ -177,7 +136,7 @@ Nobody will believe you hehehe ;)
 I hope my little app brings you a lot of joy
 Have a great day!🎇
 """);
-            blank_slate.theme = "BANANA";
+            blank_slate.theme = Jorts.Themes.BANANA;
         }
 
         return blank_slate;

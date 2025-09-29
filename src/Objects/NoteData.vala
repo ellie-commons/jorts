@@ -13,15 +13,15 @@
 public class Jorts.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
-    public static string? latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static int? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
+    public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
+    public static uint8? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
     public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
 
     public string title;
-    public string theme;
+    public Jorts.Themes theme;
     public string content;
     public bool monospace;
-    public int zoom;
+    public uint8 zoom;
     public int width;
     public int height;
 
@@ -29,8 +29,8 @@ public class Jorts.NoteData : Object {
     /**
     * Convert into a Json.Object()
     */
-    public NoteData (string? title = null, string? theme = null, string? content = null,
-                    bool? monospace = null, int? zoom = null, int? width = null, int? height = null)
+    public NoteData (string? title = null, Jorts.Themes? theme = null, string? content = null,
+                    bool? monospace = null, uint8? zoom = null, int? width = null, int? height = null)
     {
         // We assign defaults in case theres args missing
         this.title = title ?? Jorts.Utils.random_title ();
@@ -47,11 +47,14 @@ public class Jorts.NoteData : Object {
     * Parse a node to create an associated NoteData object
     */
     public NoteData.from_json (Json.Object node) {
+
+        print ("\nload json");
         title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
-        theme       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null));
+        var themestring       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null).to_string ());
+        theme = Jorts.Themes.from_string (themestring);
         content     = node.get_string_member_with_default ("content","");
         monospace   = node.get_boolean_member_with_default ("monospace",Jorts.Constants.DEFAULT_MONO);
-        zoom        = (int)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
+        zoom        = (uint8)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
         if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
@@ -68,7 +71,7 @@ public class Jorts.NoteData : Object {
     */
     public NoteData.from_random () {
         title = title ?? Jorts.Utils.random_title ();
-        theme = theme ?? Jorts.Utils.random_theme (latest_theme);
+        theme = Jorts.Utils.random_theme (latest_theme);
         content = content ?? "";
         monospace = latest_mono;
         zoom = latest_zoom;
@@ -88,7 +91,7 @@ public class Jorts.NoteData : Object {
         builder.set_member_name ("title");
         builder.add_string_value (title);
         builder.set_member_name ("theme");
-        builder.add_string_value (theme);
+        builder.add_string_value (theme.to_string ());
         builder.set_member_name ("content");
         builder.add_string_value (content);
         builder.set_member_name ("monospace");

@@ -5,51 +5,58 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-
-/*
-This handles everything view
-
-Notably:
--recognize links to open in fav browser
--recognize local links to open in Files
--Allow a zoom unzoom
-
-Hypertextview is a Granite widget derived from TextView
-
-Formatting code courtesy of Colin Kiama
-https://github.com/colinkiama/vala-gtk4-text-formatting-demo/tree/main
-
+/**
+* A textview incorporating detecting links and emails
+* Fairly vanilla but having a definition allows to easily extend it
 */
-
 public class Jorts.TextView : Granite.HyperTextView {
-        public TextView () {
 
-                this.buffer = new Gtk.TextBuffer (null);
-                this.bottom_margin = 12;
-                this.left_margin = 12;
-                this.right_margin = 12;
-                this.top_margin = 6;
+    public string text {
+        owned get {return buffer.text;}
+        set {buffer.text = value;}
+    }
 
-                this.set_hexpand (true);
-                this.set_vexpand (true);
-                this.set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+    public bool scribbly {
+        get { return "scribbly" in this.css_classes;}
+        set { scribbly_set (value);}
+    }
+
+    construct {
+        buffer = new Gtk.TextBuffer (null);
+        bottom_margin = 10;
+        left_margin = 10;
+        right_margin = 10;
+        top_margin = 5;
+
+        set_hexpand (true);
+        set_vexpand (true);
+        set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+
+        //Application.gsettings.bind ("scribbly-mode-active", this, "scribbly", SettingsBindFlags.DEFAULT);
+    }
+
+    public void paste () {
+        var clipboard = Gdk.Display.get_default ().get_clipboard ();
+        clipboard.read_text_async.begin ((null), (obj, res) => {
+
+            try {
+                var pasted_text = clipboard.read_text_async.end (res);
+                this.buffer.text = pasted_text;
+
+            } catch (Error e) {
+                print ("Cannot access clipboard: " + e.message);
+            }
+        });
+    }
+
+    private void scribbly_set (bool if_scribbly) {
+        if (if_scribbly) {
+            this.add_css_class ("scribbly");
+
+        } else {
+            if ("scribbly" in this.css_classes) {
+                this.remove_css_class ("scribbly");
+            }
         }
-
-        public string get_content () {
-                return this.buffer.text;
-        }
-
-        public void paste () {
-                var clipboard = Gdk.Display.get_default ().get_clipboard ();
-                clipboard.read_text_async.begin ((null), (obj, res) => {
-                try {
-
-                    var pasted_text = clipboard.read_text_async.end (res);
-                    this.buffer.text = pasted_text;
-
-                } catch (Error e) {
-                    print ("Cannot access clipboard: " + e.message);
-                }
-            });
-        }
+    }
 }

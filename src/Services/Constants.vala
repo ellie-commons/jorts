@@ -5,31 +5,25 @@
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
  */
 
-/* CONTENT
-Just Dump constants here
+/**
+* I just dump all my constants here
 */
-
 namespace Jorts.Constants {
-
-
 
     /*************************************************/
     const string RDNN                    = "io.github.ellie_commons.jorts";
     const string DONATE_LINK             = "https://ko-fi.com/teamcons";
 
     // signature theme
-    const string DEFAULT_THEME           = "BLUEBERRY";
-    const int DAYS_BETWEEN_BACKUPS       = 30;
-
-
+    const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.ORANGE;
 
     // in ms
     const int DEBOUNCE                   = 1000;
 
     // We need to say stop at some point
-    const int ZOOM_MAX                   = 240;
-    const int DEFAULT_ZOOM               = 100;
-    const int ZOOM_MIN                   = 40;
+    const uint8 ZOOM_MAX                   = 240;
+    const uint8 DEFAULT_ZOOM               = 100;
+    const uint8 ZOOM_MIN                   = 40;
     const bool DEFAULT_MONO               = false;
 
     // For new stickies
@@ -42,14 +36,14 @@ namespace Jorts.Constants {
 
     /*************************************************/
     // Shortcuts
-    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal", "<control>0", "<Control>KP_0" };
+    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal", "<Control>0", "<Control>KP_0" };
     const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>KP_Add" };
     const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
 
     const string ACTION_PREFIX   = "app.";
     const string ACTION_NEW      = "action_new";
     const string ACTION_DELETE   = "action_delete";
-    const string ACTION_SAVE   = "action_delete";
+    const string ACTION_SAVE    = "action_delete";
     const string ACTION_QUIT   = "action_quit";
 
     const string ACTION_ZOOM_OUT = "zoom_out";
@@ -64,23 +58,7 @@ namespace Jorts.Constants {
     const string[] ACCELS_SCRIBBLY =     {"<Control>h"};
     const string[] ACCELS_EMOTE =     {"<Control>period"};
 
-
-    /*************************************************/
-    // As seen on TV!
-    // Later adds: LATTE, BLACK, SILVER, AUTO
-    const string[] THEMES = {
-        "BLUEBERRY",
-        "MINT",
-        "LIME",
-        "BANANA",
-        "ORANGE",
-        "STRAWBERRY",
-        "BUBBLEGUM",
-        "GRAPE",
-        "COCOA",
-        "SLATE"
-    };
-
+    // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {
         "face-angel-symbolic",
         "face-angry-symbolic",
@@ -94,7 +72,7 @@ namespace Jorts.Constants {
         "face-plain-symbolic",
         "face-raspberry-symbolic",
         "face-sad-symbolic",
-        "face-sick-symbolic",                
+        "face-sick-symbolic",
         "face-smile-symbolic",
         "face-smile-big-symbolic",
         "face-smirk-symbolic",

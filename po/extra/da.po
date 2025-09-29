@@ -8,32 +8,32 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-08 23:37+0200\n"
+"POT-Creation-Date: 2025-09-29 21:23+0200\n"
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 
-#: data/jorts.desktop.in:3
+#: data/jorts.desktop.in:5
 msgid "Jorts"
 msgstr "Jorts"
 
-#: data/jorts.desktop.in:4
+#: data/jorts.desktop.in:6
 #: data/jorts.metainfo.xml.in:43
 msgid "Sticky notes"
 msgstr "Sticky notes"
 
-#: data/jorts.desktop.in:5
+#: data/jorts.desktop.in:7
 msgid "Write down notes, reminders, random thoughts and other short-term informations"
 msgstr "Skriv noter, påmindelser, tilfældige tanker og andre kortvarige informationer ned."
 
-#: data/jorts.desktop.in:10
+#: data/jorts.desktop.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr "tekst;almindelig;almindelig tekst;notesblok;noter;klistermærke;post-it;"
 
-#: data/jorts.desktop.in:17
+#: data/jorts.desktop.in:18
 msgid "New sticky note"
 msgstr "Ny sticky note"
 
-#: data/jorts.desktop.in:22
+#: data/jorts.desktop.in:23
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Indstillinger"
@@ -149,7 +149,7 @@ msgstr "Indstillingsdialogen i mørk tilstand"
 
 #: data/jorts.metainfo.xml.in:99
 #, fuzzy
-msgid "3.4.0 Jorts of Autumn"
+msgid "3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Lysets Jorts"
 
 #: data/jorts.metainfo.xml.in:101
@@ -173,390 +173,397 @@ msgid "Ctrl+M to open note settings now"
 msgstr "Ctrl+M for at åbne noteindstillinger nu"
 
 #: data/jorts.metainfo.xml.in:106
-msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-msgstr "Nye indstillinger: OpenDyslexia-skrifttyper. elementary OS har det OOTB, men ikke andre DE'er"
+msgid "Alt+Number to change theme quickly"
+msgstr "Alt+Number for at skifte tema hurtigt"
 
 #: data/jorts.metainfo.xml.in:107
+msgid "Some UI elements show up after being shown, for a sleek vibe"
+msgstr "Nogle UI-elementer dukker op, når de er blevet vist, for at give en elegant stemning"
+
+#: data/jorts.metainfo.xml.in:108
 msgid "New note setting: Monospace. Could be for accessibility, could be for ascii doodles"
 msgstr "Ny noteindstilling: Monospace. Kunne være for tilgængelighed, kunne være for ascii-doodles"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:109
 msgid "Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs"
 msgstr "Renere og pænere kode under motorhjelmen. Sandsynligvis marginalt forbedret ydeevne eller færre kantfejl"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:110
 msgid "Better commented text and code, for translators and eventual contributors"
 msgstr "Bedre kommenteret tekst og kode til oversættere og eventuelle bidragydere"
 
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:117
 msgid "Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)"
 msgstr "Fejlrettelse: Jorts, der bliver hængende i baggrunden, åbnes ikke længere, hvis alle vinduer er lukket (#77)"
 
-#: data/jorts.metainfo.xml.in:122
+#: data/jorts.metainfo.xml.in:123
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jorts"
 
-#: data/jorts.metainfo.xml.in:124
+#: data/jorts.metainfo.xml.in:125
 msgid "Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)"
 msgstr "Bugfix: At hele vinduet kunne gribes forstyrrede tekstredigering. Nu er det kun actionbar og header, der er det (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:125
+#: data/jorts.metainfo.xml.in:126
 msgid "Added more random titles"
 msgstr "Tilføjet flere tilfældige titler"
 
-#: data/jorts.metainfo.xml.in:126
+#: data/jorts.metainfo.xml.in:127
 msgid "Buttons for add/remove autostart"
 msgstr "Knapper til at tilføje/fjerne autostart"
 
-#: data/jorts.metainfo.xml.in:127
+#: data/jorts.metainfo.xml.in:128
 msgid "Some more title placeholders"
 msgstr "Nogle flere titelpladsholdere"
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:129
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Ændringer under motorhjelmen her og der for renere kode"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:135
 msgid "Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot."
 msgstr "Bugfix: Når actionbaren var slået fra, efterlod den et tomt rum. Det er nu rettet - med en mere prangende animation til at starte med."
 
-#: data/jorts.metainfo.xml.in:139
+#: data/jorts.metainfo.xml.in:140
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:142
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Tilføj en cool lille animation, når du aktiverer/deaktiverer actionbar"
 
-#: data/jorts.metainfo.xml.in:142
+#: data/jorts.metainfo.xml.in:143
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "Rettet sløring i højskaleret skærm på grund af Flathub BS"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:144
 msgid "Added high-resolution screenshots"
 msgstr "Tilføjet skærmbilleder i høj opløsning"
 
-#: data/jorts.metainfo.xml.in:144
+#: data/jorts.metainfo.xml.in:145
 msgid "Last minute bugfix, somehow accels did not work when the Preferences were focused"
 msgstr "Sidste øjebliks bugfix, på en eller anden måde virkede accels ikke, når præferencerne var fokuserede"
 
-#: data/jorts.metainfo.xml.in:145
+#: data/jorts.metainfo.xml.in:146
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Lidt husholdning for FR og DE, mens vi er i gang"
 
-#: data/jorts.metainfo.xml.in:147
+#: data/jorts.metainfo.xml.in:148
 msgid "😎 Guests stars:"
 msgstr "😎 Gæster stjerner:"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:150
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride-udgaven: Et dejligt midlertidigt ikon af @wpkelso"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:151
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:157
 #, fuzzy
 msgid "3.1.3 Jorts of fire and lava"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:158
+#: data/jorts.metainfo.xml.in:159
 msgid "Save memory and disk writes by adding a proper debounce"
 msgstr "Spar hukommelse og diskskrivning ved at tilføje en ordentlig debounce"
 
-#: data/jorts.metainfo.xml.in:159
+#: data/jorts.metainfo.xml.in:160
 #, fuzzy
 msgid "Updated IT translations thanks to @albanobattistella!"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:160
+#: data/jorts.metainfo.xml.in:161
 #, fuzzy
 msgid "Updated JA translations thanks to @RyoNakano!"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:166
+#: data/jorts.metainfo.xml.in:167
 msgid "3.1.2 Amendments for flathub"
 msgstr "3.1.2 Ændringer for flathub"
 
-#: data/jorts.metainfo.xml.in:168
+#: data/jorts.metainfo.xml.in:169
 msgid "Nothing interesting here"
 msgstr "Intet interessant her"
 
-#: data/jorts.metainfo.xml.in:174
+#: data/jorts.metainfo.xml.in:175
 msgid "3.1.1 Woops"
 msgstr "3.1.1 Ups"
 
-#: data/jorts.metainfo.xml.in:176
+#: data/jorts.metainfo.xml.in:177
 msgid "Minor screenshot amendments"
 msgstr "Mindre ændringer af skærmbilleder"
 
-#: data/jorts.metainfo.xml.in:182
+#: data/jorts.metainfo.xml.in:183
 msgid "3.1.0 Jorts of songs and Jorts of dance"
 msgstr "3.1.0 Jorts med sange og jorts med dans"
 
-#: data/jorts.metainfo.xml.in:184
+#: data/jorts.metainfo.xml.in:185
 msgid "Flathub version, with a lot of help from @RyoNakano"
 msgstr "Flathub-version, med stor hjælp fra @RyoNakano"
 
-#: data/jorts.metainfo.xml.in:190
+#: data/jorts.metainfo.xml.in:191
 #, fuzzy
 msgid "3.0.0 Jorts of Thunder"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:192
+#: data/jorts.metainfo.xml.in:193
 msgid "A lovely brand new icon thanks to @wpkelso"
 msgstr "Et dejligt helt nyt ikon takket være @wpkelso"
 
-#: data/jorts.metainfo.xml.in:193
+#: data/jorts.metainfo.xml.in:194
 msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
 msgstr "Mellem denne og GTK4-porten er der meget lidt tilbage fra gamle Notejot... Vi kan sige, at det er en v3"
 
-#: data/jorts.metainfo.xml.in:194
+#: data/jorts.metainfo.xml.in:195
 msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
 msgstr "Gør appen mere universel: Andre DE'er beholder ikke vinduesdimensioner, så genimplementer gem og gendan"
 
-#: data/jorts.metainfo.xml.in:200
+#: data/jorts.metainfo.xml.in:201
 #, fuzzy
 msgid "Updated RU translations thanks to @camellan!"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:205
+#: data/jorts.metainfo.xml.in:206
 #, fuzzy
 msgid "Updated screenshots"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:210
+#: data/jorts.metainfo.xml.in:211
 #, fuzzy
 msgid "2.4.0 The Jorts of Ice"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:212
+#: data/jorts.metainfo.xml.in:213
 msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
 msgstr "Takket være RyoNakano, der omarbejder japanske oversættelser, vil japansktalende føle sig mere hjemme nu"
 
-#: data/jorts.metainfo.xml.in:213
+#: data/jorts.metainfo.xml.in:214
 msgid "Respect reduce animations settings"
 msgstr "Respekter indstillingerne for reduktion af animationer"
 
-#: data/jorts.metainfo.xml.in:214
+#: data/jorts.metainfo.xml.in:215
 #, fuzzy
 msgid "Scribble mode exclusively in the preferences now"
 msgstr "scribbly-tilstand er blevet flyttet til den nye indstillingsdialog"
 
-#: data/jorts.metainfo.xml.in:215
+#: data/jorts.metainfo.xml.in:216
 msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
 msgstr "Tilføj præference: Nu kan du skjule den nederste bjælke! (Ctrl+t)"
 
-#: data/jorts.metainfo.xml.in:216
+#: data/jorts.metainfo.xml.in:217
 msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
 msgstr "Bugfix: Fikset elementer, der flytter sig, når en notes titel holdes over eller vælges"
 
-#: data/jorts.metainfo.xml.in:217
+#: data/jorts.metainfo.xml.in:218
 msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
 msgstr "Bugfix: Nye og slettede accels virkede ikke oops sorry det er rettet nu"
 
-#: data/jorts.metainfo.xml.in:218
+#: data/jorts.metainfo.xml.in:219
 msgid "Bugfix where random components skipped the last possible choice"
 msgstr "Fejlrettelse, hvor tilfældige komponenter sprang det sidste mulige valg over"
 
-#: data/jorts.metainfo.xml.in:219
+#: data/jorts.metainfo.xml.in:220
 msgid "Bugfix: shortcut for emotes did not show up properly"
 msgstr "Bugfix: Genvej til emotes blev ikke vist korrekt"
 
-#: data/jorts.metainfo.xml.in:220
+#: data/jorts.metainfo.xml.in:221
 msgid "Lil easter egg"
 msgstr "Lille påskeæg"
 
-#: data/jorts.metainfo.xml.in:226
+#: data/jorts.metainfo.xml.in:227
 msgid "2.3.0 The Inner Jorts"
 msgstr "2.3.0 De indre shorts"
 
-#: data/jorts.metainfo.xml.in:228
+#: data/jorts.metainfo.xml.in:229
 msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
 msgstr "Ny funktion: Indstillingsdialog! Højreklik på app-ikonet for at se indstillingen"
 
-#: data/jorts.metainfo.xml.in:229
+#: data/jorts.metainfo.xml.in:230
 msgid "scribbly mode has been moved to the new preference dialog"
 msgstr "scribbly-tilstand er blevet flyttet til den nye indstillingsdialog"
 
-#: data/jorts.metainfo.xml.in:230
+#: data/jorts.metainfo.xml.in:231
 msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
 msgstr "Til oversættere: Oversættelserne er blevet opdelt i 2: En til brugergrænsefladen og en til det ekstra indhold."
 
-#: data/jorts.metainfo.xml.in:231
+#: data/jorts.metainfo.xml.in:232
 msgid "Comfort: Easier to grab and drag stickies"
 msgstr "Komfort: Lettere at gribe og trække klistermærker"
 
-#: data/jorts.metainfo.xml.in:232
+#: data/jorts.metainfo.xml.in:233
 msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
 msgstr "Bugfix: Skærmbilleder i appcenteret var noget rod aaaa"
 
-#: data/jorts.metainfo.xml.in:238
+#: data/jorts.metainfo.xml.in:239
 msgid "Updated translations"
 msgstr "Opdaterede oversættelser"
 
-#: data/jorts.metainfo.xml.in:243
+#: data/jorts.metainfo.xml.in:244
 msgid "2.2.0 The Jorts of light"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:245
-#: data/jorts.metainfo.xml.in:260
+#: data/jorts.metainfo.xml.in:246
+#: data/jorts.metainfo.xml.in:261
 msgid "Better translation coverage"
 msgstr "Bedre dækning af oversættelser"
 
-#: data/jorts.metainfo.xml.in:246
+#: data/jorts.metainfo.xml.in:247
 msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
 msgstr "Ny funktion: skribletilstand! Skjul indholdet af klistermærker, når du er ufokuseret"
 
-#: data/jorts.metainfo.xml.in:247
+#: data/jorts.metainfo.xml.in:248
 msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
 msgstr "Ny funktion: Emoji-vælger-knap! Jeg ved godt, at der er en ved højreklik, men knapper er mere tilgængelige!"
 
-#: data/jorts.metainfo.xml.in:248
+#: data/jorts.metainfo.xml.in:249
 msgid "The button in the toolbar displays a random emote everytime you click!"
 msgstr "Knappen i værktøjslinjen viser en tilfældig emote, hver gang du klikker!"
 
-#: data/jorts.metainfo.xml.in:249
+#: data/jorts.metainfo.xml.in:250
 msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
 msgstr "Ny funktion: Jorts laver en månedlig backup. Hvis der skulle opstå problemer, kan du gendanne data!"
 
-#: data/jorts.metainfo.xml.in:250
+#: data/jorts.metainfo.xml.in:251
 msgid "Should the main storage be corrupted, Jorts tries to load from backup"
 msgstr "Hvis hovedlageret bliver beskadiget, forsøger Jorts at indlæse fra backup."
 
-#: data/jorts.metainfo.xml.in:251
+#: data/jorts.metainfo.xml.in:252
 msgid "Some new fun/cute default titles"
 msgstr "Nogle nye sjove/søde standardtitler"
 
-#: data/jorts.metainfo.xml.in:252
+#: data/jorts.metainfo.xml.in:253
 msgid "Under the hood changes here and there for cleaner code"
 msgstr "Ændringer under motorhjelmen her og der for renere kode"
 
-#: data/jorts.metainfo.xml.in:258
+#: data/jorts.metainfo.xml.in:259
 msgid "2.1.2 The unrippable jorts"
 msgstr "2.1.2 De uberørbare jorts"
 
-#: data/jorts.metainfo.xml.in:261
+#: data/jorts.metainfo.xml.in:262
 msgid "Add relief to actionbar buttons"
 msgstr "Tilføj relief til actionbar-knapper"
 
-#: data/jorts.metainfo.xml.in:262
+#: data/jorts.metainfo.xml.in:263
 msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
 msgstr "Bugfix: Kanttilfælde, hvor tema eller zoom ikke blev gemt korrekt"
 
-#: data/jorts.metainfo.xml.in:263
+#: data/jorts.metainfo.xml.in:264
 msgid "Bugfix: Title in multitasking not set correctly"
 msgstr "Bugfix: Titel i multitasking indstilles ikke korrekt"
 
-#: data/jorts.metainfo.xml.in:264
+#: data/jorts.metainfo.xml.in:265
 msgid "Bugfix: Icon inconsistency accross icon themes"
 msgstr "Bugfix: Ikoninkonsistens på tværs af ikontemaer"
 
-#: data/jorts.metainfo.xml.in:265
+#: data/jorts.metainfo.xml.in:266
 msgid "Bugfix: Theming inconsistencies accross stickies"
 msgstr "Bugfix: Uoverensstemmelser i tematisering på tværs af stickies"
 
-#: data/jorts.metainfo.xml.in:271
+#: data/jorts.metainfo.xml.in:272
 msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
 msgstr "2.1.1 Frisk fra vaskeriet! (2: elektrisk boogaloo)"
 
-#: data/jorts.metainfo.xml.in:273
+#: data/jorts.metainfo.xml.in:274
 msgid "Clearer appmenu description"
 msgstr "Tydeligere beskrivelse af appmenu"
 
-#: data/jorts.metainfo.xml.in:274
+#: data/jorts.metainfo.xml.in:275
 msgid "More consistent theming"
 msgstr "Mere konsekvent tematisering"
 
-#: data/jorts.metainfo.xml.in:275
+#: data/jorts.metainfo.xml.in:276
 msgid "Bugfix: the delete shortcut was unresponsible"
 msgstr "Bugfix: genvejen til at slette var uansvarlig"
 
-#: data/jorts.metainfo.xml.in:276
+#: data/jorts.metainfo.xml.in:277
 msgid "Bugfix: screenshot not showing"
 msgstr "Bugfix: skærmbillede vises ikke"
 
-#: data/jorts.metainfo.xml.in:282
+#: data/jorts.metainfo.xml.in:283
 msgid "2.1.0 Fresh out of the laundry!"
 msgstr "2.1.0 Frisk fra vaskeriet!"
 
-#: data/jorts.metainfo.xml.in:284
+#: data/jorts.metainfo.xml.in:285
 msgid "Includes a per-note zoom! So you can get bigger or smaller text"
 msgstr "Inkluderer en zoom pr. note! Så du kan få større eller mindre tekst"
 
-#: data/jorts.metainfo.xml.in:285
+#: data/jorts.metainfo.xml.in:286
 msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
 msgstr "Senest indstillede zoom, dvs. det, der er mest behageligt for dig, forbliver som standard for nye noter"
 
-#: data/jorts.metainfo.xml.in:286
+#: data/jorts.metainfo.xml.in:287
 msgid "Better readability (WCAG AA or AAA depending on theme)"
 msgstr "Bedre læsbarhed (WCAG AA eller AAA afhængigt af tema)"
 
-#: data/jorts.metainfo.xml.in:287
+#: data/jorts.metainfo.xml.in:288
 msgid "Also slightly better looking theme. Yes even more :)"
 msgstr "Også et lidt flottere tema. Ja endnu mere :)"
 
-#: data/jorts.metainfo.xml.in:288
+#: data/jorts.metainfo.xml.in:289
 msgid "Improved translations"
 msgstr "Forbedrede oversættelser"
 
-#: data/jorts.metainfo.xml.in:289
+#: data/jorts.metainfo.xml.in:290
 msgid "Better shortcut and tooltips"
 msgstr "Bedre genveje og værktøjstips"
 
-#: data/jorts.metainfo.xml.in:290
+#: data/jorts.metainfo.xml.in:291
 msgid "Fixed a bug where Jorts stayed on light system theme"
 msgstr "Rettet en fejl, hvor Jorts forblev på det lyse systemtema"
 
-#: data/jorts.metainfo.xml.in:296
+#: data/jorts.metainfo.xml.in:297
 msgid "2.0.1 Appcenter release"
 msgstr "2.0.1 Appcenter-udgivelse"
 
-#: data/jorts.metainfo.xml.in:301
+#: data/jorts.metainfo.xml.in:302
 msgid "2.0.0 Release: Slate And Bubblegum"
 msgstr "2.0.0 udgivelse: Skifer og tyggegummi"
 
-#: data/jorts.metainfo.xml.in:303
+#: data/jorts.metainfo.xml.in:304
 msgid "Revival of an ancient but well loved version of Notejot"
 msgstr "Genoplivning af en gammel, men elsket version af Notejot"
 
-#: data/jorts.metainfo.xml.in:304
+#: data/jorts.metainfo.xml.in:305
 msgid "The app is now named Jorts. You however cannot wear it"
 msgstr "Appen hedder nu Jorts. Du kan dog ikke bære den"
 
-#: data/jorts.metainfo.xml.in:305
+#: data/jorts.metainfo.xml.in:306
 msgid "10 lovely little colours"
 msgstr "10 dejlige små farver"
 
-#: data/jorts.metainfo.xml.in:306
+#: data/jorts.metainfo.xml.in:307
 msgid "Built atop of modern Linux technologies and packaging formats"
 msgstr "Bygget oven på moderne Linux-teknologier og pakkeformater"
 
-#: data/jorts.metainfo.xml.in:307
+#: data/jorts.metainfo.xml.in:308
 msgid "Smooth transition when changing theme"
 msgstr "Jævn overgang ved skift af tema"
 
-#: data/jorts.metainfo.xml.in:308
+#: data/jorts.metainfo.xml.in:309
 msgid "New stickies have a random fun little title and colour"
 msgstr "Nye stickies har en tilfældig sjov lille titel og farve"
 
-#: data/jorts.metainfo.xml.in:309
+#: data/jorts.metainfo.xml.in:310
 msgid "A few initial translations included, and more to come"
 msgstr "Et par indledende oversættelser er inkluderet, og flere er på vej"
 
-#: data/jorts.metainfo.xml.in:310
+#: data/jorts.metainfo.xml.in:311
 msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
 msgstr "E-mail og links er klikbare! Ctrl+Klik for at åbne i mail eller browser"
 
-#: data/jorts.metainfo.xml.in:311
+#: data/jorts.metainfo.xml.in:312
 msgid "Text supports undo, redo, and you can use emojis :)"
 msgstr "Tekst understøtter fortryd, gør om, og du kan bruge emojis :)"
+
+#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
+#~ msgstr "Nye indstillinger: OpenDyslexia-skrifttyper. elementary OS har det OOTB, men ikke andre DE'er"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Værktøj til huskesedler"

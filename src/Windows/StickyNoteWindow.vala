@@ -6,59 +6,28 @@
  */
 
 
-/* CONTENT
-
-Each StickyNoteWindow instance is a sticky note
-It takes a NoteData, and creates the UI
-
-It is connected to settings and reacts to changes
-
-It sometimes calls Application methods for actions that requires higher oversight level
-like creating a new note, or saving
-
-Notably, it interacts with popover - a SettingsPopover instant, where stuff is more hairy
-Both interact through signals and methods.
-
-A method packages the informations into one NoteData
-Theme and Zoom changing are just a matter of adding and removing classes
-
-
+/**
+* Represents a Sticky Note, with its own settings and content
+* There is a View, which contains the text
+* There is a Popover, which manages the per-window settings (Tail wagging the dog situation)
+* Can be packaged into a noteData file for convenient storage
+* Reports to the NoteManager for saving
 */
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
-    private Gtk.HeaderBar headerbar;
-    public Gtk.EditableLabel editableheader;
-    private Jorts.NoteView view;
+    public Jorts.NoteView view;
     private PopoverView popover;
     public TextView textview;
 
-    private string _theme;
-
-    public string theme {
-        get { return _theme;}
-        set {on_theme_changed (value);}
+    public NoteData data {
+        owned get { return packaged ();}
+        set { load_data (value);}
     }
-
-    public bool monospace {
-        get { return view.textview.monospace;}
-        set {on_monospace_changed (value);}
-    }
-
-    private int _zoom;
-    public int zoom {
-        get { return _zoom;}
-        set {do_set_zoom (value);}
-    }
-
 
     private static uint debounce_timer_id;
 
-    // Connected to by the NoteManager to know it is time to save
-    public signal void changed ();
-
     private const string ACTION_PREFIX = "app.";
-    private const string ACTION_DELETE = "action_delete";
     private const string ACTION_SHOW_EMOJI = "action_show_emoji";
     private const string ACTION_SHOW_MENU = "action_show_menu";
     private const string ACTION_FOCUS_TITLE = "action_focus_title";
@@ -66,22 +35,42 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
     private const string ACTION_ZOOM_IN = "action_zoom_in";
 
+    private const string ACTION_THEME_1 = "action_theme_1";
+    private const string ACTION_THEME_2 = "action_theme_2";
+    private const string ACTION_THEME_3 = "action_theme_3";
+    private const string ACTION_THEME_4 = "action_theme_4";
+    private const string ACTION_THEME_5 = "action_theme_5";
+    private const string ACTION_THEME_6 = "action_theme_6";
+    private const string ACTION_THEME_7 = "action_theme_7";
+    private const string ACTION_THEME_8 = "action_theme_8";
+    private const string ACTION_THEME_9 = "action_theme_9";
+    private const string ACTION_THEME_0 = "action_theme_0";
+
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { ACTION_DELETE, action_delete},
+        { Application.ACTION_DELETE, action_delete},
         { ACTION_SHOW_EMOJI, action_show_emoji},
         { ACTION_SHOW_MENU, action_show_menu},
         { ACTION_FOCUS_TITLE, action_focus_title},
         { ACTION_ZOOM_OUT, action_zoom_out},
         { ACTION_ZOOM_DEFAULT, action_zoom_default},
         { ACTION_ZOOM_IN, action_zoom_in},
+        { ACTION_THEME_1, action_theme_1},
+        { ACTION_THEME_2, action_theme_2},
+        { ACTION_THEME_3, action_theme_3},
+        { ACTION_THEME_4, action_theme_4},
+        { ACTION_THEME_5, action_theme_5},
+        { ACTION_THEME_6, action_theme_6},
+        { ACTION_THEME_7, action_theme_7},
+        { ACTION_THEME_8, action_theme_8},
+        { ACTION_THEME_9, action_theme_9},
+        { ACTION_THEME_0, action_theme_0},
     };
 
     public StickyNoteWindow (Gtk.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
-
         application = app;
 
         var actions = new SimpleActionGroup ();
@@ -98,54 +87,24 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         /*              HEADERBAR                */
         /*****************************************/
 
-        this.headerbar = new Gtk.HeaderBar () {
-            show_title_buttons = false
-        };
-        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        headerbar.add_css_class ("headertitle");
-
-
-        // Defime the label you can edit. Which is editable.
-        editableheader = new Gtk.EditableLabel ("") {
-            xalign = 0.5f,
-            halign = Gtk.Align.CENTER,
-            tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>L"},
-                _("Click to edit the title")
-            )
-        };
-        editableheader.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
-        headerbar.set_title_widget (editableheader);
-        this.set_titlebar (headerbar);
+        // No
+        titlebar = new Gtk.Grid () {visible = false};
 
         view = new NoteView ();
-        view.delete_item.action_name = ACTION_PREFIX + ACTION_DELETE;
         textview = view.textview;
 
-        popover = new Jorts.PopoverView ();
+        popover = new Jorts.PopoverView (this);
         view.menu_button.popover = popover;
 
         set_child (view);
         set_focus (view);
 
-
         /****************************************/
         /*              LOADING                 */
         /****************************************/
+
         on_scribbly_changed ();
- 
-        set_default_size (data.width, data.height);
-        editableheader.text = data.title;
-        title = editableheader.text + _(" - Jorts");
-        view.textview.buffer.text = data.content;
-
-
-        popover.color_button_box.set_toggles (data.theme);
-
-        this.zoom = data.zoom;
-        this.monospace = data.monospace;
-        this.theme = data.theme;
-
+        load_data (data);
 
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
@@ -154,32 +113,54 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("Built UI. Lets do connects and binds");
 
         // Save when title or text have changed
-        editableheader.changed.connect (on_editable_changed);
+        view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (debounce_save);
-
-        // The settings popover tells us a new theme has been chosen!
-        popover.theme_changed.connect (on_theme_changed);
-
-        // The settings popover tells us a new zoom has been chosen!
-        popover.monospace_changed.connect (on_monospace_changed);
-
-        // The settings popover tells us a new zoom has been chosen!
-        popover.zoom_changed.connect (on_zoom_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
 
         //The application tells us the squiffly state has changed!
+        on_scribbly_changed ();
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
 
-    } // END OF MAIN CONSTRUCT
+
+        // Respect animation settings for showing ui elements
+        if (Gtk.Settings.get_default ().gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
+                show.connect_after (delayed_show);
+
+        } else {
+            Application.gsettings.bind (
+                "hide-bar",
+                view.actionbar.actionbar,
+                "revealed",
+                SettingsBindFlags.INVERT_BOOLEAN);
+        }
+    }
 
 
         /********************************************/
         /*                  METHODS                 */
         /********************************************/
 
-    // Add a debounce so we aren't writing the entire buffer every character input
+    /**
+    * Show Actionbar shortly after the window is shown
+    * This is more for the Aesthetic
+    */
+    private void delayed_show () {
+        Timeout.add_once (750, () => {
+            Application.gsettings.bind (
+                "hide-bar",
+                view.actionbar.actionbar,
+                "revealed",
+                SettingsBindFlags.INVERT_BOOLEAN);
+        });
+        show.disconnect (delayed_show);
+    }
+
+    /**
+    * Debouncer to avoid writing to disk all the time constantly
+    * Called when something has changed
+    */
     private void debounce_save () {
         debug ("Changed! Timer: %s".printf (debounce_timer_id.to_string ()));
 
@@ -189,175 +170,121 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
             debounce_timer_id = 0;
-            changed ();
+            ((Jorts.Application)application).manager.save_all ();
             return GLib.Source.REMOVE;
         });
     }
 
+    /**
+    * Simple handler for the EditableLabel
+    */
     private void on_editable_changed () {
-        title = editableheader.text + _(" - Jorts");
+        title = view.editablelabel.text + _(" - Jorts");
         debounce_save ();
     }
 
-    // Called when a change in settings is detected
-    private void on_scribbly_changed () {
-        debug ("Scribbly mode changed!");
-
-        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            if (this.is_active == false) {
-                this.add_css_class ("scribbly");
-            }
-
-        } else {
-            if (this.is_active == false) {
-                this.remove_css_class ("scribbly");
-            }
-        }
-    }
-
-
-    // Called when the window is-active property changes
+    /**
+    * Changes the stylesheet accents to the notes color
+    * Add or remove the Redacted font if the setting is active
+    */
     private void on_focus_changed () {
         debug ("Focus changed!");
 
         if (this.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + this.theme.ascii_down ();
+            var stylesheet = "io.elementary.stylesheet." + popover.color.to_string ().ascii_down ();
             gtk_settings.gtk_theme_name = stylesheet;
-        }
-
-        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
-            if (this.is_active) {
-                this.remove_css_class ("scribbly");
-            } else {
-                this.add_css_class ("scribbly");
-            }
-        } else if ("scribbly" in this.css_classes) {
-            this.remove_css_class ("scribbly");
         }
     }
 
-    // Package the note into a NoteData and pass it back
-    // NOTE: We cannot access the buffer if the window is closed, leading to content loss
-    // Hence why we need to constantly save the buffer into this.content when changed
+    /**
+    * Connect-disconnect the whole manage text being scribbled
+    */
+    private void on_scribbly_changed () {
+        debug ("Scribbly mode changed!");
+
+        if (Application.gsettings.get_boolean ("scribbly-mode-active")) {
+            this.notify["is-active"].connect (focus_scribble_unscribble);
+            view.scribbly = true;
+
+
+        } else {
+            this.notify["is-active"].disconnect (focus_scribble_unscribble);
+            view.scribbly = false;
+        }
+    }
+
+    /**
+    * Handler connected only when scribbly mode is active
+    * It just hides or show depending on focus
+    */
+    private void focus_scribble_unscribble () {
+        debug ("Scribbly mode changed!");
+
+        if (this.is_active) {
+            view.scribbly = false;
+
+        } else {
+            view.scribbly = true;
+        }
+    }
+
+    /**
+    * Package the note into a NoteData and pass it back.
+    * Used by NoteManager to pass all informations conveniently for storage
+    */
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
-
-        var content = this.view.textview.buffer.text;
 
         int width ; int height;
         this.get_default_size (out width, out height);
 
         var data = new NoteData (
-                editableheader.text,
-            this.theme,
-            content,
-            view.textview.monospace,
-            this.zoom,
+                view.title,
+                popover.color,
+                view.content,
+                popover.monospace,
+                popover.zoom,
                 width,
                 height);
+
+                print (" " + popover.color.to_string ());
 
         return data;
     }
 
-    // Switches stylesheet
-    // First use appropriate stylesheet, Then switch the theme classes
-    private void on_theme_changed (string new_theme) {
-        debug ("Updating theme to %s".printf (new_theme));
+    /**
+    * Propagate the content of a NoteData into the various UI elements. Used when creating a new window
+    */
+    private void load_data (NoteData data) {
+        debug ("Loading noteData…");
 
-        var stylesheet = "io.elementary.stylesheet." + new_theme.ascii_down ();
-        this.gtk_settings.gtk_theme_name = stylesheet;
+        set_default_size (data.width, data.height);
+        view.editablelabel.text = data.title;
+        title = view.editablelabel.text + _(" - Jorts");
+        view.textview.buffer.text = data.content;
 
-        if (_theme in css_classes) {
-            remove_css_class (_theme);
-        }
-
-        _theme = new_theme;
-        add_css_class (new_theme);
-        NoteData.latest_theme = new_theme;
-        changed ();
+        popover.zoom = data.zoom;
+        popover.monospace = data.monospace;
+        popover.color = data.theme;
     }
 
-
-    // Switches stylesheet
-    private void on_monospace_changed (bool monospace) {
-        debug ("Updating monospace to %s".printf (monospace.to_string ()));
-
-        if (monospace) {
-            editableheader.add_css_class ("monospace");
-
-        } else {
-            if ("monospace" in editableheader.css_classes) {
-                editableheader.remove_css_class ("monospace");
-            }
-
-        }
-        view.textview.monospace = monospace;
-        popover.monospace_box.monospace = monospace;
-        Jorts.NoteData.latest_mono = monospace;
-        changed ();
-    }
-
-
-    /*********************************************/
-    /*              ZOOM feature                 */
-    /*********************************************/
-
-    // Called when a signal from the popover says stuff got changed
-    private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
-        debug ("Zoom changed!");
-
-        switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); break;
-            case Zoomkind.DEFAULT_ZOOM:         zoom = 100; break;
-            case Zoomkind.ZOOM_OUT:             zoom_out (); break;
-            default:                            zoom = 100; break;
-        }
-        ((Jorts.Application)this.application).manager.save_all.begin ();
-    }
-
-    // First check an increase doesnt go above limit
-    public void zoom_in () {
-        if ((_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-            zoom = _zoom + 20;
-        }
-    }
-
-    public void zoom_default () {
-        zoom = Jorts.Constants.DEFAULT_ZOOM;
-    }
-
-    // First check an increase doesnt go below limit
-    public void zoom_out () {
-        if ((_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-            zoom = _zoom - 20;
-        }
-    }
-
-    // Switch zoom classes, then reflect in the UI and tell the application
-    private void do_set_zoom (int zoom) {
-        debug ("Setting zoom: " + zoom.to_string ());
-
-        // Switches the classes that control font size
-        this.remove_css_class (Jorts.Utils.zoom_to_class ( _zoom));
-        _zoom = zoom;
-        this.add_css_class (Jorts.Utils.zoom_to_class ( _zoom));
-
-        this.headerbar.height_request = Jorts.Utils.zoom_to_UIsize (_zoom);
-
-        // Reflect the number in the popover
-        popover.font_size_box.zoom = zoom;
-
-        // Keep it for next new notes
-        //((Application)this.application).latest_zoom = zoom;
-        NoteData.latest_zoom = zoom;
-    }
-
-    private void action_focus_title () {set_focus (editableheader); editableheader.editing = true;}
+    private void action_focus_title () {set_focus (view.editablelabel); view.editablelabel.editing = true;}
     private void action_show_emoji () {view.emoji_button.activate ();}
     private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
 
-    private void action_zoom_out () {zoom_out ();}
-    private void action_zoom_default () {zoom_default ();}
-    private void action_zoom_in () {zoom_in ();}
+    private void action_zoom_out () {popover.zoom_out ();}
+    private void action_zoom_default () {popover.zoom_default ();}
+    private void action_zoom_in () {popover.zoom_in ();}
+
+    private void action_theme_1 () {popover.color = (Jorts.Themes.all ())[0];}
+    private void action_theme_2 () {popover.color = (Jorts.Themes.all ())[1];}
+    private void action_theme_3 () {popover.color = (Jorts.Themes.all ())[2];}
+    private void action_theme_4 () {popover.color = (Jorts.Themes.all ())[3];}
+    private void action_theme_5 () {popover.color = (Jorts.Themes.all ())[4];}
+    private void action_theme_6 () {popover.color = (Jorts.Themes.all ())[5];}
+    private void action_theme_7 () {popover.color = (Jorts.Themes.all ())[6];}
+    private void action_theme_8 () {popover.color = (Jorts.Themes.all ())[7];}
+    private void action_theme_9 () {popover.color = (Jorts.Themes.all ())[8];}
+    private void action_theme_0 () {popover.color = (Jorts.Themes.all ())[9];}
 }
