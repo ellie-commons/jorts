@@ -8,7 +8,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-29 21:23+0200\n"
+"POT-Creation-Date: 2025-09-29 22:37+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -96,9 +96,8 @@ msgid "Strawberry"
 msgstr "Jordbær"
 
 #: src/Objects/Themes.vala:65
-#: src/Objects/Themes.vala:68
-msgid "Slate"
-msgstr "Skifer"
+msgid "Bubblegum"
+msgstr "Bubblegum"
 
 #: src/Objects/Themes.vala:66
 msgid "Grape"
@@ -107,6 +106,10 @@ msgstr "Drue"
 #: src/Objects/Themes.vala:67
 msgid "Cocoa"
 msgstr "Kakao"
+
+#: src/Objects/Themes.vala:68
+msgid "Slate"
+msgstr "Skifer"
 
 #: src/Utils/Random.vala:43
 msgid "All my very best friends"
@@ -422,9 +425,6 @@ msgstr "Innstillinger for denne klistrelappen"
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences"
 msgstr "Innstillinger"
-
-#~ msgid "Bubblegum"
-#~ msgstr "Bubblegum"
 
 #~ msgid "Create a new note"
 #~ msgstr "Opprett et nytt notat"

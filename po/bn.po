@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-29 21:23+0200\n"
+"POT-Creation-Date: 2025-09-29 22:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,9 +99,9 @@ msgstr "কমলা"
 msgid "Strawberry"
 msgstr "স্ট্রবেরি"
 
-#: src/Objects/Themes.vala:65 src/Objects/Themes.vala:68
-msgid "Slate"
-msgstr "স্লেট"
+#: src/Objects/Themes.vala:65
+msgid "Bubblegum"
+msgstr "বুবলগাম"
 
 #: src/Objects/Themes.vala:66
 msgid "Grape"
@@ -110,6 +110,10 @@ msgstr "আঙ্গুর"
 #: src/Objects/Themes.vala:67
 msgid "Cocoa"
 msgstr "কোকো"
+
+#: src/Objects/Themes.vala:68
+msgid "Slate"
+msgstr "স্লেট"
 
 #: src/Utils/Random.vala:43
 msgid "All my very best friends"
@@ -415,9 +419,6 @@ msgstr "এই স্টিকি নোটের জন্য পছন্দ�
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences"
 msgstr ""
-
-#~ msgid "Bubblegum"
-#~ msgstr "বুবলগাম"
 
 #~ msgid "Edit title"
 #~ msgstr "শিরোনাম সম্পাদনা করুন"

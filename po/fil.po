@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-29 21:23+0200\n"
+"POT-Creation-Date: 2025-09-29 22:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,8 +98,8 @@ msgstr ""
 msgid "Strawberry"
 msgstr ""
 
-#: src/Objects/Themes.vala:65 src/Objects/Themes.vala:68
-msgid "Slate"
+#: src/Objects/Themes.vala:65
+msgid "Bubblegum"
 msgstr ""
 
 #: src/Objects/Themes.vala:66
@@ -108,6 +108,10 @@ msgstr "ubas"
 
 #: src/Objects/Themes.vala:67
 msgid "Cocoa"
+msgstr ""
+
+#: src/Objects/Themes.vala:68
+msgid "Slate"
 msgstr ""
 
 #: src/Utils/Random.vala:43

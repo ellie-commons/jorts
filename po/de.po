@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-29 21:23+0200\n"
+"POT-Creation-Date: 2025-09-29 22:37+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 
@@ -46,7 +46,7 @@ msgstr "Monospace"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
 msgid "Click to use monospaced font"
-msgstr "Klicken Sie um die Schriftart Monospaced zu verwenden"
+msgstr "Klicken um eine Festbreitenschrift zu verwenden"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
@@ -94,9 +94,8 @@ msgid "Strawberry"
 msgstr "Erdbeere"
 
 #: src/Objects/Themes.vala:65
-#: src/Objects/Themes.vala:68
-msgid "Slate"
-msgstr "Schiefer"
+msgid "Bubblegum"
+msgstr "Kaugummi"
 
 #: src/Objects/Themes.vala:66
 msgid "Grape"
@@ -105,6 +104,10 @@ msgstr "Weintrauben"
 #: src/Objects/Themes.vala:67
 msgid "Cocoa"
 msgstr "Kakao"
+
+#: src/Objects/Themes.vala:68
+msgid "Slate"
+msgstr "Schiefer"
 
 #: src/Utils/Random.vala:43
 msgid "All my very best friends"
@@ -300,12 +303,11 @@ msgstr "Wichtige Affirmationen zum Merken"
 
 #: src/Utils/Random.vala:91
 msgid "The coolest linux apps"
-msgstr "Die coolsten Linux-Anwendungen"
+msgstr "Die coolsten Linux-Apps"
 
 #: src/Utils/Random.vala:92
-#, fuzzy
 msgid "My favourite dishes"
-msgstr "Meine Lieblingsbands"
+msgstr "Meine Lieblingsgerichte"
 
 #: src/Utils/Random.vala:93
 msgid "My funniest jokes"
@@ -393,7 +395,7 @@ msgstr "Uns unterstützen!"
 
 #: src/Views/PreferencesView.vala:177
 msgid "Close"
-msgstr "Schließen Sie"
+msgstr "Schließen"
 
 #: src/Views/PreferencesView.vala:180
 msgid "Close preferences"
@@ -416,9 +418,6 @@ msgstr "Präferenzen für deine Jorts!"
 #: src/Windows/PreferenceWindow.vala:52
 msgid "Preferences"
 msgstr "Präferenzen"
-
-#~ msgid "Bubblegum"
-#~ msgstr "Kaugummi"
 
 #~ msgid "Create a new note"
 #~ msgstr "Eine neue Notiz erstellen"

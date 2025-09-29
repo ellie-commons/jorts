@@ -62,7 +62,7 @@ public enum Jorts.Themes {
             case BANANA:        return _("Banana");
             case ORANGE:        return _("Orange");
             case STRAWBERRY:    return _("Strawberry");
-            case BUBBLEGUM:     return _("Slate");
+            case BUBBLEGUM:     return _("Bubblegum");
             case GRAPE:         return _("Grape");
             case COCOA:         return _("Cocoa");
             case SLATE:         return _("Slate");
