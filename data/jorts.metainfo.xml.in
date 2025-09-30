@@ -94,20 +94,21 @@
     </screenshots>
 
     <releases>
-        <release version="3.4.0" date="2025-09-12">
+        <release version="3.4.0" date="2025-09-30">
             <description>
-                <p>3.4.0 Scary Jorts of Boo</p>
+                <p>🕷️ 3.4.0 Scary Jorts of Boo</p>
                 <ul>
-                    <li>I struggled with some shenanigans to have only one preference window... Should be done for good now</li>
-                    <li>Added a desktop action to create a note from clipboard content</li>
-                    <li>Added a reset-settings commandline option. Could be handy.</li>
-                    <li>Ctrl+L to focus note title</li>
-                    <li>Ctrl+M to open note settings now</li>
-                    <li>Alt+Number to change theme quickly</li>
                     <li>Some UI elements show up after being shown, for a sleek vibe</li>
-                    <li>New note setting: Monospace. Could be for accessibility, could be for ascii doodles</li>
+                    <li>Ctrl+L to focus note title</li>
+                    <li>Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now</li>
+                    <li>Alt+Number to change theme quickly</li>
+                    <li>New note setting: Monospace (Ctrl+M). Could be for accessibility, could be for ascii doodles</li>
                     <li>Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs</li>
-                    <li>Better commented text and code, for translators and eventual contributors</li>
+                    <li>Added a reset-settings commandline option. Could be handy.</li>
+                </ul>
+                <p>😎 Guests stars:</p>
+                <ul>
+                    <li>@wpkelso strikes again with an amazing special edition icon!</li>
                 </ul>
             </description>
         </release>

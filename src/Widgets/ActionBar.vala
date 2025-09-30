@@ -64,7 +64,7 @@
             width_request = 32,
             height_request = 32,
             tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>M"},
+                Jorts.Constants.ACCELS_MENU,
                 _("Preferences for this sticky note")
             )
         };

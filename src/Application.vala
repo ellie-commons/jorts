@@ -92,11 +92,12 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("app.action_zoom_default", {"<Control>equal", "<Control>0", "<Control>KP_0"});
         set_accels_for_action ("app.action_zoom_in", {"<Control>plus", "<Control>KP_Add"});
         set_accels_for_action ("app.action_toggle_scribbly", {"<Control>H"});
+        set_accels_for_action ("app.action_toggle_mono", {"<Control>m"});
         set_accels_for_action ("app.action_toggle_actionbar", {"<Control>T"});
         set_accels_for_action ("app.action_show_preferences", {"<Control>P"});
         set_accels_for_action ("app.action_focus_title", {"<Control>L"});
         set_accels_for_action ("app.action_show_emoji", {"<Control>period"});
-        set_accels_for_action ("app.action_show_menu", {"<Control>M"});
+        set_accels_for_action ("app.action_show_menu", {"<Control>G", "<Control>O"});
 
         set_accels_for_action ("app.action_theme_1", {"<Alt>1"});
         set_accels_for_action ("app.action_theme_2", {"<Alt>2"});

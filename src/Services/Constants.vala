@@ -57,6 +57,10 @@ namespace Jorts.Constants {
     const string[] ACCELS_QUIT =     {"<Control>q"};
     const string[] ACCELS_SCRIBBLY =     {"<Control>h"};
     const string[] ACCELS_EMOTE =     {"<Control>period"};
+    const string[] ACCELS_MENU =     {"<Control>g", "<Control>o"};
+    const string[] ACCELS_MONO =     {"<Control>m"};
+
+
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {

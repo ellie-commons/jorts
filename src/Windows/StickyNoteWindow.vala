@@ -34,6 +34,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private const string ACTION_ZOOM_OUT = "action_zoom_out";
     private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
     private const string ACTION_ZOOM_IN = "action_zoom_in";
+    private const string ACTION_TOGGLE_MONO = "action_toggle_mono";
 
     private const string ACTION_THEME_1 = "action_theme_1";
     private const string ACTION_THEME_2 = "action_theme_2";
@@ -55,6 +56,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         { ACTION_FOCUS_TITLE, action_focus_title},
         { ACTION_ZOOM_OUT, action_zoom_out},
         { ACTION_ZOOM_DEFAULT, action_zoom_default},
+        { ACTION_TOGGLE_MONO, action_toggle_mono},
         { ACTION_ZOOM_IN, action_zoom_in},
         { ACTION_THEME_1, action_theme_1},
         { ACTION_THEME_2, action_theme_2},
@@ -270,6 +272,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void action_show_emoji () {view.emoji_button.activate ();}
     private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
+    private void action_toggle_mono () {popover.monospace = !popover.monospace;}
 
     private void action_zoom_out () {popover.zoom_out ();}
     private void action_zoom_default () {popover.zoom_default ();}

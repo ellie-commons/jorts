@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-04-06 17:02+0400\n"
-"POT-Creation-Date: 2025-09-29 22:37+0200\n"
+"POT-Creation-Date: 2025-09-30 20:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "X-Generator: Poedit 3.4.2\n"
@@ -38,16 +38,18 @@ msgstr "Параметры стикера"
 msgid "Default"
 msgstr "Уровень масштабирования по умолчанию"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:34
-msgid "Click to use default text font"
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+#, fuzzy
+msgid "Use default text font"
 msgstr "Нажмите, чтобы использовать шрифт по умолчанию"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Monospace"
 msgstr "Моноспейс"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
-msgid "Click to use monospaced font"
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
+#, fuzzy
+msgid "Use monospaced font"
 msgstr "Нажмите, чтобы использовать моношрифт"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
@@ -405,8 +407,8 @@ msgstr "Закрыть"
 msgid "Close preferences"
 msgstr "Закрыть предпочтения"
 
-#: src/Windows/StickyNoteWindow.vala:83
-#: src/Windows/StickyNoteWindow.vala:182
+#: src/Windows/StickyNoteWindow.vala:85
+#: src/Windows/StickyNoteWindow.vala:184
 #: src/Windows/StickyNoteWindow.vala:263
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"

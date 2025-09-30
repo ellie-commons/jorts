@@ -31,13 +31,19 @@ public class Jorts.MonospaceBox : Gtk.Box {
         ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Default")),
-            tooltip_text = _("Click to use default text font"),
+            tooltip_markup = Granite.markup_accel_tooltip (
+                Jorts.Constants.ACCELS_MONO,
+                _("Use default text font")
+            ),
             active = true
         };
 
         mono_monospace_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Monospace")),
-            tooltip_text = _("Click to use monospaced font")
+                        tooltip_markup = Granite.markup_accel_tooltip (
+                Jorts.Constants.ACCELS_MONO,
+                _("Use monospaced font")
+            )
         };
         mono_monospace_toggle.add_css_class ("monospace");
 

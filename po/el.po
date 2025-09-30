@@ -7,7 +7,7 @@ msgstr ""
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users.noreply.github.com>\n"
 "MIME-Version: 1.0\n"
 "PO-Revision-Date: 2025-06-02 19:29+0300\n"
-"POT-Creation-Date: 2025-09-29 22:37+0200\n"
+"POT-Creation-Date: 2025-09-30 20:06+0200\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
@@ -39,16 +39,18 @@ msgstr "Προτιμήσεις για αυτή τη σημείωση"
 msgid "Default"
 msgstr "Επαναφορά στις προεπιλεγμένες ρυθμίσεις"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:34
-msgid "Click to use default text font"
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+#, fuzzy
+msgid "Use default text font"
 msgstr "Κάντε κλικ για να χρησιμοποιήσετε την προεπιλεγμένη γραμματοσειρά κειμένου"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:39
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Monospace"
 msgstr "Monospace"
 
-#: src/Widgets/PopoverWidgets/MonospaceBox.vala:40
-msgid "Click to use monospaced font"
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
+#, fuzzy
+msgid "Use monospaced font"
 msgstr "Κάντε κλικ για να χρησιμοποιήσετε γραμματοσειρά με μονό διάστημα"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
@@ -407,8 +409,8 @@ msgstr "Κλείστε το"
 msgid "Close preferences"
 msgstr "Κλείστε τις προτιμήσεις"
 
-#: src/Windows/StickyNoteWindow.vala:83
-#: src/Windows/StickyNoteWindow.vala:182
+#: src/Windows/StickyNoteWindow.vala:85
+#: src/Windows/StickyNoteWindow.vala:184
 #: src/Windows/StickyNoteWindow.vala:263
 #: src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
