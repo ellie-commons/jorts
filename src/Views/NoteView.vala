@@ -64,34 +64,24 @@
         append (actionbar);
         //set_focus_child (textview);
 
-
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        // Display the current zoom level when the popover opens
-        // Else it does not get set
-        emojichooser_popover.show.connect (on_emoji_popover);
-
-        // User chose emoji, add it to buffer
-        emojichooser_popover.emoji_picked.connect ((emoji) => {
-            textview.buffer.insert_at_cursor (emoji, -1);
-        });
-
-        //The application tells us the show/hide bar state has changed!
+        emojichooser_popover.show.connect (randomize_emote_button);
+        emojichooser_popover.emoji_picked.connect (on_emoji_picked);
         //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
     }
 
-
     // Randomize the button emoji when clicked
-    public void on_emoji_popover () {
+    private void randomize_emote_button () {
         debug ("Emote requested!");
+        emoji_button.icon_name = Jorts.Utils.random_emote (emoji_button.get_icon_name ());
+    }
 
-        emoji_button.set_icon_name (
-            Jorts.Utils.random_emote (
-                emoji_button.get_icon_name ()
-            )
-        );
+    private void on_emoji_picked (string emoji) {
+        debug ("Emote picked!");
+        textview.buffer.insert_at_cursor (emoji, -1);
     }
 
     private void mono_set (bool if_mono) {

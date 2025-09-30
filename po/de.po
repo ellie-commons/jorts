@@ -42,7 +42,7 @@ msgstr "Standardschriftart verwenden"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Monospace"
-msgstr "Festbreitenschrift"
+msgstr "Festbreite"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
 msgid "Use monospaced font"
