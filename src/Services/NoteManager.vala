@@ -14,6 +14,7 @@ public class Jorts.NoteManager : Object {
     private Jorts.Application application;
     public Gee.ArrayList<StickyNoteWindow> open_notes;
     public Jorts.Storage storage;
+    private bool saving_lock = true;
 
     public NoteManager (Jorts.Application app) {
         this.application = app;
@@ -50,6 +51,7 @@ public class Jorts.NoteManager : Object {
             }
         }
 
+        saving_lock = false;
         on_reduceanimation_changed ();
         Gtk.Settings.get_default ().notify["enable-animations"].connect (on_reduceanimation_changed);
     }
@@ -79,8 +81,6 @@ public class Jorts.NoteManager : Object {
         open_notes.add (note);
         note.show ();
         note.present ();
-        save_all ();
-
 	}
 
     /*************************************************/
@@ -129,15 +129,18 @@ public class Jorts.NoteManager : Object {
     */
     public void save_all () {
         debug ("[MANAGER] Save the stickies!");
-        var array = new Json.Array ();
 
-        foreach (Jorts.StickyNoteWindow note in open_notes) {
-            var data = note.packaged ();
-            var object = data.to_json ();
-            array.add_object_element (object);
-        };
+        if (!saving_lock) {
+            var array = new Json.Array ();
 
-        storage.save (array);        
+            foreach (Jorts.StickyNoteWindow note in open_notes) {
+                var data = note.packaged ();
+                var object = data.to_json ();
+                array.add_object_element (object);
+            };
+
+            storage.save (array);       
+        }
     }
 
     /*************************************************/
@@ -161,7 +164,6 @@ public class Jorts.NoteManager : Object {
             }
         }
     }
-
 
     /*************************************************/
     public void dump () {storage.dump ();}

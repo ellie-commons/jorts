@@ -47,8 +47,6 @@ public class Jorts.NoteData : Object {
     * Parse a node to create an associated NoteData object
     */
     public NoteData.from_json (Json.Object node) {
-
-        print ("\nload json");
         title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
         var themestring       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null).to_string ());
         theme = Jorts.Themes.from_string (themestring);

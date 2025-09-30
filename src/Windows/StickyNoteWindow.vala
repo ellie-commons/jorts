@@ -247,8 +247,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
                 width,
                 height);
 
-                print (" " + popover.color.to_string ());
-
         return data;
     }
 

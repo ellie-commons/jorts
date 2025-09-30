@@ -17,9 +17,6 @@
 public class Jorts.Storage : Object {
 
     private const string FILENAME           = "saved_state.json";
-    private const string FILENAME_BACKUP    = "backup_state.json";
-    private const uint8 TRIES               = 3;
-
     private string data_directory;
     private string storage_path;
 
@@ -73,8 +70,9 @@ public class Jorts.Storage : Object {
             
         } catch (Error e) {
             warning ("[STORAGE] Failed to save notes %s", e.message);
-
         }
+
+        print ("\n (Everything saved)");
     }
 
     /*************************************************/
