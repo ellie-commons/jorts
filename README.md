@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img alt="An icon representing a stack of little squared blue sticky notes. The first one, and the second one hinted below, have scribbles over them" src="data/icons/hicolor/128.png" />
+  <img alt="An icon representing a stack of little squared blue sticky notes. The first one, and the second one hinted below, have scribbles over them" src="data/icons/default/hicolor/128.png" />
   <h1>Jorts</h1>
   <h3>Neither jeans nor shorts, just like jorts. A sticky notes app for elementary OS</h3>
 
