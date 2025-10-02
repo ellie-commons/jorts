@@ -13,23 +13,50 @@
 
 <br/>
 
-## Installation
+## 🦺 Installation
 
 You can download and install Jorts from various sources:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.jorts) 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
 
+## ❓ FAQ
+
+### Where settings
+
+- Right-click on the app icon, and it is in the menu that appears
+- You can also Ctrl+P to show the dialog
+- Or run in a terminal:
+
+```bash
+flatpak run io.github.ellie_commons.jorts --preferences
+```
+
+
+### Where tray icon
+
+Theres none. The app closes on its own when no window is open. Doesn't make sense to use resources if unused.
+
+
+### Where close note
+
+Theres none. If you dont need a note you delete it, theyre supposed to be ephemeral.
+You can still alt+F4 or right-click->Close, but there is no reopen mechanism, and i dont wanna make one. Everything shows upon reopening the app anyway
+
+
+### Where Bold/Italic/etc
+
+I really want to avoid UI noise and resource usage. Notes are just, notes. The more complicated they become the less they are ephemeral notes and the more this looks like some notekeeping app. Which is what NoteJot, this was forked from, became.
+Now i know i added some stuff when maintaining the old version of NoteJot, but it doesn't mean it should have more, or everything.
+
+
+
 ## 🛣️ Roadmap
 
-Jorts is a cute simple little notes app, and i wanna keep it this way
+Jorts is a cute simple and lightweight little notes app, and i wanna keep it this way
+Top priority is to have the clearest, simplest, most efficient code ever
 
-right now im working on:
-- Maybe an option to show window title buttons, because now this is on flathub i may get flak from users about the lack of it
-- Probably some cleaner code if i come around to it
-- Maybe a toggle lists if i find how to do it without more UI noise
 
-Feel free to check [the project board](https://github.com/orgs/ellie-commons/projects/4)
 
 ## 💝 Donations
 
@@ -67,4 +94,6 @@ You can get it all by entering in a terminal:
 cp ~/.var/app/io.github.ellie_commons.jorts/data ~/
 ```
 
-"saved_state.json" contains all notes in JSON format
+"saved_state.json" contains all notes in JSON format. The structure is quite simple, if not pretty.
+
+The app reads from it only during startup (rest of the time it writes in) so you could quite easily swap it up to swap between sets of notes.

@@ -74,6 +74,7 @@ public enum Jorts.Themes {
     /**
     * recover Enum from a stored string, using when loading from storage
     */
+    //TODO: Retire this one day
     public static Themes from_string (string wtf_is_this) {
         switch (wtf_is_this.ascii_up ()) {
             case "BLUEBERRY":     return BLUEBERRY;
