@@ -90,6 +90,11 @@ public class Jorts.NoteData : Object {
         builder.add_string_value (title);
         builder.set_member_name ("theme");
         builder.add_string_value (theme.to_string ());
+
+        //TODO: save Color alongside theme for awhile. Later we can load it instead and drop string methods
+        builder.set_member_name ("color");
+        builder.add_int_value (theme);
+
         builder.set_member_name ("content");
         builder.add_string_value (content);
         builder.set_member_name ("monospace");

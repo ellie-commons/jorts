@@ -50,6 +50,8 @@ modules:
 
   - name: jorts
     buildsystem: meson
+    config-opts:
+      - -Dvariant=['default']
     sources:
       - type: git
         url: https://github.com/ellie-commons/jorts.git

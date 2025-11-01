@@ -29,7 +29,7 @@ i18n.merge_file(
 #======== ICONS ========
 
 # Install our icons in all the required sizes
-variant = 'halloween'
+# "variant" variable has been declared earlier in the base meson
 icon_sizes = ['16', '24', '32', '48', '64', '128']
 
 foreach i : icon_sizes
