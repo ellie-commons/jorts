@@ -11,3 +11,4 @@ generate_stylesheets.sh
 .potrans
 .editorconfig
 oldpng/
+deploy/

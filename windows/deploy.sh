@@ -4,15 +4,15 @@
 # Run app from base directory, not ./windows
 # Write path UNIX-style ("/"). Script will invert the slash where relevant.
 app_name="Jorts"
-build_dir="../builddir"
+build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
-font_path="font"
+font_path="windows/fonts"
 
-deploy_dir="deploy"
-exe_name="jorts.exe"
-icon_file="jorts.ico"
-icon_file_install="install.ico"
-icon_file_uninstall="uninstall.ico"
+deploy_dir="windows/deploy"
+exe_name="io.github.ellie_commons.jorts.exe"
+icon_file="windows/jorts.ico"
+icon_file_install="windows/install.ico"
+icon_file_uninstall="windows/uninstall.ico"
 
 #PRE MESON
 #Skip refresh package
@@ -44,12 +44,13 @@ done
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
 cp /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
-cp -r /mingw64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
-cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
+#cp -r /mingw64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
+#cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
 cp -r /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 # Redacted Script
-cp -r ${font_path} ${deploy_dir}/etc/fonts/${font_path}
+mkdir ${deploy_dir}/etc/fonts/redactedscript
+cp -r ${font_path} ${deploy_dir}/etc/fonts/redactedscript/
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
@@ -173,8 +174,6 @@ Section "Install"
     
     ; Preferences
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file/\//\\}" 0
-
-
     
     WriteRegStr HKCU "Software\\${app_name}" "" \$INSTDIR
     WriteUninstaller "\$INSTDIR\Uninstall.exe"

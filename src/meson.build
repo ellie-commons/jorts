@@ -5,7 +5,6 @@ sources = files (
 
     'Utils' / 'ZoomConvert.vala',
     'Utils' / 'Random.vala',
-    'Utils' / 'Libportal.vala',
 
     'Services' / 'Constants.vala',
     'Services' / 'Storage.vala',
@@ -31,6 +30,10 @@ sources = files (
     'Application.vala',
 )
 
+if not windows
+    sources += files('Utils' / 'Libportal.vala')
+endif
+
 #================================
 # Let's define our executable
 executable(
@@ -39,5 +42,6 @@ executable(
     config_file,
     sources,
     dependencies: dependencies,
+   win_subsystem: 'windows',
     install : true
 )

@@ -20,8 +20,12 @@ else
     vala_flags = ['--define', 'DEFAULT']
 endif
 
-add_project_arguments(vala_flags, language: 'vala')
+windows = get_option('windows')
+if windows
+    vala_flags += ['--define', 'WINDOWS']
+endif
 
+add_project_arguments(vala_flags, language: 'vala')
 
 #================================
 # Import the stylesheet
@@ -49,10 +53,11 @@ dependencies = [
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
         dependency('gtk4'),
-        dependency('libportal')
     ]
 
-
+if not windows
+    dependencies += dependency('libportal')
+endif
 
 #================================
 

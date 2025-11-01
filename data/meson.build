@@ -16,6 +16,10 @@ i18n.merge_file(
     install_dir: get_option('datadir') / 'applications'
 )
 
+
+# metainfo confuses windows
+if not windows
+
 #Translate and install our .metainfo file
 i18n.merge_file(
     input: 'jorts.metainfo.xml.in',
@@ -25,6 +29,7 @@ i18n.merge_file(
     install_dir: get_option('datadir') / 'metainfo'
 )
 
+endif
 
 #======== ICONS ========
 
