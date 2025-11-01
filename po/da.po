@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-30 20:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/Widgets/EditableLabel.vala:43
 msgid "Click to edit the title"
@@ -72,8 +72,7 @@ msgid "Zoom in"
 msgstr "Zoom ind"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
 msgid "Blueberry"
 msgstr "Blåbær"
 
@@ -336,7 +335,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Du har fundet den gyldne sticky note!\n"
 "\n"
@@ -345,15 +343,12 @@ msgstr ""
 "\n"
 "Jeg håber, at min lille app bringer dig en masse glæde\n"
 "Hav en god dag!🎇\n"
-""
 
-#: src/Utils/Libportal.vala:16
-#: src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
 msgid "Remove Jorts from system autostart"
 msgstr "Fjern Jorts fra systemets autostart"
 
-#: src/Utils/Libportal.vala:29
-#: src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
 msgid "Set Jorts to start with the computer"
 msgstr "Indstil Jorts til at starte med computeren"
 
@@ -367,8 +362,12 @@ msgstr "Gør ufokuserede noter ulæselige"
 
 #: src/Views/PreferencesView.vala:54
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at beskytte deres indhold mod nysgerrige blikke."
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Hvis det er aktiveret, bliver ufokuserede klistermærker ulæselige for at "
+"beskytte deres indhold mod nysgerrige blikke."
 
 #: src/Views/PreferencesView.vala:74
 #, fuzzy
@@ -376,8 +375,12 @@ msgid "Hide buttons"
 msgstr "Skjul knapbjælke"
 
 #: src/Views/PreferencesView.vala:76
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
-msgstr "Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. Tastaturgenveje vil stadig fungere (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
+msgstr ""
+"Hvis den er aktiveret, skjules den nederste bjælke i klistermærker. "
+"Tastaturgenveje vil stadig fungere (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:99
@@ -409,15 +412,14 @@ msgstr "Luk"
 msgid "Close preferences"
 msgstr "Luk indstillinger"
 
-#: src/Windows/StickyNoteWindow.vala:85
-#: src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:263
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
+#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
+#. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:50
 msgid "Preferences for your Jorts"
@@ -443,8 +445,12 @@ msgstr "Indstillinger"
 #~ msgid "Permissions"
 #~ msgstr "Tilladelser"
 
-#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
-#~ msgstr "Du kan indstille klistermærkerne til at blive vist, når du logger ind, ved at tilføje Jorts til autostart"
+#~ msgid ""
+#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "autostart"
+#~ msgstr ""
+#~ "Du kan indstille klistermærkerne til at blive vist, når du logger ind, "
+#~ "ved at tilføje Jorts til autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"

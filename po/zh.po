@@ -1,16 +1,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-30 20:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/Widgets/EditableLabel.vala:43
 msgid "Click to edit the title"
@@ -72,8 +72,7 @@ msgid "Zoom in"
 msgstr "放大"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
 msgid "Blueberry"
 msgstr "蓝莓"
 
@@ -336,7 +335,6 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "您已经找到了金色便利贴！\n"
 "\n"
@@ -345,15 +343,12 @@ msgstr ""
 "\n"
 "希望我的小应用程序能给您带来无限欢乐\n"
 "祝您愉快！ 🎇\n"
-""
 
-#: src/Utils/Libportal.vala:16
-#: src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
 msgid "Remove Jorts from system autostart"
 msgstr "从系统自动启动中移除 Jorts"
 
-#: src/Utils/Libportal.vala:29
-#: src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
 msgid "Set Jorts to start with the computer"
 msgstr "设置 Jorts 从计算机启动"
 
@@ -367,7 +362,9 @@ msgstr "让没有重点的笔记无法阅读"
 
 #: src/Views/PreferencesView.vala:54
 #, fuzzy
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
 msgstr "如果启用，无重点的便笺将变得不可读，以保护其内容不被偷窥"
 
 #: src/Views/PreferencesView.vala:74
@@ -376,7 +373,9 @@ msgid "Hide buttons"
 msgstr "隐藏按钮栏"
 
 #: src/Views/PreferencesView.vala:76
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
 msgstr "如果启用，则隐藏便笺中的底部栏。键盘快捷键仍可使用（Ctrl+T）"
 
 #. /TRANSLATORS: Button to autostart the application
@@ -409,15 +408,14 @@ msgstr "关闭"
 msgid "Close preferences"
 msgstr "关闭首选项"
 
-#: src/Windows/StickyNoteWindow.vala:85
-#: src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:263
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
+#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr "- 短裤"
 
 #. ******************************************
 #. HEADERBAR BS
+#. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:50
 #, fuzzy
@@ -444,7 +442,9 @@ msgstr "首选项"
 #~ msgid "Permissions"
 #~ msgstr "权限"
 
-#~ msgid "You can set the sticky notes to appear when you log in by adding Jorts to autostart"
+#~ msgid ""
+#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "autostart"
 #~ msgstr "您可以通过将 Jorts 添加到自动启动中，将便笺设置为在登录时显示"
 
 #, fuzzy

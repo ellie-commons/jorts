@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-30 20:06+0200\n"
+"POT-Creation-Date: 2025-11-01 18:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,455 +165,309 @@ msgid "The preferences dialog in dark mode"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:99
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:104
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:101
+#: data/jorts.metainfo.xml.in:106
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:102
+#: data/jorts.metainfo.xml.in:107
 msgid "Ctrl+L to focus note title"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:103
+#: data/jorts.metainfo.xml.in:108
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:104
+#: data/jorts.metainfo.xml.in:109
 msgid "Alt+Number to change theme quickly"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:105
+#: data/jorts.metainfo.xml.in:110
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:111
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:112
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:109 data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
 msgid "😎 Guests stars:"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:116
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:118
+#: data/jorts.metainfo.xml.in:123
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:124
+#: data/jorts.metainfo.xml.in:129
 msgid "3.3.0 Star Platinum Jorts"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:126
+#: data/jorts.metainfo.xml.in:131
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:127
+#: data/jorts.metainfo.xml.in:132
 msgid "Added more random titles"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:133
 msgid "Buttons for add/remove autostart"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:134
 msgid "Some more title placeholders"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:130
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr ""
 "Sa ilalim ng pagbabago ng hood dito at doon para sa mas malinis na code"
 
-#: data/jorts.metainfo.xml.in:136
+#: data/jorts.metainfo.xml.in:141
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:146
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:148
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:144
+#: data/jorts.metainfo.xml.in:149
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:145
+#: data/jorts.metainfo.xml.in:150
 msgid "Added high-resolution screenshots"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:151
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:147
+#: data/jorts.metainfo.xml.in:152
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:156
 msgid "A lovely temporary icon by @wpkelso"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:157
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:158
 #, fuzzy
-msgid "3.1.3 Jorts of fire and lava"
-msgstr "2.2.0 Ang mga jorts ng ilaw"
+#~ msgid "3.1.3 Jorts of fire and lava"
+#~ msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:160
-msgid "Save memory and disk writes by adding a proper debounce"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:161
 #, fuzzy
-msgid "Updated IT translations thanks to @albanobattistella!"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Updated IT translations thanks to @albanobattistella!"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:162
 #, fuzzy
-msgid "Updated JA translations thanks to @RyoNakano!"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Updated JA translations thanks to @RyoNakano!"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:168
-msgid "3.1.2 Amendments for flathub"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:170
-msgid "Nothing interesting here"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:176
-msgid "3.1.1 Woops"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:178
-msgid "Minor screenshot amendments"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:184
-msgid "3.1.0 Jorts of songs and Jorts of dance"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:186
-msgid "Flathub version, with a lot of help from @RyoNakano"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:192
 #, fuzzy
-msgid "3.0.0 Jorts of Thunder"
-msgstr "2.2.0 Ang mga jorts ng ilaw"
+#~ msgid "3.0.0 Jorts of Thunder"
+#~ msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:194
-msgid "A lovely brand new icon thanks to @wpkelso"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:195
-msgid ""
-"Between this and the GTK4 port, there is very little left from old "
-"Notejot... We could say it is a v3"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:196
-msgid ""
-"Make the app more universal: Other DEs do not keep window dimensions, so "
-"reimplement save and restore"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:202
 #, fuzzy
-msgid "Updated RU translations thanks to @camellan!"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Updated RU translations thanks to @camellan!"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:207
 #, fuzzy
-msgid "Updated screenshots"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Updated screenshots"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:212
 #, fuzzy
-msgid "2.4.0 The Jorts of Ice"
-msgstr "2.2.0 Ang mga jorts ng ilaw"
+#~ msgid "2.4.0 The Jorts of Ice"
+#~ msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:214
-msgid ""
-"Thanks to RyoNakano reworking japanese translations, Japanese speakers will "
-"feel more at home now"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:215
-msgid "Respect reduce animations settings"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:216
-msgid "Scribble mode exclusively in the preferences now"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:217
-msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:218
-msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:219
-msgid ""
-"Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:220
-msgid "Bugfix where random components skipped the last possible choice"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:221
-msgid "Bugfix: shortcut for emotes did not show up properly"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:222
-msgid "Lil easter egg"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:228
 #, fuzzy
-msgid "2.3.0 The Inner Jorts"
-msgstr "2.1.2 Ang hindi nababagabag na mga jorts"
+#~ msgid "2.3.0 The Inner Jorts"
+#~ msgstr "2.1.2 Ang hindi nababagabag na mga jorts"
 
-#: data/jorts.metainfo.xml.in:230
-msgid ""
-"New feature: Preferences dialog! Right-click on the app icon to see the "
-"option"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:231
-msgid "scribbly mode has been moved to the new preference dialog"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:232
-msgid ""
-"For translators: Translations have been separated in 2: One for the UI one "
-"for the extra content"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:233
-msgid "Comfort: Easier to grab and drag stickies"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:234
-msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:240
 #, fuzzy
-msgid "Updated translations"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Updated translations"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:245
-msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 Ang mga jorts ng ilaw"
+#~ msgid "2.2.0 The Jorts of light"
+#~ msgstr "2.2.0 Ang mga jorts ng ilaw"
 
-#: data/jorts.metainfo.xml.in:247 data/jorts.metainfo.xml.in:262
-msgid "Better translation coverage"
-msgstr "Mas mahusay na saklaw ng pagsasalin"
+#~ msgid "Better translation coverage"
+#~ msgstr "Mas mahusay na saklaw ng pagsasalin"
 
-#: data/jorts.metainfo.xml.in:248
 #, fuzzy
-msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Bagong Tampok: scribbly Mode! "
+#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
+#~ msgstr "Bagong Tampok: scribbly Mode! "
 
-#: data/jorts.metainfo.xml.in:249
-msgid ""
-"New feature: Emoji picker button! I know there is one on right-click, but "
-"buttons are more accessible!"
-msgstr "Bagong Tampok: Emoji Picker Button! "
+#~ msgid ""
+#~ "New feature: Emoji picker button! I know there is one on right-click, but "
+#~ "buttons are more accessible!"
+#~ msgstr "Bagong Tampok: Emoji Picker Button! "
 
-#: data/jorts.metainfo.xml.in:250
-msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr ""
-"Ang pindutan sa toolbar ay nagpapakita ng isang random na emote tuwing nag -"
-"click ka!"
+#~ msgid ""
+#~ "The button in the toolbar displays a random emote everytime you click!"
+#~ msgstr ""
+#~ "Ang pindutan sa toolbar ay nagpapakita ng isang random na emote tuwing "
+#~ "nag -click ka!"
 
-#: data/jorts.metainfo.xml.in:251
-msgid ""
-"New feature: Jorts does a monthly backup. Should there be any issue you can "
-"recover data!"
-msgstr "Bagong Tampok: Ang Jorts ay gumagawa ng isang buwanang backup. "
+#~ msgid ""
+#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "can recover data!"
+#~ msgstr "Bagong Tampok: Ang Jorts ay gumagawa ng isang buwanang backup. "
 
-#: data/jorts.metainfo.xml.in:252
-msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr ""
-"Dapat bang masira ang pangunahing imbakan, sinubukan ni Jorts na mag -load "
-"mula sa backup"
+#~ msgid ""
+#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ msgstr ""
+#~ "Dapat bang masira ang pangunahing imbakan, sinubukan ni Jorts na mag -"
+#~ "load mula sa backup"
 
-#: data/jorts.metainfo.xml.in:253
-msgid "Some new fun/cute default titles"
-msgstr "Ang ilang mga bagong pamagat ng kasiyahan/cute na default"
+#~ msgid "Some new fun/cute default titles"
+#~ msgstr "Ang ilang mga bagong pamagat ng kasiyahan/cute na default"
 
-#: data/jorts.metainfo.xml.in:254
-msgid "Under the hood changes here and there for cleaner code"
-msgstr ""
-"Sa ilalim ng pagbabago ng hood dito at doon para sa mas malinis na code"
+#~ msgid "Under the hood changes here and there for cleaner code"
+#~ msgstr ""
+#~ "Sa ilalim ng pagbabago ng hood dito at doon para sa mas malinis na code"
 
-#: data/jorts.metainfo.xml.in:260
-msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2 Ang hindi nababagabag na mga jorts"
+#~ msgid "2.1.2 The unrippable jorts"
+#~ msgstr "2.1.2 Ang hindi nababagabag na mga jorts"
 
-#: data/jorts.metainfo.xml.in:263
-msgid "Add relief to actionbar buttons"
-msgstr "Magdagdag ng kaluwagan sa mga pindutan ng ActionBar"
+#~ msgid "Add relief to actionbar buttons"
+#~ msgstr "Magdagdag ng kaluwagan sa mga pindutan ng ActionBar"
 
-#: data/jorts.metainfo.xml.in:264
-msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr ""
-"Bugfix: Kaso sa Edge kung saan ang tema o mag -zoom ay maayos na na -save "
-"nang maayos"
+#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
+#~ msgstr ""
+#~ "Bugfix: Kaso sa Edge kung saan ang tema o mag -zoom ay maayos na na -save "
+#~ "nang maayos"
 
-#: data/jorts.metainfo.xml.in:265
-msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Bugfix: Pamagat sa multitasking hindi itinakda nang tama"
+#~ msgid "Bugfix: Title in multitasking not set correctly"
+#~ msgstr "Bugfix: Pamagat sa multitasking hindi itinakda nang tama"
 
-#: data/jorts.metainfo.xml.in:266
-msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "Bugfix: Icon hindi pagkakapare -pareho ng mga tema ng icon ng icon"
+#~ msgid "Bugfix: Icon inconsistency accross icon themes"
+#~ msgstr "Bugfix: Icon hindi pagkakapare -pareho ng mga tema ng icon ng icon"
 
-#: data/jorts.metainfo.xml.in:267
-msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr ""
-"Bugfix: Ang mga hindi pagkakapare -pareho ng pag -iingat ay mga stickies"
+#~ msgid "Bugfix: Theming inconsistencies accross stickies"
+#~ msgstr ""
+#~ "Bugfix: Ang mga hindi pagkakapare -pareho ng pag -iingat ay mga stickies"
 
-#: data/jorts.metainfo.xml.in:273
-msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr "2.1.1 sariwa sa paglalaba! "
+#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
+#~ msgstr "2.1.1 sariwa sa paglalaba! "
 
-#: data/jorts.metainfo.xml.in:275
-msgid "Clearer appmenu description"
-msgstr "mas malinaw na paglalarawan ng Appmenu"
+#~ msgid "Clearer appmenu description"
+#~ msgstr "mas malinaw na paglalarawan ng Appmenu"
 
-#: data/jorts.metainfo.xml.in:276
-msgid "More consistent theming"
-msgstr "Mas pare -pareho ang pag -theming"
+#~ msgid "More consistent theming"
+#~ msgstr "Mas pare -pareho ang pag -theming"
 
-#: data/jorts.metainfo.xml.in:277
-msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "Bugfix: Ang tinanggal na shortcut ay hindi responsable"
+#~ msgid "Bugfix: the delete shortcut was unresponsible"
+#~ msgstr "Bugfix: Ang tinanggal na shortcut ay hindi responsable"
 
-#: data/jorts.metainfo.xml.in:278
-msgid "Bugfix: screenshot not showing"
-msgstr "Bugfix: hindi nagpapakita ng screenshot"
+#~ msgid "Bugfix: screenshot not showing"
+#~ msgstr "Bugfix: hindi nagpapakita ng screenshot"
 
-#: data/jorts.metainfo.xml.in:284
-msgid "2.1.0 Fresh out of the laundry!"
-msgstr "2.1.0 sariwa sa labas ng paglalaba!"
+#~ msgid "2.1.0 Fresh out of the laundry!"
+#~ msgstr "2.1.0 sariwa sa labas ng paglalaba!"
 
-#: data/jorts.metainfo.xml.in:286
-msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "May kasamang per-note zoom! "
+#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
+#~ msgstr "May kasamang per-note zoom! "
 
-#: data/jorts.metainfo.xml.in:287
-msgid ""
-"Latest set zoom, aka what is most comfortable to you, stays as default for "
-"new notes"
-msgstr ""
-"Pinakabagong Set Zoom, AKA Ano ang pinaka komportable sa iyo, mananatili "
-"bilang default para sa mga bagong tala"
+#~ msgid ""
+#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
+#~ "for new notes"
+#~ msgstr ""
+#~ "Pinakabagong Set Zoom, AKA Ano ang pinaka komportable sa iyo, mananatili "
+#~ "bilang default para sa mga bagong tala"
 
-#: data/jorts.metainfo.xml.in:288
-msgid "Better readability (WCAG AA or AAA depending on theme)"
-msgstr "mas mahusay na pagbabasa (WCAG AA o AAA depende sa tema)"
+#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
+#~ msgstr "mas mahusay na pagbabasa (WCAG AA o AAA depende sa tema)"
 
-#: data/jorts.metainfo.xml.in:289
-msgid "Also slightly better looking theme. Yes even more :)"
-msgstr "Gayundin bahagyang mas mahusay na naghahanap ng tema. "
+#~ msgid "Also slightly better looking theme. Yes even more :)"
+#~ msgstr "Gayundin bahagyang mas mahusay na naghahanap ng tema. "
 
-#: data/jorts.metainfo.xml.in:290
-msgid "Improved translations"
-msgstr "Pinahusay na pagsasalin"
+#~ msgid "Improved translations"
+#~ msgstr "Pinahusay na pagsasalin"
 
-#: data/jorts.metainfo.xml.in:291
-msgid "Better shortcut and tooltips"
-msgstr "Mas mahusay na shortcut at tooltip"
+#~ msgid "Better shortcut and tooltips"
+#~ msgstr "Mas mahusay na shortcut at tooltip"
 
-#: data/jorts.metainfo.xml.in:292
-msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr ""
-"Naayos ang isang bug kung saan nanatili ang mga jorts sa tema ng light system"
+#~ msgid "Fixed a bug where Jorts stayed on light system theme"
+#~ msgstr ""
+#~ "Naayos ang isang bug kung saan nanatili ang mga jorts sa tema ng light "
+#~ "system"
 
-#: data/jorts.metainfo.xml.in:298
-msgid "2.0.1 Appcenter release"
-msgstr "2.0.1 Paglabas ng AppCenter"
+#~ msgid "2.0.1 Appcenter release"
+#~ msgstr "2.0.1 Paglabas ng AppCenter"
 
-#: data/jorts.metainfo.xml.in:303
-msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "2.0.0 Paglabas: Slate at Bubblegum"
+#~ msgid "2.0.0 Release: Slate And Bubblegum"
+#~ msgstr "2.0.0 Paglabas: Slate at Bubblegum"
 
-#: data/jorts.metainfo.xml.in:305
-msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "Revival ng isang sinaunang ngunit mahal na bersyon ng NoteJot"
+#~ msgid "Revival of an ancient but well loved version of Notejot"
+#~ msgstr "Revival ng isang sinaunang ngunit mahal na bersyon ng NoteJot"
 
-#: data/jorts.metainfo.xml.in:306
-msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "Ang app ngayon ay pinangalanan na Jorts. "
+#~ msgid "The app is now named Jorts. You however cannot wear it"
+#~ msgstr "Ang app ngayon ay pinangalanan na Jorts. "
 
-#: data/jorts.metainfo.xml.in:307
-msgid "10 lovely little colours"
-msgstr "10 kaibig -ibig maliit na kulay"
+#~ msgid "10 lovely little colours"
+#~ msgstr "10 kaibig -ibig maliit na kulay"
 
-#: data/jorts.metainfo.xml.in:308
-msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr ""
-"Itinayo sa itaas ng mga modernong teknolohiya ng Linux at mga format ng "
-"packaging"
+#~ msgid "Built atop of modern Linux technologies and packaging formats"
+#~ msgstr ""
+#~ "Itinayo sa itaas ng mga modernong teknolohiya ng Linux at mga format ng "
+#~ "packaging"
 
-#: data/jorts.metainfo.xml.in:309
-msgid "Smooth transition when changing theme"
-msgstr "Makinis na paglipat kapag nagbabago ng tema"
+#~ msgid "Smooth transition when changing theme"
+#~ msgstr "Makinis na paglipat kapag nagbabago ng tema"
 
-#: data/jorts.metainfo.xml.in:310
-msgid "New stickies have a random fun little title and colour"
-msgstr ""
-"Ang mga bagong stickies ay may isang random masaya maliit na pamagat at kulay"
+#~ msgid "New stickies have a random fun little title and colour"
+#~ msgstr ""
+#~ "Ang mga bagong stickies ay may isang random masaya maliit na pamagat at "
+#~ "kulay"
 
-#: data/jorts.metainfo.xml.in:311
-msgid "A few initial translations included, and more to come"
-msgstr "Ang ilang mga paunang pagsasalin ay kasama, at higit pa na darating"
+#~ msgid "A few initial translations included, and more to come"
+#~ msgstr "Ang ilang mga paunang pagsasalin ay kasama, at higit pa na darating"
 
-#: data/jorts.metainfo.xml.in:312
-msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "Ang mga email at mga link ay mai -click! "
+#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
+#~ msgstr "Ang mga email at mga link ay mai -click! "
 
-#: data/jorts.metainfo.xml.in:313
-msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr ""
-"Sinusuportahan ng teksto ang undo, redo, at maaari mong gamitin ang emojis :)"
+#~ msgid "Text supports undo, redo, and you can use emojis :)"
+#~ msgstr ""
+#~ "Sinusuportahan ng teksto ang undo, redo, at maaari mong gamitin ang "
+#~ "emojis :)"
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Utility ng Sticky Notes"
