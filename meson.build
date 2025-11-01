@@ -9,6 +9,20 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
 
+vala_flags = []
+variant = get_option('variant')[0]
+
+if variant == 'pride'
+    vala_flags = ['--define', 'PRIDE']
+elif variant == 'halloween'
+    vala_flags = ['--define', 'HALLOWEEN']
+else
+    vala_flags = ['--define', 'DEFAULT']
+endif
+
+add_project_arguments(vala_flags, language: 'vala')
+
+
 #================================
 # Import the stylesheet
 
