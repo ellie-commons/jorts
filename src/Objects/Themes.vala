@@ -87,7 +87,7 @@ public enum Jorts.Themes {
             case "GRAPE":         return GRAPE;
             case "COCOA":         return COCOA;
             case "SLATE":         return SLATE;
-            default: assert_not_reached ();
+            default:              return BLUEBERRY;
         }
     }
 
