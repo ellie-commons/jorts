@@ -1,16 +1,17 @@
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: el\n"
-"Language-Team: Greek, Modern (1453-)\n"
-"Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users.noreply.github.com>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: 2025-06-02 19:29+0300\n"
-"POT-Creation-Date: 2025-09-30 20:06+0200\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"PO-Revision-Date: 2025-06-02 19:29+0300\n"
+"Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
+"noreply.github.com>\n"
+"Language-Team: Greek, Modern (1453-)\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 46.0\n"
 
 #: src/Widgets/EditableLabel.vala:43
@@ -42,7 +43,8 @@ msgstr "Επαναφορά στις προεπιλεγμένες ρυθμίσε�
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
 #, fuzzy
 msgid "Use default text font"
-msgstr "Κάντε κλικ για να χρησιμοποιήσετε την προεπιλεγμένη γραμματοσειρά κειμένου"
+msgstr ""
+"Κάντε κλικ για να χρησιμοποιήσετε την προεπιλεγμένη γραμματοσειρά κειμένου"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Monospace"
@@ -73,8 +75,7 @@ msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
 msgid "Blueberry"
 msgstr "Μύρτιλλο"
 
@@ -336,24 +337,21 @@ msgid ""
 "\n"
 "I hope my little app brings you a lot of joy\n"
 "Have a great day!🎇\n"
-""
 msgstr ""
 "Βρήκατε την Χρυσαφένια Σημείωση!\n"
 "\n"
-"ΑΠΙΣΤΕΥΤΟ ΚΑΙ ΟΜΩΣ ΑΛΗΘΙΝΟ: Αυτό το μήνυμα εμφανίζεται μία φορά στις χίλιες φορές!\n"
+"ΑΠΙΣΤΕΥΤΟ ΚΑΙ ΟΜΩΣ ΑΛΗΘΙΝΟ: Αυτό το μήνυμα εμφανίζεται μία φορά στις χίλιες "
+"φορές!\n"
 "Κανείς δεν θα σας πιστέψει, χεχεχε :)\n"
 "\n"
 "Ελπίζω η εφαρμογή μου να σας κάνει όλους χαρούμενους.\n"
 "Καλημέρα! 🎇\n"
-""
 
-#: src/Utils/Libportal.vala:16
-#: src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
 msgid "Remove Jorts from system autostart"
 msgstr "Κατάργηση του Jorts από την αυτόματη εκκίνηση του συστήματος"
 
-#: src/Utils/Libportal.vala:29
-#: src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
 msgid "Set Jorts to start with the computer"
 msgstr "Ρυθμίστε το Jorts για να ξεκινήσει με τον υπολογιστή"
 
@@ -366,15 +364,21 @@ msgid "Make unfocused notes unreadable"
 msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
 
 #: src/Views/PreferencesView.vala:54
-msgid "If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"
-msgstr "Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
+msgid ""
+"If enabled, unfocused sticky notes become unreadable to protect their "
+"content from peeking eyes (Ctrl+H)"
+msgstr ""
+"Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες "
+"για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
 
 #: src/Views/PreferencesView.vala:74
 msgid "Hide buttons"
 msgstr "Απόκρυψη κουμπιών"
 
 #: src/Views/PreferencesView.vala:76
-msgid "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"
+msgid ""
+"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
+"still function (Ctrl+T)"
 msgstr ""
 "Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο σημειώσεων. \n"
 "Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά (Ctrl+T)"
@@ -395,7 +399,8 @@ msgstr "Επιτρέψτε το άνοιγμα κατά την εκκίνηση"
 
 #: src/Views/PreferencesView.vala:144
 msgid "You can request the system to start this application automatically"
-msgstr "Μπορείτε να ζητήσετε από το σύστημα να εκκινήσει αυτόματα αυτή την εφαρμογή."
+msgstr ""
+"Μπορείτε να ζητήσετε από το σύστημα να εκκινήσει αυτόματα αυτή την εφαρμογή."
 
 #: src/Views/PreferencesView.vala:165
 msgid "Support us!"
@@ -409,15 +414,14 @@ msgstr "Κλείστε το"
 msgid "Close preferences"
 msgstr "Κλείστε τις προτιμήσεις"
 
-#: src/Windows/StickyNoteWindow.vala:85
-#: src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:263
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
+#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
 msgid " - Jorts"
 msgstr " - Τζορτς"
 
 #. ******************************************
 #. HEADERBAR BS
+#. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:50
 msgid "Preferences for your Jorts"
@@ -431,7 +435,8 @@ msgstr "Προτιμήσεις"
 #~ msgstr "Δημιουργία νέας σημείωσης"
 
 #~ msgid "Create a note then paste from clipboard"
-#~ msgstr "Δημιουργήστε μια σημείωση και στη συνέχεια επικολλήστε από το πρόχειρο"
+#~ msgstr ""
+#~ "Δημιουργήστε μια σημείωση και στη συνέχεια επικολλήστε από το πρόχειρο"
 
 #~ msgid "Show preferences"
 #~ msgstr "Εμφάνιση προτιμήσεων"

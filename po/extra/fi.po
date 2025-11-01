@@ -1,33 +1,37 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Language: fi\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"MIME-Version: 1.0\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"POT-Creation-Date: 2025-09-30 20:06+0200\n"
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: data/jorts.desktop.in:5
 msgid "Jorts"
 msgstr "Jortsit"
 
-#: data/jorts.desktop.in:6
-#: data/jorts.metainfo.xml.in:43
+#: data/jorts.desktop.in:6 data/jorts.metainfo.xml.in:43
 msgid "Sticky notes"
 msgstr "Muistilaput"
 
 #: data/jorts.desktop.in:7
-msgid "Write down notes, reminders, random thoughts and other short-term informations"
-msgstr "Kirjoita muistiin muistiinpanoja, muistutuksia, satunnaisia ajatuksia ja muita lyhytaikaisia tietoja."
+msgid ""
+"Write down notes, reminders, random thoughts and other short-term "
+"informations"
+msgstr ""
+"Kirjoita muistiin muistiinpanoja, muistutuksia, satunnaisia ajatuksia ja "
+"muita lyhytaikaisia tietoja."
 
 #: data/jorts.desktop.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
-msgstr "teksti;tavallinen;tavallinen teksti;muistilappu;muistiinpanot;tahmea;post-it;"
+msgstr ""
+"teksti;tavallinen;tavallinen teksti;muistilappu;muistiinpanot;tahmea;post-it;"
 
 #: data/jorts.desktop.in:18
 msgid "New sticky note"
@@ -62,7 +66,9 @@ msgstr "Mukautuva: Uudet muistiinpanot saavat viimeksi valitsemasi zoomin"
 
 #: data/jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
-msgstr "Söpöä: Jokaisella uudella muistiinpanolla on hauska tai söpö satunnainen (muokattavissa oleva) otsikko."
+msgstr ""
+"Söpöä: Jokaisella uudella muistiinpanolla on hauska tai söpö satunnainen "
+"(muokattavissa oleva) otsikko."
 
 #: data/jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
@@ -74,8 +80,13 @@ msgstr "Yksityinen: Kokeile raapustustilaa!"
 
 #: data/jorts.metainfo.xml.in:19
 #, fuzzy
-msgid "This is a fork of an old version of \"Notejot\" by lainsce. The community liked it so much, we thought it would be great to revive it!"
-msgstr "Tämä on haara vanhasta versiosta \"Notejot\", jonka on tehnyt lainsce, eikä sitä olisi olemassa ilman hänen työtään. Yhteisö piti siitä niin paljon, että ajattelimme, että olisi hienoa elvyttää se!"
+msgid ""
+"This is a fork of an old version of \"Notejot\" by lainsce. The community "
+"liked it so much, we thought it would be great to revive it!"
+msgstr ""
+"Tämä on haara vanhasta versiosta \"Notejot\", jonka on tehnyt lainsce, eikä "
+"sitä olisi olemassa ilman hänen työtään. Yhteisö piti siitä niin paljon, "
+"että ajattelimme, että olisi hienoa elvyttää se!"
 
 #: data/jorts.metainfo.xml.in:27
 msgid "Lainsce + Stella"
@@ -133,8 +144,12 @@ msgstr "Vaihda värejä, lähennä ja loitonna, ja mukana on jopa hymiöpainike!
 
 #: data/jorts.metainfo.xml.in:79
 #, fuzzy
-msgid "Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!"
-msgstr "Suoratoisto? Oletko huolissasi siitä, että joku katsoo olkapääsi yli? Kokeile raapustustilaa!"
+msgid ""
+"Streaming? Worried of someone looking above your shoulder? Try the scribbly "
+"Mode!"
+msgstr ""
+"Suoratoisto? Oletko huolissasi siitä, että joku katsoo olkapääsi yli? "
+"Kokeile raapustustilaa!"
 
 #: data/jorts.metainfo.xml.in:83
 msgid "Look! Ascii art in a sticky note!"
@@ -149,431 +164,466 @@ msgid "The preferences dialog in dark mode"
 msgstr "Asetusten valintaikkuna pimeässä tilassa"
 
 #: data/jorts.metainfo.xml.in:99
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:104
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Valon Jortsit"
 
-#: data/jorts.metainfo.xml.in:101
+#: data/jorts.metainfo.xml.in:106
 msgid "Some UI elements show up after being shown, for a sleek vibe"
-msgstr "Jotkin käyttöliittymäelementit näkyvät näyttämisen jälkeen, mikä luo tyylikkään tunnelman."
+msgstr ""
+"Jotkin käyttöliittymäelementit näkyvät näyttämisen jälkeen, mikä luo "
+"tyylikkään tunnelman."
 
-#: data/jorts.metainfo.xml.in:102
+#: data/jorts.metainfo.xml.in:107
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L tarkentaa muistiinpanon otsikon"
 
-#: data/jorts.metainfo.xml.in:103
+#: data/jorts.metainfo.xml.in:108
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M avaa muistiinpanoasetukset nyt"
 
-#: data/jorts.metainfo.xml.in:104
+#: data/jorts.metainfo.xml.in:109
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Numero vaihtaa teemaa nopeasti"
 
-#: data/jorts.metainfo.xml.in:105
+#: data/jorts.metainfo.xml.in:110
 #, fuzzy
-msgid "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be for ascii doodles"
-msgstr "Uusi muistiinpanoasetus: Monospace. Voi olla saavutettavuuden vuoksi, voi olla ascii-koodien vuoksi."
+msgid ""
+"New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
+"for ascii doodles"
+msgstr ""
+"Uusi muistiinpanoasetus: Monospace. Voi olla saavutettavuuden vuoksi, voi "
+"olla ascii-koodien vuoksi."
 
-#: data/jorts.metainfo.xml.in:106
-msgid "Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs"
-msgstr "Puhtaampaa ja mukavampaa koodia konepellin alla. Todennäköisesti marginaalisesti parannettu suorituskyky tai vähemmän reunavikoja."
+#: data/jorts.metainfo.xml.in:111
+msgid ""
+"Cleaner, nicer code under the hood. Probably marginally enhanced "
+"performances or less edge bugs"
+msgstr ""
+"Puhtaampaa ja mukavampaa koodia konepellin alla. Todennäköisesti "
+"marginaalisesti parannettu suorituskyky tai vähemmän reunavikoja."
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:112
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr "Lisätty reset-settings-komentorivivaihtoehto. Voisi olla kätevä."
 
-#: data/jorts.metainfo.xml.in:109
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
 msgid "😎 Guests stars:"
 msgstr "😎 Vieraiden tähdet:"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:116
 msgid "@wpkelso strikes again with an amazing special edition icon!"
-msgstr "@wpkelso iskee jälleen hämmästyttävän erikoispainoksen kuvakkeen kanssa!"
+msgstr ""
+"@wpkelso iskee jälleen hämmästyttävän erikoispainoksen kuvakkeen kanssa!"
 
-#: data/jorts.metainfo.xml.in:118
-msgid "Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)"
-msgstr "Bugfix: Korjaa, että taustalla viipyvät Jortsit eivät enää avaudu, jos kaikki ikkunat on suljettu (#77)."
+#: data/jorts.metainfo.xml.in:123
+msgid ""
+"Bugfix: Fix Jorts lingering in the background not opening anymore if all "
+"windows were closed (#77)"
+msgstr ""
+"Bugfix: Korjaa, että taustalla viipyvät Jortsit eivät enää avaudu, jos "
+"kaikki ikkunat on suljettu (#77)."
 
-#: data/jorts.metainfo.xml.in:124
+#: data/jorts.metainfo.xml.in:129
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jortsit"
 
-#: data/jorts.metainfo.xml.in:126
-msgid "Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)"
-msgstr "Bugfix: Koko ikkunan tarttuminen häiritsi tekstin muokkausta. Vain toimintopalkki ja otsikko ovat nyt (#75, #76)."
+#: data/jorts.metainfo.xml.in:131
+msgid ""
+"Bugfix: Whole window being grabbable interfered with text editing. Only "
+"actionbar and header are, now (#75, #76)"
+msgstr ""
+"Bugfix: Koko ikkunan tarttuminen häiritsi tekstin muokkausta. Vain "
+"toimintopalkki ja otsikko ovat nyt (#75, #76)."
 
-#: data/jorts.metainfo.xml.in:127
+#: data/jorts.metainfo.xml.in:132
 msgid "Added more random titles"
 msgstr "Lisätty lisää satunnaisia otsikoita"
 
-#: data/jorts.metainfo.xml.in:128
+#: data/jorts.metainfo.xml.in:133
 msgid "Buttons for add/remove autostart"
 msgstr "Painikkeet automaattisen käynnistyksen lisäämistä/poistamista varten"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:134
 msgid "Some more title placeholders"
 msgstr "Joitakin lisää otsikon paikannimiä"
 
-#: data/jorts.metainfo.xml.in:130
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
-msgstr "Muutoksia konepellin alla siistimmän koodin aikaansaamiseksi täällä ja siellä"
-
-#: data/jorts.metainfo.xml.in:136
-msgid "Bugfix: When toggled off, the actionbar would leave an empty space. It is now fixed - With now a flashier animation to boot."
-msgstr "Bugfix: Kun toimintopalkki kytkettiin pois päältä, se jätti tyhjän tilan. Se on nyt korjattu - nyt myös näyttävämpi animaatio."
+msgstr ""
+"Muutoksia konepellin alla siistimmän koodin aikaansaamiseksi täällä ja siellä"
 
 #: data/jorts.metainfo.xml.in:141
+msgid ""
+"Bugfix: When toggled off, the actionbar would leave an empty space. It is "
+"now fixed - With now a flashier animation to boot."
+msgstr ""
+"Bugfix: Kun toimintopalkki kytkettiin pois päältä, se jätti tyhjän tilan. Se "
+"on nyt korjattu - nyt myös näyttävämpi animaatio."
+
+#: data/jorts.metainfo.xml.in:146
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Valon Jortsit"
 
-#: data/jorts.metainfo.xml.in:143
+#: data/jorts.metainfo.xml.in:148
 msgid "Add a cool little animation when enabling/disabling actionbar"
-msgstr "Lisää siisti pieni animaatio, kun toimintopalkki otetaan käyttöön/poistetaan käytöstä."
+msgstr ""
+"Lisää siisti pieni animaatio, kun toimintopalkki otetaan käyttöön/poistetaan "
+"käytöstä."
 
-#: data/jorts.metainfo.xml.in:144
+#: data/jorts.metainfo.xml.in:149
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
-msgstr "Korjattu Flathub BS:n aiheuttama epätarkkuus korkeassa skaalassa olevassa näytössä"
+msgstr ""
+"Korjattu Flathub BS:n aiheuttama epätarkkuus korkeassa skaalassa olevassa "
+"näytössä"
 
-#: data/jorts.metainfo.xml.in:145
+#: data/jorts.metainfo.xml.in:150
 msgid "Added high-resolution screenshots"
 msgstr "Lisätty korkearesoluutioisia kuvakaappauksia"
 
-#: data/jorts.metainfo.xml.in:146
-msgid "Last minute bugfix, somehow accels did not work when the Preferences were focused"
-msgstr "Viime hetken bugikorjaus, jotenkin akkelit eivät toimineet, kun asetukset olivat keskitettyinä"
+#: data/jorts.metainfo.xml.in:151
+msgid ""
+"Last minute bugfix, somehow accels did not work when the Preferences were "
+"focused"
+msgstr ""
+"Viime hetken bugikorjaus, jotenkin akkelit eivät toimineet, kun asetukset "
+"olivat keskitettyinä"
 
-#: data/jorts.metainfo.xml.in:147
+#: data/jorts.metainfo.xml.in:152
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "FR:n ja DE:n osalta hieman siivousta samalla kun se on käynnissä."
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:156
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride Edition: @wpkelso: Ihana väliaikainen kuvake"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:157
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Päivitetyt käännökset"
 
-#: data/jorts.metainfo.xml.in:158
 #, fuzzy
-msgid "3.1.3 Jorts of fire and lava"
-msgstr "2.2.0 Valon Jortsit"
-
-#: data/jorts.metainfo.xml.in:160
-msgid "Save memory and disk writes by adding a proper debounce"
-msgstr "Säästä muistia ja levykirjoituksia lisäämällä asianmukainen debounce-ominaisuus."
-
-#: data/jorts.metainfo.xml.in:161
-#, fuzzy
-msgid "Updated IT translations thanks to @albanobattistella!"
-msgstr "Päivitetyt käännökset"
-
-#: data/jorts.metainfo.xml.in:162
-#, fuzzy
-msgid "Updated JA translations thanks to @RyoNakano!"
-msgstr "Päivitetyt käännökset"
-
-#: data/jorts.metainfo.xml.in:168
-msgid "3.1.2 Amendments for flathub"
-msgstr "3.1.2 Tarkistukset flathubin osalta"
-
-#: data/jorts.metainfo.xml.in:170
-msgid "Nothing interesting here"
-msgstr "Täällä ei ole mitään mielenkiintoista"
-
-#: data/jorts.metainfo.xml.in:176
-msgid "3.1.1 Woops"
-msgstr "3.1.1 Hups"
-
-#: data/jorts.metainfo.xml.in:178
-msgid "Minor screenshot amendments"
-msgstr "Pieniä muutoksia kuvakaappauksiin"
-
-#: data/jorts.metainfo.xml.in:184
-msgid "3.1.0 Jorts of songs and Jorts of dance"
-msgstr "3.1.0 Laulujortsit ja tanssijortsit"
-
-#: data/jorts.metainfo.xml.in:186
-msgid "Flathub version, with a lot of help from @RyoNakano"
-msgstr "Flathub-versio, paljon apua @RyoNakano:lta."
-
-#: data/jorts.metainfo.xml.in:192
-#, fuzzy
-msgid "3.0.0 Jorts of Thunder"
-msgstr "2.2.0 Valon Jortsit"
-
-#: data/jorts.metainfo.xml.in:194
-msgid "A lovely brand new icon thanks to @wpkelso"
-msgstr "Ihana upouusi kuvake kiitos @wpkelso:n"
-
-#: data/jorts.metainfo.xml.in:195
-msgid "Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3"
-msgstr "Tämän ja GTK4-portin välillä on hyvin vähän jäljellä vanhasta Notejotista... Voisimme sanoa, että se on v3"
-
-#: data/jorts.metainfo.xml.in:196
-msgid "Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore"
-msgstr "Tee sovelluksesta yleispätevämpi: Muut DE:t eivät säilytä ikkunan mittoja, joten toteuta tallennus ja palautus uudelleen."
-
-#: data/jorts.metainfo.xml.in:202
-#, fuzzy
-msgid "Updated RU translations thanks to @camellan!"
-msgstr "Päivitetyt käännökset"
-
-#: data/jorts.metainfo.xml.in:207
-#, fuzzy
-msgid "Updated screenshots"
-msgstr "Päivitetyt käännökset"
-
-#: data/jorts.metainfo.xml.in:212
-#, fuzzy
-msgid "2.4.0 The Jorts of Ice"
-msgstr "2.2.0 Valon Jortsit"
-
-#: data/jorts.metainfo.xml.in:214
-msgid "Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now"
-msgstr "Kiitos RyoNakanon japaninkielisten käännösten uudistamisen, japaninkieliset tuntevat nyt olonsa kotoisammaksi."
-
-#: data/jorts.metainfo.xml.in:215
-msgid "Respect reduce animations settings"
-msgstr "Kunnioita animaatioiden vähentämisen asetuksia"
-
-#: data/jorts.metainfo.xml.in:216
-#, fuzzy
-msgid "Scribble mode exclusively in the preferences now"
-msgstr "scribbly-tila on siirretty uuteen asetusten valintaikkunaan."
-
-#: data/jorts.metainfo.xml.in:217
-msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-msgstr "Lisää mieltymys: nyt voit piilottaa alapalkin! (Ctrl+t)"
-
-#: data/jorts.metainfo.xml.in:218
-msgid "Bugfix: Fixed elements moving when a note title is hovered or selected"
-msgstr "Bugfix: Korjattu elementtien siirtyminen, kun muistiinpanon otsikko on hiiren alla tai valittu."
-
-#: data/jorts.metainfo.xml.in:219
-msgid "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-msgstr "Bugfix: Uudet ja poistettavat akkelit eivät toimineet oops sorry se on korjattu nyt."
-
-#: data/jorts.metainfo.xml.in:220
-msgid "Bugfix where random components skipped the last possible choice"
-msgstr "Virheenkorjaus, jossa satunnaiset komponentit ohittivat viimeisen mahdollisen valinnan"
-
-#: data/jorts.metainfo.xml.in:221
-msgid "Bugfix: shortcut for emotes did not show up properly"
-msgstr "Bugfix: emotesin pikakuvake ei näkynyt oikein"
-
-#: data/jorts.metainfo.xml.in:222
-msgid "Lil easter egg"
-msgstr "Lil pääsiäismuna"
-
-#: data/jorts.metainfo.xml.in:228
-#, fuzzy
-msgid "2.3.0 The Inner Jorts"
-msgstr "2.3.0 Sisäiset housut"
-
-#: data/jorts.metainfo.xml.in:230
-msgid "New feature: Preferences dialog! Right-click on the app icon to see the option"
-msgstr "Uusi ominaisuus: Asetukset-valintaikkuna! Napsauta sovelluksen kuvaketta hiiren kakkospainikkeella nähdäksesi vaihtoehdon."
-
-#: data/jorts.metainfo.xml.in:231
-msgid "scribbly mode has been moved to the new preference dialog"
-msgstr "scribbly-tila on siirretty uuteen asetusten valintaikkunaan."
-
-#: data/jorts.metainfo.xml.in:232
-#, fuzzy
-msgid "For translators: Translations have been separated in 2: One for the UI one for the extra content"
-msgstr "Parannus kääntäjille: Käännökset on erotettu kahteen osaan: yksi käyttöliittymälle ja yksi lisäsisällölle."
-
-#: data/jorts.metainfo.xml.in:233
-msgid "Comfort: Easier to grab and drag stickies"
-msgstr "Mukavuus: Helpompi tarttua ja vetää tarroja."
-
-#: data/jorts.metainfo.xml.in:234
-msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-msgstr "Bugfix: Sovelluskeskuksen kuvakaappaukset olivat sekaisin aaaa"
-
-#: data/jorts.metainfo.xml.in:240
-#, fuzzy
-msgid "Updated translations"
-msgstr "Päivitetyt käännökset"
-
-#: data/jorts.metainfo.xml.in:245
-msgid "2.2.0 The Jorts of light"
-msgstr "2.2.0 Valon Jortsit"
-
-#: data/jorts.metainfo.xml.in:247
-#: data/jorts.metainfo.xml.in:262
-msgid "Better translation coverage"
-msgstr "Parempi käännöskattavuus"
-
-#: data/jorts.metainfo.xml.in:248
-#, fuzzy
-msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-msgstr "Uusi ominaisuus: scribbly-tila! Piilota muistiinpanojen sisältö, kun et ole keskittynyt."
-
-#: data/jorts.metainfo.xml.in:249
-msgid "New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!"
-msgstr "Uusi ominaisuus: Emoji-valintapainike! Tiedän, että oikealla napsautuksella on sellainen, mutta painikkeet ovat helpommin saatavilla!"
-
-#: data/jorts.metainfo.xml.in:250
-msgid "The button in the toolbar displays a random emote everytime you click!"
-msgstr "Työkalurivin painike näyttää satunnaisen hymiön joka kerta, kun napsautat sitä!"
-
-#: data/jorts.metainfo.xml.in:251
-msgid "New feature: Jorts does a monthly backup. Should there be any issue you can recover data!"
-msgstr "Uusi ominaisuus: Jorts tekee kuukausittaisen varmuuskopion. Jos tulee jokin ongelma, voit palauttaa tiedot!"
-
-#: data/jorts.metainfo.xml.in:252
-msgid "Should the main storage be corrupted, Jorts tries to load from backup"
-msgstr "Jos päätallennustiedosto vioittuu, Jorts yrittää ladata varmuuskopiosta."
-
-#: data/jorts.metainfo.xml.in:253
-msgid "Some new fun/cute default titles"
-msgstr "Joitakin uusia hauskoja/söpöjä oletusnimikkeitä"
-
-#: data/jorts.metainfo.xml.in:254
-msgid "Under the hood changes here and there for cleaner code"
-msgstr "Muutoksia konepellin alla siistimmän koodin aikaansaamiseksi täällä ja siellä"
-
-#: data/jorts.metainfo.xml.in:260
-msgid "2.1.2 The unrippable jorts"
-msgstr "2.1.2 Jortsit, jotka eivät ole rypistettävissä."
-
-#: data/jorts.metainfo.xml.in:263
-msgid "Add relief to actionbar buttons"
-msgstr "Lisää helpotusta toimintopalkin painikkeisiin"
-
-#: data/jorts.metainfo.xml.in:264
-msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-msgstr "Bugfix: Reunatapaus, jossa teema tai zoom werent tallennettiin oikein"
-
-#: data/jorts.metainfo.xml.in:265
-msgid "Bugfix: Title in multitasking not set correctly"
-msgstr "Korjaus: Otsikko ei asetu oikein monitoiminnossa"
-
-#: data/jorts.metainfo.xml.in:266
-msgid "Bugfix: Icon inconsistency accross icon themes"
-msgstr "Bugfix: Kuvakkeiden epäjohdonmukaisuus eri kuvaketeemoissa"
-
-#: data/jorts.metainfo.xml.in:267
-msgid "Bugfix: Theming inconsistencies accross stickies"
-msgstr "Bugfix: Theming epäjohdonmukaisuuksia eri stickieissä"
-
-#: data/jorts.metainfo.xml.in:273
-msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-msgstr "2.1.1 Tuoreet pesulasta! (2: electric boogaloo)"
-
-#: data/jorts.metainfo.xml.in:275
-msgid "Clearer appmenu description"
-msgstr "Selkeämpi sovellusvalikon kuvaus"
-
-#: data/jorts.metainfo.xml.in:276
-msgid "More consistent theming"
-msgstr "Johdonmukaisempi teemoittelu"
-
-#: data/jorts.metainfo.xml.in:277
-msgid "Bugfix: the delete shortcut was unresponsible"
-msgstr "Virheenkorjaus: Poista pikakuvake oli vastuuttomana"
-
-#: data/jorts.metainfo.xml.in:278
-msgid "Bugfix: screenshot not showing"
-msgstr "Bugfix: kuvakaappaus ei näy"
-
-#: data/jorts.metainfo.xml.in:284
-msgid "2.1.0 Fresh out of the laundry!"
-msgstr "2.1.0 Juuri pyykistä!"
-
-#: data/jorts.metainfo.xml.in:286
-msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-msgstr "Sisältää nuotti kerrallaan zoomauksen! Voit siis suurentaa tai pienentää tekstiä"
-
-#: data/jorts.metainfo.xml.in:287
-msgid "Latest set zoom, aka what is most comfortable to you, stays as default for new notes"
-msgstr "Viimeisin asetettu zoomaus eli se, mikä on sinulle mukavin, pysyy oletuksena uusissa muistiinpanoissa."
-
-#: data/jorts.metainfo.xml.in:288
-msgid "Better readability (WCAG AA or AAA depending on theme)"
-msgstr "Parempi luettavuus (WCAG AA tai AAA teemasta riippuen)."
-
-#: data/jorts.metainfo.xml.in:289
-msgid "Also slightly better looking theme. Yes even more :)"
-msgstr "Myös hieman paremman näköinen teema. Kyllä, vielä enemmän :)"
-
-#: data/jorts.metainfo.xml.in:290
-msgid "Improved translations"
-msgstr "Parannetut käännökset"
-
-#: data/jorts.metainfo.xml.in:291
-msgid "Better shortcut and tooltips"
-msgstr "Paremmat pikanäppäimet ja työkaluvihjeet"
-
-#: data/jorts.metainfo.xml.in:292
-msgid "Fixed a bug where Jorts stayed on light system theme"
-msgstr "Korjattu vika, jossa Jortsit pysyivät vaaleassa järjestelmäteemassa."
-
-#: data/jorts.metainfo.xml.in:298
-msgid "2.0.1 Appcenter release"
-msgstr "2.0.1 Appcenterin julkaisu"
-
-#: data/jorts.metainfo.xml.in:303
-msgid "2.0.0 Release: Slate And Bubblegum"
-msgstr "2.0.0 Julkaisu: Slate And Bubblegum"
-
-#: data/jorts.metainfo.xml.in:305
-msgid "Revival of an ancient but well loved version of Notejot"
-msgstr "Vanhan mutta hyvin rakastetun Notejot-version elvyttäminen."
-
-#: data/jorts.metainfo.xml.in:306
-msgid "The app is now named Jorts. You however cannot wear it"
-msgstr "Sovelluksen nimi on nyt Jorts. Et kuitenkaan voi käyttää sitä"
-
-#: data/jorts.metainfo.xml.in:307
-msgid "10 lovely little colours"
-msgstr "10 ihanaa pientä väriä"
-
-#: data/jorts.metainfo.xml.in:308
-msgid "Built atop of modern Linux technologies and packaging formats"
-msgstr "Rakennettu nykyaikaisten Linux-tekniikoiden ja pakkausformaattien varaan"
-
-#: data/jorts.metainfo.xml.in:309
-msgid "Smooth transition when changing theme"
-msgstr "Sujuva siirtyminen teemaa vaihdettaessa"
-
-#: data/jorts.metainfo.xml.in:310
-msgid "New stickies have a random fun little title and colour"
-msgstr "Uusilla tarralapuilla on satunnainen hauska otsikko ja väri."
-
-#: data/jorts.metainfo.xml.in:311
-msgid "A few initial translations included, and more to come"
-msgstr "Muutama alustava käännös mukana, ja lisää on tulossa."
-
-#: data/jorts.metainfo.xml.in:312
-msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-msgstr "Sähköposti ja linkit ovat klikattavissa! Ctrl+Klikkaa avataksesi sähköpostin tai selaimen."
-
-#: data/jorts.metainfo.xml.in:313
-msgid "Text supports undo, redo, and you can use emojis :)"
-msgstr "Teksti tukee peruuttamista, uudelleen tekemistä ja voit käyttää hymiöitä :)"
+#~ msgid "3.1.3 Jorts of fire and lava"
+#~ msgstr "2.2.0 Valon Jortsit"
+
+#~ msgid "Save memory and disk writes by adding a proper debounce"
+#~ msgstr ""
+#~ "Säästä muistia ja levykirjoituksia lisäämällä asianmukainen debounce-"
+#~ "ominaisuus."
 
 #, fuzzy
-#~ msgid "Added a desktop action to create a note from clipboard content. Alas not reliable enough to offer it in the UI"
-#~ msgstr "Lisätty työpöytätoiminto muistiinpanon luomiseksi leikepöydän sisällöstä."
+#~ msgid "Updated IT translations thanks to @albanobattistella!"
+#~ msgstr "Päivitetyt käännökset"
 
-#~ msgid "I struggled with some shenanigans to have only one preference window... Should be done for good now"
-#~ msgstr "Kamppailin joidenkin temppujen kanssa, jotta minulla olisi vain yksi asetusikkuna... Pitäisi olla tehty lopullisesti nyt"
+#, fuzzy
+#~ msgid "Updated JA translations thanks to @RyoNakano!"
+#~ msgstr "Päivitetyt käännökset"
 
-#~ msgid "Better commented text and code, for translators and eventual contributors"
-#~ msgstr "Paremmin kommentoitua tekstiä ja koodia kääntäjiä ja mahdollisia avustajia varten."
+#~ msgid "3.1.2 Amendments for flathub"
+#~ msgstr "3.1.2 Tarkistukset flathubin osalta"
 
-#~ msgid "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not other DEs"
-#~ msgstr "Uudet asetukset: Elementary OS:ssä on se OOTB, mutta ei muissa DE:issä."
+#~ msgid "Nothing interesting here"
+#~ msgstr "Täällä ei ole mitään mielenkiintoista"
+
+#~ msgid "3.1.1 Woops"
+#~ msgstr "3.1.1 Hups"
+
+#~ msgid "Minor screenshot amendments"
+#~ msgstr "Pieniä muutoksia kuvakaappauksiin"
+
+#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
+#~ msgstr "3.1.0 Laulujortsit ja tanssijortsit"
+
+#~ msgid "Flathub version, with a lot of help from @RyoNakano"
+#~ msgstr "Flathub-versio, paljon apua @RyoNakano:lta."
+
+#, fuzzy
+#~ msgid "3.0.0 Jorts of Thunder"
+#~ msgstr "2.2.0 Valon Jortsit"
+
+#~ msgid "A lovely brand new icon thanks to @wpkelso"
+#~ msgstr "Ihana upouusi kuvake kiitos @wpkelso:n"
+
+#~ msgid ""
+#~ "Between this and the GTK4 port, there is very little left from old "
+#~ "Notejot... We could say it is a v3"
+#~ msgstr ""
+#~ "Tämän ja GTK4-portin välillä on hyvin vähän jäljellä vanhasta "
+#~ "Notejotista... Voisimme sanoa, että se on v3"
+
+#~ msgid ""
+#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
+#~ "reimplement save and restore"
+#~ msgstr ""
+#~ "Tee sovelluksesta yleispätevämpi: Muut DE:t eivät säilytä ikkunan "
+#~ "mittoja, joten toteuta tallennus ja palautus uudelleen."
+
+#, fuzzy
+#~ msgid "Updated RU translations thanks to @camellan!"
+#~ msgstr "Päivitetyt käännökset"
+
+#, fuzzy
+#~ msgid "Updated screenshots"
+#~ msgstr "Päivitetyt käännökset"
+
+#, fuzzy
+#~ msgid "2.4.0 The Jorts of Ice"
+#~ msgstr "2.2.0 Valon Jortsit"
+
+#~ msgid ""
+#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
+#~ "will feel more at home now"
+#~ msgstr ""
+#~ "Kiitos RyoNakanon japaninkielisten käännösten uudistamisen, "
+#~ "japaninkieliset tuntevat nyt olonsa kotoisammaksi."
+
+#~ msgid "Respect reduce animations settings"
+#~ msgstr "Kunnioita animaatioiden vähentämisen asetuksia"
+
+#, fuzzy
+#~ msgid "Scribble mode exclusively in the preferences now"
+#~ msgstr "scribbly-tila on siirretty uuteen asetusten valintaikkunaan."
+
+#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
+#~ msgstr "Lisää mieltymys: nyt voit piilottaa alapalkin! (Ctrl+t)"
+
+#~ msgid ""
+#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
+#~ msgstr ""
+#~ "Bugfix: Korjattu elementtien siirtyminen, kun muistiinpanon otsikko on "
+#~ "hiiren alla tai valittu."
+
+#~ msgid ""
+#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
+#~ msgstr ""
+#~ "Bugfix: Uudet ja poistettavat akkelit eivät toimineet oops sorry se on "
+#~ "korjattu nyt."
+
+#~ msgid "Bugfix where random components skipped the last possible choice"
+#~ msgstr ""
+#~ "Virheenkorjaus, jossa satunnaiset komponentit ohittivat viimeisen "
+#~ "mahdollisen valinnan"
+
+#~ msgid "Bugfix: shortcut for emotes did not show up properly"
+#~ msgstr "Bugfix: emotesin pikakuvake ei näkynyt oikein"
+
+#~ msgid "Lil easter egg"
+#~ msgstr "Lil pääsiäismuna"
+
+#, fuzzy
+#~ msgid "2.3.0 The Inner Jorts"
+#~ msgstr "2.3.0 Sisäiset housut"
+
+#~ msgid ""
+#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
+#~ "option"
+#~ msgstr ""
+#~ "Uusi ominaisuus: Asetukset-valintaikkuna! Napsauta sovelluksen kuvaketta "
+#~ "hiiren kakkospainikkeella nähdäksesi vaihtoehdon."
+
+#~ msgid "scribbly mode has been moved to the new preference dialog"
+#~ msgstr "scribbly-tila on siirretty uuteen asetusten valintaikkunaan."
+
+#, fuzzy
+#~ msgid ""
+#~ "For translators: Translations have been separated in 2: One for the UI "
+#~ "one for the extra content"
+#~ msgstr ""
+#~ "Parannus kääntäjille: Käännökset on erotettu kahteen osaan: yksi "
+#~ "käyttöliittymälle ja yksi lisäsisällölle."
+
+#~ msgid "Comfort: Easier to grab and drag stickies"
+#~ msgstr "Mukavuus: Helpompi tarttua ja vetää tarroja."
+
+#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
+#~ msgstr "Bugfix: Sovelluskeskuksen kuvakaappaukset olivat sekaisin aaaa"
+
+#, fuzzy
+#~ msgid "Updated translations"
+#~ msgstr "Päivitetyt käännökset"
+
+#~ msgid "2.2.0 The Jorts of light"
+#~ msgstr "2.2.0 Valon Jortsit"
+
+#~ msgid "Better translation coverage"
+#~ msgstr "Parempi käännöskattavuus"
+
+#, fuzzy
+#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
+#~ msgstr ""
+#~ "Uusi ominaisuus: scribbly-tila! Piilota muistiinpanojen sisältö, kun et "
+#~ "ole keskittynyt."
+
+#~ msgid ""
+#~ "New feature: Emoji picker button! I know there is one on right-click, but "
+#~ "buttons are more accessible!"
+#~ msgstr ""
+#~ "Uusi ominaisuus: Emoji-valintapainike! Tiedän, että oikealla "
+#~ "napsautuksella on sellainen, mutta painikkeet ovat helpommin saatavilla!"
+
+#~ msgid ""
+#~ "The button in the toolbar displays a random emote everytime you click!"
+#~ msgstr ""
+#~ "Työkalurivin painike näyttää satunnaisen hymiön joka kerta, kun napsautat "
+#~ "sitä!"
+
+#~ msgid ""
+#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "can recover data!"
+#~ msgstr ""
+#~ "Uusi ominaisuus: Jorts tekee kuukausittaisen varmuuskopion. Jos tulee "
+#~ "jokin ongelma, voit palauttaa tiedot!"
+
+#~ msgid ""
+#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ msgstr ""
+#~ "Jos päätallennustiedosto vioittuu, Jorts yrittää ladata varmuuskopiosta."
+
+#~ msgid "Some new fun/cute default titles"
+#~ msgstr "Joitakin uusia hauskoja/söpöjä oletusnimikkeitä"
+
+#~ msgid "Under the hood changes here and there for cleaner code"
+#~ msgstr ""
+#~ "Muutoksia konepellin alla siistimmän koodin aikaansaamiseksi täällä ja "
+#~ "siellä"
+
+#~ msgid "2.1.2 The unrippable jorts"
+#~ msgstr "2.1.2 Jortsit, jotka eivät ole rypistettävissä."
+
+#~ msgid "Add relief to actionbar buttons"
+#~ msgstr "Lisää helpotusta toimintopalkin painikkeisiin"
+
+#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
+#~ msgstr ""
+#~ "Bugfix: Reunatapaus, jossa teema tai zoom werent tallennettiin oikein"
+
+#~ msgid "Bugfix: Title in multitasking not set correctly"
+#~ msgstr "Korjaus: Otsikko ei asetu oikein monitoiminnossa"
+
+#~ msgid "Bugfix: Icon inconsistency accross icon themes"
+#~ msgstr "Bugfix: Kuvakkeiden epäjohdonmukaisuus eri kuvaketeemoissa"
+
+#~ msgid "Bugfix: Theming inconsistencies accross stickies"
+#~ msgstr "Bugfix: Theming epäjohdonmukaisuuksia eri stickieissä"
+
+#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
+#~ msgstr "2.1.1 Tuoreet pesulasta! (2: electric boogaloo)"
+
+#~ msgid "Clearer appmenu description"
+#~ msgstr "Selkeämpi sovellusvalikon kuvaus"
+
+#~ msgid "More consistent theming"
+#~ msgstr "Johdonmukaisempi teemoittelu"
+
+#~ msgid "Bugfix: the delete shortcut was unresponsible"
+#~ msgstr "Virheenkorjaus: Poista pikakuvake oli vastuuttomana"
+
+#~ msgid "Bugfix: screenshot not showing"
+#~ msgstr "Bugfix: kuvakaappaus ei näy"
+
+#~ msgid "2.1.0 Fresh out of the laundry!"
+#~ msgstr "2.1.0 Juuri pyykistä!"
+
+#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
+#~ msgstr ""
+#~ "Sisältää nuotti kerrallaan zoomauksen! Voit siis suurentaa tai pienentää "
+#~ "tekstiä"
+
+#~ msgid ""
+#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
+#~ "for new notes"
+#~ msgstr ""
+#~ "Viimeisin asetettu zoomaus eli se, mikä on sinulle mukavin, pysyy "
+#~ "oletuksena uusissa muistiinpanoissa."
+
+#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
+#~ msgstr "Parempi luettavuus (WCAG AA tai AAA teemasta riippuen)."
+
+#~ msgid "Also slightly better looking theme. Yes even more :)"
+#~ msgstr "Myös hieman paremman näköinen teema. Kyllä, vielä enemmän :)"
+
+#~ msgid "Improved translations"
+#~ msgstr "Parannetut käännökset"
+
+#~ msgid "Better shortcut and tooltips"
+#~ msgstr "Paremmat pikanäppäimet ja työkaluvihjeet"
+
+#~ msgid "Fixed a bug where Jorts stayed on light system theme"
+#~ msgstr ""
+#~ "Korjattu vika, jossa Jortsit pysyivät vaaleassa järjestelmäteemassa."
+
+#~ msgid "2.0.1 Appcenter release"
+#~ msgstr "2.0.1 Appcenterin julkaisu"
+
+#~ msgid "2.0.0 Release: Slate And Bubblegum"
+#~ msgstr "2.0.0 Julkaisu: Slate And Bubblegum"
+
+#~ msgid "Revival of an ancient but well loved version of Notejot"
+#~ msgstr "Vanhan mutta hyvin rakastetun Notejot-version elvyttäminen."
+
+#~ msgid "The app is now named Jorts. You however cannot wear it"
+#~ msgstr "Sovelluksen nimi on nyt Jorts. Et kuitenkaan voi käyttää sitä"
+
+#~ msgid "10 lovely little colours"
+#~ msgstr "10 ihanaa pientä väriä"
+
+#~ msgid "Built atop of modern Linux technologies and packaging formats"
+#~ msgstr ""
+#~ "Rakennettu nykyaikaisten Linux-tekniikoiden ja pakkausformaattien varaan"
+
+#~ msgid "Smooth transition when changing theme"
+#~ msgstr "Sujuva siirtyminen teemaa vaihdettaessa"
+
+#~ msgid "New stickies have a random fun little title and colour"
+#~ msgstr "Uusilla tarralapuilla on satunnainen hauska otsikko ja väri."
+
+#~ msgid "A few initial translations included, and more to come"
+#~ msgstr "Muutama alustava käännös mukana, ja lisää on tulossa."
+
+#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
+#~ msgstr ""
+#~ "Sähköposti ja linkit ovat klikattavissa! Ctrl+Klikkaa avataksesi "
+#~ "sähköpostin tai selaimen."
+
+#~ msgid "Text supports undo, redo, and you can use emojis :)"
+#~ msgstr ""
+#~ "Teksti tukee peruuttamista, uudelleen tekemistä ja voit käyttää "
+#~ "hymiöitä :)"
+
+#, fuzzy
+#~ msgid ""
+#~ "Added a desktop action to create a note from clipboard content. Alas not "
+#~ "reliable enough to offer it in the UI"
+#~ msgstr ""
+#~ "Lisätty työpöytätoiminto muistiinpanon luomiseksi leikepöydän sisällöstä."
+
+#~ msgid ""
+#~ "I struggled with some shenanigans to have only one preference window... "
+#~ "Should be done for good now"
+#~ msgstr ""
+#~ "Kamppailin joidenkin temppujen kanssa, jotta minulla olisi vain yksi "
+#~ "asetusikkuna... Pitäisi olla tehty lopullisesti nyt"
+
+#~ msgid ""
+#~ "Better commented text and code, for translators and eventual contributors"
+#~ msgstr ""
+#~ "Paremmin kommentoitua tekstiä ja koodia kääntäjiä ja mahdollisia "
+#~ "avustajia varten."
+
+#~ msgid ""
+#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
+#~ "other DEs"
+#~ msgstr ""
+#~ "Uudet asetukset: Elementary OS:ssä on se OOTB, mutta ei muissa DE:issä."
 
 #~ msgid "Sticky notes utility"
 #~ msgstr "Tarralappujen apuohjelma"
@@ -583,7 +633,8 @@ msgstr "Teksti tukee peruuttamista, uudelleen tekemistä ja voit käyttää hymi
 
 #, fuzzy
 #~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "Värikkäitä ja iloisia pieniä muistilappuja kaikille ajatuksillesi! :)"
+#~ msgstr ""
+#~ "Värikkäitä ja iloisia pieniä muistilappuja kaikille ajatuksillesi! :)"
 
 #~ msgid "Windows version, with the guidance from @supercamel"
 #~ msgstr "Windows-versio, @supercamel opastuksella"
@@ -600,5 +651,7 @@ msgstr "Teksti tukee peruuttamista, uudelleen tekemistä ja voit käyttää hymi
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr "Voit zoomata niin kovaa, että voisit tehdä ascii-taidetta."
 
-#~ msgid "New feature: Default font. You can now set a specific font for Jorts."
-#~ msgstr "Uusi ominaisuus: Oletusfontti. Voit nyt asettaa tietyn fontin Jortsille."
+#~ msgid ""
+#~ "New feature: Default font. You can now set a specific font for Jorts."
+#~ msgstr ""
+#~ "Uusi ominaisuus: Oletusfontti. Voit nyt asettaa tietyn fontin Jortsille."

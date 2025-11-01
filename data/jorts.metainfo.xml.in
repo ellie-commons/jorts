@@ -94,6 +94,11 @@
     </screenshots>
 
     <releases>
+        <release version="3.4.1" date="2025-11-01">
+            <description>
+                <p>No fun allowed: revert back to default style</p>
+            </description>
+        </release>
         <release version="3.4.0" date="2025-09-30">
             <description>
                 <p>🕷️ 3.4.0 Scary Jorts of Boo</p>
@@ -150,167 +155,6 @@
                 <ul>
                     <li>A lovely temporary icon by @wpkelso</li>
                     <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.1.3" date="2025-05-11">
-            <description>
-                <p>3.1.3 Jorts of fire and lava</p>
-                <ul>
-                    <li>Save memory and disk writes by adding a proper debounce</li>
-                    <li>Updated IT translations thanks to @albanobattistella!</li>
-                    <li>Updated JA translations thanks to @RyoNakano!</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.1.2" date="2025-05-10">
-            <description>
-                <p>3.1.2 Amendments for flathub</p>
-                <ul>
-                    <li>Nothing interesting here</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.1.1" date="2025-05-08">
-            <description>
-                <p>3.1.1 Woops</p>
-                <ul>
-                    <li>Minor screenshot amendments</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.1.0" date="2025-05-08">
-            <description>
-                <p>3.1.0 Jorts of songs and Jorts of dance</p>
-                <ul>
-                    <li>Flathub version, with a lot of help from @RyoNakano</li>
-                </ul>
-            </description>
-        </release>
-        <release version="3.0.0" date="2025-04-27">
-            <description>
-                <p>3.0.0 Jorts of Thunder</p>
-                <ul>
-                    <li>A lovely brand new icon thanks to @wpkelso</li>
-                    <li>Between this and the GTK4 port, there is very little left from old Notejot... We could say it is a v3</li>
-                    <li>Make the app more universal: Other DEs do not keep window dimensions, so reimplement save and restore</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.4.2" date="2025-04-06">
-            <description>
-                <p>Updated RU translations thanks to @camellan!</p>
-            </description>
-        </release>
-        <release version="2.4.1" date="2025-04-06">
-            <description>
-                <p>Updated screenshots</p>
-            </description>
-        </release>
-        <release version="2.4.0" date="2025-04-05">
-            <description>
-                <p>2.4.0 The Jorts of Ice</p>
-                <ul>
-                    <li>Thanks to RyoNakano reworking japanese translations, Japanese speakers will feel more at home now</li>
-                    <li>Respect reduce animations settings</li>
-                    <li>Scribble mode exclusively in the preferences now</li>
-                    <li>Add preference: now you can hide the bottom bar! (Ctrl+t)</li>
-                    <li>Bugfix: Fixed elements moving when a note title is hovered or selected</li>
-                    <li>Bugfix: New and delete accels were not working oops sorry it's fixed now</li>
-                    <li>Bugfix where random components skipped the last possible choice</li>
-                    <li>Bugfix: shortcut for emotes did not show up properly</li>
-                    <li>Lil easter egg</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.3.0" date="2025-03-23">
-            <description>
-                <p>2.3.0 The Inner Jorts</p>
-                <ul>
-                    <li>New feature: Preferences dialog! Right-click on the app icon to see the option</li>
-                    <li>scribbly mode has been moved to the new preference dialog</li>
-                    <li>For translators: Translations have been separated in 2: One for the UI one for the extra content</li>
-                    <li>Comfort: Easier to grab and drag stickies</li>
-                    <li>Bugfix: Screenshots in the appcenter were a mess aaaa</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.2.1" date="2025-03-17">
-            <description>
-                <p>Updated translations</p>
-            </description>
-        </release>
-        <release version="2.2.0" date="2025-03-16">
-            <description>
-                <p>2.2.0 The Jorts of light</p>
-                <ul>
-                    <li>Better translation coverage</li>
-                    <li>New feature: scribbly mode! Hide sticky notes content when unfocused</li>
-                    <li>New feature: Emoji picker button! I know there is one on right-click, but buttons are more accessible!</li>
-                    <li>The button in the toolbar displays a random emote everytime you click!</li>
-                    <li>New feature: Jorts does a monthly backup. Should there be any issue you can recover data!</li>
-                    <li>Should the main storage be corrupted, Jorts tries to load from backup</li>
-                    <li>Some new fun/cute default titles</li>
-                    <li>Under the hood changes here and there for cleaner code</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.1.2" date="2025-03-08">
-            <description>
-                <p>2.1.2 The unrippable jorts</p>
-                <ul>
-                    <li>Better translation coverage</li>
-                    <li>Add relief to actionbar buttons</li>
-                    <li>Bugfix: Edge case where the theme or zoom werent properly saved</li>
-                    <li>Bugfix: Title in multitasking not set correctly</li>
-                    <li>Bugfix: Icon inconsistency accross icon themes</li>
-                    <li>Bugfix: Theming inconsistencies accross stickies</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.1.1" date="2025-03-02">
-            <description>
-                <p>2.1.1 Fresh out of the laundry! (2: electric boogaloo)</p>
-                <ul>
-                    <li>Clearer appmenu description</li>
-                    <li>More consistent theming</li>
-                    <li>Bugfix: the delete shortcut was unresponsible</li>
-                    <li>Bugfix: screenshot not showing</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.1.0" date="2025-03-01">
-            <description>
-                <p>2.1.0 Fresh out of the laundry!</p>
-                <ul>
-                    <li>Includes a per-note zoom! So you can get bigger or smaller text</li>
-                    <li>Latest set zoom, aka what is most comfortable to you, stays as default for new notes</li>
-                    <li>Better readability (WCAG AA or AAA depending on theme)</li>
-                    <li>Also slightly better looking theme. Yes even more :)</li>
-                    <li>Improved translations</li>
-                    <li>Better shortcut and tooltips</li>
-                    <li>Fixed a bug where Jorts stayed on light system theme</li>
-                </ul>
-            </description>
-        </release>
-        <release version="2.0.1" date="2025-02-25">
-            <description>
-                <p>2.0.1 Appcenter release</p>
-            </description>
-        </release>
-        <release version="2.0.0" date="2025-02-25">
-            <description>
-                <p>2.0.0 Release: Slate And Bubblegum</p>
-                <ul>
-                    <li>Revival of an ancient but well loved version of Notejot</li>
-                    <li>The app is now named Jorts. You however cannot wear it</li>
-                    <li>10 lovely little colours</li>
-                    <li>Built atop of modern Linux technologies and packaging formats</li>
-                    <li>Smooth transition when changing theme</li>
-                    <li>New stickies have a random fun little title and colour</li>
-                    <li>A few initial translations included, and more to come</li>
-                    <li>Email and links are clickable! Ctrl+Click to open in mail or browser</li>
-                    <li>Text supports undo, redo, and you can use emojis :)</li>
                 </ul>
             </description>
         </release>
