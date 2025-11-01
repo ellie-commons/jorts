@@ -81,6 +81,7 @@ public class Jorts.Application : Gtk.Application {
     public override void startup () {
         debug ("[JORTS] Jorts Startup…");
         base.startup ();
+        Gtk.init ();
         Granite.init ();
 
         add_action_entries (ACTION_ENTRIES, this);
