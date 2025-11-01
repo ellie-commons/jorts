@@ -129,15 +129,6 @@ namespace Jorts.Themer {
     public static void init_all_themes () {
         debug ("[THEMER] Init all themes");
 
-        // Use standard sheet
-        var app_provider = new Gtk.CssProvider ();
-        app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
-        Gtk.StyleContext.add_provider_for_display (
-            Gdk.Display.get_default (),
-            app_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
-        );
-
         // Then generate all theme classes
         foreach (unowned var theme in Jorts.Themes.all_string ()) {
             var theme_provider = new Gtk.CssProvider ();
