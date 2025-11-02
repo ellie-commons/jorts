@@ -2,9 +2,9 @@
 
 Name Jorts
 
-Outfile "JortsInstaller.exe"
+Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\Jorts"
-#RequestExecutionLevel admin  ; Request administrative privileges
+# RequestExecutionLevel admin  ; Request administrative privileges
 
 # Set the title of the installer window
 Caption "Jorts Installer"
@@ -15,8 +15,8 @@ Caption "Jorts Installer"
 !define MUI_ABORTWARNING
 !define MUI_ABORTWARNING_TEXT "Are you sure you want to cancel Jorts setup?"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while Jorts is being installed."
-!define MUI_ICON "${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"
-!define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
+!define MUI_ICON "install.ico"
+!define MUI_UNICON "uninstall.ico"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -85,19 +85,17 @@ ${Index_RemoveFilesAndSubDirs}-done:
 
 Section "Install"
     SetOutPath "$INSTDIR"
-    File /r "windows\deploy\*"
+    File /r "deploy\*"
     CreateDirectory $SMPROGRAMS\Jorts
 
     ; Start menu
-    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\jorts.exe" "" "$INSTDIR\windows\jorts.ico" 0
+    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\jorts.ico" 0
     
     ; Autostart
-    ; CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\jorts.exe" "" "$INSTDIR\windows\jorts.ico" 0
+    ; CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\jorts.ico" 0
     
     ; Preferences
-    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\jorts.exe" "--preferences" "$INSTDIR\windows\jorts.ico" 0
-
-
+    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "--preferences" "$INSTDIR\jorts.ico" 0
     
     WriteRegStr HKCU "Software\Jorts" "" $INSTDIR
     WriteUninstaller "$INSTDIR\Uninstall.exe"

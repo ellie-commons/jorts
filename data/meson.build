@@ -18,7 +18,7 @@ i18n.merge_file(
 
 
 # metainfo confuses windows
-if not windows
+if not windows_build
 
 #Translate and install our .metainfo file
 i18n.merge_file(

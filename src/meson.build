@@ -30,7 +30,7 @@ sources = files (
     'Application.vala',
 )
 
-if not windows
+if not windows_build
     sources += files('Utils' / 'Libportal.vala')
 endif
 

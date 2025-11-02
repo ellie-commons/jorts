@@ -6,17 +6,17 @@
 app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
-font_path="windows/fonts"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
-icon_file="windows/jorts.ico"
-icon_file_install="windows/install.ico"
-icon_file_uninstall="windows/uninstall.ico"
+icon_file="jorts.ico"
+icon_file_install="install.ico"
+icon_file_uninstall="uninstall.ico"
 
 #PRE MESON
 #Skip refresh package
 #Skip metainfo
+
 
 # Rebuild the exe as a release build
 rm -rfd ${build_dir}
@@ -33,7 +33,9 @@ mkdir -p "${deploy_dir}"
 mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
-cp "${build_dir}/${exe_name}" "${deploy_dir}/bin"
+cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
+cp "windows/${icon_file}" "${deploy_dir}"
+
 dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 
 for dll in $dlls 
@@ -43,30 +45,33 @@ done
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
-cp /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
-#cp -r /mingw64/etc/gtk-3.0 ${deploy_dir}/etc/gtk-3.0
-#cp -r /mingw64/etc/gtk-4.0 ${deploy_dir}/etc/gtk-4.0
-cp -r /mingw64/etc/fonts ${deploy_dir}/etc/fonts
+cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
+cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 # Redacted Script
-mkdir ${deploy_dir}/etc/fonts/redactedscript
-cp -r ${font_path} ${deploy_dir}/etc/fonts/redactedscript/
+cp -rnv windows/RedactedScript/ ${deploy_dir}/etc/fonts/
+cp -rnv windows/Inter/ ${deploy_dir}/etc/fonts/
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
-cp -r /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
-cp -r share ${deploy_dir}
-cp -r /mingw64/share/glib-2.0 ${deploy_dir}/share/glib-2.0
-cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/gtk-3.0
-cp -r /mingw64/share/gtk-4.0 ${deploy_dir}/share/gtk-4.0
-cp -r /mingw64/share/icons ${deploy_dir}/share/icons
-cp -r /mingw64/share/icu ${deploy_dir}/share/icu
-cp -r /mingw64/share/locale ${deploy_dir}/share/locale
-cp -r /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes/${theme_name}
+cp -rnv /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
+cp -rnv /mingw64/share ${deploy_dir}
+cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/glib-2.0
+# cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/gtk-3.0
+cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/gtk-4.0
+cp -rnv /mingw64/share/icons ${deploy_dir}/share/icons
+cp -rnv /mingw64/share/icu ${deploy_dir}/share/icu
+cp -rnv /mingw64/share/locale ${deploy_dir}/share/locale
+cp -rnv /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes/${theme_name}
+
+#Regen font cache
+#fc-cache -f -v
 
 # Write the theme to gtk settings
+mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
+gtk-icon-theme-name=elementary
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
@@ -75,14 +80,14 @@ EOF
 
 # Create NSIS script
 echo "Creating NSIS script..."
-cat << EOF > ${app_name}Installer.nsi
+cat << EOF > windows/${app_name}-Installer.nsi
 !include "MUI2.nsh"
 
 Name ${app_name}
 
-Outfile "${app_name}Installer.exe"
+Outfile "windows/${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
-#RequestExecutionLevel admin  ; Request administrative privileges
+# RequestExecutionLevel admin  ; Request administrative privileges
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
@@ -93,8 +98,8 @@ Caption "${app_name} Installer"
 !define MUI_ABORTWARNING
 !define MUI_ABORTWARNING_TEXT "Are you sure you want to cancel ${app_name} setup?"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
-!define MUI_ICON "\${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"
-!define MUI_UNICON "\${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
+!define MUI_ICON "${icon_file_install}"
+!define MUI_UNICON "${icon_file_uninstall}"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -208,7 +213,7 @@ SectionEnd
 EOF
 
 echo "Running NSIS..."
-makensis ${app_name}-Installer.nsi
+makensis windows/${app_name}-Installer.nsi
 
 echo "Done"
 
