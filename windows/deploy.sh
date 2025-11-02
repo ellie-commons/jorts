@@ -49,9 +49,11 @@ cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
 cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 
-
-mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
+cp -rnv /mingw64/lib/librsvg-2.a ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders
+cp -rnv /mingw64/lib/librsvg-2.dll.a ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders
+
+
 #cp -rnv /mingw64/share ${deploy_dir}
 cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
@@ -64,7 +66,7 @@ cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
 
 # Redacted Script
-cp -rnv /mingw64/share/fonts/cantarell ${deploy_dir}/share/
+cp -rnv /mingw64/share/fonts/cantarell ${deploy_dir}/share/fonts
 cp -rnv windows/RedactedScript/ ${deploy_dir}/share/fonts/
 cp -rnv windows/Inter/ ${deploy_dir}/share/fonts/
 
@@ -82,6 +84,8 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
 gtk-xft-rgba=rgb
 EOF
+
+#glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
 # Create NSIS script
 echo "Creating NSIS script..."
