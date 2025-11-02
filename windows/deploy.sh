@@ -88,6 +88,7 @@ Name ${app_name}
 Outfile "windows/${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
 # RequestExecutionLevel admin  ; Request administrative privileges
+RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
