@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-01 18:42+0100\n"
-"PO-Revision-Date: 2025-05-11 20:29+0900\n"
+"PO-Revision-Date: 2025-11-02 11:56+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -37,13 +37,12 @@ msgid "New sticky note"
 msgstr "新しい付箋"
 
 #: data/jorts.desktop.in:23
-#, fuzzy
 msgid "Show Preferences"
-msgstr "着こなす"
+msgstr "設定を表示"
 
 #: data/jorts.metainfo.xml.in:8
 msgid "Write on colourful little squares"
-msgstr "カラフルな小さな正方形に書く"
+msgstr "カラフルで小さな正方形に書く"
 
 #: data/jorts.metainfo.xml.in:10
 msgid "Neither jeans nor shorts, just like jorts!"
@@ -54,10 +53,10 @@ msgid "Features include:"
 msgstr "含まれる機能:"
 
 #: data/jorts.metainfo.xml.in:13
-#, fuzzy
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
 msgstr ""
-"色: 10 種類のかわいいテーマ。新しいメモにはランダムなテーマが適用されます"
+"カラフル: 10 種類のかわいいテーマ。新しいメモにはランダムなテーマが適用されま"
+"す"
 
 #: data/jorts.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
@@ -66,12 +65,12 @@ msgstr "柔軟: 新しいメモには前回選択した拡大率が適用され�
 #: data/jorts.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
-"かわいい: それぞれの新しいメモには、面白いまたはかわいいランダムなタイトル "
-"(編集可能) が設定されます"
+"かわいい: 新しいメモには、面白さやかわいさのあるタイトル (編集可能) が毎回ラ"
+"ンダムに設定されます"
 
 #: data/jorts.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
-msgstr "便利: Ctrl+クリックでリンクやメールを開くことができます"
+msgstr "便利: Ctrl+クリックでリンクやメールアドレスを開くことができます"
 
 #: data/jorts.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
@@ -88,7 +87,7 @@ msgstr ""
 
 #: data/jorts.metainfo.xml.in:27
 msgid "Lainsce + Stella"
-msgstr "レインズチェ＋ステラ"
+msgstr "Lainsce + Stella"
 
 #: data/jorts.metainfo.xml.in:44
 msgid "Sticky note"
@@ -124,11 +123,11 @@ msgstr "ユーティリティ"
 
 #: data/jorts.metainfo.xml.in:52
 msgid "Pantheon"
-msgstr "パンテオン"
+msgstr "Pantheon"
 
 #: data/jorts.metainfo.xml.in:53
 msgid "elementary OS"
-msgstr "エレメンタリーOS"
+msgstr "elementary OS"
 
 #: data/jorts.metainfo.xml.in:71
 msgid "A sticky note with the \"Blueberry\" theme"
@@ -163,455 +162,117 @@ msgid "No fun allowed: revert back to default style"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
-#, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
-msgstr "3.0.0 光のジョーツ"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:106
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
-"いくつかのUI要素は、表示された後に表示され、スマートな雰囲気を演出する。"
 
 #: data/jorts.metainfo.xml.in:107
 msgid "Ctrl+L to focus note title"
-msgstr "Ctrl+Lでノートタイトルにフォーカス"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:108
-#, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
-msgstr "Ctrl+Mでノート設定を開く"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:109
 msgid "Alt+Number to change theme quickly"
-msgstr "Alt+数字でテーマを素早く変更"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:110
-#, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr ""
-"新しいノート設定：モノスペース。アクセシビリティのためかもしれないし、アス"
-"キー落書きのためかもしれない。"
 
 #: data/jorts.metainfo.xml.in:111
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
 msgstr ""
-"ボンネットの下は、よりクリーンできれいなコードになっている。おそらく、パ"
-"フォーマンスがわずかに向上するか、エッジのバグが減るだろう"
 
 #: data/jorts.metainfo.xml.in:112
 msgid "Added a reset-settings commandline option. Could be handy."
-msgstr "reset-settingsコマンドラインオプションを追加。便利かもしれない。"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
 msgid "😎 Guests stars:"
-msgstr "ᘎ ゲストの星："
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:116
 msgid "@wpkelso strikes again with an amazing special edition icon!"
-msgstr "wpkelsoがまた素晴らしい特別仕様のアイコンを作ってくれた！"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:123
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr ""
-"バグフィックス：全てのウィンドウを閉じた場合、バックグラウンドに残っている"
-"Jortsが開かなくなる問題を修正 (#77)"
 
 #: data/jorts.metainfo.xml.in:129
 msgid "3.3.0 Star Platinum Jorts"
-msgstr "3.3.0 スター・プラチナム・ジョーツ"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:131
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
 msgstr ""
-"バグ修正: ウィンドウ全体がグラブ可能になり、テキスト編集の妨げになっていた。"
-"アクションバーとヘッダーのみがグラブ可能に (#75, #76)"
 
 #: data/jorts.metainfo.xml.in:132
 msgid "Added more random titles"
-msgstr "ランダムタイトルを追加"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:133
 msgid "Buttons for add/remove autostart"
-msgstr "自動起動の追加/削除ボタン"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:134
 msgid "Some more title placeholders"
-msgstr "タイトルのプレースホルダー"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:135
-#, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr ""
-"よりクリーンなコードを実現するために、ボンネットのあちこちに変更を加えた。"
 
 #: data/jorts.metainfo.xml.in:141
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
 msgstr ""
-"バグフィックス：オフに切り替えると、アクションバーが空いたスペースになる。よ"
-"り派手なアニメーションも追加されました。"
 
 #: data/jorts.metainfo.xml.in:146
-#, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
-msgstr "2.2.0 光のジョーツ"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:148
 msgid "Add a cool little animation when enabling/disabling actionbar"
-msgstr "アクションバーの有効化/無効化時にクールな小さなアニメーションを追加"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:149
-#, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
-msgstr "Flathub BSによる高倍率表示のぼやけを修正"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:150
 msgid "Added high-resolution screenshots"
-msgstr "高解像度のスクリーンショットを追加"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:151
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr ""
-"環境設定にフォーカスが当たっているときにアクセルが機能しない不具合を修正。"
 
 #: data/jorts.metainfo.xml.in:152
 msgid "A bit of housekeeping for FR and DE while at it"
-msgstr "ついでにFRとDEも少し整理しておこう。"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:156
-#, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
-msgstr "プライド編：wpkelsoによる素敵な仮アイコン"
+msgstr ""
 
 #: data/jorts.metainfo.xml.in:157
-#, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
-msgstr "翻訳の更新"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 光のジョーツ"
-
-#~ msgid "Save memory and disk writes by adding a proper debounce"
-#~ msgstr "適切なデバウンスを追加することで、メモリとディスクの書き込みを節約"
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "翻訳の更新"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "翻訳の更新"
-
-#~ msgid "3.1.2 Amendments for flathub"
-#~ msgstr "3.1.2 フラサブの改正点"
-
-#~ msgid "Nothing interesting here"
-#~ msgstr "面白いことは何もない"
-
-#~ msgid "3.1.1 Woops"
-#~ msgstr "3.1.1 ウープス"
-
-#~ msgid "Minor screenshot amendments"
-#~ msgstr "スクリーンショットの修正"
-
-#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
-#~ msgstr "3.1.0 歌のジョーツと踊りのジョーツ"
-
-#~ msgid "Flathub version, with a lot of help from @RyoNakano"
-#~ msgstr "Flathubバージョン、@RyoNakanoの協力による"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "3.0.0 光のジョーツ"
-
-#~ msgid "A lovely brand new icon thanks to @wpkelso"
-#~ msgstr "wpkelsoのおかげで、素敵な新しいアイコンを手に入れることができた。"
-
-#~ msgid ""
-#~ "Between this and the GTK4 port, there is very little left from old "
-#~ "Notejot... We could say it is a v3"
-#~ msgstr ""
-#~ "これとGTK4の移植の間には、古いNotejotからほとんど何も残っていない...。これ"
-#~ "はv3だと言える"
-
-#~ msgid ""
-#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
-#~ "reimplement save and restore"
-#~ msgstr ""
-#~ "アプリをよりユニバーサルに：他のDEはウィンドウの寸法を保持しないので、保存"
-#~ "と復元を再実装する。"
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "翻訳の更新"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "翻訳の更新"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.4.0 光のジョーツ"
-
-#~ msgid ""
-#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
-#~ "will feel more at home now"
-#~ msgstr ""
-#~ "RyoNakanoが日本語訳を手直ししてくれたおかげで、日本語を母語とする人たちは"
-#~ "よりくつろげるようになった。"
-
-#~ msgid "Respect reduce animations settings"
-#~ msgstr "アニメーションの削減設定を尊重する"
-
-#, fuzzy
-#~ msgid "Scribble mode exclusively in the preferences now"
-#~ msgstr "スクリブリーモードは新しい環境設定ダイアログに移動しました。"
-
-#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-#~ msgstr "環境設定の追加：これで下のバーを隠すことができます！(Ctrl+t)"
-
-#~ msgid ""
-#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
-#~ msgstr ""
-#~ "バグ修正：ノートタイトルにカーソルを合わせたり、選択したりすると、要素が移"
-#~ "動する不具合を修正しました。"
-
-#~ msgid ""
-#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-#~ msgstr "バグ修正：新規登録と削除が機能していなかった。"
-
-#~ msgid "Bugfix where random components skipped the last possible choice"
-#~ msgstr "ランダムコンポーネントが最後の選択肢をスキップするバグを修正。"
-
-#~ msgid "Bugfix: shortcut for emotes did not show up properly"
-#~ msgstr "エモートのショートカットが正しく表示されなかったバグを修正"
-
-#~ msgid "Lil easter egg"
-#~ msgstr "リル・イースター・エッグ"
-
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.3.0 インナージョーツ"
-
-#~ msgid ""
-#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
-#~ "option"
-#~ msgstr ""
-#~ "新機能環境設定ダイアログ！アプリのアイコンを右クリックするとオプションが表"
-#~ "示されます。"
-
-#~ msgid "scribbly mode has been moved to the new preference dialog"
-#~ msgstr "スクリブリーモードは新しい環境設定ダイアログに移動しました。"
-
-#~ msgid ""
-#~ "For translators: Translations have been separated in 2: One for the UI "
-#~ "one for the extra content"
-#~ msgstr ""
-#~ "翻訳者の方へ：翻訳は2つに分けられました：1つはUI用、もう1つは追加コンテン"
-#~ "ツ用です。"
-
-#~ msgid "Comfort: Easier to grab and drag stickies"
-#~ msgstr "快適さ：付箋をつかみやすく、ドラッグしやすい"
-
-#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-#~ msgstr "バグ修正：appcenterのスクリーンショットが乱れていた。"
-
-#~ msgid "Updated translations"
-#~ msgstr "翻訳の更新"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 光のジョーツ"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "より良い翻訳カバレッジ"
-
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr "新機能：走り書きモード！非フォーカス時に付箋の内容を隠す"
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr ""
-#~ "新機能絵文字ピッカー・ボタン！右クリックにあるのは知っていますが、ボタンが"
-#~ "ある方がよりアクセスしやすいです！"
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr ""
-#~ "ツールバーのボタンは、クリックするたびにランダムなエモーションを表示する！"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr ""
-#~ "新機能：ジョーツは毎月バックアップを取ります。万が一問題が発生しても、デー"
-#~ "タを復旧することができます！"
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr ""
-#~ "メインストレージが破損した場合、Jortsはバックアップからロードしようとす"
-#~ "る。"
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "新しい楽しい／かわいいデフォルト・タイトル"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr ""
-#~ "よりクリーンなコードを実現するために、ボンネットのあちこちに変更を加えた。"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 アンリッパブル・ジョーツ"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "アクションバーボタンにレリーフを追加"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr "テーマやズームが正しく保存されないエッジケースを修正。"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "マルチタスクのタイトルが正しく設定されないバグを修正"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "アイコンテーマ間のアイコンの不一致を修正"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "バグフィックス：付箋間のテーミングの不一致"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 洗濯したて！(2: エレクトリック・ブーガルー)"
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "より明確なアプリメニューの説明"
-
-#~ msgid "More consistent theming"
-#~ msgstr "より一貫したテーマ設定"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "バグ修正：削除ショートカットが無責任だった"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "スクリーンショットが表示されないバグを修正"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 洗濯から出したばかり！"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr "ノート単位のズーム機能付き！文字を大きくしたり小さくしたりできます"
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr ""
-#~ "直近に設定したズーム、つまり最も使いやすいズームが、新しいノートのデフォル"
-#~ "トとして維持される"
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "読みやすさの向上（テーマによってはWCAG AAまたはAAA）"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "また、少し見栄えのするテーマでもある。そう、さらに)"
-
-#~ msgid "Improved translations"
-#~ msgstr "翻訳の改善"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "ショートカットとツールチップの改善"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "Jortsがライトシステムのテーマに表示されたままになるバグを修正"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "2.0.1 Appcenterリリース"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "2.0.0リリーススレートとバブルガム"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "古いが愛されているノートジョットのリバイバル版"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr ""
-#~ "このアプリはJortsという名前になった。しかし、あなたはそれを着用することは"
-#~ "できません"
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10色の小さな可愛い色"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr ""
-#~ "最新のLinuxテクノロジーとパッケージング・フォーマットの上に構築されてい"
-#~ "る。"
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "テーマ変更時のスムーズな移行"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr ""
-#~ "新しい付箋には、ランダムで楽しい小さなタイトルと色が付けられています。"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "最初の翻訳をいくつか掲載。"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr ""
-#~ "メールやリンクはクリックできます！Ctrl+クリックでメールまたはブラウザで開"
-#~ "く"
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr "テキストは元に戻したり、やり直したりできる。）"
-
-#, fuzzy
-#~ msgid ""
-#~ "Added a desktop action to create a note from clipboard content. Alas not "
-#~ "reliable enough to offer it in the UI"
-#~ msgstr ""
-#~ "クリップボードの内容からノートを作成するデスクトップアクションを追加"
-
-#~ msgid ""
-#~ "I struggled with some shenanigans to have only one preference window... "
-#~ "Should be done for good now"
-#~ msgstr ""
-#~ "環境設定ウインドウを1つだけにするために、悪巧みをして苦労したんだ...。これ"
-#~ "でもう大丈夫だろう。"
-
-#~ msgid ""
-#~ "Better commented text and code, for translators and eventual contributors"
-#~ msgstr ""
-#~ "翻訳者と最終的な貢献者のために、より良いコメント付きテキストとコード"
-
-#~ msgid ""
-#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
-#~ "other DEs"
-#~ msgstr ""
-#~ "新しい設定：OpenDyslexiaフォントは、初級OSにはOOTBがあるが、他のDEにはな"
-#~ "い。"
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "付箋ユーティリティ"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Teamcons"
-
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "カラフルで小さな付箋です! :)"
-
-#~ msgid "Windows version, with the guidance from @supercamel"
-#~ msgstr "Windows版、@supercamel氏の指導による"
-
-#~ msgid "Flathub version"
-#~ msgstr "フラサブバージョン"
-
-#~ msgid "Windows version"
-#~ msgstr "Windows版"
+msgstr ""
