@@ -5,6 +5,7 @@ Name Jorts
 Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\Jorts"
 # RequestExecutionLevel admin  ; Request administrative privileges
+RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "Jorts Installer"

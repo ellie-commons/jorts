@@ -48,20 +48,25 @@ echo "Copying other necessary files..."
 cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
 cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
-# Redacted Script
-cp -rnv windows/RedactedScript/ ${deploy_dir}/etc/fonts/
-cp -rnv windows/Inter/ ${deploy_dir}/etc/fonts/
+
 
 mkdir -p ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
-cp -rnv /mingw64/share ${deploy_dir}
-cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/glib-2.0
-# cp -r /mingw64/share/gtk-3.0 ${deploy_dir}/share/gtk-3.0
-cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/gtk-4.0
-cp -rnv /mingw64/share/icons ${deploy_dir}/share/icons
-cp -rnv /mingw64/share/icu ${deploy_dir}/share/icu
-cp -rnv /mingw64/share/locale ${deploy_dir}/share/locale
-cp -rnv /mingw64/share/themes/${theme_name} ${deploy_dir}/share/themes/${theme_name}
+#cp -rnv /mingw64/share ${deploy_dir}
+cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
+cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
+cp -rnv /mingw64/share/icons ${deploy_dir}/share/
+cp -rnv /mingw64/share/icu ${deploy_dir}/share/
+cp -rnv /mingw64/share/locale ${deploy_dir}/share/
+cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/gettext/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
+
+# Redacted Script
+cp -rnv /mingw64/share/fonts/cantarell ${deploy_dir}/share/
+cp -rnv windows/RedactedScript/ ${deploy_dir}/share/fonts/
+cp -rnv windows/Inter/ ${deploy_dir}/share/fonts/
 
 #Regen font cache
 #fc-cache -f -v
@@ -85,7 +90,7 @@ cat << EOF > windows/${app_name}-Installer.nsi
 
 Name ${app_name}
 
-Outfile "windows/${app_name}-Installer.exe"
+Outfile "${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
 # RequestExecutionLevel admin  ; Request administrative privileges
 RequestExecutionLevel user
@@ -169,7 +174,7 @@ Caption "${app_name} Installer"
 
 Section "Install"
     SetOutPath "\$INSTDIR"
-    File /r "${deploy_dir/\//\\}\\*"
+    File /r "deploy\\*"
     CreateDirectory \$SMPROGRAMS\\${app_name}
 
     ; Start menu
