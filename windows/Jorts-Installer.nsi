@@ -13,11 +13,10 @@ Caption "Jorts Installer"
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
 !define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of Jorts."
-!define MUI_ABORTWARNING
-!define MUI_ABORTWARNING_TEXT "Are you sure you want to cancel Jorts setup?"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while Jorts is being installed."
 !define MUI_ICON "install.ico"
 !define MUI_UNICON "uninstall.ico"
+!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY

@@ -107,11 +107,10 @@ Caption "${app_name} Installer"
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
 !define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of ${app_name}."
-!define MUI_ABORTWARNING
-!define MUI_ABORTWARNING_TEXT "Are you sure you want to cancel ${app_name} setup?"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
 !define MUI_ICON "${icon_file_install}"
 !define MUI_UNICON "${icon_file_uninstall}"
+!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -210,6 +209,7 @@ Section "Uninstall"
 
     ; Remove Start Menu shortcut
     Delete "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk"
+    Delete "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk"
     Delete "\$SMPROGRAMS\\Startup\\${app_name}.lnk"
 
     ; Remove uninstaller
