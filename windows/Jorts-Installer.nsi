@@ -110,6 +110,7 @@ Section "Uninstall"
 
     ; Remove Start Menu shortcut
     Delete "$SMPROGRAMS\Jorts\Jorts.lnk"
+    Delete "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk"
     Delete "$SMPROGRAMS\Startup\Jorts.lnk"
 
     ; Remove uninstaller
