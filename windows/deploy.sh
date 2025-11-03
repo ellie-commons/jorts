@@ -66,9 +66,8 @@ cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
 
 # Redacted Script
-cp -rnv /mingw64/share/fonts/cantarell ${deploy_dir}/share/fonts
-cp -rnv windows/RedactedScript/ ${deploy_dir}/share/fonts/
-cp -rnv windows/Inter/ ${deploy_dir}/share/fonts/
+mkdir -v ${deploy_dir}/share/fonts
+cp -rnv windows/fonts/ ${deploy_dir}/share/
 
 #Regen font cache
 #fc-cache -f -v
@@ -91,11 +90,14 @@ EOF
 echo "Creating NSIS script..."
 cat << EOF > windows/${app_name}-Installer.nsi
 !include "MUI2.nsh"
+!include FontName.nsh
+!include WinMessages.nsh
 
 Name ${app_name}
 
 Outfile "${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
+
 # RequestExecutionLevel admin  ; Request administrative privileges
 RequestExecutionLevel user
 
@@ -180,6 +182,12 @@ Section "Install"
     SetOutPath "\$INSTDIR"
     File /r "deploy\\*"
     CreateDirectory \$SMPROGRAMS\\${app_name}
+
+    ; fonts
+    StrCpy $FONT_DIR $FONTS
+    !insertmacro FontName "\$INSTDIR\\share\\fonts\\RedactedScript-Regular.ttf"
+    !insertmacro FontName "\$INSTDIR\\share\\fonts\\InterVariable.ttf"
+    SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
 
     ; Start menu
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file/\//\\}" 0
