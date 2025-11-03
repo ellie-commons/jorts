@@ -50,14 +50,21 @@ cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
-cp -rnv /mingw64/lib/librsvg-2.a ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders
-cp -rnv /mingw64/lib/librsvg-2.dll.a ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders
+rm -f ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders.cache
 
 
-#cp -rnv /mingw64/share ${deploy_dir}
 cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
-cp -rnv windows/icons ${deploy_dir}/share/
+#cp -rnv windows/icons ${deploy_dir}/share/
+
+# Only what we need
+mkdir -pv ${deploy_dir}/share/icons/elementary
+cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
+#cp -rnv /mingw64/share/icons/elementary/ ${deploy_dir}/share/
+
+
 cp -rnv /mingw64/share/icu ${deploy_dir}/share/
 cp -rnv /mingw64/share/locale ${deploy_dir}/share/
 cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
