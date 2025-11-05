@@ -91,9 +91,9 @@ Section "Install"
     CreateDirectory $SMPROGRAMS\Jorts
 
     ; fonts. We install to local fonts to not trip up admin rights, and register for local user
-    SetOutPath "$LOCALAPPDATA\Programs\Microsoft\Windows\Fonts"
+    SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
     File "fonts\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Programs\Microsoft\Windows\fonts\RedactedScript-Regular.ttf"
+    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
     ; SendMessage   0 0 /TIMEOUT=5000
 
     ; Start menu
@@ -134,7 +134,7 @@ Section "Uninstall"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\Jorts"
-    DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts"
+    DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts"
 
 SectionEnd
 

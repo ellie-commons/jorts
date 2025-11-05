@@ -22,6 +22,7 @@ mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
+mkdir -p "${deploy_dir}/include"
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
 cp -r "windows/icons" "${deploy_dir}"
 
@@ -36,16 +37,6 @@ done
 echo "Copying other necessary files..."
 cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
 cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
-
-
-# We need this to properly display icons
-cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
-cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
-export GDK_PIXBUF_MODULEDIR=${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders
-gdk-pixbuf-query-loaders > lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-
-
-
 cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/locale ${deploy_dir}/share/
@@ -53,20 +44,26 @@ cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/gettext/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
+cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
+
+# We need this to properly display icons
+cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
+cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
+export GDK_PIXBUF_MODULEDIR=${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders
+gdk-pixbuf-query-loaders > lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+
+
 
 # Only what we need
 mkdir -pv ${deploy_dir}/share/icons/elementary
 cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
-#cp -rnv /mingw64/share/icons/elementary/ ${deploy_dir}/share/
-
-
 
 
 # Redacted Script
-mkdir -v ${deploy_dir}/share/fonts
-cp -rnv windows/fonts/ ${deploy_dir}/share/
+#mkdir -v ${deploy_dir}/share/fonts
+#cp -rnv windows/fonts/ ${deploy_dir}/share/
 
 #Regen font cache
 #fc-cache -f -v
@@ -182,9 +179,9 @@ Section "Install"
     CreateDirectory \$SMPROGRAMS\\${app_name}
 
     ; fonts. We install to local fonts to not trip up admin rights, and register for local user
-    SetOutPath "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts"
+    SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
     File "fonts\\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
     ; SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
 
     ; Start menu
