@@ -180,11 +180,11 @@ Section "Install"
     File /r "deploy\\*"
     CreateDirectory \$SMPROGRAMS\\${app_name}
 
-    ; fonts
+    ; fonts. We install to local fonts to not trip up admin rights, and register for local user
     SetOutPath "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts"
     File "fonts\\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\Windows NT\\CurrentVersion\\Fonts" "RedactedScript-Regular.ttf (TrueType)" "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
+    ; SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
 
     ; Start menu
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon.ico" 0
@@ -199,10 +199,10 @@ Section "Install"
     WriteUninstaller "\$INSTDIR\Uninstall.exe"
     
     ; Add to Add/Remove programs list
-    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayName" "${app_name}"
-    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
-    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\""
-    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayName" "${app_name}"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\""
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
 SectionEnd
 
 Section "Uninstall"
