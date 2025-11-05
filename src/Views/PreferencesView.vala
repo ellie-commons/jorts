@@ -84,6 +84,7 @@
                 /****************************************************/
                 /*               Autostart Request                  */
                 /****************************************************/
+#if !WINDOWS
 
                                     Xdp.Portal portal = new Xdp.Portal ();
                 GenericArray<weak string> cmd = new GenericArray<weak string> ();
@@ -148,7 +149,7 @@
                 autostart_box.append (autostart_label);
                 autostart_box.append (both_buttons);
                 settingsbox.append (autostart_box);
-
+#endif
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.CenterBox () {

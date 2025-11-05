@@ -37,6 +37,8 @@ flatpak run io.github.ellie_commons.jorts --preferences
 
 Theres none. The app closes on its own when no window is open. Doesn't make sense to use resources if unused.
 
+If you want to quit everything at once, use Ctrl+Q
+
 
 ### Where close note
 

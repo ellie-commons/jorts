@@ -30,7 +30,14 @@ public class Jorts.Storage : Object {
 
     /*************************************************/
     construct {
+
+#if WINDOWS
+        // In Windows we arent in a sandbox, so we need to have some courtesy and not dump in the allfolder
+        data_directory      = GLib.Path.build_path("/", Environment.get_user_data_dir (), "io.github.ellie_commons.jorts");
+#else
         data_directory      = Environment.get_user_data_dir ();
+#endif
+
         storage_path        = data_directory + "/" + FILENAME;
         check_if_stash ();
     }

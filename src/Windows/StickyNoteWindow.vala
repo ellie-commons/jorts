@@ -149,7 +149,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     * This is more for the Aesthetic
     */
     private void delayed_show () {
-        Timeout.add_once (750, () => {
+        Timeout.add_once (250, () => {
             Application.gsettings.bind (
                 "hide-bar",
                 view.actionbar.actionbar,

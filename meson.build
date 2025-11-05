@@ -8,6 +8,12 @@ i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 
+if build_machine.system() == 'windows'
+    windows_build = true
+else
+    windows_build = false
+endif
+
 
 vala_flags = []
 variant = get_option('variant')[0]
@@ -20,8 +26,16 @@ else
     vala_flags = ['--define', 'DEFAULT']
 endif
 
-add_project_arguments(vala_flags, language: 'vala')
 
+if windows_build
+    vala_flags += ['--define', 'WINDOWS']
+endif
+
+
+
+
+
+add_project_arguments(vala_flags, language: 'vala')
 
 #================================
 # Import the stylesheet
@@ -49,10 +63,16 @@ dependencies = [
         dependency('json-glib-1.0'),
         dependency('gee-0.8'),
         dependency('gtk4'),
-        dependency('libportal')
     ]
 
+if windows_build
+    dependencies += dependency('gio-windows-2.0')
+    ico_src = import('windows').compile_resources('windows/icons/ico.rc')
 
+else
+    dependencies += dependency('gio-unix-2.0')
+    dependencies += dependency('libportal')
+endif
 
 #================================
 
