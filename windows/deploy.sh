@@ -9,23 +9,11 @@ theme_name="io.elementary.stylesheet.blueberry"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
-icon_file="jorts.ico"
-icon_file_install="install.ico"
-icon_file_uninstall="uninstall.ico"
-
-#PRE MESON
-#Skip refresh package
-#Skip metainfo
-
 
 # Rebuild the exe as a release build
 rm -rfd ${build_dir}
 meson setup --buildtype release ${build_dir}
 ninja -C ${build_dir}
-
-#POST MESON
-#re-add refresh package
-#re-add metainfo
 
 # Copy DLLS
 echo "Copying DLLs..."
@@ -34,7 +22,7 @@ mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
-cp "windows/${icon_file}" "${deploy_dir}"
+cp "windows/icons" "${deploy_dir}"
 
 dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 
@@ -49,13 +37,20 @@ cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
 cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 
-cp -rnv /mingw64/lib/gdk-pixbuf-2.0/2.10.0 ${deploy_dir}/lib/gdk-pixbuf-2.0
-rm -f ${deploy_dir}/lib/gdk-pixbuf-2.0/loaders.cache
+# We need this to properly display icons
+cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
+export GDK_PIXBUF_MODULEDIR=${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders
+gdk-pixbuf-query-loaders > lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+
 
 
 cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
-#cp -rnv windows/icons ${deploy_dir}/share/
+cp -rnv /mingw64/share/locale ${deploy_dir}/share/
+cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/gettext/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
+cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
 
 # Only what we need
 mkdir -pv ${deploy_dir}/share/icons/elementary
@@ -65,12 +60,7 @@ cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elemen
 #cp -rnv /mingw64/share/icons/elementary/ ${deploy_dir}/share/
 
 
-cp -rnv /mingw64/share/icu ${deploy_dir}/share/
-cp -rnv /mingw64/share/locale ${deploy_dir}/share/
-cp -rnv /mingw64/share/themes/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/gettext/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
-cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
+
 
 # Redacted Script
 mkdir -v ${deploy_dir}/share/fonts
@@ -93,6 +83,7 @@ EOF
 
 #glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
+#================================================================
 # Create NSIS script
 echo "Creating NSIS script..."
 cat << EOF > windows/${app_name}-Installer.nsi
@@ -105,7 +96,7 @@ Name ${app_name}
 Outfile "${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
 
-# RequestExecutionLevel admin  ; Request administrative privileges
+# RequestExecutionLevel admin  ; Request administrative privileges 
 RequestExecutionLevel user
 
 # Set the title of the installer window
@@ -115,8 +106,8 @@ Caption "${app_name} Installer"
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
 !define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of ${app_name}."
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
-!define MUI_ICON "${icon_file_install}"
-!define MUI_UNICON "${icon_file_uninstall}"
+!define MUI_ICON "icons\install.ico"
+!define MUI_UNICON "icons\uninstall.ico"
 !define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
@@ -190,26 +181,28 @@ Section "Install"
     CreateDirectory \$SMPROGRAMS\\${app_name}
 
     ; fonts
-    StrCpy $FONT_DIR $FONTS
-    !insertmacro FontName "\$INSTDIR\\share\\fonts\\RedactedScript-Regular.ttf"
-    !insertmacro FontName "\$INSTDIR\\share\\fonts\\InterVariable.ttf"
+    SetOutPath "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts"
+    File "fonts\\RedactedScript-Regular.ttf"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\Windows NT\\CurrentVersion\\Fonts" "RedactedScript-Regular.ttf (TrueType)" "\$LOCALAPPDATA\\Programs\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
     SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
 
     ; Start menu
-    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file/\//\\}" 0
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon.ico" 0
     
     ; Autostart
-    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\${icon_file/\//\\}" 0
+    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon.ico" 0
     
     ; Preferences
-    CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\${icon_file/\//\\}" 0
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\icons\\settings.ico" 0
     
     WriteRegStr HKCU "Software\\${app_name}" "" \$INSTDIR
     WriteUninstaller "\$INSTDIR\Uninstall.exe"
     
     ; Add to Add/Remove programs list
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${app_name}" "DisplayName" "${app_name}"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\Uninstall.exe"
+    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayName" "${app_name}"
+    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
+    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\""
+    WriteRegStr HKLM "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
 SectionEnd
 
 Section "Uninstall"
