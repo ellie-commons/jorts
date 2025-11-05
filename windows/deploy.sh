@@ -33,10 +33,17 @@ do
     cp "$dll" "${deploy_dir}/bin"
 done
 
+# You wouldnt believe how much pain it was to figure out these three lines
+cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
+cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
+cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
+# I beg you, everytime you see your apps icons show up, think of the pain it took and the sacrifices made
+
+
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
-cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/gdbus.exe
-cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
+cp -nv /mingw64/bin/gdbus.exe ${deploy_dir}/bin/
+cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/
 cp -rnv /mingw64/share/glib-2.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/gtk-4.0 ${deploy_dir}/share/
 cp -rnv /mingw64/share/locale ${deploy_dir}/share/
@@ -50,8 +57,7 @@ cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 export GDK_PIXBUF_MODULEDIR=${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders
-gdk-pixbuf-query-loaders > lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
-
+gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
 
 # Only what we need
@@ -59,14 +65,9 @@ mkdir -pv ${deploy_dir}/share/icons/elementary
 cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
+gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
-
-# Redacted Script
-#mkdir -v ${deploy_dir}/share/fonts
-#cp -rnv windows/fonts/ ${deploy_dir}/share/
-
-#Regen font cache
-#fc-cache -f -v
 
 # Write the theme to gtk settings
 mkdir -v ${deploy_dir}/etc/gtk-4.0/
