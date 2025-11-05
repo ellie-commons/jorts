@@ -56,9 +56,14 @@ cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 # We need this to properly display icons
 cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
-export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
-gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+#export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
+#gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
+# Make sure this one is actually copied
+cat windows/loaders.cache > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+
+# Ive tried, and failed, to pull only needed icons
+#cp -rnv /mingw64/share/icons/ ${deploy_dir}/share/
 
 # Only what we need
 mkdir -pv ${deploy_dir}/share/icons/elementary
@@ -67,6 +72,8 @@ cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elemen
 cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
+
+
 
 
 # Write the theme to gtk settings
