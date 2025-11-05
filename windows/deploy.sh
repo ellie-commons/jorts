@@ -56,7 +56,7 @@ cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 # We need this to properly display icons
 cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
-export GDK_PIXBUF_MODULEDIR=lib\gdk-pixbuf-2.0\2.10.0\loaders
+export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
 gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
 
