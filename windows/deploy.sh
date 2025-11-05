@@ -21,8 +21,9 @@ mkdir -p "${deploy_dir}"
 mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
+mkdir -p "${deploy_dir}/lib"
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
-cp "windows/icons" "${deploy_dir}"
+cp -r "windows/icons" "${deploy_dir}"
 
 dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 
@@ -38,6 +39,7 @@ cp -rnv /mingw64/etc/fonts ${deploy_dir}/etc/fonts
 
 
 # We need this to properly display icons
+cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 export GDK_PIXBUF_MODULEDIR=${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders
 gdk-pixbuf-query-loaders > lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
@@ -88,7 +90,6 @@ EOF
 echo "Creating NSIS script..."
 cat << EOF > windows/${app_name}-Installer.nsi
 !include "MUI2.nsh"
-!include FontName.nsh
 !include WinMessages.nsh
 
 Name ${app_name}
@@ -108,7 +109,7 @@ Caption "${app_name} Installer"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
 !define MUI_ICON "icons\install.ico"
 !define MUI_UNICON "icons\uninstall.ico"
-!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
+!define MUI_FINISHPAGE_RUN "\$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -201,7 +202,7 @@ Section "Install"
     ; Add to Add/Remove programs list
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayName" "${app_name}"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\""
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
 SectionEnd
 
@@ -224,7 +225,7 @@ Section "Uninstall"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\\${app_name}"
-    DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${app_name}"
+    DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\\${app_name}"
 
 SectionEnd
 

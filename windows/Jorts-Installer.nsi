@@ -1,10 +1,12 @@
 !include "MUI2.nsh"
+!include WinMessages.nsh
 
 Name Jorts
 
 Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\Jorts"
-# RequestExecutionLevel admin  ; Request administrative privileges
+
+# RequestExecutionLevel admin  ; Request administrative privileges 
 RequestExecutionLevel user
 
 # Set the title of the installer window
@@ -14,8 +16,8 @@ Caption "Jorts Installer"
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
 !define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of Jorts."
 !define MUI_INSTFILESPAGE_TEXT "Please wait while Jorts is being installed."
-!define MUI_ICON "install.ico"
-!define MUI_UNICON "uninstall.ico"
+!define MUI_ICON "icons\install.ico"
+!define MUI_UNICON "icons\uninstall.ico"
 !define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
@@ -88,21 +90,29 @@ Section "Install"
     File /r "deploy\*"
     CreateDirectory $SMPROGRAMS\Jorts
 
+    ; fonts. We install to local fonts to not trip up admin rights, and register for local user
+    SetOutPath "$LOCALAPPDATA\Programs\Microsoft\Windows\Fonts"
+    File "fonts\RedactedScript-Regular.ttf"
+    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Programs\Microsoft\Windows\fonts\RedactedScript-Regular.ttf"
+    ; SendMessage   0 0 /TIMEOUT=5000
+
     ; Start menu
-    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\jorts.ico" 0
+    CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
     
     ; Autostart
-    ; CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\jorts.ico" 0
+    CreateShortCut "$SMPROGRAMS\Startup\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
     
     ; Preferences
-    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "--preferences" "$INSTDIR\jorts.ico" 0
+    CreateShortCut "$SMPROGRAMS\Jorts\Preferences of Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "--preferences" "$INSTDIR\icons\settings-mini.ico" 0
     
     WriteRegStr HKCU "Software\Jorts" "" $INSTDIR
     WriteUninstaller "$INSTDIR\Uninstall.exe"
     
     ; Add to Add/Remove programs list
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayName" "Jorts"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayName" "Jorts"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "InstallLocation" "$INSTDIR\"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "Ellie-Commons"
 SectionEnd
 
 Section "Uninstall"
