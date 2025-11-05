@@ -67,6 +67,8 @@ dependencies = [
 
 if windows_build
     dependencies += dependency('gio-windows-2.0')
+    ico_src = import('windows').compile_resources('windows/icons/ico.rc', depends: windows/icons/icon.ico)
+
 else
     dependencies += dependency('gio-unix-2.0')
     dependencies += dependency('libportal')

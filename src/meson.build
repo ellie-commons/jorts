@@ -30,18 +30,22 @@ sources = files (
     'Application.vala',
 )
 
-if not windows_build
+if windows_build
+    sources += ico_src
+else
     sources += files('Utils' / 'Libportal.vala')
 endif
 
 #================================
 # Let's define our executable
+# win_subsystem doesnt seem to bother standard builds
+
 executable(
     meson.project_name(),
     gresource,
     config_file,
     sources,
     dependencies: dependencies,
-   win_subsystem: 'windows',
+    win_subsystem: 'windows',
     install : true
 )

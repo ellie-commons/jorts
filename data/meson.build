@@ -5,53 +5,53 @@ install_data (
     rename: meson.project_name() + '.gschema.xml'
 )
 
-#======== Internationalization ========
-#Translate and install our .desktop file
-i18n.merge_file(
-    input: 'jorts.desktop.in',
-    output: meson.project_name() + '.desktop',
-    po_dir: meson.project_source_root() / 'po' / 'extra',
-    type: 'desktop',
-    install: true,
-    install_dir: get_option('datadir') / 'applications'
-)
-
-
-# metainfo confuses windows
+# metainfo confuses windows, and icons are 
 if not windows_build
 
-#Translate and install our .metainfo file
-i18n.merge_file(
-    input: 'jorts.metainfo.xml.in',
-    output: meson.project_name() + '.metainfo.xml',
-    po_dir: meson.project_source_root() / 'po' / 'extra',
-    install: true,
-    install_dir: get_option('datadir') / 'metainfo'
-)
+    #======== Internationalization ========
+    #Translate and install our .desktop file
+    i18n.merge_file(
+        input: 'jorts.desktop.in',
+        output: meson.project_name() + '.desktop',
+        po_dir: meson.project_source_root() / 'po' / 'extra',
+        type: 'desktop',
+        install: true,
+        install_dir: get_option('datadir') / 'applications'
+    )
+
+    #======== Metainfo ========
+    #Translate and install our .metainfo file
+    i18n.merge_file(
+        input: 'jorts.metainfo.xml.in',
+        output: meson.project_name() + '.metainfo.xml',
+        po_dir: meson.project_source_root() / 'po' / 'extra',
+        install: true,
+        install_dir: get_option('datadir') / 'metainfo'
+    )
+
+    #======== ICONS ========
+    # Install our icons in all the required sizes
+    # "variant" variable has been declared earlier in the base meson
+    icon_sizes = ['16', '24', '32', '48', '64', '128']
+
+    foreach i : icon_sizes
+        install_data(
+            'icons' / variant / 'hicolor' / i + '.png',
+            install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
+            rename: meson.project_name() + '.png'
+        )
+        install_data(
+            'icons' / variant / 'hicolor@2' / i + '@2.png',
+            install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
+            rename: meson.project_name() + '.png'
+        )
+    endforeach
+
+    install_data(
+        'icons' / variant / 'scalable.svg',
+        install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
+        rename: meson.project_name() + '.svg'
+    )
 
 endif
 
-#======== ICONS ========
-
-# Install our icons in all the required sizes
-# "variant" variable has been declared earlier in the base meson
-icon_sizes = ['16', '24', '32', '48', '64', '128']
-
-foreach i : icon_sizes
-    install_data(
-        'icons' / variant / 'hicolor' / i + '.png',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps',
-        rename: meson.project_name() + '.png'
-    )
-    install_data(
-        'icons' / variant / 'hicolor@2' / i + '@2.png',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i + '@2' / 'apps',
-        rename: meson.project_name() + '.png'
-    )
-endforeach
-
-install_data(
-    'icons' / variant / 'scalable.svg',
-    install_dir: get_option('datadir') / 'icons' / 'scalable' / 'apps',
-    rename: meson.project_name() + '.svg'
-)
