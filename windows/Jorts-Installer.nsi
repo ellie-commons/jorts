@@ -3,6 +3,13 @@
 
 Name Jorts
 
+VIAddVersionKey /LANG=0 "ProductName" "Jorts"
+VIAddVersionKey /LANG=0 "FileVersion" "3.5.0"
+VIAddVersionKey /LANG=0 "ProductVersion" "3.5.0"
+VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/ellie-commons/jorts"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 Ellie-Commons"
+VIProductVersion "3.5.0.0"
+
 Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\Jorts"
 
@@ -11,6 +18,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "Jorts Installer"
+BrandingText "Jorts 3.5.0, Ellie-Commons 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
@@ -18,7 +26,10 @@ Caption "Jorts Installer"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while Jorts is being installed."
 !define MUI_ICON "icons\install.ico"
 !define MUI_UNICON "icons\uninstall.ico"
-!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Startup\Jorts.lnk"
+
+!define MUI_FINISHPAGE_LINK "Source code and wiki"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
+!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Jorts\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -92,9 +103,10 @@ Section "Install"
 
     ; fonts. We install to local fonts to not trip up admin rights, and register for local user
     SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
-    File "fonts\RedactedScript-Regular.ttf"
+    File /r "fonts\*"
     WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
-    ; SendMessage   0 0 /TIMEOUT=5000
+    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Inter (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
+    SetOutPath "$INSTDIR"
 
     ; Start menu
     CreateShortCut "$SMPROGRAMS\Jorts\Jorts.lnk" "$INSTDIR\bin\io.github.ellie_commons.jorts.exe" "" "$INSTDIR\icons\icon-mini.ico" 0
@@ -110,9 +122,12 @@ Section "Install"
     
     ; Add to Add/Remove programs list
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayName" "Jorts"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayIcon" "$INSTDIR\icons\icon.ico"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "InstallLocation" "$INSTDIR\"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
+    WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "EstimatedSize" "0x00026548" ;157MB
 SectionEnd
 
 Section "Uninstall"
@@ -131,6 +146,12 @@ Section "Uninstall"
     ; Remove directories used
     RMDir $SMPROGRAMS\Jorts
     RMDir "$INSTDIR"
+
+    ; Remove font
+    Delete "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
+    DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Redacted Script Regular (TrueType)"
+    Delete "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
+    DeleteRegKey HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts\Inter Variable (TrueType)"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\Jorts"

@@ -24,6 +24,8 @@ mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
 mkdir -p "${deploy_dir}/include"
+mkdir -p "${deploy_dir}/usr"
+
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
 cp -r "windows/icons" "${deploy_dir}"
 
@@ -35,9 +37,9 @@ do
 done
 
 
-#cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
-#cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
-#cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
+cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
+cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
+cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
 
 
 # Copy other required things for Gtk to work nicely
@@ -80,7 +82,7 @@ cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
 gtk-icon-theme-name=elementary
-gtk-font-name=Inter 9
+gtk-font-name=Inter Variable 9
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
@@ -103,7 +105,7 @@ VIAddVersionKey /LANG=0 "FileVersion" "${version}"
 VIAddVersionKey /LANG=0 "ProductVersion" "${version}"
 VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/ellie-commons/jorts"
 VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 Ellie-Commons"
-VIProductVersion "${version}"
+VIProductVersion "${version}.0"
 
 Outfile "${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
@@ -124,7 +126,7 @@ BrandingText "Jorts ${version}, Ellie-Commons 2025"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
-!define MUI_FINISHPAGE_RUN "\$SMPROGRAMS\Startup\Jorts.lnk"
+!define MUI_FINISHPAGE_RUN "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -198,9 +200,8 @@ Section "Install"
 
     ; fonts. We install to local fonts to not trip up admin rights, and register for local user
     SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
-    File "fonts\\RedactedScript-Regular.ttf"
+    File /r "fonts\\*"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    File "fonts\\InterVariable.ttf"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
     SetOutPath "\$INSTDIR"
 
@@ -245,9 +246,9 @@ Section "Uninstall"
 
     ; Remove font
     Delete "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)"
+    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\\Redacted Script Regular (TrueType)"
     Delete "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
-    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)"
+    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\\Inter Variable (TrueType)"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\\${app_name}"
