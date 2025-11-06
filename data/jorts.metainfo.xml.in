@@ -94,7 +94,7 @@
     </screenshots>
 
     <releases>
-        <release version="3.5.0" date="2025-11-01">
+        <release version="3.5.0" date="2025-11-06">
             <description>
                 <p>Added windows build. It doesnt need admin rights. Mostly works.</p>
             </description>
