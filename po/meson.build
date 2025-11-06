@@ -3,4 +3,6 @@ i18n.gettext(meson.project_name(),
     preset: 'glib'
 )
 
-subdir ('extra')
+if not windows_build
+    subdir ('extra')
+endif
