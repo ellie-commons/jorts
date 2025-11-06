@@ -34,11 +34,10 @@ do
     cp "$dll" "${deploy_dir}/bin"
 done
 
-# You wouldnt believe how much pain it was to figure out these three lines
-cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
-cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
-cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
-# I beg you, everytime you see your apps icons show up, think of the pain it took and the sacrifices made
+
+#cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
+#cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
+#cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
 
 
 # Copy other required things for Gtk to work nicely
@@ -60,11 +59,11 @@ cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 #export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
 #gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
-# Make sure this one is actually copied
+# Make sure this one is actually copied, manually, in the deploy
+# If only some icons show up its because of this shit.
 cat windows/loaders.cache > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
 # Ive tried, and failed, to pull only needed icons
-#cp -rnv /mingw64/share/icons/ ${deploy_dir}/share/
 
 # Only what we need
 mkdir -pv ${deploy_dir}/share/icons/elementary
@@ -75,14 +74,13 @@ cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/el
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
 
-
-
 # Write the theme to gtk settings
 mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
 gtk-icon-theme-name=elementary
+gtk-font-name=Inter 9
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
@@ -202,6 +200,8 @@ Section "Install"
     SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
     File "fonts\\RedactedScript-Regular.ttf"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
+    File "fonts\\InterVariable.ttf"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
     SetOutPath "\$INSTDIR"
 
     ; Start menu
@@ -246,6 +246,8 @@ Section "Uninstall"
     ; Remove font
     Delete "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
     DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)"
+    Delete "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
+    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\\${app_name}"
