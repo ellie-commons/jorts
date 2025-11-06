@@ -94,6 +94,11 @@
     </screenshots>
 
     <releases>
+        <release version="3.5.0" date="2025-11-01">
+            <description>
+                <p>Added windows build. It doesnt need admin rights. Mostly works.</p>
+            </description>
+        </release>
         <release version="3.4.1" date="2025-11-01">
             <description>
                 <p>No fun allowed: revert back to default style</p>

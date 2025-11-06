@@ -6,6 +6,7 @@
 app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
+version="3.5.0"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
@@ -99,6 +100,13 @@ cat << EOF > windows/${app_name}-Installer.nsi
 
 Name ${app_name}
 
+VIAddVersionKey /LANG=0 "ProductName" "${app_name}"
+VIAddVersionKey /LANG=0 "FileVersion" "${version}"
+VIAddVersionKey /LANG=0 "ProductVersion" "${version}"
+VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/ellie-commons/jorts"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 Ellie-Commons"
+VIProductVersion "${version}"
+
 Outfile "${app_name}-Installer.exe"
 InstallDir "\$LOCALAPPDATA\\Programs\\${app_name}"
 
@@ -107,6 +115,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
+BrandingText "Jorts ${version}, Ellie-Commons 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
@@ -114,6 +123,9 @@ Caption "${app_name} Installer"
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
 !define MUI_ICON "icons\install.ico"
 !define MUI_UNICON "icons\uninstall.ico"
+
+!define MUI_FINISHPAGE_LINK "Source code and wiki"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
 !define MUI_FINISHPAGE_RUN "\$SMPROGRAMS\Startup\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
@@ -190,13 +202,13 @@ Section "Install"
     SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
     File "fonts\\RedactedScript-Regular.ttf"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    ; SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
+    SetOutPath "\$INSTDIR"
 
     ; Start menu
-    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon-mini.ico" 0
+    CreateShortCut "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk" "\$INSTDIR\\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon-mini.ico" 0
     
     ; Autostart
-    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon-mini.ico" 0
+    CreateShortCut "\$SMPROGRAMS\\Startup\\${app_name}.lnk" "\$INSTDIR\\bin\\${exe_name}" "" "\$INSTDIR\\icons\\icon-mini.ico" 0
     
     ; Preferences
     CreateShortCut "\$SMPROGRAMS\\${app_name}\\Preferences of ${app_name}.lnk" "\$INSTDIR\bin\\${exe_name}" "--preferences" "\$INSTDIR\\icons\\settings-mini.ico" 0
@@ -206,9 +218,12 @@ Section "Install"
     
     ; Add to Add/Remove programs list
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayName" "${app_name}"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayIcon" "\$INSTDIR\\icons\\icon.ico"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
+    WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x00025D78" ;155MB
 SectionEnd
 
 Section "Uninstall"
@@ -227,6 +242,10 @@ Section "Uninstall"
     ; Remove directories used
     RMDir \$SMPROGRAMS\\${app_name}
     RMDir "\$INSTDIR"
+
+    ; Remove font
+    Delete "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
+    DeleteRegKey HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)"
 
     ; Remove registry keys
     DeleteRegKey HKCU "Software\\${app_name}"
