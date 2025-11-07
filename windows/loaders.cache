@@ -4,62 +4,62 @@
 #
 # LoaderDir = lib\gdk-pixbuf-2.0\2.10.0\loaders
 #
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-ani.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ani.dll"
 "ani" 4 "gdk-pixbuf" "Windows animated cursor" "LGPL"
 "application/x-navi-animation" ""
 "ani" ""
 "RIFF    ACON" "    xxxx    " 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-avif.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-avif.dll"
 "avif" 5 "gdk-pixbuf" "AV1 Image File Format" "BSD"
 "image/avif" ""
 "avif" ""
 "    ftypavif" "zzz         " 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-bmp.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-bmp.dll"
 "bmp" 5 "gdk-pixbuf" "BMP" "LGPL"
 "image/bmp" "image/x-bmp" "image/x-MS-bmp" ""
 "bmp" ""
 "BM" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-gif.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-gif.dll"
 "gif" 4 "gdk-pixbuf" "GIF" "LGPL"
 "image/gif" ""
 "gif" ""
 "GIF8" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-heif.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-heif.dll"
 "heif/avif" 4 "pixbufloader-heif" "HEIF/AVIF Image" "LGPL3"
 "image/heif" "image/heic" "image/avif" ""
 "heif" "heic" "avif" ""
 "    ftyp" "xxxx    " 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-icns.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-icns.dll"
 "icns" 4 "gdk-pixbuf" "MacOS X icon" "GPL"
 "image/x-icns" ""
 "icns" ""
 "icns" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-ico.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-ico.dll"
 "ico" 5 "gdk-pixbuf" "Windows icon" "LGPL"
 "image/x-icon" "image/x-ico" "image/x-win-bitmap" "image/vnd.microsoft.icon" "application/ico" "image/ico" "image/icon" "text/ico" ""
 "ico" "cur" ""
 "  \001   " "zz znz" 100
 "  \002   " "zz znz" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-jpeg.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-jpeg.dll"
 "jpeg" 5 "gdk-pixbuf" "JPEG" "LGPL"
 "image/jpeg" ""
 "jpeg" "jpe" "jpg" ""
 "\377\330" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-png.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-png.dll"
 "png" 5 "gdk-pixbuf" "PNG" "LGPL"
 "image/png" ""
 "png" ""
 "\211PNG\r\n\032\n" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-pnm.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-pnm.dll"
 "pnm" 4 "gdk-pixbuf" "PNM/PBM/PGM/PPM" "LGPL"
 "image/x-portable-anymap" "image/x-portable-bitmap" "image/x-portable-graymap" "image/x-portable-pixmap" ""
 "pnm" "pbm" "pgm" "ppm" ""
@@ -70,14 +70,14 @@
 "P5" "" 100
 "P6" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-qtif.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-qtif.dll"
 "qtif" 4 "gdk-pixbuf" "QuickTime" "LGPL"
 "image/x-quicktime" "image/qtif" ""
 "qtif" "qif" ""
 "abcdidsc" "xxxx    " 100
 "abcdidat" "xxxx    " 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-tga.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tga.dll"
 "tga" 4 "gdk-pixbuf" "Targa" "LGPL"
 "image/x-tga" ""
 "tga" "targa" ""
@@ -88,7 +88,7 @@
 "  \n" "xz " 100
 "  \v" "xz " 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-tiff.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-tiff.dll"
 "tiff" 5 "gdk-pixbuf" "TIFF" "LGPL"
 "image/tiff" ""
 "tiff" "tif" ""
@@ -96,20 +96,20 @@
 "II* " "   z" 100
 "II* \020   CR\002 " "   z zzz   z" 0
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-xbm.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xbm.dll"
 "xbm" 4 "gdk-pixbuf" "XBM" "LGPL"
 "image/x-xbitmap" ""
 "xbm" ""
 "#define " "" 100
 "/*" "" 50
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\libpixbufloader-xpm.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-xpm.dll"
 "xpm" 4 "gdk-pixbuf" "XPM" "LGPL"
 "image/x-xpixmap" ""
 "xpm" ""
 "/* XPM */" "" 100
 
-"lib\\gdk-pixbuf-2.0\\2.10.0\\loaders\\pixbufloader_svg.dll"
+"lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll"
 "svg" 6 "gdk-pixbuf" "Scalable Vector Graphics" "LGPL"
 "image/svg+xml" "image/svg" "image/svg-xml" "image/vnd.adobe.svg+xml" "text/xml-svg" "image/svg+xml-compressed" ""
 "svg" "svgz" "svg.gz" ""

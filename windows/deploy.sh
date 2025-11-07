@@ -1,7 +1,18 @@
 #!/bin/bash
 
-# Variables
-# Run app from base directory, not ./windows
+# Script to go all the way from building to compiling to creating an installer
+# Install MSYS2 then run prep.sh before this to prep your box
+# Very tweaked version of the deploy.sh from SuperCamel: https://github.com/supercamel/ValaOnWindows
+
+# Run this from base directory, not ./windows
+
+# Run the exe of your app in deploy/bin :
+# From the MSYS2 console to check you have all packages necessary for it to run on windows
+# From windows Explorer by double-click to check if everything it needs is in the deploy folder
+# Copy stuff from /c/MSYS2/mingw64/ everything needed should be kinda there
+
+#--------------------------------
+# Variables.
 # Write path UNIX-style ("/"). Script will invert the slash where relevant.
 app_name="Jorts"
 build_dir="builddir"
@@ -11,13 +22,14 @@ version="3.5.0"
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
 
-# Rebuild the exe as a release build
+#--------------------------------
+# Rebuild and compile the exe as a release build
 rm -rfd ${build_dir}
 meson setup --buildtype release ${build_dir}
 ninja -C ${build_dir}
 
-# Copy DLLS
-echo "Copying DLLs..."
+#--------------------------------
+# Prepare structure
 mkdir -p "${deploy_dir}"
 mkdir -p "${deploy_dir}/bin"
 mkdir -p "${deploy_dir}/etc"
@@ -29,14 +41,17 @@ mkdir -p "${deploy_dir}/usr"
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
 cp -r "windows/icons" "${deploy_dir}"
 
-dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 
+# Detect what DLL we need and slorp it into bin
+echo "Copying DLLs..."
+dlls=$(ldd "${deploy_dir}/bin/${exe_name}" | grep "/mingw64" | awk '{print $3}')
 for dll in $dlls 
 do 
     cp "$dll" "${deploy_dir}/bin"
 done
 
-
+# These are not detected but needed to display icons properly
+# Dont ask me how many tears of blood it took to figure out these idiots
 cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
@@ -55,28 +70,45 @@ cp -rnv /mingw64/share/fontconfig/ ${deploy_dir}/share/
 cp -rnv /mingw64/share/GConf/ ${deploy_dir}/share/
 cp -rnv /mingw64/lib/gettext/ ${deploy_dir}/lib/
 
-# We need this to properly display icons
+# We need this to properly display icons too. 
 cp -rnv /mingw64/include/librsvg-2.0 ${deploy_dir}/include/
 cp -rnv /mingw64/lib/gdk-pixbuf-2.0/ ${deploy_dir}/lib/
 #export GDK_PIXBUF_MODULEDIR=lib/gdk-pixbuf-2.0/2.10.0/loaders
 #gdk-pixbuf-query-loaders > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
 # Make sure this one is actually copied, manually, in the deploy
-# If only some icons show up its because of this shit.
+# That file caused so many issues trying to build
 cat windows/loaders.cache > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
-# Ive tried, and failed, to pull only needed icons
-
-# Only what we need
+#--------------------------------
+# ICONS. Only what we need. Shits heavy af
+# Honestly you could get away with copying the whole icon theme. The script goes into the weeds only to shave off MBs
+# TODO: No matter what, the edit-find icon in the searchfield of emoji-popover shows as missing
+# TODO: Abstract this into a script. A better coded one.
 mkdir -pv ${deploy_dir}/share/icons/elementary
-cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
+
+mkdir -p /mingw64/share/icons/elementary/actions/ ${deploy_dir}/share/icons/elementary/
+mkdir -p /mingw64/share/icons/elementary/actions@2x/ ${deploy_dir}/share/icons/elementary/
+mkdir -p /mingw64/share/icons/elementary/actions@3x/ ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/actions/symbolic ${deploy_dir}/share/icons/elementary/actions/
+cp -rnv /mingw64/share/icons/elementary/actions@2x/symbolic ${deploy_dir}/share/icons/elementary/actions@2x/
+cp -rnv /mingw64/share/icons/elementary/actions@3x/symbolic ${deploy_dir}/share/icons/elementary/actions@3x/
+
+mkdir -p /mingw64/share/icons/elementary/status/ ${deploy_dir}/share/icons/elementary/
+mkdir -p /mingw64/share/icons/elementary/status@2x/ ${deploy_dir}/share/icons/elementary/
+mkdir -p /mingw64/share/icons/elementary/status@3x/ ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/status/symbolic ${deploy_dir}/share/icons/elementary/status/
+cp -rnv /mingw64/share/icons/elementary/status@2x/symbolic ${deploy_dir}/share/icons/elementary/status@2x/
+cp -rnv /mingw64/share/icons/elementary/status@3x/symbolic ${deploy_dir}/share/icons/elementary/status@3x/
+
 cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
-
+#--------------------------------
 # Write the theme to gtk settings
+# The NSIS below handles installing the font, as it works differently on windows
+
 mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
@@ -89,6 +121,7 @@ gtk-xft-hintstyle=hintful
 gtk-xft-rgba=rgb
 EOF
 
+#Doesnt seem needed, but keep around just in case
 #glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
 #================================================================
@@ -257,6 +290,11 @@ Section "Uninstall"
 SectionEnd
 
 EOF
+
+
+#--------------------------------
+# Build the final exe installer.
+# Test out the deploy bin just in case though.
 
 echo "Running NSIS..."
 makensis windows/${app_name}-Installer.nsi
