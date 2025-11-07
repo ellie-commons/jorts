@@ -119,7 +119,9 @@ public class Jorts.NoteManager : Object {
         debug ("[MANAGER] Removing a note…");
 
         open_notes.remove (note);
+        application.remove_window ((Gtk.Window)note);
         note.close ();
+        note = null;
         save_all ();
 	}
 
