@@ -26,8 +26,8 @@ public class Jorts.PopoverView : Gtk.Popover {
         set {on_monospace_changed (value);}
     }
 
-    private uint8 _old_zoom;
-    public uint8 zoom {
+    private uint16 _old_zoom;
+    public uint16 zoom {
         get {return font_size_box.zoom;}
         set {do_set_zoom (value);}
     }
@@ -160,7 +160,7 @@ public class Jorts.PopoverView : Gtk.Popover {
     /**
     * Switch zoom classes, then reflect in the UI and tell the application
     */
-    private void do_set_zoom (uint8 new_zoom) {
+    private void do_set_zoom (uint16 new_zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size

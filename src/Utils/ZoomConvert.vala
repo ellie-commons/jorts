@@ -9,7 +9,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public string zoom_to_class (uint8 zoom) {
+    public string zoom_to_class (uint16 zoom) {
         switch (zoom) {
             case 20: return "antsized";
             case 40: return "muchsmaller";
@@ -32,7 +32,7 @@ namespace Jorts.Utils {
 
     /*************************************************/
     // We cannot use numbers in CSS, so we have to translate a number into a string
-    public uint8 zoom_to_ui_size (uint8 zoom) {
+    public uint16 zoom_to_ui_size (uint16 zoom) {
         switch (zoom) {
             case 20: return 24;
             case 40: return 26;
