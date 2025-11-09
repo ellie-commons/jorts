@@ -7,13 +7,11 @@ gnome = import('gnome')
 i18n = import('i18n')
 
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+windows_build = build_machine.system() == 'windows'
 
-if build_machine.system() == 'windows'
-    windows_build = true
-else
-    windows_build = false
-endif
 
+#================================
+# Set flags for icon variants, and target in the case of windows builds
 
 vala_flags = []
 variant = get_option('variant')[0]
@@ -26,14 +24,9 @@ else
     vala_flags = ['--define', 'DEFAULT']
 endif
 
-
 if windows_build
     vala_flags += ['--define', 'WINDOWS']
 endif
-
-
-
-
 
 add_project_arguments(vala_flags, language: 'vala')
 
@@ -57,6 +50,9 @@ gresource = gnome.compile_resources(
     source_dir: 'data'
 )
 
+#================================
+# dependencies
+
 dependencies = [
         dependency('granite-7'),
         dependency('gobject-2.0'),
@@ -65,6 +61,8 @@ dependencies = [
         dependency('gtk4'),
     ]
 
+# We need to compile an icon into the exe to avoid "missing icon" icon at every turn
+# Libportal is not available in MSYS2, built the file only on linuxes
 if windows_build
     dependencies += dependency('gio-windows-2.0')
     ico_src = import('windows').compile_resources('windows/icons/ico.rc')
@@ -74,9 +72,8 @@ else
     dependencies += dependency('libportal')
 endif
 
+
 #================================
-
-
 # Add subfolders for Meson to look
 subdir('data')
 subdir('po')
