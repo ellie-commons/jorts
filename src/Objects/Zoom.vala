@@ -69,9 +69,9 @@ public enum Jorts.Zoom {
             case 200: return HUGE;
             case 220: return SUPERHUGE;
             case 240: return MEGAHUGE;
-            //  case 260: return ULTRAHUGE;
-            //  case 280: return MASSIVE;
-            //  case 300: return URMOM;
+            case 260: return ULTRAHUGE;
+            case 280: return MASSIVE;
+            case 300: return URMOM;
             default: return NORMAL;
         }
     }
