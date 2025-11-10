@@ -85,12 +85,6 @@
                 /*               Autostart Request                  */
                 /****************************************************/
 #if !WINDOWS
-
-                                    Xdp.Portal portal = new Xdp.Portal ();
-                GenericArray<weak string> cmd = new GenericArray<weak string> ();
-                cmd.add ("io.github.ellie_commons.jorts");
-
-
                 var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
                     halign = Gtk.Align.FILL
                 };
@@ -100,18 +94,10 @@
                     label = _("Set autostart"),
                     valign = Gtk.Align.CENTER
                 };
-                //set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
                 set_autostart.clicked.connect (() => {
                     debug ("Setting autostart");
-
-                    portal.request_background.begin (
-                    null,
-                    _("Set Jorts to start with the computer"),
-                    cmd,
-                    Xdp.BackgroundFlags.AUTOSTART,
-                    null);
-
+                    Jorts.Utils.autostart_set ()
                     toast.send_notification ();
                 });
 
@@ -120,18 +106,10 @@
                     label = _("Remove autostart"),
                     valign = Gtk.Align.CENTER
                 };
-                //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
                 remove_autostart.clicked.connect (() => {
                     debug ("Removing autostart");
-
-                    portal.request_background.begin (
-                    null,
-                    _("Remove Jorts from system autostart"),
-                    cmd,
-                    Xdp.BackgroundFlags.NONE,
-                    null);
-
+                    Jorts.Utils.autostart_remove ()
                     toast.send_notification ();
                 });
 
