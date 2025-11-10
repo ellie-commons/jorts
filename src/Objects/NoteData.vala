@@ -14,7 +14,7 @@ public class Jorts.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
     public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static uint16? latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
+    public static uint16 latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
     public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
 
     public string title;
@@ -47,19 +47,18 @@ public class Jorts.NoteData : Object {
     * Parse a node to create an associated NoteData object
     */
     public NoteData.from_json (Json.Object node) {
-        title       = node.get_string_member_with_default ("title",(_("Forgot title!")));
-        var themestring       = node.get_string_member_with_default ("theme",Jorts.Utils.random_theme (null).to_string ());
-        theme = Jorts.Themes.from_string (themestring);
+        title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
+        theme       = node.get_int_member_with_default ("color", Jorts.Utils.random_theme);
         content     = node.get_string_member_with_default ("content","");
-        monospace   = node.get_boolean_member_with_default ("monospace",Jorts.Constants.DEFAULT_MONO);
-        zoom        = (uint16)node.get_int_member_with_default ("zoom",Jorts.Constants.DEFAULT_ZOOM);
+        monospace   = node.get_boolean_member_with_default ("monospace", Jorts.Constants.DEFAULT_MONO);
+        zoom        = (uint16)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
         if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
         else if (zoom > Jorts.Constants.ZOOM_MAX)   { zoom = Jorts.Constants.ZOOM_MAX;}
 
-        width       = (int)node.get_int_member_with_default ("width",Jorts.Constants.DEFAULT_WIDTH);
-        height      = (int)node.get_int_member_with_default ("height",Jorts.Constants.DEFAULT_HEIGHT);
+        width       = (int)node.get_int_member_with_default ("width", Jorts.Constants.DEFAULT_WIDTH);
+        height      = (int)node.get_int_member_with_default ("height", Jorts.Constants.DEFAULT_HEIGHT);
     }
 
     /*************************************************/
@@ -88,23 +87,18 @@ public class Jorts.NoteData : Object {
         builder.begin_object ();
         builder.set_member_name ("title");
         builder.add_string_value (title);
-        builder.set_member_name ("theme");
-        builder.add_string_value (theme.to_string ());
-
-        //TODO: save Color alongside theme for awhile. Later we can load it instead and drop string methods
         builder.set_member_name ("color");
         builder.add_int_value (theme);
-
         builder.set_member_name ("content");
         builder.add_string_value (content);
         builder.set_member_name ("monospace");
         builder.add_boolean_value (monospace);
 		builder.set_member_name ("zoom");
         builder.add_int_value (zoom);
-        builder.set_member_name ("height");
-        builder.add_int_value (height);
         builder.set_member_name ("width");
         builder.add_int_value (width);
+        builder.set_member_name ("height");
+        builder.add_int_value (height);
         builder.end_object ();
 
         return builder.get_root ().get_object ();
