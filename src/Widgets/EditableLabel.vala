@@ -41,9 +41,7 @@ public class Jorts.EditableLabel : Granite.Bin {
             tooltip_markup = Granite.markup_accel_tooltip (
                 {"<Control>L"},
                 _("Click to edit the title")
-            ),
-            margin_start = 24,
-            margin_end = 24
+            )
         };
         editablelabel.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
         child = editablelabel;
