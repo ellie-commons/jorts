@@ -236,17 +236,19 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public NoteData packaged () {
         debug ("Packaging into a noteData…");
 
-        int width ; int height;
-        this.get_default_size (out width, out height);
+        int this_width ; int this_height;
+        this.get_default_size (out this_width, out this_height);
 
-        var data = new NoteData (
-                view.title,
-                popover.color,
-                view.content,
-                popover.monospace,
-                popover.zoom,
-                width,
-                height);
+        var data = new NoteData () {
+            title = view.title,
+            theme = popover.color,
+            content = view.content,
+            monospace = popover.monospace,
+            zoom = popover.zoom,
+            width = this_width,
+            height = this_height
+        }
+;
 
         return data;
     }

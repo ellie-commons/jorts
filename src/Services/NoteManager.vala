@@ -37,7 +37,7 @@ public class Jorts.NoteManager : Object {
         Json.Array loaded_data = storage.load ();
 
         if (loaded_data.get_length () == 0) {
-            var note_data = new NoteData.from_random ();
+            var note_data = new NoteData ();
             note_data.theme = Constants.DEFAULT_THEME;
             create_note (note_data);
 
@@ -70,7 +70,7 @@ public class Jorts.NoteManager : Object {
             note = new StickyNoteWindow (application, data);
         }
         else {
-            var random_data = new NoteData.from_random ();
+            var random_data = new NoteData ();
             
             // One chance at the golden sticky
             random_data = Jorts.Utils.golden_sticky (random_data);
@@ -100,7 +100,7 @@ public class Jorts.NoteManager : Object {
 
         } else {
             // Skip theme from previous window, but use same text zoom
-            var random_data = new NoteData.from_random ();
+            var random_data = new NoteData ();
             note = new StickyNoteWindow (application, random_data);
             open_notes.add (note);
             print ("new");
