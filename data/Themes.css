@@ -45,8 +45,8 @@ window.BLUEBERRY text selection {
 
 window.BLUEBERRY titlebar,
 window.BLUEBERRY titlebar image,
-window.BLUEBERRY .themedbutton,
-window.BLUEBERRY .themedbutton image,
+window.BLUEBERRY .themedbutton > button > box > image,
+window.BLUEBERRY .themedbutton > image,
 window.BLUEBERRY windowcontrols,
 window.BLUEBERRY windowcontrols image,
 window.BLUEBERRY {
@@ -139,8 +139,8 @@ window.MINT text selection {
 
 window.MINT titlebar,
 window.MINT titlebar image,
-window.MINT .themedbutton,
-window.MINT .themedbutton image,
+window.MINT .themedbutton > button > box > image,
+window.MINT .themedbutton > image,
 window.MINT windowcontrols,
 window.MINT windowcontrols image,
 window.MINT {
@@ -233,8 +233,8 @@ window.LIME text selection {
 
 window.LIME titlebar,
 window.LIME titlebar image,
-window.LIME .themedbutton,
-window.LIME .themedbutton image,
+window.LIME .themedbutton > button > box > image,
+window.LIME .themedbutton > image,
 window.LIME windowcontrols,
 window.LIME windowcontrols image,
 window.LIME {
@@ -327,8 +327,8 @@ window.BANANA text selection {
 
 window.BANANA titlebar,
 window.BANANA titlebar image,
-window.BANANA .themedbutton,
-window.BANANA .themedbutton image,
+window.BANANA .themedbutton > button > box > image,
+window.BANANA .themedbutton > image,
 window.BANANA windowcontrols,
 window.BANANA windowcontrols image,
 window.BANANA {
@@ -421,8 +421,8 @@ window.ORANGE text selection {
 
 window.ORANGE titlebar,
 window.ORANGE titlebar image,
-window.ORANGE .themedbutton,
-window.ORANGE .themedbutton image,
+window.ORANGE .themedbutton > button > box > image,
+window.ORANGE .themedbutton > image,
 window.ORANGE windowcontrols,
 window.ORANGE windowcontrols image,
 window.ORANGE {
@@ -515,8 +515,8 @@ window.STRAWBERRY text selection {
 
 window.STRAWBERRY titlebar,
 window.STRAWBERRY titlebar image,
-window.STRAWBERRY .themedbutton,
-window.STRAWBERRY .themedbutton image,
+window.STRAWBERRY .themedbutton > button > box > image,
+window.STRAWBERRY .themedbutton > image,
 window.STRAWBERRY windowcontrols,
 window.STRAWBERRY windowcontrols image,
 window.STRAWBERRY {
@@ -609,8 +609,8 @@ window.BUBBLEGUM text selection {
 
 window.BUBBLEGUM titlebar,
 window.BUBBLEGUM titlebar image,
-window.BUBBLEGUM .themedbutton,
-window.BUBBLEGUM .themedbutton image,
+window.BUBBLEGUM .themedbutton > button > box > image,
+window.BUBBLEGUM .themedbutton > image,
 window.BUBBLEGUM windowcontrols,
 window.BUBBLEGUM windowcontrols image,
 window.BUBBLEGUM {
@@ -703,8 +703,8 @@ window.GRAPE text selection {
 
 window.GRAPE titlebar,
 window.GRAPE titlebar image,
-window.GRAPE .themedbutton,
-window.GRAPE .themedbutton image,
+window.GRAPE .themedbutton > button > box > image,
+window.GRAPE .themedbutton > image,
 window.GRAPE windowcontrols,
 window.GRAPE windowcontrols image,
 window.GRAPE {
@@ -797,8 +797,8 @@ window.COCOA text selection {
 
 window.COCOA titlebar,
 window.COCOA titlebar image,
-window.COCOA .themedbutton,
-window.COCOA .themedbutton image,
+window.COCOA .themedbutton > button > box > image,
+window.COCOA .themedbutton > image,
 window.COCOA windowcontrols,
 window.COCOA windowcontrols image,
 window.COCOA {
@@ -891,8 +891,8 @@ window.SLATE text selection {
 
 window.SLATE titlebar,
 window.SLATE titlebar image,
-window.SLATE .themedbutton,
-window.SLATE .themedbutton image,
+window.SLATE .themedbutton > button > box > image,
+window.SLATE .themedbutton > image,
 window.SLATE windowcontrols,
 window.SLATE windowcontrols image,
 window.SLATE {
@@ -985,8 +985,8 @@ window.LATTE text selection {
 
 window.LATTE titlebar,
 window.LATTE titlebar image,
-window.LATTE .themedbutton,
-window.LATTE .themedbutton image,
+window.LATTE .themedbutton > button > box > image,
+window.LATTE .themedbutton > image,
 window.LATTE windowcontrols,
 window.LATTE windowcontrols image,
 window.LATTE {
@@ -1079,8 +1079,8 @@ window.SILVER text selection {
 
 window.SILVER titlebar,
 window.SILVER titlebar image,
-window.SILVER .themedbutton,
-window.SILVER .themedbutton image,
+window.SILVER .themedbutton > button > box > image,
+window.SILVER .themedbutton > image,
 window.SILVER windowcontrols,
 window.SILVER windowcontrols image,
 window.SILVER {
@@ -1173,8 +1173,8 @@ window.BLACK text selection {
 
 window.BLACK titlebar,
 window.BLACK titlebar image,
-window.BLACK .themedbutton,
-window.BLACK .themedbutton image,
+window.BLACK .themedbutton > button > box > image,
+window.BLACK .themedbutton > image,
 window.BLACK windowcontrols,
 window.BLACK windowcontrols image,
 window.BLACK {
