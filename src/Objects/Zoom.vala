@@ -55,8 +55,8 @@ public enum Jorts.Zoom {
     /**
     * CSS name is s + size. CSS classes cannot start name with number
     */
-    public string to_class () {
-        return "s" + this.to_int.to_string ();
+    public string to_css_class () {
+        return "s" + this.to_int ().to_string ();
     }
 
     /*************************************************/
@@ -88,7 +88,7 @@ public enum Jorts.Zoom {
     /**
     * We have to scale some UI elements according to zoom
     */
-    public uint16 to_size () {
+    public uint16 to_ui_size () {
         switch (this) {
             case ANTSIZED: return 24;
             case MUCHSMALLER: return 26;

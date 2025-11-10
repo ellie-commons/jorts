@@ -164,12 +164,12 @@ public class Jorts.PopoverView : Gtk.Popover {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
-        parent_window.remove_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
+        parent_window.remove_css_class (Jorts.Zoom.from_int ( _old_zoom).to_css_class ());
         _old_zoom = new_zoom;
-        parent_window.add_css_class (Jorts.Utils.zoom_to_class ( new_zoom));
+        parent_window.add_css_class (Jorts.Zoom.from_int ( new_zoom).to_css_class ());
 
         // Adapt headerbar size to avoid weird flickering
-        parent_window.view.headerbar.height_request = Jorts.Utils.zoom_to_ui_size (_old_zoom);
+        parent_window.view.headerbar.height_request = Jorts.Zoom.from_int (new_zoom).to_ui_size ();
 
         // Reflect the number in the popover
         font_size_box.zoom = new_zoom;
