@@ -24,7 +24,7 @@ public enum Jorts.Zoom {
     MEGAHUGE,
     ULTRAHUGE,
     MASSIVE,
-    URMOM;
+    URPARENT;
 
     /*************************************************/
     /**
@@ -46,9 +46,17 @@ public enum Jorts.Zoom {
             case MEGAHUGE: return 240;
             case ULTRAHUGE: return 260;
             case MASSIVE: return 280;
-            case URMOM: return 300;
+            case URPARENT: return 300;
             default: return 100;
         }
+    }
+
+    /*************************************************/
+    /**
+    * CSS name is s + size. CSS classes cannot start name with number
+    */
+    public string to_class () {
+        return "s" + this.to_int.to_string ()
     }
 
     /*************************************************/
@@ -71,33 +79,8 @@ public enum Jorts.Zoom {
             case 240: return MEGAHUGE;
             case 260: return ULTRAHUGE;
             case 280: return MASSIVE;
-            case 300: return URMOM;
+            case 300: return URPARENT;
             default: return NORMAL;
-        }
-    }
-
-    /*************************************************/
-    /**
-    * CSS name is s + size. CSS classes cannot start name with number
-    */
-    public string to_class () {
-        switch (this) {
-            case ANTSIZED: return "s20";
-            case MUCHSMALLER: return "s40";
-            case SMALLER: return "s60";
-            case SMALL: return "s80";
-            case NORMAL: return "s100";
-            case BIG: return "s120";
-            case BIGGER: return "s140";
-            case MUCHBIGGER: return "s160";
-            case MUCHMUCHBIGGER: return "s180";
-            case HUGE: return "s200";
-            case SUPERHUGE: return "s220";
-            case MEGAHUGE: return "s240";
-            case ULTRAHUGE: return "s260";
-            case MASSIVE: return "s280";
-            case URMOM: return "s300";
-            default: return "s100";
         }
     }
 
@@ -121,7 +104,7 @@ public enum Jorts.Zoom {
             case MEGAHUGE: return 54;
             case ULTRAHUGE: return 56;
             case MASSIVE: return 60;
-            case URMOM: return 64;
+            case URPARENT: return 64;
             default: return 32;
         }
     }
