@@ -234,8 +234,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             zoom = zoomcontroller.zoom,
             width = this_width,
             height = this_height
-        }
-;
+        };
 
         return data;
     }
