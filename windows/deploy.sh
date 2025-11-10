@@ -17,7 +17,7 @@
 app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
-version="3.5.0"
+version="3.6.0"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"

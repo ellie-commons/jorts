@@ -4,11 +4,11 @@
 Name Jorts
 
 VIAddVersionKey /LANG=0 "ProductName" "Jorts"
-VIAddVersionKey /LANG=0 "FileVersion" "3.5.0"
-VIAddVersionKey /LANG=0 "ProductVersion" "3.5.0"
+VIAddVersionKey /LANG=0 "FileVersion" "3.6.0"
+VIAddVersionKey /LANG=0 "ProductVersion" "3.6.0"
 VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/ellie-commons/jorts"
 VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 Ellie-Commons"
-VIProductVersion "3.5.0.0"
+VIProductVersion "3.6.0.0"
 
 Outfile "Jorts-Installer.exe"
 InstallDir "$LOCALAPPDATA\Programs\Jorts"
@@ -18,7 +18,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "Jorts Installer"
-BrandingText "Jorts 3.5.0, Ellie-Commons 2025"
+BrandingText "Jorts 3.6.0, Ellie-Commons 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
