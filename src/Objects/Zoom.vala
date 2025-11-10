@@ -56,7 +56,7 @@ public enum Jorts.Zoom {
     * CSS name is s + size. CSS classes cannot start name with number
     */
     public string to_class () {
-        return "s" + this.to_int.to_string ()
+        return "s" + this.to_int.to_string ();
     }
 
     /*************************************************/
