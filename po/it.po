@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-10 23:03+0100\n"
 "PO-Revision-Date: 2025-05-10 12:46+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -344,23 +344,23 @@ msgstr ""
 "Spero che la mia piccola applicazione vi porti molta gioia.\n"
 "Buona giornata! 🎇\n"
 
-#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16
 msgid "Remove Jorts from system autostart"
 msgstr "Rimuovere Jorts dall'avvio automatico del sistema"
 
-#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29
 msgid "Set Jorts to start with the computer"
 msgstr "Impostare Jorts per l'avvio con il computer"
 
-#: src/Views/PreferencesView.vala:25
+#: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
 msgstr "Richiesta inviata al sistema"
 
-#: src/Views/PreferencesView.vala:52
+#: src/Views/PreferencesView.vala:43
 msgid "Make unfocused notes unreadable"
 msgstr "Rendere illeggibili gli appunti non focalizzati"
 
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:44
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
@@ -368,11 +368,11 @@ msgstr ""
 "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
 "proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
-#: src/Views/PreferencesView.vala:74
+#: src/Views/PreferencesView.vala:55
 msgid "Hide buttons"
 msgstr "Nascondi pulsanti"
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:56
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -381,39 +381,39 @@ msgstr ""
 "da tastiera continuano a funzionare (Ctrl+T)."
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:99
+#: src/Views/PreferencesView.vala:72
 msgid "Set autostart"
 msgstr "Impostare l'avvio automatico"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:84
 msgid "Remove autostart"
 msgstr "Rimuovere l'avvio automatico"
 
-#: src/Views/PreferencesView.vala:142
+#: src/Views/PreferencesView.vala:99
 msgid "Allow to start at login"
 msgstr "Consentire l'avvio all'accesso"
 
-#: src/Views/PreferencesView.vala:144
+#: src/Views/PreferencesView.vala:101
 msgid "You can request the system to start this application automatically"
 msgstr ""
 "È possibile richiedere al sistema di avviare automaticamente questa "
 "applicazione."
 
-#: src/Views/PreferencesView.vala:165
+#: src/Views/PreferencesView.vala:122
 msgid "Support us!"
 msgstr "Sosteneteci!"
 
-#: src/Views/PreferencesView.vala:177
+#: src/Views/PreferencesView.vala:134
 msgid "Close"
 msgstr "Chiudere"
 
-#: src/Views/PreferencesView.vala:180
+#: src/Views/PreferencesView.vala:137
 msgid "Close preferences"
 msgstr "Chiudere le preferenze"
 
-#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:88 src/Windows/StickyNoteWindow.vala:171
+#: src/Windows/StickyNoteWindow.vala:251 src/Windows/PreferenceWindow.vala:43
 msgid " - Jorts"
 msgstr " - Pantaloncini"
 
@@ -421,11 +421,11 @@ msgstr " - Pantaloncini"
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:41
 msgid "Preferences for your Jorts"
 msgstr "Preferenze per i tuoi Jorts"
 
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/PreferenceWindow.vala:43
 msgid "Preferences"
 msgstr "Preferenze"
 

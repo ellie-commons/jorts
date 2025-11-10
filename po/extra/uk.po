@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-10 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,34 +165,65 @@ msgid "The preferences dialog in dark mode"
 msgstr "Діалогове вікно налаштувань у темному режимі"
 
 #: data/jorts.metainfo.xml.in:99
+#, fuzzy
+msgid "3.6.0 Jorts of Hyperspace"
+msgstr "2.2.0 Джорти світла"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:137
+#: data/jorts.metainfo.xml.in:177
+msgid "😎 Guests stars:"
+msgstr "Запрошені зірки:"
+
+#: data/jorts.metainfo.xml.in:107
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "Оновлені переклади"
+
+#: data/jorts.metainfo.xml.in:117
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:122
 msgid "No fun allowed: revert back to default style"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:104
+#: data/jorts.metainfo.xml.in:127
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:129
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Деякі елементи інтерфейсу з'являються після показу, щоб створити елегантну "
 "атмосферу"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:130
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L, щоб виділити заголовок нотатки"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M, щоб відкрити налаштування нот зараз"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:132
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+цифра для швидкої зміни теми"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:133
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -201,7 +232,7 @@ msgstr ""
 "Нове налаштування нот: Монопростір. Можливо, для доступності, можливо, для "
 "малюнків ascii"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:134
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -209,19 +240,15 @@ msgstr ""
 "Чистіший, приємніший код під капотом. Можливо, дещо покращена продуктивність "
 "або менше периферійних помилок"
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:135
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr "Додано опцію командного рядка reset-settings. Може бути корисним."
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "Запрошені зірки:"
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:139
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso знову вражає дивовижною іконою спеціального видання!"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:146
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
@@ -229,11 +256,11 @@ msgstr ""
 "Виправлено: якщо всі вікна було закрито, джорте більше не відкриваються у "
 "фоновому режимі (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:152
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jorts"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:154
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -241,24 +268,24 @@ msgstr ""
 "Виправлено: захоплення всього вікна заважало редагуванню тексту. Виправлено "
 "лише панель дій та заголовок (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:155
 msgid "Added more random titles"
 msgstr "Додано більше випадкових назв"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:156
 msgid "Buttons for add/remove autostart"
 msgstr "Кнопки для додавання/видалення автозапуску"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:157
 msgid "Some more title placeholders"
 msgstr "Ще кілька заповнювачів заголовків"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:158
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Під капотом зміни тут і там для більш чистого коду"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:164
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -266,25 +293,25 @@ msgstr ""
 "Виправлено: коли панель дій було вимкнено, вона залишала порожнє місце. "
 "Наразі виправлено - тепер завантажується яскравіша анімація."
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:169
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Джорти світла"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:171
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Додайте класну анімацію під час увімкнення/вимкнення панелі дій"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:172
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "Виправлено розмитість на високомасштабованому дисплеї через Flathub BS"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:173
 msgid "Added high-resolution screenshots"
 msgstr "Додано скріншоти з високою роздільною здатністю"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:174
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -292,16 +319,16 @@ msgstr ""
 "Виправлено в останню хвилину, чомусь прискорення не працювало, коли "
 "Уподобання були сфокусовані"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:175
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Трохи про домашнє господарство для FR та DE, поки що"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:179
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride Edition: Чудова тимчасова іконка від @wpkelso"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:180
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Оновлені переклади"
@@ -315,10 +342,6 @@ msgstr "Оновлені переклади"
 
 #, fuzzy
 #~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "Оновлені переклади"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
 #~ msgstr "Оновлені переклади"
 
 #~ msgid "3.1.2 Amendments for flathub"
@@ -338,10 +361,6 @@ msgstr "Оновлені переклади"
 
 #~ msgid "Flathub version, with a lot of help from @RyoNakano"
 #~ msgstr "Версія для Flathub, з великою допомогою від @RyoNakano"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 Джорти світла"
 
 #~ msgid "A lovely brand new icon thanks to @wpkelso"
 #~ msgstr "Чудова нова ікона завдяки @wpkelso"

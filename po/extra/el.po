@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-10 23:03+0100\n"
 "PO-Revision-Date: 2025-06-02 19:23+0300\n"
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
 "noreply.github.com>\n"
@@ -162,34 +162,65 @@ msgid "The preferences dialog in dark mode"
 msgstr "Οι ρυθμίσεις στη σκοτεινή λειτουργία"
 
 #: data/jorts.metainfo.xml.in:99
+#, fuzzy
+msgid "3.6.0 Jorts of Hyperspace"
+msgstr "3.0.0 Jorts of Thunder"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:137
+#: data/jorts.metainfo.xml.in:177
+msgid "😎 Guests stars:"
+msgstr "😎 Αστέρια επισκεπτών:"
+
+#: data/jorts.metainfo.xml.in:107
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "Ενημερωμένες ιαπωνικές μεταφράσεις χάρη στο @RyoNakano!"
+
+#: data/jorts.metainfo.xml.in:117
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:122
 msgid "No fun allowed: revert back to default style"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:104
+#: data/jorts.metainfo.xml.in:127
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "3.4.0 Jorts του φθινοπώρου"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:129
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Ορισμένα στοιχεία του UI εμφανίζονται αφού εμφανιστούν, για μια κομψή "
 "ατμόσφαιρα"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:130
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L για να εστιάσετε τον τίτλο της σημείωσης"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M για να ανοίξετε τις ρυθμίσεις σημειώσεων τώρα"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:132
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Αριθμός για γρήγορη αλλαγή θέματος"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:133
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -198,7 +229,7 @@ msgstr ""
 "Νέα ρύθμιση σημειώσεων: Monospace. Θα μπορούσε να είναι για την "
 "προσβασιμότητα, θα μπορούσε να είναι για ασσύριους σκιτσογράφους."
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:134
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -206,21 +237,17 @@ msgstr ""
 "Καθαρότερος, καλύτερος κώδικας κάτω από το καπό. Πιθανώς οριακά βελτιωμένες "
 "επιδόσεις ή λιγότερα σφάλματα στις άκρες."
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:135
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Προστέθηκε μια επιλογή γραμμής εντολών reset-settings. Θα μπορούσε να είναι "
 "χρήσιμη."
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 Αστέρια επισκεπτών:"
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:139
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "Ο @wpkelso ξαναχτυπάει με μια καταπληκτική ειδική έκδοση εικόνας!"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:146
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
@@ -228,11 +255,11 @@ msgstr ""
 "Διόρθωση σφάλματος: Διόρθωση των Jorts που παραμένουν στο παρασκήνιο και δεν "
 "ανοίγουν πια αν όλα τα παράθυρα ήταν κλειστά (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:152
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jorts"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:154
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -241,24 +268,24 @@ msgstr ""
 "παρεμπόδιζε την επεξεργασία κειμένου. Μόνο η μπάρα ενεργειών και η κεφαλίδα "
 "είναι τώρα (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:155
 msgid "Added more random titles"
 msgstr "Προστέθηκαν περισσότεροι τυχαίοι τίτλοι"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:156
 msgid "Buttons for add/remove autostart"
 msgstr "Κουμπιά για προσθήκη/αφαίρεση αυτόματης εκκίνησης"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:157
 msgid "Some more title placeholders"
 msgstr "Μερικά ακόμη εικονικά στοιχεία τίτλου"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:158
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Αλλαγές στο παρασκήνιο για καθαρότερο κώδικα"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:164
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -267,25 +294,25 @@ msgstr ""
 "χώρο. Τώρα έχει διορθωθεί - με μια πιο φανταχτερή κινούμενη εικόνα για "
 "εκκίνηση."
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:169
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "🌈 3.2.0 Τζορτζ της Ανθεκτικότητας και της Αγάπης"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:171
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Έγινε προσθήκη εφέ κίνησης όταν ενεργοποιείτε/απενεργοποιείτε τη μπάρα"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:172
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 "Διορθώθηκε η θολούρα στις οθόνες υψηλής ανάλυσης λόγω χαζομάρων του Flathub"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:173
 msgid "Added high-resolution screenshots"
 msgstr "Προστέθηκαν στιγμιότυπα υψηλής ανάλυσης"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:174
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -293,16 +320,16 @@ msgstr ""
 "Διόρθωση σφάλματος της τελευταίας στιγμής, κατά κάποιο τρόπο τα accels δεν "
 "λειτουργούσαν όταν οι Προτιμήσεις ήταν εστιασμένες"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:175
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Λίγο νοικοκυριό για την FR και την DE, ενώ είναι σε αυτό"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:179
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Έκδοση Υπερηφάνειας: Ένα υπέροχο προσωρινό εικονίδιο από το @wpkelso"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:180
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Ενημερωμένες ελληνικές μεταφράσεις χάρη στον @OrionasKakomoiroglou!"
 
@@ -315,9 +342,6 @@ msgstr "Ενημερωμένες ελληνικές μεταφράσεις χά�
 
 #~ msgid "Updated IT translations thanks to @albanobattistella!"
 #~ msgstr "Ενημερωμένες ιταλικές μεταφράσεις χάρη στο @albanobattistella!"
-
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "Ενημερωμένες ιαπωνικές μεταφράσεις χάρη στο @RyoNakano!"
 
 #~ msgid "3.1.2 Amendments for flathub"
 #~ msgstr "3.1.2 Τροποποιήσεις για flathub"
@@ -336,9 +360,6 @@ msgstr "Ενημερωμένες ελληνικές μεταφράσεις χά�
 
 #~ msgid "Flathub version, with a lot of help from @RyoNakano"
 #~ msgstr "Έκδοση Flathub, με πολλή βοήθεια από το @RyoNakano!"
-
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "3.0.0 Jorts of Thunder"
 
 #~ msgid "A lovely brand new icon thanks to @wpkelso"
 #~ msgstr "Ένα υπέροχο ολοκαίνουργιο εικονίδιο χάρη στο @wpkelso"

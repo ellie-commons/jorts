@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-10 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,67 +156,94 @@ msgid "The preferences dialog in dark mode"
 msgstr "黑暗模式下的首选项对话框"
 
 #: data/jorts.metainfo.xml.in:99
+#, fuzzy
+msgid "3.6.0 Jorts of Hyperspace"
+msgstr "2.2.0 光的 Jorts"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:137
+#: data/jorts.metainfo.xml.in:177
+msgid "😎 Guests stars:"
+msgstr "😎 宾客星级："
+
+#: data/jorts.metainfo.xml.in:107
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "更新翻译"
+
+#: data/jorts.metainfo.xml.in:117
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:122
 msgid "No fun allowed: revert back to default style"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:104
+#: data/jorts.metainfo.xml.in:127
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 光的 Jorts"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:129
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr "一些用户界面元素在显示后会显示出来，营造出时尚的氛围"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:130
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L 聚焦笔记标题"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M 立即打开音符设置"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:132
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+ 数字可快速更换主题"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:133
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr "新的注释设置：单倍行距。可能是为了无障碍，也可能是为了ascii涂鸦"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:134
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
 msgstr "引擎盖下的代码更干净、更漂亮。性能可能略有提升，边缘错误可能减少"
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:135
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr "添加了重置设置命令行选项。可能会很方便。"
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 宾客星级："
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:139
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso 再次出击，带来了令人惊叹的特别版图标！"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:146
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr "修正: 如果所有窗口都已关闭，在后台逗留的 Jorts 不再打开的问题 (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:152
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 明星白金短裤"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:154
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -224,24 +251,24 @@ msgstr ""
 "错误修正：整个窗口可抓取会影响文本编辑。现在只有操作栏和标题可抓取（#75、"
 "#76）"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:155
 msgid "Added more random titles"
 msgstr "添加更多随机标题"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:156
 msgid "Buttons for add/remove autostart"
 msgstr "添加/删除自动启动按钮"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:157
 msgid "Some more title placeholders"
 msgstr "更多标题占位符"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:158
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "为使代码更简洁，在引擎盖下进行了一些改动"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:164
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -249,40 +276,40 @@ msgstr ""
 "错误修正：当切换为关闭时，操作栏会留下空白。现在已修复，并配有更炫的动画效"
 "果。"
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:169
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 光的 Jorts"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:171
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "在启用/禁用动作条时添加炫酷的小动画"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:172
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "修正了 Flathub BS 导致的高分辨率显示模糊问题"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:173
 msgid "Added high-resolution screenshots"
 msgstr "添加了高分辨率截图"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:174
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr "最后一分钟的错误修正，当首选项被聚焦时，accels 不知何故无法工作"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:175
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "顺便为联邦共和国和德意志民主共和国整理一下内务"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:179
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "荣耀版：@wpkelso 设计的可爱临时图标"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:180
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "更新翻译"
@@ -296,10 +323,6 @@ msgstr "更新翻译"
 
 #, fuzzy
 #~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "更新翻译"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
 #~ msgstr "更新翻译"
 
 #~ msgid "3.1.2 Amendments for flathub"
@@ -319,10 +342,6 @@ msgstr "更新翻译"
 
 #~ msgid "Flathub version, with a lot of help from @RyoNakano"
 #~ msgstr "Flathub 版本，得到 @RyoNakano 的大力协助"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 光的 Jorts"
 
 #~ msgid "A lovely brand new icon thanks to @wpkelso"
 #~ msgstr "一个可爱的全新图标，感谢 @wpkelso"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-10 23:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -344,23 +344,23 @@ msgstr ""
 "Doufám, že vám moje malá aplikace přinese spoustu radosti.\n"
 "Přeji krásný den!🎇\n"
 
-#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16
 msgid "Remove Jorts from system autostart"
 msgstr "Odebrat Jorts z autostartu systému"
 
-#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29
 msgid "Set Jorts to start with the computer"
 msgstr "Nastavení Jorts na spuštění s počítačem"
 
-#: src/Views/PreferencesView.vala:25
+#: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
 msgstr "Odeslání požadavku do systému"
 
-#: src/Views/PreferencesView.vala:52
+#: src/Views/PreferencesView.vala:43
 msgid "Make unfocused notes unreadable"
 msgstr "Znepřehledněte poznámky"
 
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:44
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
@@ -369,12 +369,12 @@ msgstr ""
 "Pokud je tato funkce povolena, stanou se nesoustředěné samolepicí poznámky "
 "nečitelnými, aby byl jejich obsah chráněn před pohledy zvědavců."
 
-#: src/Views/PreferencesView.vala:74
+#: src/Views/PreferencesView.vala:55
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Skrytí panelu tlačítek"
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:56
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -383,37 +383,37 @@ msgstr ""
 "poznámkách. Klávesové zkratky budou stále funkční (Ctrl+T)."
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:99
+#: src/Views/PreferencesView.vala:72
 msgid "Set autostart"
 msgstr "Nastavení automatického spuštění"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:84
 msgid "Remove autostart"
 msgstr "Odstranění autostartu"
 
-#: src/Views/PreferencesView.vala:142
+#: src/Views/PreferencesView.vala:99
 msgid "Allow to start at login"
 msgstr "Povolit spuštění při přihlášení"
 
-#: src/Views/PreferencesView.vala:144
+#: src/Views/PreferencesView.vala:101
 msgid "You can request the system to start this application automatically"
 msgstr "Můžete požádat systém o automatické spuštění této aplikace."
 
-#: src/Views/PreferencesView.vala:165
+#: src/Views/PreferencesView.vala:122
 msgid "Support us!"
 msgstr "Podpořte nás!"
 
-#: src/Views/PreferencesView.vala:177
+#: src/Views/PreferencesView.vala:134
 msgid "Close"
 msgstr "Zavřít"
 
-#: src/Views/PreferencesView.vala:180
+#: src/Views/PreferencesView.vala:137
 msgid "Close preferences"
 msgstr "Zavřít předvolby"
 
-#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:88 src/Windows/StickyNoteWindow.vala:171
+#: src/Windows/StickyNoteWindow.vala:251 src/Windows/PreferenceWindow.vala:43
 msgid " - Jorts"
 msgstr " - Šortky"
 
@@ -421,12 +421,12 @@ msgstr " - Šortky"
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:41
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/PreferenceWindow.vala:43
 msgid "Preferences"
 msgstr "Předvolby"
 
