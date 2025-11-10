@@ -98,7 +98,9 @@
             <description>
                 <p>3.6.0 Jorts of Hyperspace</p>
                 <ul>
-                    <li>Under the hood performance improvements</li>
+                    <li>Various under the hood performance improvements</li>
+                    <li>A couple visual bugfixes as well!</li>
+                    <li>More zoom options</li>
                 </ul>
                 <p>😎 Guests stars:</p>
                 <ul>
@@ -106,7 +108,8 @@
                 </ul>
             </description>
             <issues>
-                <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emoji chooser and context menu</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">
