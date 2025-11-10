@@ -27,7 +27,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         set { load_data (value);}
     }
 
-    private static uint debounce_timer_id;
+    public signal void changed ();
 
     private const string ACTION_PREFIX = "app.";
     private const string ACTION_SHOW_EMOJI = "action_show_emoji";
@@ -121,7 +121,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
-        view.textview.buffer.changed.connect (debounce_save);
+        view.textview.buffer.changed.connect (has_changed);
         popover.zoom_changed.connect (zoomcontroller.zoom_changed);
 
         // Use the color theme of this sticky note when focused
@@ -165,29 +165,11 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     /**
-    * Debouncer to avoid writing to disk all the time constantly
-    * Called when something has changed
-    */
-    private void debounce_save () {
-        debug ("Changed! Timer: %s".printf (debounce_timer_id.to_string ()));
-
-        if (debounce_timer_id != 0) {
-            GLib.Source.remove (debounce_timer_id);
-        }
-
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
-            debounce_timer_id = 0;
-            ((Jorts.Application)application).manager.save_all ();
-            return GLib.Source.REMOVE;
-        });
-    }
-
-    /**
     * Simple handler for the EditableLabel
     */
     private void on_editable_changed () {
         title = view.editablelabel.text + _(" - Jorts");
-        debounce_save ();
+        changed ();
     }
 
     /**
@@ -273,6 +255,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         popover.monospace = data.monospace;
         popover.color = data.theme;
     }
+
+    private void has_changed () {changed ();}
 
     private void action_focus_title () {set_focus (view.editablelabel); view.editablelabel.editing = true;}
     private void action_show_emoji () {view.emoji_button.activate ();}

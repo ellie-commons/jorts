@@ -85,8 +85,8 @@ public class Jorts.PopoverView : Gtk.Popover {
         color_button_box.color = new_theme;
         NoteData.latest_theme = new_theme;
 
-        // Cleanup
-        ((Jorts.Application)parent_window.application).manager.save_all ();
+        // Cleanup;
+        parent_window.changed ();
         color_button_box.theme_changed.connect (on_color_changed);
     }
 
@@ -100,6 +100,6 @@ public class Jorts.PopoverView : Gtk.Popover {
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
 
-        ((Jorts.Application)parent_window.application).manager.save_all ();
+       parent_window.changed ();
     }
 }

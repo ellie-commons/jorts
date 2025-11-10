@@ -16,6 +16,8 @@ public class Jorts.NoteManager : Object {
     public Jorts.Storage storage;
     private bool saving_lock = true;
 
+    private static uint debounce_timer_id;
+
     public NoteManager (Jorts.Application app) {
         this.application = app;
     }
@@ -79,6 +81,8 @@ public class Jorts.NoteManager : Object {
         
         /* LETSGO */
         open_notes.add (note);
+        note.changed.connect (save_all);
+
         note.show ();
         note.present ();
 	}
@@ -119,6 +123,8 @@ public class Jorts.NoteManager : Object {
         debug ("[MANAGER] Removing a note…");
 
         open_notes.remove (note);
+        note.changed.disconnect (save_all);
+
         application.remove_window ((Gtk.Window)note);
         note.close ();
         note = null;
@@ -131,18 +137,29 @@ public class Jorts.NoteManager : Object {
     */
     public void save_all () {
         debug ("[MANAGER] Save the stickies!");
-
-        if (!saving_lock) {
-            var array = new Json.Array ();
-
-            foreach (Jorts.StickyNoteWindow note in open_notes) {
-                var data = note.packaged ();
-                var object = data.to_json ();
-                array.add_object_element (object);
-            };
-
-            storage.save (array);       
+        if (saving_lock) {return;}
+        
+        if (debounce_timer_id != 0) {
+            GLib.Source.remove (debounce_timer_id);
         }
+
+        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
+            debounce_timer_id = 0;
+            immediately_save ();
+            return GLib.Source.REMOVE;
+        });
+    }
+
+    private void immediately_save () {
+        var array = new Json.Array ();
+
+        foreach (Jorts.StickyNoteWindow note in open_notes) {
+            var data = note.packaged ();
+            var object = data.to_json ();
+            array.add_object_element (object);
+        };
+
+        storage.save (array);  
     }
 
     /*************************************************/

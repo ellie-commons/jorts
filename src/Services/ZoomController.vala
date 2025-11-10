@@ -91,6 +91,6 @@ public class Jorts.ZoomController : Object {
         // Keep it for next new notes
         NoteData.latest_zoom = zoom;
 
-        ((Jorts.Application)window.application).manager.save_all ();
+        window.changed ();
     }
 }
