@@ -31,7 +31,7 @@ editablelabel {
     letter-spacing: .04em;
 }
 
-textview,
+textview.text,
 editablelabel.editing {
     background-image: none;
     font-weight: 500;
@@ -71,65 +71,65 @@ actionbar .themedbutton:focus {
 }
 
 /* Font zooms */
-window.antsized textview.text {font-size: 0.4em;}
-window.antsized editablelabel {font-size: 0.25em;}
-window.antsized editablelabel.editing {font-size: 0.20em;}
+window.s20 textview.text {font-size: 40%;}
+window.s20 editablelabel {font-size: 25%;}
+window.s20 editablelabel.editing {font-size: 20%;}
 
-window.muchsmaller textview.text {font-size: 0.6em;}
-window.muchsmaller editablelabel {font-size: 0.45em;}
-window.muchsmaller editablelabel.editing {font-size: 0.40em;}
+window.s40 textview.text {font-size: 60%;}
+window.s20 editablelabel {font-size: 45%;}
+window.s20 editablelabel.editing {font-size: 40%;}
 
-window.smaller textview.text {font-size: 0.8em;}
-window.smaller editablelabel {font-size: 0.65em;}
-window.smaller editablelabel.editing {font-size: 0.60em;}
+window.s60 textview.text {font-size: 80%;}
+window.s60 editablelabel {font-size: 65%;}
+window.s60 editablelabel.editing {font-size: 60%;}
 
-window.small textview.text {font-size: 1.0em;}
-window.small editablelabel {font-size: 0.85em;}
-window.small editablelabel.editing {font-size: 0.80em;}
+window.s80 textview.text {font-size: 100%;}
+window.s80 editablelabel {font-size: 85%;}
+window.s80 editablelabel.editing {font-size: 80%;}
 
-window.normal_zoom textview.text {font-size: 1.2em;}
-window.normal_zoom editablelabel {font-size: 1.05em;}
-window.normal_zoom editablelabel.editing {font-size: 1em;}
+window.s100 textview.text {font-size: 120%;}
+window.s100 editablelabel {font-size: 105%;}
+window.s100 editablelabel.editing {font-size: 100%;}
 
-window.big textview.text {font-size: 1.4em;}
-window.big editablelabel {font-size: 1.25em;}
-window.big editablelabel.editing {font-size: 1.20em;}
+window.s120 textview.text {font-size: 140%;}
+window.s120 editablelabel {font-size: 125%;}
+window.s120 editablelabel.editing {font-size: 120%;}
 
-window.bigger textview.text {font-size: 1.6em;}
-window.bigger editablelabel {font-size: 1.45em;}
-window.bigger editablelabel.editing {font-size: 1.40em;}
+window.s140 textview.text {font-size: 160%;}
+window.s140 editablelabel {font-size: 145%;}
+window.s140 editablelabel.editing {font-size: 140%;}
 
-window.muchbigger textview.text {font-size: 1.8em;}
-window.muchbigger editablelabel {font-size: 1.65em;}
-window.muchbigger editablelabel.editing {font-size: 1.60em;}
+window.s160 textview.text {font-size: 180%;}
+window.s160 editablelabel {font-size: 165%;}
+window.s160 editablelabel.editing {font-size: 160%;}
 
-window.muchmuchbigger textview.text {font-size: 2em;}
-window.muchmuchbigger editablelabel {font-size: 1.85em;}
-window.muchmuchbigger editablelabel.editing {font-size: 1.80em;}
+window.s180 textview.text {font-size: 200%;}
+window.s180 editablelabel {font-size: 185%;}
+window.s180 editablelabel.editing {font-size: 180%;}
 
-window.huge textview.text {font-size: 2.2em;}
-window.huge editablelabel {font-size: 2.05em;}
-window.huge editablelabel.editing {font-size: 2.00em;}
+window.s200 textview.text {font-size: 220%;}
+window.s200 editablelabel {font-size: 205%;}
+window.s200 editablelabel.editing {font-size: 200%;}
 
-window.superhuge textview.text {font-size: 2.4em;}
-window.superhuge editablelabel {font-size: 2.25em;}
-window.superhuge editablelabel.editing {font-size: 2.20em;}
+window.s220 textview.text {font-size: 240%;}
+window.s220 editablelabel {font-size: 225%;}
+window.s220 editablelabel.editing {font-size: 220%;}
 
-window.megahuge textview.text {font-size: 2.6em;}
-window.megahuge editablelabel {font-size: 2.45em;}
-window.megahuge editablelabel.editing {font-size: 2.40em;}
+window.s240 textview.text {font-size: 260%;}
+window.s240 editablelabel {font-size: 245%;}
+window.s240 editablelabel.editing {font-size: 240%;}
 
-window.ultrahuge textview.text {font-size: 2.8em;}
-window.ultrahuge editablelabel {font-size: 2.65em;}
-window.ultrahuge editablelabel.editing {font-size: 2.60em;}
+window.s260 textview.text {font-size: 280%;}
+window.s260 editablelabel {font-size: 265%;}
+window.s260 editablelabel.editing {font-size: 260%;}
 
-window.massive textview.text {font-size: 3em;}
-window.massive editablelabel {font-size: 2.85em;}
-window.massive editablelabel.editing {font-size: 2.80em;}
+window.s280 textview.text {font-size: 300%;}
+window.s280 editablelabel {font-size: 285%;}
+window.s280 editablelabel.editing {font-size: 280%;}
 
-window.urmom textview.text {font-size: 3.2em;}
-window.urmom editablelabel {font-size: 3.05em;}
-window.urmom editablelabel.editing {font-size: 3.00em;}
+window.s300 textview.text {font-size: 320%;}
+window.s300 editablelabel {font-size: 305%;}
+window.s300 editablelabel.editing {font-size: 300%;}
 
 
 /* ALL the colorpills */
