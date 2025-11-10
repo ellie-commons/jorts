@@ -79,17 +79,6 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        Application.gsettings.bind (
-            "scribbly-mode-active",
-            prefview.scribbly_toggle, "active",
-            SettingsBindFlags.DEFAULT);
-
-
-        Application.gsettings.bind (
-            "hide-bar",
-            prefview.hidebar_toggle, "active",
-            SettingsBindFlags.DEFAULT);
-
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
 

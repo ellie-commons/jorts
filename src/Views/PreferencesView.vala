@@ -6,8 +6,6 @@
  */
 
  public class Jorts.PreferencesView : Gtk.Box {
-    public Gtk.Switch scribbly_toggle;
-    public Gtk.Switch hidebar_toggle;
     //public Gtk.Button reset_button;
     private Granite.Toast toast;
     public Gtk.Button close_button;
@@ -41,21 +39,11 @@
 
                 debug ("Built UI. Lets do connects and binds");
 
-                var scribbly_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var scribbly_box = new Jorts.SettingsSwitch (
+                    _("Make unfocused notes unreadable"),
+                    _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"),
+                    "scribbly-mode-active");
 
-                scribbly_toggle = new Gtk.Switch () {
-                    halign = Gtk.Align.END,
-                    hexpand = true,
-                    valign = Gtk.Align.CENTER,
-                };
-
-                var scribbly_label = new Granite.HeaderLabel (_("Make unfocused notes unreadable")) {
-                    mnemonic_widget = scribbly_toggle,
-                    secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)")
-                };
-
-                scribbly_box.append (scribbly_label);
-                scribbly_box.append (scribbly_toggle);
                 settingsbox.append (scribbly_box);
 
 
@@ -63,21 +51,11 @@
                 /*               hidebar Toggle                  */
                 /*************************************************/
 
-                var hidebar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var hidebar_box = new Jorts.SettingsSwitch (
+                    _("Hide buttons"),
+                    _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"),
+                    "hide-bar");
 
-                hidebar_toggle = new Gtk.Switch () {
-                    halign = Gtk.Align.END,
-                    hexpand = true,
-                    valign = Gtk.Align.CENTER,
-                };
-
-                var hidebar_label = new Granite.HeaderLabel (_("Hide buttons")) {
-                    mnemonic_widget = hidebar_toggle,
-                    secondary_text = _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)")
-                };
-
-                hidebar_box.append (hidebar_label);
-                hidebar_box.append (hidebar_toggle);
                 settingsbox.append (hidebar_box);
 
 
