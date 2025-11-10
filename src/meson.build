@@ -9,7 +9,6 @@ sources = files (
     'Services' / 'Constants.vala',
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
-    'Services' / 'Themer.vala',
     'Services' / 'ZoomController.vala',
 
     'Widgets' / 'EditableLabel.vala',
