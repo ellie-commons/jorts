@@ -48,7 +48,7 @@ public class Jorts.NoteData : Object {
     */
     public NoteData.from_json (Json.Object node) {
         title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
-        theme       = node.get_int_member_with_default ("color", Jorts.Utils.random_theme);
+        theme       = node.get_int_member_with_default ("color", Jorts.Utils.random_theme ());
         content     = node.get_string_member_with_default ("content","");
         monospace   = node.get_boolean_member_with_default ("monospace", Jorts.Constants.DEFAULT_MONO);
         zoom        = (uint16)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
