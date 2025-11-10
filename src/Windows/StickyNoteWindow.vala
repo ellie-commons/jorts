@@ -72,7 +72,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         { ACTION_THEME_0, action_theme_0},
     };
 
-    public StickyNoteWindow (Gtk.Application app, NoteData data) {
+    public StickyNoteWindow (Jorts.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;

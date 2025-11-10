@@ -18,20 +18,11 @@ the actionbar has a donate me and a set back to defaults just like elementaryOS
 */
 public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
-    private static GLib.Once<Jorts.PreferenceWindow> _instance;
-    public static unowned Jorts.PreferenceWindow instance () {
-            return _instance.once (() => { return new Jorts.PreferenceWindow (); });
-        }
-
-    Jorts.PreferencesView prefview;
-    public bool is_shown = false;
-
-    public static PreferenceWindow () {
+    public PreferenceWindow (Jorts.Application app) {
         debug ("[PREFWINDOW] Creating preference window");
         Intl.setlocale ();
 
-        hide_on_close = true;
-
+        application = app;
         var gtk_settings = Gtk.Settings.get_default ();
 
         // Since each sticky note adopts a different accent color
@@ -64,7 +55,7 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
         add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
 
-        prefview = new Jorts.PreferencesView ();
+        var prefview = new Jorts.PreferencesView ();
 
         // Make the whole window grabbable
         var handle = new Gtk.WindowHandle () {
@@ -75,23 +66,8 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
 
         set_focus (prefview.close_button);
 
-        /***************************************************/
-        /*              CONNECTS AND BINDS                 */
-        /***************************************************/
-
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
-
-        show.connect (() => {
-            is_shown = true;
-        });
-
-        close_request.connect (() => {
-            is_shown = false;
-            ((Jorts.Application)application).check_if_quit ();
-            return false;
-        });
-
     }
 
 /*      private void on_reset () {

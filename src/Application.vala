@@ -43,7 +43,7 @@ public class Jorts.Application : Gtk.Application {
     // Needed by all windows
     public static GLib.Settings gsettings;
     public Jorts.NoteManager manager;
-    private static Jorts.PreferenceWindow preferences;
+    public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
     public static bool new_note = false;
@@ -139,14 +139,8 @@ Your Notes are all belong to us!
 Please wait while the app remembers all the things...
 """);
 
-
-
-        // ONLY ONE.
-        preferences = Jorts.PreferenceWindow.instance ();
-        add_window (preferences);
-
         /* Quit if all sticky notes are closed and preferences arent shown */
-        this.window_removed.connect (check_if_quit);
+        window_removed.connect (check_if_quit);
 
 
         // build all the stylesheets
@@ -204,6 +198,12 @@ Please wait while the app remembers all the things...
 
     private void action_show_preferences () {
         debug ("[ACTION] Showing preferences!");
+
+        if (Application.preferences == null) {
+            Application.preferences = new Jorts.PreferenceWindow (this);
+            Application.preferences.close_request.connect_after (() => {Application.preferences = null; return false;});
+        }
+
         preferences.show ();
         preferences.present ();
     }
@@ -233,12 +233,12 @@ Please wait while the app remembers all the things...
         }
     }
 
+    // checked upon window closing to make sure we do not linger in the background
     public void check_if_quit () {
         debug ("Windows open: %s".printf (get_windows ().length ().to_string ()));
-        debug ("Preferences shown: %s".printf (preferences.is_shown.to_string ()));
 
-        if ((get_windows ().length () == 1) && (preferences.is_shown == false)) {
-            print ("No sticky note open, quitting");
+        if (get_windows ().length () == 0) {
+            debug ("No sticky note open, quitting");
             quit ();
         }
     }
@@ -278,5 +278,4 @@ Please wait while the app remembers all the things...
         activate ();
         return 0;
     }
-
 }
