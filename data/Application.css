@@ -76,8 +76,8 @@ window.s20 editablelabel {font-size: 25%;}
 window.s20 editablelabel.editing {font-size: 20%;}
 
 window.s40 textview.text {font-size: 60%;}
-window.s20 editablelabel {font-size: 45%;}
-window.s20 editablelabel.editing {font-size: 40%;}
+window.s40 editablelabel {font-size: 45%;}
+window.s40 editablelabel.editing {font-size: 40%;}
 
 window.s60 textview.text {font-size: 80%;}
 window.s60 editablelabel {font-size: 65%;}
