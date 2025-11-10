@@ -97,7 +97,7 @@
 
                 set_autostart.clicked.connect (() => {
                     debug ("Setting autostart");
-                    Jorts.Utils.autostart_set ()
+                    Jorts.Utils.autostart_set ();
                     toast.send_notification ();
                 });
 
@@ -109,7 +109,7 @@
 
                 remove_autostart.clicked.connect (() => {
                     debug ("Removing autostart");
-                    Jorts.Utils.autostart_remove ()
+                    Jorts.Utils.autostart_remove ();
                     toast.send_notification ();
                 });
 
