@@ -10,6 +10,7 @@ sources = files (
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
     'Services' / 'Themer.vala',
+    'Services' / 'ZoomController.vala',
 
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',

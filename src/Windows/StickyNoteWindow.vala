@@ -17,8 +17,10 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     public Gtk.Settings gtk_settings;
 
     public Jorts.NoteView view;
-    private PopoverView popover;
+    public PopoverView popover;
     public TextView textview;
+
+    private Jorts.ZoomController zoomcontroller;
 
     public NoteData data {
         owned get { return packaged ();}
@@ -75,6 +77,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;
 
+
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("app", actions);
@@ -83,6 +86,8 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         add_css_class ("rounded");
         title = "" + _(" - Jorts");
+
+        zoomcontroller = new Jorts.ZoomController (this);
 
 
         /*****************************************/
@@ -117,6 +122,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (debounce_save);
+        popover.zoom_changed.connect (zoomcontroller.zoom_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -124,7 +130,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         //The application tells us the squiffly state has changed!
         on_scribbly_changed ();
         Application.gsettings.changed["scribbly-mode-active"].connect (on_scribbly_changed);
-
 
         // Respect animation settings for showing ui elements
         if (Gtk.Settings.get_default ().gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
@@ -244,7 +249,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
             theme = popover.color,
             content = view.content,
             monospace = popover.monospace,
-            zoom = popover.zoom,
+            zoom = zoomcontroller.zoom,
             width = this_width,
             height = this_height
         }
@@ -264,7 +269,7 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         title = view.editablelabel.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        popover.zoom = data.zoom;
+        zoomcontroller.zoom = data.zoom;
         popover.monospace = data.monospace;
         popover.color = data.theme;
     }
@@ -275,9 +280,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
 
-    private void action_zoom_out () {popover.zoom_out ();}
-    private void action_zoom_default () {popover.zoom_default ();}
-    private void action_zoom_in () {popover.zoom_in ();}
+    private void action_zoom_out () {zoomcontroller.zoom_out ();}
+    private void action_zoom_default () {zoomcontroller.zoom_default ();}
+    private void action_zoom_in () {zoomcontroller.zoom_in ();}
 
     private void action_theme_1 () {popover.color = (Jorts.Themes.all ())[0];}
     private void action_theme_2 () {popover.color = (Jorts.Themes.all ())[1];}
