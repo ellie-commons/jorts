@@ -35,12 +35,12 @@ public class Jorts.ZoomController : Object {
         var keypress_controller = new Gtk.EventControllerKey ();
         keypress_controller.key_pressed.connect (on_key_press_event);
         keypress_controller.key_released.connect (on_key_release_event);
-        keypress_controller.widget = window;
+        window.add_controller ((Gtk.EventController)keypress_controller);
 
         var scroll_controller = new Gtk.EventControllerScroll (VERTICAL);
         scroll_controller.scroll_end.connect (() => current_scroll_delta = 0);
         scroll_controller.scroll.connect ((dx, dy) => on_scroll);
-        scroll_controller.widget = window;
+        window.add_controller ((Gtk.EventController)scroll_controller);
     }
 
     /**
@@ -123,8 +123,8 @@ public class Jorts.ZoomController : Object {
         }
     }
 
-    private void on_scroll (double dx, double dy) {
-        if (!is_control_key_pressed) { return;}
+    private bool on_scroll (double dx, double dy) {
+        if (!is_control_key_pressed) { return false;}
 
         if (current_scroll_delta == 0) {
             zoom_changed (Zoomkind.from_delta (dy));
@@ -135,5 +135,7 @@ public class Jorts.ZoomController : Object {
         if (current_scroll_delta.abs () > sensitivity) { // Balance between reactive and ignoring misinput
             current_scroll_delta = 0;
         }
+
+        return true;
     }
 }
