@@ -96,20 +96,23 @@
     <releases>
         <release version="3.6.0" date="2025-11-20">
             <description>
-                <p>3.6.0 Jorts of Hyperspace</p>
+                <p>🚀 3.6.0 Jorts of Hyperspace!</p>
                 <ul>
-                    <li>Various under the hood performance improvements</li>
-                    <li>A couple visual bugfixes as well!</li>
+                    <li>Ctrl+Scroll to zoom-in, zoom-out</li>
                     <li>More zoom options</li>
+                    <li>A couple visual bugfixes as well!</li>
+                    <li>Various under the hood performance improvements</li>
                 </ul>
                 <p>😎 Guests stars:</p>
                 <ul>
                     <li>Updated JA translation thanks to @ryonakano!</li>
+                    <li>You, the user, for liking this lil app!</li>
                 </ul>
             </description>
             <issues>
                 <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
                 <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/78">Fixed absence of Ctrl+scroll</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">

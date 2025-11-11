@@ -17,8 +17,8 @@ public class Jorts.ZoomController : Object {
 
     // We keep those values static as we dont need to track instance specific
     public static double current_scroll_delta = 0;
-    public static is_control_key_pressed = false;
-    public static sensitivity = 1;
+    public static bool is_control_key_pressed = false;
+    public static uint8 sensitivity = 1;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private uint16 _old_zoom;
