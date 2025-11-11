@@ -35,12 +35,12 @@ public class Jorts.ZoomController : Object {
         var keypress_controller = new Gtk.EventControllerKey ();
         keypress_controller.key_pressed.connect (on_key_press_event);
         keypress_controller.key_released.connect (on_key_release_event);
-        window.add_controller (keypress_controller);
+        keypress_controller.widget = window;
 
         var scroll_controller = new Gtk.EventControllerScroll (VERTICAL);
         scroll_controller.scroll_end.connect (() => current_scroll_delta = 0);
-        scroll_controller.scroll.connect (on_scroll);
-        window.add_controller (scroll_controller);
+        scroll_controller.scroll.connect ((dx, dy) => on_scroll);
+        scroll_controller.widget = window;
     }
 
     /**
