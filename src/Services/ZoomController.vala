@@ -16,9 +16,7 @@ public class Jorts.ZoomController : Object {
     private Jorts.StickyNoteWindow window;
 
     // We keep those values static as we dont need to track instance specific
-    public static double current_scroll_delta = 0;
     public static bool is_control_key_pressed = false;
-    public static uint8 sensitivity = 1;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private uint16 _old_zoom;
@@ -29,18 +27,6 @@ public class Jorts.ZoomController : Object {
 
     public ZoomController (Jorts.StickyNoteWindow window) {
         this.window = window;
-    }
-
-    construct {
-        var keypress_controller = new Gtk.EventControllerKey ();
-        keypress_controller.key_pressed.connect (on_key_press_event);
-        keypress_controller.key_released.connect (on_key_release_event);
-        ((Gtk.Widget)window).add_controller ((Gtk.EventController)keypress_controller);
-
-        var scroll_controller = new Gtk.EventControllerScroll (VERTICAL);
-        scroll_controller.scroll_end.connect (() => current_scroll_delta = 0);
-        scroll_controller.scroll.connect (on_scroll);
-        ((Gtk.Widget)window).add_controller ((Gtk.EventController)scroll_controller);
     }
 
     /**
@@ -109,33 +95,37 @@ public class Jorts.ZoomController : Object {
         window.changed ();
     }
 
-    private bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
+    public bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
         if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
+            print ("Press!");
             is_control_key_pressed = true;
+
+            // disable scrolling for the stickies else it will prevent what we are trying to do
+            window.view.scrolled.sensitive = false;
         }
 
         return Gdk.EVENT_PROPAGATE;
     }
 
-    private void on_key_release_event (uint keyval, uint keycode, Gdk.ModifierType state) {
+    public void on_key_release_event (uint keyval, uint keycode, Gdk.ModifierType state) {
         if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
+            debug ("Release!");
             is_control_key_pressed = false;
+
+            // Allow scrolling again
+            window.view.scrolled.sensitive = true;
         }
     }
 
-    private bool on_scroll (double dx, double dy) {
-        if (!is_control_key_pressed) { return false;}
+    public bool on_scroll (double dx, double dy) {
+        debug ("Scroll + Ctrl!");
 
-        if (current_scroll_delta == 0) {
-            zoom_changed (Zoomkind.from_delta (dy));
+        if (!is_control_key_pressed) {
+            return false;
         }
 
-        current_scroll_delta += dy;
-
-        if (current_scroll_delta.abs () > sensitivity) { // Balance between reactive and ignoring misinput
-            current_scroll_delta = 0;
-        }
-
-        return true;
+        zoom_changed (Zoomkind.from_delta (dy));
+        debug ("Go! Zoooommmmm");
+        return false;
     }
 }

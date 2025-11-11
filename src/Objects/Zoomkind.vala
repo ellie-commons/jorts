@@ -21,10 +21,10 @@
 
         if (delta > 0)
         {
-            return ZOOM_IN;
+            return ZOOM_OUT;
 
         } else {
-            return ZOOM_OUT;
+            return ZOOM_IN;
         }
     }
 }

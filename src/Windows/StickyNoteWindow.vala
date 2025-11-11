@@ -13,7 +13,7 @@
 * Can be packaged into a noteData file for convenient storage
 * Reports to the NoteManager for saving
 */
-public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
+public class Jorts.StickyNoteWindow : Gtk.Window {
 
     public Jorts.NoteView view;
     public PopoverView popover;
@@ -28,6 +28,9 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     }
 
     public signal void changed ();
+
+    private Gtk.EventControllerKey keypress_controller;
+    private Gtk.EventControllerScroll scroll_controller;
 
     private const string ACTION_PREFIX = "app.";
     private const string ACTION_SHOW_EMOJI = "action_show_emoji";
@@ -87,6 +90,16 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
 
         zoomcontroller = new Jorts.ZoomController (this);
         scribblycontroller = new Jorts.ScribblyController (this);
+
+        keypress_controller = new Gtk.EventControllerKey ();
+        keypress_controller.key_pressed.connect (zoomcontroller.on_key_press_event);
+        keypress_controller.key_released.connect (zoomcontroller.on_key_release_event);
+        ((Gtk.Widget)this).add_controller (keypress_controller);
+
+        scroll_controller = new Gtk.EventControllerScroll (VERTICAL);
+        scroll_controller.scroll.connect (zoomcontroller.on_scroll);
+        ((Gtk.Widget)this).add_controller (scroll_controller);
+
 
         /*****************************************/
         /*              HEADERBAR                */

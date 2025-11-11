@@ -70,10 +70,6 @@ public class Jorts.PopoverView : Gtk.Popover {
         // Avoid deathloop where the handler calls itself
         color_button_box.theme_changed.disconnect (on_color_changed);
 
-        // Accent
-        var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
-        parent_window.gtk_settings.gtk_theme_name = stylesheet;
-
         // Add remove class
         if (_old_color.to_string () in parent_window.css_classes) {
             parent_window.remove_css_class (_old_color.to_string ());

@@ -15,6 +15,8 @@
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
 
+    public Gtk.ScrolledWindow scrolled;
+
     public bool monospace {
         get { return textview.monospace;}
         set { mono_set (value);}
@@ -45,7 +47,7 @@
         headerbar.set_title_widget (editablelabel);
 
         textview = new Jorts.TextView ();
-        var scrolled = new Gtk.ScrolledWindow () {
+        scrolled = new Gtk.ScrolledWindow () {
             child = textview
         };
 

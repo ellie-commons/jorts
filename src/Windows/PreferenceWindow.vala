@@ -16,7 +16,7 @@ the innerbox has widgets for settings.
 the actionbar has a donate me and a set back to defaults just like elementaryOS
 
 */
-public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
+public class Jorts.PreferenceWindow : Gtk.Window {
 
     public PreferenceWindow (Jorts.Application app) {
         debug ("[PREFWINDOW] Creating preference window");
