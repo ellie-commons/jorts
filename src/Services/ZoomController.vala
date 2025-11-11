@@ -97,7 +97,7 @@ public class Jorts.ZoomController : Object {
 
     public bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
         if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
-            print ("Press!");
+            debug ("Press!");
             is_control_key_pressed = true;
 
             // disable scrolling for the stickies else it will prevent what we are trying to do
