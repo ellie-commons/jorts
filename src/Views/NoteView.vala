@@ -20,11 +20,6 @@
         set { mono_set (value);}
     }
 
-    public bool scribbly {
-        get { return textview.scribbly;}
-        set { scribbly_set (value);}
-    }
-
     public string title {
         owned get { return editablelabel.text;}
         set { editablelabel.text = value;}
@@ -87,10 +82,5 @@
     private void mono_set (bool if_mono) {
         editablelabel.monospace = if_mono;
         textview.monospace = if_mono;
-    }
-
-    private void scribbly_set (bool if_scribbly) {
-        editablelabel.scribbly = if_scribbly;
-        textview.scribbly = if_scribbly;
     }
 }

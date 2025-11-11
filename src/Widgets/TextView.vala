@@ -16,11 +16,6 @@ public class Jorts.TextView : Granite.HyperTextView {
         set {buffer.text = value;}
     }
 
-    public bool scribbly {
-        get { return "scribbly" in this.css_classes;}
-        set { scribbly_set (value);}
-    }
-
     construct {
         buffer = new Gtk.TextBuffer (null);
         bottom_margin = 10;
@@ -47,16 +42,5 @@ public class Jorts.TextView : Granite.HyperTextView {
                 print ("Cannot access clipboard: " + e.message);
             }
         });
-    }
-
-    private void scribbly_set (bool if_scribbly) {
-        if (if_scribbly) {
-            this.add_css_class ("scribbly");
-
-        } else {
-            if ("scribbly" in this.css_classes) {
-                this.remove_css_class ("scribbly");
-            }
-        }
     }
 }
