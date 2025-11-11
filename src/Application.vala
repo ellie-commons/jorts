@@ -42,6 +42,8 @@ public class Jorts.Application : Gtk.Application {
 
     // Needed by all windows
     public static GLib.Settings gsettings;
+    public static Gtk.Settings gtk_settings;
+
     public Jorts.NoteManager manager;
     public static Jorts.PreferenceWindow? preferences;
 
@@ -114,7 +116,7 @@ public class Jorts.Application : Gtk.Application {
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
         gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
 

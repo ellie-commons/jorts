@@ -58,6 +58,14 @@ public class Jorts.PreferenceWindow : Gtk.Window {
 
         set_focus (prefview.close_button);
 
+        // Since each sticky note adopts a different accent color
+        // we have to revert to default when this one is focused
+        this.notify["is-active"].connect (() => {
+            if (this.is_active) {
+                Application.gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
+            }
+        });
+
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
     }

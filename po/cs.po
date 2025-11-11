@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-10 23:03+0100\n"
+"POT-Creation-Date: 2025-11-11 21:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/EditableLabel.vala:43
+#: src/Widgets/EditableLabel.vala:38
 msgid "Click to edit the title"
 msgstr "Kliknutím upravíte název"
 
@@ -412,8 +412,8 @@ msgstr "Zavřít"
 msgid "Close preferences"
 msgstr "Zavřít předvolby"
 
-#: src/Windows/StickyNoteWindow.vala:88 src/Windows/StickyNoteWindow.vala:171
-#: src/Windows/StickyNoteWindow.vala:251 src/Windows/PreferenceWindow.vala:43
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:174
+#: src/Windows/StickyNoteWindow.vala:209 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Šortky"
 
@@ -421,12 +421,12 @@ msgstr " - Šortky"
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:41
+#: src/Windows/PreferenceWindow.vala:33
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Předvolby pro všechny samolepicí poznámky"
 
-#: src/Windows/PreferenceWindow.vala:43
+#: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Předvolby"
 
