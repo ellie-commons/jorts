@@ -23,15 +23,7 @@ public class Jorts.PreferenceWindow : Gtk.ApplicationWindow {
         Intl.setlocale ();
 
         application = app;
-        var gtk_settings = Gtk.Settings.get_default ();
 
-        // Since each sticky note adopts a different accent color
-        // we have to revert to default when this one is focused
-        this.notify["is-active"].connect (() => {
-            if (this.is_active) {
-                gtk_settings.gtk_theme_name = "io.elementary.stylesheet.blueberry";
-            }
-        });
 
         /********************************************/
         /*              HEADERBAR BS                */

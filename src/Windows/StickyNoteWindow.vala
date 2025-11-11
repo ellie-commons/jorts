@@ -14,7 +14,6 @@
 * Reports to the NoteManager for saving
 */
 public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
-    public Gtk.Settings gtk_settings;
 
     public Jorts.NoteView view;
     public PopoverView popover;
@@ -83,8 +82,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("app", actions);
 
-        gtk_settings = Gtk.Settings.get_default ();
-
         add_css_class ("rounded");
         title = "" + _(" - Jorts");
 
@@ -123,9 +120,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
         popover.zoom_changed.connect (zoomcontroller.zoom_changed);
-
-        // Use the color theme of this sticky note when focused
-        this.notify["is-active"].connect (on_focus_changed);
 
         // Respect animation settings for showing ui elements
         if (Gtk.Settings.get_default ().gtk_enable_animations && (!Application.gsettings.get_boolean ("hide-bar"))) {
@@ -166,19 +160,6 @@ public class Jorts.StickyNoteWindow : Gtk.ApplicationWindow {
     private void on_editable_changed () {
         title = view.editablelabel.text + _(" - Jorts");
         changed ();
-    }
-
-    /**
-    * Changes the stylesheet accents to the notes color
-    * Add or remove the Redacted font if the setting is active
-    */
-    private void on_focus_changed () {
-        debug ("Focus changed!");
-
-        if (this.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + popover.color.to_string ().ascii_down ();
-            gtk_settings.gtk_theme_name = stylesheet;
-        }
     }
 
     /**
