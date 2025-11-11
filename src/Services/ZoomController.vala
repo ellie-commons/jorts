@@ -7,12 +7,20 @@
 
 /*************************************************/
 /**
-* A register of all possible zoom values we have
+* Responsible to apply zoom appropriately to a window.
+* Mainly, this abstracts zoom into an uint16 and swap CSS classes
+* As a treat it includes also the plumbing for ctrl+scroll zooming
 */
 public class Jorts.ZoomController : Object {
 
     private Jorts.StickyNoteWindow window;
 
+    // We keep those values static as we dont need to track instance specific
+    public static double current_scroll_delta = 0;
+    public static is_control_key_pressed = false;
+    public static sensitivity = 1;
+
+    // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private uint16 _old_zoom;
     public uint16 zoom {
         get {return _old_zoom;}
@@ -23,21 +31,28 @@ public class Jorts.ZoomController : Object {
         this.window = window;
     }
 
-    /*********************************************/
-    /*              ZOOM feature                 */
-    /*********************************************/
+    construct {
+        var keypress_controller = new Gtk.EventControllerKey ();
+        keypress_controller.key_pressed.connect (on_key_press_event);
+        keypress_controller.key_released.connect (on_key_release_event);
+        window.add_controller (keypress_controller);
+
+        var scroll_controller = new Gtk.EventControllerScroll (window, VERTICAL);
+        scroll_controller.scroll_end.connect (() => current_scroll_delta = 0);
+        scroll_controller.scroll.connect (on_scroll);
+        window.add_controller (scroll_controller);
+    }
 
     /**
-    * Called when a signal from the popover says stuff got changed
+    * Handler. Wraps a zoom enum into the correct function-
     */
     public void zoom_changed (Jorts.Zoomkind zoomkind) {
         debug ("Zoom changed!");
-
         switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); break;          // vala-lint=double-spaces
-            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;     // vala-lint=double-spaces
-            case Zoomkind.ZOOM_OUT:             zoom_out (); break;         // vala-lint=double-spaces
-            default:                            zoom_default (); break;     // vala-lint=double-spaces
+            case Zoomkind.ZOOM_IN:              zoom_in (); return;          // vala-lint=double-spaces
+            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); return;     // vala-lint=double-spaces
+            case Zoomkind.ZOOM_OUT:             zoom_out (); return;         // vala-lint=double-spaces
+            default:                            return;                      // vala-lint=double-spaces
         }
     }
 
@@ -92,5 +107,33 @@ public class Jorts.ZoomController : Object {
         NoteData.latest_zoom = zoom;
 
         window.changed ();
+    }
+
+    private bool on_key_press_event (uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
+            is_control_key_pressed = true;
+        }
+
+        return Gdk.EVENT_PROPAGATE;
+    }
+
+    private void on_key_release_event (uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
+            is_control_key_pressed = false;
+        }
+    }
+
+    private void on_scroll (double dx, double dy) {
+        if (!is_control_key_pressed) { return;}
+
+        if (current_scroll_delta == 0) {
+            zoom_changed (Zoomkind.from_delta (dy));
+        }
+
+        current_scroll_delta += dy;
+
+        if (current_scroll_delta.abs () > sensitivity) { // Balance between reactive and ignoring misinput
+            current_scroll_delta = 0;
+        }
     }
 }

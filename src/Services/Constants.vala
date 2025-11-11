@@ -15,9 +15,7 @@ namespace Jorts.Constants {
     const string DONATE_LINK             = "https://ko-fi.com/teamcons";
 
     // signature theme
-#if PRIDE
-    const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BUBBLEGUM;
-#elif HALLOWEEN
+#if HALLOWEEN
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.ORANGE;
 #else
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BLUEBERRY;
