@@ -98,7 +98,7 @@
             <description>
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
                 <ul>
-                    <li>Version 4 to align with Gtk version, and also the code is much cleaner than it ever was</li>
+                    <li>Version 4 to align with Gtk version</li>
                     <li>Ctrl+Scroll to zoom-in, zoom-out</li>
                     <li>More zoom options</li>
                     <li>A couple visual bugfixes as well!</li>

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 21:01+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: 2025-11-02 11:56+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -162,9 +162,7 @@ msgid "🚀 4.0.0 Jorts of Hyperspace!"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:101
-msgid ""
-"Version 4 to align with Gtk version, and also the code is much cleaner than "
-"it ever was"
+msgid "Version 4 to align with Gtk version"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:102

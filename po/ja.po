@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 21:01+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: 2025-11-02 11:55+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -405,8 +405,8 @@ msgstr "閉じる"
 msgid "Close preferences"
 msgstr "設定を閉じる"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:174
-#: src/Windows/StickyNoteWindow.vala:209 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Jorts"
 

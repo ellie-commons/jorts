@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 21:01+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -411,8 +411,8 @@ msgstr "Lukk"
 msgid "Close preferences"
 msgstr "Lukk preferanser"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:174
-#: src/Windows/StickyNoteWindow.vala:209 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 #, fuzzy
 msgid " - Jorts"
 msgstr "Jorts"

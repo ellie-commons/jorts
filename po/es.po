@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 21:01+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -412,8 +411,8 @@ msgstr "Cerrar"
 msgid "Close preferences"
 msgstr "Cerrar preferencias"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:174
-#: src/Windows/StickyNoteWindow.vala:209 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Pantalones cortos"
 
@@ -422,70 +421,9 @@ msgstr " - Pantalones cortos"
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-#, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Preferencias para esta nota pegajosa"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Preferencias"
-
-#~ msgid "Create a new note"
-#~ msgstr "Crear una nueva nota"
-
-#~ msgid "Create a note then paste from clipboard"
-#~ msgstr "Crear una nota y pegarla desde el portapapeles"
-
-#~ msgid "Show preferences"
-#~ msgstr "Mostrar preferencias"
-
-#, fuzzy
-#~ msgid "Reset all settings"
-#~ msgstr "Restablecer todos los ajustes por defecto"
-
-#~ msgid "Permissions"
-#~ msgstr "Permisos"
-
-#~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
-#~ "autostart"
-#~ msgstr ""
-#~ "Puedes configurar las notas adhesivas para que aparezcan cuando te "
-#~ "conectes añadiendo Jorts al inicio automático"
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "Inicio automático de aplicaciones en flathub"
-
-#~ msgid "Edit title"
-#~ msgstr "Editar título"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Hola, soy un cuadrado"
-
-#~ msgid "Now with more ligma!"
-#~ msgstr "¡Ahora con más ligma!"
-
-#~ msgid "I use arch btw"
-#~ msgstr "Yo uso arch"
-
-#~ msgid "Microsoft support"
-#~ msgstr "Soporte técnico de Microsoft"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Nota adhesiva color"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Elija un color para esta nota pegajosa"
-
-#~ msgid "Activate scribbly mode"
-#~ msgstr "Activar el modo scribbly"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Siempre muestre contenido de notas adhesivas"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Ocultar contenido de notas pegajosas desenfrenadas"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%"

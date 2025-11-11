@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 21:01+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: 2025-05-10 12:46+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -412,8 +411,8 @@ msgstr "Chiudere"
 msgid "Close preferences"
 msgstr "Chiudere le preferenze"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:174
-#: src/Windows/StickyNoteWindow.vala:209 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Pantaloncini"
 
@@ -428,63 +427,3 @@ msgstr "Preferenze per i tuoi Jorts"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Preferenze"
-
-#~ msgid "Create a new note"
-#~ msgstr "Creare una nuova nota"
-
-#~ msgid "Create a note then paste from clipboard"
-#~ msgstr "Creare una nota e incollarla dagli appunti"
-
-#~ msgid "Show preferences"
-#~ msgstr "Mostra preferenze"
-
-#, fuzzy
-#~ msgid "Reset all settings"
-#~ msgstr "Ripristinare tutte le impostazioni predefinite"
-
-#~ msgid "Permissions"
-#~ msgstr "Permessi"
-
-#~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
-#~ "autostart"
-#~ msgstr ""
-#~ "È possibile impostare la visualizzazione delle note adesive al momento "
-#~ "dell'accesso aggiungendo Jorts all'avvio automatico"
-
-#, fuzzy
-#~ msgid "Autostart apps"
-#~ msgstr "Avvio automatico delle app in flathub"
-
-#~ msgid "Edit title"
-#~ msgstr "Modifica del titolo"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Ciao, sono un quadrato"
-
-#~ msgid "Now with more ligma!"
-#~ msgstr "Ora con più legumi!"
-
-#~ msgid "I use arch btw"
-#~ msgstr "Io uso arch btw"
-
-#~ msgid "Microsoft support"
-#~ msgstr "Supporto Microsoft"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Colore delle note adesive"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Scegliete un colore per questa nota adesiva"
-
-#~ msgid "Activate scribbly mode"
-#~ msgstr "Attivare la modalità scribbly"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Mostra sempre il contenuto delle note adesive"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Nascondere il contenuto delle note adesive non focalizzate"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%"
