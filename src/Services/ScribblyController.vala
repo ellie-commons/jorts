@@ -8,6 +8,7 @@
 /*************************************************/
 /**
 * Responsible to apply RedactedScript font
+* Give it a window and it will simply follow settings
 */
 public class Jorts.ScribblyController : Object {
 
@@ -17,13 +18,11 @@ public class Jorts.ScribblyController : Object {
     public bool scribble {
         get { return _scribble;}
         set { scribble_follow_focus (value);}
-    };
+    }
 
     public ScribblyController (Jorts.StickyNoteWindow window) {
         this.window = window;
-    }
 
-    construct {
         Application.gsettings.bind (
             "scribbly-mode-active",
             this, "scribble",
@@ -57,7 +56,7 @@ public class Jorts.ScribblyController : Object {
     }
 
     /**
-    * Wrapper to abstract setting/removing CSS as a book
+    * Wrapper to abstract setting/removing CSS as a bool
     */
     private void scribbly_set (bool if_scribbly) {
         if (if_scribbly) {
