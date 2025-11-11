@@ -36,11 +36,9 @@ mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
 mkdir -p "${deploy_dir}/include"
-mkdir -p "${deploy_dir}/usr"
 
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
 cp -r "windows/icons" "${deploy_dir}"
-
 
 # Detect what DLL we need and slorp it into bin
 echo "Copying DLLs..."
@@ -55,7 +53,6 @@ done
 cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
-
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
