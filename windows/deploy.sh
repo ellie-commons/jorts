@@ -232,7 +232,7 @@ Section "Install"
     SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
     File /r "fonts\\*"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter Variable (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
     SetOutPath "\$INSTDIR"
 
     ; Start menu
