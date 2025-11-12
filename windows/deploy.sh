@@ -18,6 +18,7 @@ app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
 version="4.0.0"
+publisher="ellie-commons"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
@@ -145,7 +146,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
-BrandingText "Jorts ${version}, Ellie-Commons 2025"
+BrandingText "Jorts ${version}, ${publisher} 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
@@ -252,9 +253,9 @@ Section "Install"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayIcon" "\$INSTDIR\\icons\\icon.ico"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "${publisher}"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
-    WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x000220EC" ;139,5MB
+    WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
 Section "Uninstall"
