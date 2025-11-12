@@ -17,7 +17,8 @@
 app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
-version="4.0.0"
+icon_theme="elementary"
+version="$(cat meson.build | grep version | cut -d \' -f 2)"
 publisher="ellie-commons"
 
 deploy_dir="windows/deploy"
@@ -111,8 +112,8 @@ mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
-gtk-icon-theme-name=elementary
-gtk-font-name=Inter Variable 9
+gtk-icon-theme-name=${icon_theme}
+gtk-font-name=Inter 9
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
@@ -233,7 +234,7 @@ Section "Install"
     SetOutPath "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts"
     File /r "fonts\\*"
     WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Redacted Script Regular (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter Variable (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows NT\\CurrentVersion\\Fonts" "Inter (TrueType)" "\$LOCALAPPDATA\\Microsoft\\Windows\\Fonts\\InterVariable.ttf"
     SetOutPath "\$INSTDIR"
 
     ; Start menu
