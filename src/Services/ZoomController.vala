@@ -13,10 +13,8 @@
 */
 public class Jorts.ZoomController : Object {
 
+    private static bool is_control_key_pressed = false;
     private Jorts.StickyNoteWindow window;
-
-    // We keep those values static as we dont need to track instance specific
-    public static bool is_control_key_pressed = false;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private uint16 _old_zoom;
@@ -99,9 +97,6 @@ public class Jorts.ZoomController : Object {
         if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
             debug ("Press!");
             is_control_key_pressed = true;
-
-            // disable scrolling for the stickies else it will prevent what we are trying to do
-            window.view.scrolled.sensitive = false;
         }
 
         return Gdk.EVENT_PROPAGATE;
@@ -111,12 +106,6 @@ public class Jorts.ZoomController : Object {
         if (keyval == Gdk.Key.Control_L || keyval == Gdk.Key.Control_R) {
             debug ("Release!");
             is_control_key_pressed = false;
-
-            // Allow scrolling again
-            window.view.scrolled.sensitive = true;
-
-            // Avoid the insensitiveness to defocus us
-            window.set_focus (view.textview);
         }
     }
 
@@ -124,11 +113,12 @@ public class Jorts.ZoomController : Object {
         debug ("Scroll + Ctrl!");
 
         if (!is_control_key_pressed) {
-            return false;
+            return Gdk.EVENT_PROPAGATE;
         }
 
         zoom_changed (Zoomkind.from_delta (dy));
         debug ("Go! Zoooommmmm");
-        return false;
+
+        return Gdk.EVENT_PROPAGATE;
     }
 }

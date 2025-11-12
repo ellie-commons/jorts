@@ -80,25 +80,24 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;
 
-
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("app", actions);
 
-        add_css_class ("rounded");
-        title = "" + _(" - Jorts");
 
         zoomcontroller = new Jorts.ZoomController (this);
         scribblycontroller = new Jorts.ScribblyController (this);
 
         keypress_controller = new Gtk.EventControllerKey ();
-        keypress_controller.key_pressed.connect (zoomcontroller.on_key_press_event);
-        keypress_controller.key_released.connect (zoomcontroller.on_key_release_event);
-        ((Gtk.Widget)this).add_controller (keypress_controller);
+        scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
+            propagation_phase = Gtk.PropagationPhase.CAPTURE
+        };
 
-        scroll_controller = new Gtk.EventControllerScroll (VERTICAL);
-        scroll_controller.scroll.connect (zoomcontroller.on_scroll);
+        ((Gtk.Widget)this).add_controller (keypress_controller);
         ((Gtk.Widget)this).add_controller (scroll_controller);
+
+        add_css_class ("rounded");
+        title = "" + _(" - Jorts");
 
 
         /*****************************************/
@@ -126,6 +125,11 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         /***************************************************/
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
+
+        // We need this for Ctr + Scroll. We delegate everything to zoomcontroller
+        keypress_controller.key_pressed.connect (zoomcontroller.on_key_press_event);
+        keypress_controller.key_released.connect (zoomcontroller.on_key_release_event);
+        scroll_controller.scroll.connect (zoomcontroller.on_scroll);
 
         debug ("Built UI. Lets do connects and binds");
 
