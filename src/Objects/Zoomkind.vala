@@ -12,5 +12,19 @@
  public enum Jorts.Zoomkind {
     ZOOM_OUT,
     DEFAULT_ZOOM,
-    ZOOM_IN
+    ZOOM_IN,
+    NONE;
+
+    public static Zoomkind from_delta (double delta) {
+
+        if (delta == 0) {return NONE;}
+
+        if (delta > 0)
+        {
+            return ZOOM_OUT;
+
+        } else {
+            return ZOOM_IN;
+        }
+    }
 }

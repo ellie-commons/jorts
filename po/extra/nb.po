@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -163,34 +163,77 @@ msgid "The preferences dialog in dark mode"
 msgstr "Innstillingsdialogen i mørk modus"
 
 #: data/jorts.metainfo.xml.in:99
-msgid "No fun allowed: revert back to default style"
+#, fuzzy
+msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgstr "2.2.0 Lysets Jorts"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107 data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:181
+msgid "😎 Guests stars:"
+msgstr "😎 Gjester stjerner:"
+
+#: data/jorts.metainfo.xml.in:109
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "Forbedrede oversettelser"
+
+#: data/jorts.metainfo.xml.in:110
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:121
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:126
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:133
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Noen UI-elementer vises etter at de har blitt vist, for å gi et elegant "
 "uttrykk"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:134
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L for å fokusere på notatets tittel"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M for å åpne notatinnstillinger nå"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:136
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Number for å skifte tema raskt"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:137
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -199,7 +242,7 @@ msgstr ""
 "Ny notatinnstilling: Monospace. Kan være for tilgjengelighet, kan være for "
 "ascii-kruseduller"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:138
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -207,21 +250,17 @@ msgstr ""
 "Renere og finere kode under panseret. Sannsynligvis marginalt forbedret "
 "ytelse eller færre kantfeil"
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:139
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Lagt til et alternativ for tilbakestilling av innstillinger på "
 "kommandolinjen. Kan være nyttig."
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 Gjester stjerner:"
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:143
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso slår til igjen med et fantastisk spesialutgaveikon!"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:150
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
@@ -229,11 +268,11 @@ msgstr ""
 "Feilretting: Jorts som dveler i bakgrunnen, åpnes ikke lenger hvis alle "
 "vinduer er lukket (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:156
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jorts"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:158
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -241,24 +280,24 @@ msgstr ""
 "Feilretting: Hele vinduet som kan gripes, forstyrret tekstredigering. Nå er "
 "det bare actionbar og topptekst som er det (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:159
 msgid "Added more random titles"
 msgstr "Lagt til flere tilfeldige titler"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:160
 msgid "Buttons for add/remove autostart"
 msgstr "Knapper for å legge til/fjerne autostart"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:161
 msgid "Some more title placeholders"
 msgstr "Noen flere tittelplassholdere"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:162
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Endringer under panseret her og der for renere kode"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -266,25 +305,25 @@ msgstr ""
 "Feilretting: Når aksjonslinjen ble slått av, etterlot den en tom plass. "
 "Dette er nå fikset - med en mer prangende animasjon i tillegg."
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:173
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Lysets Jorts"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:175
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Legg til en kul liten animasjon når du aktiverer/deaktiverer actionbar"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:176
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "Fikset uskarphet i høyskalerte skjermbilder på grunn av Flathub BS"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:177
 msgid "Added high-resolution screenshots"
 msgstr "Lagt til høyoppløselige skjermbilder"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:178
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -292,525 +331,16 @@ msgstr ""
 "Siste øyeblikk bugfix, på en eller annen måte fungerte ikke accels når "
 "preferansene var fokusert"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:179
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Litt husarbeid for FR og DE mens vi er i gang"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:183
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride-utgaven: Et nydelig midlertidig ikon av @wpkelso"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:184
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Forbedrede oversettelser"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 Lysets Jorts"
-
-#~ msgid "Save memory and disk writes by adding a proper debounce"
-#~ msgstr "Spar minne og diskskriving ved å legge til en skikkelig debounce"
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "Forbedrede oversettelser"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "Forbedrede oversettelser"
-
-#~ msgid "3.1.2 Amendments for flathub"
-#~ msgstr "3.1.2 Endringer for flathub"
-
-#~ msgid "Nothing interesting here"
-#~ msgstr "Ikke noe interessant her"
-
-#~ msgid "3.1.1 Woops"
-#~ msgstr "3.1.1 Woops"
-
-#~ msgid "Minor screenshot amendments"
-#~ msgstr "Mindre endringer i skjermbildet"
-
-#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
-#~ msgstr "3.1.0 Jorts av sanger og Jorts av dans"
-
-#~ msgid "Flathub version, with a lot of help from @RyoNakano"
-#~ msgstr "Flathub-versjon, med mye hjelp fra @RyoNakano"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 Lysets Jorts"
-
-#~ msgid "A lovely brand new icon thanks to @wpkelso"
-#~ msgstr "Et nydelig nytt ikon takket være @wpkelso"
-
-#~ msgid ""
-#~ "Between this and the GTK4 port, there is very little left from old "
-#~ "Notejot... We could say it is a v3"
-#~ msgstr ""
-#~ "Mellom denne og GTK4-porten er det svært lite igjen av gamle Notejot ... "
-#~ "Vi kan si at det er en v3"
-
-#~ msgid ""
-#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
-#~ "reimplement save and restore"
-#~ msgstr ""
-#~ "Gjør appen mer universell: Andre DE-er beholder ikke vindusdimensjonene, "
-#~ "så lagre og gjenopprett på nytt"
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "Forbedrede oversettelser"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "Forbedrede oversettelser"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.2.0 Lysets Jorts"
-
-#~ msgid ""
-#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
-#~ "will feel more at home now"
-#~ msgstr ""
-#~ "Takket være RyoNakanos omarbeiding av japanske oversettelser vil "
-#~ "japanskspråklige føle seg mer hjemme nå"
-
-#~ msgid "Respect reduce animations settings"
-#~ msgstr "Respekter innstillinger for reduksjon av animasjoner"
-
-#, fuzzy
-#~ msgid "Scribble mode exclusively in the preferences now"
-#~ msgstr "Skriblerimodus er flyttet til den nye innstillingsdialogen"
-
-#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-#~ msgstr "Legg til preferanse: Nå kan du skjule den nederste linjen! (Ctrl+t)"
-
-#~ msgid ""
-#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
-#~ msgstr ""
-#~ "Feilretting: Fikset elementer som flytter seg når en notattittel holdes "
-#~ "over eller velges"
-
-#~ msgid ""
-#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-#~ msgstr ""
-#~ "Feilretting: Nye og slettede akselerasjoner fungerte ikke, beklager, det "
-#~ "er fikset nå"
-
-#~ msgid "Bugfix where random components skipped the last possible choice"
-#~ msgstr ""
-#~ "Feilretting der tilfeldige komponenter hoppet over det siste mulige valget"
-
-#~ msgid "Bugfix: shortcut for emotes did not show up properly"
-#~ msgstr "Feilretting: Snarvei for emotes ble ikke vist riktig"
-
-#~ msgid "Lil easter egg"
-#~ msgstr "Lille påskeegg"
-
-#, fuzzy
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.1.2 De uoppnåelige jortene"
-
-#~ msgid ""
-#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
-#~ "option"
-#~ msgstr ""
-#~ "Ny funksjon: Dialogboksen Innstillinger! Høyreklikk på appikonet for å se "
-#~ "alternativet"
-
-#~ msgid "scribbly mode has been moved to the new preference dialog"
-#~ msgstr "Skriblerimodus er flyttet til den nye innstillingsdialogen"
-
-#~ msgid ""
-#~ "For translators: Translations have been separated in 2: One for the UI "
-#~ "one for the extra content"
-#~ msgstr ""
-#~ "For oversettere: Oversettelsene har blitt delt i to: En for "
-#~ "brukergrensesnittet og en for det ekstra innholdet"
-
-#~ msgid "Comfort: Easier to grab and drag stickies"
-#~ msgstr "Komfort: Lettere å gripe og dra i klistremerker"
-
-#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-#~ msgstr "Feilretting: Skjermbilder i Appcenter var rotete"
-
-#, fuzzy
-#~ msgid "Updated translations"
-#~ msgstr "Forbedrede oversettelser"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 Lysets Jorts"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "Bedre dekning av oversettelser"
-
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr ""
-#~ "Ny funksjon: kladdemodus! Skjul innholdet på klistrelapper når du ikke "
-#~ "fokuserer"
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr ""
-#~ "Ny funksjon: Emoji-velgerknapp! Jeg vet at det finnes en på høyreklikk, "
-#~ "men knapper er mer tilgjengelige!"
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr ""
-#~ "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr ""
-#~ "Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå "
-#~ "problemer, kan du gjenopprette data!"
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr ""
-#~ "Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra "
-#~ "sikkerhetskopien"
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "Noen nye morsomme/søte standardtitler"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr "Endringer under panseret her og der for renere kode"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 De uoppnåelige jortene"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "Legg til relieff på knappene på handlingsfeltet"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr ""
-#~ "Feilretting: Kanttilfelle der tema eller zoom ikke ble lagret på riktig "
-#~ "måte"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "Feilretting: Tittel i multitasking ble ikke satt riktig"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "Feilretting: Inkonsistens mellom ikonetemaer"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr ""
-#~ "Feilretting: Uoverensstemmelser i tematikk på tvers av klistremerker"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 Fersk fra klesvasken! (2: elektrisk boogaloo)"
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "Tydeligere beskrivelse av appmenyen"
-
-#~ msgid "More consistent theming"
-#~ msgstr "Mer konsekvent tematisering"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "Feilretting: snarveien for sletting var uansvarlig"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "Feilretting: skjermbilde vises ikke"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 Fersk fra vaskeriet!"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr "Inkluderer zoom per note! Så du kan få større eller mindre tekst"
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr ""
-#~ "Den siste innstilte zoomen, dvs. den som er mest komfortabel for deg, "
-#~ "forblir standard for nye notater"
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "Bedre lesbarhet (WCAG AA eller AAA avhengig av tema)"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "Også litt bedre utseende tema. Ja enda mer :)"
-
-#~ msgid "Improved translations"
-#~ msgstr "Forbedrede oversettelser"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "Bedre snarveier og verktøytips"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "Fikset en feil der Jorts ble værende på det lyse systemtemaet"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "2.0.1 Appcenter-utgivelse"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "2.0.0-utgivelse: Skifer og Bubblegum"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "Gjenopplivning av en gammel, men elsket versjon av Notejot"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "Appen heter nå Jorts. Du kan imidlertid ikke bruke den"
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10 herlige små farger"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr "Bygger på moderne Linux-teknologier og pakkeformater"
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "Jevn overgang når du bytter tema"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr "Nye stickies har en tilfeldig morsom liten tittel og farge"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "Noen få innledende oversettelser er inkludert, og flere vil komme"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr ""
-#~ "E-post og lenker er klikkbare! Ctrl+Klikk for å åpne i e-post eller "
-#~ "nettleser"
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr "Tekst støtter angre, gjøre om, og du kan bruke emojis :)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Added a desktop action to create a note from clipboard content. Alas not "
-#~ "reliable enough to offer it in the UI"
-#~ msgstr ""
-#~ "Lagt til en skrivebordshandling for å opprette et notat fra "
-#~ "utklippstavlens innhold"
-
-#~ msgid ""
-#~ "I struggled with some shenanigans to have only one preference window... "
-#~ "Should be done for good now"
-#~ msgstr ""
-#~ "Jeg slet med å få til bare ett innstillingsvindu... Nå burde det være "
-#~ "gjort for godt"
-
-#~ msgid ""
-#~ "Better commented text and code, for translators and eventual contributors"
-#~ msgstr ""
-#~ "Bedre kommentert tekst og kode, for oversettere og eventuelle bidragsytere"
-
-#~ msgid ""
-#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
-#~ "other DEs"
-#~ msgstr ""
-#~ "Nye innstillinger: OpenDyslexia-skrifter. elementary OS har det OOTB, men "
-#~ "ikke andre DE-er"
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "Verktøy for klistrelapper"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Teamcons"
-
-#, fuzzy
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "Fargerike små klistrelapper for alle tankene dine :)"
-
-#~ msgid "Windows version, with the guidance from @supercamel"
-#~ msgstr "Windows-versjon, med veiledning fra @supercamel"
-
-#~ msgid "Flathub version"
-#~ msgstr "Flathub-versjon"
-
-#~ msgid "Windows version"
-#~ msgstr "Windows-versjon"
-
-#~ msgid "Blueberry"
-#~ msgstr "Blåbær"
-
-#~ msgid "Lime"
-#~ msgstr "Kalk"
-
-#~ msgid "Mint"
-#~ msgstr "Mynte"
-
-#~ msgid "Banana"
-#~ msgstr "Banan"
-
-#~ msgid "Strawberry"
-#~ msgstr "Jordbær"
-
-#~ msgid "Orange"
-#~ msgstr "Oransje"
-
-#~ msgid "Bubblegum"
-#~ msgstr "Bubblegum"
-
-#~ msgid "Grape"
-#~ msgstr "Drue"
-
-#~ msgid "Cocoa"
-#~ msgstr "Kakao"
-
-#~ msgid "Slate"
-#~ msgstr "Skifer"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "Sticky Note farge"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "Velg en farge for denne klistrelappen"
-
-#~ msgid "Zoom out"
-#~ msgstr "Zoom ut"
-
-#~ msgid "Default zoom level"
-#~ msgstr "Standard zoomnivå"
-
-#~ msgid "Zoom in"
-#~ msgstr "Zoom inn"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM PROSENT"
-
-#~ msgid "All my very best friends"
-#~ msgstr "Alle mine aller beste venner"
-
-#~ msgid "My super good secret recipe"
-#~ msgstr "Min supergode hemmelige oppskrift"
-
-#~ msgid "My todo list"
-#~ msgstr "Oppgavelisten min"
-
-#~ msgid "Super secret to not tell anyone"
-#~ msgstr "Superhemmeligheten du ikke må fortelle til noen"
-
-#~ msgid "My grocery list"
-#~ msgstr "Min handleliste"
-
-#~ msgid "Random shower thoughts"
-#~ msgstr "Tilfeldige tanker om dusjen"
-
-#~ msgid "My fav fanfics"
-#~ msgstr "Mine favorittfanfics"
-
-#~ msgid "My fav dinosaurs"
-#~ msgstr "Mine favorittdinosaurer"
-
-#~ msgid "My evil mastermind plan"
-#~ msgstr "Min onde mesterhjerneplan"
-
-#~ msgid "What made me smile today"
-#~ msgstr "Det som fikk meg til å smile i dag"
-
-#~ msgid "Hello world!"
-#~ msgstr "Hallo, verden!"
-
-#~ msgid "New sticky, new me"
-#~ msgstr "Ny klistrelapp, ny meg"
-
-#~ msgid "Hidden pirate treasure"
-#~ msgstr "Skjult sjørøverskatt"
-
-#~ msgid "To not forget, ever"
-#~ msgstr "Å aldri glemme, aldri"
-
-#~ msgid "Dear Diary,"
-#~ msgstr "Kjære dagbok,"
-
-#~ msgid "Hi im a square"
-#~ msgstr "Hei, jeg er en firkant"
-
-#~ msgid "Have a nice day! :)"
-#~ msgstr "Ha en fin dag! :)"
-
-#~ msgid "My meds schedule"
-#~ msgstr "Min medisinplan"
-
-#~ msgid "Household chores"
-#~ msgstr "Huslige gjøremål"
-
-#~ msgid "Ode to my cat"
-#~ msgstr "Ode til katten min"
-
-#~ msgid "My dogs favourite toys"
-#~ msgstr "Favorittlekene til hundene mine"
-
-#~ msgid "How cool my birds are"
-#~ msgstr "Så kule fuglene mine er"
-
-#~ msgid "Suspects in the Last Cookie affair"
-#~ msgstr "Mistenkte i Last Cookie-saken"
-
-#~ msgid "Words my parrots know"
-#~ msgstr "Ord papegøyene mine kan"
-
-#~ msgid "Cool and funny compliments to give out"
-#~ msgstr "Kule og morsomme komplimenter å gi ut"
-
-#~ msgid "Ok, listen here,"
-#~ msgstr "Ok, hør her,"
-
-#~ msgid "My dream Pokemon team"
-#~ msgstr "Mitt drømme-Pokemon-team"
-
-#~ msgid "My little notes"
-#~ msgstr "Mine små notater"
-
-#~ msgid "Surprise gift list"
-#~ msgstr "Overraskende gaveliste"
-
-#~ msgid "Brainstorming notes"
-#~ msgstr "Notater fra idémyldringen"
-
-#~ msgid "To bring to the party"
-#~ msgstr "Å ta med til festen"
-
-#~ msgid "My amazing mixtape"
-#~ msgstr "Min fantastiske mixtape"
-
-#~ msgid "Napkin scribblys"
-#~ msgstr "Serviettskriblerier"
-
-#~ msgid "My fav songs to sing along"
-#~ msgstr "Mine favorittsanger å synge med på"
-
-#~ msgid "When to water which plant"
-#~ msgstr "Når du skal vanne hvilken plante"
-
-#~ msgid "Top 10 anime betrayals"
-#~ msgstr "Topp 10 anime-svik"
-
-#~ msgid "Amazing ascii art!"
-#~ msgstr "Fantastisk ascii-kunst!"
-
-#~ msgid "Edit title"
-#~ msgstr "Rediger tittel"
-
-#~ msgid "Delete sticky note"
-#~ msgstr "Slett klistrelapp"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "Vis alltid innholdet på klistrelapper"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Skjul innholdet på ufokuserte klistrelapper"
-
-#~ msgid "Insert emoji"
-#~ msgstr "Sett inn emoji"
-
-#~ msgid "Preferences for this sticky note"
-#~ msgstr "Innstillinger for denne klistrelappen"
-
-#~ msgid "You can change individual colour and text size!"
-#~ msgstr "Du kan endre farge og tekststørrelse individuelt!"
-
-#~ msgid "Like emojis? Well there's an emoji picker!"
-#~ msgstr "Liker du emojier? Vel, det finnes en emoji-velger!"
-
-#~ msgid "You can unzoom so hard you could do ascii art"
-#~ msgstr "Du kan zoome ut så hardt at du kan lage ascii-kunst"

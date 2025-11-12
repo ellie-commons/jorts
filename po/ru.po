@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: 2025-04-06 17:02+0400\n"
 "Last-Translator: Kultyapov Andrey <camellan@yandex.ru>\n"
 "Language-Team: none\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: src/Widgets/EditableLabel.vala:43
+#: src/Widgets/EditableLabel.vala:38
 msgid "Click to edit the title"
 msgstr "Нажмите, чтобы отредактировать название"
 
@@ -344,23 +344,23 @@ msgstr ""
 "Я надеюсь, что моё маленькое приложение доставит вам много радости\n"
 "Хорошего дня!🎇\n"
 
-#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16
 msgid "Remove Jorts from system autostart"
 msgstr "Удалите Jorts из автозапуска системы"
 
-#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29
 msgid "Set Jorts to start with the computer"
 msgstr "Установите Jorts для запуска с компьютера"
 
-#: src/Views/PreferencesView.vala:25
+#: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
 msgstr "Отправлен запрос в систему"
 
-#: src/Views/PreferencesView.vala:52
+#: src/Views/PreferencesView.vala:43
 msgid "Make unfocused notes unreadable"
 msgstr "Сделайте несфокусированные заметки нечитаемыми"
 
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:44
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
 "content from peeking eyes (Ctrl+H)"
@@ -368,11 +368,11 @@ msgstr ""
 "Если эта функция включена, неактивные заметки становятся нечитаемыми, чтобы "
 "защитить их содержимое от посторонних глаз (Ctrl+H)"
 
-#: src/Views/PreferencesView.vala:74
+#: src/Views/PreferencesView.vala:55
 msgid "Hide buttons"
 msgstr "Скрыть панель кнопок"
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:56
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -381,37 +381,37 @@ msgstr ""
 "по-прежнему будут работать"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:99
+#: src/Views/PreferencesView.vala:72
 msgid "Set autostart"
 msgstr "Установите автозапуск"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:84
 msgid "Remove autostart"
 msgstr "Удалить автозапуск"
 
-#: src/Views/PreferencesView.vala:142
+#: src/Views/PreferencesView.vala:99
 msgid "Allow to start at login"
 msgstr "Разрешить запуск при входе в систему"
 
-#: src/Views/PreferencesView.vala:144
+#: src/Views/PreferencesView.vala:101
 msgid "You can request the system to start this application automatically"
 msgstr "Вы можете попросить систему запустить это приложение автоматически"
 
-#: src/Views/PreferencesView.vala:165
+#: src/Views/PreferencesView.vala:122
 msgid "Support us!"
 msgstr "Поддержите нас!"
 
-#: src/Views/PreferencesView.vala:177
+#: src/Views/PreferencesView.vala:134
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/Views/PreferencesView.vala:180
+#: src/Views/PreferencesView.vala:137
 msgid "Close preferences"
 msgstr "Закрыть предпочтения"
 
-#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Шорты"
 
@@ -419,11 +419,11 @@ msgstr " - Шорты"
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:33
 msgid "Preferences for your Jorts"
 msgstr "Параметры для этого стикера"
 
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Предпочтения"
 

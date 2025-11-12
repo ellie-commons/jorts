@@ -26,11 +26,7 @@ public class Jorts.PopoverView : Gtk.Popover {
         set {on_monospace_changed (value);}
     }
 
-    private uint16 _old_zoom;
-    public uint16 zoom {
-        get {return font_size_box.zoom;}
-        set {do_set_zoom (value);}
-    }
+    public uint16 zoom { set {font_size_box.zoom = value;}}
 
     public signal void theme_changed (Jorts.Themes selected);
     public signal void zoom_changed (Jorts.Zoomkind zoomkind);
@@ -59,7 +55,7 @@ public class Jorts.PopoverView : Gtk.Popover {
 
         color_button_box.theme_changed.connect (on_color_changed);
         monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect (on_zoom_changed);
+        font_size_box.zoom_changed.connect ((zoomkind) => {this.zoom_changed (zoomkind);});
     }
 
 
@@ -74,10 +70,6 @@ public class Jorts.PopoverView : Gtk.Popover {
         // Avoid deathloop where the handler calls itself
         color_button_box.theme_changed.disconnect (on_color_changed);
 
-        // Accent
-        var stylesheet = "io.elementary.stylesheet." + new_theme.to_css_class ();
-        parent_window.gtk_settings.gtk_theme_name = stylesheet;
-
         // Add remove class
         if (_old_color.to_string () in parent_window.css_classes) {
             parent_window.remove_css_class (_old_color.to_string ());
@@ -89,8 +81,8 @@ public class Jorts.PopoverView : Gtk.Popover {
         color_button_box.color = new_theme;
         NoteData.latest_theme = new_theme;
 
-        // Cleanup
-        ((Jorts.Application)parent_window.application).manager.save_all ();
+        // Cleanup;
+        parent_window.changed ();
         color_button_box.theme_changed.connect (on_color_changed);
     }
 
@@ -104,79 +96,6 @@ public class Jorts.PopoverView : Gtk.Popover {
         monospace_box.monospace = monospace;
         Jorts.NoteData.latest_mono = monospace;
 
-        ((Jorts.Application)parent_window.application).manager.save_all ();
+       parent_window.changed ();
     }
-
-
-    /*********************************************/
-    /*              ZOOM feature                 */
-    /*********************************************/
-
-    /**
-    * Called when a signal from the popover says stuff got changed
-    */
-    private void on_zoom_changed (Jorts.Zoomkind zoomkind) {
-        debug ("Zoom changed!");
-
-        switch (zoomkind) {
-            case Zoomkind.ZOOM_IN:              zoom_in (); break;          // vala-lint=double-spaces
-            case Zoomkind.DEFAULT_ZOOM:         zoom_default (); break;     // vala-lint=double-spaces
-            case Zoomkind.ZOOM_OUT:             zoom_out (); break;         // vala-lint=double-spaces
-            default:                            zoom_default (); break;     // vala-lint=double-spaces
-        }
-        ((Jorts.Application)parent_window.application).manager.save_all ();
-    }
-
-    /**
-    * Wrapper to check an increase doesnt go above limit
-    */
-    public void zoom_in () {
-        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
-            zoom = _old_zoom + 20;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    public void zoom_default () {
-        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
-            zoom = Jorts.Constants.DEFAULT_ZOOM;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    /**
-    * Wrapper to check an increase doesnt go below limit
-    */
-    public void zoom_out () {
-        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
-            zoom = _old_zoom - 20;
-        } else {
-            Gdk.Display.get_default ().beep ();
-        }
-    }
-
-    /**
-    * Switch zoom classes, then reflect in the UI and tell the application
-    */
-    private void do_set_zoom (uint16 new_zoom) {
-        debug ("Setting zoom: " + zoom.to_string ());
-
-        // Switches the classes that control font size
-        parent_window.remove_css_class (Jorts.Utils.zoom_to_class ( _old_zoom));
-        _old_zoom = new_zoom;
-        parent_window.add_css_class (Jorts.Utils.zoom_to_class ( new_zoom));
-
-        // Adapt headerbar size to avoid weird flickering
-        parent_window.view.headerbar.height_request = Jorts.Utils.zoom_to_ui_size (_old_zoom);
-
-        // Reflect the number in the popover
-        font_size_box.zoom = new_zoom;
-
-        // Keep it for next new notes
-        //((Application)this.application).latest_zoom = zoom;
-        NoteData.latest_zoom = zoom;
-    }
-
 }

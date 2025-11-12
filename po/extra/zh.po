@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,67 +156,106 @@ msgid "The preferences dialog in dark mode"
 msgstr "黑暗模式下的首选项对话框"
 
 #: data/jorts.metainfo.xml.in:99
-msgid "No fun allowed: revert back to default style"
+#, fuzzy
+msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgstr "2.2.0 光的 Jorts"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107 data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:181
+msgid "😎 Guests stars:"
+msgstr "😎 宾客星级："
+
+#: data/jorts.metainfo.xml.in:109
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "更新翻译"
+
+#: data/jorts.metainfo.xml.in:110
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:121
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:126
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 光的 Jorts"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:133
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr "一些用户界面元素在显示后会显示出来，营造出时尚的氛围"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:134
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L 聚焦笔记标题"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M 立即打开音符设置"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:136
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+ 数字可快速更换主题"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:137
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr "新的注释设置：单倍行距。可能是为了无障碍，也可能是为了ascii涂鸦"
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:138
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
 msgstr "引擎盖下的代码更干净、更漂亮。性能可能略有提升，边缘错误可能减少"
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:139
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr "添加了重置设置命令行选项。可能会很方便。"
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 宾客星级："
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:143
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso 再次出击，带来了令人惊叹的特别版图标！"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:150
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr "修正: 如果所有窗口都已关闭，在后台逗留的 Jorts 不再打开的问题 (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:156
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 明星白金短裤"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:158
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -224,24 +263,24 @@ msgstr ""
 "错误修正：整个窗口可抓取会影响文本编辑。现在只有操作栏和标题可抓取（#75、"
 "#76）"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:159
 msgid "Added more random titles"
 msgstr "添加更多随机标题"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:160
 msgid "Buttons for add/remove autostart"
 msgstr "添加/删除自动启动按钮"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:161
 msgid "Some more title placeholders"
 msgstr "更多标题占位符"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:162
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "为使代码更简洁，在引擎盖下进行了一些改动"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -249,342 +288,40 @@ msgstr ""
 "错误修正：当切换为关闭时，操作栏会留下空白。现在已修复，并配有更炫的动画效"
 "果。"
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:173
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 光的 Jorts"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:175
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "在启用/禁用动作条时添加炫酷的小动画"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:176
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "修正了 Flathub BS 导致的高分辨率显示模糊问题"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:177
 msgid "Added high-resolution screenshots"
 msgstr "添加了高分辨率截图"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:178
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr "最后一分钟的错误修正，当首选项被聚焦时，accels 不知何故无法工作"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:179
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "顺便为联邦共和国和德意志民主共和国整理一下内务"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:183
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "荣耀版：@wpkelso 设计的可爱临时图标"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:184
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "更新翻译"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 光的 Jorts"
-
-#~ msgid "Save memory and disk writes by adding a proper debounce"
-#~ msgstr "通过添加适当的去抖功能来节省内存和磁盘写入量"
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "更新翻译"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "更新翻译"
-
-#~ msgid "3.1.2 Amendments for flathub"
-#~ msgstr "3.1.2 对船槽的修正"
-
-#~ msgid "Nothing interesting here"
-#~ msgstr "没什么有趣的"
-
-#~ msgid "3.1.1 Woops"
-#~ msgstr "3.1.1 呜呼"
-
-#~ msgid "Minor screenshot amendments"
-#~ msgstr "截图小修改"
-
-#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
-#~ msgstr "3.1.0 歌曲短裤和舞蹈短裤"
-
-#~ msgid "Flathub version, with a lot of help from @RyoNakano"
-#~ msgstr "Flathub 版本，得到 @RyoNakano 的大力协助"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 光的 Jorts"
-
-#~ msgid "A lovely brand new icon thanks to @wpkelso"
-#~ msgstr "一个可爱的全新图标，感谢 @wpkelso"
-
-#~ msgid ""
-#~ "Between this and the GTK4 port, there is very little left from old "
-#~ "Notejot... We could say it is a v3"
-#~ msgstr ""
-#~ "在这个版本和 GTK4 移植版本之间，旧版 Notejot 已经所剩无几...我们可以说它"
-#~ "是 v3"
-
-#~ msgid ""
-#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
-#~ "reimplement save and restore"
-#~ msgstr ""
-#~ "使应用程序更具通用性：其他 DE 不保留窗口尺寸，因此需要重新实现保存和还原功"
-#~ "能"
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "更新翻译"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "更新翻译"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.2.0 光的 Jorts"
-
-#~ msgid ""
-#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
-#~ "will feel more at home now"
-#~ msgstr "多亏了 RyoNakano 重新修订了日语翻译，日语使用者现在会感到更自在了"
-
-#~ msgid "Respect reduce animations settings"
-#~ msgstr "尊重减少动画的设置"
-
-#, fuzzy
-#~ msgid "Scribble mode exclusively in the preferences now"
-#~ msgstr "涂鸦模式已移至新的首选项对话框中"
-
-#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-#~ msgstr "添加首选项：现在可以隐藏底部栏了！(Ctrl+t)"
-
-#~ msgid ""
-#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
-#~ msgstr "修正: 当悬停或选择注释标题时元素移动的问题"
-
-#~ msgid ""
-#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-#~ msgstr "错误修正： 新建和删除密码不起作用。"
-
-#~ msgid "Bugfix where random components skipped the last possible choice"
-#~ msgstr "修正随机组件跳过最后一个可能选择的问题"
-
-#~ msgid "Bugfix: shortcut for emotes did not show up properly"
-#~ msgstr "错误修正：表情快捷方式无法正常显示"
-
-#~ msgid "Lil easter egg"
-#~ msgstr "复活节彩蛋"
-
-#, fuzzy
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.3.0 内胆短裤"
-
-#~ msgid ""
-#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
-#~ "option"
-#~ msgstr "新功能：首选项对话框！右键单击应用程序图标，查看选项"
-
-#~ msgid "scribbly mode has been moved to the new preference dialog"
-#~ msgstr "涂鸦模式已移至新的首选项对话框中"
-
-#, fuzzy
-#~ msgid ""
-#~ "For translators: Translations have been separated in 2: One for the UI "
-#~ "one for the extra content"
-#~ msgstr ""
-#~ "对翻译人员的改进：翻译已分为两种：一种用于用户界面，一种用于额外内容"
-
-#~ msgid "Comfort: Easier to grab and drag stickies"
-#~ msgstr "舒适：更容易抓取和拖动贴纸"
-
-#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-#~ msgstr "错误修正：应用中心的屏幕截图一团糟 aaaa"
-
-#, fuzzy
-#~ msgid "Updated translations"
-#~ msgstr "更新翻译"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 光的 Jorts"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "更好的翻译覆盖面"
-
-#, fuzzy
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr "新功能：涂鸦模式在不集中时隐藏便笺内容"
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr "新功能：表情符号选择器按钮！我知道右键上有一个，但按钮更方便！"
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr "工具栏上的按钮每次点击都会显示一个随机表情！"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr "新功能：Jorts 每月进行一次备份。如果出现任何问题，您可以恢复数据！"
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr "如果主存储损坏，Jorts 会尝试从备份中加载"
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "一些新的有趣/可爱的默认标题"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr "为使代码更简洁，在引擎盖下进行了一些改动"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 无法瘫痪的短裤"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "为操作栏按钮添加浮雕"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr "错误修正：无法正确保存主题或缩放的边缘情况"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "修正] 多任务中的标题设置不正确"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "错误修正：不同图标主题的图标不一致"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "修正] 标签不一致的问题"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 刚从洗衣房出来！(2: 电动布加洛)"
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "更清晰的应用程序菜单说明"
-
-#~ msgid "More consistent theming"
-#~ msgstr "更一致的主题"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "错误修正：删除快捷方式不负责任"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "错误修正：屏幕截图不显示"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 刚洗完的衣服！"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr "包括每个笔记的缩放功能！因此，您可以放大或缩小文本"
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr "最新设置的缩放（也就是您最喜欢的缩放）将保留为新笔记的默认设置"
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "更好的可读性（WCAG AA 或 AAA，视主题而定）"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "主题也更美观。是的，甚至更多：)"
-
-#~ msgid "Improved translations"
-#~ msgstr "改进翻译"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "更好的快捷键和工具提示"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "修正了一个错误，该错误导致 Jorts 停留在轻系统主题上"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "2.0.1 Appcenter 发布"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "2.0.0 发布：石板和泡泡糖"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "恢复古老但深受喜爱的 Notejot 版本"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "这款应用程序现在被命名为 Jorts。但你不能穿它"
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10 种可爱的小颜色"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr "建立在现代 Linux 技术和打包格式之上"
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "更换主题时平稳过渡"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr "新贴纸有一个随机的有趣小标题和颜色"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "包括一些初步翻译，更多翻译将陆续推出"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr "电子邮件和链接可点击！Ctrl+ 点击可在邮件或浏览器中打开"
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr "文本支持撤消、重做，还可以使用表情符号：)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Added a desktop action to create a note from clipboard content. Alas not "
-#~ "reliable enough to offer it in the UI"
-#~ msgstr "添加了一个桌面操作，可从剪贴板内容创建备忘"
-
-#~ msgid ""
-#~ "I struggled with some shenanigans to have only one preference window... "
-#~ "Should be done for good now"
-#~ msgstr "我费了好大的劲才弄好只有一个偏好窗口...现在应该是一劳永逸了"
-
-#~ msgid ""
-#~ "Better commented text and code, for translators and eventual contributors"
-#~ msgstr "为翻译人员和最终贡献者提供更好的注释文本和代码"
-
-#~ msgid ""
-#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
-#~ "other DEs"
-#~ msgstr "新设置：OpenDyslexia（开放式阅读障碍）字体。"
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "便条实用程序"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Teamcons"
-
-#, fuzzy
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "色彩缤纷的快乐小便签，记录你所有的想法！:)"
-
-#~ msgid "Windows version, with the guidance from @supercamel"
-#~ msgstr "Windows 版本，由 @supercamel 提供指导"
-
-#~ msgid "Flathub version"
-#~ msgstr "Flathub 版本"
-
-#~ msgid "Windows version"
-#~ msgstr "Windows 版本"
-
-#~ msgid "You can change individual colour and text size!"
-#~ msgstr "您可以更改个别颜色和文字大小！"
-
-#~ msgid "You can unzoom so hard you could do ascii art"
-#~ msgstr "你可以使劲取消缩放，这样你就可以创作 ascii 艺术了"
-
-#~ msgid ""
-#~ "New feature: Default font. You can now set a specific font for Jorts."
-#~ msgstr "新功能：默认字体。现在您可以为 Jorts 设置特定的字体。"

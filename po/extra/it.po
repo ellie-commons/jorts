@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,34 +164,77 @@ msgid "The preferences dialog in dark mode"
 msgstr "La finestra di dialogo delle preferenze in modalità scura"
 
 #: data/jorts.metainfo.xml.in:99
-msgid "No fun allowed: revert back to default style"
+#, fuzzy
+msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgstr "2.2.0 The Jorts of Light"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107 data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:181
+msgid "😎 Guests stars:"
+msgstr "😎 Stelle degli ospiti:"
+
+#: data/jorts.metainfo.xml.in:109
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "traduzioni migliorate"
+
+#: data/jorts.metainfo.xml.in:110
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:121
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:126
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 The Jorts of Light"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:133
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Alcuni elementi dell'interfaccia utente vengono visualizzati dopo essere "
 "stati mostrati, per un'atmosfera elegante."
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:134
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L per mettere a fuoco il titolo della nota"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M per aprire subito le impostazioni delle note"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:136
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Numero per cambiare rapidamente tema"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:137
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -200,7 +243,7 @@ msgstr ""
 "Nuova impostazione della nota: Monospace. Potrebbe essere per "
 "l'accessibilità o per gli scarabocchi ascii."
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:138
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -208,22 +251,18 @@ msgstr ""
 "Codice più pulito e bello sotto il cofano. Probabilmente le prestazioni "
 "saranno marginalmente migliorate o i bug saranno ridotti."
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:139
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Aggiunta un'opzione di reset delle impostazioni da riga di comando. Potrebbe "
 "essere utile."
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 Stelle degli ospiti:"
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:143
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr ""
 "@wpkelso colpisce ancora con un'incredibile icona in edizione speciale!"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:150
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
@@ -231,11 +270,11 @@ msgstr ""
 "Correzione di bug: correggere Jorts che rimane in background e non si apre "
 "più se tutte le finestre sono state chiuse (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:156
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Pantaloncini Star Platinum"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:158
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -244,24 +283,24 @@ msgstr ""
 "con la modifica del testo. Ora lo sono solo la barra delle azioni e "
 "l'intestazione (#75, #76)."
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:159
 msgid "Added more random titles"
 msgstr "Aggiunti altri titoli casuali"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:160
 msgid "Buttons for add/remove autostart"
 msgstr "Pulsanti per aggiungere/rimuovere l'avvio automatico"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:161
 msgid "Some more title placeholders"
 msgstr "Altri segnaposti per il titolo"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:162
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "sotto il cofano cambia qua e là per il codice più pulito"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -270,29 +309,29 @@ msgstr ""
 "spazio vuoto. Ora il problema è stato risolto e l'animazione è diventata più "
 "appariscente."
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:173
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 The Jorts of Light"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:175
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr ""
 "Aggiunta di una piccola animazione quando si attiva/disattiva la barra "
 "d'azione"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:176
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 "Corretta la sfocatura nella visualizzazione ad alta scala a causa di Flathub "
 "BS"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:177
 msgid "Added high-resolution screenshots"
 msgstr "Aggiunte schermate ad alta risoluzione"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:178
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -300,353 +339,16 @@ msgstr ""
 "Correzione di un bug dell'ultimo minuto: in qualche modo gli accel non "
 "funzionavano quando le Preferenze erano focalizzate."
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:179
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Un po' di pulizia per FR e DE, già che ci sono"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:183
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Edizione Pride: Una bella icona temporanea di @wpkelso"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:184
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "traduzioni migliorate"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 The Jorts of Light"
-
-#~ msgid "Save memory and disk writes by adding a proper debounce"
-#~ msgstr ""
-#~ "Risparmiare memoria e scritture su disco aggiungendo un debounce "
-#~ "appropriato"
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "traduzioni migliorate"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "traduzioni migliorate"
-
-#~ msgid "3.1.2 Amendments for flathub"
-#~ msgstr "3.1.2 Emendamenti per il flathub"
-
-#~ msgid "Nothing interesting here"
-#~ msgstr "Niente di interessante qui"
-
-#~ msgid "3.1.1 Woops"
-#~ msgstr "3.1.1 Woops"
-
-#~ msgid "Minor screenshot amendments"
-#~ msgstr "Modifiche minori alle schermate"
-
-#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
-#~ msgstr "3.1.0 Corti di canzoni e Corti di danza"
-
-#~ msgid "Flathub version, with a lot of help from @RyoNakano"
-#~ msgstr "Versione Flathub, con un grande aiuto da parte di @RyoNakano"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 The Jorts of Light"
-
-#~ msgid "A lovely brand new icon thanks to @wpkelso"
-#~ msgstr "Una bella icona nuova di zecca grazie a @wpkelso"
-
-#~ msgid ""
-#~ "Between this and the GTK4 port, there is very little left from old "
-#~ "Notejot... We could say it is a v3"
-#~ msgstr ""
-#~ "Tra questo e il port GTK4, è rimasto ben poco del vecchio Notejot... "
-#~ "Potremmo dire che è una v3"
-
-#~ msgid ""
-#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
-#~ "reimplement save and restore"
-#~ msgstr ""
-#~ "Rendere l'applicazione più universale: Altri DE non mantengono le "
-#~ "dimensioni delle finestre, quindi reimplementare il salvataggio e il "
-#~ "ripristino."
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "traduzioni migliorate"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "traduzioni migliorate"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.2.0 The Jorts of Light"
-
-#~ msgid ""
-#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
-#~ "will feel more at home now"
-#~ msgstr ""
-#~ "Grazie a RyoNakano che ha rielaborato le traduzioni in giapponese, i "
-#~ "parlanti giapponesi si sentiranno più a casa ora"
-
-#~ msgid "Respect reduce animations settings"
-#~ msgstr "Rispettare le impostazioni di riduzione delle animazioni"
-
-#, fuzzy
-#~ msgid "Scribble mode exclusively in the preferences now"
-#~ msgstr ""
-#~ "La modalità scribbly è stata spostata nella nuova finestra di dialogo "
-#~ "delle preferenze."
-
-#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-#~ msgstr ""
-#~ "Aggiungi preferenza: ora è possibile nascondere la barra inferiore! "
-#~ "(Ctrl+t)"
-
-#~ msgid ""
-#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
-#~ msgstr ""
-#~ "Correzione di un bug: elementi fissi che si spostano quando il titolo di "
-#~ "una nota viene passato al centro del mouse o selezionato."
-
-#~ msgid ""
-#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-#~ msgstr ""
-#~ "Correzione di un bug: le voci \"nuovo\" e \"elimina\" non funzionavano... "
-#~ "Ops, scusate, ora è tutto risolto."
-
-#~ msgid "Bugfix where random components skipped the last possible choice"
-#~ msgstr ""
-#~ "Correzione del bug per cui i componenti casuali saltavano l'ultima scelta "
-#~ "possibile"
-
-#~ msgid "Bugfix: shortcut for emotes did not show up properly"
-#~ msgstr ""
-#~ "Correzione di un bug: la scorciatoia per le emotes non veniva "
-#~ "visualizzata correttamente"
-
-#~ msgid "Lil easter egg"
-#~ msgstr "Uovo di Pasqua"
-
-#, fuzzy
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.1.2 The irratisable Jorts"
-
-#~ msgid ""
-#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
-#~ "option"
-#~ msgstr ""
-#~ "Nuova funzione: Finestra di dialogo delle preferenze! Fare clic con il "
-#~ "tasto destro del mouse sull'icona dell'applicazione per visualizzare "
-#~ "l'opzione"
-
-#~ msgid "scribbly mode has been moved to the new preference dialog"
-#~ msgstr ""
-#~ "La modalità scribbly è stata spostata nella nuova finestra di dialogo "
-#~ "delle preferenze."
-
-#~ msgid ""
-#~ "For translators: Translations have been separated in 2: One for the UI "
-#~ "one for the extra content"
-#~ msgstr ""
-#~ "Per i traduttori: Le traduzioni sono state separate in due: una per "
-#~ "l'interfaccia utente e una per i contenuti extra."
-
-#~ msgid "Comfort: Easier to grab and drag stickies"
-#~ msgstr "Comfort: Più facile afferrare e trascinare gli adesivi"
-
-#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-#~ msgstr ""
-#~ "Correzione di bug: le schermate nell'appcenter erano un pasticcio aaaa"
-
-#, fuzzy
-#~ msgid "Updated translations"
-#~ msgstr "traduzioni migliorate"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 The Jorts of Light"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "migliore copertura della traduzione"
-
-#, fuzzy
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr "Nuova funzione: modalità scribbly! "
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr "Nuova funzione: pulsante Emoji Picker! "
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr ""
-#~ "il pulsante nella barra degli strumenti visualizza un'emota casuale ogni "
-#~ "volta che fai clic!"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr "Nuova funzione: Jorts fa un backup mensile. "
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr ""
-#~ "se la memoria principale dovesse essere danneggiata, Jorts cerca di "
-#~ "caricare dal backup"
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "alcuni nuovi titoli predefiniti divertenti/carini"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr "sotto il cofano cambia qua e là per il codice più pulito"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 The irratisable Jorts"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "Aggiungi sollievo ai pulsanti della barra action"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr ""
-#~ "Bugfix: edge Case in cui il tema o lo zoom non hanno salvato correttamente"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "bugfix: titolo nel multitasking non impostato correttamente"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "Bugfix: temi di icona incoerenza icona"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "Bugfix: Temica incoerenze Accrossing stickies"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 Fresco dalla lavanderia! "
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "Descrizione Appmen più chiara"
-
-#~ msgid "More consistent theming"
-#~ msgstr "temi più coerenti"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "Bugfix: la scorciatoia elimina non era risparmiata"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "bugfix: screenshot non mostra"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 Fresco dalla lavanderia!"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr "include uno zoom per nota! "
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr ""
-#~ "ultimo set zoom, alias ciò che è più comodo per te, rimane come "
-#~ "predefinito per le nuove note"
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "migliore leggibilità (WCAG AA o AAA a seconda del tema)"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "anche un tema leggermente migliore. "
-
-#~ msgid "Improved translations"
-#~ msgstr "traduzioni migliorate"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "migliore scorciatoia e attrezzi"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "risolto un bug in cui Jorts rimase sul tema del sistema di luce"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "2.0.1 Rilascio di AppCenter"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "2.0.0 Release: Slate e Bubblegum"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "revival di una versione antica ma molto amata di Notejot"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "l'app è ora chiamata Jorts. "
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10 adorabili piccoli colori"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr ""
-#~ "costruito in cima alle moderne tecnologie Linux e formati di imballaggio"
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "transizione regolare quando si cambia tema"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr "i nuovi stickies hanno un piccolo titolo e un colore casuali"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "alcune traduzioni iniziali incluse e altre a venire"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr "e -mail e collegamenti sono cliccabili! "
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr "il testo supporta annullare, rifare e puoi usare emoji :)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Added a desktop action to create a note from clipboard content. Alas not "
-#~ "reliable enough to offer it in the UI"
-#~ msgstr ""
-#~ "Aggiunta un'azione sul desktop per creare una nota dal contenuto degli "
-#~ "appunti"
-
-#~ msgid ""
-#~ "I struggled with some shenanigans to have only one preference window... "
-#~ "Should be done for good now"
-#~ msgstr ""
-#~ "Ho faticato un po' per avere una sola finestra di preferenze... Ora "
-#~ "dovrebbe essere tutto a posto"
-
-#~ msgid ""
-#~ "Better commented text and code, for translators and eventual contributors"
-#~ msgstr ""
-#~ "Testo e codice meglio commentati, per i traduttori e gli eventuali "
-#~ "collaboratori"
-
-#~ msgid ""
-#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
-#~ "other DEs"
-#~ msgstr ""
-#~ "Nuove impostazioni: Font OpenDyslexia. il sistema operativo elementare li "
-#~ "ha OOTB, ma non altri DE."
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "Utilità per note adesive"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Teamcons"
-
-#, fuzzy
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "Piccoli post-it colorati per tutti i tuoi pensieri :)"
-
-#~ msgid "Windows version, with the guidance from @supercamel"
-#~ msgstr "Versione Windows, con le indicazioni di @supercamel"
-
-#~ msgid "Flathub version"
-#~ msgstr "Versione Flathub"
-
-#~ msgid "Windows version"
-#~ msgstr "Versione per Windows"
-
-#~ msgid "You can change individual colour and text size!"
-#~ msgstr "puoi cambiare il colore individuale e la dimensione del testo!"
-
-#~ msgid "You can unzoom so hard you could do ascii art"
-#~ msgstr "puoi allontanarti così tanto da poter fare arte ASCII"

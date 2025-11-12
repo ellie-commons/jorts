@@ -42,8 +42,10 @@ public class Jorts.Application : Gtk.Application {
 
     // Needed by all windows
     public static GLib.Settings gsettings;
+    public static Gtk.Settings gtk_settings;
+
     public Jorts.NoteManager manager;
-    private static Jorts.PreferenceWindow preferences;
+    public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
     public static bool new_note = false;
@@ -114,7 +116,7 @@ public class Jorts.Application : Gtk.Application {
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings = Gtk.Settings.get_default ();
         gtk_settings.gtk_icon_theme_name = "elementary";
         gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
 
@@ -139,18 +141,26 @@ Your Notes are all belong to us!
 Please wait while the app remembers all the things...
 """);
 
-
-
-        // ONLY ONE.
-        preferences = Jorts.PreferenceWindow.instance ();
-        add_window (preferences);
-
         /* Quit if all sticky notes are closed and preferences arent shown */
-        this.window_removed.connect (check_if_quit);
+        window_removed.connect (check_if_quit);
 
 
         // build all the stylesheets
-        Jorts.Themer.init_all_themes ();
+        var app_provider = new Gtk.CssProvider ();
+        app_provider.load_from_resource ("/io/github/ellie_commons/jorts/Application.css");
+        Gtk.StyleContext.add_provider_for_display (
+            Gdk.Display.get_default (),
+            app_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+        );
+
+        var theme_provider = new Gtk.CssProvider ();
+        theme_provider.load_from_resource ("/io/github/ellie_commons/jorts/Themes.css");
+        Gtk.StyleContext.add_provider_for_display (
+            Gdk.Display.get_default (),
+            theme_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
+        );
     }
 
     /*************************************************/        
@@ -204,6 +214,12 @@ Please wait while the app remembers all the things...
 
     private void action_show_preferences () {
         debug ("[ACTION] Showing preferences!");
+
+        if (Application.preferences == null) {
+            Application.preferences = new Jorts.PreferenceWindow (this);
+            Application.preferences.close_request.connect_after (() => {Application.preferences = null; return false;});
+        }
+
         preferences.show ();
         preferences.present ();
     }
@@ -233,12 +249,12 @@ Please wait while the app remembers all the things...
         }
     }
 
+    // checked upon window closing to make sure we do not linger in the background
     public void check_if_quit () {
         debug ("Windows open: %s".printf (get_windows ().length ().to_string ()));
-        debug ("Preferences shown: %s".printf (preferences.is_shown.to_string ()));
 
-        if ((get_windows ().length () == 1) && (preferences.is_shown == false)) {
-            print ("No sticky note open, quitting");
+        if (get_windows ().length () == 0) {
+            debug ("No sticky note open, quitting");
             quit ();
         }
     }
@@ -278,5 +294,4 @@ Please wait while the app remembers all the things...
         activate ();
         return 0;
     }
-
 }

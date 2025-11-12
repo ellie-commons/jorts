@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -160,482 +160,164 @@ msgid "The preferences dialog in dark mode"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:99
-msgid "No fun allowed: revert back to default style"
+#, fuzzy
+msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgstr "2.2.0 प्रकाश के जोर्ट्स"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107 data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:181
+msgid "😎 Guests stars:"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:109
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "बेहतर अनुवाद"
+
+#: data/jorts.metainfo.xml.in:110
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:121
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:126
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 प्रकाश के जोर्ट्स"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:133
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:134
 msgid "Ctrl+L to focus note title"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:135
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:136
 msgid "Alt+Number to change theme quickly"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:137
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
 "for ascii doodles"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:138
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:139
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr ""
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:143
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:150
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:156
 msgid "3.3.0 Star Platinum Jorts"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:158
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:159
 msgid "Added more random titles"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:160
 msgid "Buttons for add/remove autostart"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:161
 msgid "Some more title placeholders"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:162
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "क्लीनर कोड के लिए यहां और वहां हुड में बदलाव के तहत"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:173
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 प्रकाश के जोर्ट्स"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:175
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:176
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:177
 msgid "Added high-resolution screenshots"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:178
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:179
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:183
 msgid "A lovely temporary icon by @wpkelso"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:184
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "बेहतर अनुवाद"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 प्रकाश के जोर्ट्स"
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "बेहतर अनुवाद"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "बेहतर अनुवाद"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 प्रकाश के जोर्ट्स"
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "बेहतर अनुवाद"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "बेहतर अनुवाद"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.2.0 प्रकाश के जोर्ट्स"
-
-#, fuzzy
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.1.2 अनियंत्रित जोर्ट्स"
-
-#, fuzzy
-#~ msgid "Updated translations"
-#~ msgstr "बेहतर अनुवाद"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 प्रकाश के जोर्ट्स"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "बेहतर अनुवाद कवरेज"
-
-#, fuzzy
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr "नई सुविधा: स्क्विगली मोड! "
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr "नई सुविधा: इमोजी पिकर बटन! "
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr "टूलबार में बटन एक यादृच्छिक emote प्रदर्शित करता है जो आप क्लिक करते हैं!"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr "नई सुविधा: जोर्ट्स एक मासिक बैकअप करता है। "
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr "क्या मुख्य भंडारण भ्रष्ट होना चाहिए, जोर्ट्स बैकअप से लोड करने की कोशिश करता है"
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "कुछ नए मज़ा/प्यारा डिफ़ॉल्ट शीर्षक"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr "क्लीनर कोड के लिए यहां और वहां हुड में बदलाव के तहत"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 अनियंत्रित जोर्ट्स"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "एक्शनबार बटन में राहत जोड़ें"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr "बगफिक्स: एज केस जहां थीम या ज़ूम ठीक से बचाया गया"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "बगफिक्स: मल्टीटास्किंग में शीर्षक सही तरीके से सेट नहीं है"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "बगफिक्स: आइकन असंगतता एक्रॉस आइकन थीम"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "बगफिक्स: थीमिंग असंगतता"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 कपड़े धोने से बाहर ताजा! "
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "Clearer AppMenu विवरण"
-
-#~ msgid "More consistent theming"
-#~ msgstr "अधिक सुसंगत थीमिंग"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "बगफिक्स: डिलीट शॉर्टकट अनुत्तरदायी था"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "बगफिक्स: स्क्रीनशॉट नहीं दिखा रहा है"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 कपड़े धोने से बाहर ताजा!"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr "एक प्रति-नोट ज़ूम शामिल है! "
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr ""
-#~ "नवीनतम सेट ज़ूम, उर्फ ​​क्या आपके लिए सबसे आरामदायक है, नए नोटों के लिए डिफ़ॉल्ट के रूप में "
-#~ "रहता है"
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "बेहतर पठनीयता (WCAG AA या AAA थीम के आधार पर)"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "इसके अलावा थोड़ा बेहतर दिखने वाला विषय। "
-
-#~ msgid "Improved translations"
-#~ msgstr "बेहतर अनुवाद"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "बेहतर शॉर्टकट और टूलटिप्स"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "एक बग फिक्स्ड जहां जोर्ट्स लाइट सिस्टम थीम पर रहे"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "2.0.1 AppCenter रिलीज़"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "2.0.0 रिलीज़: स्लेट और बबलगम"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "नोटजोट के एक प्राचीन लेकिन अच्छी तरह से पसंद किए गए संस्करण का पुनरुद्धार"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "ऐप को अब Jorts नाम दिया गया है। "
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10 प्यारे छोटे रंग"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr "आधुनिक लिनक्स प्रौद्योगिकियों और पैकेजिंग प्रारूपों का निर्माण"
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "थीम को बदलते समय चिकनी संक्रमण"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr "नई स्टिकियों में एक यादृच्छिक मजेदार छोटा शीर्षक और रंग होता है"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "कुछ प्रारंभिक अनुवाद शामिल थे, और बहुत कुछ आने के लिए"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr "ईमेल और लिंक क्लिक करने योग्य हैं! "
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr "पाठ पूर्ववत, redo का समर्थन करता है, और आप emojis का उपयोग कर सकते हैं :)"
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "चिपचिपा नोट उपयोगिता"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "स्टेला - टीमकॉन"
-
-#, fuzzy
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "अपने सभी विचारों के लिए रंगीन छोटे चिपचिपे नोट्स :)"
-
-#~ msgid "You can change individual colour and text size!"
-#~ msgstr "आप व्यक्तिगत रंग और पाठ का आकार बदल सकते हैं!"
-
-#~ msgid "You can unzoom so hard you could do ascii art"
-#~ msgstr "आप इतनी मेहनत कर सकते हैं कि आप ASCII कला कर सकते हैं"
-
-#~ msgid "Like emojis? Well there's an emoji picker!"
-#~ msgstr "इमोजी की तरह? "
-
-#~ msgid "Blueberry"
-#~ msgstr "ब्लूबेरी"
-
-#~ msgid "Lime"
-#~ msgstr "चूना"
-
-#~ msgid "Mint"
-#~ msgstr "टकसाल"
-
-#~ msgid "Banana"
-#~ msgstr "केला"
-
-#~ msgid "Strawberry"
-#~ msgstr "स्ट्रॉबेरी"
-
-#~ msgid "Orange"
-#~ msgstr "नारंगी"
-
-#~ msgid "Bubblegum"
-#~ msgstr "बबलगम"
-
-#~ msgid "Grape"
-#~ msgstr "अंगूर"
-
-#~ msgid "Cocoa"
-#~ msgstr "कोको"
-
-#~ msgid "Slate"
-#~ msgstr "स्लेट"
-
-#~ msgid "Sticky Note Colour"
-#~ msgstr "चिपचिपा नोट रंग"
-
-#~ msgid "Choose a colour for this sticky note"
-#~ msgstr "इस चिपचिपे नोट के लिए एक रंग चुनें"
-
-#~ msgid "Zoom out"
-#~ msgstr "ज़ूम आउट"
-
-#~ msgid "Default zoom level"
-#~ msgstr "डिफ़ॉल्ट ज़ूम स्तर"
-
-#~ msgid "Zoom in"
-#~ msgstr "ज़ूम इन"
-
-#~ msgid "ZOOM%"
-#~ msgstr "ZOOM%"
-
-#~ msgid "All my very best friends"
-#~ msgstr "मेरे सभी सबसे अच्छे दोस्त"
-
-#~ msgid "My super good secret recipe"
-#~ msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
-
-#~ msgid "My todo list"
-#~ msgstr "मेरी टोडो सूची"
-
-#~ msgid "Super secret to not tell anyone"
-#~ msgstr "किसी को नहीं बताने के लिए सुपर सीक्रेट"
-
-#~ msgid "My grocery list"
-#~ msgstr "मेरी किराने की सूची"
-
-#~ msgid "Random shower thoughts"
-#~ msgstr "यादृच्छिक शावर विचार"
-
-#~ msgid "My fav fanfics"
-#~ msgstr "मेरे फेव फैनफिक्स"
-
-#~ msgid "My fav dinosaurs"
-#~ msgstr "मेरे फेव डायनासोर"
-
-#~ msgid "My evil mastermind plan"
-#~ msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
-
-#~ msgid "What made me smile today"
-#~ msgstr "आज मुझे क्या मुस्कुरा दिया"
-
-#~ msgid "Hello world!"
-#~ msgstr "हैलो वर्ल्ड!"
-
-#~ msgid "New sticky, new me"
-#~ msgstr "नया चिपचिपा, नया मुझे"
-
-#~ msgid "Hidden pirate treasure"
-#~ msgstr "छिपा हुआ समुद्री डाकू खजाना"
-
-#~ msgid "To not forget, ever"
-#~ msgstr "कभी नहीं भूलना, कभी भी"
-
-#~ msgid "Dear Diary,"
-#~ msgstr "प्रिय डायरी,"
-
-#~ msgid "Hi im a square"
-#~ msgstr "हाय एक वर्ग im"
-
-#~ msgid "Have a nice day! :)"
-#~ msgstr "आपका दिन शुभ हो! "
-
-#~ msgid "My meds schedule"
-#~ msgstr "मेरे मेड्स शेड्यूल"
-
-#~ msgid "Household chores"
-#~ msgstr "घरेलू काम"
-
-#~ msgid "Ode to my cat"
-#~ msgstr "मेरी बिल्ली के लिए ode"
-
-#~ msgid "My dogs favourite toys"
-#~ msgstr "मेरे कुत्ते पसंदीदा खिलौने"
-
-#~ msgid "How cool my birds are"
-#~ msgstr "मेरे पक्षी कितने शांत हैं"
-
-#~ msgid "Suspects in the Last Cookie affair"
-#~ msgstr "अंतिम कुकी चक्कर में संदिग्ध"
-
-#~ msgid "Words my parrots know"
-#~ msgstr "शब्द मेरे तोते जानते हैं"
-
-#~ msgid "Cool and funny compliments to give out"
-#~ msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
-
-#~ msgid "Ok, listen here,"
-#~ msgstr "ठीक है, यहाँ सुनो,"
-
-#~ msgid "My dream Pokemon team"
-#~ msgstr "मेरा ड्रीम पोकेमॉन टीम"
-
-#~ msgid "My little notes"
-#~ msgstr "मेरे छोटे नोट"
-
-#~ msgid "Surprise gift list"
-#~ msgstr "आश्चर्य उपहार सूची"
-
-#~ msgid "Brainstorming notes"
-#~ msgstr "विचार मंथन नोट्स"
-
-#~ msgid "To bring to the party"
-#~ msgstr "पार्टी में लाने के लिए"
-
-#~ msgid "My amazing mixtape"
-#~ msgstr "मेरा अद्भुत मिक्सटेप"
-
-#~ msgid "Napkin scribblys"
-#~ msgstr "नैपकिन स्क्रिबल्स"
-
-#~ msgid "My fav songs to sing along"
-#~ msgstr "मेरे fav गाने के साथ गाने के लिए"
-
-#~ msgid "When to water which plant"
-#~ msgstr "कब पानी के लिए पानी"
-
-#~ msgid "Top 10 anime betrayals"
-#~ msgstr "शीर्ष 10 एनीमे विश्वासघात"
-
-#~ msgid "Edit title"
-#~ msgstr "शीर्षक संपादित करें"
-
-#~ msgid "Delete sticky note"
-#~ msgstr "चिपचिपा नोट हटाएं"
-
-#~ msgid "Always show content of sticky notes"
-#~ msgstr "हमेशा चिपचिपे नोटों की सामग्री दिखाएं"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "अनफोकस्ड स्टिकी नोट्स की सामग्री छिपाएं"
-
-#~ msgid "Insert emoji"
-#~ msgstr "इमोजी डालें"
-
-#~ msgid "Preferences for this sticky note"
-#~ msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"

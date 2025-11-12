@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,34 +168,77 @@ msgid "The preferences dialog in dark mode"
 msgstr "Dialogové okno předvoleb v tmavém režimu"
 
 #: data/jorts.metainfo.xml.in:99
-msgid "No fun allowed: revert back to default style"
+#, fuzzy
+msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgstr "2.2.0 Světelné šortky"
+
+#: data/jorts.metainfo.xml.in:101
+msgid "Version 4 to align with Gtk version"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:102
+msgid "Ctrl+Scroll to zoom-in, zoom-out"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:103
+msgid "More zoom options"
 msgstr ""
 
 #: data/jorts.metainfo.xml.in:104
+msgid "A couple visual bugfixes as well!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:105
+msgid "Various under the hood performance improvements"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:107 data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:181
+msgid "😎 Guests stars:"
+msgstr "😎 Hvězdičky pro hosty:"
+
+#: data/jorts.metainfo.xml.in:109
+#, fuzzy
+msgid "Updated JA translation thanks to @ryonakano!"
+msgstr "Aktualizované překlady"
+
+#: data/jorts.metainfo.xml.in:110
+msgid "You, the user, for liking this lil app!"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:121
+msgid "Added windows build. It doesnt need admin rights. Mostly works."
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:126
+msgid "No fun allowed: revert back to default style"
+msgstr ""
+
+#: data/jorts.metainfo.xml.in:131
 #, fuzzy
 msgid "🕷️ 3.4.0 Scary Jorts of Boo"
 msgstr "2.2.0 Světelné šortky"
 
-#: data/jorts.metainfo.xml.in:106
+#: data/jorts.metainfo.xml.in:133
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Některé prvky uživatelského rozhraní se zobrazí až po zobrazení, aby "
 "působily elegantně."
 
-#: data/jorts.metainfo.xml.in:107
+#: data/jorts.metainfo.xml.in:134
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L pro zaostření názvu poznámky"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/jorts.metainfo.xml.in:135
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M pro otevření nastavení poznámky"
 
-#: data/jorts.metainfo.xml.in:109
+#: data/jorts.metainfo.xml.in:136
 msgid "Alt+Number to change theme quickly"
 msgstr "Rychlá změna tématu pomocí kombinace kláves Alt+Číslo"
 
-#: data/jorts.metainfo.xml.in:110
+#: data/jorts.metainfo.xml.in:137
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -204,7 +247,7 @@ msgstr ""
 "Nastavení nové poznámky: Monospace. Mohlo by to být kvůli přístupnosti, "
 "mohlo by to být pro ascii čmáranice."
 
-#: data/jorts.metainfo.xml.in:111
+#: data/jorts.metainfo.xml.in:138
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -212,21 +255,17 @@ msgstr ""
 "Čistší a hezčí kód pod kapotou. Pravděpodobně mírně zvýšený výkon nebo méně "
 "chyb na hraně."
 
-#: data/jorts.metainfo.xml.in:112
+#: data/jorts.metainfo.xml.in:139
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Přidána možnost resetování nastavení na příkazovém řádku. Mohlo by se to "
 "hodit."
 
-#: data/jorts.metainfo.xml.in:114 data/jorts.metainfo.xml.in:154
-msgid "😎 Guests stars:"
-msgstr "😎 Hvězdičky pro hosty:"
-
-#: data/jorts.metainfo.xml.in:116
+#: data/jorts.metainfo.xml.in:143
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso opět zasahuje s úžasnou speciální edicí ikony!"
 
-#: data/jorts.metainfo.xml.in:123
+#: data/jorts.metainfo.xml.in:150
 msgid ""
 "Bugfix: Fix Jorts lingering in the background not opening anymore if all "
 "windows were closed (#77)"
@@ -234,11 +273,11 @@ msgstr ""
 "Oprava chyby: Oprava neotevírání Jortsů, které se zdržují na pozadí, pokud "
 "byla všechna okna zavřena (#77)"
 
-#: data/jorts.metainfo.xml.in:129
+#: data/jorts.metainfo.xml.in:156
 msgid "3.3.0 Star Platinum Jorts"
 msgstr "3.3.0 Star Platinum Jorts"
 
-#: data/jorts.metainfo.xml.in:131
+#: data/jorts.metainfo.xml.in:158
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -246,24 +285,24 @@ msgstr ""
 "Oprava chyby: Celé okno, které lze grabovat, zasahovalo do úprav textu. Nyní "
 "je to možné pouze u akčního panelu a záhlaví (#75, #76)."
 
-#: data/jorts.metainfo.xml.in:132
+#: data/jorts.metainfo.xml.in:159
 msgid "Added more random titles"
 msgstr "Přidány další náhodné názvy"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/jorts.metainfo.xml.in:160
 msgid "Buttons for add/remove autostart"
 msgstr "Tlačítka pro přidání/odebrání autostartu"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/jorts.metainfo.xml.in:161
 msgid "Some more title placeholders"
 msgstr "Další zástupné znaky pro názvy"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/jorts.metainfo.xml.in:162
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Tu a tam změny pod kapotou pro čistší kód"
 
-#: data/jorts.metainfo.xml.in:141
+#: data/jorts.metainfo.xml.in:168
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -271,25 +310,25 @@ msgstr ""
 "Oprava chyby: Při vypnutí akčního panelu zůstávalo prázdné místo. Nyní je to "
 "opraveno - a navíc je nyní k dispozici efektnější animace."
 
-#: data/jorts.metainfo.xml.in:146
+#: data/jorts.metainfo.xml.in:173
 #, fuzzy
 msgid "🌈 3.2.0 Jorts of Resilience and Love"
 msgstr "2.2.0 Světelné šortky"
 
-#: data/jorts.metainfo.xml.in:148
+#: data/jorts.metainfo.xml.in:175
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Přidání malé cool animace při zapnutí/vypnutí panelu akcí"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/jorts.metainfo.xml.in:176
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr "Opravena neostrost v zobrazení s vysokým měřítkem kvůli Flathub BS"
 
-#: data/jorts.metainfo.xml.in:150
+#: data/jorts.metainfo.xml.in:177
 msgid "Added high-resolution screenshots"
 msgstr "Přidány snímky obrazovky ve vysokém rozlišení"
 
-#: data/jorts.metainfo.xml.in:151
+#: data/jorts.metainfo.xml.in:178
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -297,349 +336,16 @@ msgstr ""
 "Oprava chyby na poslední chvíli, nějak nefungovaly akcelerátory, když byly "
 "zaměřeny Předvolby"
 
-#: data/jorts.metainfo.xml.in:152
+#: data/jorts.metainfo.xml.in:179
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Trochu úklidu pro FR a DE, když už jsme u toho"
 
-#: data/jorts.metainfo.xml.in:156
+#: data/jorts.metainfo.xml.in:183
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Edice Pride: Krásná dočasná ikona od @wpkelso"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/jorts.metainfo.xml.in:184
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Aktualizované překlady"
-
-#, fuzzy
-#~ msgid "3.1.3 Jorts of fire and lava"
-#~ msgstr "2.2.0 Světelné šortky"
-
-#~ msgid "Save memory and disk writes by adding a proper debounce"
-#~ msgstr "Úspora paměti a zápisů na disk přidáním vhodného odkladu."
-
-#, fuzzy
-#~ msgid "Updated IT translations thanks to @albanobattistella!"
-#~ msgstr "Aktualizované překlady"
-
-#, fuzzy
-#~ msgid "Updated JA translations thanks to @RyoNakano!"
-#~ msgstr "Aktualizované překlady"
-
-#~ msgid "3.1.2 Amendments for flathub"
-#~ msgstr "3.1.2 Změny pro flathub"
-
-#~ msgid "Nothing interesting here"
-#~ msgstr "Nic zajímavého"
-
-#~ msgid "3.1.1 Woops"
-#~ msgstr "3.1.1 Woops"
-
-#~ msgid "Minor screenshot amendments"
-#~ msgstr "Drobné změny snímku obrazovky"
-
-#~ msgid "3.1.0 Jorts of songs and Jorts of dance"
-#~ msgstr "3.1.0 Písňové a taneční šortky"
-
-#~ msgid "Flathub version, with a lot of help from @RyoNakano"
-#~ msgstr "Flathub verze, s velkou pomocí od @RyoNakano"
-
-#, fuzzy
-#~ msgid "3.0.0 Jorts of Thunder"
-#~ msgstr "2.2.0 Světelné šortky"
-
-#~ msgid "A lovely brand new icon thanks to @wpkelso"
-#~ msgstr "Krásná nová ikona díky @wpkelso"
-
-#~ msgid ""
-#~ "Between this and the GTK4 port, there is very little left from old "
-#~ "Notejot... We could say it is a v3"
-#~ msgstr ""
-#~ "Mezi tímto a portem GTK4 toho ze starého Notejotu zbylo jen velmi málo... "
-#~ "Dalo by se říct, že je to v3"
-
-#~ msgid ""
-#~ "Make the app more universal: Other DEs do not keep window dimensions, so "
-#~ "reimplement save and restore"
-#~ msgstr ""
-#~ "Udělejte aplikaci univerzálnější: Ostatní DE nezachovávají rozměry oken, "
-#~ "takže je třeba znovu implementovat ukládání a obnovení."
-
-#, fuzzy
-#~ msgid "Updated RU translations thanks to @camellan!"
-#~ msgstr "Aktualizované překlady"
-
-#, fuzzy
-#~ msgid "Updated screenshots"
-#~ msgstr "Aktualizované překlady"
-
-#, fuzzy
-#~ msgid "2.4.0 The Jorts of Ice"
-#~ msgstr "2.2.0 Světelné šortky"
-
-#~ msgid ""
-#~ "Thanks to RyoNakano reworking japanese translations, Japanese speakers "
-#~ "will feel more at home now"
-#~ msgstr ""
-#~ "Díky tomu, že RyoNakano přepracoval překlady do japonštiny, budou se nyní "
-#~ "japonsky mluvící lidé cítit více jako doma."
-
-#~ msgid "Respect reduce animations settings"
-#~ msgstr "Respektování nastavení redukce animací"
-
-#, fuzzy
-#~ msgid "Scribble mode exclusively in the preferences now"
-#~ msgstr "režim scribbly byl přesunut do nového dialogu předvoleb"
-
-#~ msgid "Add preference: now you can hide the bottom bar! (Ctrl+t)"
-#~ msgstr "Přidat předvolbu: nyní můžete skrýt spodní lištu! (Ctrl+t)"
-
-#~ msgid ""
-#~ "Bugfix: Fixed elements moving when a note title is hovered or selected"
-#~ msgstr ""
-#~ "Oprava chyby: Oprava přesouvání prvků při najetí na název poznámky nebo "
-#~ "jeho výběru."
-
-#~ msgid ""
-#~ "Bugfix: New and delete accels were not working oops sorry it's fixed now"
-#~ msgstr ""
-#~ "Oprava chyby: Nefungovalo přidávání a mazání akcelerátorů... omlouváme "
-#~ "se, už je to opraveno."
-
-#~ msgid "Bugfix where random components skipped the last possible choice"
-#~ msgstr ""
-#~ "Oprava chyby, kdy náhodné komponenty přeskočily poslední možnou volbu"
-
-#~ msgid "Bugfix: shortcut for emotes did not show up properly"
-#~ msgstr "Oprava chyby: zkratka pro emoty se nezobrazovala správně"
-
-#~ msgid "Lil easter egg"
-#~ msgstr "Lil easter egg"
-
-#, fuzzy
-#~ msgid "2.3.0 The Inner Jorts"
-#~ msgstr "2.3.0 Vnitřní šortky"
-
-#~ msgid ""
-#~ "New feature: Preferences dialog! Right-click on the app icon to see the "
-#~ "option"
-#~ msgstr ""
-#~ "Nová funkce: Dialogové okno Předvolby! Kliknutím pravým tlačítkem myši na "
-#~ "ikonu aplikace se zobrazí možnost"
-
-#~ msgid "scribbly mode has been moved to the new preference dialog"
-#~ msgstr "režim scribbly byl přesunut do nového dialogu předvoleb"
-
-#, fuzzy
-#~ msgid ""
-#~ "For translators: Translations have been separated in 2: One for the UI "
-#~ "one for the extra content"
-#~ msgstr ""
-#~ "Zlepšení pro překladatele: Překlady byly rozděleny na 2 části: Jedna pro "
-#~ "uživatelské rozhraní, druhá pro další obsah."
-
-#~ msgid "Comfort: Easier to grab and drag stickies"
-#~ msgstr "Pohodlí: Snadnější uchopení a přetažení samolepek"
-
-#~ msgid "Bugfix: Screenshots in the appcenter were a mess aaaa"
-#~ msgstr "Oprava chyby: Snímky obrazovky v appcentru byly v nepořádku aaaa"
-
-#, fuzzy
-#~ msgid "Updated translations"
-#~ msgstr "Aktualizované překlady"
-
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 Světelné šortky"
-
-#~ msgid "Better translation coverage"
-#~ msgstr "Lepší pokrytí překladů"
-
-#, fuzzy
-#~ msgid "New feature: scribbly mode! Hide sticky notes content when unfocused"
-#~ msgstr ""
-#~ "Nová funkce: režim scribbly! Skrytí obsahu samolepicích poznámek při "
-#~ "rozostření"
-
-#~ msgid ""
-#~ "New feature: Emoji picker button! I know there is one on right-click, but "
-#~ "buttons are more accessible!"
-#~ msgstr ""
-#~ "Nová funkce: Tlačítko pro výběr emoji! Vím, že je tam jedno na pravé "
-#~ "tlačítko myši, ale tlačítka jsou přístupnější!"
-
-#~ msgid ""
-#~ "The button in the toolbar displays a random emote everytime you click!"
-#~ msgstr ""
-#~ "Tlačítko na panelu nástrojů zobrazí náhodný emotikon při každém kliknutí!"
-
-#~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
-#~ "can recover data!"
-#~ msgstr ""
-#~ "Nová funkce: Jorts provádí měsíční zálohování. V případě jakéhokoli "
-#~ "problému můžete data obnovit!"
-
-#~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
-#~ msgstr ""
-#~ "Pokud dojde k poškození hlavního úložiště, pokusí se Jorts načíst ze "
-#~ "zálohy."
-
-#~ msgid "Some new fun/cute default titles"
-#~ msgstr "Některé nové zábavné/roztomilé výchozí názvy"
-
-#~ msgid "Under the hood changes here and there for cleaner code"
-#~ msgstr "Tu a tam změny pod kapotou pro čistší kód"
-
-#~ msgid "2.1.2 The unrippable jorts"
-#~ msgstr "2.1.2 Nepřenosné šortky"
-
-#~ msgid "Add relief to actionbar buttons"
-#~ msgstr "Přidání reliéfu k tlačítkům na panelu akcí"
-
-#~ msgid "Bugfix: Edge case where the theme or zoom werent properly saved"
-#~ msgstr "Oprava chyby: Případ, kdy se téma nebo zvětšení správně neuložilo"
-
-#~ msgid "Bugfix: Title in multitasking not set correctly"
-#~ msgstr "Oprava chyby: Název v multitaskingu není správně nastaven"
-
-#~ msgid "Bugfix: Icon inconsistency accross icon themes"
-#~ msgstr "Oprava chyby: Nekonzistence ikon napříč motivy ikon"
-
-#~ msgid "Bugfix: Theming inconsistencies accross stickies"
-#~ msgstr "Oprava chyby: Nekonzistence v tématech napříč nálepkami"
-
-#~ msgid "2.1.1 Fresh out of the laundry! (2: electric boogaloo)"
-#~ msgstr "2.1.1 Čerstvě vyprané! (2: electric boogaloo)"
-
-#~ msgid "Clearer appmenu description"
-#~ msgstr "Přehlednější popis menu aplikace"
-
-#~ msgid "More consistent theming"
-#~ msgstr "Konzistentnější tématika"
-
-#~ msgid "Bugfix: the delete shortcut was unresponsible"
-#~ msgstr "Oprava chyby: klávesová zkratka pro odstranění byla nezodpovědná"
-
-#~ msgid "Bugfix: screenshot not showing"
-#~ msgstr "Oprava chyby: nezobrazuje se snímek obrazovky"
-
-#~ msgid "2.1.0 Fresh out of the laundry!"
-#~ msgstr "2.1.0 Čerstvě vyprané!"
-
-#~ msgid "Includes a per-note zoom! So you can get bigger or smaller text"
-#~ msgstr ""
-#~ "Obsahuje zoom na každou notu! Takže můžete získat větší nebo menší text"
-
-#~ msgid ""
-#~ "Latest set zoom, aka what is most comfortable to you, stays as default "
-#~ "for new notes"
-#~ msgstr ""
-#~ "Poslední nastavené zvětšení, tedy to, které je pro vás nejpohodlnější, "
-#~ "zůstane jako výchozí pro nové poznámky."
-
-#~ msgid "Better readability (WCAG AA or AAA depending on theme)"
-#~ msgstr "Lepší čitelnost (WCAG AA nebo AAA v závislosti na tématu)"
-
-#~ msgid "Also slightly better looking theme. Yes even more :)"
-#~ msgstr "Také o něco lépe vypadající téma. Ano, ještě více :)"
-
-#~ msgid "Improved translations"
-#~ msgstr "Vylepšené překlady"
-
-#~ msgid "Better shortcut and tooltips"
-#~ msgstr "Lepší zkratky a popisky nástrojů"
-
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "Opravena chyba, kdy šortky zůstávaly na světelném systémovém motivu"
-
-#~ msgid "2.0.1 Appcenter release"
-#~ msgstr "Vydání verze 2.0.1 Appcenter"
-
-#~ msgid "2.0.0 Release: Slate And Bubblegum"
-#~ msgstr "Vydání verze 2.0.0: Břidlice a žvýkačka"
-
-#~ msgid "Revival of an ancient but well loved version of Notejot"
-#~ msgstr "Oživení staré, ale oblíbené verze Notejot"
-
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "Aplikace se nyní jmenuje Jorts. Nemůžete ji však nosit"
-
-#~ msgid "10 lovely little colours"
-#~ msgstr "10 krásných malých barev"
-
-#~ msgid "Built atop of modern Linux technologies and packaging formats"
-#~ msgstr ""
-#~ "Postaveno na moderních technologiích Linuxu a balíčkovacích formátech."
-
-#~ msgid "Smooth transition when changing theme"
-#~ msgstr "Plynulý přechod při změně tématu"
-
-#~ msgid "New stickies have a random fun little title and colour"
-#~ msgstr "Nové stickies mají náhodný zábavný název a barvu"
-
-#~ msgid "A few initial translations included, and more to come"
-#~ msgstr "Několik prvních překladů a další budou následovat"
-
-#~ msgid "Email and links are clickable! Ctrl+Click to open in mail or browser"
-#~ msgstr ""
-#~ "E-mail a odkazy jsou klikací! Ctrl+klik pro otevření v poště nebo "
-#~ "prohlížeči"
-
-#~ msgid "Text supports undo, redo, and you can use emojis :)"
-#~ msgstr ""
-#~ "Text podporuje vrácení zpět, opakování a můžete používat emotikony :)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Added a desktop action to create a note from clipboard content. Alas not "
-#~ "reliable enough to offer it in the UI"
-#~ msgstr "Přidána akce na ploše pro vytvoření poznámky z obsahu schránky"
-
-#~ msgid ""
-#~ "I struggled with some shenanigans to have only one preference window... "
-#~ "Should be done for good now"
-#~ msgstr ""
-#~ "Bojoval jsem s některými vylomeninami, abych měl pouze jedno okno s "
-#~ "předvolbami... Teď už by to mělo být nadobro hotové"
-
-#~ msgid ""
-#~ "Better commented text and code, for translators and eventual contributors"
-#~ msgstr ""
-#~ "Lépe komentovaný text a kód pro překladatele a případné přispěvatele"
-
-#~ msgid ""
-#~ "New settings: OpenDyslexia fonts. elementary OS has that OOTB, but not "
-#~ "other DEs"
-#~ msgstr "Nové nastavení: Základní OS to má OOTB, ale ne jiné DE."
-
-#~ msgid "Sticky notes utility"
-#~ msgstr "Nástroj pro samolepicí poznámky"
-
-#~ msgid "Stella - Teamcons"
-#~ msgstr "Stella - Týmové ikony"
-
-#, fuzzy
-#~ msgid "Colourful little sticky notes! :)"
-#~ msgstr "Barevné a veselé samolepicí lístečky pro všechny vaše myšlenky! :)"
-
-#~ msgid "Windows version, with the guidance from @supercamel"
-#~ msgstr "Verze pro Windows, s pokyny od @supercamel"
-
-#~ msgid "Flathub version"
-#~ msgstr "Verze Flathub"
-
-#~ msgid "Windows version"
-#~ msgstr "Verze pro Windows"
-
-#~ msgid "You can change individual colour and text size!"
-#~ msgstr "Můžete měnit jednotlivé barvy a velikost textu!"
-
-#~ msgid "You can unzoom so hard you could do ascii art"
-#~ msgstr "Můžete rozbalit tak silně, že byste mohli dělat ascii art"
-
-#~ msgid ""
-#~ "New feature: Default font. You can now set a specific font for Jorts."
-#~ msgstr ""
-#~ "Nová funkce: Výchozí písmo. Nyní můžete nastavit konkrétní písmo pro "
-#~ "Jorts."

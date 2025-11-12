@@ -18,38 +18,17 @@
 You can download and install Jorts from various sources:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg?new)](https://appcenter.elementary.io/io.github.ellie_commons.jorts) 
+
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.ellie_commons.jorts)
 
-## ❓ FAQ
 
-### Where settings
-
-- Right-click on the app icon, and it is in the menu that appears
-- You can also Ctrl+P to show the dialog
-- Or run in a terminal:
-
-```bash
-flatpak run io.github.ellie_commons.jorts --preferences
-```
+On Windows:
+Grab the Exe installer in Release
 
 
-### Where tray icon
+## ❓ Questions, building, etc
 
-Theres none. The app closes on its own when no window is open. Doesn't make sense to use resources if unused.
-
-If you want to quit everything at once, use Ctrl+Q
-
-
-### Where close note
-
-Theres none. If you dont need a note you delete it, theyre supposed to be ephemeral.
-You can still alt+F4 or right-click->Close, but there is no reopen mechanism, and i dont wanna make one. Everything shows upon reopening the app anyway
-
-
-### Where Bold/Italic/etc
-
-I really want to avoid UI noise and resource usage. Notes are just, notes. The more complicated they become the less they are ephemeral notes and the more this looks like some notekeeping app. Which is what NoteJot, this was forked from, became.
-Now i know i added some stuff when maintaining the old version of NoteJot, but it doesn't mean it should have more, or everything.
+[Check the wiki, lol](https://github.com/ellie-commons/jorts/wiki/%F0%9F%8F%A1Home)
 
 
 
@@ -68,25 +47,8 @@ On the right you can donate to various contributors:
  - lains, the initial creator of the app (It was Notejot, now something very different)
 
 
-## 🏗️ Building
-
-Installation is as simple as installing the above, downloading and extracting the zip archive, changing to the new repo's directory,
-and run the following command:
-
-On elementary OS or with its appcenter remote installed
-
-```bash
-flatpak-builder --force-clean --user --install-deps-from=appcenter --install builddir ./io.github.ellie_commons.jorts.yml
-```
-
-On other systems:
-
-```bash
-flatpak run org.flatpak.Builder --force-clean --sandbox --user --install --install-deps-from=flathub --ccache --mirror-screenshots-url=https://dl.flathub.org/media/ --repo=repo builddir io.github.ellie_commons.jorts.flathub.yml
-```
-
-
 ## 💾 Notes Storage
+
 
 Notes are stored in `~/.var/app/io.github.ellie_commons.jorts/data`
 
@@ -99,3 +61,12 @@ cp ~/.var/app/io.github.ellie_commons.jorts/data ~/
 "saved_state.json" contains all notes in JSON format. The structure is quite simple, if not pretty.
 
 The app reads from it only during startup (rest of the time it writes in) so you could quite easily swap it up to swap between sets of notes.
+
+
+
+ON WINDOWS: It's in:
+
+YourUserFolder \AppData\Local\io.github.ellie_commons.jorts
+
+AppData is a hidden folder. Either you paste the above path in the path bar, from your user folder
+Or you do a "Show hidden files"

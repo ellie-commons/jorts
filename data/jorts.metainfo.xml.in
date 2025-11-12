@@ -94,6 +94,28 @@
     </screenshots>
 
     <releases>
+        <release version="4.0.0" date="2025-11-20">
+            <description>
+                <p>🚀 4.0.0 Jorts of Hyperspace!</p>
+                <ul>
+                    <li>Version 4 to align with Gtk version</li>
+                    <li>Ctrl+Scroll to zoom-in, zoom-out</li>
+                    <li>More zoom options</li>
+                    <li>A couple visual bugfixes as well!</li>
+                    <li>Various under the hood performance improvements</li>
+                </ul>
+                <p>😎 Guests stars:</p>
+                <ul>
+                    <li>Updated JA translation thanks to @ryonakano!</li>
+                    <li>You, the user, for liking this lil app!</li>
+                </ul>
+            </description>
+            <issues>
+                <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/78">Fixed absence of Ctrl+scroll</issue>
+            </issues>
+        </release>
         <release version="3.5.0" date="2025-11-06">
             <description>
                 <p>Added windows build. It doesnt need admin rights. Mostly works.</p>

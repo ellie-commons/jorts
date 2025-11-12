@@ -17,7 +17,9 @@
 app_name="Jorts"
 build_dir="builddir"
 theme_name="io.elementary.stylesheet.blueberry"
-version="3.5.0"
+icon_theme="elementary"
+version="$(cat meson.build | grep version | cut -d \' -f 2)"
+publisher="ellie-commons"
 
 deploy_dir="windows/deploy"
 exe_name="io.github.ellie_commons.jorts.exe"
@@ -36,11 +38,9 @@ mkdir -p "${deploy_dir}/etc"
 mkdir -p "${deploy_dir}/share"
 mkdir -p "${deploy_dir}/lib"
 mkdir -p "${deploy_dir}/include"
-mkdir -p "${deploy_dir}/usr"
 
 cp "${build_dir}/src/${exe_name}" "${deploy_dir}/bin"
 cp -r "windows/icons" "${deploy_dir}"
-
 
 # Detect what DLL we need and slorp it into bin
 echo "Copying DLLs..."
@@ -55,7 +55,6 @@ done
 cp -rnv /mingw64/bin/rsvg-convert.exe ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/librsvg-2-2.dll ${deploy_dir}/bin/
 cp -rnv /mingw64/bin/libxml2-16.dll ${deploy_dir}/bin/
-
 
 # Copy other required things for Gtk to work nicely
 echo "Copying other necessary files..."
@@ -113,8 +112,8 @@ mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
-gtk-icon-theme-name=elementary
-gtk-font-name=Inter Variable 9
+gtk-icon-theme-name=${icon_theme}
+gtk-font-name=Inter 9
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
@@ -148,7 +147,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
-BrandingText "Jorts ${version}, Ellie-Commons 2025"
+BrandingText "Jorts ${version}, ${publisher} 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
@@ -255,9 +254,9 @@ Section "Install"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "DisplayIcon" "\$INSTDIR\\icons\\icon.ico"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "${publisher}"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
-    WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x000220EC" ;139,5MB
+    WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
 Section "Uninstall"

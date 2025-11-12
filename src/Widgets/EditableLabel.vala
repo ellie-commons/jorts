@@ -28,11 +28,6 @@ public class Jorts.EditableLabel : Granite.Bin {
         set { mono_set (value);}
     }
 
-    public bool scribbly {
-        get { return "scribbly" in this.css_classes;}
-        set { scribbly_set (value);}
-    }
-
     construct {
         editablelabel = new Gtk.EditableLabel ("") {
             xalign = 0.5f,
@@ -61,17 +56,6 @@ public class Jorts.EditableLabel : Granite.Bin {
         } else {
             if ("monospace" in this.css_classes) {
                 this.remove_css_class ("monospace");
-            }
-        }
-    }
-
-    private void scribbly_set (bool if_scribbly) {
-        if (if_scribbly) {
-            this.add_css_class ("scribbly");
-
-        } else {
-            if ("scribbly" in this.css_classes) {
-                this.remove_css_class ("scribbly");
             }
         }
     }

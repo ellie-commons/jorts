@@ -7,7 +7,6 @@ src/Widgets/PopoverWidgets/ColorBox.vala
 src/Widgets/PopoverWidgets/MonospaceBox.vala
 src/Widgets/PopoverWidgets/ZoomBox.vala
 src/Objects/Themes.vala
-src/Utils/ZoomConvert.vala
 src/Utils/Random.vala
 src/Utils/Libportal.vala
 src/Views/PreferencesView.vala

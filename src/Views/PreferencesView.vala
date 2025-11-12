@@ -6,8 +6,6 @@
  */
 
  public class Jorts.PreferencesView : Gtk.Box {
-    public Gtk.Switch scribbly_toggle;
-    public Gtk.Switch hidebar_toggle;
     //public Gtk.Button reset_button;
     private Granite.Toast toast;
     public Gtk.Button close_button;
@@ -41,21 +39,11 @@
 
                 debug ("Built UI. Lets do connects and binds");
 
-                var scribbly_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var scribbly_box = new Jorts.SettingsSwitch (
+                    _("Make unfocused notes unreadable"),
+                    _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"),
+                    "scribbly-mode-active");
 
-                scribbly_toggle = new Gtk.Switch () {
-                    halign = Gtk.Align.END,
-                    hexpand = true,
-                    valign = Gtk.Align.CENTER,
-                };
-
-                var scribbly_label = new Granite.HeaderLabel (_("Make unfocused notes unreadable")) {
-                    mnemonic_widget = scribbly_toggle,
-                    secondary_text = _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)")
-                };
-
-                scribbly_box.append (scribbly_label);
-                scribbly_box.append (scribbly_toggle);
                 settingsbox.append (scribbly_box);
 
 
@@ -63,21 +51,11 @@
                 /*               hidebar Toggle                  */
                 /*************************************************/
 
-                var hidebar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var hidebar_box = new Jorts.SettingsSwitch (
+                    _("Hide buttons"),
+                    _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"),
+                    "hide-bar");
 
-                hidebar_toggle = new Gtk.Switch () {
-                    halign = Gtk.Align.END,
-                    hexpand = true,
-                    valign = Gtk.Align.CENTER,
-                };
-
-                var hidebar_label = new Granite.HeaderLabel (_("Hide buttons")) {
-                    mnemonic_widget = hidebar_toggle,
-                    secondary_text = _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)")
-                };
-
-                hidebar_box.append (hidebar_label);
-                hidebar_box.append (hidebar_toggle);
                 settingsbox.append (hidebar_box);
 
 
@@ -85,12 +63,6 @@
                 /*               Autostart Request                  */
                 /****************************************************/
 #if !WINDOWS
-
-                                    Xdp.Portal portal = new Xdp.Portal ();
-                GenericArray<weak string> cmd = new GenericArray<weak string> ();
-                cmd.add ("io.github.ellie_commons.jorts");
-
-
                 var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
                     halign = Gtk.Align.FILL
                 };
@@ -100,18 +72,10 @@
                     label = _("Set autostart"),
                     valign = Gtk.Align.CENTER
                 };
-                //set_autostart.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
                 set_autostart.clicked.connect (() => {
                     debug ("Setting autostart");
-
-                    portal.request_background.begin (
-                    null,
-                    _("Set Jorts to start with the computer"),
-                    cmd,
-                    Xdp.BackgroundFlags.AUTOSTART,
-                    null);
-
+                    Jorts.Utils.autostart_set ();
                     toast.send_notification ();
                 });
 
@@ -120,18 +84,10 @@
                     label = _("Remove autostart"),
                     valign = Gtk.Align.CENTER
                 };
-                //remove_autostart.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
                 remove_autostart.clicked.connect (() => {
                     debug ("Removing autostart");
-
-                    portal.request_background.begin (
-                    null,
-                    _("Remove Jorts from system autostart"),
-                    cmd,
-                    Xdp.BackgroundFlags.NONE,
-                    null);
-
+                    Jorts.Utils.autostart_remove ();
                     toast.send_notification ();
                 });
 

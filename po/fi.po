@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-01 18:42+0100\n"
+"POT-Creation-Date: 2025-11-11 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Widgets/EditableLabel.vala:43
+#: src/Widgets/EditableLabel.vala:38
 msgid "Click to edit the title"
 msgstr "Muokkaa otsikkoa napsauttamalla"
 
@@ -344,23 +344,23 @@ msgstr ""
 "Toivottavasti pieni sovellukseni tuo sinulle paljon iloa.\n"
 "Hyvää päivänjatkoa!🎇\n"
 
-#: src/Utils/Libportal.vala:16 src/Views/PreferencesView.vala:129
+#: src/Utils/Libportal.vala:16
 msgid "Remove Jorts from system autostart"
 msgstr "Poista Jorts järjestelmän automaattisesta käynnistyksestä"
 
-#: src/Utils/Libportal.vala:29 src/Views/PreferencesView.vala:109
+#: src/Utils/Libportal.vala:29
 msgid "Set Jorts to start with the computer"
 msgstr "Aseta Jorts aloittamaan tietokoneen kanssa"
 
-#: src/Views/PreferencesView.vala:25
+#: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
 msgstr "Pyyntö järjestelmälle lähetetty"
 
-#: src/Views/PreferencesView.vala:52
+#: src/Views/PreferencesView.vala:43
 msgid "Make unfocused notes unreadable"
 msgstr "Tee keskittymättömistä muistiinpanoista lukukelvottomia"
 
-#: src/Views/PreferencesView.vala:54
+#: src/Views/PreferencesView.vala:44
 #, fuzzy
 msgid ""
 "If enabled, unfocused sticky notes become unreadable to protect their "
@@ -370,12 +370,12 @@ msgstr ""
 "lukukelvottomiksi, jotta niiden sisältö voidaan suojata tirkisteleviltä "
 "katseilta."
 
-#: src/Views/PreferencesView.vala:74
+#: src/Views/PreferencesView.vala:55
 #, fuzzy
 msgid "Hide buttons"
 msgstr "Piilota painikepalkki"
 
-#: src/Views/PreferencesView.vala:76
+#: src/Views/PreferencesView.vala:56
 msgid ""
 "If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
 "still function (Ctrl+T)"
@@ -384,38 +384,38 @@ msgstr ""
 "pikanäppäimet toimivat edelleen (Ctrl+T)."
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:99
+#: src/Views/PreferencesView.vala:72
 msgid "Set autostart"
 msgstr "Aseta automaattinen käynnistys"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:119
+#: src/Views/PreferencesView.vala:84
 msgid "Remove autostart"
 msgstr "Poista automaattinen käynnistys"
 
-#: src/Views/PreferencesView.vala:142
+#: src/Views/PreferencesView.vala:99
 msgid "Allow to start at login"
 msgstr "Salli aloittaa kirjautumisen yhteydessä"
 
-#: src/Views/PreferencesView.vala:144
+#: src/Views/PreferencesView.vala:101
 msgid "You can request the system to start this application automatically"
 msgstr ""
 "Voit pyytää järjestelmää käynnistämään tämän sovelluksen automaattisesti."
 
-#: src/Views/PreferencesView.vala:165
+#: src/Views/PreferencesView.vala:122
 msgid "Support us!"
 msgstr "Tue meitä!"
 
-#: src/Views/PreferencesView.vala:177
+#: src/Views/PreferencesView.vala:134
 msgid "Close"
 msgstr "Sulje"
 
-#: src/Views/PreferencesView.vala:180
+#: src/Views/PreferencesView.vala:137
 msgid "Close preferences"
 msgstr "Sulje asetukset"
 
-#: src/Windows/StickyNoteWindow.vala:85 src/Windows/StickyNoteWindow.vala:184
-#: src/Windows/StickyNoteWindow.vala:262 src/Windows/PreferenceWindow.vala:52
+#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
+#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Jortsit"
 
@@ -423,12 +423,12 @@ msgstr " - Jortsit"
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
-#: src/Windows/PreferenceWindow.vala:50
+#: src/Windows/PreferenceWindow.vala:33
 #, fuzzy
 msgid "Preferences for your Jorts"
 msgstr "Kaikkien muistilappujen asetukset"
 
-#: src/Windows/PreferenceWindow.vala:52
+#: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Asetukset"
 

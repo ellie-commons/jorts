@@ -1,15 +1,16 @@
 sources = files (
     'Objects' / 'Zoomkind.vala',
+    'Objects' / 'Zoom.vala',
     'Objects' / 'Themes.vala',
     'Objects' / 'NoteData.vala',
 
-    'Utils' / 'ZoomConvert.vala',
     'Utils' / 'Random.vala',
 
     'Services' / 'Constants.vala',
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
-    'Services' / 'Themer.vala',
+    'Services' / 'ZoomController.vala',
+    'Services' / 'ScribblyController.vala',
 
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',
@@ -19,6 +20,7 @@ sources = files (
     'Widgets' / 'PopoverWidgets' / 'ColorBox.vala',
     'Widgets' / 'PopoverWidgets' / 'MonospaceBox.vala',
     'Widgets' / 'PopoverWidgets' / 'ZoomBox.vala',
+    'Widgets' / 'PreferencesWidgets' / 'SettingsSwitch.vala',
 
     'Views' / 'PopoverView.vala',
     'Views' / 'PreferencesView.vala',

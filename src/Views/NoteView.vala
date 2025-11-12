@@ -15,14 +15,11 @@
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
 
+    public Gtk.ScrolledWindow scrolled;
+
     public bool monospace {
         get { return textview.monospace;}
         set { mono_set (value);}
-    }
-
-    public bool scribbly {
-        get { return textview.scribbly;}
-        set { scribbly_set (value);}
     }
 
     public string title {
@@ -50,7 +47,7 @@
         headerbar.set_title_widget (editablelabel);
 
         textview = new Jorts.TextView ();
-        var scrolled = new Gtk.ScrolledWindow () {
+        scrolled = new Gtk.ScrolledWindow () {
             child = textview
         };
 
@@ -87,10 +84,5 @@
     private void mono_set (bool if_mono) {
         editablelabel.monospace = if_mono;
         textview.monospace = if_mono;
-    }
-
-    private void scribbly_set (bool if_scribbly) {
-        editablelabel.scribbly = if_scribbly;
-        textview.scribbly = if_scribbly;
     }
 }
