@@ -45,6 +45,12 @@ popover button image {
     color: @fg_color;
 }
 
+/* Avoid zoom bleeding out into the menus */
+popover * {
+    line-height: initial;
+}
+
+/* Pretty actionbar blending into background */
 actionbar {
     box-shadow: none;  /*Pondering. It looks good with, too */
     background-color: transparent;
