@@ -114,6 +114,9 @@ public class Jorts.ZoomController : Object {
 
             // Allow scrolling again
             window.view.scrolled.sensitive = true;
+
+            // Avoid the insensitiveness to defocus us
+            window.set_focus (view.textview);
         }
     }
 
