@@ -101,6 +101,7 @@
                     <li>Version 4 to align with Gtk version</li>
                     <li>Ctrl+Scroll to zoom-in, zoom-out</li>
                     <li>More zoom options</li>
+                    <li>Keyboard shortcuts work from popover now</li>
                     <li>A couple visual bugfixes as well!</li>
                     <li>Various under the hood performance improvements</li>
                 </ul>
