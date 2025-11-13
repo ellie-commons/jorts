@@ -32,30 +32,31 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private Gtk.EventControllerKey keypress_controller;
     private Gtk.EventControllerScroll scroll_controller;
 
-    private const string ACTION_PREFIX = "app.";
-    private const string ACTION_SHOW_EMOJI = "action_show_emoji";
-    private const string ACTION_SHOW_MENU = "action_show_menu";
-    private const string ACTION_FOCUS_TITLE = "action_focus_title";
-    private const string ACTION_ZOOM_OUT = "action_zoom_out";
-    private const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
-    private const string ACTION_ZOOM_IN = "action_zoom_in";
-    private const string ACTION_TOGGLE_MONO = "action_toggle_mono";
+    public const string ACTION_PREFIX = "win.";
+    public const string ACTION_SHOW_EMOJI = "action_show_emoji";
+    public const string ACTION_SHOW_MENU = "action_show_menu";
+    public const string ACTION_FOCUS_TITLE = "action_focus_title";
+    public const string ACTION_ZOOM_OUT = "action_zoom_out";
+    public const string ACTION_ZOOM_DEFAULT = "action_zoom_default";
+    public const string ACTION_ZOOM_IN = "action_zoom_in";
+    public const string ACTION_TOGGLE_MONO = "action_toggle_mono";
+    public const string ACTION_DELETE = "action_delete";
 
-    private const string ACTION_THEME_1 = "action_theme_1";
-    private const string ACTION_THEME_2 = "action_theme_2";
-    private const string ACTION_THEME_3 = "action_theme_3";
-    private const string ACTION_THEME_4 = "action_theme_4";
-    private const string ACTION_THEME_5 = "action_theme_5";
-    private const string ACTION_THEME_6 = "action_theme_6";
-    private const string ACTION_THEME_7 = "action_theme_7";
-    private const string ACTION_THEME_8 = "action_theme_8";
-    private const string ACTION_THEME_9 = "action_theme_9";
-    private const string ACTION_THEME_0 = "action_theme_0";
+    public const string ACTION_THEME_1 = "action_theme_1";
+    public const string ACTION_THEME_2 = "action_theme_2";
+    public const string ACTION_THEME_3 = "action_theme_3";
+    public const string ACTION_THEME_4 = "action_theme_4";
+    public const string ACTION_THEME_5 = "action_theme_5";
+    public const string ACTION_THEME_6 = "action_theme_6";
+    public const string ACTION_THEME_7 = "action_theme_7";
+    public const string ACTION_THEME_8 = "action_theme_8";
+    public const string ACTION_THEME_9 = "action_theme_9";
+    public const string ACTION_THEME_0 = "action_theme_0";
 
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
-        { Application.ACTION_DELETE, action_delete},
+        { ACTION_DELETE, action_delete},
         { ACTION_SHOW_EMOJI, action_show_emoji},
         { ACTION_SHOW_MENU, action_show_menu},
         { ACTION_FOCUS_TITLE, action_focus_title},
@@ -82,7 +83,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("app", actions);
+        insert_action_group ("win", actions);
 
 
         zoomcontroller = new Jorts.ZoomController (this);

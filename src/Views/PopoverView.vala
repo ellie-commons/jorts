@@ -32,6 +32,35 @@ public class Jorts.PopoverView : Gtk.Popover {
     public signal void zoom_changed (Jorts.Zoomkind zoomkind);
     public signal void monospace_changed (bool if_monospace);
 
+    static construct
+    {
+        add_binding_action(Gdk.Key.plus, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_IN, null);
+        add_binding_action(Gdk.Key.equal, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_DEFAULT, null);    
+        add_binding_action(48, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_DEFAULT, null);    
+        add_binding_action(Gdk.Key.minus, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_ZOOM_OUT, null);
+
+        add_binding_action(Gdk.Key.w, Gdk.ModifierType.CONTROL_MASK, Application.ACTION_PREFIX + Application.ACTION_NEW, null);
+        add_binding_action(Gdk.Key.w, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE, null);
+        add_binding_action(Gdk.Key.m, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_MONO, null);    
+        add_binding_action(Gdk.Key.g, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
+        add_binding_action(Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
+        add_binding_action(Gdk.Key.l, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_FOCUS_TITLE, null);
+
+        // Compiler whines about Gdk.Key.1 because name is a number so it doesnt see it.
+        // So we use magic numbers
+        add_binding_action(49, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_1, null);
+        add_binding_action(50, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_2, null);
+        add_binding_action(51, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_3, null);
+        add_binding_action(52, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_4, null);
+        add_binding_action(53, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_5, null);
+        add_binding_action(54, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_6, null);
+        add_binding_action(55, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_7, null);
+        add_binding_action(56, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_8, null);
+        add_binding_action(57, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_9, null);
+        add_binding_action(48, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_0, null);
+    }
+
+
     /****************/
     public PopoverView (Jorts.StickyNoteWindow window) {
         position = Gtk.PositionType.TOP;

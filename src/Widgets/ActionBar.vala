@@ -42,7 +42,7 @@
             )
         };
         delete_item.add_css_class ("themedbutton");
-        delete_item.action_name = Application.ACTION_PREFIX + Application.ACTION_DELETE;
+        delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
 
         /* **** RIGHT **** */
         emojichooser_popover = new Gtk.EmojiChooser ();
