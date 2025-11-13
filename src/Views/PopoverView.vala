@@ -45,7 +45,6 @@ public class Jorts.PopoverView : Gtk.Popover {
         add_binding_action(Gdk.Key.g, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
         add_binding_action(Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
         add_binding_action(Gdk.Key.l, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_FOCUS_TITLE, null);
-        add_binding_action(Gdk.Key.period, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_EMOJI, null);
 
         // Compiler whines about Gdk.Key.1 because name is a number so it doesnt see it.
         // So we use magic numbers
