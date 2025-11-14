@@ -113,7 +113,7 @@ cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
 gtk-theme-name=${theme_name}
 gtk-icon-theme-name=${icon_theme}
-gtk-font-name=Inter 9
+gtk-font-name=Inter Variable Text 9
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle=hintful
