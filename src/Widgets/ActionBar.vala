@@ -45,6 +45,19 @@
         delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
 
         /* **** RIGHT **** */
+        var list_button = new Gtk.Button () {
+            icon_name = "view-list-symbolic",
+            width_request = 32,
+            height_request = 32,
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Control>w"},
+                _("Toggle list")
+            )
+        };
+        list_button.add_css_class ("themedbutton");
+        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_LIST;
+
+
         emojichooser_popover = new Gtk.EmojiChooser ();
 
         emoji_button = new Gtk.MenuButton () {
@@ -80,6 +93,7 @@
         actionbar.pack_start (delete_item);
         actionbar.pack_end (menu_button);
         actionbar.pack_end (emoji_button);
+        actionbar.pack_end (list_button);
 
         handle = new Gtk.WindowHandle () {
             child = actionbar

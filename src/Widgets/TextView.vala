@@ -43,4 +43,26 @@ public class Jorts.TextView : Granite.HyperTextView {
             }
         });
     }
+
+    public void list () {
+        Gtk.TextIter start, end;
+        buffer.get_selection_bounds (out start, out end);
+
+        var first_line = (uint8)start.get_line ();
+        var last_line = (uint8)end.get_line ();
+        debug ("got " + first_line.to_string () + " to " + last_line.to_string ());
+
+        Gtk.TextIter startline;
+        var list_item_start = Application.gsettings.get_string ("list-item-start");
+
+        buffer.begin_user_action ();
+        for (uint8 i = first_line; i <= last_line; i++) {
+
+            debug ("doing line " + i.to_string ());
+            buffer.get_iter_at_line_index (out startline, i, 0);
+            buffer.insert (ref startline, list_item_start, -1);
+        }
+        buffer.end_user_action ();
+
+    }
 }
