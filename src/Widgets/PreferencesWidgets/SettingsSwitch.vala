@@ -12,7 +12,7 @@ public class Jorts.SettingsSwitch : Gtk.Box {
 
     public SettingsSwitch (string name, string explanation, string key) {
         orientation = Gtk.Orientation.HORIZONTAL;
-        spacing = 6;
+        spacing = 5;
 
         var toggle = new Gtk.Switch () {
             halign = Gtk.Align.END,

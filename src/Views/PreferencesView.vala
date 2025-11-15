@@ -12,10 +12,10 @@
 
     construct {
         orientation = VERTICAL;
-        margin_top = 12;
-        margin_bottom = 12;
-        margin_start = 12;
-        margin_end = 12;
+        margin_top = 10;
+        margin_bottom = 10;
+        margin_start = 10;
+        margin_end = 10;
 
         var overlay = new Gtk.Overlay ();
         append (overlay);
@@ -24,10 +24,10 @@
             overlay.add_overlay (toast);
 
             // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, 24) {
-                margin_top = 6,
-                margin_start = 6,
-                margin_end = 6,
+            var settingsbox = new Gtk.Box (VERTICAL, 20) {
+                margin_top = 5,
+                margin_start = 5,
+                margin_end = 5,
                 hexpand = true,
                 vexpand = true,
                 valign = Gtk.Align.START
@@ -57,6 +57,36 @@
                     "hide-bar");
 
                 settingsbox.append (hidebar_box);
+
+
+                /***************************************/
+                /*               lists                 */
+                /***************************************/
+
+                var lists_box = new Gtk.Box (HORIZONTAL, 5);
+
+                var list_entry = new Gtk.Entry () {
+                    halign = Gtk.Align.END,
+                    hexpand = true,
+                    valign = Gtk.Align.CENTER,
+                };
+
+                var list_label = new Granite.HeaderLabel (_("List item symbol")) {
+                    mnemonic_widget = list_entry,
+                    secondary_text = _("Symbol by which to begin each list item")
+                };
+
+                lists_box.append (list_label);
+                lists_box.append (list_entry);
+
+                Application.gsettings.bind (
+                    "list-item-start",
+                    list_entry, "text",
+                    SettingsBindFlags.DEFAULT);
+
+
+                settingsbox.append (lists_box);
+
 
 
                 /****************************************************/
@@ -109,8 +139,8 @@
             /*************************************************/
             // Bar at the bottom
             var actionbar = new Gtk.CenterBox () {
-                margin_start = 6,
-                margin_end = 6,
+                margin_start = 5,
+                margin_end = 5,
                 valign = Gtk.Align.END
             };
             actionbar.set_hexpand (true);
@@ -123,12 +153,6 @@
             );
             actionbar.start_widget = support_button;
 
-            // Reset
-            //reset_button = new Gtk.Button ();
-            //reset_button.set_label ( _("Reset to Default"));
-            //reset_button.tooltip_markup = (_("Reset all settings to defaults"));
-            //actionbar.pack_end (reset_button);
-
             close_button = new Gtk.Button () {
                 width_request = 96,
                 label = _("Close"),
@@ -139,7 +163,26 @@
             };
             actionbar.end_widget = close_button;
 
+            var reset = new Gtk.Button.from_icon_name ("system-reboot") {
+                tooltip_markup = _("Reset all settings to defaults")
+            };
+            reset.clicked.connect (on_reset);
+
+
             append (settingsbox);
             append (actionbar);
+    }
+
+    private void on_reset () {
+        debug ("Resetting settings…");
+
+        string[] keys = {"scribbly-mode-active", "hide-bar"};
+        foreach (var key in keys) {
+            Application.gsettings.reset (key);
+        }
+
+#if !WINDOWS
+        Jorts.Utils.autostart_remove ();
+#endif
     }
 }
