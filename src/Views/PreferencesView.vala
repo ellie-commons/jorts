@@ -67,8 +67,9 @@
 
                 var list_entry = new Gtk.Entry () {
                     halign = Gtk.Align.END,
-                    hexpand = true,
+                    hexpand = false,
                     valign = Gtk.Align.CENTER,
+                    width_request = 15
                 };
 
                 var list_label = new Granite.HeaderLabel (_("List item symbol")) {
@@ -93,13 +94,13 @@
                 /*               Autostart Request                  */
                 /****************************************************/
 #if !WINDOWS
-                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+                var both_buttons = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5) {
                     halign = Gtk.Align.FILL
                 };
 
                 ///TRANSLATORS: Button to autostart the application
                 var set_autostart = new Gtk.Button () {
-                    label = _("Set autostart"),
+                    label = _("Autostart"),
                     valign = Gtk.Align.CENTER
                 };
 
@@ -124,7 +125,7 @@
                 both_buttons.append (set_autostart);
                 both_buttons.append (remove_autostart);
 
-                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
 
                 var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
                     mnemonic_widget = both_buttons,

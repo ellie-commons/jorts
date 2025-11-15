@@ -99,6 +99,7 @@
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
                 <ul>
                     <li>Version 4 to align with Gtk version</li>
+                    <li>Added button to toggle lists, and ability to customize them</li>
                     <li>Ctrl+Scroll to zoom-in, zoom-out</li>
                     <li>More zoom options</li>
                     <li>Keyboard shortcuts work from popover now</li>
@@ -114,7 +115,8 @@
             <issues>
                 <issue url="https://github.com/ellie-commons/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
                 <issue url="https://github.com/ellie-commons/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
-                <issue url="https://github.com/ellie-commons/jorts/issues/78">Fixed absence of Ctrl+scroll</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/78">Added Ctrl+scroll</issue>
+                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
             </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">

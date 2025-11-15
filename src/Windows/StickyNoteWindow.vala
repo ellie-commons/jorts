@@ -250,6 +250,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_zoom_default () {zoomcontroller.zoom_default ();}
     private void action_zoom_in () {zoomcontroller.zoom_in ();}
 
+    // Careful! The keyboard counts from 1 to 10 (0), but the themes are from 0 to 9
     private void action_theme_1 () {popover.color = (Jorts.Themes.all ())[0];}
     private void action_theme_2 () {popover.color = (Jorts.Themes.all ())[1];}
     private void action_theme_3 () {popover.color = (Jorts.Themes.all ())[2];}
