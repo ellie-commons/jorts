@@ -33,6 +33,38 @@
                 valign = Gtk.Align.START
             };
 
+
+                /***************************************/
+                /*               lists                 */
+                /***************************************/
+
+                var lists_box = new Gtk.Box (HORIZONTAL, 5);
+
+                var list_entry = new Gtk.Entry () {
+                    halign = Gtk.Align.END,
+                    hexpand = false,
+                    valign = Gtk.Align.CENTER,
+                    max_width_chars = 5
+                };
+
+                var list_label = new Granite.HeaderLabel (_("List item symbol")) {
+                    mnemonic_widget = list_entry,
+                    secondary_text = _("Prefix by which to begin each item in a list"),
+                    hexpand = true
+                };
+
+                lists_box.append (list_label);
+                lists_box.append (list_entry);
+
+                Application.gsettings.bind (
+                    "list-item-start",
+                    list_entry, "text",
+                    SettingsBindFlags.DEFAULT);
+
+
+                settingsbox.append (lists_box);
+
+
                 /*************************************************/
                 /*              scribbly Toggle                  */
                 /*************************************************/
@@ -57,37 +89,6 @@
                     "hide-bar");
 
                 settingsbox.append (hidebar_box);
-
-
-                /***************************************/
-                /*               lists                 */
-                /***************************************/
-
-                var lists_box = new Gtk.Box (HORIZONTAL, 5);
-
-                var list_entry = new Gtk.Entry () {
-                    halign = Gtk.Align.END,
-                    hexpand = false,
-                    valign = Gtk.Align.CENTER,
-                    width_request = 15
-                };
-
-                var list_label = new Granite.HeaderLabel (_("List item symbol")) {
-                    mnemonic_widget = list_entry,
-                    secondary_text = _("Symbol by which to begin each list item")
-                };
-
-                lists_box.append (list_label);
-                lists_box.append (list_entry);
-
-                Application.gsettings.bind (
-                    "list-item-start",
-                    list_entry, "text",
-                    SettingsBindFlags.DEFAULT);
-
-
-                settingsbox.append (lists_box);
-
 
 
                 /****************************************************/
@@ -142,10 +143,10 @@
             var actionbar = new Gtk.CenterBox () {
                 margin_start = 5,
                 margin_end = 5,
-                valign = Gtk.Align.END
+                valign = Gtk.Align.END,
+                hexpand = true,
+                vexpand = false
             };
-            actionbar.set_hexpand (true);
-            actionbar.set_vexpand (false);
 
             // Monies?
             var support_button = new Gtk.LinkButton.with_label (
@@ -162,13 +163,17 @@
                     _("Close preferences")
                 )
             };
-            actionbar.end_widget = close_button;
 
-            var reset = new Gtk.Button.from_icon_name ("system-reboot") {
-                tooltip_markup = _("Reset all settings to defaults")
+            var reset = new Gtk.Button.from_icon_name ("system-reboot-symbolic") {
+                tooltip_markup = _("Reset all settings to defaults"),
+                valign = Gtk.Align.CENTER
             };
             reset.clicked.connect (on_reset);
 
+            var end_box = new Gtk.Box (HORIZONTAL, 5);
+            end_box.append (reset);
+            end_box.append (close_button);
+            actionbar.end_widget = end_box;
 
             append (settingsbox);
             append (actionbar);
@@ -177,13 +182,14 @@
     private void on_reset () {
         debug ("Resetting settings…");
 
-        string[] keys = {"scribbly-mode-active", "hide-bar"};
+        string[] keys = {"scribbly-mode-active", "hide-bar", "list-item-start"};
         foreach (var key in keys) {
             Application.gsettings.reset (key);
         }
 
 #if !WINDOWS
         Jorts.Utils.autostart_remove ();
+        toast.send_notification ();
 #endif
     }
 }

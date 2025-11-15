@@ -44,7 +44,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         });
     }
 
-    public void list () {
+    public void toggle_list () {
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
 
@@ -52,17 +52,81 @@ public class Jorts.TextView : Granite.HyperTextView {
         var last_line = (uint8)end.get_line ();
         debug ("got " + first_line.to_string () + " to " + last_line.to_string ());
 
-        Gtk.TextIter startline;
         var list_item_start = Application.gsettings.get_string ("list-item-start");
+        var selected_is_list = this.is_list (first_line, last_line, list_item_start);
 
         buffer.begin_user_action ();
-        for (uint8 i = first_line; i <= last_line; i++) {
+        if (selected_is_list)
+        {
+            this.remove_list (first_line, last_line, list_item_start);
 
-            debug ("doing line " + i.to_string ());
-            buffer.get_iter_at_line_index (out startline, i, 0);
-            buffer.insert (ref startline, list_item_start, -1);
+        } else {
+            this.set_list (first_line, last_line, list_item_start);
         }
         buffer.end_user_action ();
-
     }
+
+    /**
+     * Add the list prefix only to lines who hasnt it already
+     */
+    private bool has_prefix (uint8 line_number, string list_item_start) {
+        Gtk.TextIter start, end;
+        buffer.get_iter_at_line_offset (out start, line_number, 0);
+
+        end = start.copy ();
+        end.forward_to_line_end ();
+
+        var text_in_line = buffer.get_slice (start, end, false);
+
+        return text_in_line.has_prefix (list_item_start);
+    }
+
+    /**
+     * Checks whether Line x to Line y are all bulleted.
+     */
+    private bool is_list (uint8 first_line, uint8 last_line, string list_item_start) {
+
+        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+            debug ("doing line " + line_number.to_string ());
+
+            if (!this.has_prefix (line_number, list_item_start)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Add the list prefix only to lines who hasnt it already
+     */
+    private void set_list (uint8 first_line, uint8 last_line, string list_item_start) {
+        Gtk.TextIter line_start;
+        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+
+            debug ("doing line " + line_number.to_string ());
+            if (!this.has_prefix (line_number, list_item_start)) {
+                buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+                buffer.insert (ref line_start, list_item_start, -1);
+            }
+        }
+    }
+
+    /**
+     * Remove list prefix from line x to line y. Presuppose it is there
+     */
+    private void remove_list (uint8 first_line, uint8 last_line, string list_item_start) {
+        Gtk.TextIter line_start, prefix_end;
+        var remove_range = list_item_start.length;
+
+        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+
+            debug ("doing line " + line_number.to_string ());
+            buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+            buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
+            buffer.delete (ref line_start, ref prefix_end);
+        }
+    }
+
+
 }

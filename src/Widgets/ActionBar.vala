@@ -50,12 +50,12 @@
             width_request = 32,
             height_request = 32,
             tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Control>w"},
+                {"<Shift>F12"},
                 _("Toggle list")
             )
         };
         list_button.add_css_class ("themedbutton");
-        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_LIST;
+        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
 
 
         emojichooser_popover = new Gtk.EmojiChooser ();
