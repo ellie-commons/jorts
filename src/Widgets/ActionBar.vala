@@ -12,7 +12,7 @@
  public class Jorts.ActionBar : Granite.Bin {
 
     public Gtk.ActionBar actionbar;
-    private Gtk.Button list_button;
+    public Gtk.Button list_button;
     public Gtk.MenuButton emoji_button;
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;

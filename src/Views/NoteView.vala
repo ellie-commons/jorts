@@ -68,6 +68,8 @@
         emojichooser_popover.show.connect (randomize_emote_button);
         emojichooser_popover.emoji_picked.connect (on_emoji_picked);
         //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
+
+        //textview.bind_property ("on_list_item", actionbar.list_button, "active", GLib.BindingFlags.DEFAULT);
     }
 
     // Randomize the button emoji when clicked

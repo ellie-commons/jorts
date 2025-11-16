@@ -13,6 +13,7 @@ public class Jorts.TextView : Granite.HyperTextView {
 
     private Gtk.EventControllerKey keyboard;
     private string list_item_start;
+    public bool on_list_item {public get; private set;}
 
     public string text {
         owned get {return buffer.text;}
@@ -31,14 +32,16 @@ public class Jorts.TextView : Granite.HyperTextView {
         set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
 
         list_item_start = Application.gsettings.get_string ("list-item-start");
-        //Application.gsettings.bind ("list-item-start", this, "list-item-start", GLib.SettingsBindFlags.GET);
+        Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
 
         keyboard = new Gtk.EventControllerKey ();
         add_controller (keyboard);
         keyboard.key_pressed.connect (on_key_pressed);
 
-        move_cursor.connect (on_cursor_changed);
-        Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
+        //TODO: Buggy. Clicking anywhere brings it out of whack
+        // on_cursor_changed ();
+        // move_cursor.connect_after (on_cursor_changed);
+
     }
 
     public void paste () {
@@ -203,11 +206,10 @@ public class Jorts.TextView : Granite.HyperTextView {
     private void on_cursor_changed () {
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
-        start.backward_line ();
         var line_number = (uint8)start.get_line ();
 
-        if (this.has_prefix (line_number)) {
-            print ("YES THIS IS LIST");
-        }
+        on_list_item = this.has_prefix (line_number);
+
+        print ("THIS IS LIST. HAS " + on_list_item.to_string () + "ON LINE " + line_number.to_string ());
     }
 }
