@@ -36,9 +36,8 @@ public class Jorts.TextView : Granite.HyperTextView {
         keyboard = new Gtk.EventControllerKey ();
         add_controller (keyboard);
         keyboard.key_pressed.connect (on_key_pressed);
-        keyboard.key_released.connect (on_key_released);
 
-        buffer.notify["cursor_position"].connect (on_cursor_changed);
+        move_cursor.connect (on_cursor_changed);
         Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
     }
 
@@ -145,14 +144,14 @@ public class Jorts.TextView : Granite.HyperTextView {
         buffer.delete (ref line_start, ref prefix_end);
     }
 
-
     /**
      * Handler whenever a key is pressed, to see if user needs something and get ahead
      * Some local stuff is deduplicated in the Ifs, because i do not like the idea of getting computation done not needed 98% of the time
      */    
     private bool on_key_pressed  (uint keyval, uint keycode, Gdk.ModifierType state) {
         print ("char typed");
-                // User didnt like list being expanded. Undo that one.
+        
+        // If backspace on a prefix: Delete the prefix.
         if (keyval == Gdk.Key.BackSpace) {
             print ("backspace");
 
@@ -174,27 +173,27 @@ public class Jorts.TextView : Granite.HyperTextView {
                     buffer.end_user_action ();
                 }
             }
-        }
 
-        return false;
-    }
+            return false;
 
-    private void on_key_released (uint keyval, uint keycode, Gdk.ModifierType state) {
-
-        // User did Enter
-        if (keyval == Gdk.Key.Return) {
+        // If Enter on a list item, add a list prefix on the new line
+        } else if (keyval == Gdk.Key.Return) {
             Gtk.TextIter start, end;
             buffer.get_selection_bounds (out start, out end);
-            start.backward_line ();
             var line_number = (uint8)start.get_line ();
 
             if (this.has_prefix (line_number)) {
 
                 buffer.begin_user_action ();
-                buffer.insert_at_cursor (list_item_start, -1);
+                buffer.insert_at_cursor ("\n" + list_item_start, -1);
                 buffer.end_user_action ();
+
+                return true;
             }
         }
+
+        // Nothing, carry on
+        return false;
     }
 
     private void on_prefix_changed () {
