@@ -33,11 +33,15 @@ public class Jorts.TextView : Granite.HyperTextView {
         list_item_start = Application.gsettings.get_string ("list-item-start");
         //Application.gsettings.bind ("list-item-start", this, "list-item-start", GLib.SettingsBindFlags.GET);
 
+        Application.gsettings.changed["list-item-start"].connect (
+            () => {list_item_start = Application.gsettings.get_string ("list-item-start");});
+
         keyboard = new Gtk.EventControllerKey ();
         add_controller (keyboard);
-
         keyboard.key_pressed.connect (on_key_pressed);
         keyboard.key_released.connect (on_key_released);
+
+        buffer.notify["cursor_position"].connect (on_cursor_changed);
     }
 
     public void paste () {
@@ -181,7 +185,6 @@ public class Jorts.TextView : Granite.HyperTextView {
 
         // User did Enter
         if (keyval == Gdk.Key.Return) {
-
             Gtk.TextIter start, end;
             buffer.get_selection_bounds (out start, out end);
             start.backward_line ();
@@ -194,7 +197,16 @@ public class Jorts.TextView : Granite.HyperTextView {
                 buffer.end_user_action ();
             }
         }
+    }
 
+    private void on_cursor_changed () {
+        Gtk.TextIter start, end;
+        buffer.get_selection_bounds (out start, out end);
+        start.backward_line ();
+        var line_number = (uint8)start.get_line ();
 
+            if (this.has_prefix (line_number)) {
+                print ("YES THIS IS LIST");
+            }
     }
 }

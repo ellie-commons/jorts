@@ -44,12 +44,13 @@
                     halign = Gtk.Align.END,
                     hexpand = false,
                     valign = Gtk.Align.CENTER,
+                    max_length = 5,
                     max_width_chars = 5
                 };
 
                 var list_label = new Granite.HeaderLabel (_("List item symbol")) {
                     mnemonic_widget = list_entry,
-                    secondary_text = _("Prefix by which to begin each item in a list"),
+                    secondary_text = _("Prefix by which to begin each item in a list. If there is no prefix, the toggle list button will be hidden"),
                     hexpand = true
                 };
 

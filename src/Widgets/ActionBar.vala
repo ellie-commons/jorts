@@ -57,6 +57,9 @@
         list_button.add_css_class ("themedbutton");
         list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
 
+        // Hide the list button if user has specified no list item symbol
+        Application.gsettings.changed["list-item-start"].connect (
+            () => {list_button.visible = (Application.gsettings.get_string ("list-item-start") != "");});
 
         emojichooser_popover = new Gtk.EmojiChooser ();
 
