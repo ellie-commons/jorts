@@ -11,6 +11,9 @@
 */
 public class Jorts.TextView : Granite.HyperTextView {
 
+    private Gtk.EventControllerKey keyboard;
+    private string list_item_start;
+
     public string text {
         owned get {return buffer.text;}
         set {buffer.text = value;}
@@ -27,7 +30,14 @@ public class Jorts.TextView : Granite.HyperTextView {
         set_vexpand (true);
         set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
 
-        //Application.gsettings.bind ("scribbly-mode-active", this, "scribbly", SettingsBindFlags.DEFAULT);
+        list_item_start = Application.gsettings.get_string ("list-item-start");
+        //Application.gsettings.bind ("list-item-start", this, "list-item-start", GLib.SettingsBindFlags.GET);
+
+        keyboard = new Gtk.EventControllerKey ();
+        add_controller (keyboard);
+
+        keyboard.key_pressed.connect (on_key_pressed);
+        keyboard.key_released.connect (on_key_released);
     }
 
     public void paste () {
@@ -52,16 +62,15 @@ public class Jorts.TextView : Granite.HyperTextView {
         var last_line = (uint8)end.get_line ();
         debug ("got " + first_line.to_string () + " to " + last_line.to_string ());
 
-        var list_item_start = Application.gsettings.get_string ("list-item-start");
         var selected_is_list = this.is_list (first_line, last_line, list_item_start);
 
         buffer.begin_user_action ();
         if (selected_is_list)
         {
-            this.remove_list (first_line, last_line, list_item_start);
+            this.remove_list (first_line, last_line);
 
         } else {
-            this.set_list (first_line, last_line, list_item_start);
+            this.set_list (first_line, last_line);
         }
         buffer.end_user_action ();
     }
@@ -69,7 +78,7 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Add the list prefix only to lines who hasnt it already
      */
-    private bool has_prefix (uint8 line_number, string list_item_start) {
+    private bool has_prefix (uint8 line_number) {
         Gtk.TextIter start, end;
         buffer.get_iter_at_line_offset (out start, line_number, 0);
 
@@ -89,7 +98,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
             debug ("doing line " + line_number.to_string ());
 
-            if (!this.has_prefix (line_number, list_item_start)) {
+            if (!this.has_prefix (line_number)) {
                 return false;
             }
         }
@@ -100,12 +109,12 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Add the list prefix only to lines who hasnt it already
      */
-    private void set_list (uint8 first_line, uint8 last_line, string list_item_start) {
+    private void set_list (uint8 first_line, uint8 last_line) {
         Gtk.TextIter line_start;
         for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
 
             debug ("doing line " + line_number.to_string ());
-            if (!this.has_prefix (line_number, list_item_start)) {
+            if (!this.has_prefix (line_number)) {
                 buffer.get_iter_at_line_offset (out line_start, line_number, 0);
                 buffer.insert (ref line_start, list_item_start, -1);
             }
@@ -115,18 +124,77 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Remove list prefix from line x to line y. Presuppose it is there
      */
-    private void remove_list (uint8 first_line, uint8 last_line, string list_item_start) {
-        Gtk.TextIter line_start, prefix_end;
-        var remove_range = list_item_start.length;
-
+    private void remove_list (uint8 first_line, uint8 last_line) {
         for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
-
-            debug ("doing line " + line_number.to_string ());
-            buffer.get_iter_at_line_offset (out line_start, line_number, 0);
-            buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
-            buffer.delete (ref line_start, ref prefix_end);
+            remove_prefix (line_number);
         }
     }
 
+    /**
+     * Remove list prefix from line x to line y. Presuppose it is there
+     */
+    private void remove_prefix (uint8 line_number) {
+        Gtk.TextIter line_start, prefix_end;
+        var remove_range = list_item_start.length;
 
+        debug ("doing line " + line_number.to_string ());
+        buffer.get_iter_at_line_offset (out line_start, line_number, 0);
+        buffer.get_iter_at_line_offset (out prefix_end, line_number, remove_range);
+        buffer.delete (ref line_start, ref prefix_end);
+    }
+
+
+    /**
+     * Handler whenever a key is pressed, to see if user needs something and get ahead
+     * Some local stuff is deduplicated in the Ifs, because i do not like the idea of getting computation done not needed 98% of the time
+     */    
+    private bool on_key_pressed  (uint keyval, uint keycode, Gdk.ModifierType state) {
+        print ("char typed");
+                // User didnt like list being expanded. Undo that one.
+        if (keyval == Gdk.Key.BackSpace) {
+            print ("backspace");
+
+            Gtk.TextIter start, end;
+            buffer.get_selection_bounds (out start, out end);
+
+            var line_number = (uint8)start.get_line ();
+
+            if (has_prefix (line_number)) {
+
+                buffer.get_iter_at_line_offset (out start, line_number, 0);
+                var text_in_line = buffer.get_slice (start, end, false);
+
+                if (text_in_line == list_item_start) {
+
+                    buffer.begin_user_action ();
+                    buffer.delete (ref start, ref end);
+                    buffer.insert_at_cursor ("\n", -1);
+                    buffer.end_user_action ();
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private void on_key_released (uint keyval, uint keycode, Gdk.ModifierType state) {
+
+        // User did Enter
+        if (keyval == Gdk.Key.Return) {
+
+            Gtk.TextIter start, end;
+            buffer.get_selection_bounds (out start, out end);
+            start.backward_line ();
+            var line_number = (uint8)start.get_line ();
+
+            if (this.has_prefix (line_number)) {
+
+                buffer.begin_user_action ();
+                buffer.insert_at_cursor (list_item_start, -1);
+                buffer.end_user_action ();
+            }
+        }
+
+
+    }
 }
