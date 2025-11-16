@@ -100,6 +100,7 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("win.action_toggle_mono", {"<Control>m"});
         set_accels_for_action ("win.action_focus_title", {"<Control>L"});
         set_accels_for_action ("win.action_show_emoji", {"<Control>period"});
+        set_accels_for_action ("win.action_toggle_list", {"<Shift>F12"});
         set_accels_for_action ("win.action_show_menu", {"<Control>G", "<Control>O"});
 
         set_accels_for_action ("win.action_theme_1", {"<Alt>1"});

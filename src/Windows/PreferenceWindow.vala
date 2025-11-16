@@ -69,13 +69,4 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         //prefview.reset_button.clicked.connect (on_reset);
         prefview.close_button.clicked.connect (() => {close ();});
     }
-
-/*      private void on_reset () {
-        debug ("Resetting settings…");
-
-        string[] keys = {"scribbly-mode-active", "hide-bar"};
-        foreach (var key in keys) {
-            Application.gsettings.reset (key);
-        }
-    }  */
 }

@@ -12,6 +12,7 @@
  public class Jorts.ActionBar : Granite.Bin {
 
     public Gtk.ActionBar actionbar;
+    public Gtk.Button list_button;
     public Gtk.MenuButton emoji_button;
     public Gtk.EmojiChooser emojichooser_popover;
     public Gtk.MenuButton menu_button;
@@ -45,6 +46,18 @@
         delete_item.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_DELETE;
 
         /* **** RIGHT **** */
+        list_button = new Gtk.Button () {
+            icon_name = "view-list-symbolic",
+            width_request = 32,
+            height_request = 32,
+            tooltip_markup = Granite.markup_accel_tooltip (
+                {"<Shift>F12"},
+                _("Toggle list")
+            )
+        };
+        list_button.add_css_class ("themedbutton");
+        list_button.action_name = StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_TOGGLE_LIST;
+
         emojichooser_popover = new Gtk.EmojiChooser ();
 
         emoji_button = new Gtk.MenuButton () {
@@ -80,6 +93,7 @@
         actionbar.pack_start (delete_item);
         actionbar.pack_end (menu_button);
         actionbar.pack_end (emoji_button);
+        actionbar.pack_end (list_button);
 
         handle = new Gtk.WindowHandle () {
             child = actionbar
@@ -89,6 +103,11 @@
 
         // Randomize-skip emoji icon
         emojichooser_popover.show.connect (on_emoji_popover);
+
+        // Hide the list button if user has specified no list item symbol
+        on_prefix_changed ();
+        Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
+
     }
 
     /**
@@ -108,5 +127,9 @@
                 emoji_button.get_icon_name ()
             )
         );
+    }
+
+    private void on_prefix_changed () {
+        list_button.visible = (Application.gsettings.get_string ("list-item-start") != "");
     }
 }
