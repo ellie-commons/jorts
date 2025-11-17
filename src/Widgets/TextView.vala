@@ -150,10 +150,9 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Handler whenever a key is pressed, to see if user needs something and get ahead
      * Some local stuff is deduplicated in the Ifs, because i do not like the idea of getting computation done not needed 98% of the time
-     */    
+     */
     private bool on_key_pressed  (uint keyval, uint keycode, Gdk.ModifierType state) {
-        print ("char typed");
-        
+
         // If backspace on a prefix: Delete the prefix.
         if (keyval == Gdk.Key.BackSpace) {
             print ("backspace");
