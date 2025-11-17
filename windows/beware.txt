@@ -15,8 +15,9 @@ Note about this one: Notes are not deleted on uninstall. Do not worry you wont l
  - There is no setting to enable/disable Jorts starting with Windows.
 The Installer sets it once, then it is between you and God.
 
- - There may be some very edge case bugs.
+ - There may be some specific bugs.
 As i write this, the looking glass in the search field of the emoji chooser does not show up. I dont fucking know why.
+The app is starting slowly, because Windows has to load a lot of libraries Linux kinda has loaded already by default.
 
 ====
 If you report bugs on Github, please mention that you are using the app on Windows, and ideally your level of technical knowledge so we can respond in a way that does not make you dissociate
