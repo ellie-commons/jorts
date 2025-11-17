@@ -158,7 +158,7 @@ BrandingText "Jorts ${version}, ${publisher} 2025"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
-!define MUI_FINISHPAGE_RUN "\$SMPROGRAMS\\${app_name}\\${app_name}.lnk"
+!define MUI_FINISHPAGE_RUN "\$INSTDIR\bin\io.github.ellie_commons.jorts.exe"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY

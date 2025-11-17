@@ -128,7 +128,7 @@ public class Jorts.NoteManager : Object {
         application.remove_window ((Gtk.Window)note);
         note.close ();
         note = null;
-        save_all ();
+        immediately_save ();
 	}
 
     /*************************************************/
@@ -152,6 +152,7 @@ public class Jorts.NoteManager : Object {
 
     private void immediately_save () {
         var array = new Json.Array ();
+        print (open_notes.size.to_string ());
 
         foreach (Jorts.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
