@@ -86,20 +86,8 @@ cat windows/loaders.cache > ${deploy_dir}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cach
 # TODO: Abstract this into a script. A better coded one.
 mkdir -pv ${deploy_dir}/share/icons/elementary
 
-mkdir -p /mingw64/share/icons/elementary/actions/ ${deploy_dir}/share/icons/elementary/
-mkdir -p /mingw64/share/icons/elementary/actions@2x/ ${deploy_dir}/share/icons/elementary/
-mkdir -p /mingw64/share/icons/elementary/actions@3x/ ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/actions/symbolic ${deploy_dir}/share/icons/elementary/actions/
-cp -rnv /mingw64/share/icons/elementary/actions@2x/symbolic ${deploy_dir}/share/icons/elementary/actions@2x/
-cp -rnv /mingw64/share/icons/elementary/actions@3x/symbolic ${deploy_dir}/share/icons/elementary/actions@3x/
-
-mkdir -p /mingw64/share/icons/elementary/status/ ${deploy_dir}/share/icons/elementary/
-mkdir -p /mingw64/share/icons/elementary/status@2x/ ${deploy_dir}/share/icons/elementary/
-mkdir -p /mingw64/share/icons/elementary/status@3x/ ${deploy_dir}/share/icons/elementary/
-cp -rnv /mingw64/share/icons/elementary/status/symbolic ${deploy_dir}/share/icons/elementary/status/
-cp -rnv /mingw64/share/icons/elementary/status@2x/symbolic ${deploy_dir}/share/icons/elementary/status@2x/
-cp -rnv /mingw64/share/icons/elementary/status@3x/symbolic ${deploy_dir}/share/icons/elementary/status@3x/
-
+cp -rnv /mingw64/share/icons/elementary/actions* ${deploy_dir}/share/icons/elementary/
+cp -rnv /mingw64/share/icons/elementary/status* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/emotes* ${deploy_dir}/share/icons/elementary/
 cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/elementary/
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
@@ -120,8 +108,7 @@ gtk-xft-hintstyle=hintful
 gtk-xft-rgba=rgb
 EOF
 
-#Doesnt seem needed, but keep around just in case
-#glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
+glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 
 #================================================================
 # Create NSIS script

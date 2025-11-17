@@ -18,7 +18,7 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "Jorts Installer"
-BrandingText "Jorts 4.0.0, Ellie-Commons 2025"
+BrandingText "Jorts 4.0.0, ellie-commons 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to Jorts setup"
@@ -29,10 +29,9 @@ BrandingText "Jorts 4.0.0, Ellie-Commons 2025"
 
 !define MUI_FINISHPAGE_LINK "Source code and wiki"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/ellie-commons/jorts"
-!define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Jorts\Jorts.lnk"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\bin\io.github.ellie_commons.jorts.exe"
 
 !insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_LICENSE "beware.txt"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
@@ -106,7 +105,7 @@ Section "Install"
     SetOutPath "$LOCALAPPDATA\Microsoft\Windows\Fonts"
     File /r "fonts\*"
     WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Redacted Script Regular (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\RedactedScript-Regular.ttf"
-    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Inter Variable (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
+    WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\Fonts" "Inter (TrueType)" "$LOCALAPPDATA\Microsoft\Windows\Fonts\InterVariable.ttf"
     SetOutPath "$INSTDIR"
 
     ; Start menu
@@ -126,9 +125,9 @@ Section "Install"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "DisplayIcon" "$INSTDIR\icons\icon.ico"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "InstallLocation" "$INSTDIR\"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "UninstallString" "$INSTDIR\Uninstall.exe"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "Ellie-Commons"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "Publisher" "ellie-commons"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "URLInfoAbout" "https://github.com/ellie-commons/jorts"
-    WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "EstimatedSize" "0x000220EC" ;139,5MB
+    WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Jorts" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
 Section "Uninstall"
