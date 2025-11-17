@@ -32,6 +32,7 @@ BrandingText "Jorts 4.0.0, Ellie-Commons 2025"
 !define MUI_FINISHPAGE_RUN "$SMPROGRAMS\Jorts\Jorts.lnk"
 
 !insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_LICENSE "beware.txt"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
