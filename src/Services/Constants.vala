@@ -24,7 +24,7 @@ namespace Jorts.Constants {
 #endif
 
     // in ms
-    const int DEBOUNCE                   = 1000;
+    const int DEBOUNCE                   = 750;
 
     // We need to say stop at some point
     const uint16 ZOOM_MAX                   = 300;
