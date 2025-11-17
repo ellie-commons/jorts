@@ -35,7 +35,7 @@ public class Jorts.NoteManager : Object {
     * NoteManager is also created too early by the app for new windows
     */    
     public void init () {
-        debug ("[MANAGER] Opening all sticky notes now!");
+        debug ("Opening all sticky notes now!");
         Json.Array loaded_data = storage.load ();
 
         if (loaded_data.get_length () == 0) {
@@ -65,7 +65,7 @@ public class Jorts.NoteManager : Object {
     * If we have data, nice, just load it into a new instance. Else we do a lil new note
     */
     public void create_note (NoteData? data = null) {
-        debug ("[MANAGER] Lets do a note");
+        debug ("Lets do a note");
         Jorts.StickyNoteWindow note;
 
         if (data != null) {
@@ -92,7 +92,7 @@ public class Jorts.NoteManager : Object {
     * When user asked for a new note and for it to be pasted in
     */
     public void from_clipboard () {
-        debug ("[MANAGER] Creating and loading from clipboard…");
+        debug ("Creating and loading from clipboard…");
         print ("clipboard!");
         Jorts.StickyNoteWindow note;
 
@@ -152,7 +152,6 @@ public class Jorts.NoteManager : Object {
 
     private void immediately_save () {
         var array = new Json.Array ();
-        print (open_notes.size.to_string ());
 
         foreach (Jorts.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
@@ -168,7 +167,7 @@ public class Jorts.NoteManager : Object {
     * Handler to add or remove CSS animations from all active notes
     */
     public void on_reduceanimation_changed () {
-        debug ("[MANAGER] Reduce animation changed!");
+        debug ("Reduce animation changed!");
 
         if (Gtk.Settings.get_default ().gtk_enable_animations) {
             foreach (var window in open_notes) {
