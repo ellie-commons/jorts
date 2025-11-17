@@ -32,7 +32,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
         var mono_default_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Default")),
             tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_MONO,
+                {"<Control>m"},
                 _("Use default text font")
             ),
             active = true
@@ -41,7 +41,7 @@ public class Jorts.MonospaceBox : Gtk.Box {
         mono_monospace_toggle = new Gtk.ToggleButton () {
             child = new Gtk.Label (_("Monospace")),
                         tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_MONO,
+                {"<Control>m"},
                 _("Use monospaced font")
             )
         };

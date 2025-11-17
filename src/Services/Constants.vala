@@ -30,43 +30,15 @@ namespace Jorts.Constants {
     const uint16 ZOOM_MAX                   = 300;
     const uint16 DEFAULT_ZOOM               = 100;
     const uint16 ZOOM_MIN                   = 20;
-    const bool DEFAULT_MONO               = false;
+    const bool DEFAULT_MONO                 = false;
 
     // For new stickies
     const int DEFAULT_WIDTH              = 290;
     const int DEFAULT_HEIGHT             = 320;
 
     // New preference window
-    const int DEFAULT_PREF_WIDTH         = 550;
-    const int DEFAULT_PREF_HEIGHT        = 310;
-
-    /*************************************************/
-    // Shortcuts
-    const string[] ACCELS_ZOOM_DEFAULT  = { "<Control>equal", "<Control>0", "<Control>KP_0" };
-    const string[] ACCELS_ZOOM_IN       = { "<Control>plus", "<Control>KP_Add" };
-    const string[] ACCELS_ZOOM_OUT      = { "<Control>minus", "<Control>KP_Subtract" };
-
-    const string ACTION_PREFIX   = "app.";
-    const string ACTION_NEW      = "action_new";
-    const string ACTION_DELETE   = "action_delete";
-    const string ACTION_SAVE    = "action_delete";
-    const string ACTION_QUIT   = "action_quit";
-
-    const string ACTION_ZOOM_OUT = "zoom_out";
-    const string ACTION_ZOOM_DEFAULT = "zoom_default";
-    const string ACTION_ZOOM_IN = "zoom_in";
-    const string ACTION_TOGGLE_SCRIBBLY = "toggle_scribbly";
-
-    const string[] ACCELS_NEW =     {"<Control>n"};
-    const string[] ACCELS_DELETE =     {"<Control>w"};
-    const string[] ACCELS_SAVE =     {"<Control>s"};
-    const string[] ACCELS_QUIT =     {"<Control>q"};
-    const string[] ACCELS_SCRIBBLY =     {"<Control>h"};
-    const string[] ACCELS_EMOTE =     {"<Control>period"};
-    const string[] ACCELS_MENU =     {"<Control>g", "<Control>o"};
-    const string[] ACCELS_MONO =     {"<Control>m"};
-
-
+    const int DEFAULT_PREF_WIDTH         = 570;
+    const int DEFAULT_PREF_HEIGHT        = 340;
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {

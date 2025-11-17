@@ -1,11 +1,11 @@
 src/Views/NoteView.vala
 src/Widgets/EditableLabel.vala
 src/Widgets/TextView.vala
-src/Views/PopoverView.vala
 src/Widgets/ActionBar.vala
 src/Widgets/PopoverWidgets/ColorBox.vala
 src/Widgets/PopoverWidgets/MonospaceBox.vala
 src/Widgets/PopoverWidgets/ZoomBox.vala
+src/Widgets/Popover.vala
 src/Objects/Themes.vala
 src/Utils/Random.vala
 src/Utils/Libportal.vala

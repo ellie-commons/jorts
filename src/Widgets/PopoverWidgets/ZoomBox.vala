@@ -38,21 +38,21 @@ public class Jorts.ZoomBox : Gtk.Box {
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_OUT,
+                {"<Control>minus", "<Control>KP_Subtract"},
                 _("Zoom out")
                 )
             };
 
         zoom_default_button = new Gtk.Button () {
             tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_DEFAULT,
+                { "<Control>equal", "<Control>0", "<Control>KP_0" },
                 _("Default zoom level")
                 )
             };
 
         var zoom_in_button = new Gtk.Button.from_icon_name ("zoom-in-symbolic") {
             tooltip_markup = Granite.markup_accel_tooltip (
-                Jorts.Constants.ACCELS_ZOOM_IN,
+                {"<Control>plus", "<Control>KP_Add"},
                 _("Zoom in")
                 )
             };

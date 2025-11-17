@@ -21,8 +21,8 @@ sources = files (
     'Widgets' / 'PopoverWidgets' / 'MonospaceBox.vala',
     'Widgets' / 'PopoverWidgets' / 'ZoomBox.vala',
     'Widgets' / 'PreferencesWidgets' / 'SettingsSwitch.vala',
+    'Widgets' / 'Popover.vala',
 
-    'Views' / 'PopoverView.vala',
     'Views' / 'PreferencesView.vala',
     'Views' / 'NoteView.vala',
 
