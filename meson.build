@@ -20,6 +20,8 @@ if variant == 'pride'
     vala_flags = ['--define', 'PRIDE']
 elif variant == 'halloween'
     vala_flags = ['--define', 'HALLOWEEN']
+elif variant == 'classic'
+    vala_flags = ['--define', 'CLASSIC']
 else
     vala_flags = ['--define', 'DEFAULT']
 endif

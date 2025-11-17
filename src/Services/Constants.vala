@@ -17,6 +17,8 @@ namespace Jorts.Constants {
     // signature theme
 #if HALLOWEEN
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.ORANGE;
+#elif CLASSIC
+    const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BANANA;
 #else
     const Jorts.Themes DEFAULT_THEME    = Jorts.Themes.BLUEBERRY;
 #endif
