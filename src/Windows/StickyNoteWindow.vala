@@ -244,7 +244,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_show_menu () {view.menu_button.activate ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
-    private void action_toggle_list () {view.textview.toggle_list ();}
+    private void action_toggle_list () {view.textview.toggle_list (); set_focus (view.textview);}
 
     private void action_zoom_out () {zoomcontroller.zoom_out ();}
     private void action_zoom_default () {zoomcontroller.zoom_default ();}
