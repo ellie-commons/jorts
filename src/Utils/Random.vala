@@ -18,23 +18,6 @@ namespace Jorts.Utils {
 
     /*************************************************/
     /**
-    * Used for new notes without data. Optionally allows to skip one
-    * This avoids generating notes "randomly" with the same themes, which would be boring
-    */
-    public Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
-        Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
-        themes.add_all_array (Jorts.Themes.all ());
-
-        if (skip_theme != null) {
-            themes.remove (skip_theme);
-        }
-
-        var random_in_range = Random.int_range (0, themes.size);
-        return themes[random_in_range];
-    }
-
-    /*************************************************/
-    /**
     * Placeholders for titles
     */
     ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding 

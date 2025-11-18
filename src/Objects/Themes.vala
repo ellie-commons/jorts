@@ -19,7 +19,8 @@ public enum Jorts.Themes {
     BUBBLEGUM,
     GRAPE,
     COCOA,
-    SLATE;
+    SLATE,
+    IDK;
 
     /*************************************************/
     /**
@@ -37,6 +38,7 @@ public enum Jorts.Themes {
             case GRAPE:         return "GRAPE";
             case COCOA:         return "COCOA";
             case SLATE:         return "SLATE";
+            case IDK:           return (Jorts.Themes.random_theme (NoteData.latest_theme)).to_string ();
             default: return "BLUEBERRY";
         }
     }
@@ -66,6 +68,7 @@ public enum Jorts.Themes {
             case GRAPE:         return _("Grape");
             case COCOA:         return _("Cocoa");
             case SLATE:         return _("Slate");
+            case IDK:           return _("No preference, random each time");
             default:            return _("Blueberry");
         }
     }
@@ -84,5 +87,22 @@ public enum Jorts.Themes {
     */
     public static string[] all_string () {
         return {"BLUEBERRY", "MINT", "LIME", "BANANA", "ORANGE", "STRAWBERRY", "BUBBLEGUM", "GRAPE", "COCOA", "SLATE"};
+    }
+
+    /*************************************************/
+    /**
+    * Used for new notes without data. Optionally allows to skip one
+    * This avoids generating notes "randomly" with the same themes, which would be boring
+    */
+    public static Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
+        Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
+        themes.add_all_array (Jorts.Themes.all ());
+
+        if (skip_theme != null) {
+            themes.remove (skip_theme);
+        }
+
+        var random_in_range = Random.int_range (0, themes.size);
+        return themes[random_in_range];
     }
 }
