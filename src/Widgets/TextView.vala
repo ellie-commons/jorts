@@ -151,7 +151,7 @@ public class Jorts.TextView : Granite.HyperTextView {
      * Handler whenever a key is pressed, to see if user needs something and get ahead
      * Some local stuff is deduplicated in the Ifs, because i do not like the idea of getting computation done not needed 98% of the time
      */
-    private bool on_key_pressed  (uint keyval, uint keycode, Gdk.ModifierType state) {
+    private bool on_key_pressed (uint keyval, uint keycode, Gdk.ModifierType state) {
 
         // If backspace on a prefix: Delete the prefix.
         if (keyval == Gdk.Key.BackSpace) {
@@ -202,7 +202,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         list_item_start = Application.gsettings.get_string ("list-item-start");
     }
 
-    private void on_cursor_changed () {
+/*      private void on_cursor_changed () {
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
         var line_number = (uint8)start.get_line ();
@@ -210,5 +210,5 @@ public class Jorts.TextView : Granite.HyperTextView {
         on_list_item = this.has_prefix (line_number);
 
         print ("THIS IS LIST. HAS " + on_list_item.to_string () + "ON LINE " + line_number.to_string ());
-    }
+    }  */
 }

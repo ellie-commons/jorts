@@ -103,17 +103,6 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("win.action_toggle_list", {"<Shift>F12"});
         set_accels_for_action ("win.action_show_menu", {"<Control>G", "<Control>O"});
 
-        set_accels_for_action ("win.action_theme_1", {"<Alt>1"});
-        set_accels_for_action ("win.action_theme_2", {"<Alt>2"});
-        set_accels_for_action ("win.action_theme_3", {"<Alt>3"});
-        set_accels_for_action ("win.action_theme_4", {"<Alt>4"});
-        set_accels_for_action ("win.action_theme_5", {"<Alt>5"});
-        set_accels_for_action ("win.action_theme_6", {"<Alt>6"});
-        set_accels_for_action ("win.action_theme_7", {"<Alt>7"});
-        set_accels_for_action ("win.action_theme_8", {"<Alt>8"});
-        set_accels_for_action ("win.action_theme_9", {"<Alt>9"});
-        set_accels_for_action ("win.action_theme_0", {"<Alt>0", "<Alt>KP_0"});
-
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();

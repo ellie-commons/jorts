@@ -138,43 +138,6 @@ window.s300 editablelabel {font-size: 305%;}
 window.s300 editablelabel.editing {font-size: 300%;}
 
 
-/* ALL the colorpills */
-
-colorpill.blueberry {background-color: @BLUEBERRY_300;}
-colorpill.blueberry:hover {border: 1px solid @BLUEBERRY_900;}
-
-colorpill.mint {background-color: @MINT_300;}
-colorpill.mint:hover {border: 1px solid @MINT_900;}
-
-colorpill.lime {background-color: @LIME_300;}
-colorpill.lime:hover {border: 1px solid @LIME_900;}
-
-colorpill.banana {background-color: @BANANA_300;}
-colorpill.banana:hover {border: 1px solid @BANANA_900;}
-
-colorpill.strawberry {background-color: @STRAWBERRY_300;}
-colorpill.strawberry:hover {border: 1px solid @STRAWBERRY_900;}
-
-colorpill.orange {background-color: @ORANGE_300;}
-colorpill.orange:hover {border: 1px solid @ORANGE_900;}
-
-colorpill.bubblegum {background-color: @BUBBLEGUM_300;}
-colorpill.bubblegum:hover {border: 1px solid @BUBBLEGUM_900;}
-
-colorpill.grape {background-color: @GRAPE_300;}
-colorpill.grape:hover {border: 1px solid @GRAPE_900;}
-
-colorpill.latte {background-color: @LATTE_300;}
-colorpill.latte:hover {border: 1px solid @LATTE_900;}
-
-colorpill.cocoa {background-color: @COCOA_300;}
-colorpill.cocoa:hover {border: 1px solid @COCOA_900;}
-
-colorpill.slate {background-color: @SLATE_300;}
-colorpill.slate:hover {border: 1px solid @SLATE_900;}
-
-
-
 /* ANIMATION */
 window.animated,
 window.animated overshoot,

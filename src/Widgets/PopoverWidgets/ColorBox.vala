@@ -11,128 +11,61 @@
 */
 public class Jorts.ColorBox : Gtk.Box {
 
-    private Themes _color = Constants.DEFAULT_THEME;
+    public SimpleAction accent_color_action;
+
     public Jorts.Themes color {
-        get {return _color;}
-        set {set_all_toggles (value);}
+        get {return (Jorts.Themes)accent_color_action.get_state ();}
+        set {accent_color_action.set_state (value);}
     }
+
     public signal void theme_changed (Themes selected);
 
 
-    private Jorts.ColorPill color_button_blueberry;
-    private Jorts.ColorPill color_button_lime;
-    private Jorts.ColorPill color_button_mint;
-    private Jorts.ColorPill color_button_banana;
-    private Jorts.ColorPill color_button_strawberry;
-    private Jorts.ColorPill color_button_orange;
-    private Jorts.ColorPill color_button_bubblegum;
-    private Jorts.ColorPill color_button_grape;
-    private Jorts.ColorPill color_button_cocoa;
-    private Jorts.ColorPill color_button_slate;
-
-    // TODO: We could loop instead of by-hand definition
     public ColorBox () {
         orientation = Gtk.Orientation.HORIZONTAL;
-
         accessible_role = Gtk.AccessibleRole.LIST;
-        spacing = 0;
+
+        spacing = 1;
         margin_start = 12;
         margin_end = 12;
 
-            //TRANSLATORS: Shown as a tooltip when people hover a color theme
-            color_button_blueberry = new ColorPill (Jorts.Themes.BLUEBERRY);
-            color_button_mint = new ColorPill (Jorts.Themes.MINT);
-            color_button_lime = new ColorPill (Jorts.Themes.LIME);
-            color_button_banana = new ColorPill (Jorts.Themes.BANANA);
-            color_button_orange = new ColorPill (Jorts.Themes.ORANGE);
-            color_button_strawberry = new ColorPill (Jorts.Themes.STRAWBERRY);
-            color_button_bubblegum = new ColorPill (Jorts.Themes.BUBBLEGUM);
-            color_button_grape = new ColorPill (Jorts.Themes.GRAPE);
-            color_button_cocoa = new ColorPill (Jorts.Themes.COCOA);
-            color_button_slate = new ColorPill (Jorts.Themes.SLATE);
 
-            color_button_blueberry.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>1"}, Jorts.Themes.BLUEBERRY.to_nicename ());
+        var blueberry_button = new ColorPill (Themes.BLUEBERRY);
+        var mint_button = new ColorPill (Themes.MINT, blueberry_button);
+        var lime_button = new ColorPill (Themes.LIME, blueberry_button);
+        var banana_button = new ColorPill (Themes.BANANA, blueberry_button);
+        var orange_button = new ColorPill (Themes.ORANGE, blueberry_button);
+        var strawberry_button = new ColorPill (Themes.STRAWBERRY, blueberry_button);
+        var bubblegum_button = new ColorPill (Themes.BUBBLEGUM, blueberry_button);
+        var grape_button = new ColorPill (Themes.GRAPE, blueberry_button);
+        var cocoa_button = new ColorPill (Themes.COCOA, blueberry_button);
+        var slate_button = new ColorPill (Themes.SLATE, blueberry_button);
+        var auto_button = new ColorPill (Themes.IDK, blueberry_button);
 
-            color_button_mint.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>2"}, Jorts.Themes.MINT.to_nicename ());
+        append (blueberry_button);
+        append (mint_button);
+        append (lime_button);
+        append (banana_button);
+        append (orange_button);
+        append (strawberry_button);
+        append (bubblegum_button);
+        append (grape_button);
+        append (cocoa_button);
+        append (slate_button);
+        append (auto_button);
 
-            color_button_lime.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>3"}, Jorts.Themes.LIME.to_nicename ());
+        accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
+        var action_group = new SimpleActionGroup ();
+        action_group.add_action (accent_color_action);
+        insert_action_group ("popover", action_group);
 
-            color_button_banana.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>4"}, Jorts.Themes.BANANA.to_nicename ());
-
-            color_button_orange.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>5"}, Jorts.Themes.ORANGE.to_nicename ());
-
-            color_button_strawberry.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>6"}, Jorts.Themes.STRAWBERRY.to_nicename ());
-
-            color_button_bubblegum.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>7"}, Jorts.Themes.BUBBLEGUM.to_nicename ());
-
-            color_button_grape.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>8"}, Jorts.Themes.GRAPE.to_nicename ());
-
-            color_button_cocoa.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>9"}, Jorts.Themes.COCOA.to_nicename ());
-
-            color_button_slate.tooltip_markup = Granite.markup_accel_tooltip (
-                {"<Alt>0"}, Jorts.Themes.SLATE.to_nicename ());
-
-
-            color_button_lime.set_group (color_button_blueberry);
-            color_button_mint.set_group (color_button_blueberry);
-            color_button_banana.set_group (color_button_blueberry);
-            color_button_strawberry.set_group (color_button_blueberry);
-            color_button_orange.set_group (color_button_blueberry);
-            color_button_bubblegum.set_group (color_button_blueberry);
-            color_button_grape.set_group (color_button_blueberry);
-            color_button_cocoa.set_group (color_button_blueberry);
-            color_button_slate.set_group (color_button_blueberry);
-
-            // Emit a signal when a button is toggled
-            color_button_blueberry.selected.connect (on_selected);
-            color_button_orange.selected.connect (on_selected);
-            color_button_mint.selected.connect (on_selected);
-            color_button_banana.selected.connect (on_selected);
-            color_button_lime.selected.connect (on_selected);
-            color_button_strawberry.selected.connect (on_selected);
-            color_button_bubblegum.selected.connect (on_selected);
-            color_button_grape.selected.connect (on_selected);
-            color_button_cocoa.selected.connect (on_selected);
-            color_button_slate.selected.connect (on_selected);
-
-            append (color_button_blueberry);
-            append (color_button_mint);
-            append (color_button_lime);
-            append (color_button_banana);
-            append (color_button_orange);
-            append (color_button_strawberry);
-            append (color_button_bubblegum);
-            append (color_button_grape);
-            append (color_button_cocoa);
-            append (color_button_slate);
+        accent_color_action.activate.connect (set_broadcast);
     }
 
-    private void on_selected (Jorts.Themes color) {
-        _color = color;
-        theme_changed (color);
+    private void set_broadcast (GLib.Variant? value) {
+        if (!accent_color_action.get_state ().equal (value)) {
+            accent_color_action.set_state (value);
+            theme_changed ((Jorts.Themes)color);
+        }
     }
-
-    private void set_all_toggles (Jorts.Themes color) {
-        _color = color;
-        color_button_blueberry.set_active ((color == color_button_blueberry.color));
-        color_button_lime.set_active ((color == color_button_lime.color));
-        color_button_mint.set_active ((color == color_button_mint.color));
-        color_button_banana.set_active ((color == color_button_banana.color));
-        color_button_strawberry.set_active ((color == color_button_strawberry.color));
-        color_button_orange.set_active ((color == color_button_orange.color));
-        color_button_bubblegum.set_active ((color == color_button_bubblegum.color));
-        color_button_grape.set_active ((color == color_button_grape.color));
-        color_button_cocoa.set_active ((color == color_button_cocoa.color));
-        color_button_slate.set_active ((color == color_button_slate.color));
-    }
-
 }
