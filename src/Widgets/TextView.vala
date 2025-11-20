@@ -83,7 +83,7 @@ public class Jorts.TextView : Granite.HyperTextView {
      * Add the list prefix only to lines who hasnt it already
      */
     private bool has_prefix (uint8 line_number) {
-        if (list_item_start == null) {return false;}
+        if (list_item_start == "") {return false;}
 
         Gtk.TextIter start, end;
         buffer.get_iter_at_line_offset (out start, line_number, 0);
