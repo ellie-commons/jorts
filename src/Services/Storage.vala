@@ -47,7 +47,7 @@ public class Jorts.Storage : Object {
     * Persistently check for the data directory and create if there is none 
     */
     private void check_if_stash () {
-        debug ("[STORAGE] do we have a data directory?");
+        debug ("do we have a data directory?");
         var dir = File.new_for_path (data_directory);
 
         try {
@@ -65,7 +65,7 @@ public class Jorts.Storage : Object {
     * Converts a Json.Node into a string and take care of saving it
     */
     public void save (Json.Array json_data) {
-        debug("[STORAGE] Writing...");
+        debug("Writing...");
         check_if_stash ();
 
         try {
@@ -87,7 +87,7 @@ public class Jorts.Storage : Object {
     * Grab from storage, into a Json.Node we can parse. Insist if necessary
     */
     public Json.Array? load () {
-        debug("[STORAGE] Loading from storage letsgo");
+        debug("Loading from storage letsgo");
         check_if_stash ();
         var parser = new Json.Parser ();
         var array = new Json.Array ();
@@ -110,7 +110,7 @@ public class Jorts.Storage : Object {
     * Like it says on the tin
     */
     public void dump () {
-        debug("[STORAGE] DROP TABLE Students;--");
+        debug("DROP TABLE Students;--");
 
         var everything = load ();
         var generator = new Json.Generator () {

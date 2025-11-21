@@ -9,7 +9,7 @@
 * The popover menu to tweak individual notes
 * Contains a setting for color, one for monospace font, one for zoom
 */
-public class Jorts.PopoverView : Gtk.Popover {
+public class Jorts.Popover : Gtk.Popover {
     private Jorts.StickyNoteWindow parent_window;
     private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
@@ -48,7 +48,7 @@ public class Jorts.PopoverView : Gtk.Popover {
 
 
     /****************/
-    public PopoverView (Jorts.StickyNoteWindow window) {
+    public Popover (Jorts.StickyNoteWindow window) {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
         parent_window = window;

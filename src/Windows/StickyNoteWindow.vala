@@ -16,7 +16,7 @@
 public class Jorts.StickyNoteWindow : Gtk.Window {
 
     public Jorts.NoteView view;
-    public PopoverView popover;
+    public Popover popover;
     public TextView textview;
 
     private Jorts.ColorController color_controller;
@@ -93,7 +93,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         view = new NoteView ();
         textview = view.textview;
 
-        popover = new Jorts.PopoverView (this);
+        popover = new Jorts.Popover (this);
         view.menu_button.popover = popover;
 
         set_child (view);

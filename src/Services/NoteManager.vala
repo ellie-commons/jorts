@@ -110,6 +110,7 @@ public class Jorts.NoteManager : Object {
             print ("new");
         }
 
+        note.changed.connect (save_all);
         note.show ();
         note.present ();
         note.textview.paste ();          
