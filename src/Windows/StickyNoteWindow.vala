@@ -220,12 +220,12 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
     private void has_changed () {changed ();}
 
-    private void action_focus_title () {set_focus (view.editablelabel); view.editablelabel.editing = true;}
-    private void action_show_emoji () {view.emoji_button.activate ();}
-    private void action_show_menu () {view.menu_button.activate ();}
+    private void action_focus_title () {view.action_focus_title ();}
+    private void action_show_emoji () {view.action_show_emoji ();}
+    private void action_show_menu () {view.action_show_menu ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
-    private void action_toggle_list () {view.textview.toggle_list ();}
+    private void action_toggle_list () {view.action_toggle_list ();}
 
     private void action_zoom_out () {zoom_controller.zoom_out ();}
     private void action_zoom_default () {zoom_controller.zoom_default ();}
