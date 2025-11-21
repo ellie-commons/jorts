@@ -6,11 +6,11 @@ sources = files (
 
     'Utils' / 'Random.vala',
 
-    'Services' / 'Constants.vala',
     'Services' / 'Storage.vala',
     'Services' / 'NoteManager.vala',
     'Services' / 'ZoomController.vala',
     'Services' / 'ScribblyController.vala',
+    'Services' / 'ColorController.vala',
 
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',
@@ -29,6 +29,7 @@ sources = files (
     'Windows' / 'PreferenceWindow.vala',
     'Windows' / 'StickyNoteWindow.vala',
 
+    'Constants.vala',
     'Application.vala',
 )
 

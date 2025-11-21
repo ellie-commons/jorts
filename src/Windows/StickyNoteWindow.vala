@@ -16,11 +16,12 @@
 public class Jorts.StickyNoteWindow : Gtk.Window {
 
     public Jorts.NoteView view;
-    public PopoverView popover;
+    public Popover popover;
     public TextView textview;
 
-    private Jorts.ZoomController zoomcontroller;
-    private Jorts.ScribblyController scribblycontroller;
+    private Jorts.ColorController color_controller;
+    private Jorts.ZoomController zoom_controller;
+    private Jorts.ScribblyController scribbly_controller;
 
     public NoteData data {
         owned get { return packaged ();}
@@ -43,17 +44,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public const string ACTION_DELETE = "action_delete";
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
-    public const string ACTION_THEME_1 = "action_theme_1";
-    public const string ACTION_THEME_2 = "action_theme_2";
-    public const string ACTION_THEME_3 = "action_theme_3";
-    public const string ACTION_THEME_4 = "action_theme_4";
-    public const string ACTION_THEME_5 = "action_theme_5";
-    public const string ACTION_THEME_6 = "action_theme_6";
-    public const string ACTION_THEME_7 = "action_theme_7";
-    public const string ACTION_THEME_8 = "action_theme_8";
-    public const string ACTION_THEME_9 = "action_theme_9";
-    public const string ACTION_THEME_0 = "action_theme_0";
-
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
@@ -63,19 +53,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         { ACTION_FOCUS_TITLE, action_focus_title},
         { ACTION_ZOOM_OUT, action_zoom_out},
         { ACTION_ZOOM_DEFAULT, action_zoom_default},
+        { ACTION_ZOOM_IN, action_zoom_in},
         { ACTION_TOGGLE_MONO, action_toggle_mono},
         { ACTION_TOGGLE_LIST, action_toggle_list},
-        { ACTION_ZOOM_IN, action_zoom_in},
-        { ACTION_THEME_1, action_theme_1},
-        { ACTION_THEME_2, action_theme_2},
-        { ACTION_THEME_3, action_theme_3},
-        { ACTION_THEME_4, action_theme_4},
-        { ACTION_THEME_5, action_theme_5},
-        { ACTION_THEME_6, action_theme_6},
-        { ACTION_THEME_7, action_theme_7},
-        { ACTION_THEME_8, action_theme_8},
-        { ACTION_THEME_9, action_theme_9},
-        { ACTION_THEME_0, action_theme_0},
     };
 
     public StickyNoteWindow (Jorts.Application app, NoteData data) {
@@ -87,9 +67,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
-
-        zoomcontroller = new Jorts.ZoomController (this);
-        scribblycontroller = new Jorts.ScribblyController (this);
+        color_controller = new Jorts.ColorController (this);
+        zoom_controller = new Jorts.ZoomController (this);
+        scribbly_controller = new Jorts.ScribblyController (this);
 
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
@@ -113,7 +93,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         view = new NoteView ();
         textview = view.textview;
 
-        popover = new Jorts.PopoverView (this);
+        popover = new Jorts.Popover (this);
         view.menu_button.popover = popover;
 
         set_child (view);
@@ -130,16 +110,17 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         /***************************************************/
 
         // We need this for Ctr + Scroll. We delegate everything to zoomcontroller
-        keypress_controller.key_pressed.connect (zoomcontroller.on_key_press_event);
-        keypress_controller.key_released.connect (zoomcontroller.on_key_release_event);
-        scroll_controller.scroll.connect (zoomcontroller.on_scroll);
+        keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
+        keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
+        scroll_controller.scroll.connect (zoom_controller.on_scroll);
 
         debug ("Built UI. Lets do connects and binds");
 
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
-        popover.zoom_changed.connect (zoomcontroller.zoom_changed);
+        popover.zoom_changed.connect (zoom_controller.zoom_changed);
+        popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -213,7 +194,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
             theme = popover.color,
             content = view.content,
             monospace = popover.monospace,
-            zoom = zoomcontroller.zoom,
+            zoom = zoom_controller.zoom,
             width = this_width,
             height = this_height
         };
@@ -232,33 +213,21 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         title = view.editablelabel.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        zoomcontroller.zoom = data.zoom;
+        color_controller.theme = data.theme;
+        zoom_controller.zoom = data.zoom;
         popover.monospace = data.monospace;
-        popover.color = data.theme;
     }
 
     private void has_changed () {changed ();}
 
-    private void action_focus_title () {set_focus (view.editablelabel); view.editablelabel.editing = true;}
-    private void action_show_emoji () {view.emoji_button.activate ();}
-    private void action_show_menu () {view.menu_button.activate ();}
+    private void action_focus_title () {view.action_focus_title ();}
+    private void action_show_emoji () {view.action_show_emoji ();}
+    private void action_show_menu () {view.action_show_menu ();}
     private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
-    private void action_toggle_list () {view.textview.toggle_list (); set_focus (view.textview);}
+    private void action_toggle_list () {view.action_toggle_list ();}
 
-    private void action_zoom_out () {zoomcontroller.zoom_out ();}
-    private void action_zoom_default () {zoomcontroller.zoom_default ();}
-    private void action_zoom_in () {zoomcontroller.zoom_in ();}
-
-    // Careful! The keyboard counts from 1 to 10 (0), but the themes are from 0 to 9
-    private void action_theme_1 () {popover.color = (Jorts.Themes.all ())[0];}
-    private void action_theme_2 () {popover.color = (Jorts.Themes.all ())[1];}
-    private void action_theme_3 () {popover.color = (Jorts.Themes.all ())[2];}
-    private void action_theme_4 () {popover.color = (Jorts.Themes.all ())[3];}
-    private void action_theme_5 () {popover.color = (Jorts.Themes.all ())[4];}
-    private void action_theme_6 () {popover.color = (Jorts.Themes.all ())[5];}
-    private void action_theme_7 () {popover.color = (Jorts.Themes.all ())[6];}
-    private void action_theme_8 () {popover.color = (Jorts.Themes.all ())[7];}
-    private void action_theme_9 () {popover.color = (Jorts.Themes.all ())[8];}
-    private void action_theme_0 () {popover.color = (Jorts.Themes.all ())[9];}
+    private void action_zoom_out () {zoom_controller.zoom_out ();}
+    private void action_zoom_default () {zoom_controller.zoom_default ();}
+    private void action_zoom_in () {zoom_controller.zoom_in ();}
 }

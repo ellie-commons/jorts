@@ -87,4 +87,9 @@
         editablelabel.monospace = if_mono;
         textview.monospace = if_mono;
     }
+
+    public void action_focus_title () {editablelabel.editing = true;}
+    public void action_show_emoji () {emoji_button.activate ();}
+    public void action_show_menu () {menu_button.activate ();}
+    public void action_toggle_list () {textview.toggle_list ();}
 }

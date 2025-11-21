@@ -11,27 +11,29 @@
 * I just dont wanna rewrite the same button over and over
 */
 public class Jorts.ColorPill : Gtk.CheckButton {
-        public Jorts.Themes color;
-        public signal void selected (Jorts.Themes color);
 
-        public ColorPill (Jorts.Themes? theme = (null)) {
-                this.color = theme;
+        public Jorts.Themes color { get; construct; }
 
-                add_css_class ("colorpill");
-                add_css_class (theme.to_css_class ());
-                set_size_request (24, 24);
-                set_tooltip_text (theme.to_nicename ());
-                add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
-
-                margin_top = 0;
-                margin_bottom = 0;
-                margin_start = 0;
-                margin_end = 0;
-
-                this.toggled.connect (on_connect);
+        public ColorPill (Themes color, Gtk.CheckButton? group_member = null) {
+            Object (
+                color: color,
+                group: group_member
+            );
         }
 
-        public void on_connect () {
-                selected (color);
+        construct {
+            add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
+
+            //if (color == Themes.IDK) {
+            //    add_css_class ("auto");
+
+            //} else {
+                add_css_class (color.to_css_class ());
+            //}
+
+            tooltip_text = color.to_nicename ();
+
+            action_name = "popover.prefers-accent-color";
+            action_target = new Variant.int32 (color);
         }
 }

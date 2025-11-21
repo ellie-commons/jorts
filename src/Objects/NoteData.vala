@@ -14,14 +14,14 @@ public class Jorts.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
     public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static uint16 latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
+    public static int latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
     public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
 
     public string? title;
     public Jorts.Themes? theme;
     public string? content;
     public bool? monospace;
-    public uint16? zoom;
+    public int? zoom;
     public int? width;
     public int? height;
 
@@ -49,7 +49,7 @@ public class Jorts.NoteData : Object {
         theme       = (Jorts.Themes)node.get_int_member_with_default ("color", Jorts.Themes.random_theme ());
         content     = node.get_string_member_with_default ("content","");
         monospace   = node.get_boolean_member_with_default ("monospace", Jorts.Constants.DEFAULT_MONO);
-        zoom        = (uint16)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
+        zoom        = (int)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
         if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}

@@ -12,7 +12,7 @@
 			<description>Whether to hide the actionbar and its buttons</description>
 		</key>
 		<key name="list-item-start" type="s">
-			<default>" - "</default>
+			<default>" • "</default>
 			<summary>Hide actionbar</summary>
 			<description>Whether to hide the actionbar and its buttons</description>
 		</key>

@@ -9,16 +9,15 @@
 * The popover menu to tweak individual notes
 * Contains a setting for color, one for monospace font, one for zoom
 */
-public class Jorts.PopoverView : Gtk.Popover {
+public class Jorts.Popover : Gtk.Popover {
     private Jorts.StickyNoteWindow parent_window;
-    private Jorts.ColorBox color_button_box;
+    private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;
 
-    private Themes _old_color = Jorts.Constants.DEFAULT_THEME;
     public Themes color {
-        get {return _old_color;}
-        set {on_color_changed (value);}
+        get {return color_box.color;}
+        set {color_box.color = value;}
     }
 
     public bool monospace {
@@ -26,7 +25,7 @@ public class Jorts.PopoverView : Gtk.Popover {
         set {on_monospace_changed (value);}
     }
 
-    public uint16 zoom { set {font_size_box.zoom = value;}}
+    public int zoom { set {font_size_box.zoom = value;}}
 
     public signal void theme_changed (Jorts.Themes selected);
     public signal void zoom_changed (Jorts.Zoomkind zoomkind);
@@ -45,24 +44,11 @@ public class Jorts.PopoverView : Gtk.Popover {
         add_binding_action(Gdk.Key.g, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
         add_binding_action(Gdk.Key.o, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_SHOW_MENU, null);
         add_binding_action(Gdk.Key.l, Gdk.ModifierType.CONTROL_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_FOCUS_TITLE, null);
-
-        // Compiler whines about Gdk.Key.1 because name is a number so it doesnt see it.
-        // So we use magic numbers
-        add_binding_action(49, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_1, null);
-        add_binding_action(50, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_2, null);
-        add_binding_action(51, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_3, null);
-        add_binding_action(52, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_4, null);
-        add_binding_action(53, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_5, null);
-        add_binding_action(54, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_6, null);
-        add_binding_action(55, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_7, null);
-        add_binding_action(56, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_8, null);
-        add_binding_action(57, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_9, null);
-        add_binding_action(48, Gdk.ModifierType.ALT_MASK, StickyNoteWindow.ACTION_PREFIX + StickyNoteWindow.ACTION_THEME_0, null);
-    }
+   }
 
 
     /****************/
-    public PopoverView (Jorts.StickyNoteWindow window) {
+    public Popover (Jorts.StickyNoteWindow window) {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
         parent_window = window;
@@ -72,47 +58,19 @@ public class Jorts.PopoverView : Gtk.Popover {
             margin_bottom = 12
         };
 
-        color_button_box = new Jorts.ColorBox ();
+        color_box = new Jorts.ColorBox ();
         monospace_box = new Jorts.MonospaceBox ();
         font_size_box = new Jorts.ZoomBox ();
 
-        view.append (color_button_box);
+        view.append (color_box);
         view.append (monospace_box);
         view.append (font_size_box);
 
         child = view;
 
-        color_button_box.theme_changed.connect (on_color_changed);
+        color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
         monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect ((zoomkind) => {this.zoom_changed (zoomkind);});
-    }
-
-
-
-    /**
-    * Switches stylesheet
-    * First use appropriate stylesheet, Then switch the theme classes
-    */
-    private void on_color_changed (Jorts.Themes new_theme) {
-        debug ("Updating theme to %s".printf (new_theme.to_string ()));
-
-        // Avoid deathloop where the handler calls itself
-        color_button_box.theme_changed.disconnect (on_color_changed);
-
-        // Add remove class
-        if (_old_color.to_string () in parent_window.css_classes) {
-            parent_window.remove_css_class (_old_color.to_string ());
-        }
-        parent_window.add_css_class (new_theme.to_string ());
-
-        // Propagate values
-        _old_color = new_theme;
-        color_button_box.color = new_theme;
-        NoteData.latest_theme = new_theme;
-
-        // Cleanup;
-        parent_window.changed ();
-        color_button_box.theme_changed.connect (on_color_changed);
+        font_size_box.zoom_changed.connect ((zoomkind) => {zoom_changed (zoomkind);});
     }
 
     /**

@@ -45,8 +45,6 @@ public class Jorts.PreferenceWindow : Gtk.Window {
         set_default_size (Jorts.Constants.DEFAULT_PREF_WIDTH, Jorts.Constants.DEFAULT_PREF_HEIGHT);
         resizable = false;
 
-        add_css_class (Granite.STYLE_CLASS_MESSAGE_DIALOG);
-
         var prefview = new Jorts.PreferencesView ();
 
         // Make the whole window grabbable

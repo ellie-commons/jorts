@@ -24,7 +24,7 @@
             overlay.add_overlay (toast);
 
             // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, 20) {
+            var settingsbox = new Gtk.Box (VERTICAL, 15) {
                 margin_top = 5,
                 margin_start = 5,
                 margin_end = 5,
@@ -44,13 +44,13 @@
                     halign = Gtk.Align.END,
                     hexpand = false,
                     valign = Gtk.Align.CENTER,
-                    max_length = 5,
-                    max_width_chars = 5
+                    max_length = 6,
+                    max_width_chars = 6
                 };
 
-                var list_label = new Granite.HeaderLabel (_("List item symbol")) {
+                var list_label = new Granite.HeaderLabel (_("List item prefix")) {
                     mnemonic_widget = list_entry,
-                    secondary_text = _("Prefix by which to begin each item in a list. If there is no prefix, the toggle list button will be hidden"),
+                    secondary_text = _("If empty, the toggle list button will be hidden"),
                     hexpand = true
                 };
 
@@ -73,8 +73,8 @@
                 debug ("Built UI. Lets do connects and binds");
 
                 var scribbly_box = new Jorts.SettingsSwitch (
-                    _("Make unfocused notes unreadable"),
-                    _("If enabled, unfocused sticky notes become unreadable to protect their content from peeking eyes (Ctrl+H)"),
+                    _("Scribble mode"),
+                    _("Make notes unreadable when unfocused (Ctrl+H)"),
                     "scribbly-mode-active");
 
                 settingsbox.append (scribbly_box);
@@ -85,8 +85,8 @@
                 /*************************************************/
 
                 var hidebar_box = new Jorts.SettingsSwitch (
-                    _("Hide buttons"),
-                    _("If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will still function (Ctrl+T)"),
+                    _("Hide bottom bar"),
+                    _("Keyboard shortcuts will still function (Ctrl+T)"),
                     "hide-bar");
 
                 settingsbox.append (hidebar_box);
@@ -102,12 +102,11 @@
 
                 ///TRANSLATORS: Button to autostart the application
                 var set_autostart = new Gtk.Button () {
-                    label = _("Autostart"),
+                    label = _("Set autostart"),
                     valign = Gtk.Align.CENTER
                 };
 
                 set_autostart.clicked.connect (() => {
-                    debug ("Setting autostart");
                     Jorts.Utils.autostart_set ();
                     toast.send_notification ();
                 });
@@ -119,7 +118,6 @@
                 };
 
                 remove_autostart.clicked.connect (() => {
-                    debug ("Removing autostart");
                     Jorts.Utils.autostart_remove ();
                     toast.send_notification ();
                 });
@@ -129,10 +127,10 @@
 
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
 
-                var autostart_label = new Granite.HeaderLabel (_("Allow to start at login")) {
+                var autostart_label = new Granite.HeaderLabel (_("Start automatically")) {
                     mnemonic_widget = both_buttons,
-                    secondary_text = _("You can request the system to start this application automatically"),
-                    hexpand = true
+                    hexpand = true,
+                    secondary_text = _("open the app when you log in")
                 };
 
                 autostart_box.append (autostart_label);
@@ -165,32 +163,9 @@
                 )
             };
 
-            var reset = new Gtk.Button.from_icon_name ("system-reboot-symbolic") {
-                tooltip_markup = _("Reset all settings to defaults"),
-                valign = Gtk.Align.CENTER
-            };
-            reset.clicked.connect (on_reset);
-
-            var end_box = new Gtk.Box (HORIZONTAL, 5);
-            end_box.append (reset);
-            end_box.append (close_button);
-            actionbar.end_widget = end_box;
+            actionbar.end_widget = close_button;
 
             append (settingsbox);
             append (actionbar);
-    }
-
-    private void on_reset () {
-        debug ("Resetting settings…");
-
-        string[] keys = {"scribbly-mode-active", "hide-bar", "list-item-start"};
-        foreach (var key in keys) {
-            Application.gsettings.reset (key);
-        }
-
-#if !WINDOWS
-        Jorts.Utils.autostart_remove ();
-        toast.send_notification ();
-#endif
     }
 }
