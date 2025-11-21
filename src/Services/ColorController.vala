@@ -42,6 +42,10 @@ public class Jorts.ColorController : Object {
         window.popover.color = new_theme;
         NoteData.latest_theme = new_theme;
 
+        // Avoid using the wrong accent until the popover is closed
+        var stylesheet = "io.elementary.stylesheet." + new_theme.to_string ().ascii_down ();
+        Application.gtk_settings.gtk_theme_name = stylesheet;
+
         // Cleanup;
         window.changed ();
     }
