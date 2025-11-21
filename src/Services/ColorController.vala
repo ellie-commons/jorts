@@ -49,4 +49,17 @@ public class Jorts.ColorController : Object {
         // Cleanup;
         window.changed ();
     }
+
+    /**
+    * Changes the stylesheet accents to the notes color
+    * Add or remove the Redacted font if the setting is active
+    */
+    public void on_focus_changed () {
+        debug ("Focus changed!");
+
+        if (window.is_active) {
+            var stylesheet = "io.elementary.stylesheet." + _theme.to_string ().ascii_down ();
+            Application.gtk_settings.gtk_theme_name = stylesheet;
+        }
+    }
 }
