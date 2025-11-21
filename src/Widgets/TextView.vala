@@ -99,6 +99,8 @@ public class Jorts.TextView : Granite.HyperTextView {
             this.set_list (first_line, last_line);
         }
         buffer.end_user_action ();
+
+        grab_focus ();
     }
 
     /**
