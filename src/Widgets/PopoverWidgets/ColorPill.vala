@@ -24,12 +24,12 @@ public class Jorts.ColorPill : Gtk.CheckButton {
         construct {
             add_css_class (Granite.STYLE_CLASS_COLOR_BUTTON);
 
-            if (color == Themes.IDK) {
-                add_css_class ("auto");
+            //if (color == Themes.IDK) {
+            //    add_css_class ("auto");
 
-            } else {
+            //} else {
                 add_css_class (color.to_css_class ());
-            }
+            //}
 
             tooltip_text = color.to_nicename ();
 

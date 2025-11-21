@@ -40,7 +40,7 @@ public class Jorts.ColorBox : Gtk.Box {
         var grape_button = new ColorPill (Themes.GRAPE, blueberry_button);
         var cocoa_button = new ColorPill (Themes.COCOA, blueberry_button);
         var slate_button = new ColorPill (Themes.SLATE, blueberry_button);
-        var auto_button = new ColorPill (Themes.IDK, blueberry_button);
+        //var auto_button = new ColorPill (Themes.IDK, blueberry_button);
 
         append (blueberry_button);
         append (mint_button);
@@ -52,7 +52,7 @@ public class Jorts.ColorBox : Gtk.Box {
         append (grape_button);
         append (cocoa_button);
         append (slate_button);
-        append (auto_button);
+        //append (auto_button);
 
         accent_color_action = new SimpleAction.stateful ("prefers-accent-color", GLib.VariantType.INT32, new Variant.int32 (Themes.IDK));
         var action_group = new SimpleActionGroup ();
