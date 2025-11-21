@@ -44,8 +44,9 @@
                     halign = Gtk.Align.END,
                     hexpand = false,
                     valign = Gtk.Align.CENTER,
-                    max_length = 5,
-                    max_width_chars = 5
+                    max_length = 6,
+                    max_width_chars = 6,
+                    xalign = 0.5f
                 };
 
                 var list_label = new Granite.HeaderLabel (_("List item symbol")) {
