@@ -8,7 +8,7 @@
 /*************************************************/
 /**
 * Responsible to apply zoom appropriately to a window.
-* Mainly, this abstracts zoom into an uint16 and swap CSS classes
+* Mainly, this abstracts zoom into an int and swap CSS classes
 * As a treat it includes also the plumbing for ctrl+scroll zooming
 */
 public class Jorts.ZoomController : Object {
@@ -17,8 +17,8 @@ public class Jorts.ZoomController : Object {
     private Jorts.StickyNoteWindow window;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
-    private uint16 _old_zoom;
-    public uint16 zoom {
+    private int _old_zoom;
+    public int zoom {
         get {return _old_zoom;}
         set {do_set_zoom (value);}
     }
@@ -73,7 +73,7 @@ public class Jorts.ZoomController : Object {
     /**
     * Switch zoom classes, then reflect in the UI and tell the application
     */
-    private void do_set_zoom (uint16 new_zoom) {
+    private void do_set_zoom (int new_zoom) {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size

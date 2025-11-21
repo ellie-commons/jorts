@@ -62,8 +62,8 @@ public class Jorts.TextView : Granite.HyperTextView {
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
 
-        var first_line = (uint8)start.get_line ();
-        var last_line = (uint8)end.get_line ();
+        var first_line = start.get_line ();
+        var last_line = end.get_line ();
         debug ("got " + first_line.to_string () + " to " + last_line.to_string ());
 
         var selected_is_list = this.is_list (first_line, last_line, list_item_start);
@@ -82,7 +82,7 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Add the list prefix only to lines who hasnt it already
      */
-    private bool has_prefix (uint8 line_number) {
+    private bool has_prefix (int line_number) {
         if (list_item_start == "") {return false;}
 
         Gtk.TextIter start, end;
@@ -99,9 +99,9 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Checks whether Line x to Line y are all bulleted.
      */
-    private bool is_list (uint8 first_line, uint8 last_line, string list_item_start) {
+    private bool is_list (int first_line, int last_line, string list_item_start) {
 
-        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+        for (int line_number = first_line; line_number <= last_line; line_number++) {
             debug ("doing line " + line_number.to_string ());
 
             if (!this.has_prefix (line_number)) {
@@ -115,9 +115,9 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Add the list prefix only to lines who hasnt it already
      */
-    private void set_list (uint8 first_line, uint8 last_line) {
+    private void set_list (int first_line, int last_line) {
         Gtk.TextIter line_start;
-        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+        for (int line_number = first_line; line_number <= last_line; line_number++) {
 
             debug ("doing line " + line_number.to_string ());
             if (!this.has_prefix (line_number)) {
@@ -130,8 +130,8 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Remove list prefix from line x to line y. Presuppose it is there
      */
-    private void remove_list (uint8 first_line, uint8 last_line) {
-        for (uint8 line_number = first_line; line_number <= last_line; line_number++) {
+    private void remove_list (int first_line, int last_line) {
+        for (int line_number = first_line; line_number <= last_line; line_number++) {
             remove_prefix (line_number);
         }
     }
@@ -139,7 +139,7 @@ public class Jorts.TextView : Granite.HyperTextView {
     /**
      * Remove list prefix from line x to line y. Presuppose it is there
      */
-    private void remove_prefix (uint8 line_number) {
+    private void remove_prefix (int line_number) {
         Gtk.TextIter line_start, prefix_end;
         var remove_range = list_item_start.char_count ();
 
@@ -162,7 +162,7 @@ public class Jorts.TextView : Granite.HyperTextView {
             Gtk.TextIter start, end;
             buffer.get_selection_bounds (out start, out end);
 
-            var line_number = (uint8)start.get_line ();
+            var line_number = start.get_line ();
 
             if (has_prefix (line_number)) {
 
@@ -184,7 +184,7 @@ public class Jorts.TextView : Granite.HyperTextView {
         } else if (keyval == Gdk.Key.Return) {
             Gtk.TextIter start, end;
             buffer.get_selection_bounds (out start, out end);
-            var line_number = (uint8)start.get_line ();
+            var line_number = start.get_line ();
 
             if (this.has_prefix (line_number)) {
 
@@ -207,7 +207,7 @@ public class Jorts.TextView : Granite.HyperTextView {
 /*      private void on_cursor_changed () {
         Gtk.TextIter start, end;
         buffer.get_selection_bounds (out start, out end);
-        var line_number = (uint8)start.get_line ();
+        var line_number = start.get_line ();
 
         on_list_item = this.has_prefix (line_number);
 

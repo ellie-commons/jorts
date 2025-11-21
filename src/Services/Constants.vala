@@ -27,9 +27,9 @@ namespace Jorts.Constants {
     const int DEBOUNCE                   = 750;
 
     // We need to say stop at some point
-    const uint16 ZOOM_MAX                   = 300;
-    const uint16 DEFAULT_ZOOM               = 100;
-    const uint16 ZOOM_MIN                   = 20;
+    const int ZOOM_MAX                   = 300;
+    const int DEFAULT_ZOOM               = 100;
+    const int ZOOM_MIN                   = 20;
     const bool DEFAULT_MONO                 = false;
 
     // For new stickies

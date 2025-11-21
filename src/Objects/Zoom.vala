@@ -30,7 +30,7 @@ public enum Jorts.Zoom {
     /**
     * Returns an Int representation we can use to display and store the value
     */
-    public uint16 to_int () {
+    public int to_int () {
         switch (this) {
             case ANTSIZED: return 20;
             case MUCHSMALLER: return 40;
@@ -63,7 +63,7 @@ public enum Jorts.Zoom {
     /**
     * We cannot save Enums in JSON, so this recovers the enum from stored int
     */
-    public static Zoom from_int (uint16 wtf_is_this) {
+    public static Zoom from_int (int wtf_is_this) {
         switch (wtf_is_this) {
             case 20: return ANTSIZED;
             case 40: return MUCHSMALLER;
@@ -88,7 +88,7 @@ public enum Jorts.Zoom {
     /**
     * We have to scale some UI elements according to zoom
     */
-    public uint16 to_ui_size () {
+    public int to_ui_size () {
         switch (this) {
             case ANTSIZED: return 24;
             case MUCHSMALLER: return 26;
