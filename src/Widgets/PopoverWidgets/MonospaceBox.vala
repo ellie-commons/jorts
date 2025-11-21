@@ -25,8 +25,8 @@ public class Jorts.MonospaceBox : Gtk.Box {
         orientation = Gtk.Orientation.HORIZONTAL;
         homogeneous = true;
         hexpand = true;
-        margin_start = 12;
-        margin_end = 12;
+        margin_start = 10;
+        margin_end = 10;
 
         ///TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
         var mono_default_toggle = new Gtk.ToggleButton () {

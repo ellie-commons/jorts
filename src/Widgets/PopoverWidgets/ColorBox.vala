@@ -26,8 +26,8 @@ public class Jorts.ColorBox : Gtk.Box {
         accessible_role = Gtk.AccessibleRole.LIST;
 
         spacing = 1;
-        margin_start = 12;
-        margin_end = 12;
+        margin_start = 10;
+        margin_end = 10;
 
 
         var blueberry_button = new ColorPill (Themes.BLUEBERRY);

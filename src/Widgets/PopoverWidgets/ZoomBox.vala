@@ -32,8 +32,8 @@ public class Jorts.ZoomBox : Gtk.Box {
         orientation = Gtk.Orientation.HORIZONTAL;
         homogeneous = true;
         hexpand = true;
-        margin_start = 12;
-        margin_end = 12;
+        margin_start = 10;
+        margin_end = 10;
 
         ///TRANSLATORS: These are displayed on small linked buttons in a menu. User can click them to change zoom
         var zoom_out_button = new Gtk.Button.from_icon_name ("zoom-out-symbolic") {

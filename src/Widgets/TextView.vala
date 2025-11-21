@@ -34,9 +34,13 @@ public class Jorts.TextView : Granite.HyperTextView {
         right_margin = 10;
         top_margin = 5;
 
-        set_hexpand (true);
-        set_vexpand (true);
-        set_wrap_mode (Gtk.WrapMode.WORD_CHAR);
+        hexpand = true;
+        vexpand = true;
+        wrap_mode = Gtk.WrapMode.WORD_CHAR;
+
+        var actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+        insert_action_group ("textview", actions);
 
         list_item_start = Application.gsettings.get_string ("list-item-start");
         Application.gsettings.changed["list-item-start"].connect (on_prefix_changed);
@@ -49,19 +53,15 @@ public class Jorts.TextView : Granite.HyperTextView {
         // on_cursor_changed ();
         // move_cursor.connect_after (on_cursor_changed);
 
-        var actions = new SimpleActionGroup ();
-        actions.add_action_entries (ACTION_ENTRIES, this);
-        insert_action_group ("textview", actions);
 
-        var menuitem = new GLib.MenuItem (_("Toggle list"), TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST);
+        // var menuitem = new GLib.MenuItem (_("Toggle list"), TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST);
+        // var extra = new GLib.Menu ();
+        // var section = new GLib.Menu ();
 
-        var extra = new GLib.Menu ();
-        var section = new GLib.Menu ();
-        section.append_item (menuitem);
+        // section.append_item (menuitem);
+        // extra.append_section (null, section);
 
-        extra.append_section (null, section);
-
-        this.extra_menu = extra;
+        // this.extra_menu = extra;
 
 
     }
