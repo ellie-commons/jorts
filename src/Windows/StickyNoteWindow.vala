@@ -19,8 +19,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public PopoverView popover;
     public TextView textview;
 
-    private Jorts.ZoomController zoomcontroller;
-    private Jorts.ScribblyController scribblycontroller;
+    private Jorts.ColorController color_controller;
+    private Jorts.ZoomController zoom_controller;
+    private Jorts.ScribblyController scribbly_controller;
 
     public NoteData data {
         owned get { return packaged ();}
@@ -66,9 +67,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
-
-        zoomcontroller = new Jorts.ZoomController (this);
-        scribblycontroller = new Jorts.ScribblyController (this);
+        color_controller = new Jorts.ColorController (this);
+        zoom_controller = new Jorts.ZoomController (this);
+        scribbly_controller = new Jorts.ScribblyController (this);
 
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
@@ -109,16 +110,17 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         /***************************************************/
 
         // We need this for Ctr + Scroll. We delegate everything to zoomcontroller
-        keypress_controller.key_pressed.connect (zoomcontroller.on_key_press_event);
-        keypress_controller.key_released.connect (zoomcontroller.on_key_release_event);
-        scroll_controller.scroll.connect (zoomcontroller.on_scroll);
+        keypress_controller.key_pressed.connect (zoom_controller.on_key_press_event);
+        keypress_controller.key_released.connect (zoom_controller.on_key_release_event);
+        scroll_controller.scroll.connect (zoom_controller.on_scroll);
 
         debug ("Built UI. Lets do connects and binds");
 
         // Save when title or text have changed
         view.editablelabel.changed.connect (on_editable_changed);
         view.textview.buffer.changed.connect (has_changed);
-        popover.zoom_changed.connect (zoomcontroller.zoom_changed);
+        popover.zoom_changed.connect (zoom_controller.zoom_changed);
+        popover.theme_changed.connect (color_controller.on_color_changed);
 
         // Use the color theme of this sticky note when focused
         this.notify["is-active"].connect (on_focus_changed);
@@ -192,7 +194,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
             theme = popover.color,
             content = view.content,
             monospace = popover.monospace,
-            zoom = zoomcontroller.zoom,
+            zoom = zoom_controller.zoom,
             width = this_width,
             height = this_height
         };
@@ -211,9 +213,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         title = view.editablelabel.text + _(" - Jorts");
         view.textview.buffer.text = data.content;
 
-        zoomcontroller.zoom = data.zoom;
+        color_controller.theme = data.theme;
+        zoom_controller.zoom = data.zoom;
         popover.monospace = data.monospace;
-        popover.color = data.theme;
     }
 
     private void has_changed () {changed ();}
@@ -225,7 +227,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
     private void action_toggle_list () {view.textview.toggle_list ();}
 
-    private void action_zoom_out () {zoomcontroller.zoom_out ();}
-    private void action_zoom_default () {zoomcontroller.zoom_default ();}
-    private void action_zoom_in () {zoomcontroller.zoom_in ();}
+    private void action_zoom_out () {zoom_controller.zoom_out ();}
+    private void action_zoom_default () {zoom_controller.zoom_default ();}
+    private void action_zoom_in () {zoom_controller.zoom_in ();}
 }

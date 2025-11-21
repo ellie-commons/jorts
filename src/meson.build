@@ -11,6 +11,7 @@ sources = files (
     'Services' / 'NoteManager.vala',
     'Services' / 'ZoomController.vala',
     'Services' / 'ScribblyController.vala',
+    'Services' / 'ColorController.vala',
 
     'Widgets' / 'EditableLabel.vala',
     'Widgets' / 'TextView.vala',

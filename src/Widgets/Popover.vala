@@ -11,14 +11,13 @@
 */
 public class Jorts.PopoverView : Gtk.Popover {
     private Jorts.StickyNoteWindow parent_window;
-    private Jorts.ColorBox color_button_box;
+    private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;
 
-    private Themes _old_color = Jorts.Constants.DEFAULT_THEME;
     public Themes color {
-        get {return _old_color;}
-        set {on_color_changed (value);}
+        get {return color_box.color;}
+        set {color_box.color = value;}
     }
 
     public bool monospace {
@@ -59,47 +58,19 @@ public class Jorts.PopoverView : Gtk.Popover {
             margin_bottom = 12
         };
 
-        color_button_box = new Jorts.ColorBox ();
+        color_box = new Jorts.ColorBox ();
         monospace_box = new Jorts.MonospaceBox ();
         font_size_box = new Jorts.ZoomBox ();
 
-        view.append (color_button_box);
+        view.append (color_box);
         view.append (monospace_box);
         view.append (font_size_box);
 
         child = view;
 
-        color_button_box.theme_changed.connect (on_color_changed);
+        color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
         monospace_box.monospace_changed.connect (on_monospace_changed);
-        font_size_box.zoom_changed.connect ((zoomkind) => {this.zoom_changed (zoomkind);});
-    }
-
-
-
-    /**
-    * Switches stylesheet
-    * First use appropriate stylesheet, Then switch the theme classes
-    */
-    private void on_color_changed (Jorts.Themes new_theme) {
-        debug ("Updating theme to %s".printf (new_theme.to_string ()));
-
-        // Avoid deathloop where the handler calls itself
-        color_button_box.theme_changed.disconnect (on_color_changed);
-
-        // Add remove class
-        if (_old_color.to_string () in parent_window.css_classes) {
-            parent_window.remove_css_class (_old_color.to_string ());
-        }
-        parent_window.add_css_class (new_theme.to_string ());
-
-        // Propagate values
-        _old_color = new_theme;
-        color_button_box.color = new_theme;
-        NoteData.latest_theme = new_theme;
-
-        // Cleanup;
-        parent_window.changed ();
-        color_button_box.theme_changed.connect (on_color_changed);
+        font_size_box.zoom_changed.connect ((zoomkind) => {zoom_changed (zoomkind);});
     }
 
     /**

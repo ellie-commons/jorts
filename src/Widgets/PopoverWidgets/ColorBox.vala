@@ -62,6 +62,8 @@ public class Jorts.ColorBox : Gtk.Box {
         accent_color_action.activate.connect (set_broadcast);
     }
 
+    // Ignore if user switches from same value to same value
+    // Only send signal if it is a user action, to avoid a deathloop if theme is changed elsewhere
     private void set_broadcast (GLib.Variant? value) {
         if (!accent_color_action.get_state ().equal (value)) {
             accent_color_action.set_state (value);
