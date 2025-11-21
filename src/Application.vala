@@ -49,10 +49,7 @@ public class Jorts.Application : Gtk.Application {
 
     // Used for commandline option handling
     public static bool new_note = false;
-    public static bool new_from_clipboard = false;
     public static bool show_pref = false;
-    public static bool reset_settings = false;
-    public static bool dump_storage = false;
 
     public const string ACTION_PREFIX = "app.";
     public const string ACTION_QUIT = "action_quit";
@@ -190,10 +187,7 @@ Please wait while the app remembers all the things...
         }
 
         if (new_note) {manager.create_note (); new_note = false;}
-        if (new_from_clipboard) {manager.from_clipboard (); new_from_clipboard = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
-        if (reset_settings) {action_reset_settings (); reset_settings = false;}
-        if (dump_storage) {manager.dump (); dump_storage = false;}
     }
 
     public static int main (string[] args) {
@@ -234,14 +228,6 @@ Please wait while the app remembers all the things...
         manager.save_all ();
     }
 
-    private void action_reset_settings () {
-        debug ("[ACTION] Resetting settings…");
-        string[] keys = {"scribbly-mode-active", "hide-bar"};
-        foreach (var key in keys) {
-            gsettings.reset (key);
-        }
-    }
-
     // checked upon window closing to make sure we do not linger in the background
     public void check_if_quit () {
         debug ("Windows open: %s".printf (get_windows ().length ().to_string ()));
@@ -257,10 +243,7 @@ Please wait while the app remembers all the things...
 
         OptionEntry[] CMD_OPTION_ENTRIES = {
                 {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, "Create a new note", null},
-                {"new-from-clipboard", 'c', OptionFlags.NONE, OptionArg.NONE, ref new_from_clipboard, "Create a note then paste from clipboard", null},
-                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null},
-                {"reset-settings", 'r', OptionFlags.NONE, OptionArg.NONE, ref reset_settings, "Reset all settings", null},
-                {"dump", 'd', OptionFlags.NONE, OptionArg.NONE, ref dump_storage, "Dump the content of the storage as a pretty JSON", null}
+                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null}
         };
 
         // We have to make an extra copy of the array, since .parse assumes

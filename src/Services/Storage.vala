@@ -104,22 +104,4 @@ public class Jorts.Storage : Object {
         
         return array;
     }
-
-    /*************************************************/
-    /**
-    * Like it says on the tin
-    */
-    public void dump () {
-        debug("DROP TABLE Students;--");
-
-        var everything = load ();
-        var generator = new Json.Generator () {
-            pretty = true
-        };
-
-        var node = new Json.Node (Json.NodeType.ARRAY);
-        node.set_array (everything);
-        generator.set_root (node);
-        print (generator.to_data (null));
-    }
 }

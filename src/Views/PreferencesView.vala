@@ -24,7 +24,7 @@
             overlay.add_overlay (toast);
 
             // the box with all the settings
-            var settingsbox = new Gtk.Box (VERTICAL, 20) {
+            var settingsbox = new Gtk.Box (VERTICAL, 15) {
                 margin_top = 5,
                 margin_start = 5,
                 margin_end = 5,
@@ -73,8 +73,8 @@
                 debug ("Built UI. Lets do connects and binds");
 
                 var scribbly_box = new Jorts.SettingsSwitch (
-                    _("Make unfocused notes unreadable"),
-                    _("Protect notes from peeking eyes (Ctrl+H)"),
+                    _("Scribble mode"),
+                    _("Make notes unreadable when unfocused (Ctrl+H)"),
                     "scribbly-mode-active");
 
                 settingsbox.append (scribbly_box);
@@ -127,10 +127,10 @@
 
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
 
-                var autostart_label = new Granite.HeaderLabel (_("Start app at login")) {
+                var autostart_label = new Granite.HeaderLabel (_("Start automatically")) {
                     mnemonic_widget = both_buttons,
                     hexpand = true,
-                    secondary_text = _("Sends a request to the system")
+                    secondary_text = _("open the app when you log in")
                 };
 
                 autostart_box.append (autostart_label);

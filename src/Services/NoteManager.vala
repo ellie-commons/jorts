@@ -89,35 +89,6 @@ public class Jorts.NoteManager : Object {
 
     /*************************************************/
     /**
-    * When user asked for a new note and for it to be pasted in
-    */
-    public void from_clipboard () {
-        debug ("Creating and loading from clipboard…");
-        print ("clipboard!");
-        Jorts.StickyNoteWindow note;
-
-        // If the app has only one empty note (or no note but just created one),
-        // Then paste in it.
-        if ((open_notes.size == 1) && open_notes[0].textview.buffer.text == "") {
-            note = open_notes[0];
-            print ("first one");
-
-        } else {
-            // Skip theme from previous window, but use same text zoom
-            var random_data = new NoteData ();
-            note = new StickyNoteWindow (application, random_data);
-            open_notes.add (note);
-            print ("new");
-        }
-
-        note.changed.connect (save_all);
-        note.show ();
-        note.present ();
-        note.textview.paste ();          
-	}
-
-    /*************************************************/
-    /**
     * Delete a note by remove it from the active list and closing its window
     */
     public void delete_note (StickyNoteWindow note) {
@@ -184,7 +155,4 @@ public class Jorts.NoteManager : Object {
             }
         }
     }
-
-    /*************************************************/
-    public void dump () {storage.dump ();}
 }

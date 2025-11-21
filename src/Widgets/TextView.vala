@@ -62,22 +62,6 @@ public class Jorts.TextView : Granite.HyperTextView {
         // extra.append_section (null, section);
 
         // this.extra_menu = extra;
-
-
-    }
-
-    public void paste () {
-        var clipboard = Gdk.Display.get_default ().get_clipboard ();
-        clipboard.read_text_async.begin ((null), (obj, res) => {
-
-            try {
-                var pasted_text = clipboard.read_text_async.end (res);
-                this.buffer.text = pasted_text;
-
-            } catch (Error e) {
-                print ("Cannot access clipboard: " + e.message);
-            }
-        });
     }
 
     public void toggle_list () {
