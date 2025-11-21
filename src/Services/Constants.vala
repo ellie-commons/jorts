@@ -37,8 +37,8 @@ namespace Jorts.Constants {
     const int DEFAULT_HEIGHT             = 320;
 
     // New preference window
-    const int DEFAULT_PREF_WIDTH         = 570;
-    const int DEFAULT_PREF_HEIGHT        = 340;
+    const int DEFAULT_PREF_WIDTH         = 510;
+    const int DEFAULT_PREF_HEIGHT        = 290;
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {

@@ -43,17 +43,6 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public const string ACTION_DELETE = "action_delete";
     public const string ACTION_TOGGLE_LIST = "action_toggle_list";
 
-    public const string ACTION_THEME_1 = "action_theme_1";
-    public const string ACTION_THEME_2 = "action_theme_2";
-    public const string ACTION_THEME_3 = "action_theme_3";
-    public const string ACTION_THEME_4 = "action_theme_4";
-    public const string ACTION_THEME_5 = "action_theme_5";
-    public const string ACTION_THEME_6 = "action_theme_6";
-    public const string ACTION_THEME_7 = "action_theme_7";
-    public const string ACTION_THEME_8 = "action_theme_8";
-    public const string ACTION_THEME_9 = "action_theme_9";
-    public const string ACTION_THEME_0 = "action_theme_0";
-
     public static Gee.MultiMap<string, string> action_accelerators;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {

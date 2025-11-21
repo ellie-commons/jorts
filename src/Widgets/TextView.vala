@@ -20,6 +20,13 @@ public class Jorts.TextView : Granite.HyperTextView {
         set {buffer.text = value;}
     }
 
+    public const string ACTION_PREFIX = "textview.";
+    public const string ACTION_TOGGLE_LIST = "action_toggle_list";
+
+    private const GLib.ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_TOGGLE_LIST, toggle_list},
+    };
+
     construct {
         buffer = new Gtk.TextBuffer (null);
         bottom_margin = 10;
@@ -41,6 +48,21 @@ public class Jorts.TextView : Granite.HyperTextView {
         //TODO: Buggy. Clicking anywhere brings it out of whack
         // on_cursor_changed ();
         // move_cursor.connect_after (on_cursor_changed);
+
+        var actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+        insert_action_group ("textview", actions);
+
+        var menuitem = new GLib.MenuItem (_("Toggle list"), TextView.ACTION_PREFIX + TextView.ACTION_TOGGLE_LIST);
+
+        var extra = new GLib.Menu ();
+        var section = new GLib.Menu ();
+        section.append_item (menuitem);
+
+        extra.append_section (null, section);
+
+        this.extra_menu = extra;
+
 
     }
 
@@ -177,7 +199,6 @@ public class Jorts.TextView : Granite.HyperTextView {
                     buffer.end_user_action ();
                 }
             }
-
             return false;
 
         // If Enter on a list item, add a list prefix on the new line

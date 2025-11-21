@@ -103,6 +103,9 @@ public class Jorts.Application : Gtk.Application {
         set_accels_for_action ("win.action_toggle_list", {"<Shift>F12"});
         set_accels_for_action ("win.action_show_menu", {"<Control>G", "<Control>O"});
 
+        set_accels_for_action ("textview.action_toggle_list", {"<Shift>F12"});
+
+
 
         // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
