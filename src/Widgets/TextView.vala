@@ -141,7 +141,7 @@ public class Jorts.TextView : Granite.HyperTextView {
      */
     private void remove_prefix (uint8 line_number) {
         Gtk.TextIter line_start, prefix_end;
-        var remove_range = list_item_start.length;
+        var remove_range = list_item_start.char_count ();
 
         debug ("doing line " + line_number.to_string ());
         buffer.get_iter_at_line_offset (out line_start, line_number, 0);
