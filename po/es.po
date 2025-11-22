@@ -380,7 +380,6 @@ msgid "Hide text of unfocused notes (Ctrl+H)"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:88
-#, fuzzy
 msgid "Hide bottom bar"
 msgstr "Ocultar barra de botones"
 
@@ -388,7 +387,7 @@ msgstr "Ocultar barra de botones"
 #, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
-"Si está activada, oculta la barra inferior de las notas adhesivas. Los "
+"Los "
 "atajos de teclado seguirán funcionando (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
@@ -424,7 +423,7 @@ msgstr "Cerrar preferencias"
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
-msgstr " - Pantalones cortos"
+msgstr " - Jorts"
 
 #. ******************************************
 #. HEADERBAR BS
