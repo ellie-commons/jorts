@@ -37,8 +37,18 @@ namespace Jorts.Constants {
     const int DEFAULT_HEIGHT             = 320;
 
     // New preference window
+    // We dont show autostart on windows, avoid awkward blank space
+    // Autostart contributes to width too to accommodate buttons
+#if WINDOWS
+    const int DEFAULT_PREF_WIDTH         = 470;
+    const int DEFAULT_PREF_HEIGHT        = 240;
+#else
     const int DEFAULT_PREF_WIDTH         = 490;
     const int DEFAULT_PREF_HEIGHT        = 270;
+#endif
+
+
+
 
     // Used by random_emote () for the emote selection menu
     const string[] EMOTES = {
