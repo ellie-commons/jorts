@@ -66,7 +66,7 @@ The app reads from it only during startup (rest of the time it writes in) so you
 
 ON WINDOWS: It's in:
 
-YourUserFolder \AppData\Local\io.github.ellie_commons.jorts
+YourUserFolder \AppData\Local\Jorts
 
 AppData is a hidden folder. Either you paste the above path in the path bar, from your user folder
 Or you do a "Show hidden files"
