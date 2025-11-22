@@ -50,7 +50,7 @@
 
                 var list_label = new Granite.HeaderLabel (_("List item prefix")) {
                     mnemonic_widget = list_entry,
-                    secondary_text = _("If empty, the toggle list button will be hidden"),
+                    secondary_text = _("If left empty, the list button will be hidden"),
                     hexpand = true
                 };
 
@@ -74,7 +74,7 @@
 
                 var scribbly_box = new Jorts.SettingsSwitch (
                     _("Scribble mode"),
-                    _("Make notes unreadable when unfocused (Ctrl+H)"),
+                    _("Hide text of unfocused notes (Ctrl+H)"),
                     "scribbly-mode-active");
 
                 settingsbox.append (scribbly_box);
@@ -102,7 +102,7 @@
 
                 ///TRANSLATORS: Button to autostart the application
                 var set_autostart = new Gtk.Button () {
-                    label = _("Set autostart"),
+                    label = _("Enable"),
                     valign = Gtk.Align.CENTER
                 };
 
@@ -113,7 +113,7 @@
 
                 ///TRANSLATORS: Button to remove the autostart for the application
                 var remove_autostart = new Gtk.Button () {
-                    label = _("Remove autostart"),
+                    label = _("Disable"),
                     valign = Gtk.Align.CENTER
                 };
 
@@ -127,10 +127,10 @@
 
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
 
-                var autostart_label = new Granite.HeaderLabel (_("Start automatically")) {
+                var autostart_label = new Granite.HeaderLabel (_("Automatically start Jorts")) {
                     mnemonic_widget = both_buttons,
                     hexpand = true,
-                    secondary_text = _("open the app when you log in")
+                    secondary_text = _("Show your sticky notes when you log in")
                 };
 
                 autostart_box.append (autostart_label);
