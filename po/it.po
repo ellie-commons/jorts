@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 22:20+0100\n"
+"POT-Creation-Date: 2025-11-22 13:57+0100\n"
 "PO-Revision-Date: 2025-05-10 12:46+0100\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -15,19 +15,23 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Fare clic per modificare il titolo"
 
-#: src/Widgets/ActionBar.vala:29
+#: src/Widgets/ActionBar.vala:30
 msgid "New sticky note"
 msgstr "Nuova nota adesiva"
 
-#: src/Widgets/ActionBar.vala:41
+#: src/Widgets/ActionBar.vala:42
 msgid "Delete sticky note"
 msgstr "Cancella nota adesiva"
 
-#: src/Widgets/ActionBar.vala:56
+#: src/Widgets/ActionBar.vala:55
+msgid "Toggle list"
+msgstr ""
+
+#: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
 msgstr "Inserire emoji"
 
-#: src/Widgets/ActionBar.vala:68
+#: src/Widgets/ActionBar.vala:81
 msgid "Preferences for this sticky note"
 msgstr "Preferenze per questa nota adesiva"
 
@@ -71,261 +75,265 @@ msgid "Zoom in"
 msgstr "Ingrandisci"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:61 src/Objects/Themes.vala:72
 msgid "Blueberry"
 msgstr "Mirtillo"
 
-#: src/Objects/Themes.vala:60
+#: src/Objects/Themes.vala:62
 msgid "Mint"
 msgstr "Menta"
 
-#: src/Objects/Themes.vala:61
+#: src/Objects/Themes.vala:63
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Objects/Themes.vala:62
+#: src/Objects/Themes.vala:64
 msgid "Banana"
 msgstr "Banana"
 
-#: src/Objects/Themes.vala:63
+#: src/Objects/Themes.vala:65
 msgid "Orange"
 msgstr "Arancia"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:66
 msgid "Strawberry"
 msgstr "Fragola"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Bubblegum"
 msgstr "Gomma da masticare"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Grape"
 msgstr "Uva"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Cocoa"
 msgstr "Cacao"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Slate"
 msgstr "Ardesia"
 
-#: src/Utils/Random.vala:43
+#: src/Objects/Themes.vala:71
+msgid "No preference, random each time"
+msgstr ""
+
+#: src/Utils/Random.vala:26
 msgid "All my very best friends"
 msgstr "Tutti i miei migliori amici"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:27
 msgid "My super good secret recipe"
 msgstr "La mia ricetta segreta super buona"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:28
 msgid "My todo list"
 msgstr "Il mio elenco di cose da fare"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:29
 msgid "Super secret to not tell anyone"
 msgstr "Un super segreto da non dire a nessuno"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:30
 msgid "My grocery list"
 msgstr "La mia lista della spesa"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:31
 msgid "Random shower thoughts"
 msgstr "Pensieri casuali sulla doccia"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:32
 msgid "My fav fanfics"
 msgstr "Le mie fanfic preferite"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:33
 msgid "My fav dinosaurs"
 msgstr "I miei dinosauri preferiti"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:34
 msgid "My evil mastermind plan"
 msgstr "Il mio piano da genio del male"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:35
 msgid "What made me smile today"
 msgstr "Cosa mi ha fatto sorridere oggi"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:36
 msgid "Hello world!"
 msgstr "Ciao mondo!"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:37
 msgid "New sticky, new me"
 msgstr "Nuovo appiccicoso, nuovo me"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:38
 msgid "Hidden pirate treasure"
 msgstr "Il tesoro nascosto dei pirati"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:39
 msgid "To not forget, ever"
 msgstr "Per non dimenticare, mai"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:40
 msgid "Dear Diary,"
 msgstr "Caro Diario,"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:41
 msgid "Have a nice day! :)"
 msgstr "Buona giornata! :)"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:42
 msgid "My meds schedule"
 msgstr "Il mio programma di farmaci"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:43
 msgid "Household chores"
 msgstr "Faccende domestiche"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:44
 msgid "Ode to my cat"
 msgstr "Ode al mio gatto"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:45
 msgid "My dogs favourite toys"
 msgstr "I giocattoli preferiti dai miei cani"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:46
 msgid "How cool my birds are"
 msgstr "Quanto sono belli i miei uccelli"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:47
 msgid "Suspects in the Last Cookie affair"
 msgstr "Sospetti nella vicenda dell'ultimo biscotto"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:48
 msgid "Words my parrots know"
 msgstr "Le parole che i miei pappagalli conoscono"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:49
 msgid "Cool and funny compliments to give out"
 msgstr "Complimenti simpatici e divertenti da distribuire"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:50
 msgid "Ok, listen here,"
 msgstr "Ok, ascoltate qui,"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
 msgstr "La squadra Pokemon dei miei sogni"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:52
 msgid "My little notes"
 msgstr "Le mie piccole note"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:53
 msgid "Surprise gift list"
 msgstr "Lista di regali a sorpresa"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:54
 msgid "Brainstorming notes"
 msgstr "Note di brainstorming"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:55
 msgid "To bring to the party"
 msgstr "Da portare alla festa"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:56
 msgid "My amazing mixtape"
 msgstr "Il mio fantastico mixtape"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:57
 msgid "Napkin scribblys"
 msgstr "Tovaglioli scribblys"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
 msgstr "Le mie canzoni preferite da cantare insieme"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:59
 msgid "When to water which plant"
 msgstr "Quando innaffiare quale pianta"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:60
 msgid "Top 10 anime betrayals"
 msgstr "I 10 migliori tradimenti degli anime"
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:61
 msgid "Amazing ascii art!"
 msgstr "Arte ascii sorprendente!"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:62
 msgid "For the barbecue"
 msgstr "Per il barbecue"
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:63
 #, fuzzy
 msgid "My favourite bands"
 msgstr "I giocattoli preferiti dai miei cani"
 
-#: src/Utils/Random.vala:81
+#: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
 msgstr "I migliori ingredienti per l'insalata"
 
-#: src/Utils/Random.vala:82
+#: src/Utils/Random.vala:65
 msgid "Books to read"
 msgstr "Libri da leggere"
 
-#: src/Utils/Random.vala:83
+#: src/Utils/Random.vala:66
 msgid "Places to visit"
 msgstr "Luoghi da visitare"
 
-#: src/Utils/Random.vala:84
+#: src/Utils/Random.vala:67
 msgid "Hobbies to try out"
 msgstr "Hobby da provare"
 
-#: src/Utils/Random.vala:85
+#: src/Utils/Random.vala:68
 msgid "Who would win against Goku"
 msgstr "Chi vincerebbe contro Goku"
 
-#: src/Utils/Random.vala:86
+#: src/Utils/Random.vala:69
 msgid "To plant in the garden"
 msgstr "Da piantare in giardino"
 
-#: src/Utils/Random.vala:87
+#: src/Utils/Random.vala:70
 msgid "Meals this week"
 msgstr "I pasti di questa settimana"
 
-#: src/Utils/Random.vala:88
+#: src/Utils/Random.vala:71
 msgid "Everyone's pizza order"
 msgstr "L'ordine di pizza di tutti"
 
-#: src/Utils/Random.vala:89
+#: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
 msgstr "Oggi la cura di sé da fare"
 
-#: src/Utils/Random.vala:90
+#: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
 msgstr "Affermazioni importanti da ricordare"
 
-#: src/Utils/Random.vala:91
+#: src/Utils/Random.vala:74
 msgid "The coolest linux apps"
 msgstr "Le applicazioni linux più interessanti"
 
-#: src/Utils/Random.vala:92
+#: src/Utils/Random.vala:75
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "I giocattoli preferiti dai miei cani"
 
-#: src/Utils/Random.vala:93
+#: src/Utils/Random.vala:76
 msgid "My funniest jokes"
 msgstr "Le mie battute più divertenti"
 
-#: src/Utils/Random.vala:94
+#: src/Utils/Random.vala:77
 msgid "The perfect breakfast has..."
 msgstr "La colazione perfetta è..."
 
-#: src/Utils/Random.vala:129
+#: src/Utils/Random.vala:112
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Congratulazioni!🔥"
 
-#: src/Utils/Random.vala:131
+#: src/Utils/Random.vala:114
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -355,64 +363,66 @@ msgstr "Impostare Jorts per l'avvio con il computer"
 msgid "Request to system sent"
 msgstr "Richiesta inviata al sistema"
 
-#: src/Views/PreferencesView.vala:43
-msgid "Make unfocused notes unreadable"
-msgstr "Rendere illeggibili gli appunti non focalizzati"
-
-#: src/Views/PreferencesView.vala:44
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:51
+msgid "List item prefix"
 msgstr ""
-"Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
-"proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
 
-#: src/Views/PreferencesView.vala:55
-msgid "Hide buttons"
+#: src/Views/PreferencesView.vala:53
+msgid "If left empty, the list button will be hidden"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:76
+msgid "Scribble mode"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:77
+msgid "Hide text of unfocused notes (Ctrl+H)"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:88
+#, fuzzy
+msgid "Hide bottom bar"
 msgstr "Nascondi pulsanti"
 
-#: src/Views/PreferencesView.vala:56
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
+#: src/Views/PreferencesView.vala:89
+#, fuzzy
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
 "Se abilitato, nasconde la barra inferiore delle note adesive. Le scorciatoie "
 "da tastiera continuano a funzionare (Ctrl+T)."
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:72
-msgid "Set autostart"
-msgstr "Impostare l'avvio automatico"
+#: src/Views/PreferencesView.vala:105
+msgid "Enable"
+msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:84
-msgid "Remove autostart"
-msgstr "Rimuovere l'avvio automatico"
-
-#: src/Views/PreferencesView.vala:99
-msgid "Allow to start at login"
-msgstr "Consentire l'avvio all'accesso"
-
-#: src/Views/PreferencesView.vala:101
-msgid "You can request the system to start this application automatically"
+#: src/Views/PreferencesView.vala:116
+msgid "Disable"
 msgstr ""
-"È possibile richiedere al sistema di avviare automaticamente questa "
-"applicazione."
 
-#: src/Views/PreferencesView.vala:122
+#: src/Views/PreferencesView.vala:130
+msgid "Automatically start Jorts"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:133
+msgid "Show your sticky notes when you log in"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:153
 msgid "Support us!"
 msgstr "Sosteneteci!"
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:159
 msgid "Close"
 msgstr "Chiudere"
 
-#: src/Views/PreferencesView.vala:137
+#: src/Views/PreferencesView.vala:162
 msgid "Close preferences"
 msgstr "Chiudere le preferenze"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
-#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
+#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Pantaloncini"
 
@@ -427,3 +437,27 @@ msgstr "Preferenze per i tuoi Jorts"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Preferenze"
+
+#~ msgid "Make unfocused notes unreadable"
+#~ msgstr "Rendere illeggibili gli appunti non focalizzati"
+
+#~ msgid ""
+#~ "If enabled, unfocused sticky notes become unreadable to protect their "
+#~ "content from peeking eyes (Ctrl+H)"
+#~ msgstr ""
+#~ "Se abilitato, le note adesive non messe a fuoco diventano illeggibili per "
+#~ "proteggere il loro contenuto da occhi indiscreti (Ctrl+H)"
+
+#~ msgid "Set autostart"
+#~ msgstr "Impostare l'avvio automatico"
+
+#~ msgid "Remove autostart"
+#~ msgstr "Rimuovere l'avvio automatico"
+
+#~ msgid "Allow to start at login"
+#~ msgstr "Consentire l'avvio all'accesso"
+
+#~ msgid "You can request the system to start this application automatically"
+#~ msgstr ""
+#~ "È possibile richiedere al sistema di avviare automaticamente questa "
+#~ "applicazione."

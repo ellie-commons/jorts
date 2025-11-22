@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 22:20+0100\n"
+"POT-Creation-Date: 2025-11-22 13:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,19 +21,23 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr ""
 
-#: src/Widgets/ActionBar.vala:29
+#: src/Widgets/ActionBar.vala:30
 msgid "New sticky note"
 msgstr "नया चिपचिपा नोट"
 
-#: src/Widgets/ActionBar.vala:41
+#: src/Widgets/ActionBar.vala:42
 msgid "Delete sticky note"
 msgstr "चिपचिपा नोट हटाएं"
 
-#: src/Widgets/ActionBar.vala:56
+#: src/Widgets/ActionBar.vala:55
+msgid "Toggle list"
+msgstr ""
+
+#: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
 msgstr "इमोजी डालें"
 
-#: src/Widgets/ActionBar.vala:68
+#: src/Widgets/ActionBar.vala:81
 msgid "Preferences for this sticky note"
 msgstr "इस चिपचिपे नोट के लिए वरीयताएँ"
 
@@ -74,261 +78,265 @@ msgid "Zoom in"
 msgstr "ज़ूम इन"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:61 src/Objects/Themes.vala:72
 msgid "Blueberry"
 msgstr "ब्लूबेरी"
 
-#: src/Objects/Themes.vala:60
+#: src/Objects/Themes.vala:62
 msgid "Mint"
 msgstr "टकसाल"
 
-#: src/Objects/Themes.vala:61
+#: src/Objects/Themes.vala:63
 msgid "Lime"
 msgstr "चूना"
 
-#: src/Objects/Themes.vala:62
+#: src/Objects/Themes.vala:64
 msgid "Banana"
 msgstr "केला"
 
-#: src/Objects/Themes.vala:63
+#: src/Objects/Themes.vala:65
 msgid "Orange"
 msgstr "नारंगी"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:66
 msgid "Strawberry"
 msgstr "स्ट्रॉबेरी"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Bubblegum"
 msgstr "बबलगम"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Grape"
 msgstr "अंगूर"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Cocoa"
 msgstr "कोको"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Slate"
 msgstr "स्लेट"
 
-#: src/Utils/Random.vala:43
+#: src/Objects/Themes.vala:71
+msgid "No preference, random each time"
+msgstr ""
+
+#: src/Utils/Random.vala:26
 msgid "All my very best friends"
 msgstr "मेरे सभी सबसे अच्छे दोस्त"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:27
 msgid "My super good secret recipe"
 msgstr "मेरा सुपर गुड सीक्रेट रेसिपी"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:28
 msgid "My todo list"
 msgstr "मेरी टोडो सूची"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:29
 msgid "Super secret to not tell anyone"
 msgstr "किसी को नहीं बताने के लिए सुपर सीक्रेट"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:30
 msgid "My grocery list"
 msgstr "मेरी किराने की सूची"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:31
 msgid "Random shower thoughts"
 msgstr "यादृच्छिक शावर विचार"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:32
 msgid "My fav fanfics"
 msgstr "मेरे फेव फैनफिक्स"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:33
 msgid "My fav dinosaurs"
 msgstr "मेरे फेव डायनासोर"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:34
 msgid "My evil mastermind plan"
 msgstr "मेरी दुष्ट मास्टरमाइंड योजना"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:35
 msgid "What made me smile today"
 msgstr "आज मुझे क्या मुस्कुरा दिया"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:36
 msgid "Hello world!"
 msgstr "हैलो वर्ल्ड!"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:37
 msgid "New sticky, new me"
 msgstr "नया चिपचिपा, नया मुझे"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:38
 msgid "Hidden pirate treasure"
 msgstr "छिपा हुआ समुद्री डाकू खजाना"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:39
 msgid "To not forget, ever"
 msgstr "कभी नहीं भूलना, कभी भी"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:40
 msgid "Dear Diary,"
 msgstr "प्रिय डायरी,"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:41
 msgid "Have a nice day! :)"
 msgstr "आपका दिन शुभ हो! "
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:42
 msgid "My meds schedule"
 msgstr "मेरे मेड्स शेड्यूल"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:43
 msgid "Household chores"
 msgstr "घरेलू काम"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:44
 msgid "Ode to my cat"
 msgstr "मेरी बिल्ली के लिए ode"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:45
 msgid "My dogs favourite toys"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:46
 msgid "How cool my birds are"
 msgstr "मेरे पक्षी कितने शांत हैं"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:47
 msgid "Suspects in the Last Cookie affair"
 msgstr "अंतिम कुकी चक्कर में संदिग्ध"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:48
 msgid "Words my parrots know"
 msgstr "शब्द मेरे तोते जानते हैं"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:49
 msgid "Cool and funny compliments to give out"
 msgstr "बाहर देने के लिए शांत और मजेदार तारीफ"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:50
 msgid "Ok, listen here,"
 msgstr "ठीक है, यहाँ सुनो,"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
 msgstr "मेरा ड्रीम पोकेमॉन टीम"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:52
 msgid "My little notes"
 msgstr "मेरे छोटे नोट"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:53
 msgid "Surprise gift list"
 msgstr "आश्चर्य उपहार सूची"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:54
 msgid "Brainstorming notes"
 msgstr "विचार मंथन नोट्स"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:55
 msgid "To bring to the party"
 msgstr "पार्टी में लाने के लिए"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:56
 msgid "My amazing mixtape"
 msgstr "मेरा अद्भुत मिक्सटेप"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:57
 msgid "Napkin scribblys"
 msgstr "नैपकिन स्क्रिबल्स"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
 msgstr "मेरे fav गाने के साथ गाने के लिए"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:59
 msgid "When to water which plant"
 msgstr "कब पानी के लिए पानी"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:60
 msgid "Top 10 anime betrayals"
 msgstr "शीर्ष 10 एनीमे विश्वासघात"
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:61
 msgid "Amazing ascii art!"
 msgstr ""
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:62
 msgid "For the barbecue"
 msgstr ""
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:63
 #, fuzzy
 msgid "My favourite bands"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Utils/Random.vala:81
+#: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
 msgstr ""
 
-#: src/Utils/Random.vala:82
+#: src/Utils/Random.vala:65
 msgid "Books to read"
 msgstr ""
 
-#: src/Utils/Random.vala:83
+#: src/Utils/Random.vala:66
 msgid "Places to visit"
 msgstr ""
 
-#: src/Utils/Random.vala:84
+#: src/Utils/Random.vala:67
 msgid "Hobbies to try out"
 msgstr ""
 
-#: src/Utils/Random.vala:85
+#: src/Utils/Random.vala:68
 msgid "Who would win against Goku"
 msgstr ""
 
-#: src/Utils/Random.vala:86
+#: src/Utils/Random.vala:69
 msgid "To plant in the garden"
 msgstr ""
 
-#: src/Utils/Random.vala:87
+#: src/Utils/Random.vala:70
 msgid "Meals this week"
 msgstr ""
 
-#: src/Utils/Random.vala:88
+#: src/Utils/Random.vala:71
 msgid "Everyone's pizza order"
 msgstr ""
 
-#: src/Utils/Random.vala:89
+#: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
 msgstr ""
 
-#: src/Utils/Random.vala:90
+#: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
 msgstr ""
 
-#: src/Utils/Random.vala:91
+#: src/Utils/Random.vala:74
 msgid "The coolest linux apps"
 msgstr ""
 
-#: src/Utils/Random.vala:92
+#: src/Utils/Random.vala:75
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "मेरे कुत्ते पसंदीदा खिलौने"
 
-#: src/Utils/Random.vala:93
+#: src/Utils/Random.vala:76
 msgid "My funniest jokes"
 msgstr ""
 
-#: src/Utils/Random.vala:94
+#: src/Utils/Random.vala:77
 msgid "The perfect breakfast has..."
 msgstr ""
 
-#: src/Utils/Random.vala:129
+#: src/Utils/Random.vala:112
 msgid "🔥WOW Congratulations!🔥"
 msgstr ""
 
-#: src/Utils/Random.vala:131
+#: src/Utils/Random.vala:114
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -351,58 +359,63 @@ msgstr ""
 msgid "Request to system sent"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:43
-msgid "Make unfocused notes unreadable"
+#: src/Views/PreferencesView.vala:51
+msgid "List item prefix"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:44
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:53
+msgid "If left empty, the list button will be hidden"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:55
-msgid "Hide buttons"
+#: src/Views/PreferencesView.vala:76
+msgid "Scribble mode"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:56
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
+#: src/Views/PreferencesView.vala:77
+#, fuzzy
+msgid "Hide text of unfocused notes (Ctrl+H)"
+msgstr "अनफोकस्ड स्टिकी नोट्स की सामग्री छिपाएं"
+
+#: src/Views/PreferencesView.vala:88
+msgid "Hide bottom bar"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:89
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:72
-msgid "Set autostart"
+#: src/Views/PreferencesView.vala:105
+msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:84
-msgid "Remove autostart"
+#: src/Views/PreferencesView.vala:116
+msgid "Disable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:99
-msgid "Allow to start at login"
+#: src/Views/PreferencesView.vala:130
+msgid "Automatically start Jorts"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:101
-msgid "You can request the system to start this application automatically"
+#: src/Views/PreferencesView.vala:133
+msgid "Show your sticky notes when you log in"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:122
+#: src/Views/PreferencesView.vala:153
 msgid "Support us!"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:159
 msgid "Close"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:137
+#: src/Views/PreferencesView.vala:162
 msgid "Close preferences"
 msgstr ""
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
-#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
+#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr ""
 
@@ -433,9 +446,6 @@ msgstr ""
 
 #~ msgid "Always show content of sticky notes"
 #~ msgstr "हमेशा चिपचिपे नोटों की सामग्री दिखाएं"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "अनफोकस्ड स्टिकी नोट्स की सामग्री छिपाएं"
 
 #~ msgid "ZOOM%"
 #~ msgstr "ZOOM%"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 22:20+0100\n"
+"POT-Creation-Date: 2025-11-22 13:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,19 +16,23 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Натисніть, щоб змінити назву"
 
-#: src/Widgets/ActionBar.vala:29
+#: src/Widgets/ActionBar.vala:30
 msgid "New sticky note"
 msgstr "Нова наліпка"
 
-#: src/Widgets/ActionBar.vala:41
+#: src/Widgets/ActionBar.vala:42
 msgid "Delete sticky note"
 msgstr "Видалити наліпку"
 
-#: src/Widgets/ActionBar.vala:56
+#: src/Widgets/ActionBar.vala:55
+msgid "Toggle list"
+msgstr ""
+
+#: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
 msgstr "Вставте емодзі"
 
-#: src/Widgets/ActionBar.vala:68
+#: src/Widgets/ActionBar.vala:81
 msgid "Preferences for this sticky note"
 msgstr "Уподобання для цієї наліпки"
 
@@ -72,261 +76,265 @@ msgid "Zoom in"
 msgstr "Збільшити"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:61 src/Objects/Themes.vala:72
 msgid "Blueberry"
 msgstr "Чорниця."
 
-#: src/Objects/Themes.vala:60
+#: src/Objects/Themes.vala:62
 msgid "Mint"
 msgstr "М'ята"
 
-#: src/Objects/Themes.vala:61
+#: src/Objects/Themes.vala:63
 msgid "Lime"
 msgstr "Вапно."
 
-#: src/Objects/Themes.vala:62
+#: src/Objects/Themes.vala:64
 msgid "Banana"
 msgstr "Банан."
 
-#: src/Objects/Themes.vala:63
+#: src/Objects/Themes.vala:65
 msgid "Orange"
 msgstr "Помаранчевий"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:66
 msgid "Strawberry"
 msgstr "Полуничка."
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Bubblegum"
 msgstr "Жуйка"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Grape"
 msgstr "Виноград."
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Cocoa"
 msgstr "Какао"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Slate"
 msgstr "Сланці"
 
-#: src/Utils/Random.vala:43
+#: src/Objects/Themes.vala:71
+msgid "No preference, random each time"
+msgstr ""
+
+#: src/Utils/Random.vala:26
 msgid "All my very best friends"
 msgstr "Всі мої найкращі друзі"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:27
 msgid "My super good secret recipe"
 msgstr "Мій супер смачний секретний рецепт"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:28
 msgid "My todo list"
 msgstr "Мій список справ"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:29
 msgid "Super secret to not tell anyone"
 msgstr "Суперсекрет, який нікому не можна розголошувати"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:30
 msgid "My grocery list"
 msgstr "Мій список продуктів"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:31
 msgid "Random shower thoughts"
 msgstr "Випадкові думки в душі"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:32
 msgid "My fav fanfics"
 msgstr "Мої улюблені фанфіки"
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:33
 msgid "My fav dinosaurs"
 msgstr "Мої улюблені динозаври"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:34
 msgid "My evil mastermind plan"
 msgstr "Мій злий план"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:35
 msgid "What made me smile today"
 msgstr "Що змусило мене посміхнутися сьогодні"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:36
 msgid "Hello world!"
 msgstr "Привіт, світе!"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:37
 msgid "New sticky, new me"
 msgstr "Новий липкий, новий я"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:38
 msgid "Hidden pirate treasure"
 msgstr "Захований піратський скарб"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:39
 msgid "To not forget, ever"
 msgstr "Щоб ніколи не забути"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:40
 msgid "Dear Diary,"
 msgstr "Дорогий щоденнику,"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:41
 msgid "Have a nice day! :)"
 msgstr "Гарного вам дня! :)"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:42
 msgid "My meds schedule"
 msgstr "Мій графік прийому ліків"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:43
 msgid "Household chores"
 msgstr "Домашні справи"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:44
 msgid "Ode to my cat"
 msgstr "Ода моєму коту"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:45
 msgid "My dogs favourite toys"
 msgstr "Улюблені іграшки моїх собак"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:46
 msgid "How cool my birds are"
 msgstr "Які круті мої пташки"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:47
 msgid "Suspects in the Last Cookie affair"
 msgstr "Підозрювані у справі \"Останнього печива"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:48
 msgid "Words my parrots know"
 msgstr "Слова, які знають мої папуги"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:49
 msgid "Cool and funny compliments to give out"
 msgstr "Прикольні та смішні компліменти для роздачі"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:50
 msgid "Ok, listen here,"
 msgstr "Гаразд, слухай сюди,"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
 msgstr "Команда покемонів моєї мрії"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:52
 msgid "My little notes"
 msgstr "Мої маленькі нотатки."
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:53
 msgid "Surprise gift list"
 msgstr "Список подарунків-сюрпризів"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:54
 msgid "Brainstorming notes"
 msgstr "Нотатки для мозкового штурму"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:55
 msgid "To bring to the party"
 msgstr "Принести на вечірку"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:56
 msgid "My amazing mixtape"
 msgstr "Мій дивовижний мікстейп"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:57
 msgid "Napkin scribblys"
 msgstr "Каракулі на серветках"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
 msgstr "Мої улюблені пісні для підспівування"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:59
 msgid "When to water which plant"
 msgstr "Коли поливати яку рослину"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:60
 msgid "Top 10 anime betrayals"
 msgstr "Топ-10 аніме-зрад"
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:61
 msgid "Amazing ascii art!"
 msgstr "Дивовижне мистецтво сходження!"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:62
 msgid "For the barbecue"
 msgstr "Для барбекю"
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:63
 #, fuzzy
 msgid "My favourite bands"
 msgstr "Улюблені іграшки моїх собак"
 
-#: src/Utils/Random.vala:81
+#: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
 msgstr "Найкращі інгредієнти для салату"
 
-#: src/Utils/Random.vala:82
+#: src/Utils/Random.vala:65
 msgid "Books to read"
 msgstr "Книги для читання"
 
-#: src/Utils/Random.vala:83
+#: src/Utils/Random.vala:66
 msgid "Places to visit"
 msgstr "Місця, які варто відвідати"
 
-#: src/Utils/Random.vala:84
+#: src/Utils/Random.vala:67
 msgid "Hobbies to try out"
 msgstr "Захоплення, які варто спробувати"
 
-#: src/Utils/Random.vala:85
+#: src/Utils/Random.vala:68
 msgid "Who would win against Goku"
 msgstr "Хто переможе Гоку"
 
-#: src/Utils/Random.vala:86
+#: src/Utils/Random.vala:69
 msgid "To plant in the garden"
 msgstr "Для посадки в саду"
 
-#: src/Utils/Random.vala:87
+#: src/Utils/Random.vala:70
 msgid "Meals this week"
 msgstr "Харчування на цьому тижні"
 
-#: src/Utils/Random.vala:88
+#: src/Utils/Random.vala:71
 msgid "Everyone's pizza order"
 msgstr "Замовлення піци для всіх"
 
-#: src/Utils/Random.vala:89
+#: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
 msgstr "Сьогодні догляд за собою"
 
-#: src/Utils/Random.vala:90
+#: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
 msgstr "Важливі афірмації, які варто запам'ятати"
 
-#: src/Utils/Random.vala:91
+#: src/Utils/Random.vala:74
 msgid "The coolest linux apps"
 msgstr "Найкрутіші програми для linux"
 
-#: src/Utils/Random.vala:92
+#: src/Utils/Random.vala:75
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Улюблені іграшки моїх собак"
 
-#: src/Utils/Random.vala:93
+#: src/Utils/Random.vala:76
 msgid "My funniest jokes"
 msgstr "Мої найсмішніші жарти"
 
-#: src/Utils/Random.vala:94
+#: src/Utils/Random.vala:77
 msgid "The perfect breakfast has..."
 msgstr "Ідеальний сніданок має..."
 
-#: src/Utils/Random.vala:129
+#: src/Utils/Random.vala:112
 msgid "🔥WOW Congratulations!🔥"
 msgstr "Ого, вітаю!"
 
-#: src/Utils/Random.vala:131
+#: src/Utils/Random.vala:114
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -356,64 +364,68 @@ msgstr "Налаштуйте Jorts на запуск з комп'ютера"
 msgid "Request to system sent"
 msgstr "Запит до системи відправлено"
 
-#: src/Views/PreferencesView.vala:43
-msgid "Make unfocused notes unreadable"
-msgstr "Зробіть розфокусовані нотатки нечитабельними"
-
-#: src/Views/PreferencesView.vala:44
-#, fuzzy
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:51
+msgid "List item prefix"
 msgstr ""
-"Якщо увімкнено, розфокусовані стікери стають нечитабельними, щоб захистити "
-"їхній вміст від сторонніх очей"
 
-#: src/Views/PreferencesView.vala:55
+#: src/Views/PreferencesView.vala:53
+msgid "If left empty, the list button will be hidden"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:76
 #, fuzzy
-msgid "Hide buttons"
+msgid "Scribble mode"
+msgstr "Увімкнути режим каракулів"
+
+#: src/Views/PreferencesView.vala:77
+#, fuzzy
+msgid "Hide text of unfocused notes (Ctrl+H)"
+msgstr "Приховати вміст нефокусованих стікерів"
+
+#: src/Views/PreferencesView.vala:88
+#, fuzzy
+msgid "Hide bottom bar"
 msgstr "Приховати панель кнопок"
 
-#: src/Views/PreferencesView.vala:56
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
+#: src/Views/PreferencesView.vala:89
+#, fuzzy
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
 "Якщо увімкнено, приховує нижній рядок у нотатках. Комбінації клавіш "
 "працюватимуть як і раніше (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:72
-msgid "Set autostart"
-msgstr "Встановити автозапуск"
+#: src/Views/PreferencesView.vala:105
+msgid "Enable"
+msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:84
-msgid "Remove autostart"
-msgstr "Видалити автозапуск"
+#: src/Views/PreferencesView.vala:116
+msgid "Disable"
+msgstr ""
 
-#: src/Views/PreferencesView.vala:99
-msgid "Allow to start at login"
-msgstr "Дозволити запуск при вході в систему"
+#: src/Views/PreferencesView.vala:130
+msgid "Automatically start Jorts"
+msgstr ""
 
-#: src/Views/PreferencesView.vala:101
-msgid "You can request the system to start this application automatically"
-msgstr "Ви можете попросити систему запустити цю програму автоматично"
+#: src/Views/PreferencesView.vala:133
+msgid "Show your sticky notes when you log in"
+msgstr ""
 
-#: src/Views/PreferencesView.vala:122
+#: src/Views/PreferencesView.vala:153
 msgid "Support us!"
 msgstr "Підтримайте нас!"
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:159
 msgid "Close"
 msgstr "Закрити"
 
-#: src/Views/PreferencesView.vala:137
+#: src/Views/PreferencesView.vala:162
 msgid "Close preferences"
 msgstr "Близькі уподобання"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
-#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
+#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Джинси"
 
@@ -429,6 +441,29 @@ msgstr "Налаштування для всіх стікерів"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Уподобання"
+
+#~ msgid "Make unfocused notes unreadable"
+#~ msgstr "Зробіть розфокусовані нотатки нечитабельними"
+
+#, fuzzy
+#~ msgid ""
+#~ "If enabled, unfocused sticky notes become unreadable to protect their "
+#~ "content from peeking eyes (Ctrl+H)"
+#~ msgstr ""
+#~ "Якщо увімкнено, розфокусовані стікери стають нечитабельними, щоб "
+#~ "захистити їхній вміст від сторонніх очей"
+
+#~ msgid "Set autostart"
+#~ msgstr "Встановити автозапуск"
+
+#~ msgid "Remove autostart"
+#~ msgstr "Видалити автозапуск"
+
+#~ msgid "Allow to start at login"
+#~ msgstr "Дозволити запуск при вході в систему"
+
+#~ msgid "You can request the system to start this application automatically"
+#~ msgstr "Ви можете попросити систему запустити цю програму автоматично"
 
 #~ msgid "Create a new note"
 #~ msgstr "Створіть нову нотатку"
@@ -478,14 +513,8 @@ msgstr "Уподобання"
 #~ msgid "Choose a colour for this sticky note"
 #~ msgstr "Виберіть колір для цієї наліпки"
 
-#~ msgid "Activate scribbly mode"
-#~ msgstr "Увімкнути режим каракулів"
-
 #~ msgid "Always show content of sticky notes"
 #~ msgstr "Завжди показуйте вміст стікерів"
-
-#~ msgid "Hide content of unfocused sticky notes"
-#~ msgstr "Приховати вміст нефокусованих стікерів"
 
 #~ msgid "ZOOM%"
 #~ msgstr "ZOOM%"

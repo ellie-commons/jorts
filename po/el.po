@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11 22:20+0100\n"
+"POT-Creation-Date: 2025-11-22 13:57+0100\n"
 "PO-Revision-Date: 2025-06-02 19:29+0300\n"
 "Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
 "noreply.github.com>\n"
@@ -18,19 +18,23 @@ msgstr ""
 msgid "Click to edit the title"
 msgstr "Κάντε κλικ για να επεξεργαστείτε τον τίτλο"
 
-#: src/Widgets/ActionBar.vala:29
+#: src/Widgets/ActionBar.vala:30
 msgid "New sticky note"
 msgstr "Νέα σημείωση"
 
-#: src/Widgets/ActionBar.vala:41
+#: src/Widgets/ActionBar.vala:42
 msgid "Delete sticky note"
 msgstr "Διαγραφή σημείωσης"
 
-#: src/Widgets/ActionBar.vala:56
+#: src/Widgets/ActionBar.vala:55
+msgid "Toggle list"
+msgstr ""
+
+#: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
 msgstr "Εισαγωγή emoji"
 
-#: src/Widgets/ActionBar.vala:68
+#: src/Widgets/ActionBar.vala:81
 msgid "Preferences for this sticky note"
 msgstr "Προτιμήσεις για αυτή τη σημείωση"
 
@@ -75,260 +79,264 @@ msgid "Zoom in"
 msgstr "Μεγέθυνση"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:59 src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:61 src/Objects/Themes.vala:72
 msgid "Blueberry"
 msgstr "Μύρτιλλο"
 
-#: src/Objects/Themes.vala:60
+#: src/Objects/Themes.vala:62
 msgid "Mint"
 msgstr "Μέντα"
 
-#: src/Objects/Themes.vala:61
+#: src/Objects/Themes.vala:63
 msgid "Lime"
 msgstr "Μοσχολέμονο"
 
-#: src/Objects/Themes.vala:62
+#: src/Objects/Themes.vala:64
 msgid "Banana"
 msgstr "Μπανάνα"
 
-#: src/Objects/Themes.vala:63
+#: src/Objects/Themes.vala:65
 msgid "Orange"
 msgstr "Πορτοκάλι"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:66
 msgid "Strawberry"
 msgstr "Φράουλα"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Bubblegum"
 msgstr "Τσιχλόφουσκα"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Grape"
 msgstr "Σταφύλι"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Cocoa"
 msgstr "Κακάο"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Slate"
 msgstr "Γρανίτης"
 
-#: src/Utils/Random.vala:43
+#: src/Objects/Themes.vala:71
+msgid "No preference, random each time"
+msgstr ""
+
+#: src/Utils/Random.vala:26
 msgid "All my very best friends"
 msgstr "Όλοι οι κολλητοί μου"
 
-#: src/Utils/Random.vala:44
+#: src/Utils/Random.vala:27
 msgid "My super good secret recipe"
 msgstr "Η φανταστική μυστική μου συνταγή"
 
-#: src/Utils/Random.vala:45
+#: src/Utils/Random.vala:28
 msgid "My todo list"
 msgstr "Η λίστα υποχρεώσεών μου"
 
-#: src/Utils/Random.vala:46
+#: src/Utils/Random.vala:29
 msgid "Super secret to not tell anyone"
 msgstr "Άκρως απόρρητο· μην το πεις πουθενά"
 
-#: src/Utils/Random.vala:47
+#: src/Utils/Random.vala:30
 msgid "My grocery list"
 msgstr "Η λίστα με τα ψώνια μου"
 
-#: src/Utils/Random.vala:48
+#: src/Utils/Random.vala:31
 msgid "Random shower thoughts"
 msgstr "Σκέψεις που μου κατέβηκαν στο μυαλό"
 
-#: src/Utils/Random.vala:49
+#: src/Utils/Random.vala:32
 msgid "My fav fanfics"
 msgstr "Μια φορά και έναν καιρό..."
 
-#: src/Utils/Random.vala:50
+#: src/Utils/Random.vala:33
 msgid "My fav dinosaurs"
 msgstr "Οι αγαπημένοι μου δεινόσαυροι"
 
-#: src/Utils/Random.vala:51
+#: src/Utils/Random.vala:34
 msgid "My evil mastermind plan"
 msgstr "Το μυστικό ύπουλό μου σχέδιο"
 
-#: src/Utils/Random.vala:52
+#: src/Utils/Random.vala:35
 msgid "What made me smile today"
 msgstr "Τι με έκανε να χαρώ σήμερα"
 
-#: src/Utils/Random.vala:53
+#: src/Utils/Random.vala:36
 msgid "Hello world!"
 msgstr "Γεια σου κόσμε!"
 
-#: src/Utils/Random.vala:54
+#: src/Utils/Random.vala:37
 msgid "New sticky, new me"
 msgstr "Νέα σημείωση για μια νέα αρχή"
 
-#: src/Utils/Random.vala:55
+#: src/Utils/Random.vala:38
 msgid "Hidden pirate treasure"
 msgstr "Οδηγίες για να βρείτε τον κρυμμένο πειρατικό θησαυρό"
 
-#: src/Utils/Random.vala:56
+#: src/Utils/Random.vala:39
 msgid "To not forget, ever"
 msgstr "Για να μην ξεχαστούν"
 
-#: src/Utils/Random.vala:57
+#: src/Utils/Random.vala:40
 msgid "Dear Diary,"
 msgstr "Αγαπητό μου ημερολόγιο,"
 
-#: src/Utils/Random.vala:58
+#: src/Utils/Random.vala:41
 msgid "Have a nice day! :)"
 msgstr "Καλημέρα! :)"
 
-#: src/Utils/Random.vala:59
+#: src/Utils/Random.vala:42
 msgid "My meds schedule"
 msgstr "Πρόγραμμα Φαρμάκων"
 
-#: src/Utils/Random.vala:60
+#: src/Utils/Random.vala:43
 msgid "Household chores"
 msgstr "Δουλειές Σπιτιού"
 
-#: src/Utils/Random.vala:61
+#: src/Utils/Random.vala:44
 msgid "Ode to my cat"
 msgstr "Σενάριο: «Η Ιφιγένεια εν Γατίδι»"
 
-#: src/Utils/Random.vala:62
+#: src/Utils/Random.vala:45
 msgid "My dogs favourite toys"
 msgstr "Τα Αγαπημένα Παιχνίδια του Σκύλου μου"
 
-#: src/Utils/Random.vala:63
+#: src/Utils/Random.vala:46
 msgid "How cool my birds are"
 msgstr "Πόσο Όμορφα Είναι τα Καναρίνια μου"
 
-#: src/Utils/Random.vala:64
+#: src/Utils/Random.vala:47
 msgid "Suspects in the Last Cookie affair"
 msgstr "Ύποπτοι στην υπόθεση «Ποιος έφαγε το τελευταίο μπισκότο;»"
 
-#: src/Utils/Random.vala:65
+#: src/Utils/Random.vala:48
 msgid "Words my parrots know"
 msgstr "Λίστα Λέξεων που Ξέρουν τα Παπαγαλάκια μου"
 
-#: src/Utils/Random.vala:66
+#: src/Utils/Random.vala:49
 msgid "Cool and funny compliments to give out"
 msgstr "Τυφλοσούρτης Δημιουργικών και Αστείων Κομπλιμέντων"
 
-#: src/Utils/Random.vala:67
+#: src/Utils/Random.vala:50
 msgid "Ok, listen here,"
 msgstr "Ακούσατε, Ακούσατε!"
 
-#: src/Utils/Random.vala:68
+#: src/Utils/Random.vala:51
 msgid "My dream Pokemon team"
 msgstr "Ομάδες που ονειρεύομαι να φτάσουν Α' Εθνική"
 
-#: src/Utils/Random.vala:69
+#: src/Utils/Random.vala:52
 msgid "My little notes"
 msgstr "Οι μικρές μου σημειώσεις"
 
-#: src/Utils/Random.vala:70
+#: src/Utils/Random.vala:53
 msgid "Surprise gift list"
 msgstr "Λίστα δώρων-έκπληξη"
 
-#: src/Utils/Random.vala:71
+#: src/Utils/Random.vala:54
 msgid "Brainstorming notes"
 msgstr "Καταιγισμός ιδεών"
 
-#: src/Utils/Random.vala:72
+#: src/Utils/Random.vala:55
 msgid "To bring to the party"
 msgstr "Τι να φέρω στο πάρτι"
 
-#: src/Utils/Random.vala:73
+#: src/Utils/Random.vala:56
 msgid "My amazing mixtape"
 msgstr "Η φανταστική μου playlist"
 
-#: src/Utils/Random.vala:74
+#: src/Utils/Random.vala:57
 msgid "Napkin scribblys"
 msgstr "Σημειώσεις από Χαρτοπετσέτες"
 
-#: src/Utils/Random.vala:75
+#: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
 msgstr "Τα αγαπημένα μου τραγούδια για να τραγουδώ"
 
-#: src/Utils/Random.vala:76
+#: src/Utils/Random.vala:59
 msgid "When to water which plant"
 msgstr "Πότε να ποτίζω τα φυτά μου"
 
-#: src/Utils/Random.vala:77
+#: src/Utils/Random.vala:60
 msgid "Top 10 anime betrayals"
 msgstr "Οι 10 καλύτερες ατάκες"
 
-#: src/Utils/Random.vala:78
+#: src/Utils/Random.vala:61
 msgid "Amazing ascii art!"
 msgstr "Απίθανα σχέδια με γράμματα!"
 
-#: src/Utils/Random.vala:79
+#: src/Utils/Random.vala:62
 msgid "For the barbecue"
 msgstr "Λίστα Ψησίματος"
 
-#: src/Utils/Random.vala:80
+#: src/Utils/Random.vala:63
 msgid "My favourite bands"
 msgstr "Τα αγαπημένα μου συγκροτήματα"
 
-#: src/Utils/Random.vala:81
+#: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
 msgstr "Καλύτερα συστατικά για σαλάτα"
 
-#: src/Utils/Random.vala:82
+#: src/Utils/Random.vala:65
 msgid "Books to read"
 msgstr "Βιβλία για ανάγνωση"
 
-#: src/Utils/Random.vala:83
+#: src/Utils/Random.vala:66
 msgid "Places to visit"
 msgstr "Μέρη για επίσκεψη"
 
-#: src/Utils/Random.vala:84
+#: src/Utils/Random.vala:67
 msgid "Hobbies to try out"
 msgstr "Χόμπι για να δοκιμάσετε"
 
-#: src/Utils/Random.vala:85
+#: src/Utils/Random.vala:68
 msgid "Who would win against Goku"
 msgstr "Ποιος θα κέρδιζε τον Goku"
 
-#: src/Utils/Random.vala:86
+#: src/Utils/Random.vala:69
 msgid "To plant in the garden"
 msgstr "Για να φυτέψετε στον κήπο"
 
-#: src/Utils/Random.vala:87
+#: src/Utils/Random.vala:70
 msgid "Meals this week"
 msgstr "Γεύματα αυτή την εβδομάδα"
 
-#: src/Utils/Random.vala:88
+#: src/Utils/Random.vala:71
 msgid "Everyone's pizza order"
 msgstr "Η παραγγελία πίτσας του καθενός"
 
-#: src/Utils/Random.vala:89
+#: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
 msgstr "Σήμερα αυτοφροντίδα για να κάνετε"
 
-#: src/Utils/Random.vala:90
+#: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
 msgstr "Σημαντικές επιβεβαιώσεις που πρέπει να θυμάστε"
 
-#: src/Utils/Random.vala:91
+#: src/Utils/Random.vala:74
 msgid "The coolest linux apps"
 msgstr "Οι πιο cool εφαρμογές linux"
 
-#: src/Utils/Random.vala:92
+#: src/Utils/Random.vala:75
 #, fuzzy
 msgid "My favourite dishes"
 msgstr "Τα αγαπημένα μου συγκροτήματα"
 
-#: src/Utils/Random.vala:93
+#: src/Utils/Random.vala:76
 msgid "My funniest jokes"
 msgstr "Τα πιο αστεία αστεία μου"
 
-#: src/Utils/Random.vala:94
+#: src/Utils/Random.vala:77
 msgid "The perfect breakfast has..."
 msgstr "Το τέλειο πρωινό έχει..."
 
-#: src/Utils/Random.vala:129
+#: src/Utils/Random.vala:112
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥ΟΥΑΟΥ, ΤΑ ΣΥΓΧΑΡΗΤΗΡΙΑ ΜΟΥ🔥"
 
-#: src/Utils/Random.vala:131
+#: src/Utils/Random.vala:114
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -359,63 +367,66 @@ msgstr "Ρυθμίστε το Jorts για να ξεκινήσει με τον �
 msgid "Request to system sent"
 msgstr "Αποστολή αιτήματος στο σύστημα"
 
-#: src/Views/PreferencesView.vala:43
-msgid "Make unfocused notes unreadable"
-msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
-
-#: src/Views/PreferencesView.vala:44
-msgid ""
-"If enabled, unfocused sticky notes become unreadable to protect their "
-"content from peeking eyes (Ctrl+H)"
+#: src/Views/PreferencesView.vala:51
+msgid "List item prefix"
 msgstr ""
-"Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες "
-"για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
 
-#: src/Views/PreferencesView.vala:55
-msgid "Hide buttons"
+#: src/Views/PreferencesView.vala:53
+msgid "If left empty, the list button will be hidden"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:76
+msgid "Scribble mode"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:77
+msgid "Hide text of unfocused notes (Ctrl+H)"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:88
+#, fuzzy
+msgid "Hide bottom bar"
 msgstr "Απόκρυψη κουμπιών"
 
-#: src/Views/PreferencesView.vala:56
-msgid ""
-"If enabled, hides the bottom bar in sticky notes. Keyboard shortcuts will "
-"still function (Ctrl+T)"
+#: src/Views/PreferencesView.vala:89
+#, fuzzy
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
 "Εάν είναι επιλεγμένο, αποκρύπτει την κάτω μπάρα στο παράθυρο σημειώσεων. \n"
 "Οι συντομεύσεις πληκτρολογίου εξακολουθούν να λειτουργούν κανονικά (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:72
-msgid "Set autostart"
-msgstr "Ορισμός αυτόματης εκκίνησης"
+#: src/Views/PreferencesView.vala:105
+msgid "Enable"
+msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:84
-msgid "Remove autostart"
-msgstr "Κατάργηση της αυτόματης εκκίνησης"
-
-#: src/Views/PreferencesView.vala:99
-msgid "Allow to start at login"
-msgstr "Επιτρέψτε το άνοιγμα κατά την εκκίνηση"
-
-#: src/Views/PreferencesView.vala:101
-msgid "You can request the system to start this application automatically"
+#: src/Views/PreferencesView.vala:116
+msgid "Disable"
 msgstr ""
-"Μπορείτε να ζητήσετε από το σύστημα να εκκινήσει αυτόματα αυτή την εφαρμογή."
 
-#: src/Views/PreferencesView.vala:122
+#: src/Views/PreferencesView.vala:130
+msgid "Automatically start Jorts"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:133
+msgid "Show your sticky notes when you log in"
+msgstr ""
+
+#: src/Views/PreferencesView.vala:153
 msgid "Support us!"
 msgstr "Υποστηρίξτε μας!"
 
-#: src/Views/PreferencesView.vala:134
+#: src/Views/PreferencesView.vala:159
 msgid "Close"
 msgstr "Κλείστε το"
 
-#: src/Views/PreferencesView.vala:137
+#: src/Views/PreferencesView.vala:162
 msgid "Close preferences"
 msgstr "Κλείστε τις προτιμήσεις"
 
-#: src/Windows/StickyNoteWindow.vala:89 src/Windows/StickyNoteWindow.vala:177
-#: src/Windows/StickyNoteWindow.vala:225 src/Windows/PreferenceWindow.vala:35
+#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
+#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 msgid " - Jorts"
 msgstr " - Τζορτς"
 
@@ -430,6 +441,30 @@ msgstr "Ρυθμίσεις του Jorts"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Προτιμήσεις"
+
+#~ msgid "Make unfocused notes unreadable"
+#~ msgstr "Κάντε τις μη εστιασμένες σημειώσεις δυσανάγνωστες"
+
+#~ msgid ""
+#~ "If enabled, unfocused sticky notes become unreadable to protect their "
+#~ "content from peeking eyes (Ctrl+H)"
+#~ msgstr ""
+#~ "Εάν είναι επιλεγμένο, οι σημειώσεις στο παρασκήνιο γίνονται δυσανάγνωστες "
+#~ "για να προστατεύσουν το περιεχόμενό τους από αδιάκριτους (Ctrl+H)"
+
+#~ msgid "Set autostart"
+#~ msgstr "Ορισμός αυτόματης εκκίνησης"
+
+#~ msgid "Remove autostart"
+#~ msgstr "Κατάργηση της αυτόματης εκκίνησης"
+
+#~ msgid "Allow to start at login"
+#~ msgstr "Επιτρέψτε το άνοιγμα κατά την εκκίνηση"
+
+#~ msgid "You can request the system to start this application automatically"
+#~ msgstr ""
+#~ "Μπορείτε να ζητήσετε από το σύστημα να εκκινήσει αυτόματα αυτή την "
+#~ "εφαρμογή."
 
 #~ msgid "Create a new note"
 #~ msgstr "Δημιουργία νέας σημείωσης"
