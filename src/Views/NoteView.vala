@@ -75,12 +75,13 @@
     // Randomize the button emoji when clicked
     private void randomize_emote_button () {
         debug ("Emote requested!");
-        emoji_button.icon_name = Jorts.Utils.random_emote (emoji_button.get_icon_name ());
+        emoji_button.icon_name = Jorts.Utils.random_emote (emoji_button.icon_name);
     }
 
     private void on_emoji_picked (string emoji) {
         debug ("Emote picked!");
         textview.buffer.insert_at_cursor (emoji, -1);
+        textview.grab_focus ();
     }
 
     private void mono_set (bool if_mono) {

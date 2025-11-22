@@ -124,7 +124,7 @@
 
         emoji_button.set_icon_name (
             Jorts.Utils.random_emote (
-                emoji_button.get_icon_name ()
+                emoji_button.icon_name
             )
         );
     }
