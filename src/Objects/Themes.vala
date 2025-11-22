@@ -20,6 +20,7 @@ public enum Jorts.Themes {
     GRAPE,
     COCOA,
     SLATE,
+    LATTE,
     IDK;
 
     /*************************************************/
@@ -37,6 +38,7 @@ public enum Jorts.Themes {
             case BUBBLEGUM:     return "BUBBLEGUM";
             case GRAPE:         return "GRAPE";
             case COCOA:         return "COCOA";
+            case SLATE:         return "LATTE";
             case SLATE:         return "SLATE";
             case IDK:           return (Jorts.Themes.random_theme (NoteData.latest_theme)).to_string ();
             default: return "BLUEBERRY";
@@ -68,6 +70,7 @@ public enum Jorts.Themes {
             case GRAPE:         return _("Grape");
             case COCOA:         return _("Cocoa");
             case SLATE:         return _("Slate");
+            case LATTE:         return _("Latte");
             case IDK:           return _("No preference, random each time");
             default:            return _("Blueberry");
         }
