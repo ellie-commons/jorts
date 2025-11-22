@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-22 13:57+0100\n"
+"POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,47 +76,51 @@ msgid "Zoom in"
 msgstr "Přiblížení"
 
 #. /TRANSLATORS: These are the names of the elementary OS colours
-#: src/Objects/Themes.vala:61 src/Objects/Themes.vala:72
+#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
 msgid "Blueberry"
 msgstr "Borůvky"
 
-#: src/Objects/Themes.vala:62
+#: src/Objects/Themes.vala:64
 msgid "Mint"
 msgstr "Mátový"
 
-#: src/Objects/Themes.vala:63
+#: src/Objects/Themes.vala:65
 msgid "Lime"
 msgstr "Lime"
 
-#: src/Objects/Themes.vala:64
+#: src/Objects/Themes.vala:66
 msgid "Banana"
 msgstr "Banán"
 
-#: src/Objects/Themes.vala:65
+#: src/Objects/Themes.vala:67
 msgid "Orange"
 msgstr "Orange"
 
-#: src/Objects/Themes.vala:66
+#: src/Objects/Themes.vala:68
 msgid "Strawberry"
 msgstr "Jahoda"
 
-#: src/Objects/Themes.vala:67
+#: src/Objects/Themes.vala:69
 msgid "Bubblegum"
 msgstr "Žvýkačka"
 
-#: src/Objects/Themes.vala:68
+#: src/Objects/Themes.vala:70
 msgid "Grape"
 msgstr "Hrozny"
 
-#: src/Objects/Themes.vala:69
+#: src/Objects/Themes.vala:71
 msgid "Cocoa"
 msgstr "Kakao"
 
-#: src/Objects/Themes.vala:70
+#: src/Objects/Themes.vala:72
 msgid "Slate"
 msgstr "Břidlice"
 
-#: src/Objects/Themes.vala:71
+#: src/Objects/Themes.vala:73
+msgid "Latte"
+msgstr ""
+
+#: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
 msgstr ""
 
@@ -330,11 +334,12 @@ msgstr "Moje nejvtipnější vtipy"
 msgid "The perfect breakfast has..."
 msgstr "Dokonalá snídaně má..."
 
-#: src/Utils/Random.vala:112
+#. /TRANSLATORS: This is for an easter egg
+#: src/Utils/Random.vala:113
 msgid "🔥WOW Congratulations!🔥"
 msgstr "🔥WOW Gratulujeme!🔥"
 
-#: src/Utils/Random.vala:114
+#: src/Utils/Random.vala:115
 msgid ""
 "You have found the Golden Sticky Note!\n"
 "\n"
@@ -379,15 +384,16 @@ msgstr "Aktivace režimu scribbly"
 
 #: src/Views/PreferencesView.vala:77
 #, fuzzy
-msgid "Hide text of unfocused notes (Ctrl+H)"
+msgid "Scribble text of unfocused notes (Ctrl+H)"
 msgstr "Skrytí obsahu nesoustředěných samolepicích poznámek"
 
-#: src/Views/PreferencesView.vala:88
+#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#: src/Views/PreferencesView.vala:89
 #, fuzzy
 msgid "Hide bottom bar"
 msgstr "Skrytí panelu tlačítek"
 
-#: src/Views/PreferencesView.vala:89
+#: src/Views/PreferencesView.vala:90
 #, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
@@ -395,32 +401,32 @@ msgstr ""
 "poznámkách. Klávesové zkratky budou stále funkční (Ctrl+T)."
 
 #. /TRANSLATORS: Button to autostart the application
-#: src/Views/PreferencesView.vala:105
+#: src/Views/PreferencesView.vala:106
 msgid "Enable"
 msgstr ""
 
 #. /TRANSLATORS: Button to remove the autostart for the application
-#: src/Views/PreferencesView.vala:116
+#: src/Views/PreferencesView.vala:117
 msgid "Disable"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:130
+#: src/Views/PreferencesView.vala:131
 msgid "Automatically start Jorts"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:133
+#: src/Views/PreferencesView.vala:134
 msgid "Show your sticky notes when you log in"
 msgstr ""
 
-#: src/Views/PreferencesView.vala:153
+#: src/Views/PreferencesView.vala:154
 msgid "Support us!"
 msgstr "Podpořte nás!"
 
-#: src/Views/PreferencesView.vala:159
+#: src/Views/PreferencesView.vala:160
 msgid "Close"
 msgstr "Zavřít"
 
-#: src/Views/PreferencesView.vala:162
+#: src/Views/PreferencesView.vala:163
 msgid "Close preferences"
 msgstr "Zavřít předvolby"
 
@@ -441,6 +447,14 @@ msgstr "Předvolby pro všechny samolepicí poznámky"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Předvolby"
+
+#: src/Application.vala:245
+msgid "Create a new note"
+msgstr "Vytvoření nové poznámky"
+
+#: src/Application.vala:246
+msgid "Show preferences"
+msgstr "Zobrazit předvolby"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Znepřehledněte poznámky"
@@ -465,14 +479,8 @@ msgstr "Předvolby"
 #~ msgid "You can request the system to start this application automatically"
 #~ msgstr "Můžete požádat systém o automatické spuštění této aplikace."
 
-#~ msgid "Create a new note"
-#~ msgstr "Vytvoření nové poznámky"
-
 #~ msgid "Create a note then paste from clipboard"
 #~ msgstr "Vytvoření poznámky a její vložení ze schránky"
-
-#~ msgid "Show preferences"
-#~ msgstr "Zobrazit předvolby"
 
 #, fuzzy
 #~ msgid "Reset all settings"

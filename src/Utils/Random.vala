@@ -20,7 +20,7 @@ namespace Jorts.Utils {
     /**
     * Placeholders for titles
     */
-    ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding 
+    ///TRANSLATORS: It does not need to match source 1:1 - avoid anything that could be rude or cold sounding
     public string random_title () {
         string[] alltitles = {
             _("All my very best friends"),
@@ -108,7 +108,8 @@ namespace Jorts.Utils {
         // ONE IN THOUSAND
         if (random_in_range == 1) {
 
-            print ("GOLDEN STICKY");
+            print ("🔥🔥🔥GOLDEN STICKY🔥🔥🔥");
+            ///TRANSLATORS: This is for an easter egg
             blank_slate.title = _("🔥WOW Congratulations!🔥");
             blank_slate.content = _(
 """You have found the Golden Sticky Note!

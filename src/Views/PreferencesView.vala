@@ -74,7 +74,7 @@
 
                 var scribbly_box = new Jorts.SettingsSwitch (
                     _("Scribble mode"),
-                    _("Hide text of unfocused notes (Ctrl+H)"),
+                    _("Scribble text of unfocused notes (Ctrl+H)"),
                     "scribbly-mode-active");
 
                 settingsbox.append (scribbly_box);
@@ -85,6 +85,7 @@
                 /*************************************************/
 
                 var hidebar_box = new Jorts.SettingsSwitch (
+                    ///TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                     _("Hide bottom bar"),
                     _("Keyboard shortcuts will still function (Ctrl+T)"),
                     "hide-bar");

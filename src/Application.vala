@@ -77,7 +77,7 @@ public class Jorts.Application : Gtk.Application {
 
     /*************************************************/
     public override void startup () {
-        debug ("[JORTS] Jorts Startup…");
+        debug ("Jorts Startup…");
         base.startup ();
         Gtk.init ();
         Granite.init ();
@@ -195,12 +195,12 @@ Please wait while the app remembers all the things...
     }
 
     private void action_new () {
-        debug ("[ACTION] New Note");
+        debug ("New Note");
         manager.create_note ();
     }
 
     private void action_show_preferences () {
-        debug ("[ACTION] Showing preferences!");
+        debug ("Showing preferences!");
 
         if (Application.preferences == null) {
             Application.preferences = new Jorts.PreferenceWindow (this);
@@ -212,19 +212,19 @@ Please wait while the app remembers all the things...
     }
 
     private void action_toggle_scribbly () {
-        debug ("[ACTION] Toggling scribbly");
+        debug ("Toggling scribbly");
         var current = Application.gsettings.get_boolean ("scribbly-mode-active");
         gsettings.set_boolean ("scribbly-mode-active", !current);
     }
 
     private void action_toggle_actionbar () {
-        debug ("[ACTION] Toggling actionbar");
+        debug ("Toggling actionbar");
         var current = Application.gsettings.get_boolean ("hide-bar");
         gsettings.set_boolean ("hide-bar", !current);
     }
 
     private void action_save () {
-        debug ("[ACTION] Saving...");
+        debug ("Saving...");
         manager.save_all ();
     }
 
@@ -242,8 +242,8 @@ Please wait while the app remembers all the things...
         debug ("Parsing commandline arguments...");
 
         OptionEntry[] CMD_OPTION_ENTRIES = {
-                {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, "Create a new note", null},
-                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, "Show preferences", null}
+                {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, _("Create a new note"), null},
+                {"preferences", 'p', OptionFlags.NONE, OptionArg.NONE, ref show_pref, _("Show preferences"), null}
         };
 
         // We have to make an extra copy of the array, since .parse assumes
