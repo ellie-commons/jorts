@@ -360,49 +360,46 @@ msgstr "Envoi d'une demande au système"
 
 #: src/Views/PreferencesView.vala:51
 msgid "List item prefix"
-msgstr ""
+msgstr "Préfixe d'élement de liste"
 
 #: src/Views/PreferencesView.vala:53
 msgid "If left empty, the list button will be hidden"
-msgstr ""
+msgstr "Si vide, le bouton liste sera caché"
 
 #: src/Views/PreferencesView.vala:76
 msgid "Scribble mode"
-msgstr ""
+msgstr "Mode gribouillis"
 
 #: src/Views/PreferencesView.vala:77
 msgid "Hide text of unfocused notes (Ctrl+H)"
-msgstr ""
+msgstr "Cacher le texte des notes en arrière-plan (Ctrl+H)"
 
 #: src/Views/PreferencesView.vala:88
-#, fuzzy
 msgid "Hide bottom bar"
-msgstr "Masquer les boutons"
+msgstr "Masquer la barre de boutons"
 
 #: src/Views/PreferencesView.vala:89
-#, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
 msgstr ""
-"Si cette option est activée, elle masque la barre inférieure des notes "
-"autocollantes. Les raccourcis clavier fonctionnent toujours (Ctrl+T)"
+"Les raccourcis clavier vont toujours fonctionner (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:105
 msgid "Enable"
-msgstr ""
+msgstr "Activer"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:116
 msgid "Disable"
-msgstr ""
+msgstr "Désactiver"
 
 #: src/Views/PreferencesView.vala:130
 msgid "Automatically start Jorts"
-msgstr ""
+msgstr "Démarrer Jorts automatiquement"
 
 #: src/Views/PreferencesView.vala:133
 msgid "Show your sticky notes when you log in"
-msgstr ""
+msgstr "Afficher vos notes quand vous vous connectez"
 
 #: src/Views/PreferencesView.vala:153
 msgid "Support us!"
@@ -432,28 +429,3 @@ msgstr "Préférences pour vos Jorts"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Préférences"
-
-#~ msgid "Make unfocused notes unreadable"
-#~ msgstr "Rendre illisibles les notes non ciblées"
-
-#~ msgid ""
-#~ "If enabled, unfocused sticky notes become unreadable to protect their "
-#~ "content from peeking eyes (Ctrl+H)"
-#~ msgstr ""
-#~ "Si cette option est activée, les notes autocollantes non ciblées "
-#~ "deviennent illisibles afin de protéger leur contenu des regards "
-#~ "indiscrets (Ctrl+F)"
-
-#~ msgid "Set autostart"
-#~ msgstr "Définir le démarrage automatique"
-
-#~ msgid "Remove autostart"
-#~ msgstr "Supprimer le démarrage automatique"
-
-#~ msgid "Allow to start at login"
-#~ msgstr "Autoriser le démarrage à l'ouverture de la session"
-
-#~ msgid "You can request the system to start this application automatically"
-#~ msgstr ""
-#~ "Vous pouvez demander au système de lancer automatiquement cette "
-#~ "application."

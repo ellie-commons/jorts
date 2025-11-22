@@ -114,7 +114,7 @@ msgstr "Schiefer"
 
 #: src/Objects/Themes.vala:71
 msgid "No preference, random each time"
-msgstr ""
+msgstr "Keine Präferenz, jedes Mal zufällig"
 
 #: src/Utils/Random.vala:26
 msgid "All my very best friends"
@@ -360,49 +360,45 @@ msgstr "Anfrage an das System gesendet"
 
 #: src/Views/PreferencesView.vala:51
 msgid "List item prefix"
-msgstr ""
+msgstr "ListenPrefix"
 
 #: src/Views/PreferencesView.vala:53
 msgid "If left empty, the list button will be hidden"
-msgstr ""
+msgstr "Wenn leer gelassen, listenknopf wird ausgeblendet"
 
 #: src/Views/PreferencesView.vala:76
 msgid "Scribble mode"
-msgstr ""
+msgstr "Scribble-Modus"
 
 #: src/Views/PreferencesView.vala:77
 msgid "Hide text of unfocused notes (Ctrl+H)"
-msgstr ""
+msgstr "Text von hintergrundNotizen ausblenden (Strg+H)"
 
 #: src/Views/PreferencesView.vala:88
-#, fuzzy
 msgid "Hide bottom bar"
 msgstr "Schaltflächenleiste ausblenden"
 
 #: src/Views/PreferencesView.vala:89
-#, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr ""
-"Wenn aktiviert, wird die untere Leiste in Haftnotizen ausgeblendet. Die "
-"Tastaturkürzel funktionieren weiterhin (Strg+T)"
+msgstr "Tastaturkürzel funktionieren weiterhin (Strg+T)"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:105
 msgid "Enable"
-msgstr ""
+msgstr "Einschalten"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:116
 msgid "Disable"
-msgstr ""
+msgstr "Ausschalten"
 
 #: src/Views/PreferencesView.vala:130
 msgid "Automatically start Jorts"
-msgstr ""
+msgstr "Jorts automatisch starten"
 
 #: src/Views/PreferencesView.vala:133
 msgid "Show your sticky notes when you log in"
-msgstr ""
+msgstr "Haftnotizen Zeigen, wenn Sie sich anmelden"
 
 #: src/Views/PreferencesView.vala:153
 msgid "Support us!"
@@ -432,38 +428,3 @@ msgstr "Präferenzen für deine Jorts!"
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
 msgstr "Präferenzen"
-
-#~ msgid "Make unfocused notes unreadable"
-#~ msgstr "Unscharfe Notizen unlesbar machen"
-
-#~ msgid ""
-#~ "If enabled, unfocused sticky notes become unreadable to protect their "
-#~ "content from peeking eyes (Ctrl+H)"
-#~ msgstr ""
-#~ "Wenn diese Funktion aktiviert ist, werden unscharfe Haftnotizen unlesbar, "
-#~ "um ihren Inhalt vor neugierigen Blicken zu schützen (Strg+H)"
-
-#~ msgid "Set autostart"
-#~ msgstr "Autostart einstellen"
-
-#~ msgid "Remove autostart"
-#~ msgstr "Autostart entfernen"
-
-#~ msgid "Allow to start at login"
-#~ msgstr "Starten bei der Anmeldung zulassen"
-
-#~ msgid "You can request the system to start this application automatically"
-#~ msgstr ""
-#~ "Sie können das System auffordern, diese Anwendung automatisch zu starten"
-
-#~ msgid "Create a new note"
-#~ msgstr "Eine neue Notiz erstellen"
-
-#~ msgid "Create a note then paste from clipboard"
-#~ msgstr "Eine Notiz erstellen und dann aus der Zwischenablage einfügen"
-
-#~ msgid "Show preferences"
-#~ msgstr "Einstellungen anzeigen"
-
-#~ msgid "Reset all settings"
-#~ msgstr "Alle Einstellungen auf Standardwerte zurücksetzen"
