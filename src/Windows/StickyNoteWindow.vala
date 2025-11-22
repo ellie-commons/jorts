@@ -20,7 +20,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     public TextView textview;
 
     private Jorts.ColorController color_controller;
-    private Jorts.ZoomController zoom_controller;
+    public Jorts.ZoomController zoom_controller;
     private Jorts.ScribblyController scribbly_controller;
 
     public NoteData data {

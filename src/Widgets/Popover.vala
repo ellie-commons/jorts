@@ -68,9 +68,22 @@ public class Jorts.Popover : Gtk.Popover {
 
         child = view;
 
+        // Propagate settings changes to the higher level
         color_box.theme_changed.connect ((theme) => {theme_changed (theme);});
         monospace_box.monospace_changed.connect (on_monospace_changed);
         font_size_box.zoom_changed.connect ((zoomkind) => {zoom_changed (zoomkind);});
+
+        // Allow scrolling shenanigans from popover
+        var keypress_controller = new Gtk.EventControllerKey ();
+        var scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
+            propagation_phase = Gtk.PropagationPhase.CAPTURE
+        };
+
+        ((Gtk.Widget)this).add_controller (keypress_controller);
+        ((Gtk.Widget)this).add_controller (scroll_controller);
+        scroll_controller.scroll.connect (window.zoom_controller.on_scroll);
+        keypress_controller.key_pressed.connect (window.zoom_controller.on_key_press_event);
+        keypress_controller.key_released.connect (window.zoom_controller.on_key_release_event);
     }
 
     /**
