@@ -29,7 +29,7 @@
     <project_group>ellie-commons</project_group>
     <url type="homepage">https://github.com/ellie-commons/jorts</url>
     <url type="bugtracker">https://github.com/ellie-commons/jorts/issues</url>
-    <url type="help">https://github.com/ellie-commons/jorts/issues</url>
+    <url type="help">https://github.com/ellie-commons/jorts/wiki</url>
     <url type="translate">https://github.com/ellie-commons/jorts/blob/main/po/README.md</url>
     <url type="donation">https://ko-fi.com/teamcons</url>
 
@@ -90,7 +90,7 @@
     </screenshots>
 
     <releases>
-        <release version="4.0.0" date="2025-11-20">
+        <release version="4.0.0" date="2025-11-22">
             <description>
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
                 <ul>
