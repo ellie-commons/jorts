@@ -90,6 +90,21 @@
     </screenshots>
 
     <releases>
+    <release version="4.0.1" date="2025-11-22">
+            <description>
+                <p>Fixup release</p>
+                <ul>
+                    <li>Minor refactoring</li>
+                </ul>
+                <p>😎 Guests stars:</p>
+                <ul>
+                    <li>Updated sv-SE translation thanks to @yeager!</li>
+                </ul>
+            </description>
+            <issues>
+                <issue url="https://github.com/ellie-commons/jorts/issues/63">Added list feature</issue>
+            </issues>
+        </release>
         <release version="4.0.0" date="2025-11-22">
             <description>
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
