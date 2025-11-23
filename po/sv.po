@@ -4,13 +4,14 @@ msgstr ""
 "Project-Id-Version: io.github.ellie_commons.jorts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2025-11-23 13:27+0100\n"
+"Last-Translator: Daniel Nylander <github@danielnylander.se>\n"
+"Language-Team: \n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/Widgets/EditableLabel.vala:38
 msgid "Click to edit the title"
@@ -22,11 +23,11 @@ msgstr "Ny klisterlapp"
 
 #: src/Widgets/ActionBar.vala:42
 msgid "Delete sticky note"
-msgstr "Ta bort anteckningar"
+msgstr "Ta bort klisterlapp"
 
 #: src/Widgets/ActionBar.vala:55
 msgid "Toggle list"
-msgstr ""
+msgstr "Växla lista"
 
 #: src/Widgets/ActionBar.vala:69
 msgid "Insert emoji"
@@ -34,27 +35,24 @@ msgstr "Infoga emoji"
 
 #: src/Widgets/ActionBar.vala:81
 msgid "Preferences for this sticky note"
-msgstr "Inställningar för denna anteckning"
+msgstr "Inställningar för denna klisterlapp"
 
 #. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
-#, fuzzy
 msgid "Default"
-msgstr "Standardteckensnitt"
+msgstr "Standard"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
-#, fuzzy
 msgid "Use default text font"
-msgstr "Klicka för att använda standardteckensnitt för text"
+msgstr "Använd standardteckensnitt"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
 msgid "Monospace"
 msgstr "Monospace"
 
 #: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
-#, fuzzy
 msgid "Use monospaced font"
-msgstr "Klicka för att använda monospaced font"
+msgstr "Använd typsnitt med fast breddslag"
 
 #. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
 #. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
@@ -69,7 +67,7 @@ msgstr "Zooma ut"
 
 #: src/Widgets/PopoverWidgets/ZoomBox.vala:49
 msgid "Default zoom level"
-msgstr "Standard zoomnivå"
+msgstr "Standardzoomnivå"
 
 #: src/Widgets/PopoverWidgets/ZoomBox.vala:56
 msgid "Zoom in"
@@ -98,11 +96,11 @@ msgstr "Orange"
 
 #: src/Objects/Themes.vala:68
 msgid "Strawberry"
-msgstr "Jordgubbar"
+msgstr "Jordgubbe"
 
 #: src/Objects/Themes.vala:69
 msgid "Bubblegum"
-msgstr "Bubblegum"
+msgstr "Tuggummi"
 
 #: src/Objects/Themes.vala:70
 msgid "Grape"
@@ -118,11 +116,11 @@ msgstr "Skiffer"
 
 #: src/Objects/Themes.vala:73
 msgid "Latte"
-msgstr ""
+msgstr "Latte"
 
 #: src/Objects/Themes.vala:74
 msgid "No preference, random each time"
-msgstr ""
+msgstr "Ingen inställning, slumpmässigt varje gång"
 
 #: src/Utils/Random.vala:26
 msgid "All my very best friends"
@@ -146,7 +144,7 @@ msgstr "Min inköpslista"
 
 #: src/Utils/Random.vala:31
 msgid "Random shower thoughts"
-msgstr "Slumpmässiga tankar om duschen"
+msgstr "Slumpmässiga duschtankar"
 
 #: src/Utils/Random.vala:32
 msgid "My fav fanfics"
@@ -178,7 +176,7 @@ msgstr "Dold piratskatt"
 
 #: src/Utils/Random.vala:39
 msgid "To not forget, ever"
-msgstr "Att aldrig glömma, aldrig"
+msgstr "Att aldrig glömma, någonsin"
 
 #: src/Utils/Random.vala:40
 msgid "Dear Diary,"
@@ -218,7 +216,7 @@ msgstr "Ord som mina papegojor kan"
 
 #: src/Utils/Random.vala:49
 msgid "Cool and funny compliments to give out"
-msgstr "Coola och roliga komplimanger att ge ut"
+msgstr "Coola och roliga komplimanger att ge"
 
 #: src/Utils/Random.vala:50
 msgid "Ok, listen here,"
@@ -250,7 +248,7 @@ msgstr "Min fantastiska mixtape"
 
 #: src/Utils/Random.vala:57
 msgid "Napkin scribblys"
-msgstr "Servett scribblys"
+msgstr "Servettkladd"
 
 #: src/Utils/Random.vala:58
 msgid "My fav songs to sing along"
@@ -258,7 +256,7 @@ msgstr "Mina favoritlåtar att sjunga med i"
 
 #: src/Utils/Random.vala:59
 msgid "When to water which plant"
-msgstr "När ska du vattna vilken växt"
+msgstr "När vilka växter ska vattnas"
 
 #: src/Utils/Random.vala:60
 msgid "Top 10 anime betrayals"
@@ -270,12 +268,11 @@ msgstr "Fantastisk ascii-konst!"
 
 #: src/Utils/Random.vala:62
 msgid "For the barbecue"
-msgstr "För grillning"
+msgstr "För grillningen"
 
 #: src/Utils/Random.vala:63
-#, fuzzy
 msgid "My favourite bands"
-msgstr "Mina hundars favoritleksaker"
+msgstr "Mina favoritband"
 
 #: src/Utils/Random.vala:64
 msgid "Best ingredients for salad"
@@ -311,20 +308,19 @@ msgstr "Allas pizzabeställning"
 
 #: src/Utils/Random.vala:72
 msgid "Today selfcare to do"
-msgstr "Idag självvård att göra"
+msgstr "Dagens egenvård att göra"
 
 #: src/Utils/Random.vala:73
 msgid "Important affirmations to remember"
-msgstr "Viktiga affirmationer att komma ihåg"
+msgstr "Viktiga bekräftelser att komma ihåg"
 
 #: src/Utils/Random.vala:74
 msgid "The coolest linux apps"
 msgstr "De coolaste linux-apparna"
 
 #: src/Utils/Random.vala:75
-#, fuzzy
 msgid "My favourite dishes"
-msgstr "Mina hundars favoritleksaker"
+msgstr "Mina favoriträtter"
 
 #: src/Utils/Random.vala:76
 msgid "My funniest jokes"
@@ -351,7 +347,7 @@ msgid ""
 msgstr ""
 "Du har hittat den gyllene klisterlappen!\n"
 "\n"
-"CRAZY BUT TRU: Detta meddelande visas en gång på tusen gånger!\n"
+"GALET MEN SANT: Detta meddelande visas en gång på tusen gånger!\n"
 "Ingen kommer att tro dig hehehehe ;)\n"
 "\n"
 "Jag hoppas att min lilla app ger dig mycket glädje\n"
@@ -363,7 +359,7 @@ msgstr "Ta bort Jorts från systemets autostart"
 
 #: src/Utils/Libportal.vala:29
 msgid "Set Jorts to start with the computer"
-msgstr "Ställ in Jorts att börja med datorn"
+msgstr "Ställ in Jorts att starta med datorn"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -371,52 +367,46 @@ msgstr "Begäran till systemet skickad"
 
 #: src/Views/PreferencesView.vala:51
 msgid "List item prefix"
-msgstr ""
+msgstr "Listobjektets prefix"
 
 #: src/Views/PreferencesView.vala:53
 msgid "If left empty, the list button will be hidden"
-msgstr ""
+msgstr "Om fältet lämnas tomt kommer listknappen att döljas"
 
 #: src/Views/PreferencesView.vala:76
-#, fuzzy
 msgid "Scribble mode"
-msgstr "Aktivera skribblingsläge"
+msgstr "Kladdläge"
 
 #: src/Views/PreferencesView.vala:77
-#, fuzzy
 msgid "Scribble text of unfocused notes (Ctrl+H)"
-msgstr "Dölj innehållet i ofokuserade klisterlappar"
+msgstr "Kladda ner ofokuserade anteckningar (Ctrl+H)"
 
 #. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
 #: src/Views/PreferencesView.vala:89
-#, fuzzy
 msgid "Hide bottom bar"
-msgstr "Dölj knappfältet"
+msgstr "Dölj nedre fältet"
 
 #: src/Views/PreferencesView.vala:90
-#, fuzzy
 msgid "Keyboard shortcuts will still function (Ctrl+T)"
-msgstr ""
-"Om den är aktiverad döljs det nedre fältet i anteckningar. Kortkommandon "
-"kommer fortfarande att fungera (Ctrl+T)"
+msgstr "Tangentbordsgenvägar fungerar fortfarande (Ctrl+T)"
 
 #. /TRANSLATORS: Button to autostart the application
 #: src/Views/PreferencesView.vala:106
 msgid "Enable"
-msgstr ""
+msgstr "Aktivera"
 
 #. /TRANSLATORS: Button to remove the autostart for the application
 #: src/Views/PreferencesView.vala:117
 msgid "Disable"
-msgstr ""
+msgstr "Inaktivera"
 
 #: src/Views/PreferencesView.vala:131
 msgid "Automatically start Jorts"
-msgstr ""
+msgstr "Starta Jorts automatiskt"
 
 #: src/Views/PreferencesView.vala:134
 msgid "Show your sticky notes when you log in"
-msgstr ""
+msgstr "Visa dina klisterlappar när du loggar in"
 
 #: src/Views/PreferencesView.vala:154
 msgid "Support us!"
@@ -424,7 +414,7 @@ msgstr "Stöd oss!"
 
 #: src/Views/PreferencesView.vala:160
 msgid "Close"
-msgstr "Nära"
+msgstr "Stäng"
 
 #: src/Views/PreferencesView.vala:163
 msgid "Close preferences"
@@ -440,9 +430,8 @@ msgstr " - Jorts"
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-#, fuzzy
 msgid "Preferences for your Jorts"
-msgstr "Inställningar för alla klisterlappar"
+msgstr "Inställningar för dina Jorts"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
@@ -454,7 +443,7 @@ msgstr "Skapa en ny anteckning"
 
 #: src/Application.vala:246
 msgid "Show preferences"
-msgstr "Visa preferenser"
+msgstr "Visa inställningar"
 
 #~ msgid "Make unfocused notes unreadable"
 #~ msgstr "Gör ofokuserade anteckningar oläsliga"
