@@ -99,9 +99,9 @@ public class Jorts.NoteManager : Object {
         application.remove_window ((Gtk.Window)note);
 
         note.close ();
+        note.destroy ();
 
         print ("\nHas: " + note.ref_count.to_string () + " references");
-        note = null;
         immediately_save ();
 	}
 
@@ -117,11 +117,13 @@ public class Jorts.NoteManager : Object {
             GLib.Source.remove (debounce_timer_id);
         }
 
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, () => {
-            debounce_timer_id = 0;
-            immediately_save ();
-            return GLib.Source.REMOVE;
-        });
+        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, debounce_handler);
+    }
+
+    public bool debounce_handler () {
+        debounce_timer_id = 0;
+        immediately_save ();
+        return GLib.Source.REMOVE;
     }
 
     private void immediately_save () {

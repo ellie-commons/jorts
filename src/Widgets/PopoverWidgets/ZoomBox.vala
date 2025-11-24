@@ -63,8 +63,20 @@ public class Jorts.ZoomBox : Gtk.Box {
         add_css_class (Granite.STYLE_CLASS_LINKED);
 
         // Emit a signal when a button is toggled that will be picked by StickyNoteWindow
-        zoom_out_button.clicked.connect (() => {this.zoom_changed (Zoomkind.ZOOM_OUT);});
-        zoom_default_button.clicked.connect (() => {this.zoom_changed (Zoomkind.DEFAULT_ZOOM);});
-        zoom_in_button.clicked.connect (() => {this.zoom_changed (Zoomkind.ZOOM_IN);});
+        zoom_out_button.clicked.connect (zoom_out);
+        zoom_default_button.clicked.connect (zoom_default);
+        zoom_in_button.clicked.connect (zoom_in);
+    }
+
+    private void zoom_out () {
+        zoom_changed (Zoomkind.ZOOM_OUT);
+    }
+
+    private void zoom_default () {
+        zoom_changed (Zoomkind.DEFAULT_ZOOM);
+    }
+
+    private void zoom_in () {
+        zoom_changed (Zoomkind.ZOOM_IN);
     }
 }

@@ -130,11 +130,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
                 show.connect_after (delayed_show);
 
         } else {
-            Application.gsettings.bind (
-                "hide-bar",
-                view.actionbar.actionbar,
-                "revealed",
-                SettingsBindFlags.INVERT_BOOLEAN);
+            bind_hidebar ();
         }
     }
 
@@ -148,14 +144,16 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     * This is more for the Aesthetic
     */
     private void delayed_show () {
-        Timeout.add_once (250, () => {
+        Timeout.add_once (250, bind_hidebar);
+        show.disconnect (delayed_show);
+    }
+
+    private void bind_hidebar () {
             Application.gsettings.bind (
                 "hide-bar",
                 view.actionbar.actionbar,
                 "revealed",
                 SettingsBindFlags.INVERT_BOOLEAN);
-        });
-        show.disconnect (delayed_show);
     }
 
     /**
@@ -210,7 +208,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_focus_title () {view.action_focus_title ();}
     private void action_show_emoji () {view.action_show_emoji ();}
     private void action_show_menu () {view.action_show_menu ();}
-    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this);}
+    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
     private void action_toggle_list () {view.action_toggle_list ();}
 
