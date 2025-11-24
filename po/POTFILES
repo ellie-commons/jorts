@@ -6,10 +6,12 @@ src/Widgets/PopoverWidgets/ColorBox.vala
 src/Widgets/PopoverWidgets/MonospaceBox.vala
 src/Widgets/PopoverWidgets/ZoomBox.vala
 src/Widgets/Popover.vala
+src/Objects/NoteData.vala
 src/Objects/Themes.vala
 src/Utils/Random.vala
 src/Utils/Libportal.vala
 src/Views/PreferencesView.vala
+src/Widgets/EditableLabel.vala
 src/Windows/StickyNoteWindow.vala
 src/Windows/PreferenceWindow.vala
 src/Application.vala
