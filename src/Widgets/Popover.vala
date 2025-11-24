@@ -10,7 +10,7 @@
 * Contains a setting for color, one for monospace font, one for zoom
 */
 public class Jorts.Popover : Gtk.Popover {
-    private Jorts.StickyNoteWindow parent_window;
+    private weak Jorts.StickyNoteWindow parent_window;
     private Jorts.ColorBox color_box;
     private Jorts.MonospaceBox monospace_box;
     private Jorts.ZoomBox font_size_box;

@@ -92,13 +92,15 @@ public class Jorts.NoteManager : Object {
     * Delete a note by remove it from the active list and closing its window
     */
     public void delete_note (StickyNoteWindow note) {
-        debug ("[MANAGER] Removing a note…");
+        debug ("Removing a note…");
 
         open_notes.remove (note);
         note.changed.disconnect (save_all);
-
         application.remove_window ((Gtk.Window)note);
+
         note.close ();
+
+        print ("\nHas: " + note.ref_count.to_string () + " references");
         note = null;
         immediately_save ();
 	}
@@ -108,7 +110,7 @@ public class Jorts.NoteManager : Object {
     * Cue to immediately write from the active list to the storage
     */
     public void save_all () {
-        debug ("[MANAGER] Save the stickies!");
+        debug ("Save the stickies!");
         if (saving_lock) {return;}
         
         if (debounce_timer_id != 0) {

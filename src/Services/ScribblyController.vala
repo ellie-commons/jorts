@@ -12,7 +12,7 @@
 */
 public class Jorts.ScribblyController : Object {
 
-    private Jorts.StickyNoteWindow window;
+    private weak Jorts.StickyNoteWindow window;
 
     private bool _scribble;
     public bool scribble {

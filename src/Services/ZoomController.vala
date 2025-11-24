@@ -14,7 +14,7 @@
 public class Jorts.ZoomController : Object {
 
     private static bool is_control_key_pressed = false;
-    private Jorts.StickyNoteWindow window;
+    private weak Jorts.StickyNoteWindow window;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private int _old_zoom;
