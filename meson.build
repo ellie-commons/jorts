@@ -36,6 +36,7 @@ add_project_arguments(vala_flags, language: 'vala')
 
 ## Set de config data
 config_data = configuration_data()
+config_data.set('version', meson.project_version())
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 config_file = configure_file(
@@ -43,9 +44,6 @@ config_file = configure_file(
     output: '@BASENAME@',
     configuration: config_data
 )
-
-config_data.set('version', meson.project_version())
-
 
 # Le stylesheet
 gresource = gnome.compile_resources(
