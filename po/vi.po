@@ -1,0 +1,448 @@
+# Vietnamese translation by Vietnam Linux L10n <https://github.com/linux-l10n-vi>
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.ellie_commons.jorts package.
+msgid ""
+msgstr ""
+"Project-Id-Version: io.github.ellie_commons.jorts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-22 14:18+0100\n"
+"PO-Revision-Date: 2025-12-14 19:31+0700\n"
+"Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: src/Widgets/EditableLabel.vala:38
+msgid "Click to edit the title"
+msgstr "Nhấp để chỉnh sửa tiêu đề"
+
+#: src/Widgets/ActionBar.vala:30
+msgid "New sticky note"
+msgstr "Giấy ghi chú mới"
+
+#: src/Widgets/ActionBar.vala:42
+msgid "Delete sticky note"
+msgstr "Xóa giấy ghi chú"
+
+#: src/Widgets/ActionBar.vala:55
+msgid "Toggle list"
+msgstr "Bật/tắt danh sách"
+
+#: src/Widgets/ActionBar.vala:69
+msgid "Insert emoji"
+msgstr "Chèn biểu tượng cảm xúc"
+
+#: src/Widgets/ActionBar.vala:81
+msgid "Preferences for this sticky note"
+msgstr "Tùy chỉnh cho giấy ghi chú này"
+
+#. /TRANSLATORS: Both Default and Monospace are togglable buttons, synchronized with each other
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:33
+msgid "Default"
+msgstr "Mặc định"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:36
+msgid "Use default text font"
+msgstr "Sử dụng phông chữ văn bản mặc định"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:42
+msgid "Monospace"
+msgstr "Không gian đơn"
+
+#: src/Widgets/PopoverWidgets/MonospaceBox.vala:45
+msgid "Use monospaced font"
+msgstr "Sử dụng phông chữ đơn cách"
+
+#. TRANSLATORS: %d is replaced by a number. Ex: 100, to display 100%
+#. It must stay as "%d" in the translation so the app can replace it with the current zoom level.
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:24
+#, c-format
+msgid "%d%%"
+msgstr "%d%%"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:42
+msgid "Zoom out"
+msgstr "Thu nhỏ"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:49
+msgid "Default zoom level"
+msgstr "Mức phóng mặc định"
+
+#: src/Widgets/PopoverWidgets/ZoomBox.vala:56
+msgid "Zoom in"
+msgstr "Phóng to"
+
+#. /TRANSLATORS: These are the names of the elementary OS colours
+#: src/Objects/Themes.vala:63 src/Objects/Themes.vala:75
+msgid "Blueberry"
+msgstr "Việt quất"
+
+#: src/Objects/Themes.vala:64
+msgid "Mint"
+msgstr "Bạc hà"
+
+#: src/Objects/Themes.vala:65
+msgid "Lime"
+msgstr "Chanh xanh"
+
+#: src/Objects/Themes.vala:66
+msgid "Banana"
+msgstr "Chuối"
+
+#: src/Objects/Themes.vala:67
+msgid "Orange"
+msgstr "Quả cam"
+
+#: src/Objects/Themes.vala:68
+msgid "Strawberry"
+msgstr "Quả dâu"
+
+#: src/Objects/Themes.vala:69
+msgid "Bubblegum"
+msgstr "Kẹo cao su"
+
+#: src/Objects/Themes.vala:70
+msgid "Grape"
+msgstr "Quả nho"
+
+#: src/Objects/Themes.vala:71
+msgid "Cocoa"
+msgstr "Ca cao"
+
+#: src/Objects/Themes.vala:72
+msgid "Slate"
+msgstr "Đá phiến"
+
+#: src/Objects/Themes.vala:73
+msgid "Latte"
+msgstr "Latte"
+
+#: src/Objects/Themes.vala:74
+msgid "No preference, random each time"
+msgstr "Không ưu tiên, ngẫu nhiên mỗi lần"
+
+#: src/Utils/Random.vala:26
+msgid "All my very best friends"
+msgstr "Tất cả những người bạn thân nhất của tôi"
+
+#: src/Utils/Random.vala:27
+msgid "My super good secret recipe"
+msgstr "Công thức bí mật siêu hay của tôi"
+
+#: src/Utils/Random.vala:28
+msgid "My todo list"
+msgstr "Danh sách việc cần làm của tôi"
+
+#: src/Utils/Random.vala:29
+msgid "Super secret to not tell anyone"
+msgstr "Siêu bí mật không nói cho ai biết"
+
+#: src/Utils/Random.vala:30
+msgid "My grocery list"
+msgstr "Danh sách tạp hóa của tôi"
+
+#: src/Utils/Random.vala:31
+msgid "Random shower thoughts"
+msgstr "Những suy nghĩ tắm ngẫu nhiên"
+
+#: src/Utils/Random.vala:32
+msgid "My fav fanfics"
+msgstr "Những fanfic yêu thích của tôi"
+
+#: src/Utils/Random.vala:33
+msgid "My fav dinosaurs"
+msgstr "Những con khủng long yêu thích của tôi"
+
+#: src/Utils/Random.vala:34
+msgid "My evil mastermind plan"
+msgstr "Kế hoạch độc ác của tôi"
+
+#: src/Utils/Random.vala:35
+msgid "What made me smile today"
+msgstr "Điều khiến tôi cười hôm nay"
+
+#: src/Utils/Random.vala:36
+msgid "Hello world!"
+msgstr "Xin chào thế giới!"
+
+#: src/Utils/Random.vala:37
+msgid "New sticky, new me"
+msgstr "Dính mới, tôi mới"
+
+#: src/Utils/Random.vala:38
+msgid "Hidden pirate treasure"
+msgstr "Kho báu cướp biển Ẩn"
+
+#: src/Utils/Random.vala:39
+msgid "To not forget, ever"
+msgstr "Để không bao giờ quên"
+
+#: src/Utils/Random.vala:40
+msgid "Dear Diary,"
+msgstr "Nhật ký thân mến,"
+
+#: src/Utils/Random.vala:41
+msgid "Have a nice day! :)"
+msgstr "Chúc một ngày tốt lành! :)"
+
+#: src/Utils/Random.vala:42
+msgid "My meds schedule"
+msgstr "Lịch uống thuốc của tôi"
+
+#: src/Utils/Random.vala:43
+msgid "Household chores"
+msgstr "Việc nhà"
+
+#: src/Utils/Random.vala:44
+msgid "Ode to my cat"
+msgstr "Ode cho con mèo của tôi"
+
+#: src/Utils/Random.vala:45
+msgid "My dogs favourite toys"
+msgstr "Đồ chơi yêu thích của con chó của tôi"
+
+#: src/Utils/Random.vala:46
+msgid "How cool my birds are"
+msgstr "Những chú chim của tôi tuyệt vời làm sao"
+
+#: src/Utils/Random.vala:47
+msgid "Suspects in the Last Cookie affair"
+msgstr "Nghi phạm trong vụ Bánh quy cuối cùng"
+
+#: src/Utils/Random.vala:48
+msgid "Words my parrots know"
+msgstr "Những từ mà vẹt của tôi biết"
+
+#: src/Utils/Random.vala:49
+msgid "Cool and funny compliments to give out"
+msgstr "Những lời khen thú vị và hài hước để đưa ra"
+
+#: src/Utils/Random.vala:50
+msgid "Ok, listen here,"
+msgstr "Ok, nghe đây,"
+
+#: src/Utils/Random.vala:51
+msgid "My dream Pokemon team"
+msgstr "Đội Pokemon mơ ước của tôi"
+
+#: src/Utils/Random.vala:52
+msgid "My little notes"
+msgstr "Những ghi chú nhỏ của tôi"
+
+#: src/Utils/Random.vala:53
+msgid "Surprise gift list"
+msgstr "Danh sách quà tặng bất ngờ"
+
+#: src/Utils/Random.vala:54
+msgid "Brainstorming notes"
+msgstr "Ghi chú động não"
+
+#: src/Utils/Random.vala:55
+msgid "To bring to the party"
+msgstr "Để mang đến bữa tiệc"
+
+#: src/Utils/Random.vala:56
+msgid "My amazing mixtape"
+msgstr "Mixtape tuyệt vời của tôi"
+
+#: src/Utils/Random.vala:57
+msgid "Napkin scribblys"
+msgstr "Những nét vẽ nguệch ngoạc trên khăn ăn"
+
+#: src/Utils/Random.vala:58
+msgid "My fav songs to sing along"
+msgstr "Những bài hát yêu thích của tôi để hát theo"
+
+#: src/Utils/Random.vala:59
+msgid "When to water which plant"
+msgstr "Khi nào tưới cây nào"
+
+#: src/Utils/Random.vala:60
+msgid "Top 10 anime betrayals"
+msgstr "Top 10 anime phản bội hay nhất"
+
+#: src/Utils/Random.vala:61
+msgid "Amazing ascii art!"
+msgstr "Nghệ thuật ascii tuyệt vời!"
+
+#: src/Utils/Random.vala:62
+msgid "For the barbecue"
+msgstr "Đối với món nướng"
+
+#: src/Utils/Random.vala:63
+msgid "My favourite bands"
+msgstr "Ban nhạc yêu thích của tôi"
+
+#: src/Utils/Random.vala:64
+msgid "Best ingredients for salad"
+msgstr "Nguyên liệu tốt nhất cho món salad"
+
+#: src/Utils/Random.vala:65
+msgid "Books to read"
+msgstr "Sách để đọc"
+
+#: src/Utils/Random.vala:66
+msgid "Places to visit"
+msgstr "Địa điểm tham quan"
+
+#: src/Utils/Random.vala:67
+msgid "Hobbies to try out"
+msgstr "Sở thích để thử"
+
+#: src/Utils/Random.vala:68
+msgid "Who would win against Goku"
+msgstr "Ai sẽ thắng Goku"
+
+#: src/Utils/Random.vala:69
+msgid "To plant in the garden"
+msgstr "Để trồng trong vườn"
+
+#: src/Utils/Random.vala:70
+msgid "Meals this week"
+msgstr "Bữa ăn tuần này"
+
+#: src/Utils/Random.vala:71
+msgid "Everyone's pizza order"
+msgstr "Đơn đặt hàng pizza của mọi người"
+
+#: src/Utils/Random.vala:72
+msgid "Today selfcare to do"
+msgstr "Danh sách tự chăm sóc bản thân của hôm nay"
+
+#: src/Utils/Random.vala:73
+msgid "Important affirmations to remember"
+msgstr "Những khẳng định quan trọng cần nhớ"
+
+#: src/Utils/Random.vala:74
+msgid "The coolest linux apps"
+msgstr "Các ứng dụng linux thú vị nhất"
+
+#: src/Utils/Random.vala:75
+msgid "My favourite dishes"
+msgstr "Món ăn yêu thích của tôi"
+
+#: src/Utils/Random.vala:76
+msgid "My funniest jokes"
+msgstr "Những câu chuyện cười hài hước nhất của tôi"
+
+#: src/Utils/Random.vala:77
+msgid "The perfect breakfast has..."
+msgstr "Bữa sáng hoàn hảo có..."
+
+#. /TRANSLATORS: This is for an easter egg
+#: src/Utils/Random.vala:113
+msgid "🔥WOW Congratulations!🔥"
+msgstr "🔥WOW Xin chúc mừng!🔥"
+
+#: src/Utils/Random.vala:115
+msgid ""
+"You have found the Golden Sticky Note!\n"
+"\n"
+"CRAZY BUT TRU: This message appears once in a thousand times!\n"
+"Nobody will believe you hehehe ;)\n"
+"\n"
+"I hope my little app brings you a lot of joy\n"
+"Have a great day!🎇\n"
+msgstr ""
+"Bạn đã tìm thấy Giấy ghi chú bằng vàng!\n"
+"\n"
+"ĐIÊN RỒ NHƯNG THẬT: tin nhắn này xuất hiện một ngàn lần!\n"
+"Sẽ không ai tin bạn đâu hehehe ;)\n"
+"\n"
+"Tôi hy vọng ứng dụng nhỏ của tôi mang lại cho bạn nhiều niềm vui\n"
+"Chúc một ngày tốt lành!🎇\n"
+
+#: src/Utils/Libportal.vala:16
+msgid "Remove Jorts from system autostart"
+msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
+
+#: src/Utils/Libportal.vala:29
+msgid "Set Jorts to start with the computer"
+msgstr "Đặt Jorts để bắt đầu với máy tính"
+
+#: src/Views/PreferencesView.vala:23
+msgid "Request to system sent"
+msgstr "Đã gửi yêu cầu tới hệ thống"
+
+#: src/Views/PreferencesView.vala:51
+msgid "List item prefix"
+msgstr "Prefix mục danh sách"
+
+#: src/Views/PreferencesView.vala:53
+msgid "If left empty, the list button will be hidden"
+msgstr "Nếu để trống, nút danh sách sẽ ẩn"
+
+#: src/Views/PreferencesView.vala:76
+msgid "Scribble mode"
+msgstr "Chế độ viết nguệch ngoạc"
+
+#: src/Views/PreferencesView.vala:77
+msgid "Scribble text of unfocused notes (Ctrl+H)"
+msgstr "Viết nguệch ngoạc văn bản của các ghi chú không tập trung (Ctrl+H)"
+
+#. /TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
+#: src/Views/PreferencesView.vala:89
+msgid "Hide bottom bar"
+msgstr "Ẩn thanh dưới cùng"
+
+#: src/Views/PreferencesView.vala:90
+msgid "Keyboard shortcuts will still function (Ctrl+T)"
+msgstr "Phím tắt vẫn hoạt động (Ctrl+T)"
+
+#. /TRANSLATORS: Button to autostart the application
+#: src/Views/PreferencesView.vala:106
+msgid "Enable"
+msgstr "Bật"
+
+#. /TRANSLATORS: Button to remove the autostart for the application
+#: src/Views/PreferencesView.vala:117
+msgid "Disable"
+msgstr "Tắt"
+
+#: src/Views/PreferencesView.vala:131
+msgid "Automatically start Jorts"
+msgstr "Tự động khởi động Jorts"
+
+#: src/Views/PreferencesView.vala:134
+msgid "Show your sticky notes when you log in"
+msgstr "Hiển thị giấy ghi chú của bạn khi bạn đăng nhập"
+
+#: src/Views/PreferencesView.vala:154
+msgid "Support us!"
+msgstr "Hỗ trợ chúng tôi!"
+
+#: src/Views/PreferencesView.vala:160
+msgid "Close"
+msgstr "Đóng"
+
+#: src/Views/PreferencesView.vala:163
+msgid "Close preferences"
+msgstr "Đóng tùy chỉnh"
+
+#: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
+#: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
+msgid " - Jorts"
+msgstr " - Jorts"
+
+#. ******************************************
+#. HEADERBAR BS
+#. ******************************************
+#. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
+#: src/Windows/PreferenceWindow.vala:33
+msgid "Preferences for your Jorts"
+msgstr "Tùy chỉnh cho Jorts của bạn"
+
+#: src/Windows/PreferenceWindow.vala:35
+msgid "Preferences"
+msgstr "Tùy chỉnh"
+
+#: src/Application.vala:245
+msgid "Create a new note"
+msgstr "Tạo ghi chú mới"
+
+#: src/Application.vala:246
+msgid "Show preferences"
+msgstr "Hiển thị tùy chỉnh"
