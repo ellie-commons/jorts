@@ -9,7 +9,6 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
 windows_build = build_machine.system() == 'windows'
 
-
 #================================
 # Set flags for icon variants, and target in the case of windows builds
 
@@ -44,6 +43,9 @@ config_file = configure_file(
     output: '@BASENAME@',
     configuration: config_data
 )
+
+config_data.set('version', meson.project_version())
+
 
 # Le stylesheet
 gresource = gnome.compile_resources(
