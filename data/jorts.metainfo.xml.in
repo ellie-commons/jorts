@@ -107,6 +107,16 @@
         </release>
         <release version="4.0.0" date="2025-11-22">
             <description>
+                <p></p>
+                <ul>
+                    <li></li>
+                </ul>
+                <p>😎 Guests stars:</p>
+                <ul>
+                    <li>Added vietnamese translation thanks to @hthienloc!</li>
+                </ul>
+        <release version="4.0.0" date="2025-11-22">
+            <description>
                 <p>🚀 4.0.0 Jorts of Hyperspace!</p>
                 <ul>
                     <li>Version 4 to align with Gtk version</li>
