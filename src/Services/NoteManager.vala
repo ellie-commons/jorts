@@ -18,6 +18,14 @@ public class Jorts.NoteManager : Object {
 
     private static uint debounce_timer_id;
 
+    private static NoteManager? instance;
+    public static NoteManager get_default (Jorts.Application app) {
+        if (instance == null) {
+            instance = new NoteManager (app);
+        }
+        return instance;
+    }
+
     public NoteManager (Jorts.Application app) {
         this.application = app;
     }

@@ -208,7 +208,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_focus_title () {view.action_focus_title ();}
     private void action_show_emoji () {view.action_show_emoji ();}
     private void action_show_menu () {view.action_show_menu ();}
-    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
+    private void action_delete () {NoteManager.get_default ((Jorts.Application)application).delete_note (this);}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
     private void action_toggle_list () {view.action_toggle_list ();}
 

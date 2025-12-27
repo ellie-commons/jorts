@@ -43,8 +43,8 @@ public class Jorts.Application : Gtk.Application {
     // Needed by all windows
     public static GLib.Settings gsettings;
     public static Gtk.Settings gtk_settings;
+    private NoteManager manager;
 
-    public Jorts.NoteManager manager;
     public static Jorts.PreferenceWindow? preferences;
 
     // Used for commandline option handling
@@ -167,7 +167,7 @@ Please wait while the app remembers all the things...
         Intl.textdomain (GETTEXT_PACKAGE);
         
         //add_main_option_entries (CMD_OPTION_ENTRIES);
-        manager = new Jorts.NoteManager (this);
+        manager = Jorts.NoteManager.get_default (this);
     }
 
     // Clicked: Either show all windows, or rebuild from storage
@@ -266,7 +266,6 @@ Please wait while the app remembers all the things...
             return 0;
         }
 
-        hold ();
         activate ();
         return 0;
     }
